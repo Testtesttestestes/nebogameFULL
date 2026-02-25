@@ -1,0 +1,28 @@
+﻿using System;
+using Il2CppDummyDll;
+using Utils;
+
+namespace Core.Data.InfoRows
+{
+	// Token: 0x020010E1 RID: 4321
+	[Token(Token = "0x20010E1")]
+	public class BackTimeRow : CommonRow
+	{
+		// Token: 0x06006521 RID: 25889 RVA: 0x00002050 File Offset: 0x00000250
+		[Token(Token = "0x6006521")]
+		[Address(RVA = "0xB0F1", Offset = "0xB0F1", VA = "0xB0F1")]
+		public BackTimeRow(BackTime backTime)
+		{
+		}
+
+		// Token: 0x04003609 RID: 13833
+		[Token(Token = "0x4003609")]
+		[FieldOffset(Offset = "0x10")]
+		public readonly BackTime BackTime;
+
+		// Token: 0x0400360A RID: 13834
+		[Token(Token = "0x400360A")]
+		[FieldOffset(Offset = "0x14")]
+		public float MinThreshold;
+	}
+}

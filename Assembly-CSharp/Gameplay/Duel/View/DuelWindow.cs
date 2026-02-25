@@ -1,0 +1,262 @@
+﻿using System;
+using Gameplay.Combat.View.TurnDisplay;
+using Gameplay.Duel.Controller;
+using Il2CppDummyDll;
+using UI.Elements.Buttons;
+using UI.Requirements;
+using UI.Rewards;
+using UI.Windows;
+using UnityEngine;
+
+namespace Gameplay.Duel.View
+{
+	// Token: 0x0200085A RID: 2138
+	[Token(Token = "0x200085A")]
+	public class DuelWindow : ClosableBaseWindow<DuelWindow.DuelWindowArgs>
+	{
+		// Token: 0x170009E6 RID: 2534
+		// (get) Token: 0x0600323A RID: 12858 RVA: 0x00002052 File Offset: 0x00000252
+		[Token(Token = "0x170009E6")]
+		public override string WindowId
+		{
+			[Token(Token = "0x600323A")]
+			[Address(RVA = "0x8290", Offset = "0x8290", VA = "0x8290", Slot = "14")]
+			get
+			{
+				return null;
+			}
+		}
+
+		// Token: 0x170009E7 RID: 2535
+		// (get) Token: 0x0600323B RID: 12859 RVA: 0x00002052 File Offset: 0x00000252
+		[Token(Token = "0x170009E7")]
+		public MarshalUserView Opponent
+		{
+			[Token(Token = "0x600323B")]
+			[Address(RVA = "0x8291", Offset = "0x8291", VA = "0x8291")]
+			get
+			{
+				return null;
+			}
+		}
+
+		// Token: 0x170009E8 RID: 2536
+		// (get) Token: 0x0600323C RID: 12860 RVA: 0x00002052 File Offset: 0x00000252
+		[Token(Token = "0x170009E8")]
+		public MarshalUserView Player
+		{
+			[Token(Token = "0x600323C")]
+			[Address(RVA = "0x8292", Offset = "0x8292", VA = "0x8292")]
+			get
+			{
+				return null;
+			}
+		}
+
+		// Token: 0x170009E9 RID: 2537
+		// (get) Token: 0x0600323D RID: 12861 RVA: 0x00002052 File Offset: 0x00000252
+		[Token(Token = "0x170009E9")]
+		public SkillsComparer SkillsComparer
+		{
+			[Token(Token = "0x600323D")]
+			[Address(RVA = "0x8293", Offset = "0x8293", VA = "0x8293")]
+			get
+			{
+				return null;
+			}
+		}
+
+		// Token: 0x170009EA RID: 2538
+		// (get) Token: 0x0600323E RID: 12862 RVA: 0x00002052 File Offset: 0x00000252
+		[Token(Token = "0x170009EA")]
+		public ButtonWithCost ActionButton
+		{
+			[Token(Token = "0x600323E")]
+			[Address(RVA = "0x8294", Offset = "0x8294", VA = "0x8294")]
+			get
+			{
+				return null;
+			}
+		}
+
+		// Token: 0x170009EB RID: 2539
+		// (get) Token: 0x0600323F RID: 12863 RVA: 0x00002052 File Offset: 0x00000252
+		[Token(Token = "0x170009EB")]
+		public RewardsRender RewardsRender
+		{
+			[Token(Token = "0x600323F")]
+			[Address(RVA = "0x8295", Offset = "0x8295", VA = "0x8295")]
+			get
+			{
+				return null;
+			}
+		}
+
+		// Token: 0x170009EC RID: 2540
+		// (get) Token: 0x06003240 RID: 12864 RVA: 0x00002052 File Offset: 0x00000252
+		[Token(Token = "0x170009EC")]
+		public RequirementsView Requirements
+		{
+			[Token(Token = "0x6003240")]
+			[Address(RVA = "0x8296", Offset = "0x8296", VA = "0x8296")]
+			get
+			{
+				return null;
+			}
+		}
+
+		// Token: 0x170009ED RID: 2541
+		// (get) Token: 0x06003241 RID: 12865 RVA: 0x00002052 File Offset: 0x00000252
+		[Token(Token = "0x170009ED")]
+		public TurnClock Timer
+		{
+			[Token(Token = "0x6003241")]
+			[Address(RVA = "0x8297", Offset = "0x8297", VA = "0x8297")]
+			get
+			{
+				return null;
+			}
+		}
+
+		// Token: 0x170009EE RID: 2542
+		// (get) Token: 0x06003242 RID: 12866 RVA: 0x00002052 File Offset: 0x00000252
+		[Token(Token = "0x170009EE")]
+		public GameObject LegendaryView
+		{
+			[Token(Token = "0x6003242")]
+			[Address(RVA = "0x8298", Offset = "0x8298", VA = "0x8298")]
+			get
+			{
+				return null;
+			}
+		}
+
+		// Token: 0x06003243 RID: 12867 RVA: 0x00002050 File Offset: 0x00000250
+		[Token(Token = "0x6003243")]
+		[Address(RVA = "0x8299", Offset = "0x8299", VA = "0x8299", Slot = "22")]
+		protected override void OnShow(DuelWindow.DuelWindowArgs args)
+		{
+		}
+
+		// Token: 0x06003244 RID: 12868 RVA: 0x00002050 File Offset: 0x00000250
+		[Token(Token = "0x6003244")]
+		[Address(RVA = "0x829A", Offset = "0x829A", VA = "0x829A", Slot = "19")]
+		protected override void OnClose()
+		{
+		}
+
+		// Token: 0x06003245 RID: 12869 RVA: 0x0000A410 File Offset: 0x00008610
+		[Token(Token = "0x6003245")]
+		[Address(RVA = "0x829B", Offset = "0x829B", VA = "0x829B", Slot = "17")]
+		public override bool CheckForClose()
+		{
+			return default(bool);
+		}
+
+		// Token: 0x06003246 RID: 12870 RVA: 0x00002050 File Offset: 0x00000250
+		[Token(Token = "0x6003246")]
+		[Address(RVA = "0x829C", Offset = "0x829C", VA = "0x829C")]
+		private void SetupMVC()
+		{
+		}
+
+		// Token: 0x06003247 RID: 12871 RVA: 0x00002050 File Offset: 0x00000250
+		[Token(Token = "0x6003247")]
+		[Address(RVA = "0x829D", Offset = "0x829D", VA = "0x829D")]
+		private void DestroyMVC()
+		{
+		}
+
+		// Token: 0x06003248 RID: 12872 RVA: 0x00002050 File Offset: 0x00000250
+		[Token(Token = "0x6003248")]
+		[Address(RVA = "0x829E", Offset = "0x829E", VA = "0x829E")]
+		public DuelWindow()
+		{
+		}
+
+		// Token: 0x04001B72 RID: 7026
+		[Token(Token = "0x4001B72")]
+		public const string WINDOW_ID = "Prefabs/UI/Windows/Duel/DuelWindow";
+
+		// Token: 0x04001B73 RID: 7027
+		[Token(Token = "0x4001B73")]
+		[FieldOffset(Offset = "0x3C")]
+		[SerializeField]
+		private MarshalUserView _player;
+
+		// Token: 0x04001B74 RID: 7028
+		[Token(Token = "0x4001B74")]
+		[FieldOffset(Offset = "0x40")]
+		[SerializeField]
+		private MarshalUserView _opponent;
+
+		// Token: 0x04001B75 RID: 7029
+		[Token(Token = "0x4001B75")]
+		[FieldOffset(Offset = "0x44")]
+		[SerializeField]
+		private SkillsComparer _skillsComparer;
+
+		// Token: 0x04001B76 RID: 7030
+		[Token(Token = "0x4001B76")]
+		[FieldOffset(Offset = "0x48")]
+		[SerializeField]
+		private ButtonWithCost _actionButton;
+
+		// Token: 0x04001B77 RID: 7031
+		[Token(Token = "0x4001B77")]
+		[FieldOffset(Offset = "0x4C")]
+		[SerializeField]
+		private RewardsRender _rewardsRender;
+
+		// Token: 0x04001B78 RID: 7032
+		[Token(Token = "0x4001B78")]
+		[FieldOffset(Offset = "0x50")]
+		[SerializeField]
+		private RequirementsView _reqirements;
+
+		// Token: 0x04001B79 RID: 7033
+		[Token(Token = "0x4001B79")]
+		[FieldOffset(Offset = "0x54")]
+		[SerializeField]
+		private DuelStates _duelStates;
+
+		// Token: 0x04001B7A RID: 7034
+		[Token(Token = "0x4001B7A")]
+		[FieldOffset(Offset = "0x58")]
+		[SerializeField]
+		private TurnClock _timer;
+
+		// Token: 0x04001B7B RID: 7035
+		[Token(Token = "0x4001B7B")]
+		[FieldOffset(Offset = "0x5C")]
+		[SerializeField]
+		private GameObject _legendaryView;
+
+		// Token: 0x04001B7C RID: 7036
+		[Token(Token = "0x4001B7C")]
+		[FieldOffset(Offset = "0x60")]
+		private DuelViewMediator _mediator;
+
+		// Token: 0x0200085B RID: 2139
+		[Token(Token = "0x200085B")]
+		public class DuelWindowArgs : BaseWindowArgs
+		{
+			// Token: 0x06003249 RID: 12873 RVA: 0x00002050 File Offset: 0x00000250
+			[Token(Token = "0x6003249")]
+			[Address(RVA = "0x829F", Offset = "0x829F", VA = "0x829F")]
+			public DuelWindowArgs()
+			{
+			}
+
+			// Token: 0x04001B7D RID: 7037
+			[Token(Token = "0x4001B7D")]
+			[FieldOffset(Offset = "0x18")]
+			public DuelController Controller;
+
+			// Token: 0x04001B7E RID: 7038
+			[Token(Token = "0x4001B7E")]
+			[FieldOffset(Offset = "0x1C")]
+			public DuelStates.State DuelState;
+		}
+	}
+}
