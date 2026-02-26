@@ -66,4 +66,59 @@ namespace Gameplay.Inventory.Model
 		[Token(Token = "0x40016C9")]
 		public const uint BATTLE_PASS_TYPE_ID = 120U;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: .cctor ---
+		undefined4 Gameplay_Inventory_Model_InventoryConstants___cctor(undefined4 param1)
+		
+		{
+		  if (DAT_ram_00a5a154 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Gameplay_Inventory_Model_InventoryConstants_TypeInfo);
+		    DAT_ram_00a5a154 = '\x01';
+		  }
+		  if (*(int *)(Gameplay_Inventory_Model_InventoryConstants_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Gameplay_Inventory_Model_InventoryConstants_TypeInfo);
+		  }
+		  return *(undefined4 *)
+		          (*(int *)(Gameplay_Inventory_Model_InventoryConstants_TypeInfo + 0x5c) + 0xc);
+		}
+		*/
+
+
+		/* --- GHIDRA: get_EquipmentSlotIds ---
+		undefined4 Gameplay_Inventory_Model_InventoryConstants__get_EquipmentSlotIds(undefined4 param1)
+		
+		{
+		  if (DAT_ram_00a5a155 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Gameplay_Inventory_Model_InventoryConstants_TypeInfo);
+		    DAT_ram_00a5a155 = '\x01';
+		  }
+		  if (*(int *)(Gameplay_Inventory_Model_InventoryConstants_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Gameplay_Inventory_Model_InventoryConstants_TypeInfo);
+		  }
+		  return *(undefined4 *)
+		          (*(int *)(Gameplay_Inventory_Model_InventoryConstants_TypeInfo + 0x5c) + 0x10);
+		}
+		*/
+
+
+		/* --- GHIDRA: get_GolemEquipmentSlotIds ---
+		void Gameplay_Inventory_Model_InventoryConstants__get_GolemEquipmentSlotIds
+		               (undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a5a156 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Gameplay_Inventory_Model_InventoryConstants_TypeInfo);
+		    DAT_ram_00a5a156 = '\x01';
+		  }
+		  if (*(int *)(Gameplay_Inventory_Model_InventoryConstants_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Gameplay_Inventory_Model_InventoryConstants_TypeInfo);
+		  }
+		  *(undefined4 *)(*(int *)(Gameplay_Inventory_Model_InventoryConstants_TypeInfo + 0x5c) + 0x10) =
+		       param1;
+		  return;
+		}
+		*/
+
 }

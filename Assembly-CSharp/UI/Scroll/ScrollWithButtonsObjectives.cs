@@ -20,6 +20,18 @@ namespace UI.Scroll
 		[Address(RVA = "0x5E42", Offset = "0x5E42", VA = "0x5E42")]
 		public ScrollWithButtonsObjectives()
 		{
+		/* --- GHIDRA: .ctor ---
+		float UI_Scroll_ScrollWithButtonsObjectives___ctor(int param1,undefined4 param2)
+		
+		{
+		  undefined1 auStack_8 [4];
+		  float4 local_4;
+		  
+		  UnityEngine_RectTransform__set_anchorMax(auStack_8,*(undefined4 *)(param1 + 0x28),0);
+		  return -(float)local_4;
+		}
+		*/
+
 		}
 
 		// Token: 0x0400050D RID: 1293

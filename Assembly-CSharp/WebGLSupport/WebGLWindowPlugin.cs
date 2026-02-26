@@ -26,4 +26,45 @@ namespace WebGLSupport
 		[PreserveSig]
 		public static extern void WebGLWindowInjectFullscreen();
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: WebGLWindowOnFocus ---
+		void WebGLSupport_WebGLWindowPlugin__WebGLWindowOnFocus(undefined4 param1,undefined4 param2)
+		
+		{
+		  undefined4 param1_00;
+		  
+		  param1_00 = unnamed_function_1434(param1);
+		  import::env::WebGLWindowOnBlur(param1_00);
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: WebGLWindowOnBlur ---
+		void WebGLSupport_WebGLWindowPlugin__WebGLWindowOnBlur(undefined4 param1)
+		
+		{
+		  import::env::WebGLWindowInjectFullscreen();
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: WebGLWindowInjectFullscreen ---
+		uint WebGLSupport_WebGLWindowPlugin__WebGLWindowInjectFullscreen(undefined4 param1)
+		
+		{
+		  if (DAT_ram_00a648ca == '\0') {
+		    Mono_Security_ASN1__get_Item(&WebGLSupport_WebGLWindow_TypeInfo);
+		    DAT_ram_00a648ca = '\x01';
+		  }
+		  if (*(int *)(WebGLSupport_WebGLWindow_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(WebGLSupport_WebGLWindow_TypeInfo);
+		  }
+		  return (uint)**(byte **)(WebGLSupport_WebGLWindow_TypeInfo + 0x5c);
+		}
+		*/
+
 }

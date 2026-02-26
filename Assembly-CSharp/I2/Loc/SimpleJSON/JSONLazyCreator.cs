@@ -12,6 +12,50 @@ namespace I2.Loc.SimpleJSON
 		[Address(RVA = "0xC1DA", Offset = "0xC1DA", VA = "0xC1DA")]
 		public JSONLazyCreator(JSONNode aNode)
 		{
+		/* --- GHIDRA: .ctor ---
+		void I2_Loc_SimpleJSON_JSONLazyCreator___ctor(int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  int *piVar1;
+		  int iVar2;
+		  
+		  piVar1 = *(int **)(param1 + 8);
+		  iVar2 = *piVar1;
+		  if (*(int *)(param1 + 0xc) == 0) {
+		    (**(code **)((ulonglong)*(uint *)(iVar2 + 0x120) * 4))
+		              (piVar1,param2,*(undefined4 *)(iVar2 + 0x124));
+		  }
+		  else {
+		    (**(code **)((ulonglong)*(uint *)(iVar2 + 0xe0) * 4))
+		              (piVar1,*(int *)(param1 + 0xc),param2,*(undefined4 *)(iVar2 + 0xe4));
+		  }
+		  *(undefined4 *)(param1 + 8) = 0;
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: .ctor ---
+		void I2_Loc_SimpleJSON_JSONLazyCreator___ctor(int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  int *piVar1;
+		  int iVar2;
+		  
+		  piVar1 = *(int **)(param1 + 8);
+		  iVar2 = *piVar1;
+		  if (*(int *)(param1 + 0xc) == 0) {
+		    (**(code **)((ulonglong)*(uint *)(iVar2 + 0x120) * 4))
+		              (piVar1,param2,*(undefined4 *)(iVar2 + 0x124));
+		  }
+		  else {
+		    (**(code **)((ulonglong)*(uint *)(iVar2 + 0xe0) * 4))
+		              (piVar1,*(int *)(param1 + 0xc),param2,*(undefined4 *)(iVar2 + 0xe4));
+		  }
+		  *(undefined4 *)(param1 + 8) = 0;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06007889 RID: 30857 RVA: 0x00002050 File Offset: 0x00000250
@@ -26,6 +70,23 @@ namespace I2.Loc.SimpleJSON
 		[Address(RVA = "0xC1DC", Offset = "0xC1DC", VA = "0xC1DC")]
 		private void Set(JSONNode aVal)
 		{
+		/* --- GHIDRA: Set ---
+		int I2_Loc_SimpleJSON_JSONLazyCreator__Set(undefined4 param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  int iVar1;
+		  
+		  if (DAT_ram_00a54e78 == '\0') {
+		    Mono_Security_ASN1__get_Item(&I2_Loc_SimpleJSON_JSONLazyCreator_TypeInfo);
+		    DAT_ram_00a54e78 = '\x01';
+		  }
+		  iVar1 = unnamed_function_1417(I2_Loc_SimpleJSON_JSONLazyCreator_TypeInfo);
+		  *(undefined4 *)(iVar1 + 0xc) = 0;
+		  *(undefined4 *)(iVar1 + 8) = param1;
+		  return iVar1;
+		}
+		*/
+
 		}
 
 		// Token: 0x170017D9 RID: 6105
@@ -67,6 +128,70 @@ namespace I2.Loc.SimpleJSON
 		[Address(RVA = "0xC1E1", Offset = "0xC1E1", VA = "0xC1E1", Slot = "12")]
 		public override void Add(JSONNode aItem)
 		{
+		/* --- GHIDRA: Add ---
+		void I2_Loc_SimpleJSON_JSONLazyCreator__Add
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  int *param1_00;
+		  int *piVar1;
+		  int iVar2;
+		  
+		  if (DAT_ram_00a54e7d == '\0') {
+		    Mono_Security_ASN1__get_Item(&I2_Loc_SimpleJSON_JSONClass_TypeInfo);
+		    DAT_ram_00a54e7d = '\x01';
+		  }
+		  param1_00 = (int *)unnamed_function_1417(I2_Loc_SimpleJSON_JSONClass_TypeInfo);
+		  I2_Loc_SimpleJSON_JSONClass__Serialize(param1_00,param1);
+		  (**(code **)((ulonglong)*(uint *)(*param1_00 + 0xe0) * 4))
+		            (param1_00,param2,param3,*(undefined4 *)(*param1_00 + 0xe4));
+		  piVar1 = *(int **)(param1 + 8);
+		  iVar2 = *piVar1;
+		  if (*(int *)(param1 + 0xc) == 0) {
+		    (**(code **)((ulonglong)*(uint *)(iVar2 + 0x120) * 4))
+		              (piVar1,param1_00,*(undefined4 *)(iVar2 + 0x124));
+		  }
+		  else {
+		    (**(code **)((ulonglong)*(uint *)(iVar2 + 0xe0) * 4))
+		              (piVar1,*(int *)(param1 + 0xc),param1_00,*(undefined4 *)(iVar2 + 0xe4));
+		  }
+		  *(undefined4 *)(param1 + 8) = 0;
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: Add ---
+		void I2_Loc_SimpleJSON_JSONLazyCreator__Add
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  int *param1_00;
+		  int *piVar1;
+		  int iVar2;
+		  
+		  if (DAT_ram_00a54e7d == '\0') {
+		    Mono_Security_ASN1__get_Item(&I2_Loc_SimpleJSON_JSONClass_TypeInfo);
+		    DAT_ram_00a54e7d = '\x01';
+		  }
+		  param1_00 = (int *)unnamed_function_1417(I2_Loc_SimpleJSON_JSONClass_TypeInfo);
+		  I2_Loc_SimpleJSON_JSONClass__Serialize(param1_00,param1);
+		  (**(code **)((ulonglong)*(uint *)(*param1_00 + 0xe0) * 4))
+		            (param1_00,param2,param3,*(undefined4 *)(*param1_00 + 0xe4));
+		  piVar1 = *(int **)(param1 + 8);
+		  iVar2 = *piVar1;
+		  if (*(int *)(param1 + 0xc) == 0) {
+		    (**(code **)((ulonglong)*(uint *)(iVar2 + 0x120) * 4))
+		              (piVar1,param1_00,*(undefined4 *)(iVar2 + 0x124));
+		  }
+		  else {
+		    (**(code **)((ulonglong)*(uint *)(iVar2 + 0xe0) * 4))
+		              (piVar1,*(int *)(param1 + 0xc),param1_00,*(undefined4 *)(iVar2 + 0xe4));
+		  }
+		  *(undefined4 *)(param1 + 8) = 0;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06007890 RID: 30864 RVA: 0x00002050 File Offset: 0x00000250
@@ -105,6 +230,18 @@ namespace I2.Loc.SimpleJSON
 		[Address(RVA = "0xC1E6", Offset = "0xC1E6", VA = "0xC1E6", Slot = "2")]
 		public override int GetHashCode()
 		{
+		/* --- GHIDRA: GetHashCode ---
+		undefined4 I2_Loc_SimpleJSON_JSONLazyCreator__GetHashCode(undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a54e7e == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_5);
+		    DAT_ram_00a54e7e = '\x01';
+		  }
+		  return StringLiteral_5;
+		}
+		*/
+
 			return 0;
 		}
 
@@ -113,6 +250,66 @@ namespace I2.Loc.SimpleJSON
 		[Address(RVA = "0xC1E7", Offset = "0xC1E7", VA = "0xC1E7", Slot = "3")]
 		public override string ToString()
 		{
+		/* --- GHIDRA: ToString ---
+		undefined4 I2_Loc_SimpleJSON_JSONLazyCreator__ToString(int param1,undefined4 param2)
+		
+		{
+		  int *piVar1;
+		  int *piVar2;
+		  int iVar3;
+		  
+		  if (DAT_ram_00a54e80 == '\0') {
+		    Mono_Security_ASN1__get_Item(&I2_Loc_SimpleJSON_JSONData_TypeInfo);
+		    DAT_ram_00a54e80 = '\x01';
+		  }
+		  piVar1 = (int *)unnamed_function_1417(I2_Loc_SimpleJSON_JSONData_TypeInfo);
+		  (**(code **)((ulonglong)*(uint *)(*piVar1 + 0x158) * 4))
+		            (piVar1,0,*(undefined4 *)(*piVar1 + 0x15c));
+		  piVar2 = *(int **)(param1 + 8);
+		  iVar3 = *piVar2;
+		  if (*(int *)(param1 + 0xc) == 0) {
+		    (**(code **)((ulonglong)*(uint *)(iVar3 + 0x120) * 4))
+		              (piVar2,piVar1,*(undefined4 *)(iVar3 + 0x124));
+		  }
+		  else {
+		    (**(code **)((ulonglong)*(uint *)(iVar3 + 0xe0) * 4))
+		              (piVar2,*(int *)(param1 + 0xc),piVar1,*(undefined4 *)(iVar3 + 0xe4));
+		  }
+		  *(undefined4 *)(param1 + 8) = 0;
+		  return 0;
+		}
+		*/
+
+		/* --- GHIDRA: ToString ---
+		undefined4 I2_Loc_SimpleJSON_JSONLazyCreator__ToString(int param1,undefined4 param2)
+		
+		{
+		  int *piVar1;
+		  int *piVar2;
+		  int iVar3;
+		  
+		  if (DAT_ram_00a54e80 == '\0') {
+		    Mono_Security_ASN1__get_Item(&I2_Loc_SimpleJSON_JSONData_TypeInfo);
+		    DAT_ram_00a54e80 = '\x01';
+		  }
+		  piVar1 = (int *)unnamed_function_1417(I2_Loc_SimpleJSON_JSONData_TypeInfo);
+		  (**(code **)((ulonglong)*(uint *)(*piVar1 + 0x158) * 4))
+		            (piVar1,0,*(undefined4 *)(*piVar1 + 0x15c));
+		  piVar2 = *(int **)(param1 + 8);
+		  iVar3 = *piVar2;
+		  if (*(int *)(param1 + 0xc) == 0) {
+		    (**(code **)((ulonglong)*(uint *)(iVar3 + 0x120) * 4))
+		              (piVar2,piVar1,*(undefined4 *)(iVar3 + 0x124));
+		  }
+		  else {
+		    (**(code **)((ulonglong)*(uint *)(iVar3 + 0xe0) * 4))
+		              (piVar2,*(int *)(param1 + 0xc),piVar1,*(undefined4 *)(iVar3 + 0xe4));
+		  }
+		  *(undefined4 *)(param1 + 8) = 0;
+		  return 0;
+		}
+		*/
+
 			return null;
 		}
 
@@ -236,4 +433,470 @@ namespace I2.Loc.SimpleJSON
 		[FieldOffset(Offset = "0xC")]
 		private string m_Key;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_Item ---
+		void I2_Loc_SimpleJSON_JSONLazyCreator__get_Item
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  int *param1_00;
+		  int *piVar1;
+		  int iVar2;
+		  
+		  if (DAT_ram_00a54e7b == '\0') {
+		    Mono_Security_ASN1__get_Item(&I2_Loc_SimpleJSON_JSONClass_TypeInfo);
+		    DAT_ram_00a54e7b = '\x01';
+		  }
+		  param1_00 = (int *)unnamed_function_1417(I2_Loc_SimpleJSON_JSONClass_TypeInfo);
+		  I2_Loc_SimpleJSON_JSONClass__Serialize(param1_00,param1);
+		  (**(code **)((ulonglong)*(uint *)(*param1_00 + 0xe0) * 4))
+		            (param1_00,param2,param3,*(undefined4 *)(*param1_00 + 0xe4));
+		  piVar1 = *(int **)(param1 + 8);
+		  iVar2 = *piVar1;
+		  if (*(int *)(param1 + 0xc) == 0) {
+		    (**(code **)((ulonglong)*(uint *)(iVar2 + 0x120) * 4))
+		              (piVar1,param1_00,*(undefined4 *)(iVar2 + 0x124));
+		  }
+		  else {
+		    (**(code **)((ulonglong)*(uint *)(iVar2 + 0xe0) * 4))
+		              (piVar1,*(int *)(param1 + 0xc),param1_00,*(undefined4 *)(iVar2 + 0xe4));
+		  }
+		  *(undefined4 *)(param1 + 8) = 0;
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_Item ---
+		void I2_Loc_SimpleJSON_JSONLazyCreator__set_Item(int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  int *piVar1;
+		  int iVar2;
+		  int *piVar3;
+		  
+		  if (DAT_ram_00a54e7c == '\0') {
+		    Mono_Security_ASN1__get_Item(&I2_Loc_SimpleJSON_JSONArray_TypeInfo);
+		    DAT_ram_00a54e7c = '\x01';
+		  }
+		  piVar1 = (int *)unnamed_function_1417(I2_Loc_SimpleJSON_JSONArray_TypeInfo);
+		  if (DAT_ram_00a54e5a == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_System_Collections_Generic_List_JSONNode___ctor__);
+		    Mono_Security_ASN1__get_Item(&System_Collections_Generic_List_JSONNode__TypeInfo);
+		    DAT_ram_00a54e5a = '\x01';
+		  }
+		  iVar2 = unnamed_function_1417(System_Collections_Generic_List_JSONNode__TypeInfo);
+		  GAFInternal_Objects_GAFBakedObjectImpl__get_isVisible
+		            (iVar2,Method_System_Collections_Generic_List_JSONNode___ctor__);
+		  piVar1[2] = iVar2;
+		  (**(code **)((ulonglong)*(uint *)(*piVar1 + 0x120) * 4))
+		            (piVar1,param2,*(undefined4 *)(*piVar1 + 0x124));
+		  piVar3 = *(int **)(param1 + 8);
+		  iVar2 = *piVar3;
+		  if (*(int *)(param1 + 0xc) == 0) {
+		    (**(code **)((ulonglong)*(uint *)(iVar2 + 0x120) * 4))
+		              (piVar3,piVar1,*(undefined4 *)(iVar2 + 0x124));
+		  }
+		  else {
+		    (**(code **)((ulonglong)*(uint *)(iVar2 + 0xe0) * 4))
+		              (piVar3,*(int *)(param1 + 0xc),piVar1,*(undefined4 *)(iVar2 + 0xe4));
+		  }
+		  *(undefined4 *)(param1 + 8) = 0;
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_Item ---
+		void I2_Loc_SimpleJSON_JSONLazyCreator__get_Item
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  int *param1_00;
+		  int *piVar1;
+		  int iVar2;
+		  
+		  if (DAT_ram_00a54e7b == '\0') {
+		    Mono_Security_ASN1__get_Item(&I2_Loc_SimpleJSON_JSONClass_TypeInfo);
+		    DAT_ram_00a54e7b = '\x01';
+		  }
+		  param1_00 = (int *)unnamed_function_1417(I2_Loc_SimpleJSON_JSONClass_TypeInfo);
+		  I2_Loc_SimpleJSON_JSONClass__Serialize(param1_00,param1);
+		  (**(code **)((ulonglong)*(uint *)(*param1_00 + 0xe0) * 4))
+		            (param1_00,param2,param3,*(undefined4 *)(*param1_00 + 0xe4));
+		  piVar1 = *(int **)(param1 + 8);
+		  iVar2 = *piVar1;
+		  if (*(int *)(param1 + 0xc) == 0) {
+		    (**(code **)((ulonglong)*(uint *)(iVar2 + 0x120) * 4))
+		              (piVar1,param1_00,*(undefined4 *)(iVar2 + 0x124));
+		  }
+		  else {
+		    (**(code **)((ulonglong)*(uint *)(iVar2 + 0xe0) * 4))
+		              (piVar1,*(int *)(param1 + 0xc),param1_00,*(undefined4 *)(iVar2 + 0xe4));
+		  }
+		  *(undefined4 *)(param1 + 8) = 0;
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_Item ---
+		void I2_Loc_SimpleJSON_JSONLazyCreator__set_Item(int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  int *piVar1;
+		  int iVar2;
+		  int *piVar3;
+		  
+		  if (DAT_ram_00a54e7c == '\0') {
+		    Mono_Security_ASN1__get_Item(&I2_Loc_SimpleJSON_JSONArray_TypeInfo);
+		    DAT_ram_00a54e7c = '\x01';
+		  }
+		  piVar1 = (int *)unnamed_function_1417(I2_Loc_SimpleJSON_JSONArray_TypeInfo);
+		  if (DAT_ram_00a54e5a == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_System_Collections_Generic_List_JSONNode___ctor__);
+		    Mono_Security_ASN1__get_Item(&System_Collections_Generic_List_JSONNode__TypeInfo);
+		    DAT_ram_00a54e5a = '\x01';
+		  }
+		  iVar2 = unnamed_function_1417(System_Collections_Generic_List_JSONNode__TypeInfo);
+		  GAFInternal_Objects_GAFBakedObjectImpl__get_isVisible
+		            (iVar2,Method_System_Collections_Generic_List_JSONNode___ctor__);
+		  piVar1[2] = iVar2;
+		  (**(code **)((ulonglong)*(uint *)(*piVar1 + 0x120) * 4))
+		            (piVar1,param2,*(undefined4 *)(*piVar1 + 0x124));
+		  piVar3 = *(int **)(param1 + 8);
+		  iVar2 = *piVar3;
+		  if (*(int *)(param1 + 0xc) == 0) {
+		    (**(code **)((ulonglong)*(uint *)(iVar2 + 0x120) * 4))
+		              (piVar3,piVar1,*(undefined4 *)(iVar2 + 0x124));
+		  }
+		  else {
+		    (**(code **)((ulonglong)*(uint *)(iVar2 + 0xe0) * 4))
+		              (piVar3,*(int *)(param1 + 0xc),piVar1,*(undefined4 *)(iVar2 + 0xe4));
+		  }
+		  *(undefined4 *)(param1 + 8) = 0;
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: op_Equality ---
+		uint I2_Loc_SimpleJSON_JSONLazyCreator__op_Equality(int param1,int param2,undefined4 param3)
+		
+		{
+		  return (uint)(param2 != 0 && param1 != param2);
+		}
+		*/
+
+
+		/* --- GHIDRA: op_Inequality ---
+		uint I2_Loc_SimpleJSON_JSONLazyCreator__op_Inequality(int param1,int param2,undefined4 param3)
+		
+		{
+		  return (uint)(param2 == 0 || param1 == param2);
+		}
+		*/
+
+
+		/* --- GHIDRA: get_AsInt ---
+		void I2_Loc_SimpleJSON_JSONLazyCreator__get_AsInt(int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  int *piVar1;
+		  int *piVar2;
+		  int iVar3;
+		  
+		  if (DAT_ram_00a54e81 == '\0') {
+		    Mono_Security_ASN1__get_Item(&I2_Loc_SimpleJSON_JSONData_TypeInfo);
+		    DAT_ram_00a54e81 = '\x01';
+		  }
+		  piVar1 = (int *)unnamed_function_1417(I2_Loc_SimpleJSON_JSONData_TypeInfo);
+		  (**(code **)((ulonglong)*(uint *)(*piVar1 + 0x158) * 4))
+		            (piVar1,param2,*(undefined4 *)(*piVar1 + 0x15c));
+		  piVar2 = *(int **)(param1 + 8);
+		  iVar3 = *piVar2;
+		  if (*(int *)(param1 + 0xc) == 0) {
+		    (**(code **)((ulonglong)*(uint *)(iVar3 + 0x120) * 4))
+		              (piVar2,piVar1,*(undefined4 *)(iVar3 + 0x124));
+		  }
+		  else {
+		    (**(code **)((ulonglong)*(uint *)(iVar3 + 0xe0) * 4))
+		              (piVar2,*(int *)(param1 + 0xc),piVar1,*(undefined4 *)(iVar3 + 0xe4));
+		  }
+		  *(undefined4 *)(param1 + 8) = 0;
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_AsInt ---
+		float I2_Loc_SimpleJSON_JSONLazyCreator__set_AsInt(int param1,undefined4 param2)
+		
+		{
+		  int *piVar1;
+		  int *piVar2;
+		  int iVar3;
+		  
+		  if (DAT_ram_00a54e82 == '\0') {
+		    Mono_Security_ASN1__get_Item(&I2_Loc_SimpleJSON_JSONData_TypeInfo);
+		    DAT_ram_00a54e82 = '\x01';
+		  }
+		  piVar1 = (int *)unnamed_function_1417(I2_Loc_SimpleJSON_JSONData_TypeInfo);
+		  (**(code **)((ulonglong)*(uint *)(*piVar1 + 0x168) * 4))
+		            (piVar1,0,*(undefined4 *)(*piVar1 + 0x16c));
+		  piVar2 = *(int **)(param1 + 8);
+		  iVar3 = *piVar2;
+		  if (*(int *)(param1 + 0xc) == 0) {
+		    (**(code **)((ulonglong)*(uint *)(iVar3 + 0x120) * 4))
+		              (piVar2,piVar1,*(undefined4 *)(iVar3 + 0x124));
+		  }
+		  else {
+		    (**(code **)((ulonglong)*(uint *)(iVar3 + 0xe0) * 4))
+		              (piVar2,*(int *)(param1 + 0xc),piVar1,*(undefined4 *)(iVar3 + 0xe4));
+		  }
+		  *(undefined4 *)(param1 + 8) = 0;
+		  return 0.0;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_AsFloat ---
+		void I2_Loc_SimpleJSON_JSONLazyCreator__get_AsFloat(int param1,float param2,undefined4 param3)
+		
+		{
+		  int *piVar1;
+		  int *piVar2;
+		  int iVar3;
+		  
+		  if (DAT_ram_00a54e83 == '\0') {
+		    Mono_Security_ASN1__get_Item(&I2_Loc_SimpleJSON_JSONData_TypeInfo);
+		    DAT_ram_00a54e83 = '\x01';
+		  }
+		  piVar1 = (int *)unnamed_function_1417(I2_Loc_SimpleJSON_JSONData_TypeInfo);
+		  (**(code **)((ulonglong)*(uint *)(*piVar1 + 0x168) * 4))
+		            (piVar1,param2,*(undefined4 *)(*piVar1 + 0x16c));
+		  piVar2 = *(int **)(param1 + 8);
+		  iVar3 = *piVar2;
+		  if (*(int *)(param1 + 0xc) == 0) {
+		    (**(code **)((ulonglong)*(uint *)(iVar3 + 0x120) * 4))
+		              (piVar2,piVar1,*(undefined4 *)(iVar3 + 0x124));
+		  }
+		  else {
+		    (**(code **)((ulonglong)*(uint *)(iVar3 + 0xe0) * 4))
+		              (piVar2,*(int *)(param1 + 0xc),piVar1,*(undefined4 *)(iVar3 + 0xe4));
+		  }
+		  *(undefined4 *)(param1 + 8) = 0;
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_AsFloat ---
+		double I2_Loc_SimpleJSON_JSONLazyCreator__set_AsFloat(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  int *piVar2;
+		  int *piVar3;
+		  int iVar4;
+		  
+		  if (DAT_ram_00a54e84 == '\0') {
+		    Mono_Security_ASN1__get_Item(&I2_Loc_SimpleJSON_JSONData_TypeInfo);
+		    DAT_ram_00a54e84 = '\x01';
+		  }
+		  piVar2 = (int *)unnamed_function_1417(I2_Loc_SimpleJSON_JSONData_TypeInfo);
+		  uVar1 = 0;
+		  (**(code **)((ulonglong)*(uint *)(*piVar2 + 0x178) * 4))
+		            (piVar2,0,*(undefined4 *)(*piVar2 + 0x17c));
+		  piVar3 = *(int **)(param1 + 8);
+		  iVar4 = *piVar3;
+		  if (*(int *)(param1 + 0xc) == 0) {
+		    (**(code **)((ulonglong)*(uint *)(iVar4 + 0x120) * 4))
+		              (piVar3,CONCAT44(uVar1,piVar2),*(undefined4 *)(iVar4 + 0x124));
+		  }
+		  else {
+		    (**(code **)((ulonglong)*(uint *)(iVar4 + 0xe0) * 4))
+		              (piVar3,CONCAT44(uVar1,*(int *)(param1 + 0xc)),piVar2,*(undefined4 *)(iVar4 + 0xe4));
+		  }
+		  *(undefined4 *)(param1 + 8) = 0;
+		  return 0.0;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_AsDouble ---
+		void I2_Loc_SimpleJSON_JSONLazyCreator__get_AsDouble(int param1,double param2,undefined4 param3)
+		
+		{
+		  int *piVar1;
+		  int *piVar2;
+		  int iVar3;
+		  
+		  if (DAT_ram_00a54e85 == '\0') {
+		    Mono_Security_ASN1__get_Item(&I2_Loc_SimpleJSON_JSONData_TypeInfo);
+		    DAT_ram_00a54e85 = '\x01';
+		  }
+		  piVar1 = (int *)unnamed_function_1417(I2_Loc_SimpleJSON_JSONData_TypeInfo);
+		  (**(code **)((ulonglong)*(uint *)(*piVar1 + 0x178) * 4))
+		            (piVar1,param2,*(undefined4 *)(*piVar1 + 0x17c));
+		  piVar2 = *(int **)(param1 + 8);
+		  iVar3 = *piVar2;
+		  if (*(int *)(param1 + 0xc) == 0) {
+		    (**(code **)((ulonglong)*(uint *)(iVar3 + 0x120) * 4))
+		              (piVar2,piVar1,*(undefined4 *)(iVar3 + 0x124));
+		  }
+		  else {
+		    (**(code **)((ulonglong)*(uint *)(iVar3 + 0xe0) * 4))
+		              (piVar2,*(int *)(param1 + 0xc),piVar1,*(undefined4 *)(iVar3 + 0xe4));
+		  }
+		  *(undefined4 *)(param1 + 8) = 0;
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_AsDouble ---
+		undefined4 I2_Loc_SimpleJSON_JSONLazyCreator__set_AsDouble(int param1,undefined4 param2)
+		
+		{
+		  int *piVar1;
+		  int *piVar2;
+		  int iVar3;
+		  
+		  if (DAT_ram_00a54e86 == '\0') {
+		    Mono_Security_ASN1__get_Item(&I2_Loc_SimpleJSON_JSONData_TypeInfo);
+		    DAT_ram_00a54e86 = '\x01';
+		  }
+		  piVar1 = (int *)unnamed_function_1417(I2_Loc_SimpleJSON_JSONData_TypeInfo);
+		  (**(code **)((ulonglong)*(uint *)(*piVar1 + 0x188) * 4))
+		            (piVar1,0,*(undefined4 *)(*piVar1 + 0x18c));
+		  piVar2 = *(int **)(param1 + 8);
+		  iVar3 = *piVar2;
+		  if (*(int *)(param1 + 0xc) == 0) {
+		    (**(code **)((ulonglong)*(uint *)(iVar3 + 0x120) * 4))
+		              (piVar2,piVar1,*(undefined4 *)(iVar3 + 0x124));
+		  }
+		  else {
+		    (**(code **)((ulonglong)*(uint *)(iVar3 + 0xe0) * 4))
+		              (piVar2,*(int *)(param1 + 0xc),piVar1,*(undefined4 *)(iVar3 + 0xe4));
+		  }
+		  *(undefined4 *)(param1 + 8) = 0;
+		  return 0;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_AsBool ---
+		void I2_Loc_SimpleJSON_JSONLazyCreator__get_AsBool(int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  int *piVar1;
+		  int *piVar2;
+		  int iVar3;
+		  
+		  if (DAT_ram_00a54e87 == '\0') {
+		    Mono_Security_ASN1__get_Item(&I2_Loc_SimpleJSON_JSONData_TypeInfo);
+		    DAT_ram_00a54e87 = '\x01';
+		  }
+		  piVar1 = (int *)unnamed_function_1417(I2_Loc_SimpleJSON_JSONData_TypeInfo);
+		  (**(code **)((ulonglong)*(uint *)(*piVar1 + 0x188) * 4))
+		            (piVar1,param2,*(undefined4 *)(*piVar1 + 0x18c));
+		  piVar2 = *(int **)(param1 + 8);
+		  iVar3 = *piVar2;
+		  if (*(int *)(param1 + 0xc) == 0) {
+		    (**(code **)((ulonglong)*(uint *)(iVar3 + 0x120) * 4))
+		              (piVar2,piVar1,*(undefined4 *)(iVar3 + 0x124));
+		  }
+		  else {
+		    (**(code **)((ulonglong)*(uint *)(iVar3 + 0xe0) * 4))
+		              (piVar2,*(int *)(param1 + 0xc),piVar1,*(undefined4 *)(iVar3 + 0xe4));
+		  }
+		  *(undefined4 *)(param1 + 8) = 0;
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_AsBool ---
+		int I2_Loc_SimpleJSON_JSONLazyCreator__set_AsBool(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  undefined4 param1_00;
+		  int *piVar2;
+		  int iVar3;
+		  
+		  if (DAT_ram_00a54e88 == '\0') {
+		    Mono_Security_ASN1__get_Item(&I2_Loc_SimpleJSON_JSONArray_TypeInfo);
+		    DAT_ram_00a54e88 = '\x01';
+		  }
+		  iVar1 = unnamed_function_1417(I2_Loc_SimpleJSON_JSONArray_TypeInfo);
+		  if (DAT_ram_00a54e5a == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_System_Collections_Generic_List_JSONNode___ctor__);
+		    Mono_Security_ASN1__get_Item(&System_Collections_Generic_List_JSONNode__TypeInfo);
+		    DAT_ram_00a54e5a = '\x01';
+		  }
+		  param1_00 = unnamed_function_1417(System_Collections_Generic_List_JSONNode__TypeInfo);
+		  GAFInternal_Objects_GAFBakedObjectImpl__get_isVisible
+		            (param1_00,Method_System_Collections_Generic_List_JSONNode___ctor__);
+		  *(undefined4 *)(iVar1 + 8) = param1_00;
+		  piVar2 = *(int **)(param1 + 8);
+		  iVar3 = *piVar2;
+		  if (*(int *)(param1 + 0xc) == 0) {
+		    (**(code **)((ulonglong)*(uint *)(iVar3 + 0x120) * 4))
+		              (piVar2,iVar1,*(undefined4 *)(iVar3 + 0x124));
+		  }
+		  else {
+		    (**(code **)((ulonglong)*(uint *)(iVar3 + 0xe0) * 4))
+		              (piVar2,*(int *)(param1 + 0xc),iVar1,*(undefined4 *)(iVar3 + 0xe4));
+		  }
+		  *(undefined4 *)(param1 + 8) = 0;
+		  return iVar1;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_AsArray ---
+		undefined4 I2_Loc_SimpleJSON_JSONLazyCreator__get_AsArray(int param1,undefined4 param2)
+		
+		{
+		  undefined4 param1_00;
+		  int *piVar1;
+		  int iVar2;
+		  
+		  if (DAT_ram_00a54e89 == '\0') {
+		    Mono_Security_ASN1__get_Item(&I2_Loc_SimpleJSON_JSONClass_TypeInfo);
+		    DAT_ram_00a54e89 = '\x01';
+		  }
+		  param1_00 = unnamed_function_1417(I2_Loc_SimpleJSON_JSONClass_TypeInfo);
+		  I2_Loc_SimpleJSON_JSONClass__Serialize(param1_00,param1);
+		  piVar1 = *(int **)(param1 + 8);
+		  iVar2 = *piVar1;
+		  if (*(int *)(param1 + 0xc) == 0) {
+		    (**(code **)((ulonglong)*(uint *)(iVar2 + 0x120) * 4))
+		              (piVar1,param1_00,*(undefined4 *)(iVar2 + 0x124));
+		  }
+		  else {
+		    (**(code **)((ulonglong)*(uint *)(iVar2 + 0xe0) * 4))
+		              (piVar1,*(int *)(param1 + 0xc),param1_00,*(undefined4 *)(iVar2 + 0xe4));
+		  }
+		  *(undefined4 *)(param1 + 8) = 0;
+		  return param1_00;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_AsObject ---
+		undefined4 I2_Loc_SimpleJSON_JSONLazyCreator__get_AsObject(undefined4 param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  uVar1 = I2_Loc_SimpleJSON_JSONNode__GetHashCode(param1,param1);
+		  return uVar1;
+		}
+		*/
+
 }

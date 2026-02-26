@@ -13,6 +13,26 @@ namespace UI.Elements.Buildings
 		[Address(RVA = "0x60D6", Offset = "0x60D6", VA = "0x60D6")]
 		public BuildingBaseArgs(Sprite backGround)
 		{
+		/* --- GHIDRA: .ctor ---
+		int UI_Elements_Buildings_BuildingBaseArgs___ctor(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  
+		  if (DAT_ram_00a639ab == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_UnityEngine_Component_GetComponent_IGuideTarget___);
+		    DAT_ram_00a639ab = '\x01';
+		  }
+		  iVar1 = *(int *)(param1 + 0x34);
+		  if (iVar1 == 0) {
+		    iVar1 = func_ii_5677(*(undefined4 *)(param1 + 0x10),
+		                         Method_UnityEngine_Component_GetComponent_IGuideTarget___);
+		  }
+		  *(int *)(param1 + 0x34) = iVar1;
+		  return iVar1;
+		}
+		*/
+
 		}
 
 		// Token: 0x0400071C RID: 1820

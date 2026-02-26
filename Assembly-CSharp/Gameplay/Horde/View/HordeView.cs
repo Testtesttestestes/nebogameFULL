@@ -160,6 +160,30 @@ namespace Gameplay.Horde.View
 		[Address(RVA = "0x7B6B", Offset = "0x7B6B", VA = "0x7B6B")]
 		private void Awake()
 		{
+		/* --- GHIDRA: Awake ---
+		void Gameplay_Horde_View_HordeView__Awake(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  
+		  *(undefined4 *)(param1 + 0x40) = 0;
+		  if (*(char *)(param1 + 0x3c) != '\0') {
+		    MVC_AbstractController__Run(*(undefined4 *)(param1 + 0x38),0);
+		    iVar1 = **(int **)(param1 + 0x30);
+		    (**(code **)((ulonglong)*(uint *)(iVar1 + 0x130) * 4))
+		              (*(int **)(param1 + 0x30),*(undefined4 *)(iVar1 + 0x134));
+		    iVar1 = **(int **)(param1 + 0x38);
+		    (**(code **)((ulonglong)*(uint *)(iVar1 + 0xe8) * 4))
+		              (*(int **)(param1 + 0x38),*(undefined4 *)(iVar1 + 0xec));
+		    iVar1 = **(int **)(param1 + 0x34);
+		    (**(code **)((ulonglong)*(uint *)(iVar1 + 0xe8) * 4))
+		              (*(int **)(param1 + 0x34),*(undefined4 *)(iVar1 + 0xec));
+		    *(undefined1 *)(param1 + 0x3c) = 0;
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06002AD1 RID: 10961 RVA: 0x00002050 File Offset: 0x00000250
@@ -167,6 +191,18 @@ namespace Gameplay.Horde.View
 		[Address(RVA = "0x7B6C", Offset = "0x7B6C", VA = "0x7B6C")]
 		private void OnDestroy()
 		{
+		/* --- GHIDRA: OnDestroy ---
+		void Gameplay_Horde_View_HordeView__OnDestroy
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  *(undefined4 *)(param1 + 0x40) = param3;
+		  *(undefined4 *)(param1 + 0x44) = param2;
+		  Gameplay_Horde_View_HordeView__UpdateInfo(param1,param1);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06002AD2 RID: 10962 RVA: 0x00002050 File Offset: 0x00000250
@@ -174,6 +210,301 @@ namespace Gameplay.Horde.View
 		[Address(RVA = "0x7B6D", Offset = "0x7B6D", VA = "0x7B6D")]
 		public void InitMasterWindowStatus(IWindowWithCloseBackButtons masterWindow, IMonsterSource monsterSource)
 		{
+		/* --- GHIDRA: InitMasterWindowStatus ---
+		int * Gameplay_Horde_View_HordeView__InitMasterWindowStatus
+		                (int param1,int *param2,int param3,undefined4 param4,undefined4 param5)
+		
+		{
+		  uint uVar1;
+		  undefined4 *puVar2;
+		  undefined4 uVar3;
+		  int iVar4;
+		  int *piVar5;
+		  uint *puVar6;
+		  int iVar7;
+		  int iVar8;
+		  undefined4 param2_00;
+		  undefined4 param1_00;
+		  int *piVar9;
+		  int local_14;
+		  int **local_10;
+		  int *local_c;
+		  int local_8;
+		  int *local_4;
+		  
+		  if (DAT_ram_00a5a1fb == '\0') {
+		    Mono_Security_ASN1__get_Item(&Gameplay_Horde_View_HordeMonsterAprView___TypeInfo);
+		    Mono_Security_ASN1__get_Item(&System_Collections_Generic_ICollection_HordeMonsterData__TypeInfo)
+		    ;
+		    Mono_Security_ASN1__get_Item(&System_IDisposable_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&System_Collections_IEnumerator_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&System_Collections_Generic_IList_HordeMonsterData__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Method_UnityEngine_Object_Instantiate_GameObject___);
+		    Mono_Security_ASN1__get_Item(&UnityEngine_Object_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&UnityEngine_Transform_TypeInfo);
+		    DAT_ram_00a5a1fb = '\x01';
+		  }
+		  local_8 = 0;
+		  local_4 = (int *)UnityEngine_Transform__set_hasChanged(*(undefined4 *)(param1 + 0x28),0);
+		  local_c = &local_8;
+		  local_14 = 0;
+		  local_10 = &local_4;
+		  do {
+		    piVar5 = local_4;
+		    iVar8 = *local_4;
+		    if (*(ushort *)(iVar8 + 0xb6) != 0) {
+		      uVar1 = 0;
+		      do {
+		        piVar9 = (int *)(*(int *)(iVar8 + 0x58) + uVar1 * 8);
+		        if (System_Collections_IEnumerator_TypeInfo == *piVar9) {
+		          puVar2 = (undefined4 *)(iVar8 + piVar9[1] * 8 + 0xc0);
+		          goto code_r0x811e64ff;
+		        }
+		        uVar1 = uVar1 + 1;
+		      } while (*(ushort *)(iVar8 + 0xb6) != uVar1);
+		    }
+		    DAT_ram_009d3e38 = 0;
+		    puVar2 = (undefined4 *)
+		             import::env::invoke_iiii
+		                       (s_Allocator__0___Blocksize__1__mus_ram_00000421 + 0x18,local_4,
+		                        System_Collections_IEnumerator_TypeInfo,0);
+		    if (DAT_ram_009d3e38 == 1) {
+		code_r0x811e6742:
+		      DAT_ram_009d3e38 = 0;
+		      uVar3 = import::env::__cxa_find_matching_catch_3(&DAT_ram_0072c9c8);
+		      goto code_r0x811e674a;
+		    }
+		code_r0x811e64ff:
+		    DAT_ram_009d3e38 = 0;
+		    iVar8 = import::env::invoke_iii(*puVar2,piVar5,puVar2[1]);
+		    piVar5 = local_4;
+		    if (DAT_ram_009d3e38 == 1) goto code_r0x811e6742;
+		    if (iVar8 == 0) goto code_r0x811e6793;
+		    iVar8 = *local_4;
+		    if (*(ushort *)(iVar8 + 0xb6) != 0) {
+		      uVar1 = 0;
+		      do {
+		        piVar9 = (int *)(*(int *)(iVar8 + 0x58) + uVar1 * 8);
+		        if (System_Collections_IEnumerator_TypeInfo == *piVar9) {
+		          puVar2 = (undefined4 *)(piVar9[1] * 8 + iVar8 + 200);
+		          goto code_r0x811e65dc;
+		        }
+		        uVar1 = uVar1 + 1;
+		      } while (*(ushort *)(iVar8 + 0xb6) != uVar1);
+		    }
+		    DAT_ram_009d3e38 = 0;
+		    puVar2 = (undefined4 *)
+		             import::env::invoke_iiii
+		                       (s_Allocator__0___Blocksize__1__mus_ram_00000421 + 0x18,local_4,
+		                        System_Collections_IEnumerator_TypeInfo,1);
+		    if (DAT_ram_009d3e38 == 1) {
+		code_r0x811e6724:
+		      DAT_ram_009d3e38 = 0;
+		      uVar3 = import::env::__cxa_find_matching_catch_3(&DAT_ram_0072c9c8);
+		      goto code_r0x811e674a;
+		    }
+		code_r0x811e65dc:
+		    DAT_ram_009d3e38 = 0;
+		    piVar5 = (int *)import::env::invoke_iii(*puVar2,piVar5,puVar2[1]);
+		    if (DAT_ram_009d3e38 == 1) goto code_r0x811e6724;
+		    if (piVar5 != (int *)0x0) {
+		      if (((uint)*(byte *)(*piVar5 + 0xb8) < (uint)*(byte *)(UnityEngine_Transform_TypeInfo + 0xb8))
+		         || (*(int *)(*(int *)(*piVar5 + 100) +
+		                      (uint)*(byte *)(UnityEngine_Transform_TypeInfo + 0xb8) * 4 + -4) !=
+		             UnityEngine_Transform_TypeInfo)) {
+		        DAT_ram_009d3e38 = 0;
+		        import::env::invoke_vii
+		                  (s_var<private>_posTex__array<vec4<_ram_00000655 + 0x183,piVar5,
+		                   UnityEngine_Transform_TypeInfo);
+		        iVar8 = DAT_ram_009d3e38;
+		        DAT_ram_009d3e38 = 0;
+		        if (iVar8 != 1) {
+		          do {
+		            halt_trap();
+		          } while( true );
+		        }
+		        uVar3 = import::env::__cxa_find_matching_catch_3(&DAT_ram_0072c9c8);
+		        goto code_r0x811e674a;
+		      }
+		    }
+		    DAT_ram_009d3e38 = 0;
+		    uVar3 = import::env::invoke_iii
+		                      (s_struct_Uniforms___color__array<v_ram_00000aff + 0x25c,piVar5,0);
+		    if (DAT_ram_009d3e38 == 1) break;
+		    if (*(int *)(UnityEngine_Object_TypeInfo + 0x74) == 0) {
+		      DAT_ram_009d3e38 = 0;
+		      import::env::invoke_vi
+		                (s_var<private>_posTex__array<vec4<_ram_00000655 + 0x180,UnityEngine_Object_TypeInfo
+		                );
+		      if (DAT_ram_009d3e38 == 1) break;
+		    }
+		    DAT_ram_009d3e38 = 0;
+		    import::env::invoke_vii(s_struct_Uniforms___color__array<v_ram_00000aff + 0x274,uVar3,0);
+		  } while (DAT_ram_009d3e38 != 1);
+		  DAT_ram_009d3e38 = 0;
+		  uVar3 = import::env::__cxa_find_matching_catch_3(&DAT_ram_0072c9c8);
+		code_r0x811e674a:
+		  iVar8 = global_1;
+		  iVar4 = import::env::llvm_eh_typeid_for(&DAT_ram_0072c9c8);
+		  if (iVar8 == iVar4) {
+		    piVar5 = (int *)import::env::__cxa_begin_catch(uVar3);
+		    local_14 = *piVar5;
+		    DAT_ram_009d3e38 = 0;
+		    import::env::invoke_v(0x123);
+		    iVar8 = DAT_ram_009d3e38;
+		    DAT_ram_009d3e38 = 0;
+		    if (iVar8 != 1) {
+		code_r0x811e6793:
+		      DAT_ram_009d3e38 = 0;
+		      local_8 = func_ii_1082(local_4,System_IDisposable_TypeInfo);
+		      piVar5 = (int *)*local_c;
+		      if (piVar5 != (int *)0x0) {
+		        iVar8 = *piVar5;
+		        if (*(ushort *)(iVar8 + 0xb6) != 0) {
+		          uVar1 = 0;
+		          do {
+		            if (System_IDisposable_TypeInfo == *(int *)(*(int *)(iVar8 + 0x58) + uVar1 * 8)) {
+		              puVar6 = (uint *)(iVar8 + *(int *)(*(int *)(iVar8 + 0x58) + uVar1 * 8 + 4) * 8 + 0xc0)
+		              ;
+		              goto code_r0x811e6823;
+		            }
+		            uVar1 = uVar1 + 1;
+		          } while (*(ushort *)(iVar8 + 0xb6) != uVar1);
+		        }
+		        puVar6 = (uint *)func_ii_1080(piVar5,System_IDisposable_TypeInfo,0);
+		code_r0x811e6823:
+		        (**(code **)((ulonglong)*puVar6 * 4))(piVar5,puVar6[1]);
+		      }
+		      if (local_14 != 0) {
+		        System_Data_DataSet__ValidateLocaleConstraint(local_14);
+		        do {
+		          halt_trap();
+		        } while( true );
+		      }
+		      uVar1 = 0;
+		      iVar8 = *param2;
+		      if (*(ushort *)(iVar8 + 0xb6) != 0) {
+		        do {
+		          if (System_Collections_Generic_ICollection_HordeMonsterData__TypeInfo ==
+		              *(int *)(*(int *)(iVar8 + 0x58) + uVar1 * 8)) {
+		            puVar6 = (uint *)(iVar8 + *(int *)(*(int *)(iVar8 + 0x58) + uVar1 * 8 + 4) * 8 + 0xc0);
+		            goto code_r0x811e68a7;
+		          }
+		          uVar1 = uVar1 + 1;
+		        } while (*(ushort *)(iVar8 + 0xb6) != uVar1);
+		      }
+		      puVar6 = (uint *)func_ii_1080(param2,
+		                                    System_Collections_Generic_ICollection_HordeMonsterData__TypeInfo
+		                                    ,0);
+		code_r0x811e68a7:
+		      uVar1 = 0;
+		      uVar3 = (**(code **)((ulonglong)*puVar6 * 4))(param2,puVar6[1]);
+		      piVar5 = (int *)Mono_Security_ASN1Convert__ToOid
+		                                (Gameplay_Horde_View_HordeMonsterAprView___TypeInfo,uVar3);
+		      iVar8 = *param2;
+		      if (*(ushort *)(iVar8 + 0xb6) != 0) {
+		        do {
+		          if (System_Collections_Generic_IList_HordeMonsterData__TypeInfo ==
+		              *(int *)(*(int *)(iVar8 + 0x58) + uVar1 * 8)) {
+		            puVar6 = (uint *)(iVar8 + *(int *)(*(int *)(iVar8 + 0x58) + uVar1 * 8 + 4) * 8 + 0xc0);
+		            goto code_r0x811e693e;
+		          }
+		          uVar1 = uVar1 + 1;
+		        } while (*(ushort *)(iVar8 + 0xb6) != uVar1);
+		      }
+		      puVar6 = (uint *)func_ii_1080(param2,
+		                                    System_Collections_Generic_IList_HordeMonsterData__TypeInfo,0);
+		code_r0x811e693e:
+		      uVar3 = (**(code **)((ulonglong)*puVar6 * 4))(param2,0,puVar6[1]);
+		      iVar8 = Gameplay_Horde_View_HordeView__Init(param1,0,uVar3,(uint)(0 < param3),param4,puVar6);
+		      if ((iVar8 != 0) && (iVar4 = func_ii_1082(iVar8,*(undefined4 *)(*piVar5 + 0x20)), iVar4 == 0))
+		      {
+		        uVar3 = func_ii_1083();
+		        func_ii_1050(uVar3,0);
+		        do {
+		          halt_trap();
+		        } while( true );
+		      }
+		      piVar5[4] = iVar8;
+		      iVar8 = 1;
+		      do {
+		        iVar4 = *param2;
+		        if (*(ushort *)(iVar4 + 0xb6) != 0) {
+		          uVar1 = 0;
+		          do {
+		            piVar9 = (int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8);
+		            if (System_Collections_Generic_ICollection_HordeMonsterData__TypeInfo == *piVar9) {
+		              puVar6 = (uint *)(iVar4 + piVar9[1] * 8 + 0xc0);
+		              goto code_r0x811e6a24;
+		            }
+		            uVar1 = uVar1 + 1;
+		          } while (*(ushort *)(iVar4 + 0xb6) != uVar1);
+		        }
+		        puVar6 = (uint *)func_ii_1080(param2,
+		                                      System_Collections_Generic_ICollection_HordeMonsterData__TypeInfo
+		                                      ,0);
+		code_r0x811e6a24:
+		        iVar4 = (**(code **)((ulonglong)*puVar6 * 4))(param2,puVar6[1]);
+		        if (iVar4 <= iVar8) {
+		          return piVar5;
+		        }
+		        iVar4 = *param2;
+		        if (*(ushort *)(iVar4 + 0xb6) != 0) {
+		          uVar1 = 0;
+		          do {
+		            piVar9 = (int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8);
+		            if (System_Collections_Generic_IList_HordeMonsterData__TypeInfo == *piVar9) {
+		              puVar6 = (uint *)(iVar4 + piVar9[1] * 8 + 0xc0);
+		              goto code_r0x811e6aa3;
+		            }
+		            uVar1 = uVar1 + 1;
+		          } while (*(ushort *)(iVar4 + 0xb6) != uVar1);
+		        }
+		        puVar6 = (uint *)func_ii_1080(param2,
+		                                      System_Collections_Generic_IList_HordeMonsterData__TypeInfo,0)
+		        ;
+		code_r0x811e6aa3:
+		        uVar3 = (**(code **)((ulonglong)*puVar6 * 4))(param2,iVar8,puVar6[1]);
+		        param2_00 = *(undefined4 *)(param1 + 0x28);
+		        param1_00 = *(undefined4 *)(param1 + 0x14);
+		        if (*(int *)(UnityEngine_Object_TypeInfo + 0x74) == 0) {
+		          func_ii_306000(UnityEngine_Object_TypeInfo);
+		        }
+		        func_ii_6805(param1_00,param2_00,Method_UnityEngine_Object_Instantiate_GameObject___);
+		        iVar4 = Gameplay_Horde_View_HordeView__Init
+		                          (param1,iVar8,uVar3,(uint)(iVar8 < param3),param4,uVar3);
+		        if ((iVar4 != 0) &&
+		           (iVar7 = func_ii_1082(iVar4,*(undefined4 *)(*piVar5 + 0x20)), iVar7 == 0)) {
+		          uVar3 = func_ii_1083();
+		          func_ii_1050(uVar3,0);
+		          do {
+		            halt_trap();
+		          } while( true );
+		        }
+		        piVar5[iVar8 + 4] = iVar4;
+		        iVar8 = iVar8 + 1;
+		      } while( true );
+		    }
+		    uVar3 = import::env::__cxa_find_matching_catch_2();
+		  }
+		  DAT_ram_009d3e38 = 0;
+		  import::env::invoke_ii(s_struct_Uniforms___color__array<v_ram_00001f04 + 0x275,&local_14);
+		  iVar8 = DAT_ram_009d3e38;
+		  DAT_ram_009d3e38 = 0;
+		  if (iVar8 != 1) {
+		    import::env::__resumeException(uVar3);
+		    do {
+		      halt_trap();
+		    } while( true );
+		  }
+		  import::env::__cxa_find_matching_catch_3(0);
+		  unnamed_function_937();
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
 		}
 
 		// Token: 0x06002AD3 RID: 10963 RVA: 0x00002052 File Offset: 0x00000252
@@ -181,6 +512,51 @@ namespace Gameplay.Horde.View
 		[Address(RVA = "0x7B6E", Offset = "0x7B6E", VA = "0x7B6E")]
 		public HordeMonsterAprView[] Init(IList<HordeMonsterData> hordeMonsters, int currentMonsterIndex, Action<HordeMonsterAprView> callback)
 		{
+		/* --- GHIDRA: Init ---
+		undefined4
+		Gameplay_Horde_View_HordeView__Init
+		          (int param1,undefined4 param2,undefined4 param3,undefined4 param4,undefined4 param5,
+		          undefined4 param6)
+		
+		{
+		  int param1_00;
+		  undefined4 uVar1;
+		  undefined4 param1_01;
+		  
+		  if (DAT_ram_00a5a1fc == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Elements_GenericList_GenericListElement_HordeMonsterAprView_HordeMonsterAprViewArgs__Init__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&Gameplay_Horde_View_HordeMonsterAprView_HordeMonsterAprViewArgs_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Method_UnityEngine_Object_Instantiate_HordeMonsterAprView___);
+		    Mono_Security_ASN1__get_Item(&UnityEngine_Object_TypeInfo);
+		    DAT_ram_00a5a1fc = '\x01';
+		  }
+		  uVar1 = *(undefined4 *)(param1 + 0x28);
+		  param1_01 = *(undefined4 *)(param1 + 0x10);
+		  if (*(int *)(UnityEngine_Object_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(UnityEngine_Object_TypeInfo);
+		  }
+		  uVar1 = func_ii_6805(param1_01,uVar1,Method_UnityEngine_Object_Instantiate_HordeMonsterAprView___)
+		  ;
+		  param1_00 = unnamed_function_1417
+		                        (Gameplay_Horde_View_HordeMonsterAprView_HordeMonsterAprViewArgs_TypeInfo);
+		  Unity_Collections_NativeArray_ReadOnly_Enumerator_Painter2D_Painter2DJobData___MoveNext
+		            (param1_00,0);
+		  *(undefined4 *)(param1_00 + 0x14) = param5;
+		  *(undefined1 *)(param1_00 + 0x10) = (undefined1)param4;
+		  *(undefined4 *)(param1_00 + 0xc) = param3;
+		  *(undefined4 *)(param1_00 + 8) = param2;
+		  UI_Elements_Buildings_SpellItemArgs___ctor
+		            (uVar1,param1_00,
+		             Method_UI_Elements_GenericList_GenericListElement_HordeMonsterAprView_HordeMonsterAprViewArgs__Init__
+		            );
+		  return uVar1;
+		}
+		*/
+
 			return null;
 		}
 
@@ -189,6 +565,79 @@ namespace Gameplay.Horde.View
 		[Address(RVA = "0x7B6F", Offset = "0x7B6F", VA = "0x7B6F")]
 		private HordeMonsterAprView SpawnMonsterApr(int index, HordeMonsterData monster, bool defeated, Action<HordeMonsterAprView> callback)
 		{
+		/* --- GHIDRA: SpawnMonsterApr ---
+		void Gameplay_Horde_View_HordeView__SpawnMonsterApr
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4,int param5,
+		               undefined4 param6,undefined4 param7)
+		
+		{
+		  uint uVar1;
+		  undefined4 uVar2;
+		  uint *puVar3;
+		  undefined4 uVar4;
+		  undefined4 uVar5;
+		  int *param1_00;
+		  int iVar6;
+		  
+		  if (DAT_ram_00a5a1fd == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Core_Dict_DictWrappers_Base_AbstractDictWrapper_AprDic__uint__get_Data__);
+		    Mono_Security_ASN1__get_Item(&Core_Gameplay_IGame_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Core_Money_Money_TypeInfo);
+		    DAT_ram_00a5a1fd = '\x01';
+		  }
+		  Core_Extensions_Dict_MonsterDictExt__GetTitle(*(undefined4 *)(param1 + 0x18),param2,0);
+		  Core_Extensions_Dict_MonsterDictExt__GetTitle(*(undefined4 *)(param1 + 0x24),param3,0);
+		  uVar5 = *(undefined4 *)(param1 + 0x18);
+		  uVar2 = GAFInternal_Objects_GAFBakedObjectInternal__get_impl(*(undefined4 *)(param5 + 8),0);
+		  UI_Elements_RightPanel_TitleWithLevel__set_Title(uVar5,uVar2,0);
+		  uVar5 = *(undefined4 *)(param1 + 0x2c);
+		  uVar2 = UI_Wiki_WikiUriRouter__SetData
+		                    (*(undefined4 *)(*(int *)(*(int *)(param5 + 8) + 0xc) + 0x10),0);
+		  Core_Extensions_Dict_AprDicExt__Get1024AssetId(uVar5,uVar2,0);
+		  uVar2 = Core_Data_MonsterData__GetDifficulty(*(undefined4 *)(param5 + 8),param6,0);
+		  Gameplay_Horde_View_HordeView__set_MainMonsterId(param1,uVar2,param1);
+		  uVar5 = *(undefined4 *)(*(int *)(param1 + 0x1c) + 0xb8);
+		  uVar2 = Gameplay_Accounts_Model_Data_BattleAccount__GetMonsterAttackCost
+		                    (param4,*(undefined4 *)(param5 + 0xc),0);
+		  if (*(int *)(Core_Money_Money_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Core_Money_Money_TypeInfo);
+		  }
+		  uVar2 = Core_Money_Money__op_Explicit(uVar2,0);
+		  UI_Price_Price__SetColor(uVar5,param6,uVar2,0);
+		  uVar5 = *(undefined4 *)(*(int *)(param1 + 0x20) + 0xb8);
+		  uVar2 = Gameplay_Accounts_Model_Data_BattleAccount__GetMonsterAttackCost
+		                    (param4,*(undefined4 *)(*(int *)(param5 + 8) + 8),0);
+		  uVar2 = Core_Money_Money__op_Explicit(uVar2,0);
+		  UI_Price_Price__SetColor(uVar5,param6,uVar2,0);
+		  uVar2 = *(undefined4 *)(param5 + 8);
+		  uVar5 = *(undefined4 *)(param1 + 0x50);
+		  if (DAT_ram_00a6456f == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_Gameplay_Game_TypeInfo);
+		    DAT_ram_00a6456f = '\x01';
+		  }
+		  param1_00 = (int *)**(undefined4 **)(Core_Gameplay_Game_TypeInfo + 0x5c);
+		  iVar6 = *param1_00;
+		  if (*(ushort *)(iVar6 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (Core_Gameplay_IGame_TypeInfo == *(int *)(*(int *)(iVar6 + 0x58) + uVar1 * 8)) {
+		        puVar3 = (uint *)(*(int *)(*(int *)(iVar6 + 0x58) + uVar1 * 8 + 4) * 8 + iVar6 + 0x178);
+		        goto code_r0x811e6daf;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar6 + 0xb6) != uVar1);
+		  }
+		  puVar3 = (uint *)func_ii_1080(param1_00,Core_Gameplay_IGame_TypeInfo,0x17);
+		code_r0x811e6daf:
+		  uVar4 = (**(code **)((ulonglong)*puVar3 * 4))(param1_00,puVar3[1]);
+		  uVar4 = Newtonsoft_Json_Converters_XmlDocumentTypeWrapper__get_System(uVar4,0);
+		  uVar2 = Core_Data_MonsterData__get_Level(uVar2,param6,uVar4,0);
+		  UI_Elements_RightPanel_TitledList_Elements_RewardsTitledListElement__get_Rewards(uVar5,uVar2,0);
+		  return;
+		}
+		*/
+
 			return null;
 		}
 
@@ -197,6 +646,140 @@ namespace Gameplay.Horde.View
 		[Address(RVA = "0x7B70", Offset = "0x7B70", VA = "0x7B70")]
 		public void UpdateInfo(string title, string description, BattleAccount account, HordeMonsterData monster, UserData user)
 		{
+		/* --- GHIDRA: UpdateInfo ---
+		void Gameplay_Horde_View_HordeView__UpdateInfo(int param1,undefined4 param2)
+		
+		{
+		  uint uVar1;
+		  uint *puVar2;
+		  undefined4 uVar3;
+		  undefined4 uVar4;
+		  undefined4 uVar5;
+		  undefined4 uVar6;
+		  undefined4 param1_00;
+		  int *piVar7;
+		  int iVar8;
+		  int *piVar9;
+		  int iVar10;
+		  
+		  if (DAT_ram_00a5a1fe == '\0') {
+		    Mono_Security_ASN1__get_Item(&Gameplay_Horde_Controller_HordeController_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Gameplay_Horde_Events_HordeEvents_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Gameplay_Horde_Model_HordeModel_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Gameplay_Horde_Controller_HordeViewMediator_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Core_Gameplay_IGame_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Method_Core_Net_ServiceFactory_GetService_WorldService___);
+		    Mono_Security_ASN1__get_Item(&Core_Net_ServiceFactory_TypeInfo);
+		    DAT_ram_00a5a1fe = '\x01';
+		  }
+		  if (*(char *)(param1 + 0x3c) == '\0') {
+		    if (DAT_ram_00a6456f == '\0') {
+		      Mono_Security_ASN1__get_Item(&Core_Gameplay_Game_TypeInfo);
+		      DAT_ram_00a6456f = '\x01';
+		    }
+		    piVar7 = (int *)**(undefined4 **)(Core_Gameplay_Game_TypeInfo + 0x5c);
+		    iVar8 = *piVar7;
+		    if (*(ushort *)(iVar8 + 0xb6) != 0) {
+		      uVar1 = 0;
+		      do {
+		        if (Core_Gameplay_IGame_TypeInfo == *(int *)(*(int *)(iVar8 + 0x58) + uVar1 * 8)) {
+		          puVar2 = (uint *)(*(int *)(*(int *)(iVar8 + 0x58) + uVar1 * 8 + 4) * 8 + iVar8 + 0x178);
+		          goto code_r0x811e60b0;
+		        }
+		        uVar1 = uVar1 + 1;
+		      } while (*(ushort *)(iVar8 + 0xb6) != uVar1);
+		    }
+		    puVar2 = (uint *)func_ii_1080(piVar7,Core_Gameplay_IGame_TypeInfo,0x17);
+		code_r0x811e60b0:
+		    uVar3 = (**(code **)((ulonglong)*puVar2 * 4))(piVar7,puVar2[1]);
+		    if (DAT_ram_00a6456f == '\0') {
+		      Mono_Security_ASN1__get_Item(&Core_Gameplay_Game_TypeInfo);
+		      DAT_ram_00a6456f = '\x01';
+		    }
+		    piVar9 = (int *)**(undefined4 **)(Core_Gameplay_Game_TypeInfo + 0x5c);
+		    iVar8 = *piVar9;
+		    if (*(ushort *)(iVar8 + 0xb6) != 0) {
+		      uVar1 = 0;
+		      do {
+		        if (Core_Gameplay_IGame_TypeInfo == *(int *)(*(int *)(iVar8 + 0x58) + uVar1 * 8)) {
+		          puVar2 = (uint *)(*(int *)(*(int *)(iVar8 + 0x58) + uVar1 * 8 + 4) * 8 + iVar8 + 0x120);
+		          goto code_r0x811e615c;
+		        }
+		        uVar1 = uVar1 + 1;
+		      } while (*(ushort *)(iVar8 + 0xb6) != uVar1);
+		    }
+		    puVar2 = (uint *)func_ii_1080(piVar9,Core_Gameplay_IGame_TypeInfo,0xc);
+		code_r0x811e615c:
+		    uVar4 = (**(code **)((ulonglong)*puVar2 * 4))(piVar9,puVar2[1]);
+		    if (DAT_ram_00a6456f == '\0') {
+		      Mono_Security_ASN1__get_Item(&Core_Gameplay_Game_TypeInfo);
+		      DAT_ram_00a6456f = '\x01';
+		    }
+		    piVar9 = (int *)**(undefined4 **)(Core_Gameplay_Game_TypeInfo + 0x5c);
+		    iVar8 = *piVar9;
+		    if (*(ushort *)(iVar8 + 0xb6) != 0) {
+		      uVar1 = 0;
+		      do {
+		        if (Core_Gameplay_IGame_TypeInfo == *(int *)(*(int *)(iVar8 + 0x58) + uVar1 * 8)) {
+		          puVar2 = (uint *)(*(int *)(*(int *)(iVar8 + 0x58) + uVar1 * 8 + 4) * 8 + iVar8 + 0x1f8);
+		          goto code_r0x811e6208;
+		        }
+		        uVar1 = uVar1 + 1;
+		      } while (*(ushort *)(iVar8 + 0xb6) != uVar1);
+		    }
+		    puVar2 = (uint *)func_ii_1080(piVar9,Core_Gameplay_IGame_TypeInfo,0x27);
+		code_r0x811e6208:
+		    iVar8 = (**(code **)((ulonglong)*puVar2 * 4))(piVar9,puVar2[1]);
+		    iVar10 = **(int **)(iVar8 + 0x14);
+		    uVar5 = (**(code **)((ulonglong)*(uint *)(iVar10 + 0x100) * 4))
+		                      (*(int **)(iVar8 + 0x14),*(undefined4 *)(iVar10 + 0x104));
+		    if (DAT_ram_00a6456f == '\0') {
+		      Mono_Security_ASN1__get_Item(&Core_Gameplay_Game_TypeInfo);
+		      DAT_ram_00a6456f = '\x01';
+		    }
+		    piVar9 = (int *)**(undefined4 **)(Core_Gameplay_Game_TypeInfo + 0x5c);
+		    iVar8 = *piVar9;
+		    if (*(ushort *)(iVar8 + 0xb6) != 0) {
+		      uVar1 = 0;
+		      do {
+		        if (Core_Gameplay_IGame_TypeInfo == *(int *)(*(int *)(iVar8 + 0x58) + uVar1 * 8)) {
+		          puVar2 = (uint *)(*(int *)(*(int *)(iVar8 + 0x58) + uVar1 * 8 + 4) * 8 + iVar8 + 0x140);
+		          goto code_r0x811e62cd;
+		        }
+		        uVar1 = uVar1 + 1;
+		      } while (*(ushort *)(iVar8 + 0xb6) != uVar1);
+		    }
+		    puVar2 = (uint *)func_ii_1080(piVar9,Core_Gameplay_IGame_TypeInfo,0x10);
+		code_r0x811e62cd:
+		    uVar6 = (**(code **)((ulonglong)*puVar2 * 4))(piVar9,puVar2[1]);
+		    uVar6 = func_ii_7112(uVar6,0);
+		    param1_00 = unnamed_function_1417(Gameplay_Horde_Model_HordeModel_TypeInfo);
+		    Gameplay_Horde_Model_HordeModel__set_CurrentMonsterIndex
+		              (param1_00,piVar7,uVar3,uVar4,uVar5,uVar6,0);
+		    *(undefined4 *)(param1 + 0x34) = param1_00;
+		    uVar3 = unnamed_function_1417(Gameplay_Horde_Events_HordeEvents_TypeInfo);
+		    if (*(int *)(Core_Net_ServiceFactory_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(Core_Net_ServiceFactory_TypeInfo);
+		    }
+		    uVar4 = Core_Gameplay_Managers_LoggedManager__RequestLogin
+		                      (Method_Core_Net_ServiceFactory_GetService_WorldService___);
+		    uVar6 = *(undefined4 *)(param1 + 0x34);
+		    uVar5 = unnamed_function_1417(Gameplay_Horde_Controller_HordeController_TypeInfo);
+		    Gameplay_Horde_Events_HordeEvents___ctor(uVar5,uVar4,uVar6,uVar3,0);
+		    *(undefined4 *)(param1 + 0x38) = uVar5;
+		    uVar4 = *(undefined4 *)(param1 + 0x34);
+		    piVar7 = (int *)unnamed_function_1417(Gameplay_Horde_Controller_HordeViewMediator_TypeInfo);
+		    Gameplay_Horde_Controller_HordeController__ExitHordeResultHandler(piVar7,uVar4,uVar3,uVar5,0);
+		    (**(code **)((ulonglong)*(uint *)(*piVar7 + 0x160) * 4))
+		              (piVar7,param1,*(undefined4 *)(*piVar7 + 0x164));
+		    *(int **)(param1 + 0x30) = piVar7;
+		    MVC_AbstractController__Dispose(*(undefined4 *)(param1 + 0x38),0);
+		    *(undefined1 *)(param1 + 0x3c) = 1;
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06002AD6 RID: 10966 RVA: 0x00002050 File Offset: 0x00000250
@@ -204,6 +787,29 @@ namespace Gameplay.Horde.View
 		[Address(RVA = "0x7B71", Offset = "0x7B71", VA = "0x7B71")]
 		private void SetupMVC()
 		{
+		/* --- GHIDRA: SetupMVC ---
+		void Gameplay_Horde_View_HordeView__SetupMVC(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  
+		  if (*(char *)(param1 + 0x3c) != '\0') {
+		    MVC_AbstractController__Run(*(undefined4 *)(param1 + 0x38),0);
+		    iVar1 = **(int **)(param1 + 0x30);
+		    (**(code **)((ulonglong)*(uint *)(iVar1 + 0x130) * 4))
+		              (*(int **)(param1 + 0x30),*(undefined4 *)(iVar1 + 0x134));
+		    iVar1 = **(int **)(param1 + 0x38);
+		    (**(code **)((ulonglong)*(uint *)(iVar1 + 0xe8) * 4))
+		              (*(int **)(param1 + 0x38),*(undefined4 *)(iVar1 + 0xec));
+		    iVar1 = **(int **)(param1 + 0x34);
+		    (**(code **)((ulonglong)*(uint *)(iVar1 + 0xe8) * 4))
+		              (*(int **)(param1 + 0x34),*(undefined4 *)(iVar1 + 0xec));
+		    *(undefined1 *)(param1 + 0x3c) = 0;
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06002AD7 RID: 10967 RVA: 0x00002050 File Offset: 0x00000250
@@ -298,4 +904,215 @@ namespace Gameplay.Horde.View
 		[FieldOffset(Offset = "0x50")]
 		private RewardsTitledListElement _rewards;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_KickButton ---
+		void Gameplay_Horde_View_HordeView__get_KickButton(int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a5a1f7 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_uint__TypeInfo);
+		    DAT_ram_00a5a1f7 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x48);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = UnityEngine_UI_Image__set_sprite(param1_00,param2,0);
+		    param2_00 = System_Action_uint__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_uint__TypeInfo), iVar2 == 0)) break;
+		    iVar2 = func_ii_4329(param1 + 0x48,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: add_RequestHordeInfoEvent ---
+		void Gameplay_Horde_View_HordeView__add_RequestHordeInfoEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a5a1f8 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_uint__TypeInfo);
+		    DAT_ram_00a5a1f8 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x48);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = func_ii_7048(param1_00,param2,0);
+		    param2_00 = System_Action_uint__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_uint__TypeInfo), iVar2 == 0)) break;
+		    iVar2 = func_ii_4329(param1 + 0x48,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: remove_RequestHordeInfoEvent ---
+		void Gameplay_Horde_View_HordeView__remove_RequestHordeInfoEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  int iVar1;
+		  
+		  iVar1 = *(int *)(param1 + 0x48);
+		  if (iVar1 != 0) {
+		    (**(code **)((ulonglong)*(uint *)(iVar1 + 0xc) * 4))
+		              (*(undefined4 *)(iVar1 + 0x20),param2,*(undefined4 *)(iVar1 + 0x14));
+		  }
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_MainMonsterId ---
+		void Gameplay_Horde_View_HordeView__set_MainMonsterId
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  int iVar1;
+		  undefined4 uVar2;
+		  undefined4 param3_00;
+		  undefined4 param1_00;
+		  
+		  if (DAT_ram_00a5a1f9 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_GameLocalization_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_118);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_10784);
+		    DAT_ram_00a5a1f9 = '\x01';
+		  }
+		  iVar1 = Cysharp_Threading_Tasks_CancellationTokenExtensions___cctor
+		                    (*(undefined4 *)(param1 + 0x4c),0);
+		  if (iVar1 != 0) {
+		    param1_00 = *(undefined4 *)(param1 + 0x4c);
+		    if (*(int *)(Core_GameLocalization_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(Core_GameLocalization_TypeInfo);
+		    }
+		    uVar2 = func_ii_7508(StringLiteral_10784,1,0,1,0,0,0,0);
+		    param3_00 = func_ii_7508(param2,1,0,1,0,0,0,0);
+		    uVar2 = UnityEngine_AndroidJavaObject__FromJavaArray_Nullable_int__
+		                      (uVar2,StringLiteral_118,param3_00,0);
+		    Core_Extensions_Dict_MonsterDictExt__GetTitle(param1_00,uVar2,0);
+		  }
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_Difficulty ---
+		void Gameplay_Horde_View_HordeView__set_Difficulty(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  undefined4 uVar2;
+		  int *piVar3;
+		  undefined4 uVar4;
+		  uint uVar5;
+		  
+		  if (DAT_ram_00a5a1fa == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               UI_Elements_RightPanel_TitledList_Elements_MonsterDifficultyTitledListElementArgs_TypeInfo
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               UI_Elements_RightPanel_TitledList_Elements_MonsterDifficultyTitledListElement_TypeInfo
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&UI_Elements_RightPanel_TitledList_Elements_RewardsTitledListElementArgs_TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&UI_Elements_RightPanel_TitledList_Elements_RewardsTitledListElement_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&UI_Elements_RightPanel_TitledList_TitledListArgs_TypeInfo);
+		    DAT_ram_00a5a1fa = '\x01';
+		  }
+		  uVar4 = *(undefined4 *)(param1 + 0x24);
+		  uVar2 = unnamed_function_1417(UI_Elements_RightPanel_TitledList_TitledListArgs_TypeInfo);
+		  UI_Elements_RightPanel_TitledList_TitledList__set_Title(uVar4,uVar2,0);
+		  uVar4 = *(undefined4 *)(param1 + 0x24);
+		  uVar2 = unnamed_function_1417
+		                    (
+		                    UI_Elements_RightPanel_TitledList_Elements_MonsterDifficultyTitledListElementArgs_TypeInfo
+		                    );
+		  piVar3 = (int *)UI_Elements_RightPanel_TitledList_TitledList__Init(uVar4,uVar2,0);
+		  iVar1 = UI_Elements_RightPanel_TitledList_Elements_MonsterDifficultyTitledListElement_TypeInfo;
+		  if (piVar3 == (int *)0x0) {
+		    *(undefined4 *)(param1 + 0x4c) = 0;
+		code_r0x811e5e28:
+		    uVar4 = *(undefined4 *)(param1 + 0x24);
+		    uVar2 = unnamed_function_1417
+		                      (
+		                      UI_Elements_RightPanel_TitledList_Elements_RewardsTitledListElementArgs_TypeInfo
+		                      );
+		    piVar3 = (int *)UI_Elements_RightPanel_TitledList_TitledList__Init(uVar4,uVar2,0);
+		    iVar1 = UI_Elements_RightPanel_TitledList_Elements_RewardsTitledListElement_TypeInfo;
+		    if (piVar3 == (int *)0x0) {
+		      *(undefined4 *)(param1 + 0x50) = 0;
+		      return;
+		    }
+		    uVar5 = (uint)*(byte *)(
+		                           UI_Elements_RightPanel_TitledList_Elements_RewardsTitledListElement_TypeInfo
+		                           + 0xb8);
+		    if ((uVar5 <= *(byte *)(*piVar3 + 0xb8)) &&
+		       (*(int *)(*(int *)(*piVar3 + 100) + (uVar5 - 1) * 4) ==
+		        UI_Elements_RightPanel_TitledList_Elements_RewardsTitledListElement_TypeInfo)) {
+		      *(int **)(param1 + 0x50) = piVar3;
+		      if ((uVar5 <= *(byte *)(*piVar3 + 0xb8)) &&
+		         (*(int *)(*(int *)(*piVar3 + 100) + (uVar5 - 1) * 4) == iVar1)) {
+		        return;
+		      }
+		    }
+		    System_Activator__CreateInstance(piVar3,iVar1);
+		    do {
+		      halt_trap();
+		    } while( true );
+		  }
+		  uVar5 = (uint)*(byte *)(
+		                         UI_Elements_RightPanel_TitledList_Elements_MonsterDifficultyTitledListElement_TypeInfo
+		                         + 0xb8);
+		  if ((uVar5 <= *(byte *)(*piVar3 + 0xb8)) &&
+		     (*(int *)(*(int *)(*piVar3 + 100) + (uVar5 - 1) * 4) ==
+		      UI_Elements_RightPanel_TitledList_Elements_MonsterDifficultyTitledListElement_TypeInfo)) {
+		    *(int **)(param1 + 0x4c) = piVar3;
+		    if ((uVar5 <= *(byte *)(*piVar3 + 0xb8)) &&
+		       (*(int *)(*(int *)(*piVar3 + 100) + (uVar5 - 1) * 4) == iVar1)) goto code_r0x811e5e28;
+		  }
+		  System_Activator__CreateInstance(piVar3,iVar1);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
 }

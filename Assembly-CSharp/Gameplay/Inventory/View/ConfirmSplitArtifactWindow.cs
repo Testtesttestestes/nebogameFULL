@@ -42,6 +42,125 @@ namespace Gameplay.Inventory.View
 		[Address(RVA = "0x78B7", Offset = "0x78B7", VA = "0x78B7")]
 		private void Start()
 		{
+		/* --- GHIDRA: Start ---
+		undefined4
+		Gameplay_Inventory_View_ConfirmSplitArtifactWindow__Start
+		          (undefined4 param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  int iVar1;
+		  int param1_00;
+		  int param1_01;
+		  undefined4 uVar2;
+		  int iVar3;
+		  int param1_02;
+		  uint uVar4;
+		  
+		  if (DAT_ram_00a5a09b == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               UI_Windows_BaseDialogWindow_BaseDialogWindowArgs_DialogWindowButton_ButtonInvoker_ButtonCallbackDelegate_ConfirmSplitArtifactWindow_ConfirmSplitAtrifactWindowArgs__ArtifactData__TypeInfo
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Windows_BaseDialogWindow_BaseDialogWindowArgs_DialogWindowButton_ButtonInvoker_ConfirmSplitArtifactWindow_ConfirmSplitAtrifactWindowArgs__ArtifactData___ctor__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               UI_Windows_BaseDialogWindow_BaseDialogWindowArgs_DialogWindowButton_ButtonInvoker_ConfirmSplitArtifactWindow_ConfirmSplitAtrifactWindowArgs__ArtifactData__TypeInfo
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Gameplay_Inventory_View_ConfirmSplitArtifactWindow_ConfirmSplitAtrifactWindowArgs_TypeInfo
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Windows_BaseDialogWindow_BaseDialogWindowArgs_DialogWindowButton_ConfirmSplitArtifactWindow_ConfirmSplitAtrifactWindowArgs___ctor__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               UI_Windows_BaseDialogWindow_BaseDialogWindowArgs_DialogWindowButton_ConfirmSplitArtifactWindow_ConfirmSplitAtrifactWindowArgs__TypeInfo
+		              );
+		    Mono_Security_ASN1__get_Item(&Core_GameLocalization_TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_System_Collections_Generic_List_BaseDialogWindow_BaseDialogWindowArgs_DialogWindowButton_ConfirmSplitArtifactWindow_ConfirmSplitAtrifactWindowArgs___Add__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UI_Windows_PopupController_Show_ConfirmSplitArtifactWindow___);
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Gameplay_Inventory_View_ConfirmSplitArtifactWindow___c__DisplayClass10_0__Show_b__0__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&Gameplay_Inventory_View_ConfirmSplitArtifactWindow___c__DisplayClass10_0_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_9122);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_12637);
+		    DAT_ram_00a5a09b = '\x01';
+		  }
+		  iVar1 = unnamed_function_1417
+		                    (
+		                    Gameplay_Inventory_View_ConfirmSplitArtifactWindow___c__DisplayClass10_0_TypeInfo
+		                    );
+		  *(undefined4 *)(iVar1 + 8) = param2;
+		  param1_00 = unnamed_function_1417
+		                        (
+		                        Gameplay_Inventory_View_ConfirmSplitArtifactWindow_ConfirmSplitAtrifactWindowArgs_TypeInfo
+		                        );
+		  Gameplay_Inventory_View_ConfirmSplitArtifactWindow___ctor(param1_00,param2);
+		  *(undefined4 *)(param1_00 + 0x2c) = param1;
+		  *(undefined4 *)(param1_00 + 0x1c) = **(undefined4 **)(DAT_ram_00a66978 + 0x5c);
+		  param1_02 = *(int *)(param1_00 + 0x24);
+		  param1_01 = unnamed_function_1417
+		                        (
+		                        UI_Windows_BaseDialogWindow_BaseDialogWindowArgs_DialogWindowButton_ConfirmSplitArtifactWindow_ConfirmSplitAtrifactWindowArgs__TypeInfo
+		                        );
+		  UI_Windows_DialogWindow_DialogWindowArgs___ctor
+		            (param1_01,
+		             Method_UI_Windows_BaseDialogWindow_BaseDialogWindowArgs_DialogWindowButton_ConfirmSplitArtifactWindow_ConfirmSplitAtrifactWindowArgs___ctor__
+		            );
+		  if (*(int *)(Core_GameLocalization_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Core_GameLocalization_TypeInfo);
+		  }
+		  uVar2 = func_ii_7508(StringLiteral_9122,1,0,1,0,0,0,0);
+		  *(undefined4 *)(param1_01 + 8) = uVar2;
+		  iVar3 = unnamed_function_1417
+		                    (
+		                    UI_Windows_BaseDialogWindow_BaseDialogWindowArgs_DialogWindowButton_ButtonInvoker_ConfirmSplitArtifactWindow_ConfirmSplitAtrifactWindowArgs__ArtifactData__TypeInfo
+		                    );
+		  *(undefined4 *)(iVar3 + 0xc) = param1;
+		  uVar2 = unnamed_function_1417
+		                    (
+		                    UI_Windows_BaseDialogWindow_BaseDialogWindowArgs_DialogWindowButton_ButtonInvoker_ButtonCallbackDelegate_ConfirmSplitArtifactWindow_ConfirmSplitAtrifactWindowArgs__ArtifactData__TypeInfo
+		                    );
+		  UI_Windows_BaseDialogWindow_BaseDialogWindowArgs_DialogWindowButton_ButtonInvoker_ButtonCallbackDelegate_object__Int32Enum___Invoke
+		            (uVar2,iVar1,
+		             Method_Gameplay_Inventory_View_ConfirmSplitArtifactWindow___c__DisplayClass10_0__Show_b__0__
+		             ,0);
+		  *(undefined4 *)(iVar3 + 0x10) = uVar2;
+		  *(int *)(param1_01 + 0x14) = iVar3;
+		  iVar1 = 
+		  Method_System_Collections_Generic_List_BaseDialogWindow_BaseDialogWindowArgs_DialogWindowButton_ConfirmSplitArtifactWindow_ConfirmSplitAtrifactWindowArgs___Add__
+		  ;
+		  *(int *)(param1_02 + 0x10) = *(int *)(param1_02 + 0x10) + 1;
+		  uVar4 = *(uint *)(param1_02 + 0xc);
+		  if (uVar4 < *(uint *)(*(int *)(param1_02 + 8) + 0xc)) {
+		    *(uint *)(param1_02 + 0xc) = uVar4 + 1;
+		    *(int *)(*(int *)(param1_02 + 8) + uVar4 * 4 + 0x10) = param1_01;
+		  }
+		  else {
+		    System_Linq_Expressions_Interpreter_LeaveExceptionHandlerInstruction__Create
+		              (param1_02,param1_01,*(undefined4 *)(*(int *)(*(int *)(iVar1 + 0x10) + 0x60) + 0x38));
+		  }
+		  uVar2 = System_Uri___ctor(0);
+		  uVar2 = System_Globalization_TimeSpanFormat_FormatLiterals__get_Start(uVar2,0);
+		  uVar2 = Gameplay_Antiq_View_GroupReviewWindow_WindowArgs___ctor
+		                    (uVar2,StringLiteral_12637,param1_00,
+		                     Method_UI_Windows_PopupController_Show_ConfirmSplitArtifactWindow___);
+		  return uVar2;
+		}
+		*/
+
 		}
 
 		// Token: 0x06002787 RID: 10119 RVA: 0x00002052 File Offset: 0x00000252
@@ -49,6 +168,125 @@ namespace Gameplay.Inventory.View
 		[Address(RVA = "0x78B8", Offset = "0x78B8", VA = "0x78B8")]
 		public static ConfirmSplitArtifactWindow Show(ArtifactData artifact, Action<uint, uint> resultCallback)
 		{
+		/* --- GHIDRA: Show ---
+		void Gameplay_Inventory_View_ConfirmSplitArtifactWindow__Show(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  undefined4 uVar2;
+		  int iVar3;
+		  int *piVar4;
+		  undefined4 uVar5;
+		  int iVar6;
+		  
+		  if (DAT_ram_00a5a09c == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_SplitArtifactView_ArtifactSelection__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&System_Action_int__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&System_Action_SplitArtifactView_ArtifactSelection__int__TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Windows_BaseDialogWindow_ConfirmSplitArtifactWindow_ConfirmSplitAtrifactWindowArgs__HandleContent__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Windows_BaseWindow_ConfirmSplitArtifactWindow_ConfirmSplitAtrifactWindowArgs__get_WindowArgs__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Gameplay_Inventory_View_ConfirmSplitArtifactWindow_OnArtifactSelectHandler__)
+		    ;
+		    Mono_Security_ASN1__get_Item(&Method_Gameplay_Inventory_View_ConfirmSplitArtifactWindow_OnOk__);
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Gameplay_Inventory_View_ConfirmSplitArtifactWindow_OnSliderValueChangedEventHandler__
+		              );
+		    DAT_ram_00a5a09c = '\x01';
+		  }
+		  UI_Windows_BaseDialogWindow_object___HandleButtons
+		            (param1,
+		             Method_UI_Windows_BaseDialogWindow_ConfirmSplitArtifactWindow_ConfirmSplitAtrifactWindowArgs__HandleContent__
+		            );
+		  piVar4 = *(int **)(param1 + 0x54);
+		  iVar1 = func_ii_8093(param1,
+		                       Method_UI_Windows_BaseWindow_ConfirmSplitArtifactWindow_ConfirmSplitAtrifactWindowArgs__get_WindowArgs__
+		                      );
+		  iVar6 = *piVar4;
+		  (**(code **)((ulonglong)*(uint *)(iVar6 + 0x138) * 4))
+		            (piVar4,*(undefined4 *)(iVar1 + 0x2c),*(undefined4 *)(iVar6 + 0x13c));
+		  iVar6 = *(int *)(param1 + 0x54);
+		  uVar5 = *(undefined4 *)(iVar6 + 0x34);
+		  uVar2 = unnamed_function_1417(System_Action_SplitArtifactView_ArtifactSelection__TypeInfo);
+		  System_Action_int___Invoke
+		            (uVar2,param1,
+		             Method_Gameplay_Inventory_View_ConfirmSplitArtifactWindow_OnArtifactSelectHandler__,0);
+		  iVar1 = UnityEngine_UI_Image__set_sprite(uVar5,uVar2,0);
+		  uVar2 = System_Action_SplitArtifactView_ArtifactSelection__TypeInfo;
+		  if (iVar1 == 0) {
+		    *(undefined4 *)(iVar6 + 0x34) = 0;
+		  }
+		  else {
+		    iVar3 = func_ii_1082(iVar1,System_Action_SplitArtifactView_ArtifactSelection__TypeInfo);
+		    if (iVar3 == 0) {
+		      System_Activator__CreateInstance(iVar1,uVar2);
+		      do {
+		        halt_trap();
+		      } while( true );
+		    }
+		    *(int *)(iVar6 + 0x34) = iVar3;
+		    uVar2 = System_Action_SplitArtifactView_ArtifactSelection__TypeInfo;
+		    iVar6 = func_ii_1082(iVar1,System_Action_SplitArtifactView_ArtifactSelection__TypeInfo);
+		    if (iVar6 == 0) {
+		      System_Activator__CreateInstance(iVar1,uVar2);
+		      do {
+		        halt_trap();
+		      } while( true );
+		    }
+		  }
+		  iVar6 = *(int *)(param1 + 0x58);
+		  uVar5 = *(undefined4 *)(iVar6 + 0x20);
+		  uVar2 = unnamed_function_1417(System_Action_SplitArtifactView_ArtifactSelection__int__TypeInfo);
+		  System_Action_int__float___Invoke
+		            (uVar2,param1,Method_Gameplay_Inventory_View_ConfirmSplitArtifactWindow_OnOk__,0);
+		  iVar1 = UnityEngine_UI_Image__set_sprite(uVar5,uVar2,0);
+		  uVar2 = System_Action_SplitArtifactView_ArtifactSelection__int__TypeInfo;
+		  if (iVar1 == 0) {
+		    *(undefined4 *)(iVar6 + 0x20) = 0;
+		  }
+		  else {
+		    iVar3 = func_ii_1082(iVar1,System_Action_SplitArtifactView_ArtifactSelection__int__TypeInfo);
+		    if (iVar3 == 0) {
+		      System_Activator__CreateInstance(iVar1,uVar2);
+		      do {
+		        halt_trap();
+		      } while( true );
+		    }
+		    *(int *)(iVar6 + 0x20) = iVar3;
+		    uVar2 = System_Action_SplitArtifactView_ArtifactSelection__int__TypeInfo;
+		    iVar6 = func_ii_1082(iVar1,System_Action_SplitArtifactView_ArtifactSelection__int__TypeInfo);
+		    if (iVar6 == 0) {
+		      System_Activator__CreateInstance(iVar1,uVar2);
+		      do {
+		        halt_trap();
+		      } while( true );
+		    }
+		  }
+		  iVar1 = func_ii_8093(param1,
+		                       Method_UI_Windows_BaseWindow_ConfirmSplitArtifactWindow_ConfirmSplitAtrifactWindowArgs__get_WindowArgs__
+		                      );
+		  iVar6 = **(int **)(iVar1 + 0x2c);
+		  uVar2 = (**(code **)((ulonglong)*(uint *)(iVar6 + 0xf8) * 4))
+		                    (*(int **)(iVar1 + 0x2c),*(undefined4 *)(iVar6 + 0xfc));
+		  UI_Elements_Sliders_SplitSlider__DisplayValue(*(undefined4 *)(param1 + 0x50),1,uVar2,0);
+		  uVar5 = *(undefined4 *)(param1 + 0x50);
+		  uVar2 = unnamed_function_1417(System_Action_int__TypeInfo);
+		  System_Action_short___Invoke
+		            (uVar2,param1,
+		             Method_Gameplay_Inventory_View_ConfirmSplitArtifactWindow_OnSliderValueChangedEventHandler__
+		             ,0);
+		  UI_Elements_Sliders_SliderWithButtons___ctor(uVar5,uVar2,0);
+		  return;
+		}
+		*/
+
 			return null;
 		}
 
@@ -57,6 +295,106 @@ namespace Gameplay.Inventory.View
 		[Address(RVA = "0x78B9", Offset = "0x78B9", VA = "0x78B9", Slot = "28")]
 		protected override void HandleContent()
 		{
+		/* --- GHIDRA: HandleContent ---
+		void Gameplay_Inventory_View_ConfirmSplitArtifactWindow__HandleContent(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  int iVar2;
+		  int iVar3;
+		  int iVar4;
+		  undefined4 uVar5;
+		  
+		  if (DAT_ram_00a5a09d == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_SplitArtifactView_ArtifactSelection__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&System_Action_int__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&System_Action_SplitArtifactView_ArtifactSelection__int__TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Windows_BaseDialogWindow_ConfirmSplitArtifactWindow_ConfirmSplitAtrifactWindowArgs__OnDestroy__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Gameplay_Inventory_View_ConfirmSplitArtifactWindow_OnArtifactSelectHandler__)
+		    ;
+		    Mono_Security_ASN1__get_Item(&Method_Gameplay_Inventory_View_ConfirmSplitArtifactWindow_OnOk__);
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Gameplay_Inventory_View_ConfirmSplitArtifactWindow_OnSliderValueChangedEventHandler__
+		              );
+		    DAT_ram_00a5a09d = '\x01';
+		  }
+		  iVar4 = *(int *)(param1 + 0x54);
+		  uVar5 = *(undefined4 *)(iVar4 + 0x34);
+		  uVar1 = unnamed_function_1417(System_Action_SplitArtifactView_ArtifactSelection__TypeInfo);
+		  System_Action_int___Invoke
+		            (uVar1,param1,
+		             Method_Gameplay_Inventory_View_ConfirmSplitArtifactWindow_OnArtifactSelectHandler__,0);
+		  iVar2 = func_ii_7048(uVar5,uVar1,0);
+		  uVar1 = System_Action_SplitArtifactView_ArtifactSelection__TypeInfo;
+		  if (iVar2 == 0) {
+		    *(undefined4 *)(iVar4 + 0x34) = 0;
+		  }
+		  else {
+		    iVar3 = func_ii_1082(iVar2,System_Action_SplitArtifactView_ArtifactSelection__TypeInfo);
+		    if (iVar3 == 0) {
+		      System_Activator__CreateInstance(iVar2,uVar1);
+		      do {
+		        halt_trap();
+		      } while( true );
+		    }
+		    *(int *)(iVar4 + 0x34) = iVar3;
+		    uVar1 = System_Action_SplitArtifactView_ArtifactSelection__TypeInfo;
+		    iVar4 = func_ii_1082(iVar2,System_Action_SplitArtifactView_ArtifactSelection__TypeInfo);
+		    if (iVar4 == 0) {
+		      System_Activator__CreateInstance(iVar2,uVar1);
+		      do {
+		        halt_trap();
+		      } while( true );
+		    }
+		  }
+		  uVar5 = *(undefined4 *)(param1 + 0x50);
+		  uVar1 = unnamed_function_1417(System_Action_int__TypeInfo);
+		  System_Action_short___Invoke
+		            (uVar1,param1,
+		             Method_Gameplay_Inventory_View_ConfirmSplitArtifactWindow_OnSliderValueChangedEventHandler__
+		             ,0);
+		  UI_Elements_Sliders_SplitSlider__add_OnValueChangedEvent(uVar5,uVar1,0);
+		  iVar4 = *(int *)(param1 + 0x58);
+		  uVar5 = *(undefined4 *)(iVar4 + 0x20);
+		  uVar1 = unnamed_function_1417(System_Action_SplitArtifactView_ArtifactSelection__int__TypeInfo);
+		  System_Action_int__float___Invoke
+		            (uVar1,param1,Method_Gameplay_Inventory_View_ConfirmSplitArtifactWindow_OnOk__,0);
+		  iVar2 = func_ii_7048(uVar5,uVar1,0);
+		  uVar1 = System_Action_SplitArtifactView_ArtifactSelection__int__TypeInfo;
+		  if (iVar2 == 0) {
+		    *(undefined4 *)(iVar4 + 0x20) = 0;
+		  }
+		  else {
+		    iVar3 = func_ii_1082(iVar2,System_Action_SplitArtifactView_ArtifactSelection__int__TypeInfo);
+		    if (iVar3 == 0) {
+		      System_Activator__CreateInstance(iVar2,uVar1);
+		      do {
+		        halt_trap();
+		      } while( true );
+		    }
+		    *(int *)(iVar4 + 0x20) = iVar3;
+		    uVar1 = System_Action_SplitArtifactView_ArtifactSelection__int__TypeInfo;
+		    iVar4 = func_ii_1082(iVar2,System_Action_SplitArtifactView_ArtifactSelection__int__TypeInfo);
+		    if (iVar4 == 0) {
+		      System_Activator__CreateInstance(iVar2,uVar1);
+		      do {
+		        halt_trap();
+		      } while( true );
+		    }
+		  }
+		  UI_Windows_BaseDialogWindow_object___OnClose
+		            (param1,
+		             Method_UI_Windows_BaseDialogWindow_ConfirmSplitArtifactWindow_ConfirmSplitAtrifactWindowArgs__OnDestroy__
+		            );
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06002789 RID: 10121 RVA: 0x00002050 File Offset: 0x00000250
@@ -64,6 +402,89 @@ namespace Gameplay.Inventory.View
 		[Address(RVA = "0x78BA", Offset = "0x78BA", VA = "0x78BA", Slot = "29")]
 		protected override void OnDestroy()
 		{
+		/* --- GHIDRA: OnDestroy ---
+		void Gameplay_Inventory_View_ConfirmSplitArtifactWindow__OnDestroy
+		               (int param1,int param2,int param3,undefined4 param4)
+		
+		{
+		  uint uVar1;
+		  int param2_00;
+		  int iVar2;
+		  undefined4 uVar3;
+		  undefined4 param6;
+		  undefined4 uVar4;
+		  undefined4 uVar5;
+		  int iVar6;
+		  int *piVar7;
+		  undefined4 param3_00;
+		  int iVar8;
+		  
+		  if (DAT_ram_00a5a09e == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Windows_BaseWindow_ConfirmSplitArtifactWindow_ConfirmSplitAtrifactWindowArgs__get_WindowArgs__
+		              );
+		    Mono_Security_ASN1__get_Item(&Core_Events_Scopes_InventoryScope_UsingNumpadEventArgs_TypeInfo);
+		    DAT_ram_00a5a09e = '\x01';
+		  }
+		  if (param2 == 0) {
+		    UI_Elements_Sliders_SplitSlider__GetValue(*(undefined4 *)(param1 + 0x50),param3,0);
+		  }
+		  else {
+		    if (param2 != 1) {
+		      uVar5 = unnamed_function_2232(&System_NotSupportedException_TypeInfo);
+		      uVar5 = unnamed_function_1417(uVar5);
+		      func_ii_20706(uVar5,0);
+		      uVar3 = unnamed_function_2232
+		                        (&Method_Gameplay_Inventory_View_ConfirmSplitArtifactWindow_OnOk__);
+		      func_ii_1050(uVar5,uVar3);
+		      do {
+		        halt_trap();
+		      } while( true );
+		    }
+		    UI_Elements_Sliders_SplitSlider__GetValue
+		              (*(int *)(param1 + 0x50),*(int *)(*(int *)(param1 + 0x50) + 0x24) - param3,0);
+		  }
+		  param2_00 = System_Uri___ctor(0);
+		  iVar2 = func_ii_8093(param1,
+		                       Method_UI_Windows_BaseWindow_ConfirmSplitArtifactWindow_ConfirmSplitAtrifactWindowArgs__get_WindowArgs__
+		                      );
+		  iVar6 = *(int *)(*(int *)(*(int *)(*(int *)(param2_00 + 0x38) + 0x10) + 0x40) + 0xc);
+		  if (iVar6 != 0) {
+		    piVar7 = *(int **)(iVar2 + 0x2c);
+		    if (DAT_ram_00a6456f == '\0') {
+		      Mono_Security_ASN1__get_Item(&Core_Gameplay_Game_TypeInfo);
+		      DAT_ram_00a6456f = '\x01';
+		    }
+		    param3_00 = **(undefined4 **)(Core_Gameplay_Game_TypeInfo + 0x5c);
+		    uVar3 = Core_Data_ArtikulData__get_IsSellable(piVar7,0);
+		    uVar1 = *(uint *)(piVar7[0x1d] + 0x18);
+		    param6 = (**(code **)((ulonglong)*(uint *)(*piVar7 + 0xf8) * 4))
+		                       (piVar7,*(undefined4 *)(*piVar7 + 0xfc));
+		    uVar5 = 0;
+		    iVar8 = *(int *)(param1 + 0x58);
+		    piVar7 = *(int **)(iVar8 + 0x18);
+		    iVar2 = *piVar7;
+		    uVar4 = (**(code **)((ulonglong)*(uint *)(iVar2 + 0x2c8) * 4))
+		                      (piVar7,*(undefined4 *)(iVar2 + 0x2cc));
+		    iVar2 = func_ii_4769(uVar4,0);
+		    if (iVar2 == 0) {
+		      piVar7 = *(int **)(iVar8 + 0x18);
+		      iVar2 = *piVar7;
+		      uVar5 = (**(code **)((ulonglong)*(uint *)(iVar2 + 0x2c8) * 4))
+		                        (piVar7,*(undefined4 *)(iVar2 + 0x2cc));
+		      uVar5 = func_ii_8697(uVar5,0);
+		    }
+		    uVar4 = unnamed_function_1417(Core_Events_Scopes_InventoryScope_UsingNumpadEventArgs_TypeInfo);
+		    Core_Events_Scopes_InventoryScope_BuySlotEventArgs___ctor
+		              (uVar4,param2_00,param3_00,uVar3,(ulonglong)uVar1,param6,uVar5,0);
+		    (**(code **)((ulonglong)*(uint *)(iVar6 + 0xc) * 4))
+		              (*(undefined4 *)(iVar6 + 0x20),uVar4,*(undefined4 *)(iVar6 + 0x14));
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600278A RID: 10122 RVA: 0x00002050 File Offset: 0x00000250
@@ -71,6 +492,22 @@ namespace Gameplay.Inventory.View
 		[Address(RVA = "0x78BB", Offset = "0x78BB", VA = "0x78BB")]
 		private void OnOk(SplitArtifactView.ArtifactSelection selection, int value)
 		{
+		/* --- GHIDRA: OnOk ---
+		void Gameplay_Inventory_View_ConfirmSplitArtifactWindow__OnOk
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  int iVar1;
+		  
+		  iVar1 = *(int *)(param1 + 100);
+		  if (iVar1 != 0) {
+		    (**(code **)((ulonglong)*(uint *)(iVar1 + 0xc) * 4))
+		              (*(undefined4 *)(iVar1 + 0x20),param2,*(undefined4 *)(iVar1 + 0x14));
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600278B RID: 10123 RVA: 0x00002050 File Offset: 0x00000250
@@ -78,6 +515,22 @@ namespace Gameplay.Inventory.View
 		[Address(RVA = "0x78BC", Offset = "0x78BC", VA = "0x78BC")]
 		private void OnArtifactSelectHandler(SplitArtifactView.ArtifactSelection selection)
 		{
+		/* --- GHIDRA: OnArtifactSelectHandler ---
+		void Gameplay_Inventory_View_ConfirmSplitArtifactWindow__OnArtifactSelectHandler
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  int iVar1;
+		  
+		  iVar1 = *(int *)(param1 + 0x60);
+		  if (iVar1 != 0) {
+		    (**(code **)((ulonglong)*(uint *)(iVar1 + 0xc) * 4))
+		              (*(undefined4 *)(iVar1 + 0x20),param2,*(undefined4 *)(iVar1 + 0x14));
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600278C RID: 10124 RVA: 0x00002050 File Offset: 0x00000250
@@ -85,6 +538,19 @@ namespace Gameplay.Inventory.View
 		[Address(RVA = "0x78BD", Offset = "0x78BD", VA = "0x78BD")]
 		private void OnSliderValueChangedEventHandler(int value)
 		{
+		/* --- GHIDRA: OnSliderValueChangedEventHandler ---
+		undefined4
+		Gameplay_Inventory_View_ConfirmSplitArtifactWindow__OnSliderValueChangedEventHandler
+		          (int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  uVar1 = UI_Elements_Sliders_SplitSlider__SetValues(*(undefined4 *)(param1 + 0x50),0);
+		  return uVar1;
+		}
+		*/
+
 		}
 
 		// Token: 0x17000777 RID: 1911
@@ -156,6 +622,34 @@ namespace Gameplay.Inventory.View
 		[Address(RVA = "0x78C4", Offset = "0x78C4", VA = "0x78C4")]
 		public ConfirmSplitArtifactWindow()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_Inventory_View_ConfirmSplitArtifactWindow___ctor(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a5a0a0 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Windows_BaseDialogWindow_BaseDialogWindowArgs_ConfirmSplitArtifactWindow_ConfirmSplitAtrifactWindowArgs___ctor__
+		              );
+		    Mono_Security_ASN1__get_Item(&Core_GameLocalization_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_9123);
+		    DAT_ram_00a5a0a0 = '\x01';
+		  }
+		  UnityEngine_UIElements_BaseCompositeField___Il2CppFullySharedGenericType__object____Il2CppFullySharedGenericType___UpdateMixedValueContent
+		            (param1,
+		             Method_UI_Windows_BaseDialogWindow_BaseDialogWindowArgs_ConfirmSplitArtifactWindow_ConfirmSplitAtrifactWindowArgs___ctor__
+		            );
+		  if (*(int *)(Core_GameLocalization_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Core_GameLocalization_TypeInfo);
+		  }
+		  uVar1 = func_ii_7508(StringLiteral_9123,1,0,1,0,0,0,0);
+		  *(undefined4 *)(param1 + 0x18) = uVar1;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x040015AC RID: 5548
@@ -213,4 +707,98 @@ namespace Gameplay.Inventory.View
 			public ArtifactData ArtifactData;
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_Value ---
+		void Gameplay_Inventory_View_ConfirmSplitArtifactWindow__get_Value(int param1,undefined4 param2)
+		
+		{
+		  Com_TheFallenGames_OSA_CustomAdapters_TableView_Tuple_Basic_BasicTupleValueViewsHolder__UpdateAsText
+		            (*(undefined4 *)(param1 + 0x5c),0,0);
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_LeftArtifactValue ---
+		void Gameplay_Inventory_View_ConfirmSplitArtifactWindow__get_LeftArtifactValue
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  UI_Elements_Sliders_SplitSlider__GetValue(*(undefined4 *)(param1 + 0x50),param2,0);
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_LeftArtifactValue ---
+		int Gameplay_Inventory_View_ConfirmSplitArtifactWindow__set_LeftArtifactValue
+		              (int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  int iVar2;
+		  
+		  iVar2 = *(int *)(*(int *)(param1 + 0x50) + 0x24);
+		  iVar1 = UI_Elements_Sliders_SplitSlider__SetValues(*(int *)(param1 + 0x50),0);
+		  return iVar2 - iVar1;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_RightArtifactValue ---
+		void Gameplay_Inventory_View_ConfirmSplitArtifactWindow__get_RightArtifactValue
+		               (int param1,int param2,undefined4 param3)
+		
+		{
+		  UI_Elements_Sliders_SplitSlider__GetValue
+		            (*(int *)(param1 + 0x50),*(int *)(*(int *)(param1 + 0x50) + 0x24) - param2,0);
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_RightArtifactValue ---
+		undefined4
+		Gameplay_Inventory_View_ConfirmSplitArtifactWindow__set_RightArtifactValue
+		          (int param1,undefined4 param2)
+		
+		{
+		  return *(undefined4 *)(*(int *)(param1 + 0x50) + 0x24);
+		}
+		*/
+
+
+		/* --- GHIDRA: get_ArtifactMaxValue ---
+		undefined4
+		Gameplay_Inventory_View_ConfirmSplitArtifactWindow__get_ArtifactMaxValue
+		          (int param1,undefined4 param2)
+		
+		{
+		  return *(undefined4 *)(*(int *)(param1 + 0x54) + 0x38);
+		}
+		*/
+
+
+		/* --- GHIDRA: get_CurrentArtifactSelection ---
+		void Gameplay_Inventory_View_ConfirmSplitArtifactWindow__get_CurrentArtifactSelection
+		               (undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a5a09f == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Windows_BaseDialogWindow_ConfirmSplitArtifactWindow_ConfirmSplitAtrifactWindowArgs___ctor__
+		              );
+		    DAT_ram_00a5a09f = '\x01';
+		  }
+		  UI_Windows_BaseDialogWindow_BaseDialogWindowArgs_object____ctor
+		            (param1,
+		             Method_UI_Windows_BaseDialogWindow_ConfirmSplitArtifactWindow_ConfirmSplitAtrifactWindowArgs___ctor__
+		            );
+		  return;
+		}
+		*/
+
 }

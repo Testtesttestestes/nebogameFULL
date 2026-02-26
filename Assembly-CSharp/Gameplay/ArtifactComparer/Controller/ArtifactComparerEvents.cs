@@ -14,6 +14,72 @@ namespace Gameplay.ArtifactComparer.Controller
 		[Address(RVA = "0x9E89", Offset = "0x9E89", VA = "0x9E89")]
 		public ArtifactComparerEvents(InventoryBaseEvents inventoryEvents)
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_ArtifactComparer_Controller_ArtifactComparerEvents___ctor
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4,undefined4 param5,
+		               undefined4 param6)
+		
+		{
+		  undefined4 uVar1;
+		  undefined4 uVar2;
+		  
+		  if (DAT_ram_00a58a3a == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_MVC_AbstractViewMediator_ArtifactComparerModel__ArtifactComparerEvents__ArtifactComparerController__ArtifactComparerWindow___ctor__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&Gameplay_Inventory_Controller_Filters_ArtifactLevelFilter_TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&Gameplay_Inventory_Controller_Filters_ArtifactSkillFilter_TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&Gameplay_Inventory_Controller_Filters_ArtifactTitleFilter_TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_System_Collections_Generic_Dictionary_FilterInfo_FilterType__IArtifactFilter__Add__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_System_Collections_Generic_Dictionary_FilterInfo_FilterType__IArtifactFilter___ctor__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               System_Collections_Generic_Dictionary_FilterInfo_FilterType__IArtifactFilter__TypeInfo
+		              );
+		    DAT_ram_00a58a3a = '\x01';
+		  }
+		  Gameplay_Combat_TeamCombat_View_AbstractTeamCombatView_object___get_HideInstantElements
+		            (param1,param2,param3,param4,
+		             Method_MVC_AbstractViewMediator_ArtifactComparerModel__ArtifactComparerEvents__ArtifactComparerController__ArtifactComparerWindow___ctor__
+		            );
+		  *(undefined1 *)(param1 + 0x1c) = (undefined1)param5;
+		  uVar1 = unnamed_function_1417
+		                    (
+		                    System_Collections_Generic_Dictionary_FilterInfo_FilterType__IArtifactFilter__TypeInfo
+		                    );
+		  System_Collections_Generic_Dictionary_Int32Enum__Int32Enum___set_Item
+		            (uVar1,
+		             Method_System_Collections_Generic_Dictionary_FilterInfo_FilterType__IArtifactFilter___ctor__
+		            );
+		  *(undefined4 *)(param1 + 0x18) = uVar1;
+		  uVar2 = unnamed_function_1417(Gameplay_Inventory_Controller_Filters_ArtifactSkillFilter_TypeInfo);
+		  func_ii_10812(uVar1,1,uVar2,
+		                Method_System_Collections_Generic_Dictionary_FilterInfo_FilterType__IArtifactFilter__Add__
+		               );
+		  uVar2 = *(undefined4 *)(param1 + 0x18);
+		  uVar1 = unnamed_function_1417(Gameplay_Inventory_Controller_Filters_ArtifactLevelFilter_TypeInfo);
+		  func_ii_10812(uVar2,5,uVar1,
+		                Method_System_Collections_Generic_Dictionary_FilterInfo_FilterType__IArtifactFilter__Add__
+		               );
+		  uVar2 = *(undefined4 *)(param1 + 0x18);
+		  uVar1 = unnamed_function_1417(Gameplay_Inventory_Controller_Filters_ArtifactTitleFilter_TypeInfo);
+		  func_ii_10812(uVar2,4,uVar1,
+		                Method_System_Collections_Generic_Dictionary_FilterInfo_FilterType__IArtifactFilter__Add__
+		               );
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x04002C00 RID: 11264

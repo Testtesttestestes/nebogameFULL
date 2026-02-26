@@ -36,6 +36,30 @@ namespace JWTDecoder
 		[Address(RVA = "0x5B7E", Offset = "0x5B7E", VA = "0x5B7E")]
 		public JwtExpiration()
 		{
+		/* --- GHIDRA: .ctor ---
+		undefined8 JWTDecoder_JwtExpiration___ctor(longlong param1,undefined4 param2)
+		
+		{
+		  undefined8 uVar1;
+		  undefined8 local_8;
+		  
+		  if (DAT_ram_00a5b856 == '\0') {
+		    Mono_Security_ASN1__get_Item(&JWTDecoder_Helpers_DateTimeHelpers_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&System_DateTime_TypeInfo);
+		    DAT_ram_00a5b856 = '\x01';
+		  }
+		  if (*(int *)(JWTDecoder_Helpers_DateTimeHelpers_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(JWTDecoder_Helpers_DateTimeHelpers_TypeInfo);
+		  }
+		  local_8 = **(undefined8 **)(JWTDecoder_Helpers_DateTimeHelpers_TypeInfo + 0x5c);
+		  if (*(int *)(System_DateTime_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(System_DateTime_TypeInfo);
+		  }
+		  uVar1 = System_DateTime__AddMonths(&local_8,(double)param1,0);
+		  return uVar1;
+		}
+		*/
+
 		}
 	}
 }

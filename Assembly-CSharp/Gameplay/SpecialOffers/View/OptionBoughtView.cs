@@ -36,6 +36,18 @@ namespace Gameplay.SpecialOffers.View
 		[Address(RVA = "0x6FDD", Offset = "0x6FDD", VA = "0x6FDD")]
 		public OptionBoughtView()
 		{
+		/* --- GHIDRA: .ctor ---
+		undefined4 Gameplay_SpecialOffers_View_OptionBoughtView___ctor(undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a58613 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_12670);
+		    DAT_ram_00a58613 = '\x01';
+		  }
+		  return StringLiteral_12670;
+		}
+		*/
+
 		}
 
 		// Token: 0x0400107E RID: 4222
@@ -56,4 +68,47 @@ namespace Gameplay.SpecialOffers.View
 		[SerializeField]
 		private Button _button;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_Button ---
+		void Gameplay_SpecialOffers_View_OptionBoughtView__get_Button
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  undefined4 uVar1;
+		  undefined4 uVar2;
+		  undefined4 param1_00;
+		  
+		  if (DAT_ram_00a58612 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UnityEngine_Component_GetComponentInChildren_TextMeshProUGUI___);
+		    Mono_Security_ASN1__get_Item(&Core_GameLocalization_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_13877);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_13880);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_2170);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_13879);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_13878);
+		    DAT_ram_00a58612 = '\x01';
+		  }
+		  if (*(int *)(Core_GameLocalization_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Core_GameLocalization_TypeInfo);
+		  }
+		  uVar1 = Core_Extensions_Dict_CultDicExt__GetTitle(StringLiteral_13877,1,0,1,0,0,0,0);
+		  uVar2 = Core_Extensions_Dict_CultDicExt__GetTitle(StringLiteral_13879,1,0,1,0,0,0,0);
+		  uVar1 = UnityEngine_AndroidJavaObject__FromJavaArray_Nullable_int__
+		                    (uVar1,StringLiteral_2170,uVar2,0);
+		  param1_00 = *(undefined4 *)(param1 + 0x10);
+		  uVar2 = Core_Extensions_Dict_CultDicExt__GetTitle(StringLiteral_13878,1,0,1,0,0,0,0);
+		  UnityEngine_Component__GetComponentInChildren_object_(param1_00,uVar2,0);
+		  UnityEngine_Component__GetComponentInChildren_object_(*(undefined4 *)(param1 + 0x14),uVar1,0);
+		  uVar1 = UI_Rewards_AbstractRewardsRender__SetRewards
+		                    (*(undefined4 *)(param1 + 0x18),
+		                     Method_UnityEngine_Component_GetComponentInChildren_TextMeshProUGUI___);
+		  uVar2 = Core_Extensions_Dict_CultDicExt__GetTitle(StringLiteral_13880,1,0,1,0,0,0,0);
+		  UnityEngine_Component__GetComponentInChildren_object_(uVar1,uVar2,0);
+		  return;
+		}
+		*/
+
 }

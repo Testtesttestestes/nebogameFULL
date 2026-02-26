@@ -41,6 +41,21 @@ namespace Gameplay.Battles.View
 		[Address(RVA = "0x9A3E", Offset = "0x9A3E", VA = "0x9A3E")]
 		public ThemeDuelBattlesWndButton()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_Battles_View_ThemeDuelBattlesWndButton___ctor
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4,undefined4 param5,
+		               undefined4 param6,undefined4 param7)
+		
+		{
+		  Unity_Services_Core_Environments_Internal_Environments__get_Current(param1,param6,0);
+		  *(undefined4 *)(param1 + 0x14) = param5;
+		  *(undefined4 *)(param1 + 0x10) = param4;
+		  *(undefined4 *)(param1 + 0xc) = param3;
+		  *(undefined4 *)(param1 + 0x18) = param2;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x04002962 RID: 10594

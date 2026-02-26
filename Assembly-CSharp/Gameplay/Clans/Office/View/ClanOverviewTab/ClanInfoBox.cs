@@ -16,6 +16,48 @@ namespace Gameplay.Clans.Office.View.ClanOverviewTab
 		[Address(RVA = "0x8C96", Offset = "0x8C96", VA = "0x8C96")]
 		public void Init(ClanOfficeData data, Dictionaries dict)
 		{
+		/* --- GHIDRA: Init ---
+		void Gameplay_Clans_Office_View_ClanOverviewTab_ClanInfoBox__Init
+		               (int param1,int param2,undefined4 param3)
+		
+		{
+		  int iVar1;
+		  undefined4 uVar2;
+		  int iVar3;
+		  int *piVar4;
+		  int iVar5;
+		  
+		  if (DAT_ram_00a57f6f == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_Google_Protobuf_Collections_RepeatedField_uint__get_Item__)
+		    ;
+		    DAT_ram_00a57f6f = '\x01';
+		  }
+		  iVar3 = *(int *)(*(int *)(param2 + 0xc) + 0x1c);
+		  iVar1 = Core_Extensions_ClanInfoExt__GetHonorRating(iVar3,0);
+		  iVar5 = **(int **)(param1 + 0x18);
+		  (**(code **)((ulonglong)*(uint *)(iVar5 + 0xe0) * 4))
+		            (*(int **)(param1 + 0x18),(longlong)iVar1,*(undefined4 *)(iVar5 + 0xe4));
+		  piVar4 = *(int **)(param1 + 0x1c);
+		  uVar2 = Google_Protobuf_Collections_RepeatedField_Int32Enum___get_IsReadOnly
+		                    (*(undefined4 *)(iVar3 + 0x38),1,
+		                     Method_Google_Protobuf_Collections_RepeatedField_uint__get_Item__);
+		  iVar5 = *piVar4;
+		  (**(code **)((ulonglong)*(uint *)(iVar5 + 0xe0) * 4))(piVar4,uVar2,*(undefined4 *)(iVar5 + 0xe4));
+		  piVar4 = *(int **)(param1 + 0x20);
+		  uVar2 = Google_Protobuf_Collections_RepeatedField_Int32Enum___get_IsReadOnly
+		                    (*(undefined4 *)(iVar3 + 0x38),2,
+		                     Method_Google_Protobuf_Collections_RepeatedField_uint__get_Item__);
+		  iVar3 = *piVar4;
+		  (**(code **)((ulonglong)*(uint *)(iVar3 + 0xe0) * 4))(piVar4,uVar2,*(undefined4 *)(iVar3 + 0xe4));
+		  iVar3 = **(int **)(param1 + 0x24);
+		  (**(code **)((ulonglong)*(uint *)(iVar3 + 0xe0) * 4))
+		            (*(int **)(param1 + 0x24),
+		             (ulonglong)*(uint *)(*(int *)(param2 + 8) + 0x1c) - (longlong)iVar1,
+		             *(undefined4 *)(iVar3 + 0xe4));
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06003DD8 RID: 15832 RVA: 0x00002050 File Offset: 0x00000250

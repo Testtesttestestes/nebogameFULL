@@ -13,6 +13,24 @@ namespace Gameplay.Craft.View
 		[Address(RVA = "0x84B0", Offset = "0x84B0", VA = "0x84B0")]
 		public CraftWindowStates()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_Craft_View_CraftWindowStates___ctor
+		               (undefined4 param1,undefined8 param2,undefined4 param3)
+		
+		{
+		  if (DAT_ram_00a63a18 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UI_MonoBehaviourWithStates_ManufactureGroupView_State__set_CurrentState__);
+		    DAT_ram_00a63a18 = '\x01';
+		  }
+		  Gameplay_Boss_View_CaptainTab_BossTeamView__set_TeamInfoData
+		            (param1,1,
+		             Method_UI_MonoBehaviourWithStates_ManufactureGroupView_State__set_CurrentState__);
+		  Gameplay_Craft_View_ManufactureGroupView__ResolveSlotState(param1,param2,param1);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x020008BC RID: 2236

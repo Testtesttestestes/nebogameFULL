@@ -125,6 +125,106 @@ namespace Gameplay.Combat.View
 		[Address(RVA = "0x86C6", Offset = "0x86C6", VA = "0x86C6")]
 		private void OnDestroy()
 		{
+		/* --- GHIDRA: OnDestroy ---
+		int * Gameplay_Combat_View_CombatGameOverView__OnDestroy(int *param1,int param2,undefined4 param3)
+		
+		{
+		  undefined4 uVar1;
+		  undefined4 uVar2;
+		  int iVar3;
+		  int *piVar4;
+		  undefined4 uVar5;
+		  int iVar6;
+		  int param1_00;
+		  
+		  if (DAT_ram_00a63b24 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Gameplay_Combat_View_CombatGameOverView_HandleCloseButtonClickEvent__);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Gameplay_Combat_View_CombatGameOverView_HandleRunCombatButtonOnClickEvent__);
+		    Mono_Security_ASN1__get_Item(&Method_System_Collections_Generic_List_RewardData__ToArray__);
+		    Mono_Security_ASN1__get_Item(&Core_Money_Money_TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_MonoBehaviourWithStates_CombatGameOverView_CombatGameOverViewStates__set_CurrentState__
+		              );
+		    Mono_Security_ASN1__get_Item(&UnityEngine_Events_UnityAction_TypeInfo);
+		    DAT_ram_00a63b24 = '\x01';
+		  }
+		  param1[0x12] = param2;
+		  uVar1 = 1;
+		  uVar2 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_uint__object___MoveNext
+		                    (param1,0);
+		  Com_TheFallenGames_OSA_CustomAdapters_TableView_Tuple_Basic_BasicTupleValueViewsHolder__UpdateAsText
+		            (uVar2,1,0);
+		  uVar5 = *(undefined4 *)(param1[9] + 0xb4);
+		  uVar2 = unnamed_function_1417(UnityEngine_Events_UnityAction_TypeInfo);
+		  Utils_ObjectUtils__IsNotNull
+		            (uVar2,param1,
+		             Method_Gameplay_Combat_View_CombatGameOverView_HandleCloseButtonClickEvent__,0);
+		  Gameplay_Boss_View_CaptainTab_BossInfoView__add_AttackButtonClickEvent(uVar5,uVar2,0);
+		  iVar3 = (**(code **)((ulonglong)*(uint *)(*param1 + 0xf0) * 4))
+		                    (param1,*(undefined4 *)(param1[0x12] + 8),param1[10],
+		                     *(undefined4 *)(*param1 + 0xf4));
+		  param1[0xf] = iVar3;
+		  iVar6 = *(int *)(param1[0x12] + 0x10);
+		  uVar2 = Gameplay_Combat_Control_AbstractOneOnOneCombatViewMediator_object__object__object__object___HandleGameOver
+		                    (*(undefined4 *)(*(int *)(param1[0x12] + 8) + 0x20),0);
+		  iVar3 = UnityEngine_TextCore_Text_FontAsset__UpdateFontFeaturesForNewlyAddedGlyphs
+		                    (uVar2,Method_System_Collections_Generic_List_RewardData__ToArray__);
+		  param1_00 = param1[7];
+		  if (*(int *)(iVar3 + 0xc) == 0) {
+		    uVar1 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_uint__object___MoveNext
+		                      (param1_00,0);
+		    Com_TheFallenGames_OSA_CustomAdapters_TableView_Tuple_Basic_BasicTupleValueViewsHolder__UpdateAsText
+		              (uVar1,0,0);
+		    uVar1 = 1;
+		    if (iVar6 == 0) {
+		      uVar1 = 2;
+		    }
+		  }
+		  else {
+		    uVar2 = Gameplay_Combat_Control_AbstractOneOnOneCombatViewMediator_object__object__object__object___HandleGameOver
+		                      (*(undefined4 *)(*(int *)(param1[0x12] + 8) + 0x20),0);
+		    uVar2 = UnityEngine_TextCore_Text_FontAsset__UpdateFontFeaturesForNewlyAddedGlyphs
+		                      (uVar2,Method_System_Collections_Generic_List_RewardData__ToArray__);
+		    piVar4 = (int *)func_ii_7307(param1_00,uVar2,0);
+		    (**(code **)((ulonglong)*(uint *)(*piVar4 + 0xf0) * 4))(piVar4,*(undefined4 *)(*piVar4 + 0xf4));
+		  }
+		  Gameplay_Boss_View_CaptainTab_BossTeamView__set_TeamInfoData
+		            (param1,uVar1,
+		             Method_UI_MonoBehaviourWithStates_CombatGameOverView_CombatGameOverViewStates__set_CurrentState__
+		            );
+		  uVar1 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_uint__object___MoveNext
+		                    (param1[8],0);
+		  Com_TheFallenGames_OSA_CustomAdapters_TableView_Tuple_Basic_BasicTupleValueViewsHolder__UpdateAsText
+		            (uVar1,(uint)(iVar6 != 0),0);
+		  if (iVar6 != 0) {
+		    uVar1 = *(undefined4 *)(param1[0x12] + 0x10);
+		    uVar2 = *(undefined4 *)(param1[0x12] + 0xc);
+		    uVar5 = *(undefined4 *)(param1[8] + 0xb8);
+		    if (*(int *)(Core_Money_Money_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(Core_Money_Money_TypeInfo);
+		    }
+		    uVar1 = Core_Money_Money__op_Explicit(uVar1,0);
+		    UI_Price_Price__SetColor(uVar5,uVar2,uVar1,0);
+		    uVar2 = *(undefined4 *)(param1[8] + 0xb4);
+		    uVar1 = unnamed_function_1417(UnityEngine_Events_UnityAction_TypeInfo);
+		    Utils_ObjectUtils__IsNotNull
+		              (uVar1,param1,
+		               Method_Gameplay_Combat_View_CombatGameOverView_HandleRunCombatButtonOnClickEvent__,0)
+		    ;
+		    Gameplay_Boss_View_CaptainTab_BossInfoView__add_AttackButtonClickEvent(uVar2,uVar1,0);
+		  }
+		  iVar3 = Cysharp_Threading_Tasks_CancellationTokenExtensions___cctor(param1[0xd],0);
+		  if (iVar3 != 0) {
+		    Gameplay_Ad_DailyQuestsAd_Controller_DailyQuestsAdViewMediator__ValidateRoutine_d__11__System_Collections_IEnumerator_get_Current
+		              (param1[0xd],*(undefined4 *)(param2 + 8),0);
+		  }
+		  return param1;
+		}
+		*/
+
 		}
 
 		// Token: 0x060036D8 RID: 14040 RVA: 0x00002052 File Offset: 0x00000252
@@ -140,6 +240,55 @@ namespace Gameplay.Combat.View
 		[Address(RVA = "0x86C8", Offset = "0x86C8", VA = "0x86C8")]
 		public void Hide()
 		{
+		/* --- GHIDRA: Hide ---
+		int Gameplay_Combat_View_CombatGameOverView__Hide
+		              (int param1,int param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  char cVar1;
+		  undefined4 uVar2;
+		  int *piVar3;
+		  int iVar4;
+		  undefined4 param1_00;
+		  int iVar5;
+		  
+		  if (DAT_ram_00a63b25 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_GameLocalization_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Method_UnityEngine_Object_Instantiate_InIdleOutSpineAnimation___);
+		    Mono_Security_ASN1__get_Item(&UnityEngine_Object_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_17762);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_10333);
+		    DAT_ram_00a63b25 = '\x01';
+		  }
+		  iVar4 = 0x2c;
+		  if (*(char *)(param2 + 8) == '\0') {
+		    iVar4 = 0x30;
+		  }
+		  uVar2 = *(undefined4 *)(param1 + iVar4);
+		  if (*(int *)(UnityEngine_Object_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(UnityEngine_Object_TypeInfo);
+		  }
+		  iVar4 = func_ii_6805(uVar2,param3,Method_UnityEngine_Object_Instantiate_InIdleOutSpineAnimation___
+		                      );
+		  param1_00 = StringLiteral_17762;
+		  uVar2 = StringLiteral_10333;
+		  piVar3 = *(int **)(iVar4 + 0x1c);
+		  cVar1 = *(char *)(param2 + 8);
+		  if (*(int *)(Core_GameLocalization_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Core_GameLocalization_TypeInfo);
+		  }
+		  if (cVar1 == '\0') {
+		    param1_00 = uVar2;
+		  }
+		  uVar2 = Core_Extensions_Dict_CultDicExt__GetTitle(param1_00,1,0,1,0,0,0,0);
+		  iVar5 = *piVar3;
+		  (**(code **)((ulonglong)*(uint *)(iVar5 + 0x2d0) * 4))
+		            (piVar3,uVar2,*(undefined4 *)(iVar5 + 0x2d4));
+		  Animations_InIdleOutSpineAnimation__get_Particles(iVar4,0);
+		  return iVar4;
+		}
+		*/
+
 		}
 
 		// Token: 0x060036DA RID: 14042 RVA: 0x00002052 File Offset: 0x00000252
@@ -147,6 +296,50 @@ namespace Gameplay.Combat.View
 		[Address(RVA = "0x86C9", Offset = "0x86C9", VA = "0x86C9", Slot = "6")]
 		protected virtual InIdleOutSpineAnimation CreateResultAnimation(GameOverData gameOverData, Transform parent)
 		{
+		/* --- GHIDRA: CreateResultAnimation ---
+		void Gameplay_Combat_View_CombatGameOverView__CreateResultAnimation(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  undefined4 uVar2;
+		  undefined4 param1_00;
+		  ushort local_4;
+		  ushort local_2;
+		  
+		  if (DAT_ram_00a63b26 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Gameplay_Combat_View_CombatGameOverView_HandleRunCombatButtonOnClickEvent__);
+		    Mono_Security_ASN1__get_Item(&Method_System_Nullable_bool___ctor__);
+		    Mono_Security_ASN1__get_Item(&Method_System_Nullable_bool__get_HasValue__);
+		    Mono_Security_ASN1__get_Item(&Method_System_Nullable_bool__get_Value__);
+		    Mono_Security_ASN1__get_Item(&UnityEngine_Events_UnityAction_TypeInfo);
+		    DAT_ram_00a63b26 = '\x01';
+		  }
+		  iVar1 = Core_Errors_Expected_ExpectedBillingErrors__GetErrorCode
+		                    (*(undefined4 *)(*(int *)(*(int *)(param1 + 0x48) + 0xc) + 0x78),
+		                     *(undefined4 *)(*(int *)(param1 + 0x48) + 0x10),0);
+		  if ((iVar1 != 0) && (iVar1 = *(int *)(param1 + 0x44), iVar1 != 0)) {
+		    uVar2 = (**(code **)((ulonglong)*(uint *)(iVar1 + 0xc) * 4))
+		                      (*(undefined4 *)(iVar1 + 0x20),param1,*(undefined4 *)(iVar1 + 0x14));
+		    local_4 = 0;
+		    System_Data_SqlTypes_SqlByte__ToSqlInt64(&local_4,uVar2,Method_System_Nullable_bool___ctor__);
+		    local_2 = local_4;
+		    if (((local_4 & 0xff) != 0) &&
+		       (iVar1 = UnityEngine_UI_RawImage__set_texture
+		                          (&local_2,Method_System_Nullable_bool__get_Value__), iVar1 == 0)) {
+		      param1_00 = *(undefined4 *)(*(int *)(param1 + 0x20) + 0xb4);
+		      uVar2 = unnamed_function_1417(UnityEngine_Events_UnityAction_TypeInfo);
+		      Utils_ObjectUtils__IsNotNull
+		                (uVar2,param1,
+		                 Method_Gameplay_Combat_View_CombatGameOverView_HandleRunCombatButtonOnClickEvent__,
+		                 0);
+		      UnityEngine_Events_UnityAction___ctor(param1_00,uVar2,0);
+		    }
+		  }
+		  return;
+		}
+		*/
+
 			return null;
 		}
 
@@ -155,6 +348,22 @@ namespace Gameplay.Combat.View
 		[Address(RVA = "0x86CA", Offset = "0x86CA", VA = "0x86CA")]
 		public void HandleRunCombatButtonOnClickEvent()
 		{
+		/* --- GHIDRA: HandleRunCombatButtonOnClickEvent ---
+		void Gameplay_Combat_View_CombatGameOverView__HandleRunCombatButtonOnClickEvent
+		               (int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  
+		  iVar1 = *(int *)(param1 + 0x40);
+		  if (iVar1 != 0) {
+		    (**(code **)((ulonglong)*(uint *)(iVar1 + 0xc) * 4))
+		              (*(undefined4 *)(iVar1 + 0x20),param1,*(undefined4 *)(iVar1 + 0x14));
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x060036DC RID: 14044 RVA: 0x00002050 File Offset: 0x00000250
@@ -162,6 +371,26 @@ namespace Gameplay.Combat.View
 		[Address(RVA = "0x86CB", Offset = "0x86CB", VA = "0x86CB")]
 		private void HandleCloseButtonClickEvent()
 		{
+		/* --- GHIDRA: HandleCloseButtonClickEvent ---
+		void Gameplay_Combat_View_CombatGameOverView__HandleCloseButtonClickEvent
+		               (undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a63b27 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_MonoBehaviourWithStates_CombatGameOverView_CombatGameOverViewStates___ctor__
+		              );
+		    DAT_ram_00a63b27 = '\x01';
+		  }
+		  ScreenAdaptation_Common_AppSize__Update
+		            (param1,
+		             Method_UI_MonoBehaviourWithStates_CombatGameOverView_CombatGameOverViewStates___ctor__)
+		  ;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x060036DD RID: 14045 RVA: 0x00002050 File Offset: 0x00000250
@@ -274,4 +503,166 @@ namespace Gameplay.Combat.View
 			public readonly ResourceSet NextCombatCost;
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: add_CloseRequestEvent ---
+		void Gameplay_Combat_View_CombatGameOverView__add_CloseRequestEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a63b20 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Func_CombatGameOverView__bool__TypeInfo);
+		    DAT_ram_00a63b20 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x40);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = func_ii_7048(param1_00,param2,0);
+		    param2_00 = System_Func_CombatGameOverView__bool__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Func_CombatGameOverView__bool__TypeInfo), iVar2 == 0))
+		    break;
+		    iVar2 = func_ii_4329(param1 + 0x40,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: remove_CloseRequestEvent ---
+		void Gameplay_Combat_View_CombatGameOverView__remove_CloseRequestEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a63b21 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Func_CombatGameOverView__bool__TypeInfo);
+		    DAT_ram_00a63b21 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x44);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = UnityEngine_UI_Image__set_sprite(param1_00,param2,0);
+		    param2_00 = System_Func_CombatGameOverView__bool__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Func_CombatGameOverView__bool__TypeInfo), iVar2 == 0))
+		    break;
+		    iVar2 = func_ii_4329(param1 + 0x44,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: add_NextCombatRequestEvent ---
+		void Gameplay_Combat_View_CombatGameOverView__add_NextCombatRequestEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a63b22 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Func_CombatGameOverView__bool__TypeInfo);
+		    DAT_ram_00a63b22 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x44);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = func_ii_7048(param1_00,param2,0);
+		    param2_00 = System_Func_CombatGameOverView__bool__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Func_CombatGameOverView__bool__TypeInfo), iVar2 == 0))
+		    break;
+		    iVar2 = func_ii_4329(param1 + 0x44,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: set_Args ---
+		void Gameplay_Combat_View_CombatGameOverView__set_Args(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  int iVar2;
+		  undefined4 uVar3;
+		  
+		  if (DAT_ram_00a63b23 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Gameplay_Combat_View_CombatGameOverView_HandleCloseButtonClickEvent__);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Gameplay_Combat_View_CombatGameOverView_HandleRunCombatButtonOnClickEvent__);
+		    Mono_Security_ASN1__get_Item(&UnityEngine_Object_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&UnityEngine_Events_UnityAction_TypeInfo);
+		    DAT_ram_00a63b23 = '\x01';
+		  }
+		  uVar3 = *(undefined4 *)(*(int *)(param1 + 0x24) + 0xb4);
+		  uVar1 = unnamed_function_1417(UnityEngine_Events_UnityAction_TypeInfo);
+		  Utils_ObjectUtils__IsNotNull
+		            (uVar1,param1,
+		             Method_Gameplay_Combat_View_CombatGameOverView_HandleCloseButtonClickEvent__,0);
+		  UnityEngine_Events_UnityAction___ctor(uVar3,uVar1,0);
+		  uVar3 = *(undefined4 *)(*(int *)(param1 + 0x20) + 0xb4);
+		  uVar1 = unnamed_function_1417(UnityEngine_Events_UnityAction_TypeInfo);
+		  Utils_ObjectUtils__IsNotNull
+		            (uVar1,param1,
+		             Method_Gameplay_Combat_View_CombatGameOverView_HandleRunCombatButtonOnClickEvent__,0);
+		  UnityEngine_Events_UnityAction___ctor(uVar3,uVar1,0);
+		  *(undefined8 *)(param1 + 0x40) = 0;
+		  *(undefined4 *)(param1 + 0x48) = 0;
+		  iVar2 = Cysharp_Threading_Tasks_CancellationTokenExtensions___cctor
+		                    (*(undefined4 *)(param1 + 0x3c),0);
+		  if (iVar2 != 0) {
+		    uVar1 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_uint__object___MoveNext
+		                      (*(undefined4 *)(param1 + 0x3c),0);
+		    if (*(int *)(UnityEngine_Object_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(UnityEngine_Object_TypeInfo);
+		    }
+		    UnityEngine_Application__get_isPlaying(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
 }

@@ -18,6 +18,37 @@ namespace Gameplay.Clans.Buildings.MagicTower.View
 		[Address(RVA = "0x90C2", Offset = "0x90C2", VA = "0x90C2", Slot = "6")]
 		protected override void OnInit(ClanSpellUpgradeRequirementsTitledListElement.ClanSpellUpgradeRequirementsTitledListElementArgs args)
 		{
+		/* --- GHIDRA: OnInit ---
+		void Gameplay_Clans_Buildings_MagicTower_View_ClanSpellUpgradeRequirementsTitledListElement__OnInit
+		               (int param1,int *param2,undefined4 param3,undefined4 param4,undefined4 param5)
+		
+		{
+		  undefined4 uVar1;
+		  undefined4 param1_00;
+		  
+		  if (DAT_ram_00a577fb == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Core_Gameplay_Managers_Requirements_CostRequirementsInfoProvider_TypeInfo);
+		    DAT_ram_00a577fb = '\x01';
+		  }
+		  uVar1 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_uint__object___MoveNext
+		                    (*(undefined4 *)(param1 + 0x10),0);
+		  Com_TheFallenGames_OSA_CustomAdapters_TableView_Tuple_Basic_BasicTupleValueViewsHolder__UpdateAsText
+		            (uVar1,(uint)(param2[0xc] != 0),0);
+		  if (param2[0xc] != 0) {
+		    uVar1 = (**(code **)((ulonglong)*(uint *)(*param2 + 0x110) * 4))
+		                      (param2,*(undefined4 *)(*param2 + 0x114));
+		    param1_00 = unnamed_function_1417
+		                          (Core_Gameplay_Managers_Requirements_CostRequirementsInfoProvider_TypeInfo
+		                          );
+		    Core_Gameplay_Managers_Requirements_CostRequirementsInfoProvider__Dispose
+		              (param1_00,param4,param3,uVar1,0);
+		    UI_Requirements_RequirementsView__get_Data(*(undefined4 *)(param1 + 0x10),param1_00,0);
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600420F RID: 16911 RVA: 0x00002050 File Offset: 0x00000250
@@ -25,6 +56,26 @@ namespace Gameplay.Clans.Buildings.MagicTower.View
 		[Address(RVA = "0x90C3", Offset = "0x90C3", VA = "0x90C3")]
 		public void UpdateSpell(SchoolSpellData spellData, UserData player, TreasuryData treasury)
 		{
+		/* --- GHIDRA: UpdateSpell ---
+		void Gameplay_Clans_Buildings_MagicTower_View_ClanSpellUpgradeRequirementsTitledListElement__UpdateSpell
+		               (undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a577fc == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Elements_RightPanel_TitledList_BaseTitledListElement_ClanSpellUpgradeRequirementsTitledListElement_ClanSpellUpgradeRequirementsTitledListElementArgs___ctor__
+		              );
+		    DAT_ram_00a577fc = '\x01';
+		  }
+		  UnityEngine_ParticleSystemRenderer__GetMeshes
+		            (param1,
+		             Method_UI_Elements_RightPanel_TitledList_BaseTitledListElement_ClanSpellUpgradeRequirementsTitledListElement_ClanSpellUpgradeRequirementsTitledListElementArgs___ctor__
+		            );
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06004210 RID: 16912 RVA: 0x00002050 File Offset: 0x00000250

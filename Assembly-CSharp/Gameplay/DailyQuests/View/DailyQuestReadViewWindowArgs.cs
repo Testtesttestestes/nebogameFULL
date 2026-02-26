@@ -14,6 +14,26 @@ namespace Gameplay.DailyQuests.View
 		[Address(RVA = "0x830B", Offset = "0x830B", VA = "0x830B")]
 		public DailyQuestReadViewWindowArgs()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_DailyQuests_View_DailyQuestReadViewWindowArgs___ctor
+		               (undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a57c1a == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Elements_GenericList_SelectorGenericList_DailyQuestsListArgs__DailyQuestsListElement__DailyQuestsListElementArgs___ctor__
+		              );
+		    DAT_ram_00a57c1a = '\x01';
+		  }
+		  UI_Elements_GenericList_SelectedGenericListElement_object___set_Selected
+		            (param1,
+		             Method_UI_Elements_GenericList_SelectorGenericList_DailyQuestsListArgs__DailyQuestsListElement__DailyQuestsListElementArgs___ctor__
+		            );
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x04001BC5 RID: 7109

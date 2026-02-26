@@ -42,4 +42,61 @@ namespace Core.Data.Skills
 		[FieldOffset(Offset = "0x0")]
 		private static readonly Dictionary<int, string> _skillsIndexNameDefinition;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_SkillsIndexNameDefinition ---
+		void Core_Data_Skills_EffectSkillsMapping__get_SkillsIndexNameDefinition(undefined4 param1)
+		
+		{
+		  undefined4 param1_00;
+		  
+		  if (DAT_ram_00a60813 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_System_Collections_Generic_Dictionary_int__string__Add__);
+		    Mono_Security_ASN1__get_Item(&Method_System_Collections_Generic_Dictionary_int__string___ctor__)
+		    ;
+		    Mono_Security_ASN1__get_Item(&System_Collections_Generic_Dictionary_int__string__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Core_Data_Skills_EffectSkillsMapping_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_22759);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_21064);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_27723);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_25310);
+		    DAT_ram_00a60813 = '\x01';
+		  }
+		  param1_00 = unnamed_function_1417(System_Collections_Generic_Dictionary_int__string__TypeInfo);
+		  System_Collections_Generic_Dictionary_int__TMP_ResourceManager_FontAssetRef___set_Item
+		            (param1_00,Method_System_Collections_Generic_Dictionary_int__string___ctor__);
+		  UnityEngine_Object__GetInstanceID
+		            (param1_00,0,StringLiteral_22759,
+		             Method_System_Collections_Generic_Dictionary_int__string__Add__);
+		  UnityEngine_Object__GetInstanceID
+		            (param1_00,1,StringLiteral_27723,
+		             Method_System_Collections_Generic_Dictionary_int__string__Add__);
+		  UnityEngine_Object__GetInstanceID
+		            (param1_00,2,StringLiteral_25310,
+		             Method_System_Collections_Generic_Dictionary_int__string__Add__);
+		  UnityEngine_Object__GetInstanceID
+		            (param1_00,3,StringLiteral_21064,
+		             Method_System_Collections_Generic_Dictionary_int__string__Add__);
+		  **(undefined4 **)(Core_Data_Skills_EffectSkillsMapping_TypeInfo + 0x5c) = param1_00;
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: .cctor ---
+		void Core_Data_Skills_EffectSkillsMapping___cctor(undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a60814 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_Dictionary_int__SkillData___ctor__);
+		    DAT_ram_00a60814 = '\x01';
+		  }
+		  System_Collections_Generic_Dictionary_int__TMP_ResourceManager_FontAssetRef___set_Item
+		            (param1,Method_System_Collections_Generic_Dictionary_int__SkillData___ctor__);
+		  return;
+		}
+		*/
+
 }

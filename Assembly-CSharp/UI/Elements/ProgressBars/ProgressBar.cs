@@ -76,6 +76,20 @@ namespace UI.Elements.ProgressBars
 		[Address(RVA = "0x605D", Offset = "0x605D", VA = "0x605D")]
 		private void OnEnable()
 		{
+		/* --- GHIDRA: OnEnable ---
+		void UI_Elements_ProgressBars_ProgressBar__OnEnable(int param1,undefined4 param2)
+		
+		{
+		  int *piVar1;
+		  
+		  piVar1 = *(int **)(param1 + 0x14);
+		  if (piVar1 != (int *)0x0) {
+		    (**(code **)((ulonglong)*(uint *)(*piVar1 + 0xe0) * 4))(piVar1,*(undefined4 *)(*piVar1 + 0xe4));
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06000D7B RID: 3451 RVA: 0x00002050 File Offset: 0x00000250
@@ -90,6 +104,16 @@ namespace UI.Elements.ProgressBars
 		[Address(RVA = "0x605F", Offset = "0x605F", VA = "0x605F")]
 		public ProgressBar()
 		{
+		/* --- GHIDRA: .ctor ---
+		void UI_Elements_ProgressBars_ProgressBar___ctor(int *param1,undefined4 param2)
+		
+		{
+		  (**(code **)((ulonglong)*(uint *)(*param1 + 0x108) * 4))
+		            (param1,param1[8],*(undefined4 *)(*param1 + 0x10c));
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x040006B3 RID: 1715
@@ -110,4 +134,18 @@ namespace UI.Elements.ProgressBars
 		[SerializeField]
 		protected TextToolTip _toolTip;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: set_Value ---
+		void UI_Elements_ProgressBars_ProgressBar__set_Value
+		               (int *param1,float param2,float param3,undefined4 param4)
+		
+		{
+		  (**(code **)((ulonglong)*(uint *)(*param1 + 0x108) * 4))
+		            (param1,param2 / param3,*(undefined4 *)(*param1 + 0x10c));
+		  return;
+		}
+		*/
+
 }

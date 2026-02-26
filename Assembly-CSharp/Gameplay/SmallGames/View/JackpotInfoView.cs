@@ -24,6 +24,28 @@ namespace Gameplay.SmallGames.View
 		[Address(RVA = "0x705E", Offset = "0x705E", VA = "0x705E")]
 		public JackpotInfoView()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_SmallGames_View_JackpotInfoView___ctor
+		               (int param1,int param2,undefined4 param3,undefined4 param4,undefined4 param5)
+		
+		{
+		  undefined4 *param4_00;
+		  
+		  if (param2 == 1) {
+		    param4_00 = (undefined4 *)(param1 + 0x10);
+		  }
+		  else {
+		    if (param2 != 2) {
+		      return;
+		    }
+		    param4_00 = (undefined4 *)(param1 + 0x14);
+		  }
+		  Gameplay_SpecialOffers_Controller_SpecialOffersViewMediator__UpdateView
+		            (*param4_00,param3,param4,param4_00);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x040010C1 RID: 4289

@@ -37,6 +37,48 @@ namespace UI.ConfirmationMessage
 		[Address(RVA = "0x60FA", Offset = "0x60FA", VA = "0x60FA")]
 		public void Show(string message)
 		{
+		/* --- GHIDRA: Show ---
+		void UI_ConfirmationMessage_ConfirmationMessageController__Show(int param1,undefined4 param2)
+		
+		{
+		  undefined4 param1_00;
+		  
+		  if (*(int *)(param1 + 0x24) != 0) {
+		    func_ii_7891(*(int *)(param1 + 0x24),0,0);
+		  }
+		  *(undefined4 *)(param1 + 0x20) = 0;
+		  param1_00 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_uint__object___MoveNext
+		                        (*(undefined4 *)(param1 + 0x10),0);
+		  Com_TheFallenGames_OSA_CustomAdapters_TableView_Tuple_Basic_BasicTupleValueViewsHolder__UpdateAsText
+		            (param1_00,0,0);
+		  Com_TheFallenGames_OSA_CustomAdapters_TableView_Tuple_Basic_BasicTupleValueViewsHolder__UpdateAsText
+		            (*(undefined4 *)(param1 + 0x14),0,0);
+		  UI_ConfirmationMessage_ConfirmationMessageController__Hide(param1,param1);
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: Show ---
+		void UI_ConfirmationMessage_ConfirmationMessageController__Show(int param1,undefined4 param2)
+		
+		{
+		  undefined4 param1_00;
+		  
+		  if (*(int *)(param1 + 0x24) != 0) {
+		    func_ii_7891(*(int *)(param1 + 0x24),0,0);
+		  }
+		  *(undefined4 *)(param1 + 0x20) = 0;
+		  param1_00 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_uint__object___MoveNext
+		                        (*(undefined4 *)(param1 + 0x10),0);
+		  Com_TheFallenGames_OSA_CustomAdapters_TableView_Tuple_Basic_BasicTupleValueViewsHolder__UpdateAsText
+		            (param1_00,0,0);
+		  Com_TheFallenGames_OSA_CustomAdapters_TableView_Tuple_Basic_BasicTupleValueViewsHolder__UpdateAsText
+		            (*(undefined4 *)(param1 + 0x14),0,0);
+		  UI_ConfirmationMessage_ConfirmationMessageController__Hide(param1,param1);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06000E7A RID: 3706 RVA: 0x00002050 File Offset: 0x00000250
@@ -51,6 +93,53 @@ namespace UI.ConfirmationMessage
 		[Address(RVA = "0x60FC", Offset = "0x60FC", VA = "0x60FC")]
 		public void Hide()
 		{
+		/* --- GHIDRA: Hide ---
+		void UI_ConfirmationMessage_ConfirmationMessageController__Hide(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  float param1_00;
+		  
+		  if (DAT_ram_00a639c2 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UI_ConfirmationMessage_ConfirmationMessageController_TempOnComplete__);
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_System_Collections_Generic_Queue_ConfirmationMessageController_ConfirmationMessageData__Dequeue__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_System_Collections_Generic_Queue_ConfirmationMessageController_ConfirmationMessageData__get_Count__
+		              );
+		    Mono_Security_ASN1__get_Item(&DG_Tweening_TweenCallback_TypeInfo);
+		    DAT_ram_00a639c2 = '\x01';
+		  }
+		  if ((*(int *)(param1 + 0x20) == 0) && (*(int *)(*(int *)(param1 + 0x1c) + 0x14) != 0)) {
+		    uVar1 = func_ii_7387(*(int *)(param1 + 0x1c),
+		                         Method_System_Collections_Generic_Queue_ConfirmationMessageController_ConfirmationMessageData__Dequeue__
+		                        );
+		    *(undefined4 *)(param1 + 0x20) = uVar1;
+		    uVar1 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_uint__object___MoveNext
+		                      (*(undefined4 *)(param1 + 0x10),0);
+		    Com_TheFallenGames_OSA_CustomAdapters_TableView_Tuple_Basic_BasicTupleValueViewsHolder__UpdateAsText
+		              (uVar1,1,0);
+		    UI_ConfirmationMessage_ConfirmationMessageController_ConfirmationMessageData___ctor
+		              (*(undefined4 *)(param1 + 0x10),*(undefined4 *)(*(int *)(param1 + 0x20) + 8),
+		               *(float *)(*(int *)(param1 + 0x20) + 0xc),param1);
+		    Com_TheFallenGames_OSA_CustomAdapters_TableView_Tuple_Basic_BasicTupleValueViewsHolder__UpdateAsText
+		              (*(undefined4 *)(param1 + 0x14),1,0);
+		    param1_00 = *(float *)(*(int *)(param1 + 0x20) + 0xc);
+		    uVar1 = unnamed_function_1417(DG_Tweening_TweenCallback_TypeInfo);
+		    DG_Tweening_Color2__op_Multiply
+		              (uVar1,param1,
+		               Method_UI_ConfirmationMessage_ConfirmationMessageController_TempOnComplete__,0);
+		    uVar1 = DG_Tweening_DOVirtual__EasedValue(param1_00,uVar1,1,0);
+		    *(undefined4 *)(param1 + 0x24) = uVar1;
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06000E7C RID: 3708 RVA: 0x00002050 File Offset: 0x00000250
@@ -58,6 +147,24 @@ namespace UI.ConfirmationMessage
 		[Address(RVA = "0x60FD", Offset = "0x60FD", VA = "0x60FD")]
 		private void HandleQueue()
 		{
+		/* --- GHIDRA: HandleQueue ---
+		void UI_ConfirmationMessage_ConfirmationMessageController__HandleQueue(int param1,undefined4 param2)
+		
+		{
+		  undefined4 param1_00;
+		  
+		  *(undefined4 *)(param1 + 0x20) = 0;
+		  param1_00 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_uint__object___MoveNext
+		                        (*(undefined4 *)(param1 + 0x10),0);
+		  Com_TheFallenGames_OSA_CustomAdapters_TableView_Tuple_Basic_BasicTupleValueViewsHolder__UpdateAsText
+		            (param1_00,0,0);
+		  Com_TheFallenGames_OSA_CustomAdapters_TableView_Tuple_Basic_BasicTupleValueViewsHolder__UpdateAsText
+		            (*(undefined4 *)(param1 + 0x14),0,0);
+		  UI_ConfirmationMessage_ConfirmationMessageController__Hide(param1,param1);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06000E7D RID: 3709 RVA: 0x00002050 File Offset: 0x00000250
@@ -65,6 +172,39 @@ namespace UI.ConfirmationMessage
 		[Address(RVA = "0x60FE", Offset = "0x60FE", VA = "0x60FE")]
 		private void TempOnComplete()
 		{
+		/* --- GHIDRA: TempOnComplete ---
+		void UI_ConfirmationMessage_ConfirmationMessageController__TempOnComplete
+		               (int param1,undefined4 param2)
+		
+		{
+		  undefined4 param1_00;
+		  
+		  if (DAT_ram_00a639c3 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_System_Collections_Generic_Queue_ConfirmationMessageController_ConfirmationMessageData___ctor__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               System_Collections_Generic_Queue_ConfirmationMessageController_ConfirmationMessageData__TypeInfo
+		              );
+		    DAT_ram_00a639c3 = '\x01';
+		  }
+		  *(undefined4 *)(param1 + 0x18) = 0x40000000;
+		  param1_00 = unnamed_function_1417
+		                        (
+		                        System_Collections_Generic_Queue_ConfirmationMessageController_ConfirmationMessageData__TypeInfo
+		                        );
+		  Sirenix_Serialization_StackFormatter_object____Il2CppFullySharedGenericType___SerializeImplementation
+		            (param1_00,
+		             Method_System_Collections_Generic_Queue_ConfirmationMessageController_ConfirmationMessageData___ctor__
+		            );
+		  *(undefined4 *)(param1 + 0x1c) = param1_00;
+		  UnityEngine_RectTransform__GetParentSize(param1,0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06000E7E RID: 3710 RVA: 0x00002050 File Offset: 0x00000250
@@ -141,4 +281,44 @@ namespace UI.ConfirmationMessage
 			}
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: set_DefaultDuration ---
+		void UI_ConfirmationMessage_ConfirmationMessageController__set_DefaultDuration
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  int param2_00;
+		  undefined4 uVar1;
+		  undefined4 param1_00;
+		  
+		  uVar1 = *(undefined4 *)(param1 + 0x18);
+		  if (DAT_ram_00a639c1 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               UI_ConfirmationMessage_ConfirmationMessageController_ConfirmationMessageData_TypeInfo
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_System_Collections_Generic_Queue_ConfirmationMessageController_ConfirmationMessageData__Enqueue__
+		              );
+		    DAT_ram_00a639c1 = '\x01';
+		  }
+		  param1_00 = *(undefined4 *)(param1 + 0x1c);
+		  param2_00 = unnamed_function_1417
+		                        (
+		                        UI_ConfirmationMessage_ConfirmationMessageController_ConfirmationMessageData_TypeInfo
+		                        );
+		  *(undefined4 *)(param2_00 + 0xc) = uVar1;
+		  *(undefined4 *)(param2_00 + 8) = param2;
+		  System_Collections_Generic_Dictionary_Int32Enum__object___TryGetValue
+		            (param1_00,param2_00,
+		             Method_System_Collections_Generic_Queue_ConfirmationMessageController_ConfirmationMessageData__Enqueue__
+		            );
+		  UI_ConfirmationMessage_ConfirmationMessageController__Hide(param1,param1);
+		  return;
+		}
+		*/
+
 }

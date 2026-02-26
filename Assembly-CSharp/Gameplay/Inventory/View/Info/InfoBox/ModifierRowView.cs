@@ -22,6 +22,20 @@ namespace Gameplay.Inventory.View.Info.InfoBox
 		[Address(RVA = "0x7951", Offset = "0x7951", VA = "0x7951")]
 		public ModifierRowView()
 		{
+		/* --- GHIDRA: .ctor ---
+		undefined4 Gameplay_Inventory_View_Info_InfoBox_ModifierRowView___ctor(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  int iVar2;
+		  
+		  iVar2 = **(int **)(param1 + 0x28);
+		  uVar1 = (**(code **)((ulonglong)*(uint *)(iVar2 + 0x2c8) * 4))
+		                    (*(int **)(param1 + 0x28),*(undefined4 *)(iVar2 + 0x2cc));
+		  return uVar1;
+		}
+		*/
+
 		}
 
 		// Token: 0x04001625 RID: 5669

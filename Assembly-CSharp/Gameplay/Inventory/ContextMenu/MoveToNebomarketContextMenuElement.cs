@@ -27,6 +27,63 @@ namespace Gameplay.Inventory.ContextMenu
 		[Address(RVA = "0x7ADC", Offset = "0x7ADC", VA = "0x7ADC", Slot = "5")]
 		public override bool Validate(IArtifactView artifactView)
 		{
+		/* --- GHIDRA: Validate ---
+		void Gameplay_Inventory_ContextMenu_MoveToNebomarketContextMenuElement__Validate
+		               (undefined4 param1,int *param2,undefined4 param3)
+		
+		{
+		  uint uVar1;
+		  uint *puVar2;
+		  undefined4 param2_00;
+		  int *param1_00;
+		  int iVar3;
+		  undefined4 param1_01;
+		  
+		  if (DAT_ram_00a5a1b1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Gameplay_Inventory_View_IArtifactView_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Core_Gameplay_IGame_TypeInfo);
+		    DAT_ram_00a5a1b1 = '\x01';
+		  }
+		  if (DAT_ram_00a6456f == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_Gameplay_Game_TypeInfo);
+		    DAT_ram_00a6456f = '\x01';
+		  }
+		  uVar1 = 0;
+		  param1_00 = (int *)**(undefined4 **)(Core_Gameplay_Game_TypeInfo + 0x5c);
+		  iVar3 = *param1_00;
+		  if (*(ushort *)(iVar3 + 0xb6) != 0) {
+		    do {
+		      if (Core_Gameplay_IGame_TypeInfo == *(int *)(*(int *)(iVar3 + 0x58) + uVar1 * 8)) {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar3 + 0x58) + uVar1 * 8 + 4) * 8 + iVar3 + 0x108);
+		        goto code_r0x811dec9b;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar3 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(param1_00,Core_Gameplay_IGame_TypeInfo,9);
+		code_r0x811dec9b:
+		  iVar3 = (**(code **)((ulonglong)*puVar2 * 4))(param1_00,puVar2[1]);
+		  param1_01 = *(undefined4 *)(iVar3 + 0x18);
+		  uVar1 = 0;
+		  iVar3 = *param2;
+		  if (*(ushort *)(iVar3 + 0xb6) != 0) {
+		    do {
+		      if (Gameplay_Inventory_View_IArtifactView_TypeInfo ==
+		          *(int *)(*(int *)(iVar3 + 0x58) + uVar1 * 8)) {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar3 + 0x58) + uVar1 * 8 + 4) * 8 + iVar3 + 0xd0);
+		        goto code_r0x811ded22;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar3 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(param2,Gameplay_Inventory_View_IArtifactView_TypeInfo,2);
+		code_r0x811ded22:
+		  param2_00 = (**(code **)((ulonglong)*puVar2 * 4))(param2,puVar2[1]);
+		  Gameplay_Shop_ShopController__RequestShopItemsResultHandler(param1_01,param2_00,1,0);
+		  return;
+		}
+		*/
+
 			return default(bool);
 		}
 
@@ -44,4 +101,89 @@ namespace Gameplay.Inventory.ContextMenu
 		{
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_ActionId ---
+		uint Gameplay_Inventory_ContextMenu_MoveToNebomarketContextMenuElement__get_ActionId
+		               (undefined4 param1,int *param2,undefined4 param3)
+		
+		{
+		  uint uVar1;
+		  uint *puVar2;
+		  undefined4 param1_00;
+		  int iVar3;
+		  int *piVar4;
+		  int iVar5;
+		  int iVar6;
+		  
+		  if (DAT_ram_00a5a1b0 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Gameplay_Inventory_View_IArtifactView_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Core_Gameplay_IGame_TypeInfo);
+		    DAT_ram_00a5a1b0 = '\x01';
+		  }
+		  iVar6 = *param2;
+		  if (*(ushort *)(iVar6 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (Gameplay_Inventory_View_IArtifactView_TypeInfo ==
+		          *(int *)(*(int *)(iVar6 + 0x58) + uVar1 * 8)) {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar6 + 0x58) + uVar1 * 8 + 4) * 8 + iVar6 + 0xd0);
+		        goto code_r0x811dea39;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar6 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(param2,Gameplay_Inventory_View_IArtifactView_TypeInfo,2);
+		code_r0x811dea39:
+		  iVar6 = (**(code **)((ulonglong)*puVar2 * 4))(param2,puVar2[1]);
+		  iVar3 = *(int *)(iVar6 + 0x70);
+		  if (DAT_ram_00a6456f == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_Gameplay_Game_TypeInfo);
+		    DAT_ram_00a6456f = '\x01';
+		  }
+		  piVar4 = (int *)**(undefined4 **)(Core_Gameplay_Game_TypeInfo + 0x5c);
+		  iVar5 = *piVar4;
+		  if (*(ushort *)(iVar5 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (Core_Gameplay_IGame_TypeInfo == *(int *)(*(int *)(iVar5 + 0x58) + uVar1 * 8)) {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar5 + 0x58) + uVar1 * 8 + 4) * 8 + iVar5 + 0x140);
+		        goto code_r0x811deae6;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar5 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(piVar4,Core_Gameplay_IGame_TypeInfo,0x10);
+		code_r0x811deae6:
+		  uVar1 = 0;
+		  param1_00 = (**(code **)((ulonglong)*puVar2 * 4))(piVar4,puVar2[1]);
+		  iVar5 = func_ii_7112(param1_00,0);
+		  if (((iVar5 == iVar3) && (*(int *)(iVar6 + 0x80) == 1)) &&
+		     (iVar6 = Core_Data_ArtikulData__get_ShowDismantleAlert(iVar6,0), iVar6 != 0)) {
+		    if (DAT_ram_00a6456f == '\0') {
+		      Mono_Security_ASN1__get_Item(&Core_Gameplay_Game_TypeInfo);
+		      DAT_ram_00a6456f = '\x01';
+		    }
+		    piVar4 = (int *)**(undefined4 **)(Core_Gameplay_Game_TypeInfo + 0x5c);
+		    iVar6 = *piVar4;
+		    if (*(ushort *)(iVar6 + 0xb6) != 0) {
+		      uVar1 = 0;
+		      do {
+		        if (Core_Gameplay_IGame_TypeInfo == *(int *)(*(int *)(iVar6 + 0x58) + uVar1 * 8)) {
+		          puVar2 = (uint *)(*(int *)(*(int *)(iVar6 + 0x58) + uVar1 * 8 + 4) * 8 + iVar6 + 0x108);
+		          goto code_r0x811debb7;
+		        }
+		        uVar1 = uVar1 + 1;
+		      } while (*(ushort *)(iVar6 + 0xb6) != uVar1);
+		    }
+		    puVar2 = (uint *)func_ii_1080(piVar4,Core_Gameplay_IGame_TypeInfo,9);
+		code_r0x811debb7:
+		    iVar6 = (**(code **)((ulonglong)*puVar2 * 4))(piVar4,puVar2[1]);
+		    uVar1 = (uint)(*(char *)(*(int *)(iVar6 + 0x14) + 0x20) != '\0');
+		  }
+		  return uVar1;
+		}
+		*/
+
 }

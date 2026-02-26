@@ -16,6 +16,27 @@ namespace Gameplay.Fresco.View.Groups
 		[Address(RVA = "0x8069", Offset = "0x8069", VA = "0x8069")]
 		public FrescoGroupListElementArgs()
 		{
+		/* --- GHIDRA: .ctor ---
+		undefined4
+		Gameplay_Fresco_View_Groups_FrescoGroupListElementArgs___ctor(undefined4 param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a5757f == '\0') {
+		    Mono_Security_ASN1__get_Item(&Gameplay_Fresco_View_Groups_UserInFrescoGroupViewsHolder_TypeInfo)
+		    ;
+		    DAT_ram_00a5757f = '\x01';
+		  }
+		  uVar1 = unnamed_function_1417(Gameplay_Fresco_View_Groups_UserInFrescoGroupViewsHolder_TypeInfo);
+		  if (DAT_ram_00a57582 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_UI_ItemViewsHolder_FrescoGroupListElement___ctor__);
+		    DAT_ram_00a57582 = '\x01';
+		  }
+		  return uVar1;
+		}
+		*/
+
 		}
 
 		// Token: 0x04001A45 RID: 6725

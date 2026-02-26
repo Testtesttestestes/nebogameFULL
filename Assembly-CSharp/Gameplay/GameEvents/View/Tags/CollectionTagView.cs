@@ -27,6 +27,26 @@ namespace Gameplay.GameEvents.View.Tags
 		[Address(RVA = "0x7E4A", Offset = "0x7E4A", VA = "0x7E4A")]
 		public CollectionTagView()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_GameEvents_View_Tags_CollectionTagView___ctor
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  int param1_00;
+		  
+		  if (DAT_ram_00a574a2 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_UnityEngine_Component_GetComponent_GameRawImage___);
+		    DAT_ram_00a574a2 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x10);
+		  if (param1_00 == 0) {
+		    param1_00 = func_ii_5677(param1,Method_UnityEngine_Component_GetComponent_GameRawImage___);
+		  }
+		  Core_Extensions_Dict_PortalDicExt__GetCurrencyIcon60x66(param1_00,param2,0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x04001920 RID: 6432

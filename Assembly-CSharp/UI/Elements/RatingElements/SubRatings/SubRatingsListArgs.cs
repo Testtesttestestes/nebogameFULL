@@ -14,6 +14,28 @@ namespace UI.Elements.RatingElements.SubRatings
 		[Address(RVA = "0x604F", Offset = "0x604F", VA = "0x604F")]
 		public SubRatingsListArgs()
 		{
+		/* --- GHIDRA: .ctor ---
+		float UI_Elements_RatingElements_SubRatings_SubRatingsListArgs___ctor(int param1,undefined4 param2)
+		
+		{
+		  float fVar1;
+		  
+		  fVar1 = UnityEngine_UI_Scrollbar___ctor(*(undefined4 *)(param1 + 0x14),0);
+		  return fVar1;
+		}
+		*/
+
+		/* --- GHIDRA: .ctor ---
+		float UI_Elements_RatingElements_SubRatings_SubRatingsListArgs___ctor(int param1,undefined4 param2)
+		
+		{
+		  float fVar1;
+		  
+		  fVar1 = UnityEngine_UI_Scrollbar___ctor(*(undefined4 *)(param1 + 0x14),0);
+		  return fVar1;
+		}
+		*/
+
 		}
 
 		// Token: 0x06000D6D RID: 3437 RVA: 0x00002050 File Offset: 0x00000250

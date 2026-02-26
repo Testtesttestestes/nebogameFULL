@@ -22,6 +22,15 @@ namespace Gameplay.Sound.View
 		[Address(RVA = "0x9C08", Offset = "0x9C08", VA = "0x9C08")]
 		public PlaySoundOnClickComponent()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_Sound_View_PlaySoundOnClickComponent___ctor(int param1,undefined4 param2)
+		
+		{
+		  Gameplay_Sound_View_GameAudioSource___ctor(param1,*(undefined4 *)(param1 + 0x10),param1);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x04002A5E RID: 10846

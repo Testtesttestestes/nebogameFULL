@@ -56,6 +56,23 @@ namespace Gameplay.Fresco.View.Groups
 		[Address(RVA = "0x8071", Offset = "0x8071", VA = "0x8071")]
 		private void Start()
 		{
+		/* --- GHIDRA: Start ---
+		void Gameplay_Fresco_View_Groups_FrescoListElement__Start(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  
+		  iVar1 = *(int *)(param1 + 0x58);
+		  if (iVar1 != 0) {
+		    (**(code **)((ulonglong)*(uint *)(iVar1 + 0xc) * 4))
+		              (*(undefined4 *)(iVar1 + 0x20),
+		               *(undefined8 *)(*(int *)(*(int *)(param1 + 0x14) + 0x4c) + 0x10),
+		               *(undefined4 *)(iVar1 + 0x14));
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600300C RID: 12300 RVA: 0x00002050 File Offset: 0x00000250
@@ -77,6 +94,24 @@ namespace Gameplay.Fresco.View.Groups
 		[Address(RVA = "0x1AD7", Offset = "0x1AD7", VA = "0x1AD7")]
 		public void Init(Protocol.Fresco.Fresco fresco, Protocol.Dic.Fresco.Types.FrescoDic frescoDic, int i, bool isOwn, Action<ulong> onFrescoClick)
 		{
+		/* --- GHIDRA: Init ---
+		int * Gameplay_Fresco_View_Groups_FrescoListElement__Init(int *param1)
+		
+		{
+		  System_Collections_Generic_SortedDictionary_Enumerator_object__object____ctor
+		            (param1[1],
+		             Method_System_Collections_Generic_SortedDictionary_Enumerator_Fresco__Fresco_Types_FrescoDic__Dispose__
+		            );
+		  if (*param1 == 0) {
+		    return param1;
+		  }
+		  System_Data_DataSet__ValidateLocaleConstraint(*param1);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
 		}
 
 		// Token: 0x0600300F RID: 12303 RVA: 0x00002050 File Offset: 0x00000250
@@ -84,6 +119,22 @@ namespace Gameplay.Fresco.View.Groups
 		[Address(RVA = "0x8074", Offset = "0x8074", VA = "0x8074")]
 		public FrescoListElement()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_Fresco_View_Groups_FrescoListElement___ctor(undefined4 param1)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a57585 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Gameplay_Fresco_View_Groups_FrescoListElement___c_TypeInfo);
+		    DAT_ram_00a57585 = '\x01';
+		  }
+		  uVar1 = unnamed_function_1417(Gameplay_Fresco_View_Groups_FrescoListElement___c_TypeInfo);
+		  **(undefined4 **)(Gameplay_Fresco_View_Groups_FrescoListElement___c_TypeInfo + 0x5c) = uVar1;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x04001A49 RID: 6729
@@ -145,4 +196,62 @@ namespace Gameplay.Fresco.View.Groups
 		[FieldOffset(Offset = "0x58")]
 		private Action<ulong> _onFrescoClick;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_White ---
+		undefined4 Gameplay_Fresco_View_Groups_FrescoListElement__get_White(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  undefined8 local_10;
+		  undefined8 local_8;
+		  
+		  local_8 = *(undefined8 *)(param1 + 0x40);
+		  local_10 = *(undefined8 *)(param1 + 0x38);
+		  uVar1 = UnityEngine_ColorUtility__DoTryParseHtmlColor(&local_10,0);
+		  return uVar1;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_Green ---
+		undefined4 Gameplay_Fresco_View_Groups_FrescoListElement__get_Green(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  undefined8 local_10;
+		  undefined8 local_8;
+		  
+		  local_8 = *(undefined8 *)(param1 + 0x50);
+		  local_10 = *(undefined8 *)(param1 + 0x48);
+		  uVar1 = UnityEngine_ColorUtility__DoTryParseHtmlColor(&local_10,0);
+		  return uVar1;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_Purple ---
+		void Gameplay_Fresco_View_Groups_FrescoListElement__get_Purple(int param1,undefined4 param2)
+		
+		{
+		  undefined4 param1_00;
+		  undefined4 param1_01;
+		  
+		  if (DAT_ram_00a57583 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Gameplay_Fresco_View_Groups_FrescoListElement_FrescoClickedHandler__);
+		    Mono_Security_ASN1__get_Item(&UnityEngine_Events_UnityAction_TypeInfo);
+		    DAT_ram_00a57583 = '\x01';
+		  }
+		  param1_01 = *(undefined4 *)(*(int *)(param1 + 0x10) + 0xb4);
+		  param1_00 = unnamed_function_1417(UnityEngine_Events_UnityAction_TypeInfo);
+		  Utils_ObjectUtils__IsNotNull
+		            (param1_00,param1,
+		             Method_Gameplay_Fresco_View_Groups_FrescoListElement_FrescoClickedHandler__,0);
+		  Gameplay_Boss_View_CaptainTab_BossInfoView__add_AttackButtonClickEvent(param1_01,param1_00,0);
+		  return;
+		}
+		*/
+
 }

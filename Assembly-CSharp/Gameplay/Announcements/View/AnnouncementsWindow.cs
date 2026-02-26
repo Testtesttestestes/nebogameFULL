@@ -42,6 +42,53 @@ namespace Gameplay.Announcements.View
 		[Address(RVA = "0xA2E9", Offset = "0xA2E9", VA = "0xA2E9", Slot = "19")]
 		protected override void OnClose()
 		{
+		/* --- GHIDRA: OnClose ---
+		void Gameplay_Announcements_View_AnnouncementsWindow__OnClose
+		               (int param1,int param2,undefined4 param3)
+		
+		{
+		  undefined4 param2_00;
+		  undefined4 param3_00;
+		  int *param1_00;
+		  undefined4 param4;
+		  int iVar1;
+		  
+		  if (DAT_ram_00a58824 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Gameplay_Announcements_Control_AnnouncementsViewMediator_TypeInfo)
+		    ;
+		    DAT_ram_00a58824 = '\x01';
+		  }
+		  iVar1 = **(int **)(param1 + 0x34);
+		  (**(code **)((ulonglong)*(uint *)(iVar1 + 0x138) * 4))
+		            (*(int **)(param1 + 0x34),*(undefined4 *)(param2 + 0x1c),*(undefined4 *)(iVar1 + 0x13c))
+		  ;
+		  iVar1 = **(int **)(param2 + 0x18);
+		  param2_00 = (**(code **)((ulonglong)*(uint *)(iVar1 + 0x100) * 4))
+		                        (*(int **)(param2 + 0x18),*(undefined4 *)(iVar1 + 0x104));
+		  iVar1 = **(int **)(param2 + 0x18);
+		  param3_00 = (**(code **)((ulonglong)*(uint *)(iVar1 + 0x110) * 4))
+		                        (*(int **)(param2 + 0x18),*(undefined4 *)(iVar1 + 0x114));
+		  param4 = *(undefined4 *)(param2 + 0x18);
+		  param1_00 = (int *)unnamed_function_1417
+		                               (Gameplay_Announcements_Control_AnnouncementsViewMediator_TypeInfo);
+		  if (DAT_ram_00a58839 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_MVC_AbstractViewMediator_AnnouncementsModel__AnnouncementsEvents__AnnouncementsController__AnnouncementsView___ctor__
+		              );
+		    DAT_ram_00a58839 = '\x01';
+		  }
+		  Gameplay_Combat_TeamCombat_View_AbstractTeamCombatView_object___get_HideInstantElements
+		            (param1_00,param2_00,param3_00,param4,
+		             Method_MVC_AbstractViewMediator_AnnouncementsModel__AnnouncementsEvents__AnnouncementsController__AnnouncementsView___ctor__
+		            );
+		  (**(code **)((ulonglong)*(uint *)(*param1_00 + 0x160) * 4))
+		            (param1_00,*(undefined4 *)(param1 + 0x34),*(undefined4 *)(*param1_00 + 0x164));
+		  *(int **)(param1 + 0x38) = param1_00;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06005549 RID: 21833 RVA: 0x00002050 File Offset: 0x00000250
@@ -49,6 +96,22 @@ namespace Gameplay.Announcements.View
 		[Address(RVA = "0xA2EA", Offset = "0xA2EA", VA = "0xA2EA", Slot = "22")]
 		protected override void OnShow(AnnouncementsWindow.AnnouncementsWindowArgs args)
 		{
+		/* --- GHIDRA: OnShow ---
+		void Gameplay_Announcements_View_AnnouncementsWindow__OnShow(undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a58825 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UI_Windows_BaseWindow_AnnouncementsWindow_AnnouncementsWindowArgs___ctor__);
+		    DAT_ram_00a58825 = '\x01';
+		  }
+		  UnityEngine_UIElements_BaseUxmlFactory___Il2CppFullySharedGenericType__object___get_uxmlType
+		            (param1,
+		             Method_UI_Windows_BaseWindow_AnnouncementsWindow_AnnouncementsWindowArgs___ctor__);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600554A RID: 21834 RVA: 0x00002050 File Offset: 0x00000250
@@ -56,6 +119,19 @@ namespace Gameplay.Announcements.View
 		[Address(RVA = "0xA2EB", Offset = "0xA2EB", VA = "0xA2EB")]
 		public AnnouncementsWindow()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_Announcements_View_AnnouncementsWindow___ctor
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  UI_Windows_BaseWindowArgs__Dispose(param1,0);
+		  *(undefined4 *)(param1 + 0x1c) = param3;
+		  *(undefined4 *)(param1 + 0x18) = param2;
+		  *(undefined1 *)(param1 + 0xc) = 0;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x04002E2E RID: 11822
@@ -95,4 +171,21 @@ namespace Gameplay.Announcements.View
 			public readonly AnnouncementsData Notification;
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_IsFullscreenWindow ---
+		void Gameplay_Announcements_View_AnnouncementsWindow__get_IsFullscreenWindow
+		               (int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  
+		  iVar1 = **(int **)(param1 + 0x38);
+		  (**(code **)((ulonglong)*(uint *)(iVar1 + 0x130) * 4))
+		            (*(int **)(param1 + 0x38),*(undefined4 *)(iVar1 + 0x134));
+		  return;
+		}
+		*/
+
 }

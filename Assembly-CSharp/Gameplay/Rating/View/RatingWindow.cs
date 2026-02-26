@@ -233,6 +233,35 @@ namespace Gameplay.Rating.View
 		[Address(RVA = "0x731E", Offset = "0x731E", VA = "0x731E", Slot = "22")]
 		protected override void OnShow(RatingWindow.RatingWindowArgs args)
 		{
+		/* --- GHIDRA: OnShow ---
+		void Gameplay_Rating_View_RatingWindow__OnShow(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  
+		  if (DAT_ram_00a58036 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UI_Windows_ClosableBaseWindow_RatingWindow_RatingWindowArgs__OnClose__);
+		    DAT_ram_00a58036 = '\x01';
+		  }
+		  UI_Windows_ClosableBaseWindow_object___OnClickBack
+		            (param1,Method_UI_Windows_ClosableBaseWindow_RatingWindow_RatingWindowArgs__OnClose__);
+		  MVC_AbstractController__Run(*(undefined4 *)(param1 + 0x80),0);
+		  iVar1 = **(int **)(param1 + 0x84);
+		  (**(code **)((ulonglong)*(uint *)(iVar1 + 0x130) * 4))
+		            (*(int **)(param1 + 0x84),*(undefined4 *)(iVar1 + 0x134));
+		  iVar1 = **(int **)(param1 + 0x80);
+		  (**(code **)((ulonglong)*(uint *)(iVar1 + 0xe8) * 4))
+		            (*(int **)(param1 + 0x80),*(undefined4 *)(iVar1 + 0xec));
+		  iVar1 = **(int **)(param1 + 0x7c);
+		  (**(code **)((ulonglong)*(uint *)(iVar1 + 0xe8) * 4))
+		            (*(int **)(param1 + 0x7c),*(undefined4 *)(iVar1 + 0xec));
+		  *(undefined4 *)(param1 + 0x84) = 0;
+		  *(undefined8 *)(param1 + 0x7c) = 0;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x060021C0 RID: 8640 RVA: 0x00002050 File Offset: 0x00000250
@@ -240,6 +269,79 @@ namespace Gameplay.Rating.View
 		[Address(RVA = "0x731F", Offset = "0x731F", VA = "0x731F", Slot = "19")]
 		protected override void OnClose()
 		{
+		/* --- GHIDRA: OnClose ---
+		void Gameplay_Rating_View_RatingWindow__OnClose(int param1,undefined4 param2)
+		
+		{
+		  uint uVar1;
+		  undefined4 uVar2;
+		  uint *puVar3;
+		  undefined4 uVar4;
+		  int *piVar5;
+		  int iVar6;
+		  
+		  if (DAT_ram_00a58037 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_Gameplay_IGame_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Gameplay_Rating_Control_RatingController_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Gameplay_Rating_Events_RatingEvents_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Gameplay_Rating_Model_RatingModel_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Gameplay_Rating_Control_RatingViewMediator_TypeInfo);
+		    DAT_ram_00a58037 = '\x01';
+		  }
+		  uVar2 = unnamed_function_1417(Gameplay_Rating_Events_RatingEvents_TypeInfo);
+		  *(undefined4 *)(param1 + 0x78) = uVar2;
+		  if (DAT_ram_00a6456f == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_Gameplay_Game_TypeInfo);
+		    DAT_ram_00a6456f = '\x01';
+		  }
+		  uVar1 = 0;
+		  piVar5 = (int *)**(undefined4 **)(Core_Gameplay_Game_TypeInfo + 0x5c);
+		  iVar6 = *piVar5;
+		  if (*(ushort *)(iVar6 + 0xb6) != 0) {
+		    do {
+		      if (Core_Gameplay_IGame_TypeInfo == *(int *)(*(int *)(iVar6 + 0x58) + uVar1 * 8)) {
+		        puVar3 = (uint *)(*(int *)(*(int *)(iVar6 + 0x58) + uVar1 * 8 + 4) * 8 + iVar6 + 0x140);
+		        goto code_r0x80e96ae3;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar6 + 0xb6) != uVar1);
+		  }
+		  puVar3 = (uint *)func_ii_1080(piVar5,Core_Gameplay_IGame_TypeInfo,0x10);
+		code_r0x80e96ae3:
+		  uVar2 = (**(code **)((ulonglong)*puVar3 * 4))(piVar5,puVar3[1]);
+		  uVar2 = func_ii_7112(uVar2,0);
+		  uVar4 = unnamed_function_1417(Gameplay_Rating_Model_RatingModel_TypeInfo);
+		  Gameplay_Rating_Model_RatingModel__get_CultsSubFilters(uVar4,uVar2,uVar2);
+		  *(undefined4 *)(param1 + 0x7c) = uVar4;
+		  uVar2 = *(undefined4 *)(param1 + 0x78);
+		  iVar6 = unnamed_function_1417(Gameplay_Rating_Control_RatingController_TypeInfo);
+		  if (DAT_ram_00a58090 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_MVC_AbstractController_RatingModel__RatingEvents___ctor__);
+		    Mono_Security_ASN1__get_Item(&Method_Core_Net_ServiceFactory_GetService_RatingService___);
+		    Mono_Security_ASN1__get_Item(&Core_Net_ServiceFactory_TypeInfo);
+		    DAT_ram_00a58090 = '\x01';
+		  }
+		  Gameplay_Combat_AbstractCombat_object__object__object__object__object___set_User
+		            (iVar6,uVar4,uVar2,Method_MVC_AbstractController_RatingModel__RatingEvents___ctor__);
+		  if (*(int *)(Core_Net_ServiceFactory_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Core_Net_ServiceFactory_TypeInfo);
+		  }
+		  uVar2 = Core_Gameplay_Managers_LoggedManager__RequestLogin
+		                    (Method_Core_Net_ServiceFactory_GetService_RatingService___);
+		  *(undefined4 *)(iVar6 + 0x18) = uVar2;
+		  *(int *)(param1 + 0x80) = iVar6;
+		  uVar2 = *(undefined4 *)(param1 + 0x7c);
+		  uVar4 = *(undefined4 *)(param1 + 0x78);
+		  piVar5 = (int *)unnamed_function_1417(Gameplay_Rating_Control_RatingViewMediator_TypeInfo);
+		  Gameplay_Rating_Control_RatingViewMediator__Dispose(piVar5,uVar2,uVar4,iVar6,iVar6);
+		  (**(code **)((ulonglong)*(uint *)(*piVar5 + 0x160) * 4))
+		            (piVar5,param1,*(undefined4 *)(*piVar5 + 0x164));
+		  *(int **)(param1 + 0x84) = piVar5;
+		  MVC_AbstractController__Dispose(*(undefined4 *)(param1 + 0x80),0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x060021C1 RID: 8641 RVA: 0x00002050 File Offset: 0x00000250
@@ -247,6 +349,28 @@ namespace Gameplay.Rating.View
 		[Address(RVA = "0x7320", Offset = "0x7320", VA = "0x7320")]
 		private void SetupMVC()
 		{
+		/* --- GHIDRA: SetupMVC ---
+		void Gameplay_Rating_View_RatingWindow__SetupMVC(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  
+		  MVC_AbstractController__Run(*(undefined4 *)(param1 + 0x80),0);
+		  iVar1 = **(int **)(param1 + 0x84);
+		  (**(code **)((ulonglong)*(uint *)(iVar1 + 0x130) * 4))
+		            (*(int **)(param1 + 0x84),*(undefined4 *)(iVar1 + 0x134));
+		  iVar1 = **(int **)(param1 + 0x80);
+		  (**(code **)((ulonglong)*(uint *)(iVar1 + 0xe8) * 4))
+		            (*(int **)(param1 + 0x80),*(undefined4 *)(iVar1 + 0xec));
+		  iVar1 = **(int **)(param1 + 0x7c);
+		  (**(code **)((ulonglong)*(uint *)(iVar1 + 0xe8) * 4))
+		            (*(int **)(param1 + 0x7c),*(undefined4 *)(iVar1 + 0xec));
+		  *(undefined4 *)(param1 + 0x84) = 0;
+		  *(undefined8 *)(param1 + 0x7c) = 0;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x060021C2 RID: 8642 RVA: 0x00002050 File Offset: 0x00000250
@@ -254,6 +378,21 @@ namespace Gameplay.Rating.View
 		[Address(RVA = "0x7321", Offset = "0x7321", VA = "0x7321")]
 		private void DestroyMVC()
 		{
+		/* --- GHIDRA: DestroyMVC ---
+		void Gameplay_Rating_View_RatingWindow__DestroyMVC(undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a58038 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UI_Windows_ClosableBaseWindow_RatingWindow_RatingWindowArgs___ctor__);
+		    DAT_ram_00a58038 = '\x01';
+		  }
+		  UI_MonoBehaviourWithStates_ClientStateChangedDelegate___Il2CppFullySharedGenericStructType___Invoke
+		            (param1,Method_UI_Windows_ClosableBaseWindow_RatingWindow_RatingWindowArgs___ctor__);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x060021C3 RID: 8643 RVA: 0x00002050 File Offset: 0x00000250
@@ -261,6 +400,16 @@ namespace Gameplay.Rating.View
 		[Address(RVA = "0x7322", Offset = "0x7322", VA = "0x7322")]
 		public RatingWindow()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_Rating_View_RatingWindow___ctor(int param1,undefined4 param2)
+		
+		{
+		  *(undefined4 *)(param1 + 0x18) = 1;
+		  UI_Windows_BaseWindowArgs__Dispose(param1,0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0400127A RID: 4730
@@ -399,4 +548,62 @@ namespace Gameplay.Rating.View
 			public uint KindId;
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_RatingRewards ---
+		void Gameplay_Rating_View_RatingWindow__get_RatingRewards
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a58035 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UI_Windows_ClosableBaseWindow_RatingWindow_RatingWindowArgs__OnShow__);
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Com_TheFallenGames_OSA_Core_OSA_BaseParamsWithPrefab__CultInRatingsViewsHolder__Init__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Com_TheFallenGames_OSA_Core_OSA_BaseParamsWithPrefab__UserInRatingsViewsHolder__Init__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Com_TheFallenGames_OSA_Core_OSA_BaseParamsWithPrefab__ClansInRatingsViewsHolder__Init__
+		              );
+		    DAT_ram_00a58035 = '\x01';
+		  }
+		  Com_TheFallenGames_OSA_Core_OSA_object__object___GetVirtualAbstractNormalizedScrollPosition
+		            (*(undefined4 *)(param1 + 0x58),
+		             Method_Com_TheFallenGames_OSA_Core_OSA_BaseParamsWithPrefab__UserInRatingsViewsHolder__Init__
+		            );
+		  Com_TheFallenGames_OSA_Core_OSA_object__object___GetVirtualAbstractNormalizedScrollPosition
+		            (*(undefined4 *)(param1 + 0x5c),
+		             Method_Com_TheFallenGames_OSA_Core_OSA_BaseParamsWithPrefab__ClansInRatingsViewsHolder__Init__
+		            );
+		  Com_TheFallenGames_OSA_Core_OSA_object__object___GetVirtualAbstractNormalizedScrollPosition
+		            (*(undefined4 *)(param1 + 0x60),
+		             Method_Com_TheFallenGames_OSA_Core_OSA_BaseParamsWithPrefab__CultInRatingsViewsHolder__Init__
+		            );
+		  uVar1 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_uint__object___MoveNext
+		                    (*(undefined4 *)(param1 + 0x58),0);
+		  Com_TheFallenGames_OSA_CustomAdapters_TableView_Tuple_Basic_BasicTupleValueViewsHolder__UpdateAsText
+		            (uVar1,0,0);
+		  uVar1 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_uint__object___MoveNext
+		                    (*(undefined4 *)(param1 + 0x5c),0);
+		  Com_TheFallenGames_OSA_CustomAdapters_TableView_Tuple_Basic_BasicTupleValueViewsHolder__UpdateAsText
+		            (uVar1,0,0);
+		  uVar1 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_uint__object___MoveNext
+		                    (*(undefined4 *)(param1 + 0x60),0);
+		  Com_TheFallenGames_OSA_CustomAdapters_TableView_Tuple_Basic_BasicTupleValueViewsHolder__UpdateAsText
+		            (uVar1,0,0);
+		  func_ii_7769(param1,param2,
+		               Method_UI_Windows_ClosableBaseWindow_RatingWindow_RatingWindowArgs__OnShow__);
+		  Gameplay_Rating_View_RatingWindow__OnClose(param1,param1);
+		  return;
+		}
+		*/
+
 }

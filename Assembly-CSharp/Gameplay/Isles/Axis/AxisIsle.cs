@@ -50,4 +50,27 @@ namespace Gameplay.Isles.Axis
 
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_LocationType ---
+		undefined4
+		Gameplay_Isles_Axis_AxisIsle__get_LocationType
+		          (undefined4 param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  undefined4 uVar1;
+		  undefined4 param2_00;
+		  
+		  uVar1 = unnamed_function_2232(&System_NotImplementedException_TypeInfo);
+		  uVar1 = unnamed_function_1417(uVar1);
+		  UnityEngine_InputSystem_InputActionRebindingExtensions__ApplyBindingOverride(uVar1,0);
+		  param2_00 = unnamed_function_2232(&Method_Gameplay_Isles_Axis_AxisIsle_TryOpenBuildingByType__);
+		  func_ii_1050(uVar1,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
 }

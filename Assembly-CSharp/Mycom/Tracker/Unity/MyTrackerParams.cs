@@ -393,6 +393,23 @@ namespace Mycom.Tracker.Unity
 		[Address(RVA = "0xBEAC", Offset = "0xBEAC", VA = "0xBEAC")]
 		internal MyTrackerParams(ITrackerParams trackerParams)
 		{
+		/* --- GHIDRA: .ctor ---
+		void Mycom_Tracker_Unity_MyTrackerParams___ctor(undefined4 param1)
+		
+		{
+		  if (DAT_ram_00a5970a == '\0') {
+		    Mono_Security_ASN1__get_Item(&Mycom_Tracker_Unity_SDKVersion_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_1772);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_1970);
+		    DAT_ram_00a5970a = '\x01';
+		  }
+		  **(undefined4 **)(Mycom_Tracker_Unity_SDKVersion_TypeInfo + 0x5c) = StringLiteral_1970;
+		  *(undefined4 *)(*(int *)(Mycom_Tracker_Unity_SDKVersion_TypeInfo + 0x5c) + 4) = StringLiteral_1772
+		  ;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x04003D3A RID: 15674
@@ -400,4 +417,1508 @@ namespace Mycom.Tracker.Unity
 		[FieldOffset(Offset = "0x8")]
 		private readonly ITrackerParams _trackerParams;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_Age ---
+		void Mycom_Tracker_Unity_MyTrackerParams__get_Age(int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  uint uVar1;
+		  uint *puVar2;
+		  int *param1_00;
+		  int iVar3;
+		  
+		  if (DAT_ram_00a596e3 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo);
+		    DAT_ram_00a596e3 = '\x01';
+		  }
+		  param1_00 = *(int **)(param1 + 8);
+		  iVar3 = *param1_00;
+		  if (*(ushort *)(iVar3 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo ==
+		          *(int *)(*(int *)(iVar3 + 0x58) + uVar1 * 8)) {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar3 + 0x58) + uVar1 * 8 + 4) * 8 + iVar3 + 200);
+		        goto code_r0x8104f729;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar3 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(param1_00,
+		                                Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo,1);
+		code_r0x8104f729:
+		  (**(code **)((ulonglong)*puVar2 * 4))(param1_00,param2,puVar2[1]);
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_Age ---
+		undefined4 Mycom_Tracker_Unity_MyTrackerParams__set_Age(int param1,undefined4 param2)
+		
+		{
+		  uint uVar1;
+		  uint *puVar2;
+		  undefined4 uVar3;
+		  int *param1_00;
+		  int iVar4;
+		  
+		  if (DAT_ram_00a596e4 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_System_Linq_Enumerable_FirstOrDefault_string___);
+		    Mono_Security_ASN1__get_Item(&Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo);
+		    DAT_ram_00a596e4 = '\x01';
+		  }
+		  param1_00 = *(int **)(param1 + 8);
+		  iVar4 = *param1_00;
+		  if (*(ushort *)(iVar4 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo ==
+		          *(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8)) {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8 + 4) * 8 + iVar4 + 0xd0);
+		        goto code_r0x8104f7da;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar4 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(param1_00,
+		                                Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo,2);
+		code_r0x8104f7da:
+		  iVar4 = (**(code **)((ulonglong)*puVar2 * 4))(param1_00,puVar2[1]);
+		  if (iVar4 == 0) {
+		    return 0;
+		  }
+		  uVar3 = UnityEngine_Purchasing_Utils_ProductDetailsConverter__BuildProductDescription
+		                    (iVar4,Method_System_Linq_Enumerable_FirstOrDefault_string___);
+		  return uVar3;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_CustomUserId ---
+		void Mycom_Tracker_Unity_MyTrackerParams__get_CustomUserId(int param1,int param2,undefined4 param3)
+		
+		{
+		  uint uVar1;
+		  int iVar2;
+		  uint *puVar3;
+		  int *param1_00;
+		  int iVar4;
+		  
+		  iVar2 = 0;
+		  if (DAT_ram_00a596e5 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&string___TypeInfo);
+		    DAT_ram_00a596e5 = '\x01';
+		  }
+		  param1_00 = *(int **)(param1 + 8);
+		  if (param2 != 0) {
+		    iVar2 = Mono_Security_ASN1Convert__ToOid(string___TypeInfo,1);
+		    *(int *)(iVar2 + 0x10) = param2;
+		  }
+		  uVar1 = 0;
+		  iVar4 = *param1_00;
+		  if (*(ushort *)(iVar4 + 0xb6) != 0) {
+		    do {
+		      if (Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo ==
+		          *(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8)) {
+		        puVar3 = (uint *)(*(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8 + 4) * 8 + iVar4 + 0xd8);
+		        goto code_r0x8104f8bf;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar4 + 0xb6) != uVar1);
+		  }
+		  puVar3 = (uint *)func_ii_1080(param1_00,
+		                                Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo,3);
+		code_r0x8104f8bf:
+		  (**(code **)((ulonglong)*puVar3 * 4))(param1_00,iVar2,puVar3[1]);
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_CustomUserId ---
+		undefined4 Mycom_Tracker_Unity_MyTrackerParams__set_CustomUserId(int param1,undefined4 param2)
+		
+		{
+		  uint uVar1;
+		  uint *puVar2;
+		  undefined4 uVar3;
+		  int *param1_00;
+		  int iVar4;
+		  
+		  if (DAT_ram_00a596e6 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo);
+		    DAT_ram_00a596e6 = '\x01';
+		  }
+		  param1_00 = *(int **)(param1 + 8);
+		  iVar4 = *param1_00;
+		  if (*(ushort *)(iVar4 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo ==
+		          *(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8)) {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8 + 4) * 8 + iVar4 + 0xd0);
+		        goto code_r0x8104f962;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar4 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(param1_00,
+		                                Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo,2);
+		code_r0x8104f962:
+		  uVar3 = (**(code **)((ulonglong)*puVar2 * 4))(param1_00,puVar2[1]);
+		  return uVar3;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_CustomUserIds ---
+		void Mycom_Tracker_Unity_MyTrackerParams__get_CustomUserIds
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  uint uVar1;
+		  uint *puVar2;
+		  int *param1_00;
+		  int iVar3;
+		  
+		  if (DAT_ram_00a596e7 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo);
+		    DAT_ram_00a596e7 = '\x01';
+		  }
+		  param1_00 = *(int **)(param1 + 8);
+		  iVar3 = *param1_00;
+		  if (*(ushort *)(iVar3 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo ==
+		          *(int *)(*(int *)(iVar3 + 0x58) + uVar1 * 8)) {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar3 + 0x58) + uVar1 * 8 + 4) * 8 + iVar3 + 0xd8);
+		        goto code_r0x8104fa09;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar3 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(param1_00,
+		                                Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo,3);
+		code_r0x8104fa09:
+		  (**(code **)((ulonglong)*puVar2 * 4))(param1_00,param2,puVar2[1]);
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_CustomUserIds ---
+		undefined4 Mycom_Tracker_Unity_MyTrackerParams__set_CustomUserIds(int param1,undefined4 param2)
+		
+		{
+		  uint uVar1;
+		  uint *puVar2;
+		  undefined4 uVar3;
+		  int *param1_00;
+		  int iVar4;
+		  
+		  if (DAT_ram_00a596e8 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_System_Linq_Enumerable_FirstOrDefault_string___);
+		    Mono_Security_ASN1__get_Item(&Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo);
+		    DAT_ram_00a596e8 = '\x01';
+		  }
+		  param1_00 = *(int **)(param1 + 8);
+		  iVar4 = *param1_00;
+		  if (*(ushort *)(iVar4 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo ==
+		          *(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8)) {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8 + 4) * 8 + iVar4 + 0xe0);
+		        goto code_r0x8104faba;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar4 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(param1_00,
+		                                Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo,4);
+		code_r0x8104faba:
+		  iVar4 = (**(code **)((ulonglong)*puVar2 * 4))(param1_00,puVar2[1]);
+		  if (iVar4 == 0) {
+		    return 0;
+		  }
+		  uVar3 = UnityEngine_Purchasing_Utils_ProductDetailsConverter__BuildProductDescription
+		                    (iVar4,Method_System_Linq_Enumerable_FirstOrDefault_string___);
+		  return uVar3;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_Email ---
+		void Mycom_Tracker_Unity_MyTrackerParams__get_Email(int param1,int param2,undefined4 param3)
+		
+		{
+		  uint uVar1;
+		  int iVar2;
+		  uint *puVar3;
+		  int *param1_00;
+		  int iVar4;
+		  
+		  iVar2 = 0;
+		  if (DAT_ram_00a596e9 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&string___TypeInfo);
+		    DAT_ram_00a596e9 = '\x01';
+		  }
+		  param1_00 = *(int **)(param1 + 8);
+		  if (param2 != 0) {
+		    iVar2 = Mono_Security_ASN1Convert__ToOid(string___TypeInfo,1);
+		    *(int *)(iVar2 + 0x10) = param2;
+		  }
+		  uVar1 = 0;
+		  iVar4 = *param1_00;
+		  if (*(ushort *)(iVar4 + 0xb6) != 0) {
+		    do {
+		      if (Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo ==
+		          *(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8)) {
+		        puVar3 = (uint *)(*(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8 + 4) * 8 + iVar4 + 0xe8);
+		        goto code_r0x8104fb9f;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar4 + 0xb6) != uVar1);
+		  }
+		  puVar3 = (uint *)func_ii_1080(param1_00,
+		                                Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo,5);
+		code_r0x8104fb9f:
+		  (**(code **)((ulonglong)*puVar3 * 4))(param1_00,iVar2,puVar3[1]);
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_Email ---
+		undefined4 Mycom_Tracker_Unity_MyTrackerParams__set_Email(int param1,undefined4 param2)
+		
+		{
+		  uint uVar1;
+		  uint *puVar2;
+		  undefined4 uVar3;
+		  int *param1_00;
+		  int iVar4;
+		  
+		  if (DAT_ram_00a596ea == '\0') {
+		    Mono_Security_ASN1__get_Item(&Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo);
+		    DAT_ram_00a596ea = '\x01';
+		  }
+		  param1_00 = *(int **)(param1 + 8);
+		  iVar4 = *param1_00;
+		  if (*(ushort *)(iVar4 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo ==
+		          *(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8)) {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8 + 4) * 8 + iVar4 + 0xe0);
+		        goto code_r0x8104fc42;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar4 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(param1_00,
+		                                Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo,4);
+		code_r0x8104fc42:
+		  uVar3 = (**(code **)((ulonglong)*puVar2 * 4))(param1_00,puVar2[1]);
+		  return uVar3;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_Emails ---
+		void Mycom_Tracker_Unity_MyTrackerParams__get_Emails(int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  uint uVar1;
+		  uint *puVar2;
+		  int *param1_00;
+		  int iVar3;
+		  
+		  if (DAT_ram_00a596eb == '\0') {
+		    Mono_Security_ASN1__get_Item(&Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo);
+		    DAT_ram_00a596eb = '\x01';
+		  }
+		  param1_00 = *(int **)(param1 + 8);
+		  iVar3 = *param1_00;
+		  if (*(ushort *)(iVar3 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo ==
+		          *(int *)(*(int *)(iVar3 + 0x58) + uVar1 * 8)) {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar3 + 0x58) + uVar1 * 8 + 4) * 8 + iVar3 + 0xe8);
+		        goto code_r0x8104fce9;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar3 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(param1_00,
+		                                Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo,5);
+		code_r0x8104fce9:
+		  (**(code **)((ulonglong)*puVar2 * 4))(param1_00,param2,puVar2[1]);
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_Emails ---
+		undefined4 Mycom_Tracker_Unity_MyTrackerParams__set_Emails(int param1,undefined4 param2)
+		
+		{
+		  uint uVar1;
+		  uint *puVar2;
+		  undefined4 uVar3;
+		  int *param1_00;
+		  int iVar4;
+		  
+		  if (DAT_ram_00a596ec == '\0') {
+		    Mono_Security_ASN1__get_Item(&Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo);
+		    DAT_ram_00a596ec = '\x01';
+		  }
+		  param1_00 = *(int **)(param1 + 8);
+		  iVar4 = *param1_00;
+		  if (*(ushort *)(iVar4 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo ==
+		          *(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8)) {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8 + 4) * 8 + iVar4 + 0xf0);
+		        goto code_r0x8104fd92;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar4 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(param1_00,
+		                                Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo,6);
+		code_r0x8104fd92:
+		  uVar3 = (**(code **)((ulonglong)*puVar2 * 4))(param1_00,puVar2[1]);
+		  return uVar3;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_Gender ---
+		void Mycom_Tracker_Unity_MyTrackerParams__get_Gender(int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  uint uVar1;
+		  uint *puVar2;
+		  int *param1_00;
+		  int iVar3;
+		  
+		  if (DAT_ram_00a596ed == '\0') {
+		    Mono_Security_ASN1__get_Item(&Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo);
+		    DAT_ram_00a596ed = '\x01';
+		  }
+		  param1_00 = *(int **)(param1 + 8);
+		  iVar3 = *param1_00;
+		  if (*(ushort *)(iVar3 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo ==
+		          *(int *)(*(int *)(iVar3 + 0x58) + uVar1 * 8)) {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar3 + 0x58) + uVar1 * 8 + 4) * 8 + iVar3 + 0xf8);
+		        goto code_r0x8104fe39;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar3 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(param1_00,
+		                                Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo,7);
+		code_r0x8104fe39:
+		  (**(code **)((ulonglong)*puVar2 * 4))(param1_00,param2,puVar2[1]);
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_Gender ---
+		undefined4 Mycom_Tracker_Unity_MyTrackerParams__set_Gender(int param1,undefined4 param2)
+		
+		{
+		  uint uVar1;
+		  uint *puVar2;
+		  undefined4 uVar3;
+		  int *param1_00;
+		  int iVar4;
+		  
+		  if (DAT_ram_00a596ee == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_System_Linq_Enumerable_FirstOrDefault_string___);
+		    Mono_Security_ASN1__get_Item(&Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo);
+		    DAT_ram_00a596ee = '\x01';
+		  }
+		  param1_00 = *(int **)(param1 + 8);
+		  iVar4 = *param1_00;
+		  if (*(ushort *)(iVar4 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo ==
+		          *(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8)) {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8 + 4) * 8 + iVar4 + 0x100);
+		        goto code_r0x8104feea;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar4 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(param1_00,
+		                                Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo,8);
+		code_r0x8104feea:
+		  iVar4 = (**(code **)((ulonglong)*puVar2 * 4))(param1_00,puVar2[1]);
+		  if (iVar4 == 0) {
+		    return 0;
+		  }
+		  uVar3 = UnityEngine_Purchasing_Utils_ProductDetailsConverter__BuildProductDescription
+		                    (iVar4,Method_System_Linq_Enumerable_FirstOrDefault_string___);
+		  return uVar3;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_IcqId ---
+		void Mycom_Tracker_Unity_MyTrackerParams__get_IcqId(int param1,int param2,undefined4 param3)
+		
+		{
+		  uint uVar1;
+		  int iVar2;
+		  uint *puVar3;
+		  int *param1_00;
+		  int iVar4;
+		  
+		  iVar2 = 0;
+		  if (DAT_ram_00a596ef == '\0') {
+		    Mono_Security_ASN1__get_Item(&Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&string___TypeInfo);
+		    DAT_ram_00a596ef = '\x01';
+		  }
+		  param1_00 = *(int **)(param1 + 8);
+		  if (param2 != 0) {
+		    iVar2 = Mono_Security_ASN1Convert__ToOid(string___TypeInfo,1);
+		    *(int *)(iVar2 + 0x10) = param2;
+		  }
+		  uVar1 = 0;
+		  iVar4 = *param1_00;
+		  if (*(ushort *)(iVar4 + 0xb6) != 0) {
+		    do {
+		      if (Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo ==
+		          *(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8)) {
+		        puVar3 = (uint *)(*(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8 + 4) * 8 + iVar4 + 0x108);
+		        goto code_r0x8104ffcf;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar4 + 0xb6) != uVar1);
+		  }
+		  puVar3 = (uint *)func_ii_1080(param1_00,
+		                                Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo,9);
+		code_r0x8104ffcf:
+		  (**(code **)((ulonglong)*puVar3 * 4))(param1_00,iVar2,puVar3[1]);
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_IcqId ---
+		undefined4 Mycom_Tracker_Unity_MyTrackerParams__set_IcqId(int param1,undefined4 param2)
+		
+		{
+		  uint uVar1;
+		  uint *puVar2;
+		  undefined4 uVar3;
+		  int *param1_00;
+		  int iVar4;
+		  
+		  if (DAT_ram_00a596f0 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo);
+		    DAT_ram_00a596f0 = '\x01';
+		  }
+		  param1_00 = *(int **)(param1 + 8);
+		  iVar4 = *param1_00;
+		  if (*(ushort *)(iVar4 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo ==
+		          *(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8)) {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8 + 4) * 8 + iVar4 + 0x100);
+		        goto code_r0x81050072;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar4 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(param1_00,
+		                                Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo,8);
+		code_r0x81050072:
+		  uVar3 = (**(code **)((ulonglong)*puVar2 * 4))(param1_00,puVar2[1]);
+		  return uVar3;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_IcqIds ---
+		void Mycom_Tracker_Unity_MyTrackerParams__get_IcqIds(int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  uint uVar1;
+		  uint *puVar2;
+		  int *param1_00;
+		  int iVar3;
+		  
+		  if (DAT_ram_00a596f1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo);
+		    DAT_ram_00a596f1 = '\x01';
+		  }
+		  param1_00 = *(int **)(param1 + 8);
+		  iVar3 = *param1_00;
+		  if (*(ushort *)(iVar3 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo ==
+		          *(int *)(*(int *)(iVar3 + 0x58) + uVar1 * 8)) {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar3 + 0x58) + uVar1 * 8 + 4) * 8 + iVar3 + 0x108);
+		        goto code_r0x81050119;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar3 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(param1_00,
+		                                Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo,9);
+		code_r0x81050119:
+		  (**(code **)((ulonglong)*puVar2 * 4))(param1_00,param2,puVar2[1]);
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_IcqIds ---
+		undefined4 Mycom_Tracker_Unity_MyTrackerParams__set_IcqIds(int param1,undefined4 param2)
+		
+		{
+		  uint uVar1;
+		  uint *puVar2;
+		  undefined4 uVar3;
+		  int *param1_00;
+		  int iVar4;
+		  
+		  if (DAT_ram_00a596f2 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo);
+		    DAT_ram_00a596f2 = '\x01';
+		  }
+		  param1_00 = *(int **)(param1 + 8);
+		  iVar4 = *param1_00;
+		  if (*(ushort *)(iVar4 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo ==
+		          *(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8)) {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8 + 4) * 8 + iVar4 + 0x110);
+		        goto code_r0x810501c2;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar4 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(param1_00,
+		                                Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo,10);
+		code_r0x810501c2:
+		  uVar3 = (**(code **)((ulonglong)*puVar2 * 4))(param1_00,puVar2[1]);
+		  return uVar3;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_Lang ---
+		void Mycom_Tracker_Unity_MyTrackerParams__get_Lang(int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  uint uVar1;
+		  uint *puVar2;
+		  int *param1_00;
+		  int iVar3;
+		  
+		  if (DAT_ram_00a596f3 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo);
+		    DAT_ram_00a596f3 = '\x01';
+		  }
+		  param1_00 = *(int **)(param1 + 8);
+		  iVar3 = *param1_00;
+		  if (*(ushort *)(iVar3 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo ==
+		          *(int *)(*(int *)(iVar3 + 0x58) + uVar1 * 8)) {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar3 + 0x58) + uVar1 * 8 + 4) * 8 + iVar3 + 0x118);
+		        goto code_r0x81050269;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar3 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(param1_00,
+		                                Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo,0xb)
+		  ;
+		code_r0x81050269:
+		  (**(code **)((ulonglong)*puVar2 * 4))(param1_00,param2,puVar2[1]);
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_Lang ---
+		undefined4 Mycom_Tracker_Unity_MyTrackerParams__set_Lang(int param1,undefined4 param2)
+		
+		{
+		  uint uVar1;
+		  uint *puVar2;
+		  undefined4 uVar3;
+		  int *param1_00;
+		  int iVar4;
+		  
+		  if (DAT_ram_00a596f4 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo);
+		    DAT_ram_00a596f4 = '\x01';
+		  }
+		  param1_00 = *(int **)(param1 + 8);
+		  iVar4 = *param1_00;
+		  if (*(ushort *)(iVar4 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo ==
+		          *(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8)) {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8 + 4) * 8 + iVar4 + 0x120);
+		        goto code_r0x81050312;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar4 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(param1_00,
+		                                Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo,0xc)
+		  ;
+		code_r0x81050312:
+		  uVar3 = (**(code **)((ulonglong)*puVar2 * 4))(param1_00,puVar2[1]);
+		  return uVar3;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_MrgsAppId ---
+		void Mycom_Tracker_Unity_MyTrackerParams__get_MrgsAppId
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  uint uVar1;
+		  uint *puVar2;
+		  int *param1_00;
+		  int iVar3;
+		  
+		  if (DAT_ram_00a596f5 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo);
+		    DAT_ram_00a596f5 = '\x01';
+		  }
+		  param1_00 = *(int **)(param1 + 8);
+		  iVar3 = *param1_00;
+		  if (*(ushort *)(iVar3 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo ==
+		          *(int *)(*(int *)(iVar3 + 0x58) + uVar1 * 8)) {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar3 + 0x58) + uVar1 * 8 + 4) * 8 + iVar3 + 0x128);
+		        goto code_r0x810503b9;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar3 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(param1_00,
+		                                Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo,0xd)
+		  ;
+		code_r0x810503b9:
+		  (**(code **)((ulonglong)*puVar2 * 4))(param1_00,param2,puVar2[1]);
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_MrgsAppId ---
+		undefined4 Mycom_Tracker_Unity_MyTrackerParams__set_MrgsAppId(int param1,undefined4 param2)
+		
+		{
+		  uint uVar1;
+		  uint *puVar2;
+		  undefined4 uVar3;
+		  int *param1_00;
+		  int iVar4;
+		  
+		  if (DAT_ram_00a596f6 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo);
+		    DAT_ram_00a596f6 = '\x01';
+		  }
+		  param1_00 = *(int **)(param1 + 8);
+		  iVar4 = *param1_00;
+		  if (*(ushort *)(iVar4 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo ==
+		          *(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8)) {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8 + 4) * 8 + iVar4 + 0x130);
+		        goto code_r0x81050462;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar4 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(param1_00,
+		                                Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo,0xe)
+		  ;
+		code_r0x81050462:
+		  uVar3 = (**(code **)((ulonglong)*puVar2 * 4))(param1_00,puVar2[1]);
+		  return uVar3;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_MrgsId ---
+		void Mycom_Tracker_Unity_MyTrackerParams__get_MrgsId(int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  uint uVar1;
+		  uint *puVar2;
+		  int *param1_00;
+		  int iVar3;
+		  
+		  if (DAT_ram_00a596f7 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo);
+		    DAT_ram_00a596f7 = '\x01';
+		  }
+		  param1_00 = *(int **)(param1 + 8);
+		  iVar3 = *param1_00;
+		  if (*(ushort *)(iVar3 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo ==
+		          *(int *)(*(int *)(iVar3 + 0x58) + uVar1 * 8)) {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar3 + 0x58) + uVar1 * 8 + 4) * 8 + iVar3 + 0x138);
+		        goto code_r0x81050509;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar3 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(param1_00,
+		                                Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo,0xf)
+		  ;
+		code_r0x81050509:
+		  (**(code **)((ulonglong)*puVar2 * 4))(param1_00,param2,puVar2[1]);
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_MrgsId ---
+		undefined4 Mycom_Tracker_Unity_MyTrackerParams__set_MrgsId(int param1,undefined4 param2)
+		
+		{
+		  uint uVar1;
+		  uint *puVar2;
+		  undefined4 uVar3;
+		  int *param1_00;
+		  int iVar4;
+		  
+		  if (DAT_ram_00a596f8 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo);
+		    DAT_ram_00a596f8 = '\x01';
+		  }
+		  param1_00 = *(int **)(param1 + 8);
+		  iVar4 = *param1_00;
+		  if (*(ushort *)(iVar4 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo ==
+		          *(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8)) {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8 + 4) * 8 + iVar4 + 0x140);
+		        goto code_r0x810505b2;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar4 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(param1_00,
+		                                Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo,0x10
+		                               );
+		code_r0x810505b2:
+		  uVar3 = (**(code **)((ulonglong)*puVar2 * 4))(param1_00,puVar2[1]);
+		  return uVar3;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_MrgsUserId ---
+		void Mycom_Tracker_Unity_MyTrackerParams__get_MrgsUserId
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  uint uVar1;
+		  uint *puVar2;
+		  int *param1_00;
+		  int iVar3;
+		  
+		  if (DAT_ram_00a596f9 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo);
+		    DAT_ram_00a596f9 = '\x01';
+		  }
+		  param1_00 = *(int **)(param1 + 8);
+		  iVar3 = *param1_00;
+		  if (*(ushort *)(iVar3 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo ==
+		          *(int *)(*(int *)(iVar3 + 0x58) + uVar1 * 8)) {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar3 + 0x58) + uVar1 * 8 + 4) * 8 + iVar3 + 0x148);
+		        goto code_r0x81050659;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar3 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(param1_00,
+		                                Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo,0x11
+		                               );
+		code_r0x81050659:
+		  (**(code **)((ulonglong)*puVar2 * 4))(param1_00,param2,puVar2[1]);
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_MrgsUserId ---
+		undefined4 Mycom_Tracker_Unity_MyTrackerParams__set_MrgsUserId(int param1,undefined4 param2)
+		
+		{
+		  uint uVar1;
+		  uint *puVar2;
+		  undefined4 uVar3;
+		  int *param1_00;
+		  int iVar4;
+		  
+		  if (DAT_ram_00a596fa == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_System_Linq_Enumerable_FirstOrDefault_string___);
+		    Mono_Security_ASN1__get_Item(&Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo);
+		    DAT_ram_00a596fa = '\x01';
+		  }
+		  param1_00 = *(int **)(param1 + 8);
+		  iVar4 = *param1_00;
+		  if (*(ushort *)(iVar4 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo ==
+		          *(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8)) {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8 + 4) * 8 + iVar4 + 0x150);
+		        goto code_r0x8105070a;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar4 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(param1_00,
+		                                Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo,0x12
+		                               );
+		code_r0x8105070a:
+		  iVar4 = (**(code **)((ulonglong)*puVar2 * 4))(param1_00,puVar2[1]);
+		  if (iVar4 == 0) {
+		    return 0;
+		  }
+		  uVar3 = UnityEngine_Purchasing_Utils_ProductDetailsConverter__BuildProductDescription
+		                    (iVar4,Method_System_Linq_Enumerable_FirstOrDefault_string___);
+		  return uVar3;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_OkId ---
+		void Mycom_Tracker_Unity_MyTrackerParams__get_OkId(int param1,int param2,undefined4 param3)
+		
+		{
+		  uint uVar1;
+		  int iVar2;
+		  uint *puVar3;
+		  int *param1_00;
+		  int iVar4;
+		  
+		  iVar2 = 0;
+		  if (DAT_ram_00a596fb == '\0') {
+		    Mono_Security_ASN1__get_Item(&Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&string___TypeInfo);
+		    DAT_ram_00a596fb = '\x01';
+		  }
+		  param1_00 = *(int **)(param1 + 8);
+		  if (param2 != 0) {
+		    iVar2 = Mono_Security_ASN1Convert__ToOid(string___TypeInfo,1);
+		    *(int *)(iVar2 + 0x10) = param2;
+		  }
+		  uVar1 = 0;
+		  iVar4 = *param1_00;
+		  if (*(ushort *)(iVar4 + 0xb6) != 0) {
+		    do {
+		      if (Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo ==
+		          *(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8)) {
+		        puVar3 = (uint *)(*(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8 + 4) * 8 + iVar4 + 0x158);
+		        goto code_r0x810507ef;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar4 + 0xb6) != uVar1);
+		  }
+		  puVar3 = (uint *)func_ii_1080(param1_00,
+		                                Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo,0x13
+		                               );
+		code_r0x810507ef:
+		  (**(code **)((ulonglong)*puVar3 * 4))(param1_00,iVar2,puVar3[1]);
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_OkId ---
+		undefined4 Mycom_Tracker_Unity_MyTrackerParams__set_OkId(int param1,undefined4 param2)
+		
+		{
+		  uint uVar1;
+		  uint *puVar2;
+		  undefined4 uVar3;
+		  int *param1_00;
+		  int iVar4;
+		  
+		  if (DAT_ram_00a596fc == '\0') {
+		    Mono_Security_ASN1__get_Item(&Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo);
+		    DAT_ram_00a596fc = '\x01';
+		  }
+		  param1_00 = *(int **)(param1 + 8);
+		  iVar4 = *param1_00;
+		  if (*(ushort *)(iVar4 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo ==
+		          *(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8)) {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8 + 4) * 8 + iVar4 + 0x150);
+		        goto code_r0x81050892;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar4 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(param1_00,
+		                                Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo,0x12
+		                               );
+		code_r0x81050892:
+		  uVar3 = (**(code **)((ulonglong)*puVar2 * 4))(param1_00,puVar2[1]);
+		  return uVar3;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_OkIds ---
+		void Mycom_Tracker_Unity_MyTrackerParams__get_OkIds(int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  uint uVar1;
+		  uint *puVar2;
+		  int *param1_00;
+		  int iVar3;
+		  
+		  if (DAT_ram_00a596fd == '\0') {
+		    Mono_Security_ASN1__get_Item(&Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo);
+		    DAT_ram_00a596fd = '\x01';
+		  }
+		  param1_00 = *(int **)(param1 + 8);
+		  iVar3 = *param1_00;
+		  if (*(ushort *)(iVar3 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo ==
+		          *(int *)(*(int *)(iVar3 + 0x58) + uVar1 * 8)) {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar3 + 0x58) + uVar1 * 8 + 4) * 8 + iVar3 + 0x158);
+		        goto code_r0x81050939;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar3 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(param1_00,
+		                                Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo,0x13
+		                               );
+		code_r0x81050939:
+		  (**(code **)((ulonglong)*puVar2 * 4))(param1_00,param2,puVar2[1]);
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_OkIds ---
+		undefined4 Mycom_Tracker_Unity_MyTrackerParams__set_OkIds(int param1,undefined4 param2)
+		
+		{
+		  uint uVar1;
+		  uint *puVar2;
+		  undefined4 uVar3;
+		  int *param1_00;
+		  int iVar4;
+		  
+		  if (DAT_ram_00a596fe == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_System_Linq_Enumerable_FirstOrDefault_string___);
+		    Mono_Security_ASN1__get_Item(&Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo);
+		    DAT_ram_00a596fe = '\x01';
+		  }
+		  param1_00 = *(int **)(param1 + 8);
+		  iVar4 = *param1_00;
+		  if (*(ushort *)(iVar4 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo ==
+		          *(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8)) {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8 + 4) * 8 + iVar4 + 0x160);
+		        goto code_r0x810509ea;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar4 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(param1_00,
+		                                Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo,0x14
+		                               );
+		code_r0x810509ea:
+		  iVar4 = (**(code **)((ulonglong)*puVar2 * 4))(param1_00,puVar2[1]);
+		  if (iVar4 == 0) {
+		    return 0;
+		  }
+		  uVar3 = UnityEngine_Purchasing_Utils_ProductDetailsConverter__BuildProductDescription
+		                    (iVar4,Method_System_Linq_Enumerable_FirstOrDefault_string___);
+		  return uVar3;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_Phone ---
+		void Mycom_Tracker_Unity_MyTrackerParams__get_Phone(int param1,int param2,undefined4 param3)
+		
+		{
+		  uint uVar1;
+		  int iVar2;
+		  uint *puVar3;
+		  int *param1_00;
+		  int iVar4;
+		  
+		  iVar2 = 0;
+		  if (DAT_ram_00a596ff == '\0') {
+		    Mono_Security_ASN1__get_Item(&Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&string___TypeInfo);
+		    DAT_ram_00a596ff = '\x01';
+		  }
+		  param1_00 = *(int **)(param1 + 8);
+		  if (param2 != 0) {
+		    iVar2 = Mono_Security_ASN1Convert__ToOid(string___TypeInfo,1);
+		    *(int *)(iVar2 + 0x10) = param2;
+		  }
+		  uVar1 = 0;
+		  iVar4 = *param1_00;
+		  if (*(ushort *)(iVar4 + 0xb6) != 0) {
+		    do {
+		      if (Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo ==
+		          *(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8)) {
+		        puVar3 = (uint *)(*(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8 + 4) * 8 + iVar4 + 0x168);
+		        goto code_r0x81050acf;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar4 + 0xb6) != uVar1);
+		  }
+		  puVar3 = (uint *)func_ii_1080(param1_00,
+		                                Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo,0x15
+		                               );
+		code_r0x81050acf:
+		  (**(code **)((ulonglong)*puVar3 * 4))(param1_00,iVar2,puVar3[1]);
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_Phone ---
+		undefined4 Mycom_Tracker_Unity_MyTrackerParams__set_Phone(int param1,undefined4 param2)
+		
+		{
+		  uint uVar1;
+		  uint *puVar2;
+		  undefined4 uVar3;
+		  int *param1_00;
+		  int iVar4;
+		  
+		  if (DAT_ram_00a59700 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo);
+		    DAT_ram_00a59700 = '\x01';
+		  }
+		  param1_00 = *(int **)(param1 + 8);
+		  iVar4 = *param1_00;
+		  if (*(ushort *)(iVar4 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo ==
+		          *(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8)) {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8 + 4) * 8 + iVar4 + 0x160);
+		        goto code_r0x81050b72;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar4 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(param1_00,
+		                                Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo,0x14
+		                               );
+		code_r0x81050b72:
+		  uVar3 = (**(code **)((ulonglong)*puVar2 * 4))(param1_00,puVar2[1]);
+		  return uVar3;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_Phones ---
+		void Mycom_Tracker_Unity_MyTrackerParams__get_Phones(int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  uint uVar1;
+		  uint *puVar2;
+		  int *param1_00;
+		  int iVar3;
+		  
+		  if (DAT_ram_00a59701 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo);
+		    DAT_ram_00a59701 = '\x01';
+		  }
+		  param1_00 = *(int **)(param1 + 8);
+		  iVar3 = *param1_00;
+		  if (*(ushort *)(iVar3 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo ==
+		          *(int *)(*(int *)(iVar3 + 0x58) + uVar1 * 8)) {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar3 + 0x58) + uVar1 * 8 + 4) * 8 + iVar3 + 0x168);
+		        goto code_r0x81050c19;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar3 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(param1_00,
+		                                Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo,0x15
+		                               );
+		code_r0x81050c19:
+		  (**(code **)((ulonglong)*puVar2 * 4))(param1_00,param2,puVar2[1]);
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_Phones ---
+		undefined4 Mycom_Tracker_Unity_MyTrackerParams__set_Phones(int param1,undefined4 param2)
+		
+		{
+		  uint uVar1;
+		  uint *puVar2;
+		  undefined4 uVar3;
+		  int *param1_00;
+		  int iVar4;
+		  
+		  if (DAT_ram_00a59702 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_System_Linq_Enumerable_FirstOrDefault_string___);
+		    Mono_Security_ASN1__get_Item(&Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo);
+		    DAT_ram_00a59702 = '\x01';
+		  }
+		  param1_00 = *(int **)(param1 + 8);
+		  iVar4 = *param1_00;
+		  if (*(ushort *)(iVar4 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo ==
+		          *(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8)) {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8 + 4) * 8 + iVar4 + 0x170);
+		        goto code_r0x81050cca;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar4 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(param1_00,
+		                                Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo,0x16
+		                               );
+		code_r0x81050cca:
+		  iVar4 = (**(code **)((ulonglong)*puVar2 * 4))(param1_00,puVar2[1]);
+		  if (iVar4 == 0) {
+		    return 0;
+		  }
+		  uVar3 = UnityEngine_Purchasing_Utils_ProductDetailsConverter__BuildProductDescription
+		                    (iVar4,Method_System_Linq_Enumerable_FirstOrDefault_string___);
+		  return uVar3;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_VkId ---
+		void Mycom_Tracker_Unity_MyTrackerParams__get_VkId(int param1,int param2,undefined4 param3)
+		
+		{
+		  uint uVar1;
+		  int iVar2;
+		  uint *puVar3;
+		  int *param1_00;
+		  int iVar4;
+		  
+		  iVar2 = 0;
+		  if (DAT_ram_00a59703 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&string___TypeInfo);
+		    DAT_ram_00a59703 = '\x01';
+		  }
+		  param1_00 = *(int **)(param1 + 8);
+		  if (param2 != 0) {
+		    iVar2 = Mono_Security_ASN1Convert__ToOid(string___TypeInfo,1);
+		    *(int *)(iVar2 + 0x10) = param2;
+		  }
+		  uVar1 = 0;
+		  iVar4 = *param1_00;
+		  if (*(ushort *)(iVar4 + 0xb6) != 0) {
+		    do {
+		      if (Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo ==
+		          *(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8)) {
+		        puVar3 = (uint *)(*(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8 + 4) * 8 + iVar4 + 0x178);
+		        goto code_r0x81050daf;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar4 + 0xb6) != uVar1);
+		  }
+		  puVar3 = (uint *)func_ii_1080(param1_00,
+		                                Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo,0x17
+		                               );
+		code_r0x81050daf:
+		  (**(code **)((ulonglong)*puVar3 * 4))(param1_00,iVar2,puVar3[1]);
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_VkId ---
+		undefined4 Mycom_Tracker_Unity_MyTrackerParams__set_VkId(int param1,undefined4 param2)
+		
+		{
+		  uint uVar1;
+		  uint *puVar2;
+		  undefined4 uVar3;
+		  int *param1_00;
+		  int iVar4;
+		  
+		  if (DAT_ram_00a59704 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo);
+		    DAT_ram_00a59704 = '\x01';
+		  }
+		  param1_00 = *(int **)(param1 + 8);
+		  iVar4 = *param1_00;
+		  if (*(ushort *)(iVar4 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo ==
+		          *(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8)) {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8 + 4) * 8 + iVar4 + 0x170);
+		        goto code_r0x81050e52;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar4 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(param1_00,
+		                                Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo,0x16
+		                               );
+		code_r0x81050e52:
+		  uVar3 = (**(code **)((ulonglong)*puVar2 * 4))(param1_00,puVar2[1]);
+		  return uVar3;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_VkIds ---
+		void Mycom_Tracker_Unity_MyTrackerParams__get_VkIds(int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  uint uVar1;
+		  uint *puVar2;
+		  int *param1_00;
+		  int iVar3;
+		  
+		  if (DAT_ram_00a59705 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo);
+		    DAT_ram_00a59705 = '\x01';
+		  }
+		  param1_00 = *(int **)(param1 + 8);
+		  iVar3 = *param1_00;
+		  if (*(ushort *)(iVar3 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo ==
+		          *(int *)(*(int *)(iVar3 + 0x58) + uVar1 * 8)) {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar3 + 0x58) + uVar1 * 8 + 4) * 8 + iVar3 + 0x178);
+		        goto code_r0x81050ef9;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar3 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(param1_00,
+		                                Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo,0x17
+		                               );
+		code_r0x81050ef9:
+		  (**(code **)((ulonglong)*puVar2 * 4))(param1_00,param2,puVar2[1]);
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_VkIds ---
+		undefined4 Mycom_Tracker_Unity_MyTrackerParams__set_VkIds(int param1,undefined4 param2)
+		
+		{
+		  uint uVar1;
+		  uint *puVar2;
+		  undefined4 uVar3;
+		  int *param1_00;
+		  int iVar4;
+		  
+		  if (DAT_ram_00a59706 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_System_Linq_Enumerable_FirstOrDefault_string___);
+		    Mono_Security_ASN1__get_Item(&Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo);
+		    DAT_ram_00a59706 = '\x01';
+		  }
+		  param1_00 = *(int **)(param1 + 8);
+		  iVar4 = *param1_00;
+		  if (*(ushort *)(iVar4 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo ==
+		          *(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8)) {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8 + 4) * 8 + iVar4 + 0x180);
+		        goto code_r0x81050faa;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar4 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(param1_00,
+		                                Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo,0x18
+		                               );
+		code_r0x81050faa:
+		  iVar4 = (**(code **)((ulonglong)*puVar2 * 4))(param1_00,puVar2[1]);
+		  if (iVar4 == 0) {
+		    return 0;
+		  }
+		  uVar3 = UnityEngine_Purchasing_Utils_ProductDetailsConverter__BuildProductDescription
+		                    (iVar4,Method_System_Linq_Enumerable_FirstOrDefault_string___);
+		  return uVar3;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_VkConnectId ---
+		void Mycom_Tracker_Unity_MyTrackerParams__get_VkConnectId(int param1,int param2,undefined4 param3)
+		
+		{
+		  uint uVar1;
+		  int iVar2;
+		  uint *puVar3;
+		  int *param1_00;
+		  int iVar4;
+		  
+		  iVar2 = 0;
+		  if (DAT_ram_00a59707 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&string___TypeInfo);
+		    DAT_ram_00a59707 = '\x01';
+		  }
+		  param1_00 = *(int **)(param1 + 8);
+		  if (param2 != 0) {
+		    iVar2 = Mono_Security_ASN1Convert__ToOid(string___TypeInfo,1);
+		    *(int *)(iVar2 + 0x10) = param2;
+		  }
+		  uVar1 = 0;
+		  iVar4 = *param1_00;
+		  if (*(ushort *)(iVar4 + 0xb6) != 0) {
+		    do {
+		      if (Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo ==
+		          *(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8)) {
+		        puVar3 = (uint *)(*(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8 + 4) * 8 + iVar4 + 0x188);
+		        goto code_r0x8105108f;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar4 + 0xb6) != uVar1);
+		  }
+		  puVar3 = (uint *)func_ii_1080(param1_00,
+		                                Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo,0x19
+		                               );
+		code_r0x8105108f:
+		  (**(code **)((ulonglong)*puVar3 * 4))(param1_00,iVar2,puVar3[1]);
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_VkConnectId ---
+		undefined4 Mycom_Tracker_Unity_MyTrackerParams__set_VkConnectId(int param1,undefined4 param2)
+		
+		{
+		  uint uVar1;
+		  uint *puVar2;
+		  undefined4 uVar3;
+		  int *param1_00;
+		  int iVar4;
+		  
+		  if (DAT_ram_00a59708 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo);
+		    DAT_ram_00a59708 = '\x01';
+		  }
+		  param1_00 = *(int **)(param1 + 8);
+		  iVar4 = *param1_00;
+		  if (*(ushort *)(iVar4 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo ==
+		          *(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8)) {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8 + 4) * 8 + iVar4 + 0x180);
+		        goto code_r0x81051132;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar4 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(param1_00,
+		                                Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo,0x18
+		                               );
+		code_r0x81051132:
+		  uVar3 = (**(code **)((ulonglong)*puVar2 * 4))(param1_00,puVar2[1]);
+		  return uVar3;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_VkConnectIds ---
+		void Mycom_Tracker_Unity_MyTrackerParams__get_VkConnectIds
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  uint uVar1;
+		  uint *puVar2;
+		  int *param1_00;
+		  int iVar3;
+		  
+		  if (DAT_ram_00a59709 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo);
+		    DAT_ram_00a59709 = '\x01';
+		  }
+		  param1_00 = *(int **)(param1 + 8);
+		  iVar3 = *param1_00;
+		  if (*(ushort *)(iVar3 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo ==
+		          *(int *)(*(int *)(iVar3 + 0x58) + uVar1 * 8)) {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar3 + 0x58) + uVar1 * 8 + 4) * 8 + iVar3 + 0x188);
+		        goto code_r0x810511d9;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar3 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(param1_00,
+		                                Mycom_Tracker_Unity_Internal_Interfaces_ITrackerParams_TypeInfo,0x19
+		                               );
+		code_r0x810511d9:
+		  (**(code **)((ulonglong)*puVar2 * 4))(param1_00,param2,puVar2[1]);
+		  return;
+		}
+		*/
+
 }

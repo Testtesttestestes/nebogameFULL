@@ -26,6 +26,26 @@ namespace Gameplay.VortexCombat.Model
 		[Address(RVA = "0x67F5", Offset = "0x67F5", VA = "0x67F5")]
 		public VortexCombatSpellData()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_VortexCombat_Model_VortexCombatSpellData___ctor
+		               (undefined4 param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  if (DAT_ram_00a58233 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Gameplay_Combat_Model_SkillsChange_AbstractShortSpellInfo_PlayerSkillsInfo_Types_ShortSpellInfo___ctor__
+		              );
+		    DAT_ram_00a58233 = '\x01';
+		  }
+		  Unity_Services_Core_Environments_Internal_Environments__get_Current
+		            (param1,param2,
+		             Method_Gameplay_Combat_Model_SkillsChange_AbstractShortSpellInfo_PlayerSkillsInfo_Types_ShortSpellInfo___ctor__
+		            );
+		  return;
+		}
+		*/
+
 		}
 	}
 }

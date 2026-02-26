@@ -15,6 +15,27 @@ namespace Gameplay.WorldAxis.ColossusInfo.Events
 		[Address(RVA = "0x64A1", Offset = "0x64A1", VA = "0x64A1")]
 		public ColossusTreasuryEvents(GolemInventoryEvents events)
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_WorldAxis_ColossusInfo_Events_ColossusTreasuryEvents___ctor
+		               (undefined4 param1,undefined4 param2,undefined4 param3,undefined4 param4,
+		               undefined4 param5)
+		
+		{
+		  if (DAT_ram_00a58be3 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_MVC_AbstractViewMediator_ColossusTreasuryModel__ColossusTreasuryEvents__ColossusTreasuryController__ColossusTreasuryView___ctor__
+		              );
+		    DAT_ram_00a58be3 = '\x01';
+		  }
+		  Gameplay_Combat_TeamCombat_View_AbstractTeamCombatView_object___get_HideInstantElements
+		            (param1,param2,param3,param4,
+		             Method_MVC_AbstractViewMediator_ColossusTreasuryModel__ColossusTreasuryEvents__ColossusTreasuryController__ColossusTreasuryView___ctor__
+		            );
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x04000A18 RID: 2584

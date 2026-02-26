@@ -158,6 +158,25 @@ namespace Gameplay.SmallGames.View
 		[Address(RVA = "0x70AC", Offset = "0x70AC", VA = "0x70AC")]
 		public SlotWheelsView GetSlotsWheels(SlotMachineType type)
 		{
+		/* --- GHIDRA: GetSlotsWheels ---
+		void Gameplay_SmallGames_View_SmallGamesWindow__GetSlotsWheels
+		               (undefined4 param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  if (DAT_ram_00a58678 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UI_Windows_ClosableBaseWindow_SmallGamesWindow_SmallGamesWindowArgs__OnShow__
+		              );
+		    DAT_ram_00a58678 = '\x01';
+		  }
+		  func_ii_7769(param1,param2,
+		               Method_UI_Windows_ClosableBaseWindow_SmallGamesWindow_SmallGamesWindowArgs__OnShow__)
+		  ;
+		  Gameplay_SmallGames_View_SmallGamesWindow__OnClose(param1,param1);
+		  return;
+		}
+		*/
+
 			return null;
 		}
 
@@ -166,6 +185,32 @@ namespace Gameplay.SmallGames.View
 		[Address(RVA = "0x70AD", Offset = "0x70AD", VA = "0x70AD", Slot = "22")]
 		protected override void OnShow(SmallGamesWindow.SmallGamesWindowArgs args)
 		{
+		/* --- GHIDRA: OnShow ---
+		void Gameplay_SmallGames_View_SmallGamesWindow__OnShow(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  
+		  if (DAT_ram_00a58679 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Windows_ClosableBaseWindow_SmallGamesWindow_SmallGamesWindowArgs__OnClose__
+		              );
+		    DAT_ram_00a58679 = '\x01';
+		  }
+		  UI_Windows_ClosableBaseWindow_object___OnClickBack
+		            (param1,
+		             Method_UI_Windows_ClosableBaseWindow_SmallGamesWindow_SmallGamesWindowArgs__OnClose__);
+		  if (*(char *)(param1 + 0x68) != '\0') {
+		    iVar1 = **(int **)(param1 + 100);
+		    (**(code **)((ulonglong)*(uint *)(iVar1 + 0x130) * 4))
+		              (*(int **)(param1 + 100),*(undefined4 *)(iVar1 + 0x134));
+		    *(undefined4 *)(param1 + 100) = 0;
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06001F48 RID: 8008 RVA: 0x00002050 File Offset: 0x00000250
@@ -173,6 +218,54 @@ namespace Gameplay.SmallGames.View
 		[Address(RVA = "0x70AE", Offset = "0x70AE", VA = "0x70AE", Slot = "19")]
 		protected override void OnClose()
 		{
+		/* --- GHIDRA: OnClose ---
+		void Gameplay_SmallGames_View_SmallGamesWindow__OnClose(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  undefined4 param3;
+		  int iVar2;
+		  int *param1_00;
+		  int *param4;
+		  
+		  if (DAT_ram_00a5867a == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UI_Windows_BaseWindow_SmallGamesWindow_SmallGamesWindowArgs__get_WindowArgs__
+		              );
+		    Mono_Security_ASN1__get_Item(&Gameplay_SmallGames_Controller_SmallGamesViewMediator_TypeInfo);
+		    DAT_ram_00a5867a = '\x01';
+		  }
+		  if (*(char *)(param1 + 0x68) == '\0') {
+		    iVar1 = func_ii_8093(param1,
+		                         Method_UI_Windows_BaseWindow_SmallGamesWindow_SmallGamesWindowArgs__get_WindowArgs__
+		                        );
+		    param4 = *(int **)(iVar1 + 0x1c);
+		    iVar1 = (**(code **)((ulonglong)*(uint *)(*param4 + 0x100) * 4))
+		                      (param4,*(undefined4 *)(*param4 + 0x104));
+		    param3 = (**(code **)((ulonglong)*(uint *)(*param4 + 0x110) * 4))
+		                       (param4,*(undefined4 *)(*param4 + 0x114));
+		    iVar2 = func_ii_8093(param1,
+		                         Method_UI_Windows_BaseWindow_SmallGamesWindow_SmallGamesWindowArgs__get_WindowArgs__
+		                        );
+		    if (*(int *)(iVar2 + 0x18) != 0) {
+		      iVar2 = func_ii_8093(param1,
+		                           Method_UI_Windows_BaseWindow_SmallGamesWindow_SmallGamesWindowArgs__get_WindowArgs__
+		                          );
+		      *(undefined4 *)(iVar1 + 0x38) = *(undefined4 *)(iVar2 + 0x18);
+		    }
+		    param1_00 = (int *)unnamed_function_1417
+		                                 (Gameplay_SmallGames_Controller_SmallGamesViewMediator_TypeInfo);
+		    Gameplay_SmallGames_Controller_SmallGamesRewardsStorageViewMediator___c__DisplayClass6_0___ArtifactDropRemoveEventHandler_b__0
+		              (param1_00,iVar1,param3,param4,0);
+		    (**(code **)((ulonglong)*(uint *)(*param1_00 + 0x160) * 4))
+		              (param1_00,param1,*(undefined4 *)(*param1_00 + 0x164));
+		    *(undefined1 *)(param1 + 0x68) = 1;
+		    *(int **)(param1 + 100) = param1_00;
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06001F49 RID: 8009 RVA: 0x00002050 File Offset: 0x00000250
@@ -187,6 +280,23 @@ namespace Gameplay.SmallGames.View
 		[Address(RVA = "0x70B0", Offset = "0x70B0", VA = "0x70B0")]
 		private void DestroyMVC()
 		{
+		/* --- GHIDRA: DestroyMVC ---
+		void Gameplay_SmallGames_View_SmallGamesWindow__DestroyMVC(undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a5867b == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UI_Windows_ClosableBaseWindow_SmallGamesWindow_SmallGamesWindowArgs___ctor__)
+		    ;
+		    DAT_ram_00a5867b = '\x01';
+		  }
+		  UI_MonoBehaviourWithStates_ClientStateChangedDelegate___Il2CppFullySharedGenericStructType___Invoke
+		            (param1,
+		             Method_UI_Windows_ClosableBaseWindow_SmallGamesWindow_SmallGamesWindowArgs___ctor__);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06001F4B RID: 8011 RVA: 0x00002050 File Offset: 0x00000250
@@ -309,4 +419,47 @@ namespace Gameplay.SmallGames.View
 			public SmallGamesController Controller;
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: set_CurrentSlotWheelsView ---
+		undefined4
+		Gameplay_SmallGames_View_SmallGamesWindow__set_CurrentSlotWheelsView
+		          (int param1,int param2,undefined4 param3)
+		
+		{
+		  int iVar1;
+		  undefined4 uVar2;
+		  undefined4 uVar3;
+		  int iVar4;
+		  int iVar5;
+		  int local_4;
+		  
+		  iVar4 = *(int *)(*(int *)(param1 + 0x5c) + 0xc);
+		  if (0 < iVar4) {
+		    iVar1 = 0;
+		    do {
+		      iVar5 = *(int *)(*(int *)(param1 + 0x5c) + iVar1 * 4 + 0x10);
+		      if (*(int *)(iVar5 + 8) == param2) {
+		        return *(undefined4 *)(iVar5 + 0xc);
+		      }
+		      iVar1 = iVar1 + 1;
+		    } while (iVar1 != iVar4);
+		  }
+		  local_4 = param2;
+		  uVar2 = unnamed_function_2232(&Protocol_SmallGames_SlotMachineType_TypeInfo);
+		  uVar2 = func_ii_1081(uVar2,&local_4);
+		  uVar3 = unnamed_function_2232(&StringLiteral_11649);
+		  uVar2 = func_ii_4419(uVar3,uVar2,0);
+		  uVar3 = unnamed_function_2232(&System_Exception_TypeInfo);
+		  uVar3 = unnamed_function_1417(uVar3);
+		  System_String__Concat(uVar3,uVar2,0);
+		  uVar2 = unnamed_function_2232(&Method_Gameplay_SmallGames_View_SmallGamesWindow_GetSlotsWheels__);
+		  func_ii_1050(uVar3,uVar2);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
 }

@@ -21,6 +21,24 @@ namespace Core.Extensions.Dict
 		[Address(RVA = "0x1F37", Offset = "0x1F37", VA = "0x1F37")]
 		public static string GetTitle(this UserSkillDic userSkillDic)
 		{
+		/* --- GHIDRA: GetTitle ---
+		undefined4 Core_Extensions_Dict_UserSkillDicExt__GetTitle(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  undefined4 uVar2;
+		  
+		  iVar1 = Core_Extensions_Dict_DictExt__GetApr(*(undefined4 *)(param1 + 0x1c),0x18,0);
+		  if (iVar1 == 0) {
+		    uVar2 = 0;
+		  }
+		  else {
+		    uVar2 = *(undefined4 *)(iVar1 + 0x10);
+		  }
+		  return uVar2;
+		}
+		*/
+
 			return null;
 		}
 
@@ -29,6 +47,17 @@ namespace Core.Extensions.Dict
 		[Address(RVA = "0xAC44", Offset = "0xAC44", VA = "0xAC44")]
 		public static string GetDescription(this UserSkillDic userSkillDic)
 		{
+		/* --- GHIDRA: GetDescription ---
+		undefined4 Core_Extensions_Dict_UserSkillDicExt__GetDescription(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  uVar1 = Core_Extensions_Dict_DictExt__GetAsset(*(undefined4 *)(param1 + 0x20),0x72,0);
+		  return uVar1;
+		}
+		*/
+
 			return null;
 		}
 
@@ -37,6 +66,19 @@ namespace Core.Extensions.Dict
 		[Address(RVA = "0xAC45", Offset = "0xAC45", VA = "0xAC45")]
 		public static string GetToolTipFormattedTitleWhitValue(this UserSkillDic userSkillDic)
 		{
+		/* --- GHIDRA: GetToolTipFormattedTitleWhitValue ---
+		undefined4
+		Core_Extensions_Dict_UserSkillDicExt__GetToolTipFormattedTitleWhitValue
+		          (int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  uVar1 = Core_Extensions_Dict_DictExt__GetAsset(*(undefined4 *)(param1 + 0x20),0x77,0);
+		  return uVar1;
+		}
+		*/
+
 			return null;
 		}
 	}

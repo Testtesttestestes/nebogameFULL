@@ -199,6 +199,73 @@ namespace Gameplay.World.Model
 		[Address(RVA = "0x65E0", Offset = "0x65E0", VA = "0x65E0")]
 		private ClanData()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_World_Model_ClanData___ctor(int param1,int param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  int param2_00;
+		  undefined4 uVar1;
+		  undefined4 uVar2;
+		  uint param2_01;
+		  uint uVar3;
+		  uint uVar4;
+		  uint uVar5;
+		  
+		  if (DAT_ram_00a58c7c == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Linq_Enumerable_Select_ClanRestrictionInfo__ClanCurseData___);
+		    Mono_Security_ASN1__get_Item(&Method_System_Linq_Enumerable_ToArray_ClanCurseData___);
+		    Mono_Security_ASN1__get_Item(&System_Func_ClanRestrictionInfo__ClanCurseData__TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Gameplay_World_Model_ClanData___c__DisplayClass36_0__Gameplay_World_Model_ClanData_IManagedClanData_SetClanInfo_b__0__
+		              );
+		    Mono_Security_ASN1__get_Item(&Gameplay_World_Model_ClanData___c__DisplayClass36_0_TypeInfo);
+		    DAT_ram_00a58c7c = '\x01';
+		  }
+		  param2_00 = unnamed_function_1417(Gameplay_World_Model_ClanData___c__DisplayClass36_0_TypeInfo);
+		  *(undefined4 *)(param2_00 + 8) = param3;
+		  uVar4 = *(uint *)(param2 + 0x1c);
+		  uVar3 = 0x66;
+		  if (uVar4 < 4) {
+		    uVar3 = uVar4;
+		  }
+		  uVar5 = *(uint *)(param2 + 0x20) & 1;
+		  if (uVar5 == 0) {
+		    uVar3 = uVar4;
+		  }
+		  param2_01 = 0x65;
+		  if (3 < uVar4) {
+		    param2_01 = uVar3;
+		  }
+		  if (uVar5 == 0) {
+		    param2_01 = uVar3;
+		  }
+		  uVar1 = Core_Extensions_Dict_DictExt__GetCult(param3,param2_01,0);
+		  uVar2 = Core_Extensions_Dict_DictExt__GetAllArtikulTypeMetaFilterByType
+		                    (*(undefined4 *)(param2_00 + 8),*(undefined4 *)(param2 + 0x1c),0);
+		  *(int *)(param1 + 0x1c) = param2;
+		  *(undefined4 *)(param1 + 0x10) = uVar1;
+		  *(undefined4 *)(param1 + 8) = uVar2;
+		  uVar1 = Core_Extensions_Dict_DictExt__GetClanPrizesByKindId
+		                    (*(undefined4 *)(param2_00 + 8),*(undefined4 *)(*(int *)(param2 + 0x3c) + 0xc),0
+		                    );
+		  *(undefined4 *)(param1 + 0x20) = uVar1;
+		  uVar2 = *(undefined4 *)(param2 + 0x44);
+		  uVar1 = unnamed_function_1417(System_Func_ClanRestrictionInfo__ClanCurseData__TypeInfo);
+		  System_Linq_Enumerable__Where_object_
+		            (uVar1,param2_00,
+		             Method_Gameplay_World_Model_ClanData___c__DisplayClass36_0__Gameplay_World_Model_ClanData_IManagedClanData_SetClanInfo_b__0__
+		             ,0);
+		  uVar1 = System_Linq_Enumerable__ReverseIterator___Il2CppFullySharedGenericType_
+		                    (uVar2,uVar1,
+		                     Method_System_Linq_Enumerable_Select_ClanRestrictionInfo__ClanCurseData___);
+		  uVar1 = func_ii_6295(uVar1,Method_System_Linq_Enumerable_ToArray_ClanCurseData___);
+		  *(undefined4 *)(param1 + 0xc) = uVar1;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06001403 RID: 5123 RVA: 0x00002050 File Offset: 0x00000250
@@ -213,6 +280,34 @@ namespace Gameplay.World.Model
 		[Address(RVA = "0x1C9E", Offset = "0x1C9E", VA = "0x1C9E")]
 		public static ClanData Create(ClanInfo clanInfo, Dictionaries dictionaries)
 		{
+		/* --- GHIDRA: Create ---
+		void Gameplay_World_Model_ClanData__Create(int *param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  undefined4 uVar1;
+		  int iVar2;
+		  
+		  uVar1 = (**(code **)((ulonglong)*(uint *)(*param1 + 0x100) * 4))
+		                    (param1,*(undefined4 *)(*param1 + 0x104));
+		  Gameplay_Isles_User_Model_UserIsleModel__get_IsleInformation(uVar1,param2,0);
+		  Gameplay_Isles_User_Controller_UserIsleController__OnMonsterChangedEvent(param1,param1);
+		  iVar2 = (**(code **)((ulonglong)*(uint *)(*param1 + 0x100) * 4))
+		                    (param1,*(undefined4 *)(*param1 + 0x104));
+		  uVar1 = (**(code **)((ulonglong)*(uint *)(*param1 + 0x100) * 4))
+		                    (param1,*(undefined4 *)(*param1 + 0x104));
+		  uVar1 = Gameplay_Isles_User_Model_UserIsleAccountMarkerData__Create(uVar1,0);
+		  *(undefined4 *)(iVar2 + 0x50) = uVar1;
+		  iVar2 = (**(code **)((ulonglong)*(uint *)(*param1 + 0x110) * 4))
+		                    (param1,*(undefined4 *)(*param1 + 0x114));
+		  iVar2 = *(int *)(iVar2 + 0x1c);
+		  if (iVar2 != 0) {
+		    (**(code **)((ulonglong)*(uint *)(iVar2 + 0xc) * 4))
+		              (*(undefined4 *)(iVar2 + 0x20),*(undefined4 *)(iVar2 + 0x14));
+		  }
+		  return;
+		}
+		*/
+
 			return null;
 		}
 
@@ -221,6 +316,21 @@ namespace Gameplay.World.Model
 		[Address(RVA = "0x65E2", Offset = "0x65E2", VA = "0x65E2")]
 		public uint ClearTreasuryFlag(uint flag)
 		{
+		/* --- GHIDRA: ClearTreasuryFlag ---
+		uint Gameplay_World_Model_ClanData__ClearTreasuryFlag(int param1,int *param2,undefined4 param3)
+		
+		{
+		  int iVar1;
+		  
+		  iVar1 = 0;
+		  if ((*(byte *)(*(int *)(param1 + 0x1c) + 0x20) & 1) != 0) {
+		    iVar1 = *(int *)(param1 + 0x10);
+		  }
+		  *param2 = iVar1;
+		  return (uint)(iVar1 != 0);
+		}
+		*/
+
 			return 0U;
 		}
 
@@ -229,6 +339,16 @@ namespace Gameplay.World.Model
 		[Address(RVA = "0x65E3", Offset = "0x65E3", VA = "0x65E3")]
 		public bool TryGetFractionCultDic(out ClanCultDic dic)
 		{
+		/* --- GHIDRA: TryGetFractionCultDic ---
+		uint Gameplay_World_Model_ClanData__TryGetFractionCultDic
+		               (int param1,undefined4 *param2,undefined4 param3)
+		
+		{
+		  *param2 = *(undefined4 *)(param1 + 8);
+		  return (uint)(*(int *)(param1 + 8) != 0);
+		}
+		*/
+
 			return default(bool);
 		}
 
@@ -237,6 +357,26 @@ namespace Gameplay.World.Model
 		[Address(RVA = "0x65E4", Offset = "0x65E4", VA = "0x65E4")]
 		public bool TryGetCultDic(out CultDic dic)
 		{
+		/* --- GHIDRA: TryGetCultDic ---
+		uint Gameplay_World_Model_ClanData__TryGetCultDic(int param1,uint param2,undefined4 param3)
+		
+		{
+		  uint uVar1;
+		  
+		  uVar1 = *(uint *)(*(int *)(param1 + 0x1c) + 0x1c);
+		  if (uVar1 == param2) {
+		    uVar1 = 1;
+		  }
+		  else if ((*(byte *)(*(int *)(param1 + 0x1c) + 0x20) & 1) == 0) {
+		    uVar1 = 0;
+		  }
+		  else {
+		    uVar1 = (uint)(uVar1 < 4 != 3 < param2);
+		  }
+		  return uVar1;
+		}
+		*/
+
 			return default(bool);
 		}
 
@@ -245,6 +385,23 @@ namespace Gameplay.World.Model
 		[Address(RVA = "0x65E5", Offset = "0x65E5", VA = "0x65E5")]
 		public bool ContainsCult(uint cultId)
 		{
+		/* --- GHIDRA: ContainsCult ---
+		undefined4 Gameplay_World_Model_ClanData__ContainsCult(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  if ((*(byte *)(*(int *)(param1 + 0x1c) + 0x20) & 1) == 0) {
+		    uVar1 = Gameplay_Boss_View_CaptainTab_BossSkillInfoView__set_DominateCultDescription
+		                      (*(undefined4 *)(param1 + 8),0);
+		    return uVar1;
+		  }
+		  uVar1 = Core_Extensions_Dict_ClanBuildingViewDicExt__GetIsleViewAssetId
+		                    (*(undefined4 *)(param1 + 0x10),0);
+		  return uVar1;
+		}
+		*/
+
 			return default(bool);
 		}
 
@@ -253,6 +410,19 @@ namespace Gameplay.World.Model
 		[Address(RVA = "0x65E6", Offset = "0x65E6", VA = "0x65E6")]
 		public string GetClanCultIconAssetId()
 		{
+		/* --- GHIDRA: GetClanCultIconAssetId ---
+		undefined4
+		Gameplay_World_Model_ClanData__GetClanCultIconAssetId
+		          (undefined4 param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  int iVar1;
+		  
+		  iVar1 = Core_Extensions_Dict_DictExt__GetClanLeagueDic(param3,param2,0);
+		  return *(undefined4 *)(iVar1 + 0x10);
+		}
+		*/
+
 			return null;
 		}
 
@@ -261,6 +431,14 @@ namespace Gameplay.World.Model
 		[Address(RVA = "0x65E7", Offset = "0x65E7", VA = "0x65E7")]
 		public ResourceSet GetJoinPrice(uint zigguratLevel, Dictionaries dict)
 		{
+		/* --- GHIDRA: GetJoinPrice ---
+		uint Gameplay_World_Model_ClanData__GetJoinPrice(uint param1,undefined4 param2)
+		
+		{
+		  return param1 & 1;
+		}
+		*/
+
 			return null;
 		}
 
@@ -269,6 +447,14 @@ namespace Gameplay.World.Model
 		[Address(RVA = "0x65E8", Offset = "0x65E8", VA = "0x65E8")]
 		public static bool GetIsFraction(uint flags)
 		{
+		/* --- GHIDRA: GetIsFraction ---
+		uint Gameplay_World_Model_ClanData__GetIsFraction(uint param1,uint param2,undefined4 param3)
+		
+		{
+		  return param1 & 3 < param2;
+		}
+		*/
+
 			return default(bool);
 		}
 
@@ -277,6 +463,14 @@ namespace Gameplay.World.Model
 		[Address(RVA = "0x65E9", Offset = "0x65E9", VA = "0x65E9")]
 		public static bool GetIsLeftHandClan(uint flags, uint cultId)
 		{
+		/* --- GHIDRA: GetIsLeftHandClan ---
+		uint Gameplay_World_Model_ClanData__GetIsLeftHandClan(uint param1,uint param2,undefined4 param3)
+		
+		{
+		  return param1 & param2 < 4;
+		}
+		*/
+
 			return default(bool);
 		}
 
@@ -285,6 +479,14 @@ namespace Gameplay.World.Model
 		[Address(RVA = "0x65EA", Offset = "0x65EA", VA = "0x65EA")]
 		public static bool GetIsRightHandClan(uint flags, uint cultId)
 		{
+		/* --- GHIDRA: GetIsRightHandClan ---
+		uint Gameplay_World_Model_ClanData__GetIsRightHandClan(uint param1,undefined4 param2)
+		
+		{
+		  return (uint)(3 < param1);
+		}
+		*/
+
 			return default(bool);
 		}
 
@@ -293,6 +495,14 @@ namespace Gameplay.World.Model
 		[Address(RVA = "0x65EB", Offset = "0x65EB", VA = "0x65EB")]
 		public static bool IsPartOfLeftHandClan(uint cultId)
 		{
+		/* --- GHIDRA: IsPartOfLeftHandClan ---
+		uint Gameplay_World_Model_ClanData__IsPartOfLeftHandClan(uint param1,undefined4 param2)
+		
+		{
+		  return (uint)(param1 < 4);
+		}
+		*/
+
 			return default(bool);
 		}
 
@@ -301,6 +511,22 @@ namespace Gameplay.World.Model
 		[Address(RVA = "0x65EC", Offset = "0x65EC", VA = "0x65EC")]
 		public static bool IsPartOfRightHandClan(uint cultId)
 		{
+		/* --- GHIDRA: IsPartOfRightHandClan ---
+		void Gameplay_World_Model_ClanData__IsPartOfRightHandClan(undefined4 param1)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a58c7e == '\0') {
+		    Mono_Security_ASN1__get_Item(&Gameplay_World_Model_ClanData___c_TypeInfo);
+		    DAT_ram_00a58c7e = '\x01';
+		  }
+		  uVar1 = unnamed_function_1417(Gameplay_World_Model_ClanData___c_TypeInfo);
+		  **(undefined4 **)(Gameplay_World_Model_ClanData___c_TypeInfo + 0x5c) = uVar1;
+		  return;
+		}
+		*/
+
 			return default(bool);
 		}
 
@@ -323,4 +549,136 @@ namespace Gameplay.World.Model
 			void SetClanInfo(ClanInfo clanInfo, Dictionaries dictionaries);
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: set_ClanCultDic ---
+		undefined8 Gameplay_World_Model_ClanData__set_ClanCultDic(int param1,undefined4 param2)
+		
+		{
+		  return *(undefined8 *)(*(int *)(param1 + 0x1c) + 0x10);
+		}
+		*/
+
+
+		/* --- GHIDRA: set_ClanLeagueDic ---
+		undefined4 Gameplay_World_Model_ClanData__set_ClanLeagueDic(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  undefined4 *puVar2;
+		  int iVar3;
+		  undefined4 uVar4;
+		  
+		  if (DAT_ram_00a58c7b == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_System_Linq_Enumerable_Any_ClanCurseData___);
+		    Mono_Security_ASN1__get_Item(&Method_System_Linq_Enumerable_ToArray_ClanCurseData___);
+		    Mono_Security_ASN1__get_Item(&Method_System_Linq_Enumerable_Where_ClanCurseData___);
+		    Mono_Security_ASN1__get_Item(&System_Func_ClanCurseData__bool__TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Gameplay_World_Model_ClanData___c__get_Restrictions_b__26_0__);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Gameplay_World_Model_ClanData___c__get_Restrictions_b__26_1__);
+		    Mono_Security_ASN1__get_Item(&Gameplay_World_Model_ClanData___c_TypeInfo);
+		    DAT_ram_00a58c7b = '\x01';
+		  }
+		  uVar1 = *(undefined4 *)(param1 + 0xc);
+		  if (*(int *)(Gameplay_World_Model_ClanData___c_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Gameplay_World_Model_ClanData___c_TypeInfo);
+		  }
+		  puVar2 = *(undefined4 **)(Gameplay_World_Model_ClanData___c_TypeInfo + 0x5c);
+		  iVar3 = puVar2[1];
+		  if (iVar3 == 0) {
+		    if (*(int *)(Gameplay_World_Model_ClanData___c_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(Gameplay_World_Model_ClanData___c_TypeInfo);
+		      puVar2 = *(undefined4 **)(Gameplay_World_Model_ClanData___c_TypeInfo + 0x5c);
+		    }
+		    uVar4 = *puVar2;
+		    iVar3 = unnamed_function_1417(System_Func_ClanCurseData__bool__TypeInfo);
+		    System_Collections_Generic_Dictionary_uint__object___GetEnumerator
+		              (iVar3,uVar4,Method_Gameplay_World_Model_ClanData___c__get_Restrictions_b__26_0__,0);
+		    *(int *)(*(int *)(Gameplay_World_Model_ClanData___c_TypeInfo + 0x5c) + 4) = iVar3;
+		  }
+		  iVar3 = Newtonsoft_Json_Utilities_ReflectionUtils__IsOverridenGenericMember
+		                    (uVar1,iVar3,Method_System_Linq_Enumerable_Any_ClanCurseData___);
+		  uVar1 = *(undefined4 *)(param1 + 0xc);
+		  if (iVar3 != 0) {
+		    if (*(int *)(Gameplay_World_Model_ClanData___c_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(Gameplay_World_Model_ClanData___c_TypeInfo);
+		    }
+		    puVar2 = *(undefined4 **)(Gameplay_World_Model_ClanData___c_TypeInfo + 0x5c);
+		    iVar3 = puVar2[2];
+		    if (iVar3 == 0) {
+		      if (*(int *)(Gameplay_World_Model_ClanData___c_TypeInfo + 0x74) == 0) {
+		        func_ii_306000(Gameplay_World_Model_ClanData___c_TypeInfo);
+		        puVar2 = *(undefined4 **)(Gameplay_World_Model_ClanData___c_TypeInfo + 0x5c);
+		      }
+		      uVar4 = *puVar2;
+		      iVar3 = unnamed_function_1417(System_Func_ClanCurseData__bool__TypeInfo);
+		      System_Collections_Generic_Dictionary_uint__object___GetEnumerator
+		                (iVar3,uVar4,Method_Gameplay_World_Model_ClanData___c__get_Restrictions_b__26_1__,0)
+		      ;
+		      *(int *)(*(int *)(Gameplay_World_Model_ClanData___c_TypeInfo + 0x5c) + 8) = iVar3;
+		    }
+		    uVar1 = System_Linq_Enumerable__Where_PlayerLoopSystem_
+		                      (uVar1,iVar3,Method_System_Linq_Enumerable_Where_ClanCurseData___);
+		    uVar1 = func_ii_6295(uVar1,Method_System_Linq_Enumerable_ToArray_ClanCurseData___);
+		    *(undefined4 *)(param1 + 0xc) = uVar1;
+		  }
+		  return uVar1;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_Restrictions ---
+		uint Gameplay_World_Model_ClanData__get_Restrictions(int param1,undefined4 param2)
+		
+		{
+		  return *(uint *)(*(int *)(param1 + 0x1c) + 0x20) & 1;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_IsFraction ---
+		uint Gameplay_World_Model_ClanData__get_IsFraction(int param1,undefined4 param2)
+		
+		{
+		  return (uint)(*(byte *)(*(int *)(param1 + 0x1c) + 0x20) &
+		               3 < *(uint *)(*(int *)(param1 + 0x1c) + 0x1c));
+		}
+		*/
+
+
+		/* --- GHIDRA: get_IsLeftHandClan ---
+		uint Gameplay_World_Model_ClanData__get_IsLeftHandClan(int param1,undefined4 param2)
+		
+		{
+		  return (uint)(*(byte *)(*(int *)(param1 + 0x1c) + 0x20) &
+		               *(uint *)(*(int *)(param1 + 0x1c) + 0x1c) < 4);
+		}
+		*/
+
+
+		/* --- GHIDRA: get_IsRightHandClan ---
+		uint Gameplay_World_Model_ClanData__get_IsRightHandClan(int param1,undefined4 param2)
+		
+		{
+		  return (*(byte *)(*(int *)(param1 + 0x1c) + 0x2c) & 2) >> 1;
+		}
+		*/
+
+
+		/* --- GHIDRA: Gameplay.World.Model.ClanData.IManagedClanData.SetClanInfo ---
+		uint Gameplay_World_Model_ClanData__Gameplay_World_Model_ClanData_IManagedClanData_SetClanInfo
+		               (int param1,uint param2,undefined4 param3)
+		
+		{
+		  uint uVar1;
+		  
+		  uVar1 = *(uint *)(*(int *)(param1 + 0x1c) + 0x2c) & (param2 ^ 0xffffffff);
+		  *(uint *)(*(int *)(param1 + 0x1c) + 0x2c) = uVar1;
+		  return uVar1;
+		}
+		*/
+
 }

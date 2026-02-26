@@ -151,6 +151,55 @@ namespace ServicesNamespace
 		[Address(RVA = "0x5AA9", Offset = "0x5AA9", VA = "0x5AA9", Slot = "6")]
 		protected override void ServerEventHandler(SrvAnswer evt)
 		{
+		/* --- GHIDRA: ServerEventHandler ---
+		int * ServicesNamespace_TournamentsService__ServerEventHandler(int *param1,undefined4 param2)
+		
+		{
+		  int *param1_00;
+		  int iVar1;
+		  undefined4 uVar2;
+		  undefined4 local_c;
+		  undefined8 local_8;
+		  
+		  if (DAT_ram_00a5b7cd == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_SrvCommand__IMessage__TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Core_Net_SrvCommand_SetCallback_ProtoGetTournamentListAns___);
+		    Mono_Security_ASN1__get_Item(&Core_Net_SrvCommand_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Protocol_Tournaments_TournamentCommands_TypeInfo);
+		    DAT_ram_00a5b7cd = '\x01';
+		  }
+		  if (*(int *)(Core_Net_SrvCommand_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Core_Net_SrvCommand_TypeInfo);
+		  }
+		  param1_00 = (int *)Core_Net_AbstractService__PushCommand
+		                               (param1,*(undefined4 *)
+		                                        (*(int *)(Core_Net_SrvCommand_TypeInfo + 0x5c) + 4),0);
+		  iVar1 = System_IO_Compression_DeflateStreamNative_UnmanagedReadOrWrite__Invoke(param1_00,0);
+		  if (iVar1 != 0) {
+		    (**(code **)((ulonglong)*(uint *)(*param1_00 + 0x110) * 4))
+		              (param1_00,*(undefined4 *)(*param1_00 + 0x114));
+		    uVar2 = (**(code **)((ulonglong)*(uint *)(*param1 + 0xe0) * 4))
+		                      (param1,*(undefined4 *)(*param1 + 0xe4));
+		    if (*(int *)(Core_Net_SrvCommand_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(Core_Net_SrvCommand_TypeInfo);
+		    }
+		    iVar1 = Core_Net_SrvCommand___ctor(uVar2,1,0,0);
+		    local_8 = 0x1ffffffff;
+		    local_c = Protocol_Tournaments_TournamentCommands_TypeInfo;
+		    uVar2 = Spine_SkeletonJson__GetFloat(&local_c,0);
+		    *(undefined4 *)(iVar1 + 0x14) = uVar2;
+		    uVar2 = unnamed_function_1417(System_Action_SrvCommand__IMessage__TypeInfo);
+		    System_Runtime_CompilerServices_AsyncVoidMethodBuilder__AwaitUnsafeOnCompleted_UniTask_Awaiter_bool___BossCaptainViewMediator__SetupView_d__8_
+		              (uVar2,param1,*(undefined4 *)(*param1 + 0xec),0);
+		    Core_Data_Spells_SpellData__Create_object_
+		              (iVar1,uVar2,Method_Core_Net_SrvCommand_SetCallback_ProtoGetTournamentListAns___);
+		    Core_Net_AbstractService__LogCommandAnswer(param1,iVar1,0);
+		  }
+		  return param1_00;
+		}
+		*/
+
 		}
 
 		// Token: 0x060006AB RID: 1707 RVA: 0x00002052 File Offset: 0x00000252
@@ -158,6 +207,59 @@ namespace ServicesNamespace
 		[Address(RVA = "0x5AAA", Offset = "0x5AAA", VA = "0x5AAA")]
 		public OpToken<IMessage, object> GetTournamentsList()
 		{
+		/* --- GHIDRA: GetTournamentsList ---
+		int * ServicesNamespace_TournamentsService__GetTournamentsList
+		                (int *param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  int *param1_00;
+		  int iVar1;
+		  undefined4 uVar2;
+		  undefined4 local_c;
+		  undefined8 local_8;
+		  
+		  if (DAT_ram_00a5b7ce == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_SrvCommand__IMessage__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Protocol_Tournaments_ProtoAddBetCmd_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Method_Core_Net_SrvCommand_SetCallback_ProtoAddBetAns___);
+		    Mono_Security_ASN1__get_Item(&Core_Net_SrvCommand_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Protocol_Tournaments_TournamentCommands_TypeInfo);
+		    DAT_ram_00a5b7ce = '\x01';
+		  }
+		  if (*(int *)(Core_Net_SrvCommand_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Core_Net_SrvCommand_TypeInfo);
+		  }
+		  param1_00 = (int *)Core_Net_AbstractService__PushCommand
+		                               (param1,*(undefined4 *)
+		                                        (*(int *)(Core_Net_SrvCommand_TypeInfo + 0x5c) + 4),0);
+		  iVar1 = System_IO_Compression_DeflateStreamNative_UnmanagedReadOrWrite__Invoke(param1_00,0);
+		  if (iVar1 != 0) {
+		    (**(code **)((ulonglong)*(uint *)(*param1_00 + 0x110) * 4))
+		              (param1_00,*(undefined4 *)(*param1_00 + 0x114));
+		    iVar1 = unnamed_function_1417(Protocol_Tournaments_ProtoAddBetCmd_TypeInfo);
+		    *(undefined4 *)(iVar1 + 0xc) = param2;
+		    *(undefined4 *)(iVar1 + 0x10) = param3;
+		    uVar2 = (**(code **)((ulonglong)*(uint *)(*param1 + 0xe0) * 4))
+		                      (param1,*(undefined4 *)(*param1 + 0xe4));
+		    if (*(int *)(Core_Net_SrvCommand_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(Core_Net_SrvCommand_TypeInfo);
+		    }
+		    iVar1 = Core_Net_SrvCommand___ctor(uVar2,2,iVar1,0);
+		    local_8 = 0x2ffffffff;
+		    local_c = Protocol_Tournaments_TournamentCommands_TypeInfo;
+		    uVar2 = Spine_SkeletonJson__GetFloat(&local_c,0);
+		    *(undefined4 *)(iVar1 + 0x14) = uVar2;
+		    uVar2 = unnamed_function_1417(System_Action_SrvCommand__IMessage__TypeInfo);
+		    System_Runtime_CompilerServices_AsyncVoidMethodBuilder__AwaitUnsafeOnCompleted_UniTask_Awaiter_bool___BossCaptainViewMediator__SetupView_d__8_
+		              (uVar2,param1,*(undefined4 *)(*param1 + 0xec),0);
+		    Core_Data_Spells_SpellData__Create_object_
+		              (iVar1,uVar2,Method_Core_Net_SrvCommand_SetCallback_ProtoAddBetAns___);
+		    Core_Net_AbstractService__LogCommandAnswer(param1,iVar1,0);
+		  }
+		  return param1_00;
+		}
+		*/
+
 			return null;
 		}
 
@@ -166,6 +268,59 @@ namespace ServicesNamespace
 		[Address(RVA = "0x5AAB", Offset = "0x5AAB", VA = "0x5AAB")]
 		public OpToken<IMessage, object> AddBet(uint tournamentTypeId, ResourceSet betValue)
 		{
+		/* --- GHIDRA: AddBet ---
+		int * ServicesNamespace_TournamentsService__AddBet
+		                (int *param1,undefined4 param2,undefined8 param3,undefined4 param4)
+		
+		{
+		  int *param1_00;
+		  int iVar1;
+		  undefined4 uVar2;
+		  undefined4 local_c;
+		  undefined8 local_8;
+		  
+		  if (DAT_ram_00a5b7cf == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_SrvCommand__IMessage__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Protocol_Tournaments_ProtoSetBetCmd_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Method_Core_Net_SrvCommand_SetCallback_ProtoSetBetAns___);
+		    Mono_Security_ASN1__get_Item(&Core_Net_SrvCommand_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Protocol_Tournaments_TournamentCommands_TypeInfo);
+		    DAT_ram_00a5b7cf = '\x01';
+		  }
+		  if (*(int *)(Core_Net_SrvCommand_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Core_Net_SrvCommand_TypeInfo);
+		  }
+		  param1_00 = (int *)Core_Net_AbstractService__PushCommand
+		                               (param1,*(undefined4 *)
+		                                        (*(int *)(Core_Net_SrvCommand_TypeInfo + 0x5c) + 4),0);
+		  iVar1 = System_IO_Compression_DeflateStreamNative_UnmanagedReadOrWrite__Invoke(param1_00,0);
+		  if (iVar1 != 0) {
+		    (**(code **)((ulonglong)*(uint *)(*param1_00 + 0x110) * 4))
+		              (param1_00,*(undefined4 *)(*param1_00 + 0x114));
+		    iVar1 = unnamed_function_1417(Protocol_Tournaments_ProtoSetBetCmd_TypeInfo);
+		    *(undefined8 *)(iVar1 + 0x10) = param3;
+		    *(undefined4 *)(iVar1 + 0xc) = param2;
+		    uVar2 = (**(code **)((ulonglong)*(uint *)(*param1 + 0xe0) * 4))
+		                      (param1,*(undefined4 *)(*param1 + 0xe4));
+		    if (*(int *)(Core_Net_SrvCommand_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(Core_Net_SrvCommand_TypeInfo);
+		    }
+		    iVar1 = Core_Net_SrvCommand___ctor(uVar2,3,iVar1,0);
+		    local_8 = 0x3ffffffff;
+		    local_c = Protocol_Tournaments_TournamentCommands_TypeInfo;
+		    uVar2 = Spine_SkeletonJson__GetFloat(&local_c,0);
+		    *(undefined4 *)(iVar1 + 0x14) = uVar2;
+		    uVar2 = unnamed_function_1417(System_Action_SrvCommand__IMessage__TypeInfo);
+		    System_Runtime_CompilerServices_AsyncVoidMethodBuilder__AwaitUnsafeOnCompleted_UniTask_Awaiter_bool___BossCaptainViewMediator__SetupView_d__8_
+		              (uVar2,param1,*(undefined4 *)(*param1 + 0xec),0);
+		    Core_Data_Spells_SpellData__Create_object_
+		              (iVar1,uVar2,Method_Core_Net_SrvCommand_SetCallback_ProtoSetBetAns___);
+		    Core_Net_AbstractService__LogCommandAnswer(param1,iVar1,0);
+		  }
+		  return param1_00;
+		}
+		*/
+
 			return null;
 		}
 
@@ -174,6 +329,57 @@ namespace ServicesNamespace
 		[Address(RVA = "0x5AAC", Offset = "0x5AAC", VA = "0x5AAC")]
 		public OpToken<IMessage, object> SetBet(uint tournamentTypeId, ulong userId)
 		{
+		/* --- GHIDRA: SetBet ---
+		int * ServicesNamespace_TournamentsService__SetBet(int *param1,undefined8 param2,undefined4 param3)
+		
+		{
+		  int *param1_00;
+		  int iVar1;
+		  undefined4 uVar2;
+		  undefined4 local_c;
+		  undefined8 local_8;
+		  
+		  if (DAT_ram_00a5b7d0 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_SrvCommand__IMessage__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Protocol_Tournaments_ProtoJoinForBrowsingCombatCmd_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Method_Core_Net_SrvCommand_SetCallback_ProtoJoinToCombatAns___);
+		    Mono_Security_ASN1__get_Item(&Core_Net_SrvCommand_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Protocol_Tournaments_TournamentCommands_TypeInfo);
+		    DAT_ram_00a5b7d0 = '\x01';
+		  }
+		  if (*(int *)(Core_Net_SrvCommand_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Core_Net_SrvCommand_TypeInfo);
+		  }
+		  param1_00 = (int *)Core_Net_AbstractService__PushCommand
+		                               (param1,*(undefined4 *)
+		                                        (*(int *)(Core_Net_SrvCommand_TypeInfo + 0x5c) + 4),0);
+		  iVar1 = System_IO_Compression_DeflateStreamNative_UnmanagedReadOrWrite__Invoke(param1_00,0);
+		  if (iVar1 != 0) {
+		    (**(code **)((ulonglong)*(uint *)(*param1_00 + 0x110) * 4))
+		              (param1_00,*(undefined4 *)(*param1_00 + 0x114));
+		    iVar1 = unnamed_function_1417(Protocol_Tournaments_ProtoJoinForBrowsingCombatCmd_TypeInfo);
+		    *(undefined8 *)(iVar1 + 0x10) = param2;
+		    uVar2 = (**(code **)((ulonglong)*(uint *)(*param1 + 0xe0) * 4))
+		                      (param1,*(undefined4 *)(*param1 + 0xe4));
+		    if (*(int *)(Core_Net_SrvCommand_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(Core_Net_SrvCommand_TypeInfo);
+		    }
+		    iVar1 = Core_Net_SrvCommand___ctor(uVar2,5,iVar1,0);
+		    local_8 = 0x5ffffffff;
+		    local_c = Protocol_Tournaments_TournamentCommands_TypeInfo;
+		    uVar2 = Spine_SkeletonJson__GetFloat(&local_c,0);
+		    *(undefined4 *)(iVar1 + 0x14) = uVar2;
+		    uVar2 = unnamed_function_1417(System_Action_SrvCommand__IMessage__TypeInfo);
+		    System_Runtime_CompilerServices_AsyncVoidMethodBuilder__AwaitUnsafeOnCompleted_UniTask_Awaiter_bool___BossCaptainViewMediator__SetupView_d__8_
+		              (uVar2,param1,*(undefined4 *)(*param1 + 0xec),0);
+		    Core_Data_Spells_SpellData__Create_object_
+		              (iVar1,uVar2,Method_Core_Net_SrvCommand_SetCallback_ProtoJoinToCombatAns___);
+		    Core_Net_AbstractService__LogCommandAnswer(param1,iVar1,0);
+		  }
+		  return param1_00;
+		}
+		*/
+
 			return null;
 		}
 
@@ -182,6 +388,57 @@ namespace ServicesNamespace
 		[Address(RVA = "0x5AAD", Offset = "0x5AAD", VA = "0x5AAD")]
 		public OpToken<IMessage, object> BrowseCombat(ulong userId)
 		{
+		/* --- GHIDRA: BrowseCombat ---
+		int * ServicesNamespace_TournamentsService__BrowseCombat(int *param1,undefined4 param2)
+		
+		{
+		  int *param1_00;
+		  int iVar1;
+		  undefined4 uVar2;
+		  undefined4 param1_01;
+		  undefined4 local_c;
+		  undefined8 local_8;
+		  
+		  if (DAT_ram_00a5b7d1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_SrvCommand__IMessage__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Protocol_Tournaments_ProtoUnJoinForBrowsingCombatCmd_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Method_Core_Net_SrvCommand_SetCallback_ProtoEmptyAns___);
+		    Mono_Security_ASN1__get_Item(&Core_Net_SrvCommand_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Protocol_Tournaments_TournamentCommands_TypeInfo);
+		    DAT_ram_00a5b7d1 = '\x01';
+		  }
+		  if (*(int *)(Core_Net_SrvCommand_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Core_Net_SrvCommand_TypeInfo);
+		  }
+		  param1_00 = (int *)Core_Net_AbstractService__PushCommand
+		                               (param1,*(undefined4 *)
+		                                        (*(int *)(Core_Net_SrvCommand_TypeInfo + 0x5c) + 4),0);
+		  iVar1 = System_IO_Compression_DeflateStreamNative_UnmanagedReadOrWrite__Invoke(param1_00,0);
+		  if (iVar1 != 0) {
+		    (**(code **)((ulonglong)*(uint *)(*param1_00 + 0x110) * 4))
+		              (param1_00,*(undefined4 *)(*param1_00 + 0x114));
+		    uVar2 = unnamed_function_1417(Protocol_Tournaments_ProtoUnJoinForBrowsingCombatCmd_TypeInfo);
+		    param1_01 = (**(code **)((ulonglong)*(uint *)(*param1 + 0xe0) * 4))
+		                          (param1,*(undefined4 *)(*param1 + 0xe4));
+		    if (*(int *)(Core_Net_SrvCommand_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(Core_Net_SrvCommand_TypeInfo);
+		    }
+		    iVar1 = Core_Net_SrvCommand___ctor(param1_01,6,uVar2,0);
+		    local_8 = 0x6ffffffff;
+		    local_c = Protocol_Tournaments_TournamentCommands_TypeInfo;
+		    uVar2 = Spine_SkeletonJson__GetFloat(&local_c,0);
+		    *(undefined4 *)(iVar1 + 0x14) = uVar2;
+		    uVar2 = unnamed_function_1417(System_Action_SrvCommand__IMessage__TypeInfo);
+		    System_Runtime_CompilerServices_AsyncVoidMethodBuilder__AwaitUnsafeOnCompleted_UniTask_Awaiter_bool___BossCaptainViewMediator__SetupView_d__8_
+		              (uVar2,param1,*(undefined4 *)(*param1 + 0xec),0);
+		    Core_Data_Spells_SpellData__Create_object_
+		              (iVar1,uVar2,Method_Core_Net_SrvCommand_SetCallback_ProtoEmptyAns___);
+		    Core_Net_AbstractService__LogCommandAnswer(param1,iVar1,0);
+		  }
+		  return param1_00;
+		}
+		*/
+
 			return null;
 		}
 
@@ -190,6 +447,58 @@ namespace ServicesNamespace
 		[Address(RVA = "0x5AAE", Offset = "0x5AAE", VA = "0x5AAE")]
 		public OpToken<IMessage, object> LeaveCombatBrowsing()
 		{
+		/* --- GHIDRA: LeaveCombatBrowsing ---
+		int * ServicesNamespace_TournamentsService__LeaveCombatBrowsing
+		                (int *param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  int *param1_00;
+		  int iVar1;
+		  undefined4 uVar2;
+		  undefined4 local_c;
+		  undefined8 local_8;
+		  
+		  if (DAT_ram_00a5b7d2 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_SrvCommand__IMessage__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Protocol_Tournaments_ProtoGetHistoryCmd_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Method_Core_Net_SrvCommand_SetCallback_ProtoGetHistoryAns___);
+		    Mono_Security_ASN1__get_Item(&Core_Net_SrvCommand_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Protocol_Tournaments_TournamentCommands_TypeInfo);
+		    DAT_ram_00a5b7d2 = '\x01';
+		  }
+		  if (*(int *)(Core_Net_SrvCommand_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Core_Net_SrvCommand_TypeInfo);
+		  }
+		  param1_00 = (int *)Core_Net_AbstractService__PushCommand
+		                               (param1,*(undefined4 *)
+		                                        (*(int *)(Core_Net_SrvCommand_TypeInfo + 0x5c) + 4),0);
+		  iVar1 = System_IO_Compression_DeflateStreamNative_UnmanagedReadOrWrite__Invoke(param1_00,0);
+		  if (iVar1 != 0) {
+		    (**(code **)((ulonglong)*(uint *)(*param1_00 + 0x110) * 4))
+		              (param1_00,*(undefined4 *)(*param1_00 + 0x114));
+		    iVar1 = unnamed_function_1417(Protocol_Tournaments_ProtoGetHistoryCmd_TypeInfo);
+		    *(undefined4 *)(iVar1 + 0xc) = param2;
+		    uVar2 = (**(code **)((ulonglong)*(uint *)(*param1 + 0xe0) * 4))
+		                      (param1,*(undefined4 *)(*param1 + 0xe4));
+		    if (*(int *)(Core_Net_SrvCommand_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(Core_Net_SrvCommand_TypeInfo);
+		    }
+		    iVar1 = Core_Net_SrvCommand___ctor(uVar2,7,iVar1,0);
+		    local_8 = 0x7ffffffff;
+		    local_c = Protocol_Tournaments_TournamentCommands_TypeInfo;
+		    uVar2 = Spine_SkeletonJson__GetFloat(&local_c,0);
+		    *(undefined4 *)(iVar1 + 0x14) = uVar2;
+		    uVar2 = unnamed_function_1417(System_Action_SrvCommand__IMessage__TypeInfo);
+		    System_Runtime_CompilerServices_AsyncVoidMethodBuilder__AwaitUnsafeOnCompleted_UniTask_Awaiter_bool___BossCaptainViewMediator__SetupView_d__8_
+		              (uVar2,param1,*(undefined4 *)(*param1 + 0xec),0);
+		    Core_Data_Spells_SpellData__Create_object_
+		              (iVar1,uVar2,Method_Core_Net_SrvCommand_SetCallback_ProtoGetHistoryAns___);
+		    Core_Net_AbstractService__LogCommandAnswer(param1,iVar1,0);
+		  }
+		  return param1_00;
+		}
+		*/
+
 			return null;
 		}
 
@@ -198,6 +507,57 @@ namespace ServicesNamespace
 		[Address(RVA = "0x5AAF", Offset = "0x5AAF", VA = "0x5AAF")]
 		public OpToken<IMessage, object> GetTournamentHistory(uint tournamentTypeId)
 		{
+		/* --- GHIDRA: GetTournamentHistory ---
+		int * ServicesNamespace_TournamentsService__GetTournamentHistory(int *param1,undefined4 param2)
+		
+		{
+		  int *param1_00;
+		  int iVar1;
+		  undefined4 uVar2;
+		  undefined4 param1_01;
+		  undefined4 local_c;
+		  undefined8 local_8;
+		  
+		  if (DAT_ram_00a5b7d3 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_SrvCommand__IMessage__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Protocol_Tournaments_ProtoSubscribeCmd_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Method_Core_Net_SrvCommand_SetCallback_ProtoEmptyAns___);
+		    Mono_Security_ASN1__get_Item(&Core_Net_SrvCommand_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Protocol_Tournaments_TournamentCommands_TypeInfo);
+		    DAT_ram_00a5b7d3 = '\x01';
+		  }
+		  if (*(int *)(Core_Net_SrvCommand_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Core_Net_SrvCommand_TypeInfo);
+		  }
+		  param1_00 = (int *)Core_Net_AbstractService__PushCommand
+		                               (param1,*(undefined4 *)
+		                                        (*(int *)(Core_Net_SrvCommand_TypeInfo + 0x5c) + 4),0);
+		  iVar1 = System_IO_Compression_DeflateStreamNative_UnmanagedReadOrWrite__Invoke(param1_00,0);
+		  if (iVar1 != 0) {
+		    (**(code **)((ulonglong)*(uint *)(*param1_00 + 0x110) * 4))
+		              (param1_00,*(undefined4 *)(*param1_00 + 0x114));
+		    uVar2 = unnamed_function_1417(Protocol_Tournaments_ProtoSubscribeCmd_TypeInfo);
+		    param1_01 = (**(code **)((ulonglong)*(uint *)(*param1 + 0xe0) * 4))
+		                          (param1,*(undefined4 *)(*param1 + 0xe4));
+		    if (*(int *)(Core_Net_SrvCommand_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(Core_Net_SrvCommand_TypeInfo);
+		    }
+		    iVar1 = Core_Net_SrvCommand___ctor(param1_01,8,uVar2,0);
+		    local_8 = 0x8ffffffff;
+		    local_c = Protocol_Tournaments_TournamentCommands_TypeInfo;
+		    uVar2 = Spine_SkeletonJson__GetFloat(&local_c,0);
+		    *(undefined4 *)(iVar1 + 0x14) = uVar2;
+		    uVar2 = unnamed_function_1417(System_Action_SrvCommand__IMessage__TypeInfo);
+		    System_Runtime_CompilerServices_AsyncVoidMethodBuilder__AwaitUnsafeOnCompleted_UniTask_Awaiter_bool___BossCaptainViewMediator__SetupView_d__8_
+		              (uVar2,param1,*(undefined4 *)(*param1 + 0xec),0);
+		    Core_Data_Spells_SpellData__Create_object_
+		              (iVar1,uVar2,Method_Core_Net_SrvCommand_SetCallback_ProtoEmptyAns___);
+		    Core_Net_AbstractService__LogCommandAnswer(param1,iVar1,0);
+		  }
+		  return param1_00;
+		}
+		*/
+
 			return null;
 		}
 
@@ -206,6 +566,57 @@ namespace ServicesNamespace
 		[Address(RVA = "0x5AB0", Offset = "0x5AB0", VA = "0x5AB0")]
 		public OpToken<IMessage, object> Subscribe()
 		{
+		/* --- GHIDRA: Subscribe ---
+		int * ServicesNamespace_TournamentsService__Subscribe(int *param1,undefined4 param2)
+		
+		{
+		  int *param1_00;
+		  int iVar1;
+		  undefined4 uVar2;
+		  undefined4 param1_01;
+		  undefined4 local_c;
+		  undefined8 local_8;
+		  
+		  if (DAT_ram_00a5b7d4 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_SrvCommand__IMessage__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Protocol_Tournaments_ProtoUnsubscribeCmd_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Method_Core_Net_SrvCommand_SetCallback_ProtoEmptyAns___);
+		    Mono_Security_ASN1__get_Item(&Core_Net_SrvCommand_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Protocol_Tournaments_TournamentCommands_TypeInfo);
+		    DAT_ram_00a5b7d4 = '\x01';
+		  }
+		  if (*(int *)(Core_Net_SrvCommand_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Core_Net_SrvCommand_TypeInfo);
+		  }
+		  param1_00 = (int *)Core_Net_AbstractService__PushCommand
+		                               (param1,*(undefined4 *)
+		                                        (*(int *)(Core_Net_SrvCommand_TypeInfo + 0x5c) + 4),0);
+		  iVar1 = System_IO_Compression_DeflateStreamNative_UnmanagedReadOrWrite__Invoke(param1_00,0);
+		  if (iVar1 != 0) {
+		    (**(code **)((ulonglong)*(uint *)(*param1_00 + 0x110) * 4))
+		              (param1_00,*(undefined4 *)(*param1_00 + 0x114));
+		    uVar2 = unnamed_function_1417(Protocol_Tournaments_ProtoUnsubscribeCmd_TypeInfo);
+		    param1_01 = (**(code **)((ulonglong)*(uint *)(*param1 + 0xe0) * 4))
+		                          (param1,*(undefined4 *)(*param1 + 0xe4));
+		    if (*(int *)(Core_Net_SrvCommand_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(Core_Net_SrvCommand_TypeInfo);
+		    }
+		    iVar1 = Core_Net_SrvCommand___ctor(param1_01,9,uVar2,0);
+		    local_8 = 0x9ffffffff;
+		    local_c = Protocol_Tournaments_TournamentCommands_TypeInfo;
+		    uVar2 = Spine_SkeletonJson__GetFloat(&local_c,0);
+		    *(undefined4 *)(iVar1 + 0x14) = uVar2;
+		    uVar2 = unnamed_function_1417(System_Action_SrvCommand__IMessage__TypeInfo);
+		    System_Runtime_CompilerServices_AsyncVoidMethodBuilder__AwaitUnsafeOnCompleted_UniTask_Awaiter_bool___BossCaptainViewMediator__SetupView_d__8_
+		              (uVar2,param1,*(undefined4 *)(*param1 + 0xec),0);
+		    Core_Data_Spells_SpellData__Create_object_
+		              (iVar1,uVar2,Method_Core_Net_SrvCommand_SetCallback_ProtoEmptyAns___);
+		    Core_Net_AbstractService__LogCommandAnswer(param1,iVar1,0);
+		  }
+		  return param1_00;
+		}
+		*/
+
 			return null;
 		}
 
@@ -214,6 +625,58 @@ namespace ServicesNamespace
 		[Address(RVA = "0x5AB1", Offset = "0x5AB1", VA = "0x5AB1")]
 		public OpToken<IMessage, object> Unsubscribe()
 		{
+		/* --- GHIDRA: Unsubscribe ---
+		int * ServicesNamespace_TournamentsService__Unsubscribe(int *param1,undefined4 param2)
+		
+		{
+		  int *param1_00;
+		  int iVar1;
+		  undefined4 uVar2;
+		  undefined4 param1_01;
+		  undefined4 local_c;
+		  undefined8 local_8;
+		  
+		  if (DAT_ram_00a5b7d5 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_SrvCommand__IMessage__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Protocol_Tournaments_ProtoLeaveTournamentCmd_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Method_Core_Net_SrvCommand_SetCallback_ProtoLeaveTournamentAns___)
+		    ;
+		    Mono_Security_ASN1__get_Item(&Core_Net_SrvCommand_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Protocol_Tournaments_TournamentCommands_TypeInfo);
+		    DAT_ram_00a5b7d5 = '\x01';
+		  }
+		  if (*(int *)(Core_Net_SrvCommand_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Core_Net_SrvCommand_TypeInfo);
+		  }
+		  param1_00 = (int *)Core_Net_AbstractService__PushCommand
+		                               (param1,*(undefined4 *)
+		                                        (*(int *)(Core_Net_SrvCommand_TypeInfo + 0x5c) + 4),0);
+		  iVar1 = System_IO_Compression_DeflateStreamNative_UnmanagedReadOrWrite__Invoke(param1_00,0);
+		  if (iVar1 != 0) {
+		    (**(code **)((ulonglong)*(uint *)(*param1_00 + 0x110) * 4))
+		              (param1_00,*(undefined4 *)(*param1_00 + 0x114));
+		    uVar2 = unnamed_function_1417(Protocol_Tournaments_ProtoLeaveTournamentCmd_TypeInfo);
+		    param1_01 = (**(code **)((ulonglong)*(uint *)(*param1 + 0xe0) * 4))
+		                          (param1,*(undefined4 *)(*param1 + 0xe4));
+		    if (*(int *)(Core_Net_SrvCommand_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(Core_Net_SrvCommand_TypeInfo);
+		    }
+		    iVar1 = Core_Net_SrvCommand___ctor(param1_01,0x10,uVar2,0);
+		    local_8 = 0x10ffffffff;
+		    local_c = Protocol_Tournaments_TournamentCommands_TypeInfo;
+		    uVar2 = Spine_SkeletonJson__GetFloat(&local_c,0);
+		    *(undefined4 *)(iVar1 + 0x14) = uVar2;
+		    uVar2 = unnamed_function_1417(System_Action_SrvCommand__IMessage__TypeInfo);
+		    System_Runtime_CompilerServices_AsyncVoidMethodBuilder__AwaitUnsafeOnCompleted_UniTask_Awaiter_bool___BossCaptainViewMediator__SetupView_d__8_
+		              (uVar2,param1,*(undefined4 *)(*param1 + 0xec),0);
+		    Core_Data_Spells_SpellData__Create_object_
+		              (iVar1,uVar2,Method_Core_Net_SrvCommand_SetCallback_ProtoLeaveTournamentAns___);
+		    Core_Net_AbstractService__LogCommandAnswer(param1,iVar1,0);
+		  }
+		  return param1_00;
+		}
+		*/
+
 			return null;
 		}
 
@@ -232,4 +695,583 @@ namespace ServicesNamespace
 		{
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_ServiceId ---
+		void ServicesNamespace_TournamentsService__get_ServiceId
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a5b7c0 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_ProtoBetChangedEvt__TypeInfo);
+		    DAT_ram_00a5b7c0 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x14);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = UnityEngine_UI_Image__set_sprite(param1_00,param2,0);
+		    param2_00 = System_Action_ProtoBetChangedEvt__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_ProtoBetChangedEvt__TypeInfo), iVar2 == 0))
+		    break;
+		    iVar2 = func_ii_4329(param1 + 0x14,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: add_BetChangedEvent ---
+		void ServicesNamespace_TournamentsService__add_BetChangedEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a5b7c1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_ProtoBetChangedEvt__TypeInfo);
+		    DAT_ram_00a5b7c1 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x14);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = func_ii_7048(param1_00,param2,0);
+		    param2_00 = System_Action_ProtoBetChangedEvt__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_ProtoBetChangedEvt__TypeInfo), iVar2 == 0))
+		    break;
+		    iVar2 = func_ii_4329(param1 + 0x14,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: remove_BetChangedEvent ---
+		void ServicesNamespace_TournamentsService__remove_BetChangedEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a5b7c2 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_ProtoBetChangedOnPlayerEvt__TypeInfo);
+		    DAT_ram_00a5b7c2 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x18);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = UnityEngine_UI_Image__set_sprite(param1_00,param2,0);
+		    param2_00 = System_Action_ProtoBetChangedOnPlayerEvt__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_ProtoBetChangedOnPlayerEvt__TypeInfo),
+		       iVar2 == 0)) break;
+		    iVar2 = func_ii_4329(param1 + 0x18,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: add_BetChangedOnPlayerEvent ---
+		void ServicesNamespace_TournamentsService__add_BetChangedOnPlayerEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a5b7c3 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_ProtoBetChangedOnPlayerEvt__TypeInfo);
+		    DAT_ram_00a5b7c3 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x18);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = func_ii_7048(param1_00,param2,0);
+		    param2_00 = System_Action_ProtoBetChangedOnPlayerEvt__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_ProtoBetChangedOnPlayerEvt__TypeInfo),
+		       iVar2 == 0)) break;
+		    iVar2 = func_ii_4329(param1 + 0x18,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: remove_BetChangedOnPlayerEvent ---
+		void ServicesNamespace_TournamentsService__remove_BetChangedOnPlayerEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a5b7c4 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_ProtoHealtChangedEvt__TypeInfo);
+		    DAT_ram_00a5b7c4 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x1c);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = UnityEngine_UI_Image__set_sprite(param1_00,param2,0);
+		    param2_00 = System_Action_ProtoHealtChangedEvt__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_ProtoHealtChangedEvt__TypeInfo), iVar2 == 0))
+		    break;
+		    iVar2 = func_ii_4329(param1 + 0x1c,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: add_HealthChangedEvent ---
+		void ServicesNamespace_TournamentsService__add_HealthChangedEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a5b7c5 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_ProtoHealtChangedEvt__TypeInfo);
+		    DAT_ram_00a5b7c5 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x1c);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = func_ii_7048(param1_00,param2,0);
+		    param2_00 = System_Action_ProtoHealtChangedEvt__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_ProtoHealtChangedEvt__TypeInfo), iVar2 == 0))
+		    break;
+		    iVar2 = func_ii_4329(param1 + 0x1c,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: remove_HealthChangedEvent ---
+		void ServicesNamespace_TournamentsService__remove_HealthChangedEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a5b7c6 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_ProtoStateChangedEvt__TypeInfo);
+		    DAT_ram_00a5b7c6 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x20);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = UnityEngine_UI_Image__set_sprite(param1_00,param2,0);
+		    param2_00 = System_Action_ProtoStateChangedEvt__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_ProtoStateChangedEvt__TypeInfo), iVar2 == 0))
+		    break;
+		    iVar2 = func_ii_4329(param1 + 0x20,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: add_StateChangedEvent ---
+		void ServicesNamespace_TournamentsService__add_StateChangedEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a5b7c7 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_ProtoStateChangedEvt__TypeInfo);
+		    DAT_ram_00a5b7c7 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x20);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = func_ii_7048(param1_00,param2,0);
+		    param2_00 = System_Action_ProtoStateChangedEvt__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_ProtoStateChangedEvt__TypeInfo), iVar2 == 0))
+		    break;
+		    iVar2 = func_ii_4329(param1 + 0x20,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: remove_StateChangedEvent ---
+		void ServicesNamespace_TournamentsService__remove_StateChangedEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a5b7c8 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_ProtoCurrentTnmCombatCompleteEvt__TypeInfo);
+		    DAT_ram_00a5b7c8 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x24);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = UnityEngine_UI_Image__set_sprite(param1_00,param2,0);
+		    param2_00 = System_Action_ProtoCurrentTnmCombatCompleteEvt__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_ProtoCurrentTnmCombatCompleteEvt__TypeInfo),
+		       iVar2 == 0)) break;
+		    iVar2 = func_ii_4329(param1 + 0x24,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: add_CurrentCombatCompleteEvent ---
+		void ServicesNamespace_TournamentsService__add_CurrentCombatCompleteEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a5b7c9 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_ProtoCurrentTnmCombatCompleteEvt__TypeInfo);
+		    DAT_ram_00a5b7c9 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x24);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = func_ii_7048(param1_00,param2,0);
+		    param2_00 = System_Action_ProtoCurrentTnmCombatCompleteEvt__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_ProtoCurrentTnmCombatCompleteEvt__TypeInfo),
+		       iVar2 == 0)) break;
+		    iVar2 = func_ii_4329(param1 + 0x24,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: remove_CurrentCombatCompleteEvent ---
+		void ServicesNamespace_TournamentsService__remove_CurrentCombatCompleteEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a5b7ca == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_ProtoFinalTnmCombatCompleteEvt__TypeInfo);
+		    DAT_ram_00a5b7ca = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x28);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = UnityEngine_UI_Image__set_sprite(param1_00,param2,0);
+		    param2_00 = System_Action_ProtoFinalTnmCombatCompleteEvt__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_ProtoFinalTnmCombatCompleteEvt__TypeInfo),
+		       iVar2 == 0)) break;
+		    iVar2 = func_ii_4329(param1 + 0x28,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: add_FinalCombatCompleteEvent ---
+		void ServicesNamespace_TournamentsService__add_FinalCombatCompleteEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a5b7cb == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_ProtoFinalTnmCombatCompleteEvt__TypeInfo);
+		    DAT_ram_00a5b7cb = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x28);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = func_ii_7048(param1_00,param2,0);
+		    param2_00 = System_Action_ProtoFinalTnmCombatCompleteEvt__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_ProtoFinalTnmCombatCompleteEvt__TypeInfo),
+		       iVar2 == 0)) break;
+		    iVar2 = func_ii_4329(param1 + 0x28,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: remove_FinalCombatCompleteEvent ---
+		void ServicesNamespace_TournamentsService__remove_FinalCombatCompleteEvent
+		               (int param1,int param2,undefined4 param3)
+		
+		{
+		  int *param1_00;
+		  int iVar1;
+		  
+		  if (DAT_ram_00a5b7cc == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_Core_Net_AbstractService_LogEvent_TournamentEvents___);
+		    Mono_Security_ASN1__get_Item(&Protocol_Tournaments_ProtoBetChangedEvt_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Protocol_Tournaments_ProtoBetChangedOnPlayerEvt_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Protocol_Tournaments_ProtoCurrentTnmCombatCompleteEvt_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Protocol_Tournaments_ProtoFinalTnmCombatCompleteEvt_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Protocol_Tournaments_ProtoHealtChangedEvt_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Protocol_Tournaments_ProtoStateChangedEvt_TypeInfo);
+		    DAT_ram_00a5b7cc = '\x01';
+		  }
+		  iVar1 = *(int *)(param2 + 0x10);
+		  UnityEngine_Purchasing_Extension_AbstractPurchasingModule__BindExtension___Il2CppFullySharedGenericType_
+		            (param1,iVar1,*(undefined4 *)(param2 + 0x20),
+		             Method_Core_Net_AbstractService_LogEvent_TournamentEvents___);
+		  if (iVar1 == 1) {
+		    iVar1 = *(int *)(param1 + 0x14);
+		    if (iVar1 == 0) {
+		      return;
+		    }
+		    param1_00 = *(int **)(param2 + 0x20);
+		    if ((param1_00 != (int *)0x0) &&
+		       (Protocol_Tournaments_ProtoBetChangedEvt_TypeInfo != *param1_00)) {
+		      System_Activator__CreateInstance(param1_00,Protocol_Tournaments_ProtoBetChangedEvt_TypeInfo);
+		      do {
+		        halt_trap();
+		      } while( true );
+		    }
+		  }
+		  else if (iVar1 == 2) {
+		    iVar1 = *(int *)(param1 + 0x18);
+		    if (iVar1 == 0) {
+		      return;
+		    }
+		    param1_00 = *(int **)(param2 + 0x20);
+		    if ((param1_00 != (int *)0x0) &&
+		       (Protocol_Tournaments_ProtoBetChangedOnPlayerEvt_TypeInfo != *param1_00)) {
+		      System_Activator__CreateInstance
+		                (param1_00,Protocol_Tournaments_ProtoBetChangedOnPlayerEvt_TypeInfo);
+		      do {
+		        halt_trap();
+		      } while( true );
+		    }
+		  }
+		  else if (iVar1 == 3) {
+		    iVar1 = *(int *)(param1 + 0x1c);
+		    if (iVar1 == 0) {
+		      return;
+		    }
+		    param1_00 = *(int **)(param2 + 0x20);
+		    if ((param1_00 != (int *)0x0) &&
+		       (Protocol_Tournaments_ProtoHealtChangedEvt_TypeInfo != *param1_00)) {
+		      System_Activator__CreateInstance(param1_00,Protocol_Tournaments_ProtoHealtChangedEvt_TypeInfo)
+		      ;
+		      do {
+		        halt_trap();
+		      } while( true );
+		    }
+		  }
+		  else if (iVar1 == 4) {
+		    iVar1 = *(int *)(param1 + 0x20);
+		    if (iVar1 == 0) {
+		      return;
+		    }
+		    param1_00 = *(int **)(param2 + 0x20);
+		    if ((param1_00 != (int *)0x0) &&
+		       (Protocol_Tournaments_ProtoStateChangedEvt_TypeInfo != *param1_00)) {
+		      System_Activator__CreateInstance(param1_00,Protocol_Tournaments_ProtoStateChangedEvt_TypeInfo)
+		      ;
+		      do {
+		        halt_trap();
+		      } while( true );
+		    }
+		  }
+		  else if (iVar1 == 5) {
+		    iVar1 = *(int *)(param1 + 0x24);
+		    if (iVar1 == 0) {
+		      return;
+		    }
+		    param1_00 = *(int **)(param2 + 0x20);
+		    if ((param1_00 != (int *)0x0) &&
+		       (Protocol_Tournaments_ProtoCurrentTnmCombatCompleteEvt_TypeInfo != *param1_00)) {
+		      System_Activator__CreateInstance
+		                (param1_00,Protocol_Tournaments_ProtoCurrentTnmCombatCompleteEvt_TypeInfo);
+		      do {
+		        halt_trap();
+		      } while( true );
+		    }
+		  }
+		  else {
+		    if (iVar1 != 6) {
+		      return;
+		    }
+		    iVar1 = *(int *)(param1 + 0x28);
+		    if (iVar1 == 0) {
+		      return;
+		    }
+		    param1_00 = *(int **)(param2 + 0x20);
+		    if ((param1_00 != (int *)0x0) &&
+		       (Protocol_Tournaments_ProtoFinalTnmCombatCompleteEvt_TypeInfo != *param1_00)) {
+		      System_Activator__CreateInstance
+		                (param1_00,Protocol_Tournaments_ProtoFinalTnmCombatCompleteEvt_TypeInfo);
+		      do {
+		        halt_trap();
+		      } while( true );
+		    }
+		  }
+		  (**(code **)((ulonglong)*(uint *)(iVar1 + 0xc) * 4))
+		            (*(undefined4 *)(iVar1 + 0x20),param1_00,*(undefined4 *)(iVar1 + 0x14));
+		  return;
+		}
+		*/
+
 }

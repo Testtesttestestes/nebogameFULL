@@ -62,4 +62,65 @@ namespace Core.Data.Skills
 		[FieldOffset(Offset = "0x0")]
 		private static readonly Dictionary<int, string> _skillsIndexNameDefinition;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_SkillsIndexNameDefinition ---
+		void Core_Data_Skills_SpellSkillsIndexNameMapping__get_SkillsIndexNameDefinition(undefined4 param1)
+		
+		{
+		  undefined4 param1_00;
+		  
+		  if (DAT_ram_00a60835 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_System_Collections_Generic_Dictionary_int__string__Add__);
+		    Mono_Security_ASN1__get_Item(&Method_System_Collections_Generic_Dictionary_int__string___ctor__)
+		    ;
+		    Mono_Security_ASN1__get_Item(&System_Collections_Generic_Dictionary_int__string__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Core_Data_Skills_SpellSkillsIndexNameMapping_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_25257);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_23308);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_21968);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_21967);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_21416);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_26321);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_20698);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_25579);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_22943);
+		    DAT_ram_00a60835 = '\x01';
+		  }
+		  param1_00 = unnamed_function_1417(System_Collections_Generic_Dictionary_int__string__TypeInfo);
+		  System_Collections_Generic_Dictionary_int__TMP_ResourceManager_FontAssetRef___set_Item
+		            (param1_00,Method_System_Collections_Generic_Dictionary_int__string___ctor__);
+		  UnityEngine_Object__GetInstanceID
+		            (param1_00,0,StringLiteral_25257,
+		             Method_System_Collections_Generic_Dictionary_int__string__Add__);
+		  UnityEngine_Object__GetInstanceID
+		            (param1_00,1,StringLiteral_23308,
+		             Method_System_Collections_Generic_Dictionary_int__string__Add__);
+		  UnityEngine_Object__GetInstanceID
+		            (param1_00,2,StringLiteral_26321,
+		             Method_System_Collections_Generic_Dictionary_int__string__Add__);
+		  UnityEngine_Object__GetInstanceID
+		            (param1_00,3,StringLiteral_21967,
+		             Method_System_Collections_Generic_Dictionary_int__string__Add__);
+		  UnityEngine_Object__GetInstanceID
+		            (param1_00,8,StringLiteral_21968,
+		             Method_System_Collections_Generic_Dictionary_int__string__Add__);
+		  UnityEngine_Object__GetInstanceID
+		            (param1_00,4,StringLiteral_22943,
+		             Method_System_Collections_Generic_Dictionary_int__string__Add__);
+		  UnityEngine_Object__GetInstanceID
+		            (param1_00,6,StringLiteral_25579,
+		             Method_System_Collections_Generic_Dictionary_int__string__Add__);
+		  UnityEngine_Object__GetInstanceID
+		            (param1_00,7,StringLiteral_20698,
+		             Method_System_Collections_Generic_Dictionary_int__string__Add__);
+		  UnityEngine_Object__GetInstanceID
+		            (param1_00,9,StringLiteral_21416,
+		             Method_System_Collections_Generic_Dictionary_int__string__Add__);
+		  **(undefined4 **)(Core_Data_Skills_SpellSkillsIndexNameMapping_TypeInfo + 0x5c) = param1_00;
+		  return;
+		}
+		*/
+
 }

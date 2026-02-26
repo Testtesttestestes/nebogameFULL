@@ -13,6 +13,17 @@ namespace Core.Extensions.Dict
 		[Address(RVA = "0xAC3F", Offset = "0xAC3F", VA = "0xAC3F")]
 		public static string GetIconAssetId(this UserMenuActionDic userMenuActionDic)
 		{
+		/* --- GHIDRA: GetIconAssetId ---
+		undefined4 Core_Extensions_Dict_UserMenuActionDicExt__GetIconAssetId(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  uVar1 = Core_Extensions_Dict_DictExt__GetAsset(*(undefined4 *)(param1 + 0x20),0x47,0);
+		  return uVar1;
+		}
+		*/
+
 			return null;
 		}
 
@@ -21,6 +32,24 @@ namespace Core.Extensions.Dict
 		[Address(RVA = "0xAC40", Offset = "0xAC40", VA = "0xAC40")]
 		public static string GetTitle(this UserMenuActionDic userMenuActionDic)
 		{
+		/* --- GHIDRA: GetTitle ---
+		undefined4 Core_Extensions_Dict_UserMenuActionDicExt__GetTitle(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  undefined4 uVar2;
+		  
+		  iVar1 = Core_Extensions_Dict_DictExt__GetApr(*(undefined4 *)(param1 + 0x14),0x34,0);
+		  if (iVar1 == 0) {
+		    uVar2 = 0;
+		  }
+		  else {
+		    uVar2 = *(undefined4 *)(iVar1 + 0x10);
+		  }
+		  return uVar2;
+		}
+		*/
+
 			return null;
 		}
 	}

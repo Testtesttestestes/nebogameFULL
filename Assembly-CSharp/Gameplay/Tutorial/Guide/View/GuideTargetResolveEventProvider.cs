@@ -51,4 +51,81 @@ namespace Gameplay.Tutorial.Guide.View
 			return null;
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: add_ResolveEvent ---
+		void Gameplay_Tutorial_Guide_View_GuideTargetResolveEventProvider__add_ResolveEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a58443 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_IGuideTargetResolveEventProvider__TypeInfo);
+		    DAT_ram_00a58443 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x10);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = func_ii_7048(param1_00,param2,0);
+		    param2_00 = System_Action_IGuideTargetResolveEventProvider__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_IGuideTargetResolveEventProvider__TypeInfo),
+		       iVar2 == 0)) break;
+		    iVar2 = func_ii_4329(param1 + 0x10,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: Gameplay.Tutorial.Guide.View.IGuideTargetResolveEventProvider.get_gameObject ---
+		void Gameplay_Tutorial_Guide_View_GuideTargetResolveEventProvider__Gameplay_Tutorial_Guide_View_IGuideTargetResolveEventProvider_get_gameObject
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a58444 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_IGuideTarget__TypeInfo);
+		    DAT_ram_00a58444 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x14);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = UnityEngine_UI_Image__set_sprite(param1_00,param2,0);
+		    param2_00 = System_Action_IGuideTarget__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_IGuideTarget__TypeInfo), iVar2 == 0)) break;
+		    iVar2 = func_ii_4329(param1 + 0x14,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
 }

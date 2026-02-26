@@ -13,6 +13,20 @@ namespace Gameplay.Auchan.Events
 		[Address(RVA = "0x9CAC", Offset = "0x9CAC", VA = "0x9CAC")]
 		public AuchanEvents()
 		{
+		/* --- GHIDRA: .ctor ---
+		undefined4 Gameplay_Auchan_Events_AuchanEvents___ctor(int param1,int param2,undefined4 param3)
+		
+		{
+		  undefined4 uVar1;
+		  undefined4 local_4;
+		  
+		  local_4 = *(undefined4 *)(*(int *)(*(int *)(param2 + 0x1c) + 0x14) + 0xc);
+		  uVar1 = System_UInt32__CompareTo
+		                    (&local_4,*(undefined4 *)(*(int *)(*(int *)(param1 + 0x1c) + 0x14) + 0xc),0);
+		  return uVar1;
+		}
+		*/
+
 		}
 
 		// Token: 0x04002AE4 RID: 10980

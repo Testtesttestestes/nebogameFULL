@@ -79,6 +79,21 @@ namespace UI.UserContextMenu
 		[Address(RVA = "0x5CA9", Offset = "0x5CA9", VA = "0x5CA9", Slot = "4")]
 		public void OnPointerDown(PointerEventData eventData)
 		{
+		/* --- GHIDRA: OnPointerDown ---
+		void UI_UserContextMenu_UserContextMenuElement__OnPointerDown
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  int iVar1;
+		  
+		  if ((*(char *)(param1 + 0x28) != '\0') && (iVar1 = *(int *)(param1 + 0x2c), iVar1 != 0)) {
+		    (**(code **)((ulonglong)*(uint *)(iVar1 + 0xc) * 4))
+		              (*(undefined4 *)(iVar1 + 0x20),param1,*(undefined4 *)(iVar1 + 0x14));
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600092D RID: 2349 RVA: 0x00002050 File Offset: 0x00000250
@@ -136,4 +151,138 @@ namespace UI.UserContextMenu
 		[FieldOffset(Offset = "0x30")]
 		private AbstractUserContextMenuElement _abstractContextMenuElement;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: set_ButtonBehaviour ---
+		void UI_UserContextMenu_UserContextMenuElement__set_ButtonBehaviour
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a5b8c1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_UserContextMenuElement__TypeInfo);
+		    DAT_ram_00a5b8c1 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x2c);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = UnityEngine_UI_Image__set_sprite(param1_00,param2,0);
+		    param2_00 = System_Action_UserContextMenuElement__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_UserContextMenuElement__TypeInfo), iVar2 == 0))
+		    break;
+		    iVar2 = func_ii_4329(param1 + 0x2c,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: add_SelectEvent ---
+		void UI_UserContextMenu_UserContextMenuElement__add_SelectEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a5b8c2 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_UserContextMenuElement__TypeInfo);
+		    DAT_ram_00a5b8c2 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x2c);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = func_ii_7048(param1_00,param2,0);
+		    param2_00 = System_Action_UserContextMenuElement__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_UserContextMenuElement__TypeInfo), iVar2 == 0))
+		    break;
+		    iVar2 = func_ii_4329(param1 + 0x2c,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: get_AbstractContextMenuElement ---
+		void UI_UserContextMenu_UserContextMenuElement__get_AbstractContextMenuElement
+		               (int param1,int param2,undefined4 param3)
+		
+		{
+		  undefined4 param1_00;
+		  int iVar1;
+		  
+		  if (DAT_ram_00a5b8c3 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_AssetContent_Loaders_AbstractGameGraphicLoader_RawImage__Texture2D__set_AssetId__
+		              );
+		    DAT_ram_00a5b8c3 = '\x01';
+		  }
+		  *(int *)(param1 + 0x30) = param2;
+		  param1_00 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_uint__object___MoveNext
+		                        (*(undefined4 *)(param1 + 0x1c),0);
+		  if (param2 != 0) {
+		    Com_TheFallenGames_OSA_CustomAdapters_TableView_Tuple_Basic_BasicTupleValueViewsHolder__UpdateAsText
+		              (param1_00,1,0);
+		    iVar1 = **(int **)(param1 + 0x10);
+		    (**(code **)((ulonglong)*(uint *)(iVar1 + 0x2d0) * 4))
+		              (*(int **)(param1 + 0x10),*(undefined4 *)(*(int *)(param1 + 0x30) + 8),
+		               *(undefined4 *)(iVar1 + 0x2d4));
+		    func_ii_7050(*(undefined4 *)(param1 + 0x14),*(undefined4 *)(param1 + 0x20),0);
+		    Core_Extensions_Dict_CultDicExt__GetIcon64AssetId
+		              (*(undefined4 *)(param1 + 0x18),*(undefined4 *)(*(int *)(param1 + 0x30) + 0x10),
+		               Method_AssetContent_Loaders_AbstractGameGraphicLoader_RawImage__Texture2D__set_AssetId__
+		              );
+		    return;
+		  }
+		  Com_TheFallenGames_OSA_CustomAdapters_TableView_Tuple_Basic_BasicTupleValueViewsHolder__UpdateAsText
+		            (param1_00,0,0);
+		  func_ii_7050(*(undefined4 *)(param1 + 0x14),*(undefined4 *)(param1 + 0x24),0);
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_AbstractContextMenuElement ---
+		void UI_UserContextMenu_UserContextMenuElement__set_AbstractContextMenuElement
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  int iVar1;
+		  
+		  if ((*(char *)(param1 + 0x28) == '\0') && (iVar1 = *(int *)(param1 + 0x2c), iVar1 != 0)) {
+		    (**(code **)((ulonglong)*(uint *)(iVar1 + 0xc) * 4))
+		              (*(undefined4 *)(iVar1 + 0x20),param1,*(undefined4 *)(iVar1 + 0x14));
+		  }
+		  return;
+		}
+		*/
+
 }

@@ -17,6 +17,48 @@ namespace UI.Elements.Buildings
 		[Address(RVA = "0x60DF", Offset = "0x60DF", VA = "0x60DF")]
 		public SpellItemArgs(uint spellId, uint level, string imageAssetId, bool isLearning)
 		{
+		/* --- GHIDRA: .ctor ---
+		undefined4 UI_Elements_Buildings_SpellItemArgs___ctor(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  int iVar2;
+		  
+		  iVar2 = **(int **)(param1 + 0x2c);
+		  uVar1 = (**(code **)((ulonglong)*(uint *)(iVar2 + 0x2c8) * 4))
+		                    (*(int **)(param1 + 0x2c),*(undefined4 *)(iVar2 + 0x2cc));
+		  return uVar1;
+		}
+		*/
+
+		/* --- GHIDRA: .ctor ---
+		undefined4 UI_Elements_Buildings_SpellItemArgs___ctor(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  int iVar2;
+		  
+		  iVar2 = **(int **)(param1 + 0x2c);
+		  uVar1 = (**(code **)((ulonglong)*(uint *)(iVar2 + 0x2c8) * 4))
+		                    (*(int **)(param1 + 0x2c),*(undefined4 *)(iVar2 + 0x2cc));
+		  return uVar1;
+		}
+		*/
+
+		/* --- GHIDRA: .ctor ---
+		undefined4 UI_Elements_Buildings_SpellItemArgs___ctor(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  int iVar2;
+		  
+		  iVar2 = **(int **)(param1 + 0x2c);
+		  uVar1 = (**(code **)((ulonglong)*(uint *)(iVar2 + 0x2c8) * 4))
+		                    (*(int **)(param1 + 0x2c),*(undefined4 *)(iVar2 + 0x2cc));
+		  return uVar1;
+		}
+		*/
+
 		}
 
 		// Token: 0x06000E57 RID: 3671 RVA: 0x00002050 File Offset: 0x00000250

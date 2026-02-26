@@ -13,6 +13,14 @@ namespace Gameplay.TutorialV2.Events
 		[Address(RVA = "0x6B02", Offset = "0x6B02", VA = "0x6B02")]
 		public TutorialEvents()
 		{
+		/* --- GHIDRA: .ctor ---
+		undefined4 Gameplay_TutorialV2_Events_TutorialEvents___ctor(undefined4 param1,undefined4 param2)
+		
+		{
+		  return 0x7ffff000;
+		}
+		*/
+
 		}
 
 		// Token: 0x04000D7B RID: 3451

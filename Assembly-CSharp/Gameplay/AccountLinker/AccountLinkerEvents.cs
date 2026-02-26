@@ -15,6 +15,15 @@ namespace Gameplay.AccountLinker
 		[Address(RVA = "0xA4AB", Offset = "0xA4AB", VA = "0xA4AB")]
 		public AccountLinkerEvents()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_AccountLinker_AccountLinkerEvents___ctor(int param1,undefined4 param2)
+		
+		{
+		  *(undefined4 *)(*(int *)(param1 + 0x1c) + 0x58) = 2;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x04002F28 RID: 12072

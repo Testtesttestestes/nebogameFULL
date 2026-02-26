@@ -15,6 +15,28 @@ namespace Gameplay.Boss.Events
 		[Address(RVA = "0x9739", Offset = "0x9739", VA = "0x9739")]
 		public BossInstanceEvents()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_Boss_Events_BossInstanceEvents___ctor(int param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a5789f == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_MVC_AbstractViewMediator_BossInstanceModel__BossInstanceEvents__BossInstanceController__BossCaptainView__Dispose__
+		              );
+		    DAT_ram_00a5789f = '\x01';
+		  }
+		  System_Runtime_CompilerServices_AsyncTaskMethodBuilder__AwaitUnsafeOnCompleted_ConfiguredTaskAwaitable_ConfiguredTaskAwaiter__WebRequestStream__WriteChunkTrailer_d__40_
+		            (*(undefined4 *)(param1 + 0x18),0);
+		  System_Threading_CancellationTokenSource__Cancel(*(undefined4 *)(param1 + 0x18),0);
+		  MVC_AbstractViewMediator_object__object__object__object___Core_MVC_Interfaces_IViewMediator_set_View
+		            (param1,
+		             Method_MVC_AbstractViewMediator_BossInstanceModel__BossInstanceEvents__BossInstanceController__BossCaptainView__Dispose__
+		            );
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x040027D7 RID: 10199

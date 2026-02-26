@@ -61,4 +61,18 @@ namespace Gameplay.Combat.TeamCombat.Model
 		{
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: set_IsMyPlayer ---
+		void Gameplay_Combat_TeamCombat_Model_TeamCombatPlayer__set_IsMyPlayer
+		               (undefined4 param1,undefined4 param2,undefined4 param3,undefined4 param4,
+		               undefined4 param5)
+		
+		{
+		  Gameplay_Combat_Model_CombatPlayer__Dispose(param1,param2,param3,param4,param4);
+		  return;
+		}
+		*/
+
 }

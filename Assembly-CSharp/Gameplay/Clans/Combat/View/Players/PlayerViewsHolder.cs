@@ -80,4 +80,138 @@ namespace Gameplay.Clans.Combat.View.Players
 		[FieldOffset(Offset = "0x1C")]
 		private ICombatPLayerView _itemRenderer;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_ItemRenderer ---
+		undefined4
+		Gameplay_Clans_Combat_View_Players_PlayerViewsHolder__get_ItemRenderer(int param1,undefined4 param2)
+		
+		{
+		  uint uVar1;
+		  uint *puVar2;
+		  undefined4 uVar3;
+		  int *param1_00;
+		  int iVar4;
+		  
+		  if (DAT_ram_00a57782 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Gameplay_Combat_View_Players_ICombatPLayerView_TypeInfo);
+		    DAT_ram_00a57782 = '\x01';
+		  }
+		  param1_00 = *(int **)(param1 + 0x1c);
+		  iVar4 = *param1_00;
+		  if (*(ushort *)(iVar4 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (Gameplay_Combat_View_Players_ICombatPLayerView_TypeInfo ==
+		          *(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8)) {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8 + 4) * 8 + iVar4 + 0x100);
+		        goto code_r0x80dd82ae;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar4 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(param1_00,Gameplay_Combat_View_Players_ICombatPLayerView_TypeInfo,8)
+		  ;
+		code_r0x80dd82ae:
+		  uVar3 = (**(code **)((ulonglong)*puVar2 * 4))(param1_00,puVar2[1]);
+		  return uVar3;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_Player ---
+		void Gameplay_Clans_Combat_View_Players_PlayerViewsHolder__get_Player
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  uint uVar1;
+		  uint *puVar2;
+		  int *param1_00;
+		  int iVar3;
+		  
+		  if (DAT_ram_00a57783 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Gameplay_Combat_View_Players_ICombatPLayerView_TypeInfo);
+		    DAT_ram_00a57783 = '\x01';
+		  }
+		  param1_00 = *(int **)(param1 + 0x1c);
+		  iVar3 = *param1_00;
+		  if (*(ushort *)(iVar3 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (Gameplay_Combat_View_Players_ICombatPLayerView_TypeInfo ==
+		          *(int *)(*(int *)(iVar3 + 0x58) + uVar1 * 8)) {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar3 + 0x58) + uVar1 * 8 + 4) * 8 + iVar3 + 0x108);
+		        goto code_r0x80dd8355;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar3 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(param1_00,Gameplay_Combat_View_Players_ICombatPLayerView_TypeInfo,9)
+		  ;
+		code_r0x80dd8355:
+		  (**(code **)((ulonglong)*puVar2 * 4))(param1_00,param2,puVar2[1]);
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_Player ---
+		void Gameplay_Clans_Combat_View_Players_PlayerViewsHolder__set_Player(int param1,undefined4 param2)
+		
+		{
+		  uint uVar1;
+		  int *piVar2;
+		  uint *puVar3;
+		  undefined4 uVar4;
+		  undefined4 uVar5;
+		  int iVar6;
+		  
+		  if (DAT_ram_00a57784 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_UnityEngine_Component_GetComponent_ICombatPLayerView___);
+		    Mono_Security_ASN1__get_Item(&Gameplay_Combat_View_Players_ICombatPLayerView_TypeInfo);
+		    DAT_ram_00a57784 = '\x01';
+		  }
+		  piVar2 = (int *)func_ii_5677(*(undefined4 *)(param1 + 8),
+		                               Method_UnityEngine_Component_GetComponent_ICombatPLayerView___);
+		  *(int **)(param1 + 0x1c) = piVar2;
+		  iVar6 = *piVar2;
+		  if (*(ushort *)(iVar6 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (Gameplay_Combat_View_Players_ICombatPLayerView_TypeInfo ==
+		          *(int *)(*(int *)(iVar6 + 0x58) + uVar1 * 8)) {
+		        puVar3 = (uint *)(*(int *)(*(int *)(iVar6 + 0x58) + uVar1 * 8 + 4) * 8 + iVar6 + 0xf8);
+		        goto code_r0x80dd841b;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar6 + 0xb6) != uVar1);
+		  }
+		  puVar3 = (uint *)func_ii_1080(piVar2,Gameplay_Combat_View_Players_ICombatPLayerView_TypeInfo,7);
+		code_r0x80dd841b:
+		  iVar6 = (**(code **)((ulonglong)*puVar3 * 4))(piVar2,puVar3[1]);
+		  if (iVar6 == 0) {
+		    uVar1 = 0;
+		    uVar4 = *(undefined4 *)(param1 + 0x18);
+		    uVar5 = *(undefined4 *)(param1 + 0x14);
+		    piVar2 = *(int **)(param1 + 0x1c);
+		    iVar6 = *piVar2;
+		    if (*(ushort *)(iVar6 + 0xb6) != 0) {
+		      do {
+		        if (Gameplay_Combat_View_Players_ICombatPLayerView_TypeInfo ==
+		            *(int *)(*(int *)(iVar6 + 0x58) + uVar1 * 8)) {
+		          puVar3 = (uint *)(iVar6 + *(int *)(*(int *)(iVar6 + 0x58) + uVar1 * 8 + 4) * 8 + 0xc0);
+		          goto code_r0x80dd84ab;
+		        }
+		        uVar1 = uVar1 + 1;
+		      } while (*(ushort *)(iVar6 + 0xb6) != uVar1);
+		    }
+		    puVar3 = (uint *)func_ii_1080(piVar2,Gameplay_Combat_View_Players_ICombatPLayerView_TypeInfo,0);
+		code_r0x80dd84ab:
+		    (**(code **)((ulonglong)*puVar3 * 4))(piVar2,0,uVar5,uVar4,puVar3[1]);
+		  }
+		  return;
+		}
+		*/
+
 }

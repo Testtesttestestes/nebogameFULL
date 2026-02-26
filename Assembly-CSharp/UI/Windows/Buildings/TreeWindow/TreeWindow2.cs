@@ -28,6 +28,26 @@ namespace UI.Windows.Buildings.TreeWindow
 		[Address(RVA = "0x6255", Offset = "0x6255", VA = "0x6255", Slot = "19")]
 		protected override void OnClose()
 		{
+		/* --- GHIDRA: OnClose ---
+		void UI_Windows_Buildings_TreeWindow_TreeWindow2__OnClose(int param1,int param2,undefined4 param3)
+		
+		{
+		  int iVar1;
+		  
+		  if (DAT_ram_00a58ab5 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UI_Windows_ClosableBaseWindow_TreeWindow2_TreeWindow2Args__OnShow__);
+		    DAT_ram_00a58ab5 = '\x01';
+		  }
+		  func_ii_7769(param1,param2,
+		               Method_UI_Windows_ClosableBaseWindow_TreeWindow2_TreeWindow2Args__OnShow__);
+		  iVar1 = **(int **)(param1 + 0x3c);
+		  (**(code **)((ulonglong)*(uint *)(iVar1 + 0xe0) * 4))
+		            (*(int **)(param1 + 0x3c),*(undefined4 *)(param2 + 0x18),*(undefined4 *)(iVar1 + 0xe4));
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06001058 RID: 4184 RVA: 0x00002050 File Offset: 0x00000250
@@ -35,6 +55,21 @@ namespace UI.Windows.Buildings.TreeWindow
 		[Address(RVA = "0x6256", Offset = "0x6256", VA = "0x6256", Slot = "22")]
 		protected override void OnShow(TreeWindow2.TreeWindow2Args args)
 		{
+		/* --- GHIDRA: OnShow ---
+		void UI_Windows_Buildings_TreeWindow_TreeWindow2__OnShow(undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a58ab6 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UI_Windows_ClosableBaseWindow_TreeWindow2_TreeWindow2Args___ctor__);
+		    DAT_ram_00a58ab6 = '\x01';
+		  }
+		  UI_MonoBehaviourWithStates_ClientStateChangedDelegate___Il2CppFullySharedGenericStructType___Invoke
+		            (param1,Method_UI_Windows_ClosableBaseWindow_TreeWindow2_TreeWindow2Args___ctor__);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06001059 RID: 4185 RVA: 0x00002050 File Offset: 0x00000250
@@ -66,4 +101,23 @@ namespace UI.Windows.Buildings.TreeWindow
 			}
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_WindowId ---
+		void UI_Windows_Buildings_TreeWindow_TreeWindow2__get_WindowId(int param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a58ab4 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UI_Windows_ClosableBaseWindow_TreeWindow2_TreeWindow2Args__OnClose__);
+		    DAT_ram_00a58ab4 = '\x01';
+		  }
+		  Gameplay_Tree_View_TreeView2__Init(*(undefined4 *)(param1 + 0x3c),0);
+		  UI_Windows_ClosableBaseWindow_object___OnClickBack
+		            (param1,Method_UI_Windows_ClosableBaseWindow_TreeWindow2_TreeWindow2Args__OnClose__);
+		  return;
+		}
+		*/
+
 }

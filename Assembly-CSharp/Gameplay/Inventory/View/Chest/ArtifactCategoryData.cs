@@ -14,6 +14,39 @@ namespace Gameplay.Inventory.View.Chest
 		[Address(RVA = "0x1DE2", Offset = "0x1DE2", VA = "0x1DE2")]
 		public ArtifactCategoryData()
 		{
+		/* --- GHIDRA: .ctor ---
+		undefined4 Gameplay_Inventory_View_Chest_ArtifactCategoryData___ctor(int param1,undefined4 param2)
+		
+		{
+		  int param2_00;
+		  int iVar1;
+		  int param1_00;
+		  
+		  param1_00 = *(int *)(param1 + 0x28);
+		  param2_00 = 0;
+		  if (DAT_ram_00a5acf5 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Google_Protobuf_Collections_RepeatedField_ContentStringMessage__get_Count__);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Google_Protobuf_Collections_RepeatedField_ContentStringMessage__get_Item__);
+		    DAT_ram_00a5acf5 = '\x01';
+		  }
+		  if (0 < *(int *)(param1_00 + 0xc)) {
+		    do {
+		      iVar1 = Google_Protobuf_Collections_RepeatedField_Int32Enum___get_IsReadOnly
+		                        (param1_00,param2_00,
+		                         Method_Google_Protobuf_Collections_RepeatedField_ContentStringMessage__get_Item__
+		                        );
+		      if (*(int *)(iVar1 + 0xc) == 0x39) {
+		        return *(undefined4 *)(iVar1 + 0x10);
+		      }
+		      param2_00 = param2_00 + 1;
+		    } while (param2_00 < *(int *)(param1_00 + 0xc));
+		  }
+		  return 0;
+		}
+		*/
+
 		}
 
 		// Token: 0x0400165F RID: 5727

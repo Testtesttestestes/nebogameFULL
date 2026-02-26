@@ -409,6 +409,68 @@ namespace Gameplay.Portals.Model
 		[Address(RVA = "0x7515", Offset = "0x7515", VA = "0x7515")]
 		public TabBarItemData[] GetTabBarItemData()
 		{
+		/* --- GHIDRA: GetTabBarItemData ---
+		void Gameplay_Portals_Model_PortalsModel__GetTabBarItemData
+		               (int param1,undefined4 param2,int *param3,undefined4 param4)
+		
+		{
+		  uint uVar1;
+		  undefined4 uVar2;
+		  int iVar3;
+		  uint *puVar4;
+		  
+		  if (DAT_ram_00a58123 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Utils_BackTime_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Core_Gameplay_IGame_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Gameplay_Portals_Model_PortalsTargets_var);
+		    Mono_Security_ASN1__get_Item(&Protocol_Common_ResourceSet_TypeInfo);
+		    DAT_ram_00a58123 = '\x01';
+		  }
+		  uVar2 = unnamed_function_1417(Utils_BackTime_TypeInfo);
+		  Core_Extensions_Dict_DictExt__BinarySearch_object__uint_(uVar2,0.0,0);
+		  *(undefined4 *)(param1 + 0x28) = uVar2;
+		  uVar2 = unnamed_function_1417(Utils_BackTime_TypeInfo);
+		  Core_Extensions_Dict_DictExt__BinarySearch_object__uint_(uVar2,0.0,0);
+		  *(undefined4 *)(param1 + 0x2c) = uVar2;
+		  uVar2 = unnamed_function_1417(Utils_BackTime_TypeInfo);
+		  Core_Extensions_Dict_DictExt__BinarySearch_object__uint_(uVar2,0.0,0);
+		  *(undefined4 *)(param1 + 0x34) = 1;
+		  *(undefined4 *)(param1 + 0x30) = uVar2;
+		  uVar2 = Gameplay_Portals_Model_PortalsTargets_var;
+		  if (*(int *)(DAT_ram_00a669a0 + 0x74) == 0) {
+		    func_ii_306000(DAT_ram_00a669a0);
+		  }
+		  uVar2 = func_ii_2734(uVar2,0);
+		  if (*(int *)(DAT_ram_00a6697c + 0x74) == 0) {
+		    func_ii_306000(DAT_ram_00a6697c);
+		  }
+		  iVar3 = System_Enum__InternalGetValues(uVar2,0);
+		  *(undefined4 *)(param1 + 0x38) = *(undefined4 *)(iVar3 + 0xc);
+		  uVar2 = unnamed_function_1417(Protocol_Common_ResourceSet_TypeInfo);
+		  *(undefined4 *)(param1 + 0x48) = uVar2;
+		  uVar2 = unnamed_function_1417(Protocol_Common_ResourceSet_TypeInfo);
+		  *(undefined4 *)(param1 + 0x4c) = uVar2;
+		  Unity_Services_Core_Environments_Internal_Environments__get_Current(param1,param2,0);
+		  *(int **)(param1 + 0x24) = param3;
+		  iVar3 = *param3;
+		  if (*(ushort *)(iVar3 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (Core_Gameplay_IGame_TypeInfo == *(int *)(*(int *)(iVar3 + 0x58) + uVar1 * 8)) {
+		        puVar4 = (uint *)(*(int *)(*(int *)(iVar3 + 0x58) + uVar1 * 8 + 4) * 8 + iVar3 + 0x178);
+		        goto code_r0x80ea5c61;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar3 + 0xb6) != uVar1);
+		  }
+		  puVar4 = (uint *)func_ii_1080(param3,Core_Gameplay_IGame_TypeInfo,0x17);
+		code_r0x80ea5c61:
+		  uVar2 = (**(code **)((ulonglong)*puVar4 * 4))(param3,puVar4[1]);
+		  *(undefined4 *)(param1 + 0xc) = uVar2;
+		  return;
+		}
+		*/
+
 			return null;
 		}
 
@@ -417,6 +479,47 @@ namespace Gameplay.Portals.Model
 		[Address(RVA = "0x7516", Offset = "0x7516", VA = "0x7516")]
 		public PortalsModel(UserData user, IGame game)
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_Portals_Model_PortalsModel___ctor(int param1,int param2,undefined4 param3)
+		
+		{
+		  undefined4 uVar1;
+		  undefined4 param2_00;
+		  int param3_00;
+		  int iVar2;
+		  
+		  *(int *)(param1 + 0x20) = param2;
+		  if (param2 != 0) {
+		    param3_00 = *(int *)(param2 + 0x18);
+		    iVar2 = *(int *)(param3_00 + 0xc);
+		    if (iVar2 != 0) {
+		      if (iVar2 != 1) {
+		        if (iVar2 != 2) {
+		          uVar1 = unnamed_function_2232(&System_ArgumentOutOfRangeException_TypeInfo);
+		          uVar1 = unnamed_function_1417(uVar1);
+		          System_ArgumentNullException___ctor(uVar1,0);
+		          param2_00 = unnamed_function_2232
+		                                (&Method_Gameplay_Portals_Model_PortalsModel_SetPortalStageInfo__);
+		          func_ii_1050(uVar1,param2_00);
+		          do {
+		            halt_trap();
+		          } while( true );
+		        }
+		        Gameplay_Portals_Model_PortalsModel__SetPortalStageInfo
+		                  (param1,*(undefined8 *)(param3_00 + 0x10),param3_00);
+		        Gameplay_Portals_Model_PortalsModel__SetStageBackTime
+		                  (param1,*(undefined8 *)(*(int *)(*(int *)(param1 + 0x20) + 0x18) + 0x10),param3_00
+		                  );
+		        return;
+		      }
+		      Gameplay_Portals_Model_PortalsModel__SetPortalStageInfo
+		                (param1,*(undefined8 *)(param3_00 + 0x10),param3_00);
+		    }
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x060023C5 RID: 9157 RVA: 0x00002050 File Offset: 0x00000250
@@ -424,6 +527,31 @@ namespace Gameplay.Portals.Model
 		[Address(RVA = "0x7517", Offset = "0x7517", VA = "0x7517")]
 		public void SetPortalStageInfo(PortalStageInfo portalStageInfo)
 		{
+		/* --- GHIDRA: SetPortalStageInfo ---
+		void Gameplay_Portals_Model_PortalsModel__SetPortalStageInfo
+		               (int param1,undefined8 param2,undefined4 param3)
+		
+		{
+		  undefined4 param1_00;
+		  float param2_00;
+		  
+		  if (DAT_ram_00a58124 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Utils_BackTime_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Utils_TimeUtils_TypeInfo);
+		    DAT_ram_00a58124 = '\x01';
+		  }
+		  param1_00 = unnamed_function_1417(Utils_BackTime_TypeInfo);
+		  Core_Extensions_Dict_DictExt__BinarySearch_object__uint_(param1_00,0.0,0);
+		  if (*(int *)(Utils_TimeUtils_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Utils_TimeUtils_TypeInfo);
+		  }
+		  param2_00 = Utils_StringUtils___cctor(param2,0);
+		  Core_Extensions_Dict_DictExt__BinarySearch_object__uint_(param1_00,param2_00,0);
+		  *(undefined4 *)(param1 + 0x28) = param1_00;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x060023C6 RID: 9158 RVA: 0x00002050 File Offset: 0x00000250
@@ -431,6 +559,31 @@ namespace Gameplay.Portals.Model
 		[Address(RVA = "0x7518", Offset = "0x7518", VA = "0x7518")]
 		public void SetStageBackTime(ulong milliseconds)
 		{
+		/* --- GHIDRA: SetStageBackTime ---
+		void Gameplay_Portals_Model_PortalsModel__SetStageBackTime
+		               (int param1,undefined8 param2,undefined4 param3)
+		
+		{
+		  undefined4 param1_00;
+		  float param2_00;
+		  
+		  if (DAT_ram_00a58125 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Utils_BackTime_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Utils_TimeUtils_TypeInfo);
+		    DAT_ram_00a58125 = '\x01';
+		  }
+		  param1_00 = unnamed_function_1417(Utils_BackTime_TypeInfo);
+		  Core_Extensions_Dict_DictExt__BinarySearch_object__uint_(param1_00,0.0,0);
+		  if (*(int *)(Utils_TimeUtils_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Utils_TimeUtils_TypeInfo);
+		  }
+		  param2_00 = Utils_StringUtils___cctor(param2,0);
+		  Core_Extensions_Dict_DictExt__BinarySearch_object__uint_(param1_00,param2_00,0);
+		  *(undefined4 *)(param1 + 0x2c) = param1_00;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x060023C7 RID: 9159 RVA: 0x00002050 File Offset: 0x00000250
@@ -438,6 +591,31 @@ namespace Gameplay.Portals.Model
 		[Address(RVA = "0x7519", Offset = "0x7519", VA = "0x7519")]
 		private void SetPortalBackTime(ulong milliseconds)
 		{
+		/* --- GHIDRA: SetPortalBackTime ---
+		void Gameplay_Portals_Model_PortalsModel__SetPortalBackTime
+		               (int param1,undefined8 param2,undefined4 param3)
+		
+		{
+		  undefined4 param1_00;
+		  float param2_00;
+		  
+		  if (DAT_ram_00a58126 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Utils_BackTime_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Utils_TimeUtils_TypeInfo);
+		    DAT_ram_00a58126 = '\x01';
+		  }
+		  param1_00 = unnamed_function_1417(Utils_BackTime_TypeInfo);
+		  Core_Extensions_Dict_DictExt__BinarySearch_object__uint_(param1_00,0.0,0);
+		  if (*(int *)(Utils_TimeUtils_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Utils_TimeUtils_TypeInfo);
+		  }
+		  param2_00 = Utils_StringUtils___cctor(param2,0);
+		  Core_Extensions_Dict_DictExt__BinarySearch_object__uint_(param1_00,param2_00,0);
+		  *(undefined4 *)(param1 + 0x30) = param1_00;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x060023C8 RID: 9160 RVA: 0x00002050 File Offset: 0x00000250
@@ -452,4 +630,118 @@ namespace Gameplay.Portals.Model
 		[FieldOffset(Offset = "0xC")]
 		public readonly IDictProvider DictProvider;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: set_EntryPointBackTime ---
+		undefined8 Gameplay_Portals_Model_PortalsModel__set_EntryPointBackTime(int param1,undefined4 param2)
+		
+		{
+		  if (*(int *)(param1 + 0x18) != 0) {
+		    return *(undefined8 *)(*(int *)(param1 + 0x18) + 0x10);
+		  }
+		  return 0;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_HasPortal ---
+		uint Gameplay_Portals_Model_PortalsModel__get_HasPortal(int param1,undefined4 param2)
+		
+		{
+		  if (*(int *)(param1 + 0x10) != 0) {
+		    return (uint)(*(int *)(param1 + 0x18) != 0);
+		  }
+		  return 0;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_HasPortalAndUser ---
+		uint Gameplay_Portals_Model_PortalsModel__get_HasPortalAndUser(int param1,undefined4 param2)
+		
+		{
+		  return (uint)(*(ulonglong *)(*(int *)(param1 + 0x18) + 0x20) ==
+		               (ulonglong)*(uint *)(*(int *)(param1 + 0x20) + 0xc));
+		}
+		*/
+
+
+		/* --- GHIDRA: set_CurrentJackpot ---
+		int * Gameplay_Portals_Model_PortalsModel__set_CurrentJackpot(undefined4 param1,undefined4 param2)
+		
+		{
+		  int *piVar1;
+		  undefined4 uVar2;
+		  int iVar3;
+		  int iVar4;
+		  
+		  if (DAT_ram_00a58122 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_GameLocalization_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&UI_Tabs_TabBarItemData_PortalsTargets____TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Method_UI_Tabs_TabBarItemData_PortalsTargets___ctor__);
+		    Mono_Security_ASN1__get_Item(&UI_Tabs_TabBarItemData_PortalsTargets__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_12146);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_12152);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_12148);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_12150);
+		    DAT_ram_00a58122 = '\x01';
+		  }
+		  piVar1 = (int *)Mono_Security_ASN1Convert__ToOid
+		                            (UI_Tabs_TabBarItemData_PortalsTargets____TypeInfo,4);
+		  if (*(int *)(Core_GameLocalization_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Core_GameLocalization_TypeInfo);
+		  }
+		  uVar2 = Core_Extensions_Dict_CultDicExt__GetTitle(StringLiteral_12146,1,0,1,0,0,0,0);
+		  iVar3 = unnamed_function_1417(UI_Tabs_TabBarItemData_PortalsTargets__TypeInfo);
+		  UI_Tabs_TabBarItemData_UInt32Enum____ctor
+		            (iVar3,uVar2,1,Method_UI_Tabs_TabBarItemData_PortalsTargets___ctor__);
+		  if ((iVar3 != 0) && (iVar4 = func_ii_1082(iVar3,*(undefined4 *)(*piVar1 + 0x20)), iVar4 == 0)) {
+		    uVar2 = func_ii_1083();
+		    func_ii_1050(uVar2,0);
+		    do {
+		      halt_trap();
+		    } while( true );
+		  }
+		  piVar1[4] = iVar3;
+		  uVar2 = Core_Extensions_Dict_CultDicExt__GetTitle(StringLiteral_12152,1,0,1,0,0,0,0);
+		  iVar3 = unnamed_function_1417(UI_Tabs_TabBarItemData_PortalsTargets__TypeInfo);
+		  UI_Tabs_TabBarItemData_UInt32Enum____ctor
+		            (iVar3,uVar2,2,Method_UI_Tabs_TabBarItemData_PortalsTargets___ctor__);
+		  if ((iVar3 != 0) && (iVar4 = func_ii_1082(iVar3,*(undefined4 *)(*piVar1 + 0x20)), iVar4 == 0)) {
+		    uVar2 = func_ii_1083();
+		    func_ii_1050(uVar2,0);
+		    do {
+		      halt_trap();
+		    } while( true );
+		  }
+		  piVar1[5] = iVar3;
+		  uVar2 = Core_Extensions_Dict_CultDicExt__GetTitle(StringLiteral_12148,1,0,1,0,0,0,0);
+		  iVar3 = unnamed_function_1417(UI_Tabs_TabBarItemData_PortalsTargets__TypeInfo);
+		  UI_Tabs_TabBarItemData_UInt32Enum____ctor
+		            (iVar3,uVar2,3,Method_UI_Tabs_TabBarItemData_PortalsTargets___ctor__);
+		  if ((iVar3 != 0) && (iVar4 = func_ii_1082(iVar3,*(undefined4 *)(*piVar1 + 0x20)), iVar4 == 0)) {
+		    uVar2 = func_ii_1083();
+		    func_ii_1050(uVar2,0);
+		    do {
+		      halt_trap();
+		    } while( true );
+		  }
+		  piVar1[6] = iVar3;
+		  uVar2 = Core_Extensions_Dict_CultDicExt__GetTitle(StringLiteral_12150,1,0,1,0,0,0,0);
+		  iVar3 = unnamed_function_1417(UI_Tabs_TabBarItemData_PortalsTargets__TypeInfo);
+		  UI_Tabs_TabBarItemData_UInt32Enum____ctor
+		            (iVar3,uVar2,4,Method_UI_Tabs_TabBarItemData_PortalsTargets___ctor__);
+		  if ((iVar3 != 0) && (iVar4 = func_ii_1082(iVar3,*(undefined4 *)(*piVar1 + 0x20)), iVar4 == 0)) {
+		    uVar2 = func_ii_1083();
+		    func_ii_1050(uVar2,0);
+		    do {
+		      halt_trap();
+		    } while( true );
+		  }
+		  piVar1[7] = iVar3;
+		  return piVar1;
+		}
+		*/
+
 }

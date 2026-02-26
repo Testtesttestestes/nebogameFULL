@@ -13,6 +13,15 @@ namespace I2.Loc
 		[Address(RVA = "0xBF6D", Offset = "0xBF6D", VA = "0xBF6D")]
 		public bool IsEnabled()
 		{
+		/* --- GHIDRA: IsEnabled ---
+		void I2_Loc_LanguageData__IsEnabled(int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  *(byte *)(param1 + 0x10) = *(byte *)(param1 + 0x10) & 0xfe | (byte)param2 ^ 1;
+		  return;
+		}
+		*/
+
 			return default(bool);
 		}
 
@@ -21,6 +30,14 @@ namespace I2.Loc
 		[Address(RVA = "0xBF6E", Offset = "0xBF6E", VA = "0xBF6E")]
 		public void SetEnabled(bool bEnabled)
 		{
+		/* --- GHIDRA: SetEnabled ---
+		uint I2_Loc_LanguageData__SetEnabled(int param1,undefined4 param2)
+		
+		{
+		  return (uint)((*(byte *)(param1 + 0x10) & 4) == 0);
+		}
+		*/
+
 		}
 
 		// Token: 0x060075E6 RID: 30182 RVA: 0x000154E0 File Offset: 0x000136E0
@@ -28,6 +45,14 @@ namespace I2.Loc
 		[Address(RVA = "0xBF6F", Offset = "0xBF6F", VA = "0xBF6F")]
 		public bool IsLoaded()
 		{
+		/* --- GHIDRA: IsLoaded ---
+		uint I2_Loc_LanguageData__IsLoaded(int param1,undefined4 param2)
+		
+		{
+		  return (uint)((*(byte *)(param1 + 0x10) & 2) == 0);
+		}
+		*/
+
 			return default(bool);
 		}
 
@@ -36,6 +61,21 @@ namespace I2.Loc
 		[Address(RVA = "0xBF70", Offset = "0xBF70", VA = "0xBF70")]
 		public bool CanBeUnloaded()
 		{
+		/* --- GHIDRA: CanBeUnloaded ---
+		void I2_Loc_LanguageData__CanBeUnloaded(int param1,int param2,undefined4 param3)
+		
+		{
+		  byte bVar1;
+		  
+		  bVar1 = 0;
+		  if (param2 == 0) {
+		    bVar1 = 4;
+		  }
+		  *(byte *)(param1 + 0x10) = *(byte *)(param1 + 0x10) & 0xfb | bVar1;
+		  return;
+		}
+		*/
+
 			return default(bool);
 		}
 
@@ -44,6 +84,21 @@ namespace I2.Loc
 		[Address(RVA = "0xBF71", Offset = "0xBF71", VA = "0xBF71")]
 		public void SetLoaded(bool loaded)
 		{
+		/* --- GHIDRA: SetLoaded ---
+		void I2_Loc_LanguageData__SetLoaded(int param1,int param2,undefined4 param3)
+		
+		{
+		  byte bVar1;
+		  
+		  bVar1 = 0;
+		  if (param2 == 0) {
+		    bVar1 = 2;
+		  }
+		  *(byte *)(param1 + 0x10) = *(byte *)(param1 + 0x10) & 0xfd | bVar1;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x060075E9 RID: 30185 RVA: 0x00002050 File Offset: 0x00000250

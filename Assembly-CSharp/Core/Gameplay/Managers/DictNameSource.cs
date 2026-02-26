@@ -40,6 +40,25 @@ namespace Core.Gameplay.Managers
 		[Address(RVA = "0xB253", Offset = "0xB253", VA = "0xB253", Slot = "6")]
 		public string GetValue()
 		{
+		/* --- GHIDRA: GetValue ---
+		void Core_Gameplay_Managers_DictNameSource__GetValue(int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  int iVar1;
+		  
+		  iVar1 = System_Collections_CollectionBase___ctor(*(undefined4 *)(param1 + 0xc),param2,0);
+		  if (iVar1 == 0) {
+		    *(undefined4 *)(param1 + 0xc) = param2;
+		    iVar1 = *(int *)(param1 + 8);
+		    if (iVar1 != 0) {
+		      (**(code **)((ulonglong)*(uint *)(iVar1 + 0xc) * 4))
+		                (*(undefined4 *)(iVar1 + 0x20),param1,*(undefined4 *)(iVar1 + 0x14));
+		    }
+		  }
+		  return;
+		}
+		*/
+
 			return null;
 		}
 
@@ -48,6 +67,18 @@ namespace Core.Gameplay.Managers
 		[Address(RVA = "0xB254", Offset = "0xB254", VA = "0xB254")]
 		public void SetValue(string value)
 		{
+		/* --- GHIDRA: SetValue ---
+		undefined4 Core_Gameplay_Managers_DictNameSource__SetValue(undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a5a935 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_10646);
+		    DAT_ram_00a5a935 = '\x01';
+		  }
+		  return StringLiteral_10646;
+		}
+		*/
+
 		}
 
 		// Token: 0x04003706 RID: 14086
@@ -55,4 +86,43 @@ namespace Core.Gameplay.Managers
 		[FieldOffset(Offset = "0xC")]
 		private string _value;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: add_ChangedEvent ---
+		void Core_Gameplay_Managers_DictNameSource__add_ChangedEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a5a934 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_IDictNameSource__TypeInfo);
+		    DAT_ram_00a5a934 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 8);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = func_ii_7048(param1_00,param2,0);
+		    param2_00 = System_Action_IDictNameSource__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_IDictNameSource__TypeInfo), iVar2 == 0)) break;
+		    iVar2 = func_ii_4329(param1 + 8,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
 }

@@ -63,6 +63,32 @@ namespace Gameplay.Boss.View.ListView
 		[Address(RVA = "0x9583", Offset = "0x9583", VA = "0x9583")]
 		private void OnDestroy()
 		{
+		/* --- GHIDRA: OnDestroy ---
+		void Gameplay_Boss_View_ListView_BossListItemView__OnDestroy(int param1,undefined4 param2)
+		
+		{
+		  undefined4 param1_00;
+		  undefined4 param1_01;
+		  
+		  if (DAT_ram_00a57a0c == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_PointerEventData__TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Gameplay_Boss_View_ListView_BossListItemView_MonoPointerClickHandlerOnOnClickEvent__
+		              );
+		    DAT_ram_00a57a0c = '\x01';
+		  }
+		  param1_01 = *(undefined4 *)(param1 + 0x2c);
+		  param1_00 = unnamed_function_1417(System_Action_PointerEventData__TypeInfo);
+		  UnityEngine_UIElements_VisualElement__get_layout
+		            (param1_00,param1,
+		             Method_Gameplay_Boss_View_ListView_BossListItemView_MonoPointerClickHandlerOnOnClickEvent__
+		             ,0);
+		  Gameplay_Chat_View_Smiles_SmileItemView__HandleSmileDicChanged(param1_01,param1_00,0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x060046EE RID: 18158 RVA: 0x00002050 File Offset: 0x00000250
@@ -70,6 +96,22 @@ namespace Gameplay.Boss.View.ListView
 		[Address(RVA = "0x9584", Offset = "0x9584", VA = "0x9584")]
 		private void Awake()
 		{
+		/* --- GHIDRA: Awake ---
+		void Gameplay_Boss_View_ListView_BossListItemView__Awake(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  
+		  iVar1 = *(int *)(param1 + 0x54);
+		  if (iVar1 != 0) {
+		    (**(code **)((ulonglong)*(uint *)(iVar1 + 0xc) * 4))
+		              (*(undefined4 *)(iVar1 + 0x20),*(undefined4 *)(param1 + 0x58),
+		               *(undefined4 *)(iVar1 + 0x14));
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x060046EF RID: 18159 RVA: 0x00002050 File Offset: 0x00000250
@@ -77,6 +119,23 @@ namespace Gameplay.Boss.View.ListView
 		[Address(RVA = "0x9585", Offset = "0x9585", VA = "0x9585")]
 		private void QuestionButtonClickHandler()
 		{
+		/* --- GHIDRA: QuestionButtonClickHandler ---
+		void Gameplay_Boss_View_ListView_BossListItemView__QuestionButtonClickHandler
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  int iVar1;
+		  
+		  iVar1 = *(int *)(param1 + 0x50);
+		  if (iVar1 != 0) {
+		    (**(code **)((ulonglong)*(uint *)(iVar1 + 0xc) * 4))
+		              (*(undefined4 *)(iVar1 + 0x20),*(undefined4 *)(param1 + 0x58),
+		               *(undefined4 *)(iVar1 + 0x14));
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x060046F0 RID: 18160 RVA: 0x00002050 File Offset: 0x00000250
@@ -122,6 +181,18 @@ namespace Gameplay.Boss.View.ListView
 		[Address(RVA = "0x958A", Offset = "0x958A", VA = "0x958A")]
 		public BossListItemView()
 		{
+		/* --- GHIDRA: .ctor ---
+		undefined4 Gameplay_Boss_View_ListView_BossListItemView___ctor(undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a57a0e == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_12578);
+		    DAT_ram_00a57a0e = '\x01';
+		  }
+		  return StringLiteral_12578;
+		}
+		*/
+
 		}
 
 		// Token: 0x040026D2 RID: 9938
@@ -225,4 +296,257 @@ namespace Gameplay.Boss.View.ListView
 		[FieldOffset(Offset = "0x58")]
 		private BossInstance _bossInstance;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: add_SelectedEvent ---
+		void Gameplay_Boss_View_ListView_BossListItemView__add_SelectedEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a57a08 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_BossInstance__TypeInfo);
+		    DAT_ram_00a57a08 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x50);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = func_ii_7048(param1_00,param2,0);
+		    param2_00 = System_Action_BossInstance__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_BossInstance__TypeInfo), iVar2 == 0)) break;
+		    iVar2 = func_ii_4329(param1 + 0x50,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: remove_SelectedEvent ---
+		void Gameplay_Boss_View_ListView_BossListItemView__remove_SelectedEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a57a09 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_BossInstance__TypeInfo);
+		    DAT_ram_00a57a09 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x54);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = UnityEngine_UI_Image__set_sprite(param1_00,param2,0);
+		    param2_00 = System_Action_BossInstance__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_BossInstance__TypeInfo), iVar2 == 0)) break;
+		    iVar2 = func_ii_4329(param1 + 0x54,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: add_QuestionClickedEvent ---
+		void Gameplay_Boss_View_ListView_BossListItemView__add_QuestionClickedEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a57a0a == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_BossInstance__TypeInfo);
+		    DAT_ram_00a57a0a = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x54);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = func_ii_7048(param1_00,param2,0);
+		    param2_00 = System_Action_BossInstance__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_BossInstance__TypeInfo), iVar2 == 0)) break;
+		    iVar2 = func_ii_4329(param1 + 0x54,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: remove_QuestionClickedEvent ---
+		void Gameplay_Boss_View_ListView_BossListItemView__remove_QuestionClickedEvent
+		               (int param1,undefined4 param2)
+		
+		{
+		  undefined4 param1_00;
+		  undefined4 param1_01;
+		  
+		  if (DAT_ram_00a57a0b == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_PointerEventData__TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Gameplay_Boss_View_ListView_BossListItemView_MonoPointerClickHandlerOnOnClickEvent__
+		              );
+		    DAT_ram_00a57a0b = '\x01';
+		  }
+		  param1_01 = *(undefined4 *)(param1 + 0x2c);
+		  param1_00 = unnamed_function_1417(System_Action_PointerEventData__TypeInfo);
+		  UnityEngine_UIElements_VisualElement__get_layout
+		            (param1_00,param1,
+		             Method_Gameplay_Boss_View_ListView_BossListItemView_MonoPointerClickHandlerOnOnClickEvent__
+		             ,0);
+		  Com_TheFallenGames_OSA_DataHelpers_SimpleDataHelper_object___get_Count(param1_01,param1_00,0);
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_BossInstance ---
+		void Gameplay_Boss_View_ListView_BossListItemView__get_BossInstance
+		               (int param1,int param2,undefined4 param3)
+		
+		{
+		  undefined4 in_register_20000004;
+		  undefined8 uVar1;
+		  undefined4 uVar2;
+		  float fVar3;
+		  undefined4 param3_00;
+		  ulonglong uVar4;
+		  int *piVar5;
+		  undefined4 uVar6;
+		  double param1_00;
+		  undefined4 *puVar7;
+		  int iVar8;
+		  
+		  if (DAT_ram_00a57a0d == '\0') {
+		    Mono_Security_ASN1__get_Item(&Utils_StringUtils_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_28780);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_1618);
+		    DAT_ram_00a57a0d = '\x01';
+		  }
+		  *(int *)(param1 + 0x58) = param2;
+		  piVar5 = *(int **)(param1 + 0x10);
+		  uVar2 = AssetContent_GameAssetViewRawImage__set_AssetId
+		                    (*(undefined4 *)(*(int *)(*(int *)(param2 + 8) + 0x30) + 0x14),0);
+		  iVar8 = *piVar5;
+		  uVar1 = CONCAT44(in_register_20000004,piVar5);
+		  (**(code **)((ulonglong)*(uint *)(iVar8 + 0x2d0) * 4))(uVar1,uVar2,*(undefined4 *)(iVar8 + 0x2d4))
+		  ;
+		  uVar6 = *(undefined4 *)(param1 + 0x18);
+		  puVar7 = (undefined4 *)(param1 + 0x28);
+		  uVar2 = (undefined4)((ulonglong)uVar1 >> 0x20);
+		  iVar8 = Gameplay_Boss_Model_BossInstance__Dispose(*(undefined4 *)(*(int *)(param1 + 0x58) + 8),0);
+		  if (iVar8 != 0) {
+		    puVar7 = (undefined4 *)(param1 + 0x24);
+		    iVar8 = Gameplay_Boss_Model_BossInstanceModel__get_IsEnded
+		                      (*(undefined4 *)(*(int *)(param1 + 0x58) + 8),0);
+		    if (iVar8 != 0) {
+		      puVar7 = (undefined4 *)(param1 + 0x20);
+		    }
+		  }
+		  func_ii_7050(uVar6,*puVar7,0);
+		  piVar5 = *(int **)(param1 + 0x30);
+		  fVar3 = Gameplay_Boss_Model_BossInstanceModel__set_CurrentHealth
+		                    (*(undefined4 *)(*(int *)(param1 + 0x58) + 8),0);
+		  iVar8 = *piVar5;
+		  (**(code **)((ulonglong)*(uint *)(iVar8 + 0x108) * 4))
+		            (CONCAT44(uVar2,piVar5),fVar3,*(undefined4 *)(iVar8 + 0x10c));
+		  UI_Elements_RightPanel_TitleWithLevel__set_Level
+		            (*(undefined4 *)(param1 + 0x34),
+		             *(undefined4 *)(*(int *)(*(int *)(param1 + 0x58) + 8) + 0x34),0);
+		  uVar6 = *(undefined4 *)(param1 + 0x38);
+		  uVar2 = Core_Extensions_Dict_AprDicExt__Get256х128ImageAssetId
+		                    (*(undefined4 *)(*(int *)(*(int *)(*(int *)(param1 + 0x58) + 8) + 0x30) + 8),0);
+		  Core_Extensions_Dict_AprDicExt__Get1024AssetId(uVar6,uVar2,0);
+		  uVar2 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_uint__object___MoveNext
+		                    (*(undefined4 *)(param1 + 0x44),0);
+		  uVar6 = Gameplay_Boss_Model_BossInstance__Dispose(*(undefined4 *)(*(int *)(param1 + 0x58) + 8),0);
+		  Com_TheFallenGames_OSA_CustomAdapters_TableView_Tuple_Basic_BasicTupleValueViewsHolder__UpdateAsText
+		            (uVar2,uVar6,0);
+		  uVar2 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_uint__object___MoveNext
+		                    (*(undefined4 *)(param1 + 0x48),0);
+		  uVar6 = Gameplay_Boss_Model_BossInstanceModel__get_Allowed
+		                    (*(undefined4 *)(*(int *)(param1 + 0x58) + 8),0);
+		  Com_TheFallenGames_OSA_CustomAdapters_TableView_Tuple_Basic_BasicTupleValueViewsHolder__UpdateAsText
+		            (uVar2,uVar6,0);
+		  piVar5 = *(int **)(param1 + 0x14);
+		  uVar4 = Gameplay_Boss_Model_BossInstanceModel__set_InstanceState
+		                    (*(undefined4 *)(*(int *)(param1 + 0x58) + 8),0);
+		  if (*(int *)(Utils_StringUtils_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Utils_StringUtils_TypeInfo);
+		  }
+		  uVar6 = UI_SimpleIconValue__set_IconAssetId((double)uVar4,StringLiteral_28780,0);
+		  uVar4 = Gameplay_Boss_Model_BossInfo__get_HasLossReward
+		                    (*(undefined4 *)(*(int *)(*(int *)(param1 + 0x58) + 8) + 0x30),0);
+		  param1_00 = (double)uVar4;
+		  param3_00 = func_ii_8614(param1_00,0,0);
+		  uVar2 = (undefined4)((ulonglong)param1_00 >> 0x20);
+		  uVar6 = UnityEngine_AndroidJavaObject__FromJavaArray_Nullable_int__
+		                    (uVar6,StringLiteral_1618,param3_00,0);
+		  iVar8 = *piVar5;
+		  uVar1 = CONCAT44(uVar2,piVar5);
+		  (**(code **)((ulonglong)*(uint *)(iVar8 + 0x2d0) * 4))(uVar1,uVar6,*(undefined4 *)(iVar8 + 0x2d4))
+		  ;
+		  piVar5 = *(int **)(param1 + 0x14);
+		  uVar2 = (undefined4)((ulonglong)uVar1 >> 0x20);
+		  uVar6 = Gameplay_Boss_Model_BossInstanceModel__get_CurrentHealthPercent
+		                    (*(undefined4 *)(*(int *)(param1 + 0x58) + 8),0);
+		  iVar8 = *piVar5;
+		  (**(code **)((ulonglong)*(uint *)(iVar8 + 0x2d0) * 4))
+		            (CONCAT44(uVar2,piVar5),uVar6,*(undefined4 *)(iVar8 + 0x2d4));
+		  uVar2 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_uint__object___MoveNext
+		                    (*(undefined4 *)(param1 + 0x4c),0);
+		  uVar6 = Gameplay_Boss_Model_BossInfo__get_LicenceCountMax
+		                    (*(undefined4 *)(*(int *)(*(int *)(param1 + 0x58) + 8) + 0x30),0);
+		  Com_TheFallenGames_OSA_CustomAdapters_TableView_Tuple_Basic_BasicTupleValueViewsHolder__UpdateAsText
+		            (uVar2,uVar6,0);
+		  uVar6 = *(undefined4 *)(param1 + 0x3c);
+		  uVar2 = Gameplay_Boss_Model_BossInstanceModel__get_NumInvites
+		                    (*(undefined4 *)(*(int *)(param1 + 0x58) + 8),0);
+		  System_Collections_Generic_Dictionary_int__object___get_Count(uVar6,uVar2,0);
+		  UI_Elements_Counters_CounterAutoHide___ctor
+		            (*(undefined4 *)(param1 + 0x40),
+		             *(undefined4 *)
+		              (*(int *)(*(int *)(*(int *)(*(int *)(param1 + 0x58) + 8) + 0x30) + 0x14) + 0x14),0);
+		  return;
+		}
+		*/
+
 }

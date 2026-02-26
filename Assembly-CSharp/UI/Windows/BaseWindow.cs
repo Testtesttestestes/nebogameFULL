@@ -186,6 +186,38 @@ namespace UI.Windows
 		[Address(RVA = "0x613B", Offset = "0x613B", VA = "0x613B")]
 		public void VisibleChange(bool active)
 		{
+		/* --- GHIDRA: VisibleChange ---
+		void UI_Windows_BaseWindow__VisibleChange(int *param1,undefined4 param2)
+		
+		{
+		  undefined4 param1_00;
+		  int iVar1;
+		  
+		  if (DAT_ram_00a639d8 == '\0') {
+		    Mono_Security_ASN1__get_Item(&UnityEngine_Object_TypeInfo);
+		    DAT_ram_00a639d8 = '\x01';
+		  }
+		  iVar1 = param1[7];
+		  if (iVar1 != 0) {
+		    (**(code **)((ulonglong)*(uint *)(iVar1 + 0xc) * 4))
+		              (*(undefined4 *)(iVar1 + 0x20),*(undefined4 *)(iVar1 + 0x14));
+		  }
+		  (**(code **)((ulonglong)*(uint *)(*param1 + 0x158) * 4))(param1,*(undefined4 *)(*param1 + 0x15c));
+		  param1[0xc] = 0;
+		  param1[9] = 0;
+		  param1[10] = 0;
+		  param1[7] = 0;
+		  param1[8] = 0;
+		  param1_00 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_uint__object___MoveNext
+		                        (param1,0);
+		  if (*(int *)(UnityEngine_Object_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(UnityEngine_Object_TypeInfo);
+		  }
+		  UnityEngine_Application__get_isPlaying(param1_00,0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06000EE0 RID: 3808 RVA: 0x00002050 File Offset: 0x00000250
@@ -207,6 +239,20 @@ namespace UI.Windows
 		[Address(RVA = "0x613D", Offset = "0x613D", VA = "0x613D", Slot = "17")]
 		public virtual bool CheckForClose()
 		{
+		/* --- GHIDRA: CheckForClose ---
+		void UI_Windows_BaseWindow__CheckForClose(int param1,int param2,undefined4 param3)
+		
+		{
+		  int iVar1;
+		  
+		  if ((param2 != 0) && (iVar1 = *(int *)(param1 + 0x2c), iVar1 != 0)) {
+		    (**(code **)((ulonglong)*(uint *)(iVar1 + 0xc) * 4))
+		              (*(undefined4 *)(iVar1 + 0x20),param1,1,*(undefined4 *)(iVar1 + 0x14));
+		  }
+		  return;
+		}
+		*/
+
 			return default(bool);
 		}
 
@@ -223,6 +269,20 @@ namespace UI.Windows
 		[Address(RVA = "0x613E", Offset = "0x613E", VA = "0x613E", Slot = "20")]
 		protected virtual void OnFocusChanged(bool focused)
 		{
+		/* --- GHIDRA: OnFocusChanged ---
+		void UI_Windows_BaseWindow__OnFocusChanged(undefined4 param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  undefined4 param1_00;
+		  
+		  param1_00 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_uint__object___MoveNext
+		                        (param1,0);
+		  Com_TheFallenGames_OSA_CustomAdapters_TableView_Tuple_Basic_BasicTupleValueViewsHolder__UpdateAsText
+		            (param1_00,param2,0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06000EE6 RID: 3814 RVA: 0x00002050 File Offset: 0x00000250
@@ -230,6 +290,16 @@ namespace UI.Windows
 		[Address(RVA = "0x613F", Offset = "0x613F", VA = "0x613F", Slot = "21")]
 		protected virtual void OnVisibleChanged(bool active)
 		{
+		/* --- GHIDRA: OnVisibleChanged ---
+		void UI_Windows_BaseWindow__OnVisibleChanged(int param1,undefined4 param2)
+		
+		{
+		  *(undefined1 *)(param1 + 0x18) = 1;
+		  UnityEngine_RectTransform__GetParentSize(param1,0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06000EE7 RID: 3815 RVA: 0x00002050 File Offset: 0x00000250
@@ -277,4 +347,125 @@ namespace UI.Windows
 		[FieldOffset(Offset = "0x2C")]
 		private Action<BaseWindow, bool> onSelfVisibleChange;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_IsActiveResourceBar ---
+		void UI_Windows_BaseWindow__get_IsActiveResourceBar(int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  int param1_00;
+		  int *param1_01;
+		  int iVar2;
+		  
+		  if (DAT_ram_00a639d6 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_TypeInfo);
+		    DAT_ram_00a639d6 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x1c);
+		  while ((param1_01 = (int *)UnityEngine_UI_Image__set_sprite(param1_00,param2,0),
+		         param1_01 == (int *)0x0 || (System_Action_TypeInfo == *param1_01))) {
+		    iVar2 = func_ii_4329(param1 + 0x1c,param1_01,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,System_Action_TypeInfo);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: add_onClose ---
+		void UI_Windows_BaseWindow__add_onClose(int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  int param1_00;
+		  int *param1_01;
+		  int iVar2;
+		  
+		  if (DAT_ram_00a639d7 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_TypeInfo);
+		    DAT_ram_00a639d7 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x1c);
+		  while ((param1_01 = (int *)func_ii_7048(param1_00,param2,0), param1_01 == (int *)0x0 ||
+		         (System_Action_TypeInfo == *param1_01))) {
+		    iVar2 = func_ii_4329(param1 + 0x1c,param1_01,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,System_Action_TypeInfo);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: UI.Windows.IManagedWindow.get_HideBG ---
+		void UI_Windows_BaseWindow__UI_Windows_IManagedWindow_get_HideBG
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  int iVar1;
+		  
+		  *(undefined1 *)(param1 + 0x10) = (undefined1)param2;
+		  iVar1 = *(int *)(param1 + 0x28);
+		  if (iVar1 != 0) {
+		    (**(code **)((ulonglong)*(uint *)(iVar1 + 0xc) * 4))
+		              (*(undefined4 *)(iVar1 + 0x20),param1,*(undefined4 *)(iVar1 + 0x14));
+		  }
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_IsFullscreenWindow ---
+		void UI_Windows_BaseWindow__get_IsFullscreenWindow
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4,undefined4 param5,
+		               undefined4 param6)
+		
+		{
+		  *(undefined4 *)(param1 + 0x2c) = param5;
+		  *(undefined4 *)(param1 + 0x28) = param4;
+		  *(undefined4 *)(param1 + 0x24) = param3;
+		  *(undefined4 *)(param1 + 0x20) = param2;
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: UI.Windows.IManagedWindow.Init ---
+		void UI_Windows_BaseWindow__UI_Windows_IManagedWindow_Init(int *param1,int param2,undefined4 param3)
+		
+		{
+		  param1[0xc] = param2;
+		  (**(code **)((ulonglong)*(uint *)(*param1 + 0x150) * 4))
+		            (param1,param2,*(undefined4 *)(*param1 + 0x154));
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: UI.Windows.IManagedWindow.FocusChanged ---
+		void UI_Windows_BaseWindow__UI_Windows_IManagedWindow_FocusChanged
+		               (int *param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  (**(code **)((ulonglong)*(uint *)(*param1 + 0x168) * 4))
+		            (param1,param2,*(undefined4 *)(*param1 + 0x16c));
+		  return;
+		}
+		*/
+
 }

@@ -57,6 +57,60 @@ namespace UI.Tweens
 		[Address(RVA = "0x5CCC", Offset = "0x5CCC", VA = "0x5CCC")]
 		private IEnumerator SetValue(float value, float duration)
 		{
+		/* --- GHIDRA: SetValue ---
+		void UI_Tweens_TweeningValue__SetValue(int param1,undefined4 param2)
+		
+		{
+		  undefined4 param1_00;
+		  
+		  if (DAT_ram_00a5b8d1 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_List_RewardToBalanceTweener_DurationCfg___ctor__);
+		    Mono_Security_ASN1__get_Item
+		              (&System_Collections_Generic_List_RewardToBalanceTweener_DurationCfg__TypeInfo);
+		    DAT_ram_00a5b8d1 = '\x01';
+		  }
+		  param1_00 = unnamed_function_1417
+		                        (
+		                        System_Collections_Generic_List_RewardToBalanceTweener_DurationCfg__TypeInfo
+		                        );
+		  GAFInternal_Objects_GAFBakedObjectImpl__get_isVisible
+		            (param1_00,
+		             Method_System_Collections_Generic_List_RewardToBalanceTweener_DurationCfg___ctor__);
+		  *(undefined8 *)(param1 + 0x18) = 0x1200000015;
+		  *(undefined4 *)(param1 + 0x14) = param1_00;
+		  UnityEngine_RectTransform__GetParentSize(param1,0);
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: SetValue ---
+		void UI_Tweens_TweeningValue__SetValue(int param1,undefined4 param2)
+		
+		{
+		  undefined4 param1_00;
+		  
+		  if (DAT_ram_00a5b8d1 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_List_RewardToBalanceTweener_DurationCfg___ctor__);
+		    Mono_Security_ASN1__get_Item
+		              (&System_Collections_Generic_List_RewardToBalanceTweener_DurationCfg__TypeInfo);
+		    DAT_ram_00a5b8d1 = '\x01';
+		  }
+		  param1_00 = unnamed_function_1417
+		                        (
+		                        System_Collections_Generic_List_RewardToBalanceTweener_DurationCfg__TypeInfo
+		                        );
+		  GAFInternal_Objects_GAFBakedObjectImpl__get_isVisible
+		            (param1_00,
+		             Method_System_Collections_Generic_List_RewardToBalanceTweener_DurationCfg___ctor__);
+		  *(undefined8 *)(param1 + 0x18) = 0x1200000015;
+		  *(undefined4 *)(param1 + 0x14) = param1_00;
+		  UnityEngine_RectTransform__GetParentSize(param1,0);
+		  return;
+		}
+		*/
+
 			return null;
 		}
 
@@ -65,6 +119,34 @@ namespace UI.Tweens
 		[Address(RVA = "0x5CCD", Offset = "0x5CCD", VA = "0x5CCD")]
 		private void Display(float value)
 		{
+		/* --- GHIDRA: Display ---
+		void UI_Tweens_TweeningValue__Display(int param1,float param2,undefined4 param3)
+		
+		{
+		  undefined4 uVar1;
+		  int *piVar2;
+		  undefined4 param2_00;
+		  int iVar3;
+		  float4 local_4;
+		  
+		  *(float *)(param1 + 0x30) = param2;
+		  if (DAT_ram_00a5b8cf == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_28728);
+		    DAT_ram_00a5b8cf = '\x01';
+		  }
+		  piVar2 = *(int **)(param1 + 0x10);
+		  param2_00 = *(undefined4 *)(param1 + 0x28);
+		  local_4 = (float4)param2;
+		  uVar1 = func_ii_1081(DAT_ram_00a6696c,&local_4);
+		  uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                    (StringLiteral_28728,param2_00,uVar1,0);
+		  iVar3 = *piVar2;
+		  (**(code **)((ulonglong)*(uint *)(iVar3 + 0x2d0) * 4))
+		            (piVar2,uVar1,*(undefined4 *)(iVar3 + 0x2d4));
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06000954 RID: 2388 RVA: 0x00002050 File Offset: 0x00000250
@@ -72,6 +154,45 @@ namespace UI.Tweens
 		[Address(RVA = "0x5CCE", Offset = "0x5CCE", VA = "0x5CCE")]
 		public void SetValueImmediately(float value)
 		{
+		/* --- GHIDRA: SetValueImmediately ---
+		int UI_Tweens_TweeningValue__SetValueImmediately(int param1,float param2,undefined4 param3)
+		
+		{
+		  int iVar1;
+		  undefined4 uVar2;
+		  undefined4 param1_00;
+		  
+		  if (DAT_ram_00a5b8d0 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Linq_Enumerable_First_RewardToBalanceTweener_DurationCfg___);
+		    Mono_Security_ASN1__get_Item(&System_Func_RewardToBalanceTweener_DurationCfg__bool__TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UI_Tweens_TweeningValue___c__DisplayClass18_0__SetValue_b__0__);
+		    Mono_Security_ASN1__get_Item(&UI_Tweens_TweeningValue___c__DisplayClass18_0_TypeInfo);
+		    DAT_ram_00a5b8d0 = '\x01';
+		  }
+		  iVar1 = unnamed_function_1417(UI_Tweens_TweeningValue___c__DisplayClass18_0_TypeInfo);
+		  *(float *)(iVar1 + 8) = param2;
+		  param1_00 = *(undefined4 *)(param1 + 0x14);
+		  uVar2 = unnamed_function_1417(System_Func_RewardToBalanceTweener_DurationCfg__bool__TypeInfo);
+		  System_Collections_Generic_Dictionary_uint__object___GetEnumerator
+		            (uVar2,iVar1,Method_UI_Tweens_TweeningValue___c__DisplayClass18_0__SetValue_b__0__,0);
+		  iVar1 = func_ii_7423(param1_00,uVar2,
+		                       Method_System_Linq_Enumerable_First_RewardToBalanceTweener_DurationCfg___);
+		  uVar2 = *(undefined4 *)(iVar1 + 0x10);
+		  if (DAT_ram_00a5b8ce == '\0') {
+		    Mono_Security_ASN1__get_Item(&UI_Tweens_TweeningValue__SetValue_d__15_TypeInfo);
+		    DAT_ram_00a5b8ce = '\x01';
+		  }
+		  iVar1 = unnamed_function_1417(UI_Tweens_TweeningValue__SetValue_d__15_TypeInfo);
+		  *(undefined4 *)(iVar1 + 0x18) = uVar2;
+		  *(float *)(iVar1 + 0x14) = param2;
+		  *(int *)(iVar1 + 0x10) = param1;
+		  *(undefined4 *)(iVar1 + 8) = 0;
+		  return iVar1;
+		}
+		*/
+
 		}
 
 		// Token: 0x06000955 RID: 2389 RVA: 0x00002052 File Offset: 0x00000252
@@ -141,4 +262,66 @@ namespace UI.Tweens
 		[FieldOffset(Offset = "0x30")]
 		private float _value;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_Value ---
+		undefined4 UI_Tweens_TweeningValue__get_Value(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  uVar1 = TMPro_TMP_Text__get_transform(*(undefined4 *)(param1 + 0x10),0);
+		  return uVar1;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_ValueTransform ---
+		int * UI_Tweens_TweeningValue__get_ValueTransform(int param1,undefined4 param2)
+		
+		{
+		  int *param1_00;
+		  
+		  if (DAT_ram_00a5b8cd == '\0') {
+		    Mono_Security_ASN1__get_Item(&UnityEngine_RectTransform_TypeInfo);
+		    DAT_ram_00a5b8cd = '\x01';
+		  }
+		  param1_00 = *(int **)(param1 + 0x2c);
+		  if (param1_00 == (int *)0x0) {
+		    param1_00 = (int *)System_Collections_Generic_SortedDictionary_Enumerator_object__object___get_Current
+		                                 (param1,0);
+		    if ((param1_00 != (int *)0x0) && (UnityEngine_RectTransform_TypeInfo != *param1_00)) {
+		      System_Activator__CreateInstance(param1_00,UnityEngine_RectTransform_TypeInfo);
+		      do {
+		        halt_trap();
+		      } while( true );
+		    }
+		    *(int **)(param1 + 0x2c) = param1_00;
+		  }
+		  return param1_00;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_RectTransform ---
+		int UI_Tweens_TweeningValue__get_RectTransform
+		              (undefined4 param1,float param2,float param3,undefined4 param4)
+		
+		{
+		  int iVar1;
+		  
+		  if (DAT_ram_00a5b8ce == '\0') {
+		    Mono_Security_ASN1__get_Item(&UI_Tweens_TweeningValue__SetValue_d__15_TypeInfo);
+		    DAT_ram_00a5b8ce = '\x01';
+		  }
+		  iVar1 = unnamed_function_1417(UI_Tweens_TweeningValue__SetValue_d__15_TypeInfo);
+		  *(float *)(iVar1 + 0x18) = param3;
+		  *(float *)(iVar1 + 0x14) = param2;
+		  *(undefined4 *)(iVar1 + 0x10) = param1;
+		  *(undefined4 *)(iVar1 + 8) = 0;
+		  return iVar1;
+		}
+		*/
+
 }

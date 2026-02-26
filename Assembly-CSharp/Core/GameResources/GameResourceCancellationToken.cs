@@ -89,6 +89,20 @@ namespace Core.GameResources
 		[Address(RVA = "0xA8E4", Offset = "0xA8E4", VA = "0xA8E4")]
 		public void Init()
 		{
+		/* --- GHIDRA: Init ---
+		void Core_GameResources_GameResourceCancellationToken__Init(int param1,int param2,undefined4 param3)
+		
+		{
+		  if (*(char *)(param1 + 0x10) == '\0') {
+		    *(int *)(param1 + 0xc) = param2;
+		    return;
+		  }
+		  (**(code **)((ulonglong)*(uint *)(param2 + 0xc) * 4))
+		            (*(undefined4 *)(param2 + 0x20),*(undefined4 *)(param2 + 0x14));
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06005C42 RID: 23618 RVA: 0x00002050 File Offset: 0x00000250
@@ -96,6 +110,17 @@ namespace Core.GameResources
 		[Address(RVA = "0xA8E5", Offset = "0xA8E5", VA = "0xA8E5")]
 		public void CallWhenComplete(Action callback)
 		{
+		/* --- GHIDRA: CallWhenComplete ---
+		void Core_GameResources_GameResourceCancellationToken__CallWhenComplete
+		               (int param1,undefined4 param2)
+		
+		{
+		  System_Runtime_CompilerServices_AsyncTaskMethodBuilder__AwaitUnsafeOnCompleted_ConfiguredTaskAwaitable_ConfiguredTaskAwaiter__WebRequestStream__WriteChunkTrailer_d__40_
+		            (*(undefined4 *)(param1 + 8),0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06005C43 RID: 23619 RVA: 0x00002050 File Offset: 0x00000250
@@ -110,6 +135,18 @@ namespace Core.GameResources
 		[Address(RVA = "0xA8E6", Offset = "0xA8E6", VA = "0xA8E6")]
 		public void Cancel()
 		{
+		/* --- GHIDRA: Cancel ---
+		void Core_GameResources_GameResourceCancellationToken__Cancel(int param1,undefined4 param2)
+		
+		{
+		  System_Runtime_CompilerServices_AsyncTaskMethodBuilder__AwaitUnsafeOnCompleted_ConfiguredTaskAwaitable_ConfiguredTaskAwaiter__WebRequestStream__WriteChunkTrailer_d__40_
+		            (*(undefined4 *)(param1 + 8),0);
+		  System_Threading_CancellationTokenSource__Cancel(*(undefined4 *)(param1 + 8),0);
+		  *(undefined4 *)(param1 + 8) = 0;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06005C45 RID: 23621 RVA: 0x00002050 File Offset: 0x00000250
@@ -117,6 +154,24 @@ namespace Core.GameResources
 		[Address(RVA = "0xA8E7", Offset = "0xA8E7", VA = "0xA8E7", Slot = "4")]
 		public void Dispose()
 		{
+		/* --- GHIDRA: Dispose ---
+		void Core_GameResources_GameResourceCancellationToken__Dispose(int param1,undefined4 param2)
+		
+		{
+		  undefined4 param1_00;
+		  
+		  if (DAT_ram_00a6064a == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Threading_CancellationTokenSource_TypeInfo);
+		    DAT_ram_00a6064a = '\x01';
+		  }
+		  param1_00 = unnamed_function_1417(System_Threading_CancellationTokenSource_TypeInfo);
+		  Gameplay_Combat_Control_Conveyor__Next(param1_00,0);
+		  *(undefined1 *)(param1 + 0x10) = 1;
+		  *(undefined4 *)(param1 + 8) = param1_00;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06005C46 RID: 23622 RVA: 0x00002050 File Offset: 0x00000250
@@ -124,6 +179,189 @@ namespace Core.GameResources
 		[Address(RVA = "0xA8E8", Offset = "0xA8E8", VA = "0xA8E8")]
 		public GameResourceCancellationToken()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Core_GameResources_GameResourceCancellationToken___ctor(undefined4 param1)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a6064b == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_GameResources_AudioFabric_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Core_GameResources_GameAnimationsFabric_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Core_GameResources_GameResourcesManager_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Core_GameResources_GameSpriteAtlasFabric_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Core_GameResources_GameSpritesFabric_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Core_GameResources_GameTextMeshProSpriteAssetFabric_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Core_GameResources_GameTexturesFabric_TypeInfo);
+		    DAT_ram_00a6064b = '\x01';
+		  }
+		  uVar1 = unnamed_function_1417(Core_GameResources_GameTexturesFabric_TypeInfo);
+		  if (DAT_ram_00a60661 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Core_GameResources_BaseGameResourcesFabric_GameTextureLoader__GameResourcesManager_TextureReadyDelegate___ctor__
+		              );
+		    DAT_ram_00a60661 = '\x01';
+		  }
+		  Sirenix_Serialization_BaseFormatter___Il2CppFullySharedGenericType___get_SerializedType
+		            (uVar1,
+		             Method_Core_GameResources_BaseGameResourcesFabric_GameTextureLoader__GameResourcesManager_TextureReadyDelegate___ctor__
+		            );
+		  **(undefined4 **)(Core_GameResources_GameResourcesManager_TypeInfo + 0x5c) = uVar1;
+		  uVar1 = unnamed_function_1417(Core_GameResources_GameAnimationsFabric_TypeInfo);
+		  if (DAT_ram_00a60660 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Core_GameResources_BaseGameResourcesFabric_GameAnimationLoader__GameResourcesManager_AnimationReadyDelegate___ctor__
+		              );
+		    DAT_ram_00a60660 = '\x01';
+		  }
+		  Sirenix_Serialization_BaseFormatter___Il2CppFullySharedGenericType___get_SerializedType
+		            (uVar1,
+		             Method_Core_GameResources_BaseGameResourcesFabric_GameAnimationLoader__GameResourcesManager_AnimationReadyDelegate___ctor__
+		            );
+		  *(undefined4 *)(*(int *)(Core_GameResources_GameResourcesManager_TypeInfo + 0x5c) + 0x10) = uVar1;
+		  uVar1 = unnamed_function_1417(Core_GameResources_GameSpritesFabric_TypeInfo);
+		  if (DAT_ram_00a6065d == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Core_GameResources_BaseGameResourcesFabric_GameSpriteLoader__GameResourcesManager_SpriteReadyDelegate___ctor__
+		              );
+		    DAT_ram_00a6065d = '\x01';
+		  }
+		  Sirenix_Serialization_BaseFormatter___Il2CppFullySharedGenericType___get_SerializedType
+		            (uVar1,
+		             Method_Core_GameResources_BaseGameResourcesFabric_GameSpriteLoader__GameResourcesManager_SpriteReadyDelegate___ctor__
+		            );
+		  *(undefined4 *)(*(int *)(Core_GameResources_GameResourcesManager_TypeInfo + 0x5c) + 4) = uVar1;
+		  uVar1 = unnamed_function_1417(Core_GameResources_GameSpriteAtlasFabric_TypeInfo);
+		  if (DAT_ram_00a6065e == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Core_GameResources_BaseGameResourcesFabric_GameSpriteAtlasLoader__GameResourcesManager_SpriteAtlasReadyDelegate___ctor__
+		              );
+		    DAT_ram_00a6065e = '\x01';
+		  }
+		  Sirenix_Serialization_BaseFormatter___Il2CppFullySharedGenericType___get_SerializedType
+		            (uVar1,
+		             Method_Core_GameResources_BaseGameResourcesFabric_GameSpriteAtlasLoader__GameResourcesManager_SpriteAtlasReadyDelegate___ctor__
+		            );
+		  *(undefined4 *)(*(int *)(Core_GameResources_GameResourcesManager_TypeInfo + 0x5c) + 8) = uVar1;
+		  uVar1 = unnamed_function_1417(Core_GameResources_AudioFabric_TypeInfo);
+		  if (DAT_ram_00a60662 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Core_GameResources_BaseGameResourcesFabric_GameAudioClipLoader__GameResourcesManager_AudioClipReadyDelegate___ctor__
+		              );
+		    DAT_ram_00a60662 = '\x01';
+		  }
+		  Sirenix_Serialization_BaseFormatter___Il2CppFullySharedGenericType___get_SerializedType
+		            (uVar1,
+		             Method_Core_GameResources_BaseGameResourcesFabric_GameAudioClipLoader__GameResourcesManager_AudioClipReadyDelegate___ctor__
+		            );
+		  *(undefined4 *)(*(int *)(Core_GameResources_GameResourcesManager_TypeInfo + 0x5c) + 0x14) = uVar1;
+		  uVar1 = unnamed_function_1417(Core_GameResources_GameTextMeshProSpriteAssetFabric_TypeInfo);
+		  if (DAT_ram_00a6065f == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Core_GameResources_BaseGameResourcesFabric_GameTextMeshProSpriteAssetLoader__GameResourcesManager_TextMeshProSpriteAssetReadyDelegate___ctor__
+		              );
+		    DAT_ram_00a6065f = '\x01';
+		  }
+		  Sirenix_Serialization_BaseFormatter___Il2CppFullySharedGenericType___get_SerializedType
+		            (uVar1,
+		             Method_Core_GameResources_BaseGameResourcesFabric_GameTextMeshProSpriteAssetLoader__GameResourcesManager_TextMeshProSpriteAssetReadyDelegate___ctor__
+		            );
+		  *(undefined4 *)(*(int *)(Core_GameResources_GameResourcesManager_TypeInfo + 0x5c) + 0xc) = uVar1;
+		  return;
+		}
+		*/
+
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: set_CancellationToken ---
+		void Core_GameResources_GameResourceCancellationToken__set_CancellationToken
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  int param1_00;
+		  int *param1_01;
+		  int iVar2;
+		  
+		  if (DAT_ram_00a60648 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_TypeInfo);
+		    DAT_ram_00a60648 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0xc);
+		  while ((param1_01 = (int *)UnityEngine_UI_Image__set_sprite(param1_00,param2,0),
+		         param1_01 == (int *)0x0 || (System_Action_TypeInfo == *param1_01))) {
+		    iVar2 = func_ii_4329(param1 + 0xc,param1_01,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,System_Action_TypeInfo);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: add_LoadCompleteEvent ---
+		void Core_GameResources_GameResourceCancellationToken__add_LoadCompleteEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  int param1_00;
+		  int *param1_01;
+		  int iVar2;
+		  
+		  if (DAT_ram_00a60649 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_TypeInfo);
+		    DAT_ram_00a60649 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0xc);
+		  while ((param1_01 = (int *)func_ii_7048(param1_00,param2,0), param1_01 == (int *)0x0 ||
+		         (System_Action_TypeInfo == *param1_01))) {
+		    iVar2 = func_ii_4329(param1 + 0xc,param1_01,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,System_Action_TypeInfo);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: get_CancellationRequested ---
+		void Core_GameResources_GameResourceCancellationToken__get_CancellationRequested
+		               (int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  
+		  *(undefined1 *)(param1 + 0x10) = 1;
+		  iVar1 = *(int *)(param1 + 0xc);
+		  if (iVar1 != 0) {
+		    (**(code **)((ulonglong)*(uint *)(iVar1 + 0xc) * 4))
+		              (*(undefined4 *)(iVar1 + 0x20),*(undefined4 *)(iVar1 + 0x14));
+		  }
+		  *(undefined4 *)(param1 + 0xc) = 0;
+		  return;
+		}
+		*/
+
 }

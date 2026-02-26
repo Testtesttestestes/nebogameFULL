@@ -27,6 +27,21 @@ namespace Gameplay.Bank.View
 		[Address(RVA = "0x9A69", Offset = "0x9A69", VA = "0x9A69")]
 		private void Start()
 		{
+		/* --- GHIDRA: Start ---
+		void Gameplay_Bank_View_AdOptionInBankValidatorView__Start(int param1,undefined4 param2)
+		
+		{
+		  int *piVar1;
+		  
+		  piVar1 = *(int **)(param1 + 0x14);
+		  if (piVar1 != (int *)0x0) {
+		    (**(code **)((ulonglong)*(uint *)(*piVar1 + 0x130) * 4))
+		              (piVar1,*(undefined4 *)(*piVar1 + 0x134));
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06004C26 RID: 19494 RVA: 0x00002050 File Offset: 0x00000250
@@ -41,6 +56,19 @@ namespace Gameplay.Bank.View
 		[Address(RVA = "0x9A6B", Offset = "0x9A6B", VA = "0x9A6B")]
 		public AdOptionInBankValidatorView()
 		{
+		/* --- GHIDRA: .ctor ---
+		undefined4
+		Gameplay_Bank_View_AdOptionInBankValidatorView___ctor(undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a59758 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_12568);
+		    DAT_ram_00a59758 = '\x01';
+		  }
+		  return StringLiteral_12568;
+		}
+		*/
+
 		}
 
 		// Token: 0x04002975 RID: 10613
@@ -54,4 +82,67 @@ namespace Gameplay.Bank.View
 		[FieldOffset(Offset = "0x14")]
 		private AdOptionInBankValidatorViewMediator _mediator;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_AdMarker ---
+		void Gameplay_Bank_View_AdOptionInBankValidatorView__get_AdMarker(int param1,undefined4 param2)
+		
+		{
+		  uint uVar1;
+		  uint *puVar2;
+		  int *piVar3;
+		  int iVar4;
+		  undefined4 param4;
+		  undefined4 param3;
+		  undefined4 param2_00;
+		  
+		  if (DAT_ram_00a59757 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Gameplay_Bank_Controller_AdOptionInBankValidatorViewMediator_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Core_Gameplay_IGame_TypeInfo);
+		    DAT_ram_00a59757 = '\x01';
+		  }
+		  if (DAT_ram_00a6456f == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_Gameplay_Game_TypeInfo);
+		    DAT_ram_00a6456f = '\x01';
+		  }
+		  uVar1 = 0;
+		  piVar3 = (int *)**(undefined4 **)(Core_Gameplay_Game_TypeInfo + 0x5c);
+		  iVar4 = *piVar3;
+		  if (*(ushort *)(iVar4 + 0xb6) != 0) {
+		    do {
+		      if (Core_Gameplay_IGame_TypeInfo == *(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8)) {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8 + 4) * 8 + iVar4 + 400);
+		        goto code_r0x810628d5;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar4 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(piVar3,Core_Gameplay_IGame_TypeInfo,0x1a);
+		code_r0x810628d5:
+		  iVar4 = (**(code **)((ulonglong)*puVar2 * 4))(piVar3,puVar2[1]);
+		  param4 = *(undefined4 *)(iVar4 + 0x24);
+		  param3 = *(undefined4 *)(iVar4 + 0x28);
+		  param2_00 = *(undefined4 *)(iVar4 + 0x2c);
+		  piVar3 = (int *)unnamed_function_1417
+		                            (Gameplay_Bank_Controller_AdOptionInBankValidatorViewMediator_TypeInfo);
+		  if (DAT_ram_00a597d6 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_MVC_AbstractViewMediator_BankModel__BankEvents__BankController__AdOptionInBankValidatorView___ctor__
+		              );
+		    DAT_ram_00a597d6 = '\x01';
+		  }
+		  Gameplay_Combat_TeamCombat_View_AbstractTeamCombatView_object___get_HideInstantElements
+		            (piVar3,param2_00,param3,param4,
+		             Method_MVC_AbstractViewMediator_BankModel__BankEvents__BankController__AdOptionInBankValidatorView___ctor__
+		            );
+		  (**(code **)((ulonglong)*(uint *)(*piVar3 + 0x160) * 4))
+		            (piVar3,param1,*(undefined4 *)(*piVar3 + 0x164));
+		  *(int **)(param1 + 0x14) = piVar3;
+		  return;
+		}
+		*/
+
 }

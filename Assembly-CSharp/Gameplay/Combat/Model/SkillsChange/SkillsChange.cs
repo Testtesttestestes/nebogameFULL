@@ -78,6 +78,26 @@ namespace Gameplay.Combat.Model.SkillsChange
 		[Address(RVA = "0x8A6F", Offset = "0x8A6F", VA = "0x8A6F")]
 		public SkillsChange(ulong userId, IList<PlayerSkill> skills, IShortSpellInfo[] spellInfo)
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_Combat_Model_SkillsChange_SkillsChange___ctor
+		               (undefined4 param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  if (DAT_ram_00a57e58 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Gameplay_Combat_Model_FieldChange_AbstractFieldChangeDecorator_ProtoFieldChangedEvt___ctor__
+		              );
+		    DAT_ram_00a57e58 = '\x01';
+		  }
+		  Unity_Services_Core_Environments_Internal_Environments__get_Current
+		            (param1,param2,
+		             Method_Gameplay_Combat_Model_FieldChange_AbstractFieldChangeDecorator_ProtoFieldChangedEvt___ctor__
+		            );
+		  return;
+		}
+		*/
+
 		}
 	}
 }

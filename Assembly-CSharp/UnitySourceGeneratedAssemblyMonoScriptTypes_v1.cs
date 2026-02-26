@@ -25,6 +25,370 @@ internal class UnitySourceGeneratedAssemblyMonoScriptTypes_v1
 	[Address(RVA = "0x55BB", Offset = "0x55BB", VA = "0x55BB")]
 	public UnitySourceGeneratedAssemblyMonoScriptTypes_v1()
 	{
+		/* --- GHIDRA: .ctor ---
+		void UnitySourceGeneratedAssemblyMonoScriptTypes_v1___ctor(undefined4 param1)
+		
+		{
+		  if (DAT_ram_00a66704 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_1618);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_19460);
+		    DAT_ram_00a66704 = '\x01';
+		  }
+		  Core_ExternAppMethods__OpenPaymentWindow(StringLiteral_1618,StringLiteral_19460,0,0);
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: .ctor ---
+		void UnitySourceGeneratedAssemblyMonoScriptTypes_v1___ctor(undefined4 param1)
+		
+		{
+		  if (DAT_ram_00a66704 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_1618);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_19460);
+		    DAT_ram_00a66704 = '\x01';
+		  }
+		  Core_ExternAppMethods__OpenPaymentWindow(StringLiteral_1618,StringLiteral_19460,0,0);
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: .ctor ---
+		void UnitySourceGeneratedAssemblyMonoScriptTypes_v1___ctor(undefined4 param1)
+		
+		{
+		  if (DAT_ram_00a66704 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_1618);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_19460);
+		    DAT_ram_00a66704 = '\x01';
+		  }
+		  Core_ExternAppMethods__OpenPaymentWindow(StringLiteral_1618,StringLiteral_19460,0,0);
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: .ctor ---
+		void UnitySourceGeneratedAssemblyMonoScriptTypes_v1___ctor(undefined4 param1)
+		
+		{
+		  if (DAT_ram_00a66704 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_1618);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_19460);
+		    DAT_ram_00a66704 = '\x01';
+		  }
+		  Core_ExternAppMethods__OpenPaymentWindow(StringLiteral_1618,StringLiteral_19460,0,0);
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: .ctor ---
+		void UnitySourceGeneratedAssemblyMonoScriptTypes_v1___ctor(undefined4 param1)
+		
+		{
+		  if (DAT_ram_00a66704 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_1618);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_19460);
+		    DAT_ram_00a66704 = '\x01';
+		  }
+		  Core_ExternAppMethods__OpenPaymentWindow(StringLiteral_1618,StringLiteral_19460,0,0);
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: .ctor ---
+		void UnitySourceGeneratedAssemblyMonoScriptTypes_v1___ctor(undefined4 param1)
+		
+		{
+		  if (DAT_ram_00a66704 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_1618);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_19460);
+		    DAT_ram_00a66704 = '\x01';
+		  }
+		  Core_ExternAppMethods__OpenPaymentWindow(StringLiteral_1618,StringLiteral_19460,0,0);
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: .ctor ---
+		void UnitySourceGeneratedAssemblyMonoScriptTypes_v1___ctor(undefined4 param1)
+		
+		{
+		  if (DAT_ram_00a66704 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_1618);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_19460);
+		    DAT_ram_00a66704 = '\x01';
+		  }
+		  Core_ExternAppMethods__OpenPaymentWindow(StringLiteral_1618,StringLiteral_19460,0,0);
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: .ctor ---
+		void UnitySourceGeneratedAssemblyMonoScriptTypes_v1___ctor(undefined4 param1)
+		
+		{
+		  if (DAT_ram_00a66704 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_1618);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_19460);
+		    DAT_ram_00a66704 = '\x01';
+		  }
+		  Core_ExternAppMethods__OpenPaymentWindow(StringLiteral_1618,StringLiteral_19460,0,0);
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: .ctor ---
+		void UnitySourceGeneratedAssemblyMonoScriptTypes_v1___ctor(undefined4 param1)
+		
+		{
+		  if (DAT_ram_00a66704 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_1618);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_19460);
+		    DAT_ram_00a66704 = '\x01';
+		  }
+		  Core_ExternAppMethods__OpenPaymentWindow(StringLiteral_1618,StringLiteral_19460,0,0);
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: .ctor ---
+		void UnitySourceGeneratedAssemblyMonoScriptTypes_v1___ctor(undefined4 param1)
+		
+		{
+		  if (DAT_ram_00a66704 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_1618);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_19460);
+		    DAT_ram_00a66704 = '\x01';
+		  }
+		  Core_ExternAppMethods__OpenPaymentWindow(StringLiteral_1618,StringLiteral_19460,0,0);
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: .ctor ---
+		void UnitySourceGeneratedAssemblyMonoScriptTypes_v1___ctor(undefined4 param1)
+		
+		{
+		  if (DAT_ram_00a66704 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_1618);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_19460);
+		    DAT_ram_00a66704 = '\x01';
+		  }
+		  Core_ExternAppMethods__OpenPaymentWindow(StringLiteral_1618,StringLiteral_19460,0,0);
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: .ctor ---
+		void UnitySourceGeneratedAssemblyMonoScriptTypes_v1___ctor(undefined4 param1)
+		
+		{
+		  if (DAT_ram_00a66704 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_1618);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_19460);
+		    DAT_ram_00a66704 = '\x01';
+		  }
+		  Core_ExternAppMethods__OpenPaymentWindow(StringLiteral_1618,StringLiteral_19460,0,0);
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: .ctor ---
+		void UnitySourceGeneratedAssemblyMonoScriptTypes_v1___ctor(undefined4 param1)
+		
+		{
+		  if (DAT_ram_00a66704 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_1618);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_19460);
+		    DAT_ram_00a66704 = '\x01';
+		  }
+		  Core_ExternAppMethods__OpenPaymentWindow(StringLiteral_1618,StringLiteral_19460,0,0);
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: .ctor ---
+		void UnitySourceGeneratedAssemblyMonoScriptTypes_v1___ctor(undefined4 param1)
+		
+		{
+		  if (DAT_ram_00a66704 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_1618);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_19460);
+		    DAT_ram_00a66704 = '\x01';
+		  }
+		  Core_ExternAppMethods__OpenPaymentWindow(StringLiteral_1618,StringLiteral_19460,0,0);
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: .ctor ---
+		void UnitySourceGeneratedAssemblyMonoScriptTypes_v1___ctor(undefined4 param1)
+		
+		{
+		  if (DAT_ram_00a66704 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_1618);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_19460);
+		    DAT_ram_00a66704 = '\x01';
+		  }
+		  Core_ExternAppMethods__OpenPaymentWindow(StringLiteral_1618,StringLiteral_19460,0,0);
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: .ctor ---
+		void UnitySourceGeneratedAssemblyMonoScriptTypes_v1___ctor(undefined4 param1)
+		
+		{
+		  if (DAT_ram_00a66704 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_1618);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_19460);
+		    DAT_ram_00a66704 = '\x01';
+		  }
+		  Core_ExternAppMethods__OpenPaymentWindow(StringLiteral_1618,StringLiteral_19460,0,0);
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: .ctor ---
+		void UnitySourceGeneratedAssemblyMonoScriptTypes_v1___ctor(undefined4 param1)
+		
+		{
+		  if (DAT_ram_00a66704 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_1618);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_19460);
+		    DAT_ram_00a66704 = '\x01';
+		  }
+		  Core_ExternAppMethods__OpenPaymentWindow(StringLiteral_1618,StringLiteral_19460,0,0);
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: .ctor ---
+		void UnitySourceGeneratedAssemblyMonoScriptTypes_v1___ctor(undefined4 param1)
+		
+		{
+		  if (DAT_ram_00a66704 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_1618);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_19460);
+		    DAT_ram_00a66704 = '\x01';
+		  }
+		  Core_ExternAppMethods__OpenPaymentWindow(StringLiteral_1618,StringLiteral_19460,0,0);
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: .ctor ---
+		void UnitySourceGeneratedAssemblyMonoScriptTypes_v1___ctor(undefined4 param1)
+		
+		{
+		  if (DAT_ram_00a66704 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_1618);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_19460);
+		    DAT_ram_00a66704 = '\x01';
+		  }
+		  Core_ExternAppMethods__OpenPaymentWindow(StringLiteral_1618,StringLiteral_19460,0,0);
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: .ctor ---
+		void UnitySourceGeneratedAssemblyMonoScriptTypes_v1___ctor(undefined4 param1)
+		
+		{
+		  if (DAT_ram_00a66704 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_1618);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_19460);
+		    DAT_ram_00a66704 = '\x01';
+		  }
+		  Core_ExternAppMethods__OpenPaymentWindow(StringLiteral_1618,StringLiteral_19460,0,0);
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: .ctor ---
+		void UnitySourceGeneratedAssemblyMonoScriptTypes_v1___ctor(undefined4 param1)
+		
+		{
+		  if (DAT_ram_00a66704 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_1618);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_19460);
+		    DAT_ram_00a66704 = '\x01';
+		  }
+		  Core_ExternAppMethods__OpenPaymentWindow(StringLiteral_1618,StringLiteral_19460,0,0);
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: .ctor ---
+		void UnitySourceGeneratedAssemblyMonoScriptTypes_v1___ctor(undefined4 param1)
+		
+		{
+		  if (DAT_ram_00a66704 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_1618);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_19460);
+		    DAT_ram_00a66704 = '\x01';
+		  }
+		  Core_ExternAppMethods__OpenPaymentWindow(StringLiteral_1618,StringLiteral_19460,0,0);
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: .ctor ---
+		void UnitySourceGeneratedAssemblyMonoScriptTypes_v1___ctor(undefined4 param1)
+		
+		{
+		  if (DAT_ram_00a66704 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_1618);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_19460);
+		    DAT_ram_00a66704 = '\x01';
+		  }
+		  Core_ExternAppMethods__OpenPaymentWindow(StringLiteral_1618,StringLiteral_19460,0,0);
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: .ctor ---
+		void UnitySourceGeneratedAssemblyMonoScriptTypes_v1___ctor(undefined4 param1)
+		
+		{
+		  if (DAT_ram_00a66704 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_1618);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_19460);
+		    DAT_ram_00a66704 = '\x01';
+		  }
+		  Core_ExternAppMethods__OpenPaymentWindow(StringLiteral_1618,StringLiteral_19460,0,0);
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: .ctor ---
+		void UnitySourceGeneratedAssemblyMonoScriptTypes_v1___ctor(undefined4 param1)
+		
+		{
+		  if (DAT_ram_00a66704 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_1618);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_19460);
+		    DAT_ram_00a66704 = '\x01';
+		  }
+		  Core_ExternAppMethods__OpenPaymentWindow(StringLiteral_1618,StringLiteral_19460,0,0);
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: .ctor ---
+		void UnitySourceGeneratedAssemblyMonoScriptTypes_v1___ctor(undefined4 param1)
+		
+		{
+		  if (DAT_ram_00a66704 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_1618);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_19460);
+		    DAT_ram_00a66704 = '\x01';
+		  }
+		  Core_ExternAppMethods__OpenPaymentWindow(StringLiteral_1618,StringLiteral_19460,0,0);
+		  return;
+		}
+		*/
+
 	}
 
 	// Token: 0x02000012 RID: 18

@@ -15,6 +15,20 @@ namespace Gameplay.Inventory.Controller.Middlewares
 		[Address(RVA = "0x7A89", Offset = "0x7A89", VA = "0x7A89")]
 		public InventoryActionsMiddleware(InventoryModel model, UserData owner)
 		{
+		/* --- GHIDRA: .ctor ---
+		undefined4
+		Gameplay_Inventory_Controller_Middlewares_InventoryActionsMiddleware___ctor
+		          (undefined4 param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  uVar1 = Gameplay_Inventory_View_Chest_InventoryConfirmBuySlotWindow__HandleContent
+		                    (param3,param2,param2);
+		  return uVar1;
+		}
+		*/
+
 		}
 
 		// Token: 0x060029D4 RID: 10708 RVA: 0x00002052 File Offset: 0x00000252

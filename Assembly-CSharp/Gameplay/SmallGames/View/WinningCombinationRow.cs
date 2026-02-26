@@ -35,6 +35,29 @@ namespace Gameplay.SmallGames.View
 		[Address(RVA = "0x70D9", Offset = "0x70D9", VA = "0x70D9", Slot = "4")]
 		protected virtual void HandleIndexChanged()
 		{
+		/* --- GHIDRA: HandleIndexChanged ---
+		void Gameplay_SmallGames_View_WinningCombinationRow__HandleIndexChanged
+		               (undefined4 param1,undefined4 param2,uint param3,undefined4 param4,undefined4 param5)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a5828e == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_13833);
+		    DAT_ram_00a5828e = '\x01';
+		  }
+		  if (param3 == 0) {
+		    uVar1 = Core_Extensions_Dict_DictExt__GetServiceOptionDic(param4,StringLiteral_13833,0);
+		  }
+		  else {
+		    uVar1 = Core_Extensions_Dict_DictExt__GetCraftSchemeDic(param4,(ulonglong)param3,0);
+		    uVar1 = Core_Extensions_Dict_SaleMarkersDicExt__GetAprAssetId(uVar1,0);
+		  }
+		  AssetContent_GameImage__get_AssetId(param2,uVar1,0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06001F74 RID: 8052 RVA: 0x00002050 File Offset: 0x00000250
@@ -42,6 +65,20 @@ namespace Gameplay.SmallGames.View
 		[Address(RVA = "0x1CC1", Offset = "0x1CC1", VA = "0x1CC1")]
 		public void Init(WinCombinationDic dic, int index = 0)
 		{
+		/* --- GHIDRA: Init ---
+		int * Gameplay_SmallGames_View_WinningCombinationRow__Init(int *param1)
+		
+		{
+		  if (*param1 == 0) {
+		    return param1;
+		  }
+		  System_Data_DataSet__ValidateLocaleConstraint(*param1);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
 		}
 
 		// Token: 0x06001F75 RID: 8053 RVA: 0x00002050 File Offset: 0x00000250
@@ -56,6 +93,19 @@ namespace Gameplay.SmallGames.View
 		[Address(RVA = "0x70DB", Offset = "0x70DB", VA = "0x70DB")]
 		public WinningCombinationRow()
 		{
+		/* --- GHIDRA: .ctor ---
+		undefined4
+		Gameplay_SmallGames_View_WinningCombinationRow___ctor(undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a5828f == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_12669);
+		    DAT_ram_00a5828f = '\x01';
+		  }
+		  return StringLiteral_12669;
+		}
+		*/
+
 		}
 
 		// Token: 0x04001120 RID: 4384
@@ -99,4 +149,32 @@ namespace Gameplay.SmallGames.View
 		[FieldOffset(Offset = "0x28")]
 		protected int _index;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_Index ---
+		void Gameplay_SmallGames_View_WinningCombinationRow__get_Index
+		               (int *param1,int param2,undefined4 param3)
+		
+		{
+		  if (param2 != param1[10]) {
+		    param1[10] = param2;
+		    (**(code **)((ulonglong)*(uint *)(*param1 + 0xe0) * 4))(param1,*(undefined4 *)(*param1 + 0xe4));
+		  }
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_Index ---
+		void Gameplay_SmallGames_View_WinningCombinationRow__set_Index(int param1,undefined4 param2)
+		
+		{
+		  if ((*(byte *)(param1 + 0x28) & 1) == 0) {
+		    func_ii_7050(*(undefined4 *)(param1 + 0x20),*(undefined4 *)(param1 + 0x24),0);
+		  }
+		  return;
+		}
+		*/
+
 }

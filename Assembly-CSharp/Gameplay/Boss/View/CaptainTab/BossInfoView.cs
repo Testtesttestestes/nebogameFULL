@@ -192,6 +192,28 @@ namespace Gameplay.Boss.View.CaptainTab
 		[Address(RVA = "0x9603", Offset = "0x9603", VA = "0x9603")]
 		private void OptionViewOnAttackButtonClickEvent(BossInfo.BossAttackOption arg1, BossInfo.BossAttackOption.BossAttackOptionVariant arg2)
 		{
+		/* --- GHIDRA: OptionViewOnAttackButtonClickEvent ---
+		void Gameplay_Boss_View_CaptainTab_BossInfoView__OptionViewOnAttackButtonClickEvent
+		               (int param1,undefined4 param2)
+		
+		{
+		  undefined4 param1_00;
+		  
+		  if (DAT_ram_00a57a49 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_List_BossAttackOptionView___ctor__);
+		    Mono_Security_ASN1__get_Item(&System_Collections_Generic_List_BossAttackOptionView__TypeInfo);
+		    DAT_ram_00a57a49 = '\x01';
+		  }
+		  param1_00 = unnamed_function_1417(System_Collections_Generic_List_BossAttackOptionView__TypeInfo);
+		  GAFInternal_Objects_GAFBakedObjectImpl__get_isVisible
+		            (param1_00,Method_System_Collections_Generic_List_BossAttackOptionView___ctor__);
+		  *(undefined4 *)(param1 + 0x3c) = param1_00;
+		  UnityEngine_RectTransform__GetParentSize(param1,0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06004772 RID: 18290 RVA: 0x00002050 File Offset: 0x00000250
@@ -272,4 +294,131 @@ namespace Gameplay.Boss.View.CaptainTab
 		[FieldOffset(Offset = "0x3C")]
 		private List<BossAttackOptionView> _attackOptionViews;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_AttackOptionViews ---
+		void Gameplay_Boss_View_CaptainTab_BossInfoView__get_AttackOptionViews
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a57a47 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               System_Action_BossInfo_BossAttackOption__BossInfo_BossAttackOption_BossAttackOptionVariant__TypeInfo
+		              );
+		    DAT_ram_00a57a47 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x40);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = func_ii_7048(param1_00,param2,0);
+		    param2_00 = 
+		    System_Action_BossInfo_BossAttackOption__BossInfo_BossAttackOption_BossAttackOptionVariant__TypeInfo
+		    ;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,
+		                             System_Action_BossInfo_BossAttackOption__BossInfo_BossAttackOption_BossAttackOptionVariant__TypeInfo
+		                            ), iVar2 == 0)) break;
+		    iVar2 = func_ii_4329(param1 + 0x40,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: add_AttackButtonClickEvent ---
+		void Gameplay_Boss_View_CaptainTab_BossInfoView__add_AttackButtonClickEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  int iVar1;
+		  undefined4 param2_00;
+		  int iVar2;
+		  int param1_00;
+		  uint uVar3;
+		  
+		  param2_00 = UnityEngine_Events_UnityEvent__GetDelegate(param2,param1);
+		  iVar2 = *(int *)(param1 + 8);
+		  if (DAT_ram_00a65ca3 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_System_Collections_Generic_List_BaseInvokableCall__Add__);
+		    DAT_ram_00a65ca3 = '\x01';
+		  }
+		  iVar1 = Method_System_Collections_Generic_List_BaseInvokableCall__Add__;
+		  param1_00 = *(int *)(iVar2 + 0xc);
+		  *(int *)(param1_00 + 0x10) = *(int *)(param1_00 + 0x10) + 1;
+		  uVar3 = *(uint *)(param1_00 + 0xc);
+		  if (uVar3 < *(uint *)(*(int *)(param1_00 + 8) + 0xc)) {
+		    *(uint *)(param1_00 + 0xc) = uVar3 + 1;
+		    *(undefined4 *)(*(int *)(param1_00 + 8) + uVar3 * 4 + 0x10) = param2_00;
+		  }
+		  else {
+		    System_Linq_Expressions_Interpreter_LeaveExceptionHandlerInstruction__Create
+		              (param1_00,param2_00,*(undefined4 *)(*(int *)(*(int *)(iVar1 + 0x10) + 0x60) + 0x38));
+		  }
+		  *(undefined1 *)(iVar2 + 0x14) = 1;
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: remove_AttackButtonClickEvent ---
+		void Gameplay_Boss_View_CaptainTab_BossInfoView__remove_AttackButtonClickEvent
+		               (undefined4 param1,undefined4 param2)
+		
+		{
+		  UI_AbstractBacktimeView__set_BackTime(param1,0,param1);
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_AttackOptions ---
+		undefined4
+		Gameplay_Boss_View_CaptainTab_BossInfoView__set_AttackOptions(int param1,undefined4 param2)
+		
+		{
+		  int param2_00;
+		  int iVar1;
+		  int param1_00;
+		  
+		  param1_00 = *(int *)(param1 + 0x44);
+		  param2_00 = 0;
+		  if (DAT_ram_00a5acf5 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Google_Protobuf_Collections_RepeatedField_ContentStringMessage__get_Count__);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Google_Protobuf_Collections_RepeatedField_ContentStringMessage__get_Item__);
+		    DAT_ram_00a5acf5 = '\x01';
+		  }
+		  if (0 < *(int *)(param1_00 + 0xc)) {
+		    do {
+		      iVar1 = Google_Protobuf_Collections_RepeatedField_Int32Enum___get_IsReadOnly
+		                        (param1_00,param2_00,
+		                         Method_Google_Protobuf_Collections_RepeatedField_ContentStringMessage__get_Item__
+		                        );
+		      if (*(int *)(iVar1 + 0xc) == 0x11) {
+		        return *(undefined4 *)(iVar1 + 0x10);
+		      }
+		      param2_00 = param2_00 + 1;
+		    } while (param2_00 < *(int *)(param1_00 + 0xc));
+		  }
+		  return 0;
+		}
+		*/
+
 }

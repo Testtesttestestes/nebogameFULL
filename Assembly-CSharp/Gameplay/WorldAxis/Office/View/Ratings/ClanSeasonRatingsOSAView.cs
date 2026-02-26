@@ -14,6 +14,26 @@ namespace Gameplay.WorldAxis.Office.View.Ratings
 		[Address(RVA = "0x63F9", Offset = "0x63F9", VA = "0x63F9", Slot = "119")]
 		protected override ClanSeasonRatingsOSAView.ClansRatingsViewsHolder CreateViewsHolder()
 		{
+		/* --- GHIDRA: CreateViewsHolder ---
+		void Gameplay_WorldAxis_Office_View_Ratings_ClanSeasonRatingsOSAView__CreateViewsHolder
+		               (undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a58ba3 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_OSAGenericBase_ClanSeasonRatingsOSAView_ClansRatingsViewsHolder__ClanSeasonRatingsListElement_ClanSeasonRatingsListElementArgs___ctor__
+		              );
+		    DAT_ram_00a58ba3 = '\x01';
+		  }
+		  UI_OSADynamicBase_object__object___get_MinElementsToUpdate
+		            (param1,
+		             Method_UI_OSAGenericBase_ClanSeasonRatingsOSAView_ClansRatingsViewsHolder__ClanSeasonRatingsListElement_ClanSeasonRatingsListElementArgs___ctor__
+		            );
+		  return;
+		}
+		*/
+
 			return null;
 		}
 
@@ -22,6 +42,44 @@ namespace Gameplay.WorldAxis.Office.View.Ratings
 		[Address(RVA = "0x63FA", Offset = "0x63FA", VA = "0x63FA")]
 		public ClanSeasonRatingsOSAView()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_WorldAxis_Office_View_Ratings_ClanSeasonRatingsOSAView___ctor
+		               (int param1,int *param2,undefined4 param3)
+		
+		{
+		  if (DAT_ram_00a58ba4 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Gameplay_WorldAxis_Office_View_Ratings_ClanSeasonRatingsListElement_ClanSeasonRatingsListElementArgs_TypeInfo
+		              );
+		    DAT_ram_00a58ba4 = '\x01';
+		  }
+		  if (param2 != (int *)0x0) {
+		    if (((uint)*(byte *)(*param2 + 0xb8) <
+		         (uint)*(byte *)(
+		                        Gameplay_WorldAxis_Office_View_Ratings_ClanSeasonRatingsListElement_ClanSeasonRatingsListElementArgs_TypeInfo
+		                        + 0xb8)) ||
+		       (*(int *)(*(int *)(*param2 + 100) +
+		                 (uint)*(byte *)(
+		                                Gameplay_WorldAxis_Office_View_Ratings_ClanSeasonRatingsListElement_ClanSeasonRatingsListElementArgs_TypeInfo
+		                                + 0xb8) * 4 + -4) !=
+		        Gameplay_WorldAxis_Office_View_Ratings_ClanSeasonRatingsListElement_ClanSeasonRatingsListElementArgs_TypeInfo
+		       )) {
+		      System_Activator__CreateInstance
+		                (param2,
+		                 Gameplay_WorldAxis_Office_View_Ratings_ClanSeasonRatingsListElement_ClanSeasonRatingsListElementArgs_TypeInfo
+		                );
+		      do {
+		        halt_trap();
+		      } while( true );
+		    }
+		  }
+		  Gameplay_WorldAxis_Office_View_Ratings_ClanSeasonRatingsListElement__get_Data
+		            (*(undefined4 *)(param1 + 0x14),param2,param2);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x020002FD RID: 765

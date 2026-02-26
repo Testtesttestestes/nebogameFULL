@@ -14,6 +14,26 @@ namespace UI.Elements.RightPanel.TitledList.Elements
 		[Address(RVA = "0x601A", Offset = "0x601A", VA = "0x601A", Slot = "6")]
 		protected override void OnInit(CurrentStatusTitledListElementArgs args)
 		{
+		/* --- GHIDRA: OnInit ---
+		void UI_Elements_RightPanel_TitledList_Elements_CurrentStatusTitledListElement__OnInit
+		               (undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a63963 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Elements_RightPanel_TitledList_BaseTitledListElement_CurrentStatusTitledListElementArgs___ctor__
+		              );
+		    DAT_ram_00a63963 = '\x01';
+		  }
+		  UnityEngine_ParticleSystemRenderer__GetMeshes
+		            (param1,
+		             Method_UI_Elements_RightPanel_TitledList_BaseTitledListElement_CurrentStatusTitledListElementArgs___ctor__
+		            );
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06000D38 RID: 3384 RVA: 0x00002050 File Offset: 0x00000250

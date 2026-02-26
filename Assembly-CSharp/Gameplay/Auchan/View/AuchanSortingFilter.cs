@@ -16,6 +16,21 @@ namespace Gameplay.Auchan.View
 		[Address(RVA = "0x9C72", Offset = "0x9C72", VA = "0x9C72", Slot = "4")]
 		protected override List<IGameDataComparer<AuchanArtifactData>> GetComparers()
 		{
+		/* --- GHIDRA: GetComparers ---
+		void Gameplay_Auchan_View_AuchanSortingFilter__GetComparers(undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a59854 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UI_Sorting_AbstractSortControlView_AuchanArtifactData___ctor__);
+		    DAT_ram_00a59854 = '\x01';
+		  }
+		  UI_SkinsV2_AbstractSkinResolver___Il2CppFullySharedGenericType__object___StartRollback
+		            (param1,Method_UI_Sorting_AbstractSortControlView_AuchanArtifactData___ctor__);
+		  return;
+		}
+		*/
+
 			return null;
 		}
 

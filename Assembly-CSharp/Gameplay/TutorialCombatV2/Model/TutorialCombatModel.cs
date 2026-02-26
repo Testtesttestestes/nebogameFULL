@@ -37,6 +37,44 @@ namespace Gameplay.TutorialCombatV2.Model
 		[Address(RVA = "0x6BC9", Offset = "0x6BC9", VA = "0x6BC9")]
 		public TutorialCombatModel(CombatDependencies dependencies, BackTime awaitBackTime, UserData loggedUser, UserData user)
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_TutorialCombatV2_Model_TutorialCombatModel___ctor(int param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a58426 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Gameplay_Combat_Control_CombatController_TutorialCombatModel__TutorialCombatEvents__Dispose__
+		              );
+		    DAT_ram_00a58426 = '\x01';
+		  }
+		  if (*(int *)(param1 + 0x20) != 0) {
+		    func_ii_7950(*(int *)(param1 + 0x20),0);
+		  }
+		  *(undefined4 *)(param1 + 0x20) = 0;
+		  Gameplay_Combat_Control_CombatController_object__object___CompleteQueueCallback
+		            (param1,
+		             Method_Gameplay_Combat_Control_CombatController_TutorialCombatModel__TutorialCombatEvents__Dispose__
+		            );
+		  return;
+		}
+		*/
+
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: set_CombatOnPause ---
+		void Gameplay_TutorialCombatV2_Model_TutorialCombatModel__set_CombatOnPause
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4,undefined4 param5,
+		               undefined4 param6)
+		
+		{
+		  *(undefined1 *)(param1 + 0x5c) = 1;
+		  Gameplay_Combat_Model_CombatModel__Dispose(param1,param2,param3,param4,param5,0);
+		  return;
+		}
+		*/
+
 }

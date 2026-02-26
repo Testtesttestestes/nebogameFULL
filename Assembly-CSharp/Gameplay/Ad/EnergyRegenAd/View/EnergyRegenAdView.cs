@@ -70,6 +70,22 @@ namespace Gameplay.Ad.EnergyRegenAd.View
 		[Address(RVA = "0xA32B", Offset = "0xA32B", VA = "0xA32B")]
 		public EnergyRegenAdView()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_Ad_EnergyRegenAd_View_EnergyRegenAdView___ctor(undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a58842 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UI_MonoBehaviourWithStates_EnergyRegenAdViewStateController_State___ctor__);
+		    DAT_ram_00a58842 = '\x01';
+		  }
+		  ScreenAdaptation_Common_AppSize__Update
+		            (param1,
+		             Method_UI_MonoBehaviourWithStates_EnergyRegenAdViewStateController_State___ctor__);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x04002E4B RID: 11851
@@ -95,4 +111,59 @@ namespace Gameplay.Ad.EnergyRegenAd.View
 		[FieldOffset(Offset = "0x1C")]
 		private EnergyRegenAdViewMediator _mediator;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_MessageTextField ---
+		void Gameplay_Ad_EnergyRegenAd_View_EnergyRegenAdView__get_MessageTextField
+		               (int param1,int param2,undefined4 param3)
+		
+		{
+		  int *param1_00;
+		  undefined4 param4;
+		  undefined4 param3_00;
+		  undefined4 param2_00;
+		  
+		  if (DAT_ram_00a58841 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Core_Gameplay_Managers_Ad_Placements_AbstractAdPlacementManager_EnergyRegenAdPlacementModel__EnergyRegenAdPlacementController__EnergyRegenAdPlacementEvents__get_Controller__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Core_Gameplay_Managers_Ad_Placements_AbstractAdPlacementManager_EnergyRegenAdPlacementModel__EnergyRegenAdPlacementController__EnergyRegenAdPlacementEvents__get_Events__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Core_Gameplay_Managers_Ad_Placements_AbstractAdPlacementManager_EnergyRegenAdPlacementModel__EnergyRegenAdPlacementController__EnergyRegenAdPlacementEvents__get_Model__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&Gameplay_Ad_EnergyRegenAd_Controller_EnergyRegenAdViewMediator_TypeInfo);
+		    DAT_ram_00a58841 = '\x01';
+		  }
+		  param4 = *(undefined4 *)(param2 + 0x18);
+		  param3_00 = *(undefined4 *)(param2 + 0x20);
+		  param2_00 = *(undefined4 *)(param2 + 0x1c);
+		  param1_00 = (int *)unnamed_function_1417
+		                               (
+		                               Gameplay_Ad_EnergyRegenAd_Controller_EnergyRegenAdViewMediator_TypeInfo
+		                               );
+		  if (DAT_ram_00a58843 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_MVC_AbstractViewMediator_EnergyRegenAdPlacementModel__EnergyRegenAdPlacementEvents__EnergyRegenAdPlacementController__EnergyRegenAdView___ctor__
+		              );
+		    DAT_ram_00a58843 = '\x01';
+		  }
+		  Gameplay_Combat_TeamCombat_View_AbstractTeamCombatView_object___get_HideInstantElements
+		            (param1_00,param2_00,param3_00,param4,
+		             Method_MVC_AbstractViewMediator_EnergyRegenAdPlacementModel__EnergyRegenAdPlacementEvents__EnergyRegenAdPlacementController__EnergyRegenAdView___ctor__
+		            );
+		  *(int **)(param1 + 0x1c) = param1_00;
+		  (**(code **)((ulonglong)*(uint *)(*param1_00 + 0x160) * 4))
+		            (param1_00,param1,*(undefined4 *)(*param1_00 + 0x164));
+		  return;
+		}
+		*/
+
 }

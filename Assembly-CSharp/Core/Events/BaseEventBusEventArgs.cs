@@ -68,4 +68,26 @@ namespace Core.Events
 			return null;
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: set_Game ---
+		undefined4 Core_Events_BaseEventBusEventArgs__set_Game(undefined4 param1,undefined4 param2)
+		
+		{
+		  undefined4 param1_00;
+		  
+		  if (DAT_ram_00a5a349 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_Dictionary_string__object___ctor__);
+		    Mono_Security_ASN1__get_Item(&System_Collections_Generic_Dictionary_string__object__TypeInfo);
+		    DAT_ram_00a5a349 = '\x01';
+		  }
+		  param1_00 = unnamed_function_1417(System_Collections_Generic_Dictionary_string__object__TypeInfo);
+		  System_Collections_Generic_Dictionary_object__StyleComplexSelector_PseudoStateData___set_Item
+		            (param1_00,Method_System_Collections_Generic_Dictionary_string__object___ctor__);
+		  return param1_00;
+		}
+		*/
+
 }

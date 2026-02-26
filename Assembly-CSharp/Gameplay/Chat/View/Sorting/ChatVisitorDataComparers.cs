@@ -14,6 +14,21 @@ namespace Gameplay.Chat.View.Sorting
 		[Address(RVA = "0x9253", Offset = "0x9253", VA = "0x9253")]
 		private static int CompareLevel(ChatVisitorData x, ChatVisitorData y)
 		{
+		/* --- GHIDRA: CompareLevel ---
+		undefined4
+		Gameplay_Chat_View_Sorting_ChatVisitorDataComparers__CompareLevel
+		          (int param1,int param2,undefined4 param3)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  uVar1 = System_String__CompareTo
+		                    (*(undefined4 *)(*(int *)(*(int *)(param1 + 0x14) + 0xc) + 0x18),
+		                     *(undefined4 *)(*(int *)(*(int *)(param2 + 0x14) + 0xc) + 0x18),0);
+		  return uVar1;
+		}
+		*/
+
 			return 0;
 		}
 
@@ -22,6 +37,22 @@ namespace Gameplay.Chat.View.Sorting
 		[Address(RVA = "0x9254", Offset = "0x9254", VA = "0x9254")]
 		private static int CompareNick(ChatVisitorData x, ChatVisitorData y)
 		{
+		/* --- GHIDRA: CompareNick ---
+		undefined4
+		Gameplay_Chat_View_Sorting_ChatVisitorDataComparers__CompareNick
+		          (int param1,int param2,undefined4 param3)
+		
+		{
+		  undefined4 uVar1;
+		  undefined4 local_4;
+		  
+		  local_4 = *(undefined4 *)(*(int *)(*(int *)(param1 + 0x14) + 0xc) + 0x24);
+		  uVar1 = System_UInt32__CompareTo
+		                    (&local_4,*(undefined4 *)(*(int *)(*(int *)(param2 + 0x14) + 0xc) + 0x24),0);
+		  return uVar1;
+		}
+		*/
+
 			return 0;
 		}
 
@@ -38,6 +69,33 @@ namespace Gameplay.Chat.View.Sorting
 		[Address(RVA = "0x9256", Offset = "0x9256", VA = "0x9256")]
 		public ChatVisitorDataComparers()
 		{
+		/* --- GHIDRA: .ctor ---
+		int Gameplay_Chat_View_Sorting_ChatVisitorDataComparers___ctor
+		              (undefined4 param1,int param2,int param3,undefined4 param4)
+		
+		{
+		  int iVar1;
+		  undefined4 local_8;
+		  undefined4 local_4;
+		  
+		  iVar1 = System_String__CompareTo
+		                    (*(undefined4 *)(*(int *)(*(int *)(param2 + 0x14) + 0xc) + 0x18),
+		                     *(undefined4 *)(*(int *)(*(int *)(param3 + 0x14) + 0xc) + 0x18),0);
+		  if (iVar1 == 0) {
+		    local_8 = *(undefined4 *)(*(int *)(*(int *)(param2 + 0x14) + 0xc) + 0x20);
+		    iVar1 = System_UInt32__CompareTo
+		                      (&local_8,*(undefined4 *)(*(int *)(*(int *)(param3 + 0x14) + 0xc) + 0x20),0);
+		    if (iVar1 == 0) {
+		      local_4 = *(undefined4 *)(*(int *)(*(int *)(param2 + 0x14) + 0xc) + 0x24);
+		      iVar1 = System_UInt32__CompareTo
+		                        (&local_4,*(undefined4 *)(*(int *)(*(int *)(param3 + 0x14) + 0xc) + 0x24),0)
+		      ;
+		    }
+		  }
+		  return iVar1;
+		}
+		*/
+
 		}
 
 		// Token: 0x02000AF3 RID: 2803

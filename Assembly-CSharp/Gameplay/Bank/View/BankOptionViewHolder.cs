@@ -40,4 +40,24 @@ namespace Gameplay.Bank.View
 		[FieldOffset(Offset = "0x14")]
 		private BankOptionView _bankOptionView;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_BankOptionView ---
+		void Gameplay_Bank_View_BankOptionViewHolder__get_BankOptionView(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a59794 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_UnityEngine_Component_GetComponent_BankOptionView___);
+		    DAT_ram_00a59794 = '\x01';
+		  }
+		  uVar1 = func_ii_5677(*(undefined4 *)(param1 + 8),
+		                       Method_UnityEngine_Component_GetComponent_BankOptionView___);
+		  *(undefined4 *)(param1 + 0x14) = uVar1;
+		  return;
+		}
+		*/
+
 }

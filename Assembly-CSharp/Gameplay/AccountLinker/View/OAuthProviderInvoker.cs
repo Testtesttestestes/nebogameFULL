@@ -14,6 +14,19 @@ namespace Gameplay.AccountLinker.View
 		[Address(RVA = "0xA4DF", Offset = "0xA4DF", VA = "0xA4DF")]
 		public OAuthProviderInvoker()
 		{
+		/* --- GHIDRA: .ctor ---
+		undefined4
+		Gameplay_AccountLinker_View_OAuthProviderInvoker___ctor(undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a5891f == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_12551);
+		    DAT_ram_00a5891f = '\x01';
+		  }
+		  return StringLiteral_12551;
+		}
+		*/
+
 		}
 	}
 }

@@ -152,6 +152,32 @@ namespace Gameplay.VortexRating.View.GreatOnesTab
 		[Address(RVA = "0x6712", Offset = "0x6712", VA = "0x6712")]
 		private void Awake()
 		{
+		/* --- GHIDRA: Awake ---
+		void Gameplay_VortexRating_View_GreatOnesTab_GreatUserView__Awake(int param1,undefined4 param2)
+		
+		{
+		  undefined4 param1_00;
+		  undefined4 param1_01;
+		  
+		  if (DAT_ram_00a581c8 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Gameplay_VortexRating_View_GreatOnesTab_GreatUserView_LikeButtonClickedEventHandler__
+		              );
+		    Mono_Security_ASN1__get_Item(&UnityEngine_Events_UnityAction_TypeInfo);
+		    DAT_ram_00a581c8 = '\x01';
+		  }
+		  param1_01 = *(undefined4 *)(*(int *)(param1 + 0x10) + 0xb4);
+		  param1_00 = unnamed_function_1417(UnityEngine_Events_UnityAction_TypeInfo);
+		  Utils_ObjectUtils__IsNotNull
+		            (param1_00,param1,
+		             Method_Gameplay_VortexRating_View_GreatOnesTab_GreatUserView_LikeButtonClickedEventHandler__
+		             ,0);
+		  UnityEngine_Events_UnityAction___ctor(param1_01,param1_00,0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06001551 RID: 5457 RVA: 0x00002050 File Offset: 0x00000250
@@ -159,6 +185,42 @@ namespace Gameplay.VortexRating.View.GreatOnesTab
 		[Address(RVA = "0x6713", Offset = "0x6713", VA = "0x6713")]
 		private void OnDestroy()
 		{
+		/* --- GHIDRA: OnDestroy ---
+		void Gameplay_VortexRating_View_GreatOnesTab_GreatUserView__OnDestroy
+		               (int param1,int param2,undefined4 param3)
+		
+		{
+		  undefined4 uVar1;
+		  int *piVar2;
+		  undefined4 uVar3;
+		  int iVar4;
+		  undefined4 local_4;
+		  
+		  *(int *)(param1 + 0x30) = param2;
+		  uVar3 = *(undefined4 *)(param1 + 0x14);
+		  iVar4 = *(int *)(param2 + 8);
+		  local_4 = *(undefined4 *)(iVar4 + 0x10);
+		  uVar1 = Protocol_Combat_ProtoPlayerActionEvt___ctor(&local_4,0);
+		  UnityEngine_Component__GetComponentInChildren_object_(uVar3,uVar1,0);
+		  uVar3 = *(undefined4 *)(param1 + 0x18);
+		  local_4 = *(undefined4 *)(iVar4 + 0x14);
+		  uVar1 = Protocol_Combat_ProtoPlayerActionEvt___ctor(&local_4,0);
+		  UnityEngine_Component__GetComponentInChildren_object_(uVar3,uVar1,0);
+		  UI_Elements_Counters_CounterAutoHide___ctor
+		            (*(undefined4 *)(param1 + 0x24),*(undefined4 *)(*(int *)(iVar4 + 0xc) + 0x20),0);
+		  UnityEngine_Component__GetComponentInChildren_object_
+		            (*(undefined4 *)(param1 + 0x28),*(undefined4 *)(*(int *)(iVar4 + 0xc) + 0x18),0);
+		  uVar3 = *(undefined4 *)(param1 + 0x1c);
+		  uVar1 = UI_Wiki_WikiUriRouter__SetData(*(undefined4 *)(param2 + 0xc),0);
+		  Core_Extensions_Dict_AprDicExt__Get1024AssetId(uVar3,uVar1,0);
+		  piVar2 = (int *)func_ii_7307(*(undefined4 *)(param1 + 0x20),*(undefined4 *)(param2 + 0x10),0);
+		  (**(code **)((ulonglong)*(uint *)(*piVar2 + 0xf0) * 4))(piVar2,*(undefined4 *)(*piVar2 + 0xf4));
+		  System_Linq_Enumerable__First_object_
+		            (*(undefined4 *)(param1 + 0x10),(uint)(*(char *)(param2 + 0x14) == '\0'),0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06001552 RID: 5458 RVA: 0x00002050 File Offset: 0x00000250
@@ -166,6 +228,21 @@ namespace Gameplay.VortexRating.View.GreatOnesTab
 		[Address(RVA = "0x6714", Offset = "0x6714", VA = "0x6714")]
 		public void Init(GreatUserData data)
 		{
+		/* --- GHIDRA: Init ---
+		void Gameplay_VortexRating_View_GreatOnesTab_GreatUserView__Init(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  
+		  iVar1 = *(int *)(param1 + 0x2c);
+		  if (iVar1 != 0) {
+		    (**(code **)((ulonglong)*(uint *)(iVar1 + 0xc) * 4))
+		              (*(undefined4 *)(iVar1 + 0x20),param1,*(undefined4 *)(iVar1 + 0x14));
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06001553 RID: 5459 RVA: 0x00002050 File Offset: 0x00000250
@@ -180,6 +257,58 @@ namespace Gameplay.VortexRating.View.GreatOnesTab
 		[Address(RVA = "0x6716", Offset = "0x6716", VA = "0x6716")]
 		public GreatUserView()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_VortexRating_View_GreatOnesTab_GreatUserView___ctor
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  uint uVar1;
+		  undefined4 uVar2;
+		  uint *puVar3;
+		  int *param1_00;
+		  int iVar4;
+		  
+		  if (DAT_ram_00a581c9 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_Dictionary_ulong__GreatUserData___ctor__);
+		    Mono_Security_ASN1__get_Item
+		              (&System_Collections_Generic_Dictionary_ulong__GreatUserData__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Core_Gameplay_IGame_TypeInfo);
+		    DAT_ram_00a581c9 = '\x01';
+		  }
+		  uVar2 = unnamed_function_1417
+		                    (System_Collections_Generic_Dictionary_ulong__GreatUserData__TypeInfo);
+		  System_Collections_Generic_Dictionary_ulong__ulong___set_Item
+		            (uVar2,Method_System_Collections_Generic_Dictionary_ulong__GreatUserData___ctor__);
+		  *(undefined4 *)(param1 + 0x14) = uVar2;
+		  Unity_Services_Core_Environments_Internal_Environments__get_Current(param1,param2,0);
+		  if (DAT_ram_00a6456f == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_Gameplay_Game_TypeInfo);
+		    DAT_ram_00a6456f = '\x01';
+		  }
+		  uVar1 = 0;
+		  param1_00 = (int *)**(undefined4 **)(Core_Gameplay_Game_TypeInfo + 0x5c);
+		  iVar4 = *param1_00;
+		  if (*(ushort *)(iVar4 + 0xb6) != 0) {
+		    do {
+		      if (Core_Gameplay_IGame_TypeInfo == *(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8)) {
+		        puVar3 = (uint *)(*(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8 + 4) * 8 + iVar4 + 0x178);
+		        goto code_r0x80eb2059;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar4 + 0xb6) != uVar1);
+		  }
+		  puVar3 = (uint *)func_ii_1080(param1_00,Core_Gameplay_IGame_TypeInfo,0x17);
+		code_r0x80eb2059:
+		  uVar2 = (**(code **)((ulonglong)*puVar3 * 4))(param1_00,puVar3[1]);
+		  uVar2 = Newtonsoft_Json_Converters_XmlDocumentTypeWrapper__get_System(uVar2,0);
+		  *(undefined4 *)(param1 + 0xc) = uVar2;
+		  uVar2 = Core_Extensions_Dict_DictExt__GetGreatRewardSet(uVar2,7,0);
+		  *(undefined4 *)(param1 + 0x18) = uVar2;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x04000B4F RID: 2895
@@ -224,4 +353,71 @@ namespace Gameplay.VortexRating.View.GreatOnesTab
 		[SerializeField]
 		private TextMeshProUGUI _nickname;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: add_LikeButtonClickedEvent ---
+		void Gameplay_VortexRating_View_GreatOnesTab_GreatUserView__add_LikeButtonClickedEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a581c6 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_GreatUserView__TypeInfo);
+		    DAT_ram_00a581c6 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x2c);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = func_ii_7048(param1_00,param2,0);
+		    param2_00 = System_Action_GreatUserView__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_GreatUserView__TypeInfo), iVar2 == 0)) break;
+		    iVar2 = func_ii_4329(param1 + 0x2c,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: get_Nickname ---
+		void Gameplay_VortexRating_View_GreatOnesTab_GreatUserView__get_Nickname
+		               (int param1,undefined4 param2)
+		
+		{
+		  undefined4 param1_00;
+		  undefined4 param1_01;
+		  
+		  if (DAT_ram_00a581c7 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Gameplay_VortexRating_View_GreatOnesTab_GreatUserView_LikeButtonClickedEventHandler__
+		              );
+		    Mono_Security_ASN1__get_Item(&UnityEngine_Events_UnityAction_TypeInfo);
+		    DAT_ram_00a581c7 = '\x01';
+		  }
+		  param1_01 = *(undefined4 *)(*(int *)(param1 + 0x10) + 0xb4);
+		  param1_00 = unnamed_function_1417(UnityEngine_Events_UnityAction_TypeInfo);
+		  Utils_ObjectUtils__IsNotNull
+		            (param1_00,param1,
+		             Method_Gameplay_VortexRating_View_GreatOnesTab_GreatUserView_LikeButtonClickedEventHandler__
+		             ,0);
+		  Gameplay_Boss_View_CaptainTab_BossInfoView__add_AttackButtonClickEvent(param1_01,param1_00,0);
+		  return;
+		}
+		*/
+
 }

@@ -70,6 +70,56 @@ namespace Core.Data.Tournaments
 		[Address(RVA = "0xB091", Offset = "0xB091", VA = "0xB091")]
 		private BlitzTournamentData()
 		{
+		/* --- GHIDRA: .ctor ---
+		int Core_Data_Tournaments_BlitzTournamentData___ctor(int param1,undefined4 param2)
+		
+		{
+		  uint uVar1;
+		  int iVar2;
+		  uint *puVar3;
+		  undefined4 uVar4;
+		  int *param1_00;
+		  int iVar5;
+		  
+		  if (DAT_ram_00a60806 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_Data_Tournaments_BlitzTournamentData_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Core_Gameplay_IGame_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Core_Extensions_Dict_RewardInfoExt_TypeInfo);
+		    DAT_ram_00a60806 = '\x01';
+		  }
+		  iVar2 = unnamed_function_1417(Core_Data_Tournaments_BlitzTournamentData_TypeInfo);
+		  uVar4 = *(undefined4 *)(param1 + 0x10);
+		  if (*(int *)(Core_Extensions_Dict_RewardInfoExt_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Core_Extensions_Dict_RewardInfoExt_TypeInfo);
+		  }
+		  uVar4 = Core_Extensions_Dict_RewardInfoExt__GetGroupIndex(uVar4,0);
+		  *(undefined4 *)(iVar2 + 0xc) = uVar4;
+		  if (DAT_ram_00a6456f == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_Gameplay_Game_TypeInfo);
+		    DAT_ram_00a6456f = '\x01';
+		  }
+		  param1_00 = (int *)**(undefined4 **)(Core_Gameplay_Game_TypeInfo + 0x5c);
+		  iVar5 = *param1_00;
+		  if (*(ushort *)(iVar5 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (Core_Gameplay_IGame_TypeInfo == *(int *)(*(int *)(iVar5 + 0x58) + uVar1 * 8)) {
+		        puVar3 = (uint *)(*(int *)(*(int *)(iVar5 + 0x58) + uVar1 * 8 + 4) * 8 + iVar5 + 0x178);
+		        goto code_r0x81cea270;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar5 + 0xb6) != uVar1);
+		  }
+		  puVar3 = (uint *)func_ii_1080(param1_00,Core_Gameplay_IGame_TypeInfo,0x17);
+		code_r0x81cea270:
+		  uVar4 = (**(code **)((ulonglong)*puVar3 * 4))(param1_00,puVar3[1]);
+		  uVar4 = Newtonsoft_Json_Converters_XmlDocumentTypeWrapper__get_System(uVar4,0);
+		  uVar4 = Core_Extensions_Dict_DictExt__GetChatBanDic(uVar4,*(undefined4 *)(param1 + 0xc),0);
+		  *(undefined4 *)(iVar2 + 8) = uVar4;
+		  return iVar2;
+		}
+		*/
+
 		}
 
 		// Token: 0x060064A9 RID: 25769 RVA: 0x00002052 File Offset: 0x00000252

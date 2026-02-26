@@ -33,6 +33,20 @@ namespace UI.Elements.ProgressBars
 		[Address(RVA = "0x6069", Offset = "0x6069", VA = "0x6069")]
 		public ProgressBarWithText()
 		{
+		/* --- GHIDRA: .ctor ---
+		undefined4 UI_Elements_ProgressBars_ProgressBarWithText___ctor(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  int iVar2;
+		  
+		  iVar2 = **(int **)(param1 + 0x1c);
+		  uVar1 = (**(code **)((ulonglong)*(uint *)(iVar2 + 0x2c8) * 4))
+		                    (*(int **)(param1 + 0x1c),*(undefined4 *)(iVar2 + 0x2cc));
+		  return uVar1;
+		}
+		*/
+
 		}
 
 		// Token: 0x040006B8 RID: 1720

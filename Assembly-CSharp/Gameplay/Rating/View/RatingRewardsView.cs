@@ -17,6 +17,21 @@ namespace Gameplay.Rating.View
 		[Address(RVA = "0x730B", Offset = "0x730B", VA = "0x730B")]
 		public void SetRewards(IList<RatingRewardsView.RatingRewardArgs> rewards)
 		{
+		/* --- GHIDRA: SetRewards ---
+		void Gameplay_Rating_View_RatingRewardsView__SetRewards(undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a58033 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UI_MonoBehaviourWithStates_RatingRewardsView_State___ctor__);
+		    DAT_ram_00a58033 = '\x01';
+		  }
+		  ScreenAdaptation_Common_AppSize__Update
+		            (param1,Method_UI_MonoBehaviourWithStates_RatingRewardsView_State___ctor__);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x060021AD RID: 8621 RVA: 0x00002050 File Offset: 0x00000250

@@ -47,6 +47,20 @@ namespace UI
 		[Address(RVA = "0x5BA9", Offset = "0x5BA9", VA = "0x5BA9", Slot = "7")]
 		protected virtual void OnDisable()
 		{
+		/* --- GHIDRA: OnDisable ---
+		void UI_AbstractDeferredRenderer__OnDisable(int *param1,undefined4 param2)
+		
+		{
+		  if (param1[5] != 0) {
+		    func_ii_7950(param1[5],0);
+		    param1[5] = 0;
+		  }
+		  *(undefined1 *)(param1 + 4) = 1;
+		  (**(code **)((ulonglong)*(uint *)(*param1 + 0x110) * 4))(param1,*(undefined4 *)(*param1 + 0x114));
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x060007EC RID: 2028 RVA: 0x00002050 File Offset: 0x00000250
@@ -61,6 +75,18 @@ namespace UI
 		[Address(RVA = "0x5BAB", Offset = "0x5BAB", VA = "0x5BAB", Slot = "9")]
 		protected virtual void Awake()
 		{
+		/* --- GHIDRA: Awake ---
+		void UI_AbstractDeferredRenderer__Awake(int param1,undefined4 param2)
+		
+		{
+		  if (*(int *)(param1 + 0x14) != 0) {
+		    func_ii_7950(*(int *)(param1 + 0x14),0);
+		    *(undefined4 *)(param1 + 0x14) = 0;
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x060007EE RID: 2030 RVA: 0x00002050 File Offset: 0x00000250
@@ -68,6 +94,30 @@ namespace UI
 		[Address(RVA = "0x5BAC", Offset = "0x5BAC", VA = "0x5BAC")]
 		private void KillCoroutine()
 		{
+		/* --- GHIDRA: KillCoroutine ---
+		void UI_AbstractDeferredRenderer__KillCoroutine(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  undefined4 uVar2;
+		  
+		  if (((*(char *)(param1 + 0x10) == '\0') && (iVar1 = func_ii_12174(param1,0), iVar1 != 0)) &&
+		     (*(int *)(param1 + 0x14) == 0)) {
+		    if (DAT_ram_00a5b864 == '\0') {
+		      Mono_Security_ASN1__get_Item(&UI_AbstractDeferredRenderer__InvalidateCoroutine_d__13_TypeInfo)
+		      ;
+		      DAT_ram_00a5b864 = '\x01';
+		    }
+		    iVar1 = unnamed_function_1417(UI_AbstractDeferredRenderer__InvalidateCoroutine_d__13_TypeInfo);
+		    *(int *)(iVar1 + 0x10) = param1;
+		    *(undefined4 *)(iVar1 + 8) = 0;
+		    uVar2 = Utils_CoroutineSource__GetMono(iVar1,0);
+		    *(undefined4 *)(param1 + 0x14) = uVar2;
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x060007EF RID: 2031 RVA: 0x00002050 File Offset: 0x00000250
@@ -75,6 +125,21 @@ namespace UI
 		[Address(RVA = "0x5BAD", Offset = "0x5BAD", VA = "0x5BAD")]
 		protected void InvalidateProperties()
 		{
+		/* --- GHIDRA: InvalidateProperties ---
+		void UI_AbstractDeferredRenderer__InvalidateProperties(int *param1,undefined4 param2)
+		
+		{
+		  if ((char)param1[4] == '\0') {
+		    if (param1[5] != 0) {
+		      func_ii_7950(param1[5],0);
+		      param1[5] = 0;
+		    }
+		    (**(code **)((ulonglong)*(uint *)(*param1 + 0xe8) * 4))(param1,*(undefined4 *)(*param1 + 0xec));
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x060007F0 RID: 2032 RVA: 0x00002050 File Offset: 0x00000250
@@ -82,6 +147,23 @@ namespace UI
 		[Address(RVA = "0x5BAE", Offset = "0x5BAE", VA = "0x5BAE")]
 		protected void ValidatePropertiesImmediately()
 		{
+		/* --- GHIDRA: ValidatePropertiesImmediately ---
+		int UI_AbstractDeferredRenderer__ValidatePropertiesImmediately(undefined4 param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  
+		  if (DAT_ram_00a5b864 == '\0') {
+		    Mono_Security_ASN1__get_Item(&UI_AbstractDeferredRenderer__InvalidateCoroutine_d__13_TypeInfo);
+		    DAT_ram_00a5b864 = '\x01';
+		  }
+		  iVar1 = unnamed_function_1417(UI_AbstractDeferredRenderer__InvalidateCoroutine_d__13_TypeInfo);
+		  *(undefined4 *)(iVar1 + 0x10) = param1;
+		  *(undefined4 *)(iVar1 + 8) = 0;
+		  return iVar1;
+		}
+		*/
+
 		}
 
 		// Token: 0x060007F1 RID: 2033 RVA: 0x00002052 File Offset: 0x00000252

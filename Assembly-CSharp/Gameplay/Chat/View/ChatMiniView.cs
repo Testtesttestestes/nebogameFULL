@@ -80,6 +80,113 @@ namespace Gameplay.Chat.View
 		[Address(RVA = "0x91FE", Offset = "0x91FE", VA = "0x91FE")]
 		private void OnDestroy()
 		{
+		/* --- GHIDRA: OnDestroy ---
+		void Gameplay_Chat_View_ChatMiniView__OnDestroy(int param1,undefined4 param2)
+		
+		{
+		  uint uVar1;
+		  undefined4 uVar2;
+		  uint *puVar3;
+		  undefined4 param3;
+		  int *piVar4;
+		  undefined4 param4;
+		  int iVar5;
+		  int iVar6;
+		  
+		  if (DAT_ram_00a57acf == '\0') {
+		    Mono_Security_ASN1__get_Item(&Gameplay_Chat_Control_ChatMiniViewMediator_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Core_GameLocalization_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Core_Gameplay_IGame_TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UI_MonoBehaviourWithStates_MiniChatViewStates__set_CurrentState__);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4180);
+		    DAT_ram_00a57acf = '\x01';
+		  }
+		  Gameplay_Boss_View_CaptainTab_BossTeamView__set_TeamInfoData
+		            (param1,0xfffffffe,
+		             Method_UI_MonoBehaviourWithStates_MiniChatViewStates__set_CurrentState__);
+		  piVar4 = *(int **)(param1 + 0x24);
+		  if (*(int *)(Core_GameLocalization_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Core_GameLocalization_TypeInfo);
+		  }
+		  uVar2 = func_ii_7508(StringLiteral_4180,1,0,1,0,0,0,0);
+		  iVar6 = *piVar4;
+		  (**(code **)((ulonglong)*(uint *)(iVar6 + 0x2d0) * 4))
+		            (piVar4,uVar2,*(undefined4 *)(iVar6 + 0x2d4));
+		  if (DAT_ram_00a6456f == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_Gameplay_Game_TypeInfo);
+		    DAT_ram_00a6456f = '\x01';
+		  }
+		  piVar4 = (int *)**(undefined4 **)(Core_Gameplay_Game_TypeInfo + 0x5c);
+		  iVar6 = *piVar4;
+		  if (*(ushort *)(iVar6 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (Core_Gameplay_IGame_TypeInfo == *(int *)(*(int *)(iVar6 + 0x58) + uVar1 * 8)) {
+		        puVar3 = (uint *)(*(int *)(*(int *)(iVar6 + 0x58) + uVar1 * 8 + 4) * 8 + iVar6 + 0x1d8);
+		        goto code_r0x80e1eec1;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar6 + 0xb6) != uVar1);
+		  }
+		  puVar3 = (uint *)func_ii_1080(piVar4,Core_Gameplay_IGame_TypeInfo,0x23);
+		code_r0x80e1eec1:
+		  iVar6 = (**(code **)((ulonglong)*puVar3 * 4))(piVar4,puVar3[1]);
+		  iVar5 = **(int **)(iVar6 + 0x10);
+		  uVar2 = (**(code **)((ulonglong)*(uint *)(iVar5 + 0x100) * 4))
+		                    (*(int **)(iVar6 + 0x10),*(undefined4 *)(iVar5 + 0x104));
+		  if (DAT_ram_00a6456f == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_Gameplay_Game_TypeInfo);
+		    DAT_ram_00a6456f = '\x01';
+		  }
+		  piVar4 = (int *)**(undefined4 **)(Core_Gameplay_Game_TypeInfo + 0x5c);
+		  iVar6 = *piVar4;
+		  if (*(ushort *)(iVar6 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (Core_Gameplay_IGame_TypeInfo == *(int *)(*(int *)(iVar6 + 0x58) + uVar1 * 8)) {
+		        puVar3 = (uint *)(*(int *)(*(int *)(iVar6 + 0x58) + uVar1 * 8 + 4) * 8 + iVar6 + 0x1d8);
+		        goto code_r0x80e1ef86;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar6 + 0xb6) != uVar1);
+		  }
+		  puVar3 = (uint *)func_ii_1080(piVar4,Core_Gameplay_IGame_TypeInfo,0x23);
+		code_r0x80e1ef86:
+		  iVar6 = (**(code **)((ulonglong)*puVar3 * 4))(piVar4,puVar3[1]);
+		  iVar5 = **(int **)(iVar6 + 0x10);
+		  param3 = (**(code **)((ulonglong)*(uint *)(iVar5 + 0x110) * 4))
+		                     (*(int **)(iVar6 + 0x10),*(undefined4 *)(iVar5 + 0x114));
+		  if (DAT_ram_00a6456f == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_Gameplay_Game_TypeInfo);
+		    DAT_ram_00a6456f = '\x01';
+		  }
+		  piVar4 = (int *)**(undefined4 **)(Core_Gameplay_Game_TypeInfo + 0x5c);
+		  iVar6 = *piVar4;
+		  if (*(ushort *)(iVar6 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (Core_Gameplay_IGame_TypeInfo == *(int *)(*(int *)(iVar6 + 0x58) + uVar1 * 8)) {
+		        puVar3 = (uint *)(*(int *)(*(int *)(iVar6 + 0x58) + uVar1 * 8 + 4) * 8 + iVar6 + 0x1d8);
+		        goto code_r0x80e1f04b;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar6 + 0xb6) != uVar1);
+		  }
+		  puVar3 = (uint *)func_ii_1080(piVar4,Core_Gameplay_IGame_TypeInfo,0x23);
+		code_r0x80e1f04b:
+		  iVar6 = (**(code **)((ulonglong)*puVar3 * 4))(piVar4,puVar3[1]);
+		  param4 = *(undefined4 *)(iVar6 + 0x10);
+		  piVar4 = (int *)unnamed_function_1417(Gameplay_Chat_Control_ChatMiniViewMediator_TypeInfo);
+		  Gameplay_Chat_Control_ChatController__BanCoroutine_d__20__System_Collections_IEnumerator_get_Current
+		            (piVar4,uVar2,param3,param4,0);
+		  *(int **)(param1 + 0x30) = piVar4;
+		  (**(code **)((ulonglong)*(uint *)(*piVar4 + 0x160) * 4))
+		            (piVar4,param1,*(undefined4 *)(*piVar4 + 0x164));
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600434B RID: 17227 RVA: 0x00002050 File Offset: 0x00000250
@@ -87,6 +194,21 @@ namespace Gameplay.Chat.View
 		[Address(RVA = "0x91FF", Offset = "0x91FF", VA = "0x91FF")]
 		private void Awake()
 		{
+		/* --- GHIDRA: Awake ---
+		void Gameplay_Chat_View_ChatMiniView__Awake(int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  int iVar1;
+		  
+		  iVar1 = *(int *)(param1 + 0x2c);
+		  if (iVar1 != 0) {
+		    (**(code **)((ulonglong)*(uint *)(iVar1 + 0xc) * 4))
+		              (*(undefined4 *)(iVar1 + 0x20),*(undefined4 *)(iVar1 + 0x14));
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600434C RID: 17228 RVA: 0x00002050 File Offset: 0x00000250
@@ -94,6 +216,20 @@ namespace Gameplay.Chat.View
 		[Address(RVA = "0x9200", Offset = "0x9200", VA = "0x9200", Slot = "5")]
 		public void OnPointerClick(PointerEventData eventData)
 		{
+		/* --- GHIDRA: OnPointerClick ---
+		void Gameplay_Chat_View_ChatMiniView__OnPointerClick(undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a57ad0 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_UI_MonoBehaviourWithStates_MiniChatViewStates___ctor__);
+		    DAT_ram_00a57ad0 = '\x01';
+		  }
+		  ScreenAdaptation_Common_AppSize__Update
+		            (param1,Method_UI_MonoBehaviourWithStates_MiniChatViewStates___ctor__);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600434D RID: 17229 RVA: 0x00002050 File Offset: 0x00000250
@@ -132,4 +268,84 @@ namespace Gameplay.Chat.View
 		[FieldOffset(Offset = "0x30")]
 		private ChatMiniViewMediator _mediator;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_CurrentRoomTitle ---
+		void Gameplay_Chat_View_ChatMiniView__get_CurrentRoomTitle
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  int param1_00;
+		  int *param1_01;
+		  int iVar2;
+		  
+		  if (DAT_ram_00a57acd == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_TypeInfo);
+		    DAT_ram_00a57acd = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x2c);
+		  while ((param1_01 = (int *)UnityEngine_UI_Image__set_sprite(param1_00,param2,0),
+		         param1_01 == (int *)0x0 || (System_Action_TypeInfo == *param1_01))) {
+		    iVar2 = func_ii_4329(param1 + 0x2c,param1_01,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,System_Action_TypeInfo);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: add_ClickEvent ---
+		void Gameplay_Chat_View_ChatMiniView__add_ClickEvent(int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  int param1_00;
+		  int *param1_01;
+		  int iVar2;
+		  
+		  if (DAT_ram_00a57ace == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_TypeInfo);
+		    DAT_ram_00a57ace = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x2c);
+		  while ((param1_01 = (int *)func_ii_7048(param1_00,param2,0), param1_01 == (int *)0x0 ||
+		         (System_Action_TypeInfo == *param1_01))) {
+		    iVar2 = func_ii_4329(param1 + 0x2c,param1_01,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,System_Action_TypeInfo);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: remove_ClickEvent ---
+		void Gameplay_Chat_View_ChatMiniView__remove_ClickEvent(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  
+		  iVar1 = **(int **)(param1 + 0x30);
+		  (**(code **)((ulonglong)*(uint *)(iVar1 + 0x130) * 4))
+		            (*(int **)(param1 + 0x30),*(undefined4 *)(iVar1 + 0x134));
+		  *(undefined4 *)(param1 + 0x30) = 0;
+		  return;
+		}
+		*/
+
 }

@@ -133,6 +133,27 @@ namespace Core.Gameplay
 		[Address(RVA = "0xB18C", Offset = "0xB18C", VA = "0xB18C", Slot = "11")]
 		public void Init(IApp application)
 		{
+		/* --- GHIDRA: Init ---
+		void Core_Gameplay_AbstractGame__Init(int param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a5a8fc == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_System_Collections_Generic_List_IGameManager__get_Count__);
+		    DAT_ram_00a5a8fc = '\x01';
+		  }
+		  if (*(char *)(param1 + 0x15) == '\0') {
+		    *(undefined1 *)(param1 + 0x15) = 1;
+		    System_Runtime_CompilerServices_AsyncTaskMethodBuilder__AwaitUnsafeOnCompleted_ConfiguredTaskAwaitable_ConfiguredTaskAwaiter__WebRequestStream__WriteChunkTrailer_d__40_
+		              (*(undefined4 *)(param1 + 0x20),0);
+		    if (*(int *)(param1 + 0x1c) == *(int *)(*(int *)(param1 + 0x18) + 0xc)) {
+		      *(int *)(param1 + 0x1c) = *(int *)(param1 + 0x1c) + -1;
+		    }
+		    Core_Gameplay_AbstractGame__HandleInitManagersQueue(param1,param1);
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06006608 RID: 26120 RVA: 0x00002050 File Offset: 0x00000250
@@ -140,6 +161,33 @@ namespace Core.Gameplay
 		[Address(RVA = "0xB18D", Offset = "0xB18D", VA = "0xB18D", Slot = "12")]
 		public void Deinit()
 		{
+		/* --- GHIDRA: Deinit ---
+		void Core_Gameplay_AbstractGame__Deinit(int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  int iVar1;
+		  int param1_00;
+		  uint uVar2;
+		  
+		  if (DAT_ram_00a5a8fd == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_System_Collections_Generic_List_IGameManager__Add__);
+		    DAT_ram_00a5a8fd = '\x01';
+		  }
+		  iVar1 = Method_System_Collections_Generic_List_IGameManager__Add__;
+		  param1_00 = *(int *)(param1 + 0x18);
+		  *(int *)(param1_00 + 0x10) = *(int *)(param1_00 + 0x10) + 1;
+		  uVar2 = *(uint *)(param1_00 + 0xc);
+		  if (uVar2 < *(uint *)(*(int *)(param1_00 + 8) + 0xc)) {
+		    *(uint *)(param1_00 + 0xc) = uVar2 + 1;
+		    *(undefined4 *)(*(int *)(param1_00 + 8) + uVar2 * 4 + 0x10) = param2;
+		    return;
+		  }
+		  System_Linq_Expressions_Interpreter_LeaveExceptionHandlerInstruction__Create
+		            (param1_00,param2,*(undefined4 *)(*(int *)(*(int *)(iVar1 + 0x10) + 0x60) + 0x38));
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06006609 RID: 26121 RVA: 0x00002050 File Offset: 0x00000250
@@ -1351,6 +1399,116 @@ namespace Core.Gameplay
 		[Address(RVA = "0xB201", Offset = "0xB201", VA = "0xB201", Slot = "69")]
 		protected virtual void CreateGameManagers()
 		{
+		/* --- GHIDRA: CreateGameManagers ---
+		void Core_Gameplay_AbstractGame__CreateGameManagers(int param1,undefined4 param2)
+		
+		{
+		  uint uVar1;
+		  int *param1_00;
+		  uint *puVar2;
+		  undefined4 uVar3;
+		  undefined4 param3;
+		  undefined4 param4;
+		  int iVar4;
+		  undefined4 local_30 [2];
+		  undefined8 local_28;
+		  int local_20;
+		  undefined1 local_1c [8];
+		  undefined8 local_14;
+		  int local_c;
+		  undefined8 local_8;
+		  
+		  if (DAT_ram_00a5a8ff == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_Core_Gameplay_AbstractGame_ManagerInitComplete__);
+		    Mono_Security_ASN1__get_Item(&System_Action_IBaseManager__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Core_IBaseManager_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Method_System_Collections_Generic_List_IGameManager__get_Count__);
+		    Mono_Security_ASN1__get_Item(&Method_System_Collections_Generic_List_IGameManager__get_Item__);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_10696);
+		    DAT_ram_00a5a8ff = '\x01';
+		  }
+		  if (*(int *)(*(int *)(param1 + 0x18) + 0xc) + -1 < *(int *)(param1 + 0x1c)) {
+		    if (DAT_ram_00a5a903 == '\0') {
+		      Mono_Security_ASN1__get_Item
+		                (&
+		                 Method_System_Runtime_CompilerServices_AsyncVoidMethodBuilder_Start_AbstractGame__InitCompleted_d__257___
+		                );
+		      DAT_ram_00a5a903 = '\x01';
+		    }
+		    local_8 = 0;
+		    System_Linq_Enumerable__ToDictionary_KeyValuePair_object__object___object__object_(local_30,0);
+		    local_14 = local_28;
+		    local_20 = -1;
+		    local_c = param1;
+		    System_Runtime_CompilerServices_AsyncVoidMethodBuilder__Start_AbstractAdController__InitializeAdProviders_d__7_
+		              (local_1c,&local_20,
+		               Method_System_Runtime_CompilerServices_AsyncVoidMethodBuilder_Start_AbstractGame__InitCompleted_d__257___
+		              );
+		  }
+		  else {
+		    uVar1 = 0;
+		    param1_00 = (int *)System_Linq_Enumerable__ToList_object_
+		                                 (*(int *)(param1 + 0x18),*(int *)(param1 + 0x1c),
+		                                  Method_System_Collections_Generic_List_IGameManager__get_Item__);
+		    iVar4 = *param1_00;
+		    if (*(ushort *)(iVar4 + 0xb6) != 0) {
+		      do {
+		        if (Core_IBaseManager_TypeInfo == *(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8)) {
+		          puVar2 = (uint *)(*(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8 + 4) * 8 + iVar4 + 0xf0);
+		          goto code_r0x8128c359;
+		        }
+		        uVar1 = uVar1 + 1;
+		      } while (*(ushort *)(iVar4 + 0xb6) != uVar1);
+		    }
+		    puVar2 = (uint *)func_ii_1080(param1_00,Core_IBaseManager_TypeInfo,6);
+		code_r0x8128c359:
+		    uVar3 = (**(code **)((ulonglong)*puVar2 * 4))(param1_00,puVar2[1]);
+		    local_20 = *(int *)(param1 + 0x1c) + 1;
+		    param3 = func_ii_1081(DAT_ram_00a66954,&local_20);
+		    local_30[0] = *(undefined4 *)(*(int *)(param1 + 0x18) + 0xc);
+		    param4 = func_ii_1081(DAT_ram_00a66954,local_30);
+		    uVar3 = func_ii_8529(StringLiteral_10696,uVar3,param3,param4,0);
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar3,0);
+		    uVar3 = unnamed_function_1417(System_Action_IBaseManager__TypeInfo);
+		    UnityEngine_UIElements_VisualElement__get_layout
+		              (uVar3,param1,Method_Core_Gameplay_AbstractGame_ManagerInitComplete__,0);
+		    iVar4 = *param1_00;
+		    if (*(ushort *)(iVar4 + 0xb6) != 0) {
+		      uVar1 = 0;
+		      do {
+		        if (Core_IBaseManager_TypeInfo == *(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8)) {
+		          puVar2 = (uint *)(iVar4 + *(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8 + 4) * 8 + 0xc0);
+		          goto code_r0x8128c466;
+		        }
+		        uVar1 = uVar1 + 1;
+		      } while (*(ushort *)(iVar4 + 0xb6) != uVar1);
+		    }
+		    puVar2 = (uint *)func_ii_1080(param1_00,Core_IBaseManager_TypeInfo,0);
+		code_r0x8128c466:
+		    (**(code **)((ulonglong)*puVar2 * 4))(param1_00,uVar3,puVar2[1]);
+		    uVar1 = 0;
+		    iVar4 = *param1_00;
+		    if (*(ushort *)(iVar4 + 0xb6) != 0) {
+		      do {
+		        if (Core_IBaseManager_TypeInfo == *(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8)) {
+		          puVar2 = (uint *)(*(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8 + 4) * 8 + iVar4 + 0xe0);
+		          goto code_r0x8128c4e2;
+		        }
+		        uVar1 = uVar1 + 1;
+		      } while (*(ushort *)(iVar4 + 0xb6) != uVar1);
+		    }
+		    puVar2 = (uint *)func_ii_1080(param1_00,Core_IBaseManager_TypeInfo,4);
+		code_r0x8128c4e2:
+		    (**(code **)((ulonglong)*puVar2 * 4))(param1_00,puVar2[1]);
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600667D RID: 26237 RVA: 0x00002050 File Offset: 0x00000250
@@ -1358,6 +1516,114 @@ namespace Core.Gameplay
 		[Address(RVA = "0xB202", Offset = "0xB202", VA = "0xB202")]
 		private void HandleInitManagersQueue()
 		{
+		/* --- GHIDRA: HandleInitManagersQueue ---
+		void Core_Gameplay_AbstractGame__HandleInitManagersQueue(int param1,undefined4 param2)
+		
+		{
+		  uint uVar1;
+		  int *param1_00;
+		  uint *puVar2;
+		  undefined4 uVar3;
+		  undefined4 param3;
+		  undefined4 param4;
+		  int iVar4;
+		  undefined4 local_8;
+		  int local_4;
+		  
+		  uVar1 = 0;
+		  if (DAT_ram_00a5a900 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_Core_Gameplay_AbstractGame_ManagerDeinitComplete__);
+		    Mono_Security_ASN1__get_Item(&Method_Core_Gameplay_AbstractGame_ManagerInitComplete__);
+		    Mono_Security_ASN1__get_Item(&System_Action_IBaseManager__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Core_IBaseManager_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Method_System_Collections_Generic_List_IGameManager__get_Count__);
+		    Mono_Security_ASN1__get_Item(&Method_System_Collections_Generic_List_IGameManager__get_Item__);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_10694);
+		    DAT_ram_00a5a900 = '\x01';
+		  }
+		  if (*(int *)(param1 + 0x1c) < 0) {
+		    Core_Gameplay_AbstractGame__InitCompleted(param1,0);
+		  }
+		  else {
+		    param1_00 = (int *)System_Linq_Enumerable__ToList_object_
+		                                 (*(undefined4 *)(param1 + 0x18),*(int *)(param1 + 0x1c),
+		                                  Method_System_Collections_Generic_List_IGameManager__get_Item__);
+		    iVar4 = *param1_00;
+		    if (*(ushort *)(iVar4 + 0xb6) != 0) {
+		      do {
+		        if (Core_IBaseManager_TypeInfo == *(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8)) {
+		          puVar2 = (uint *)(*(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8 + 4) * 8 + iVar4 + 0xf0);
+		          goto code_r0x8128c655;
+		        }
+		        uVar1 = uVar1 + 1;
+		      } while (*(ushort *)(iVar4 + 0xb6) != uVar1);
+		    }
+		    puVar2 = (uint *)func_ii_1080(param1_00,Core_IBaseManager_TypeInfo,6);
+		code_r0x8128c655:
+		    uVar3 = (**(code **)((ulonglong)*puVar2 * 4))(param1_00,puVar2[1]);
+		    local_4 = *(int *)(param1 + 0x1c) + 1;
+		    param3 = func_ii_1081(DAT_ram_00a66954,&local_4);
+		    local_8 = *(undefined4 *)(*(int *)(param1 + 0x18) + 0xc);
+		    param4 = func_ii_1081(DAT_ram_00a66954,&local_8);
+		    uVar3 = func_ii_8529(StringLiteral_10694,uVar3,param3,param4,0);
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar3,0);
+		    uVar3 = unnamed_function_1417(System_Action_IBaseManager__TypeInfo);
+		    UnityEngine_UIElements_VisualElement__get_layout
+		              (uVar3,param1,Method_Core_Gameplay_AbstractGame_ManagerDeinitComplete__,0);
+		    iVar4 = *param1_00;
+		    if (*(ushort *)(iVar4 + 0xb6) != 0) {
+		      uVar1 = 0;
+		      do {
+		        if (Core_IBaseManager_TypeInfo == *(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8)) {
+		          puVar2 = (uint *)(*(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8 + 4) * 8 + iVar4 + 0xd0);
+		          goto code_r0x8128c765;
+		        }
+		        uVar1 = uVar1 + 1;
+		      } while (*(ushort *)(iVar4 + 0xb6) != uVar1);
+		    }
+		    puVar2 = (uint *)func_ii_1080(param1_00,Core_IBaseManager_TypeInfo,2);
+		code_r0x8128c765:
+		    (**(code **)((ulonglong)*puVar2 * 4))(param1_00,uVar3,puVar2[1]);
+		    uVar1 = 0;
+		    uVar3 = unnamed_function_1417(System_Action_IBaseManager__TypeInfo);
+		    UnityEngine_UIElements_VisualElement__get_layout
+		              (uVar3,param1,Method_Core_Gameplay_AbstractGame_ManagerInitComplete__,0);
+		    iVar4 = *param1_00;
+		    if (*(ushort *)(iVar4 + 0xb6) != 0) {
+		      do {
+		        if (Core_IBaseManager_TypeInfo == *(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8)) {
+		          puVar2 = (uint *)(*(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8 + 4) * 8 + iVar4 + 200);
+		          goto code_r0x8128c800;
+		        }
+		        uVar1 = uVar1 + 1;
+		      } while (*(ushort *)(iVar4 + 0xb6) != uVar1);
+		    }
+		    puVar2 = (uint *)func_ii_1080(param1_00,Core_IBaseManager_TypeInfo,1);
+		code_r0x8128c800:
+		    (**(code **)((ulonglong)*puVar2 * 4))(param1_00,uVar3,puVar2[1]);
+		    uVar1 = 0;
+		    iVar4 = *param1_00;
+		    if (*(ushort *)(iVar4 + 0xb6) != 0) {
+		      do {
+		        if (Core_IBaseManager_TypeInfo == *(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8)) {
+		          puVar2 = (uint *)(*(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8 + 4) * 8 + iVar4 + 0xe8);
+		          goto code_r0x8128c87c;
+		        }
+		        uVar1 = uVar1 + 1;
+		      } while (*(ushort *)(iVar4 + 0xb6) != uVar1);
+		    }
+		    puVar2 = (uint *)func_ii_1080(param1_00,Core_IBaseManager_TypeInfo,5);
+		code_r0x8128c87c:
+		    (**(code **)((ulonglong)*puVar2 * 4))(param1_00,puVar2[1]);
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600667E RID: 26238 RVA: 0x00002050 File Offset: 0x00000250
@@ -1365,6 +1631,130 @@ namespace Core.Gameplay
 		[Address(RVA = "0xB203", Offset = "0xB203", VA = "0xB203")]
 		private void HandleDeinitManagersQueue()
 		{
+		/* --- GHIDRA: HandleDeinitManagersQueue ---
+		void Core_Gameplay_AbstractGame__HandleDeinitManagersQueue(int param1,int *param2,undefined4 param3)
+		
+		{
+		  uint uVar1;
+		  undefined4 uVar2;
+		  uint *puVar3;
+		  undefined4 param1_00;
+		  undefined4 uVar4;
+		  undefined4 uVar5;
+		  undefined4 param5;
+		  undefined4 param6;
+		  int *param1_01;
+		  int iVar6;
+		  int iVar7;
+		  undefined4 local_8;
+		  undefined4 local_4;
+		  
+		  if (DAT_ram_00a5a901 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_Core_Gameplay_AbstractGame_ManagerInitComplete__);
+		    Mono_Security_ASN1__get_Item(&System_Action_IBaseManager__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Core_Application_IApp_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Core_IBaseManager_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Method_System_Collections_Generic_List_IGameManager__get_Count__);
+		    Mono_Security_ASN1__get_Item(&Core_Events_Scopes_AppScope_LoadingEventArgs_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_10695);
+		    DAT_ram_00a5a901 = '\x01';
+		  }
+		  uVar2 = unnamed_function_1417(System_Action_IBaseManager__TypeInfo);
+		  UnityEngine_UIElements_VisualElement__get_layout
+		            (uVar2,param1,Method_Core_Gameplay_AbstractGame_ManagerInitComplete__,0);
+		  iVar7 = *param2;
+		  if (*(ushort *)(iVar7 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (Core_IBaseManager_TypeInfo == *(int *)(*(int *)(iVar7 + 0x58) + uVar1 * 8)) {
+		        puVar3 = (uint *)(*(int *)(*(int *)(iVar7 + 0x58) + uVar1 * 8 + 4) * 8 + iVar7 + 200);
+		        goto code_r0x8128cbea;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar7 + 0xb6) != uVar1);
+		  }
+		  puVar3 = (uint *)func_ii_1080(param2,Core_IBaseManager_TypeInfo,1);
+		code_r0x8128cbea:
+		  (**(code **)((ulonglong)*puVar3 * 4))(param2,uVar2,puVar3[1]);
+		  iVar7 = System_Uri___ctor(0);
+		  iVar7 = *(int *)(*(int *)(*(int *)(*(int *)(iVar7 + 0x38) + 0x10) + 0x1c) + 0x28);
+		  if (iVar7 != 0) {
+		    uVar2 = System_Uri___ctor(0);
+		    if (DAT_ram_00a6456f == '\0') {
+		      Mono_Security_ASN1__get_Item(&Core_Gameplay_Game_TypeInfo);
+		      DAT_ram_00a6456f = '\x01';
+		    }
+		    uVar1 = 0;
+		    uVar4 = **(undefined4 **)(Core_Gameplay_Game_TypeInfo + 0x5c);
+		    iVar6 = *param2;
+		    if (*(ushort *)(iVar6 + 0xb6) != 0) {
+		      do {
+		        if (Core_IBaseManager_TypeInfo == *(int *)(*(int *)(iVar6 + 0x58) + uVar1 * 8)) {
+		          puVar3 = (uint *)(*(int *)(*(int *)(iVar6 + 0x58) + uVar1 * 8 + 4) * 8 + iVar6 + 0xf0);
+		          goto code_r0x8128ccb2;
+		        }
+		        uVar1 = uVar1 + 1;
+		      } while (*(ushort *)(iVar6 + 0xb6) != uVar1);
+		    }
+		    puVar3 = (uint *)func_ii_1080(param2,Core_IBaseManager_TypeInfo,6);
+		code_r0x8128ccb2:
+		    uVar5 = (**(code **)((ulonglong)*puVar3 * 4))(param2,puVar3[1]);
+		    param5 = *(undefined4 *)(param1 + 0x1c);
+		    param6 = *(undefined4 *)(*(int *)(param1 + 0x18) + 0xc);
+		    param1_00 = unnamed_function_1417(Core_Events_Scopes_AppScope_LoadingEventArgs_TypeInfo);
+		    Core_Events_Scopes_TournamentsScope_AddBetEventArgs__get_Bet
+		              (param1_00,uVar2,uVar4,uVar5,param5,param6,0);
+		    (**(code **)((ulonglong)*(uint *)(iVar7 + 0xc) * 4))
+		              (*(undefined4 *)(iVar7 + 0x20),param1_00,*(undefined4 *)(iVar7 + 0x14));
+		  }
+		  *(int *)(param1 + 0x1c) = *(int *)(param1 + 0x1c) + 1;
+		  iVar7 = *param2;
+		  if (*(ushort *)(iVar7 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (Core_IBaseManager_TypeInfo == *(int *)(*(int *)(iVar7 + 0x58) + uVar1 * 8)) {
+		        puVar3 = (uint *)(*(int *)(*(int *)(iVar7 + 0x58) + uVar1 * 8 + 4) * 8 + iVar7 + 0xf0);
+		        goto code_r0x8128cd80;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar7 + 0xb6) != uVar1);
+		  }
+		  puVar3 = (uint *)func_ii_1080(param2,Core_IBaseManager_TypeInfo,6);
+		code_r0x8128cd80:
+		  uVar2 = (**(code **)((ulonglong)*puVar3 * 4))(param2,puVar3[1]);
+		  local_4 = *(undefined4 *)(param1 + 0x1c);
+		  uVar4 = func_ii_1081(DAT_ram_00a66954,&local_4);
+		  local_8 = *(undefined4 *)(*(int *)(param1 + 0x18) + 0xc);
+		  uVar5 = func_ii_1081(DAT_ram_00a66954,&local_8);
+		  uVar2 = func_ii_8529(StringLiteral_10695,uVar2,uVar4,uVar5,0);
+		  if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		  }
+		  System_Collections_Generic_Dictionary_uint__object___get_Count(uVar2,0);
+		  param1_01 = *(int **)(param1 + 0x10);
+		  iVar7 = *param1_01;
+		  if (*(ushort *)(iVar7 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (Core_Application_IApp_TypeInfo == *(int *)(*(int *)(iVar7 + 0x58) + uVar1 * 8)) {
+		        puVar3 = (uint *)(*(int *)(*(int *)(iVar7 + 0x58) + uVar1 * 8 + 4) * 8 + iVar7 + 0x138);
+		        goto code_r0x8128ce71;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar7 + 0xb6) != uVar1);
+		  }
+		  puVar3 = (uint *)func_ii_1080(param1_01,Core_Application_IApp_TypeInfo,0xf);
+		code_r0x8128ce71:
+		  iVar7 = (**(code **)((ulonglong)*puVar3 * 4))(param1_01,puVar3[1]);
+		  Preloading_Preloader__Show
+		            (*(undefined4 *)(iVar7 + 0x1c),
+		             (float)*(int *)(param1 + 0x1c) / (float)*(int *)(*(int *)(param1 + 0x18) + 0xc),3,0);
+		  Core_Gameplay_AbstractGame__CreateGameManagers(param1,puVar3);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600667F RID: 26239 RVA: 0x00002050 File Offset: 0x00000250
@@ -1372,6 +1762,74 @@ namespace Core.Gameplay
 		[Address(RVA = "0xB204", Offset = "0xB204", VA = "0xB204")]
 		private void ManagerInitComplete(IBaseManager manager)
 		{
+		/* --- GHIDRA: ManagerInitComplete ---
+		void Core_Gameplay_AbstractGame__ManagerInitComplete(int param1,int *param2,undefined4 param3)
+		
+		{
+		  uint uVar1;
+		  undefined4 uVar2;
+		  uint *puVar3;
+		  undefined4 param3_00;
+		  undefined4 param4;
+		  int iVar4;
+		  undefined4 local_8;
+		  int local_4;
+		  
+		  if (DAT_ram_00a5a902 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_Core_Gameplay_AbstractGame_ManagerDeinitComplete__);
+		    Mono_Security_ASN1__get_Item(&System_Action_IBaseManager__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Core_IBaseManager_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Method_System_Collections_Generic_List_IGameManager__get_Count__);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_10693);
+		    DAT_ram_00a5a902 = '\x01';
+		  }
+		  uVar2 = unnamed_function_1417(System_Action_IBaseManager__TypeInfo);
+		  UnityEngine_UIElements_VisualElement__get_layout
+		            (uVar2,param1,Method_Core_Gameplay_AbstractGame_ManagerDeinitComplete__,0);
+		  iVar4 = *param2;
+		  if (*(ushort *)(iVar4 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (Core_IBaseManager_TypeInfo == *(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8)) {
+		        puVar3 = (uint *)(*(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8 + 4) * 8 + iVar4 + 0xd8);
+		        goto code_r0x8128cf8f;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar4 + 0xb6) != uVar1);
+		  }
+		  puVar3 = (uint *)func_ii_1080(param2,Core_IBaseManager_TypeInfo,3);
+		code_r0x8128cf8f:
+		  (**(code **)((ulonglong)*puVar3 * 4))(param2,uVar2,puVar3[1]);
+		  uVar1 = 0;
+		  iVar4 = *param2;
+		  if (*(ushort *)(iVar4 + 0xb6) != 0) {
+		    do {
+		      if (Core_IBaseManager_TypeInfo == *(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8)) {
+		        puVar3 = (uint *)(*(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8 + 4) * 8 + iVar4 + 0xf0);
+		        goto code_r0x8128d00b;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar4 + 0xb6) != uVar1);
+		  }
+		  puVar3 = (uint *)func_ii_1080(param2,Core_IBaseManager_TypeInfo,6);
+		code_r0x8128d00b:
+		  uVar2 = (**(code **)((ulonglong)*puVar3 * 4))(param2,puVar3[1]);
+		  local_4 = *(int *)(param1 + 0x1c) + 1;
+		  param3_00 = func_ii_1081(DAT_ram_00a66954,&local_4);
+		  local_8 = *(undefined4 *)(*(int *)(param1 + 0x18) + 0xc);
+		  param4 = func_ii_1081(DAT_ram_00a66954,&local_8);
+		  uVar2 = func_ii_8529(StringLiteral_10693,uVar2,param3_00,param4,0);
+		  if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		  }
+		  System_Collections_Generic_Dictionary_uint__object___get_Count(uVar2,0);
+		  *(int *)(param1 + 0x1c) = *(int *)(param1 + 0x1c) + -1;
+		  Core_Gameplay_AbstractGame__HandleInitManagersQueue(param1,uVar2);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06006680 RID: 26240 RVA: 0x00002050 File Offset: 0x00000250
@@ -1379,6 +1837,39 @@ namespace Core.Gameplay
 		[Address(RVA = "0xB205", Offset = "0xB205", VA = "0xB205")]
 		private void ManagerDeinitComplete(IBaseManager manager)
 		{
+		/* --- GHIDRA: ManagerDeinitComplete ---
+		void Core_Gameplay_AbstractGame__ManagerDeinitComplete(undefined4 param1,undefined4 param2)
+		
+		{
+		  undefined8 local_30;
+		  undefined8 local_28;
+		  undefined4 local_20;
+		  undefined8 local_1c;
+		  undefined8 local_14;
+		  undefined4 local_c;
+		  undefined8 local_8;
+		  
+		  if (DAT_ram_00a5a903 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_System_Runtime_CompilerServices_AsyncVoidMethodBuilder_Start_AbstractGame__InitCompleted_d__257___
+		              );
+		    DAT_ram_00a5a903 = '\x01';
+		  }
+		  local_8 = 0;
+		  System_Linq_Enumerable__ToDictionary_KeyValuePair_object__object___object__object_(&local_30,0);
+		  local_14 = local_28;
+		  local_20 = 0xffffffff;
+		  local_1c = local_30;
+		  local_c = param1;
+		  System_Runtime_CompilerServices_AsyncVoidMethodBuilder__Start_AbstractAdController__InitializeAdProviders_d__7_
+		            (&local_1c,&local_20,
+		             Method_System_Runtime_CompilerServices_AsyncVoidMethodBuilder_Start_AbstractGame__InitCompleted_d__257___
+		            );
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06006681 RID: 26241 RVA: 0x00002050 File Offset: 0x00000250
@@ -1386,6 +1877,34 @@ namespace Core.Gameplay
 		[Address(RVA = "0xB206", Offset = "0xB206", VA = "0xB206")]
 		private void InitCompleted()
 		{
+		/* --- GHIDRA: InitCompleted ---
+		void Core_Gameplay_AbstractGame__InitCompleted(int param1,undefined4 param2)
+		
+		{
+		  undefined4 param1_00;
+		  int iVar1;
+		  
+		  if (DAT_ram_00a5a904 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_28722);
+		    DAT_ram_00a5a904 = '\x01';
+		  }
+		  *(undefined4 *)(param1 + 0x10) = 0;
+		  *(undefined2 *)(param1 + 0x14) = 0;
+		  param1_00 = func_ii_4419(StringLiteral_28722,param1,0);
+		  if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		  }
+		  System_Collections_Generic_Dictionary_uint__object___get_Count(param1_00,0);
+		  iVar1 = *(int *)(param1 + 0xc);
+		  if (iVar1 != 0) {
+		    (**(code **)((ulonglong)*(uint *)(iVar1 + 0xc) * 4))
+		              (*(undefined4 *)(iVar1 + 0x20),param1,*(undefined4 *)(iVar1 + 0x14));
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06006682 RID: 26242 RVA: 0x00002050 File Offset: 0x00000250
@@ -1417,4 +1936,172 @@ namespace Core.Gameplay
 		[FieldOffset(Offset = "0x20")]
 		private readonly CancellationTokenSource _cancellationSource;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: add_InitCompleteEvent ---
+		void Core_Gameplay_AbstractGame__add_InitCompleteEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a5a8f9 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_IGame__TypeInfo);
+		    DAT_ram_00a5a8f9 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 8);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = func_ii_7048(param1_00,param2,0);
+		    param2_00 = System_Action_IGame__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_IGame__TypeInfo), iVar2 == 0)) break;
+		    iVar2 = func_ii_4329(param1 + 8,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: remove_InitCompleteEvent ---
+		void Core_Gameplay_AbstractGame__remove_InitCompleteEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a5a8fa == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_IGame__TypeInfo);
+		    DAT_ram_00a5a8fa = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0xc);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = UnityEngine_UI_Image__set_sprite(param1_00,param2,0);
+		    param2_00 = System_Action_IGame__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_IGame__TypeInfo), iVar2 == 0)) break;
+		    iVar2 = func_ii_4329(param1 + 0xc,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: add_DeinitCompleteEvent ---
+		void Core_Gameplay_AbstractGame__add_DeinitCompleteEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a5a8fb == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_IGame__TypeInfo);
+		    DAT_ram_00a5a8fb = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0xc);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = func_ii_7048(param1_00,param2,0);
+		    param2_00 = System_Action_IGame__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_IGame__TypeInfo), iVar2 == 0)) break;
+		    iVar2 = func_ii_4329(param1 + 0xc,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: set_IsDeInitProcess ---
+		void Core_Gameplay_AbstractGame__set_IsDeInitProcess(int *param1,int param2,undefined4 param3)
+		
+		{
+		  param1[7] = 0;
+		  param1[4] = param2;
+		  (**(code **)((ulonglong)*(uint *)(*param1 + 0x2e8) * 4))(param1,*(undefined4 *)(*param1 + 0x2ec));
+		  Core_Gameplay_AbstractGame__CreateGameManagers(param1,param1);
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_ExperimentsManager ---
+		void Core_Gameplay_AbstractGame__set_ExperimentsManager(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  undefined4 uVar2;
+		  int param1_00;
+		  uint uVar3;
+		  
+		  if (DAT_ram_00a5a8fe == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_Gameplay_Managers_CombatManager_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Method_System_Collections_Generic_List_IGameManager___ctor__);
+		    Mono_Security_ASN1__get_Item(&System_Collections_Generic_List_IGameManager__TypeInfo);
+		    DAT_ram_00a5a8fe = '\x01';
+		  }
+		  uVar2 = unnamed_function_1417(System_Collections_Generic_List_IGameManager__TypeInfo);
+		  GAFInternal_Objects_GAFBakedObjectImpl__get_isVisible
+		            (uVar2,Method_System_Collections_Generic_List_IGameManager___ctor__);
+		  *(undefined4 *)(param1 + 0x18) = uVar2;
+		  uVar2 = unnamed_function_1417(Core_Gameplay_Managers_CombatManager_TypeInfo);
+		  Core_Gameplay_Managers_CombatManager__StopCurrentCombat(uVar2,0);
+		  *(undefined4 *)(param1 + 0xb0) = uVar2;
+		  if (DAT_ram_00a5a8fd == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_System_Collections_Generic_List_IGameManager__Add__);
+		    DAT_ram_00a5a8fd = '\x01';
+		  }
+		  iVar1 = Method_System_Collections_Generic_List_IGameManager__Add__;
+		  param1_00 = *(int *)(param1 + 0x18);
+		  *(int *)(param1_00 + 0x10) = *(int *)(param1_00 + 0x10) + 1;
+		  uVar3 = *(uint *)(param1_00 + 0xc);
+		  if (uVar3 < *(uint *)(*(int *)(param1_00 + 8) + 0xc)) {
+		    *(uint *)(param1_00 + 0xc) = uVar3 + 1;
+		    *(undefined4 *)(*(int *)(param1_00 + 8) + uVar3 * 4 + 0x10) = uVar2;
+		    return;
+		  }
+		  System_Linq_Expressions_Interpreter_LeaveExceptionHandlerInstruction__Create
+		            (param1_00,uVar2,*(undefined4 *)(*(int *)(*(int *)(iVar1 + 0x10) + 0x60) + 0x38));
+		  return;
+		}
+		*/
+
 }

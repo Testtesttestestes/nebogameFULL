@@ -466,6 +466,29 @@ namespace Core.Data
 		[Address(RVA = "0xAFAB", Offset = "0xAFAB", VA = "0xAFAB")]
 		protected ArtikulData()
 		{
+		/* --- GHIDRA: .ctor ---
+		undefined4 Core_Data_ArtikulData___ctor(int param1,undefined4 param2)
+		
+		{
+		  undefined8 uVar1;
+		  
+		  if (DAT_ram_00a60799 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Google_Protobuf_Collections_RepeatedField_ulong__get_Item__);
+		    DAT_ram_00a60799 = '\x01';
+		  }
+		  if (DAT_ram_00a60792 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Core_Dict_DictWrappers_Base_AbstractDictWrapper_ArtikulDic__uint__get_Data__)
+		    ;
+		    DAT_ram_00a60792 = '\x01';
+		  }
+		  uVar1 = func_ii_7271(*(undefined4 *)(*(int *)(*(int *)(param1 + 8) + 0x10) + 0x2c),0,
+		                       Method_Google_Protobuf_Collections_RepeatedField_ulong__get_Item__);
+		  return (int)uVar1;
+		}
+		*/
+
 		}
 
 		// Token: 0x170013F7 RID: 5111
@@ -512,6 +535,30 @@ namespace Core.Data
 		[Address(RVA = "0xAFAF", Offset = "0xAFAF", VA = "0xAFAF")]
 		public bool TryGetLifeDurationSec(out ulong value)
 		{
+		/* --- GHIDRA: TryGetLifeDurationSec ---
+		uint Core_Data_ArtikulData__TryGetLifeDurationSec(int param1,longlong *param2,undefined4 param3)
+		
+		{
+		  longlong lVar1;
+		  
+		  if (DAT_ram_00a6079c == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Google_Protobuf_Collections_RepeatedField_ulong__get_Item__);
+		    DAT_ram_00a6079c = '\x01';
+		  }
+		  if (DAT_ram_00a60792 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Core_Dict_DictWrappers_Base_AbstractDictWrapper_ArtikulDic__uint__get_Data__)
+		    ;
+		    DAT_ram_00a60792 = '\x01';
+		  }
+		  lVar1 = func_ii_7271(*(undefined4 *)(*(int *)(*(int *)(param1 + 8) + 0x10) + 0x2c),6,
+		                       Method_Google_Protobuf_Collections_RepeatedField_ulong__get_Item__);
+		  *param2 = lVar1;
+		  return (uint)(lVar1 != 0);
+		}
+		*/
+
 			return default(bool);
 		}
 
@@ -520,6 +567,29 @@ namespace Core.Data
 		[Address(RVA = "0xAFB0", Offset = "0xAFB0", VA = "0xAFB0")]
 		public bool TryGetLifeEndTimestampSec(out ulong value)
 		{
+		/* --- GHIDRA: TryGetLifeEndTimestampSec ---
+		undefined4 Core_Data_ArtikulData__TryGetLifeEndTimestampSec(int param1,undefined4 param2)
+		
+		{
+		  undefined8 uVar1;
+		  
+		  if (DAT_ram_00a6079d == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Google_Protobuf_Collections_RepeatedField_ulong__get_Item__);
+		    DAT_ram_00a6079d = '\x01';
+		  }
+		  if (DAT_ram_00a60792 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Core_Dict_DictWrappers_Base_AbstractDictWrapper_ArtikulDic__uint__get_Data__)
+		    ;
+		    DAT_ram_00a60792 = '\x01';
+		  }
+		  uVar1 = func_ii_7271(*(undefined4 *)(*(int *)(*(int *)(param1 + 8) + 0x10) + 0x2c),7,
+		                       Method_Google_Protobuf_Collections_RepeatedField_ulong__get_Item__);
+		  return (int)uVar1;
+		}
+		*/
+
 			return default(bool);
 		}
 
@@ -605,4 +675,802 @@ namespace Core.Data
 		[FieldOffset(Offset = "0x2C")]
 		private AbstractSpellsBasedDescription _description;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: set_ArtikulTypeDic ---
+		undefined4 Core_Data_ArtikulData__set_ArtikulTypeDic(int param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a60792 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Core_Dict_DictWrappers_Base_AbstractDictWrapper_ArtikulDic__uint__get_Data__)
+		    ;
+		    DAT_ram_00a60792 = '\x01';
+		  }
+		  return *(undefined4 *)(*(int *)(*(int *)(param1 + 8) + 0x10) + 0x20);
+		}
+		*/
+
+
+		/* --- GHIDRA: get_TypeId ---
+		undefined4 Core_Data_ArtikulData__get_TypeId(int param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a60792 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Core_Dict_DictWrappers_Base_AbstractDictWrapper_ArtikulDic__uint__get_Data__)
+		    ;
+		    DAT_ram_00a60792 = '\x01';
+		  }
+		  return *(undefined4 *)(*(int *)(param1 + 8) + 0x10);
+		}
+		*/
+
+
+		/* --- GHIDRA: set_Spells ---
+		undefined4 Core_Data_ArtikulData__set_Spells(int param1,undefined4 param2)
+		
+		{
+		  int param1_00;
+		  undefined4 uVar1;
+		  int iVar2;
+		  int iVar3;
+		  uint uVar4;
+		  
+		  if (DAT_ram_00a60794 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_System_Collections_Generic_List_SpellData__AddRange__);
+		    Mono_Security_ASN1__get_Item(&Method_System_Collections_Generic_List_SpellData__Add__);
+		    Mono_Security_ASN1__get_Item(&Method_System_Collections_Generic_List_SpellData__ToArray__);
+		    Mono_Security_ASN1__get_Item(&Method_System_Collections_Generic_List_SpellData___ctor__);
+		    Mono_Security_ASN1__get_Item(&System_Collections_Generic_List_SpellData__TypeInfo);
+		    DAT_ram_00a60794 = '\x01';
+		  }
+		  iVar2 = *(int *)(param1 + 0x18);
+		  iVar3 = *(int *)(*(int *)(param1 + 0x1c) + 0xc);
+		  param1_00 = unnamed_function_1417(System_Collections_Generic_List_SpellData__TypeInfo);
+		  Unity_Services_Core_Internal_UnityServicesInternal___c__DisplayClass33_0___InitializeServicesAsync_g__FailServicesInitialization_2
+		            (param1_00,iVar3 + (uint)(iVar2 != 0),
+		             Method_System_Collections_Generic_List_SpellData___ctor__);
+		  func_ii_6335(param1_00,*(undefined4 *)(param1 + 0x1c),
+		               Method_System_Collections_Generic_List_SpellData__AddRange__);
+		  iVar2 = Method_System_Collections_Generic_List_SpellData__Add__;
+		  iVar3 = *(int *)(param1 + 0x18);
+		  if (iVar3 != 0) {
+		    *(int *)(param1_00 + 0x10) = *(int *)(param1_00 + 0x10) + 1;
+		    uVar4 = *(uint *)(param1_00 + 0xc);
+		    if (uVar4 < *(uint *)(*(int *)(param1_00 + 8) + 0xc)) {
+		      *(uint *)(param1_00 + 0xc) = uVar4 + 1;
+		      *(int *)(*(int *)(param1_00 + 8) + uVar4 * 4 + 0x10) = iVar3;
+		    }
+		    else {
+		      System_Linq_Expressions_Interpreter_LeaveExceptionHandlerInstruction__Create
+		                (param1_00,iVar3,*(undefined4 *)(*(int *)(*(int *)(iVar2 + 0x10) + 0x60) + 0x38));
+		    }
+		  }
+		  uVar1 = UnityEngine_TextCore_Text_FontAsset__UpdateFontFeaturesForNewlyAddedGlyphs
+		                    (param1_00,Method_System_Collections_Generic_List_SpellData__ToArray__);
+		  return uVar1;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_TargetRequirements ---
+		uint Core_Data_ArtikulData__set_TargetRequirements(int param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a60792 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Core_Dict_DictWrappers_Base_AbstractDictWrapper_ArtikulDic__uint__get_Data__)
+		    ;
+		    DAT_ram_00a60792 = '\x01';
+		  }
+		  return (uint)(*(byte *)(*(int *)(*(int *)(param1 + 8) + 0x10) + 0x14) >> 7);
+		}
+		*/
+
+
+		/* --- GHIDRA: get_IsEquipment ---
+		uint Core_Data_ArtikulData__get_IsEquipment(int param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a60792 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Core_Dict_DictWrappers_Base_AbstractDictWrapper_ArtikulDic__uint__get_Data__)
+		    ;
+		    DAT_ram_00a60792 = '\x01';
+		  }
+		  return (uint)((*(byte *)(*(int *)(*(int *)(param1 + 8) + 0x10) + 0x14) & 0xa0) == 0);
+		}
+		*/
+
+
+		/* --- GHIDRA: get_IsUserItem ---
+		undefined4 Core_Data_ArtikulData__get_IsUserItem(int param1,int param2,undefined4 param3)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  uVar1 = 0;
+		  if (DAT_ram_00a5a12b == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_System_Linq_Enumerable_Any_uint___);
+		    Mono_Security_ASN1__get_Item(&Method_System_Linq_Enumerable_Intersect_uint___);
+		    DAT_ram_00a5a12b = '\x01';
+		  }
+		  if ((param1 != 0) && (param2 != 0)) {
+		    uVar1 = System_Linq_Enumerable__GroupBy___Il2CppFullySharedGenericType____Il2CppFullySharedGenericType_
+		                      (*(undefined4 *)(*(int *)(param1 + 0xc) + 0x14),
+		                       *(undefined4 *)(*(int *)(param2 + 0xc) + 0x14),
+		                       Method_System_Linq_Enumerable_Intersect_uint___);
+		    uVar1 = System_Linq_Enumerable__Any_int_(uVar1,Method_System_Linq_Enumerable_Any_uint___);
+		  }
+		  return uVar1;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_IsDollItem ---
+		uint Core_Data_ArtikulData__get_IsDollItem(int param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a60792 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Core_Dict_DictWrappers_Base_AbstractDictWrapper_ArtikulDic__uint__get_Data__)
+		    ;
+		    DAT_ram_00a60792 = '\x01';
+		  }
+		  return (*(byte *)(*(int *)(*(int *)(param1 + 8) + 0x10) + 0x14) & 0x20) >> 5;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_IsGolemItem ---
+		uint Core_Data_ArtikulData__get_IsGolemItem(int param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a60792 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Core_Dict_DictWrappers_Base_AbstractDictWrapper_ArtikulDic__uint__get_Data__)
+		    ;
+		    DAT_ram_00a60792 = '\x01';
+		  }
+		  return (uint)((*(byte *)(*(int *)(*(int *)(param1 + 8) + 0x10) + 0x14) & 0x40) == 0);
+		}
+		*/
+
+
+		/* --- GHIDRA: get_IsRepairable ---
+		uint Core_Data_ArtikulData__get_IsRepairable(int param1,undefined4 param2)
+		
+		{
+		  return (*(byte *)(*(int *)(param1 + 0xc) + 0x10) & 2) >> 1;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_IsDismantable ---
+		uint Core_Data_ArtikulData__get_IsDismantable(int param1,undefined4 param2)
+		
+		{
+		  return (*(byte *)(*(int *)(param1 + 0xc) + 0x11) & 8) >> 3;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_IsDismantableInGolemSlot ---
+		uint Core_Data_ArtikulData__get_IsDismantableInGolemSlot(int param1,undefined4 param2)
+		
+		{
+		  return (*(byte *)(*(int *)(param1 + 0xc) + 0x11) & 4) >> 2;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_IsDismantableOnClanIsle ---
+		uint Core_Data_ArtikulData__get_IsDismantableOnClanIsle(int param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a60792 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Core_Dict_DictWrappers_Base_AbstractDictWrapper_ArtikulDic__uint__get_Data__)
+		    ;
+		    DAT_ram_00a60792 = '\x01';
+		  }
+		  return (*(byte *)(*(int *)(*(int *)(param1 + 8) + 0x10) + 0x15) & 8) >> 3;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_IsDismantleManufactureAssistant ---
+		uint Core_Data_ArtikulData__get_IsDismantleManufactureAssistant(int param1,undefined4 param2)
+		
+		{
+		  return (uint)(*(byte *)(*(int *)(param1 + 0xc) + 0x10) >> 7);
+		}
+		*/
+
+
+		/* --- GHIDRA: get_ShowDismantleAlert ---
+		uint Core_Data_ArtikulData__get_ShowDismantleAlert(int param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a60792 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Core_Dict_DictWrappers_Base_AbstractDictWrapper_ArtikulDic__uint__get_Data__)
+		    ;
+		    DAT_ram_00a60792 = '\x01';
+		  }
+		  return (uint)((*(byte *)(*(int *)(*(int *)(param1 + 8) + 0x10) + 0x14) & 2) == 0);
+		}
+		*/
+
+
+		/* --- GHIDRA: get_IsEternal ---
+		void Core_Data_ArtikulData__get_IsEternal(int param1,undefined4 param2,undefined4 param3,int param4)
+		
+		{
+		  uint uVar1;
+		  
+		  uVar1 = System_Collections_Generic_KeyValuePair_int__object____ctor
+		                    (*(undefined4 *)(param1 + 8),0,*(undefined4 *)(param1 + 0x10),param2,
+		                     *(undefined4 *)(param1 + 0x18),
+		                     *(undefined4 *)(*(int *)(*(int *)(param4 + 0x10) + 0x60) + 0x2c));
+		  if ((int)uVar1 < 0) {
+		    System_Array__BinarySearch_uint_
+		              (param1,uVar1 ^ 0xffffffff,param2,param3,
+		               *(undefined4 *)(*(int *)(*(int *)(param4 + 0x10) + 0x60) + 0x34));
+		    return;
+		  }
+		  *(undefined4 *)(*(int *)(param1 + 0xc) + uVar1 * 4 + 0x10) = param3;
+		  *(int *)(param1 + 0x14) = *(int *)(param1 + 0x14) + 1;
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_IsSellable ---
+		undefined4 Core_Data_ArtikulData__get_IsSellable(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a60792 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Core_Dict_DictWrappers_Base_AbstractDictWrapper_ArtikulDic__uint__get_Data__)
+		    ;
+		    DAT_ram_00a60792 = '\x01';
+		  }
+		  uVar1 = Core_Extensions_Dict_DictExt__GetArtikul(*(undefined4 *)(*(int *)(param1 + 8) + 0x10),0);
+		  return uVar1;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_Title ---
+		int Core_Data_ArtikulData__get_Title(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  int *piVar2;
+		  int iVar3;
+		  int iVar4;
+		  
+		  if (DAT_ram_00a60796 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_Data_Spells_SpellData___TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Core_Data_Spells_SpellsBasedDescription_TypeInfo);
+		    DAT_ram_00a60796 = '\x01';
+		  }
+		  iVar4 = *(int *)(param1 + 0x28);
+		  if (iVar4 == 0) {
+		    uVar1 = Core_Extensions_Dict_SpellDicExt__GetTitle
+		                      (*(undefined4 *)(*(int *)(param1 + 0x18) + 0xc),0);
+		    piVar2 = (int *)Mono_Security_ASN1Convert__ToOid(Core_Data_Spells_SpellData___TypeInfo,1);
+		    iVar4 = *(int *)(param1 + 0x18);
+		    if ((iVar4 != 0) && (iVar3 = func_ii_1082(iVar4,*(undefined4 *)(*piVar2 + 0x20)), iVar3 == 0)) {
+		      uVar1 = func_ii_1083();
+		      func_ii_1050(uVar1,0);
+		      do {
+		        halt_trap();
+		      } while( true );
+		    }
+		    piVar2[4] = iVar4;
+		    iVar4 = unnamed_function_1417(Core_Data_Spells_SpellsBasedDescription_TypeInfo);
+		    if (DAT_ram_00a60811 == '\0') {
+		      Mono_Security_ASN1__get_Item(&Core_Data_Effect_EffectDescription_TypeInfo);
+		      DAT_ram_00a60811 = '\x01';
+		    }
+		    *(int **)(iVar4 + 0x10) = piVar2;
+		    *(undefined4 *)(iVar4 + 0xc) = uVar1;
+		    iVar3 = unnamed_function_1417(Core_Data_Effect_EffectDescription_TypeInfo);
+		    *(undefined8 *)(iVar3 + 0x10) = 0;
+		    *(undefined4 *)(iVar3 + 0xc) = uVar1;
+		    *(int *)(iVar4 + 0x14) = iVar3;
+		    *(int *)(param1 + 0x28) = iVar4;
+		  }
+		  return iVar4;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_SpellDescription ---
+		int Core_Data_ArtikulData__get_SpellDescription(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  undefined4 uVar2;
+		  int iVar3;
+		  int iVar4;
+		  
+		  if (DAT_ram_00a60797 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_Data_Spells_SpellsBasedDescription_TypeInfo);
+		    DAT_ram_00a60797 = '\x01';
+		  }
+		  iVar4 = *(int *)(param1 + 0x2c);
+		  if (iVar4 == 0) {
+		    if (DAT_ram_00a60792 == '\0') {
+		      Mono_Security_ASN1__get_Item
+		                (&
+		                 Method_Core_Dict_DictWrappers_Base_AbstractDictWrapper_ArtikulDic__uint__get_Data__
+		                );
+		      DAT_ram_00a60792 = '\x01';
+		    }
+		    uVar1 = Core_Extensions_Dict_ArtikulDicExt__GetMiddleBgSubstrateAssetId
+		                      (*(undefined4 *)(*(int *)(param1 + 8) + 0x10),0);
+		    uVar2 = Core_Data_ArtikulData__set_Spells(param1,0);
+		    iVar4 = unnamed_function_1417(Core_Data_Spells_SpellsBasedDescription_TypeInfo);
+		    if (DAT_ram_00a60811 == '\0') {
+		      Mono_Security_ASN1__get_Item(&Core_Data_Effect_EffectDescription_TypeInfo);
+		      DAT_ram_00a60811 = '\x01';
+		    }
+		    *(undefined4 *)(iVar4 + 0x10) = uVar2;
+		    *(undefined4 *)(iVar4 + 0xc) = uVar1;
+		    iVar3 = unnamed_function_1417(Core_Data_Effect_EffectDescription_TypeInfo);
+		    *(undefined8 *)(iVar3 + 0x10) = 0;
+		    *(undefined4 *)(iVar3 + 0xc) = uVar1;
+		    *(int *)(iVar4 + 0x14) = iVar3;
+		    *(int *)(param1 + 0x2c) = iVar4;
+		  }
+		  return iVar4;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_TempItemCriticalTtl ---
+		void Core_Data_ArtikulData__set_TempItemCriticalTtl(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  int iVar2;
+		  
+		  if (DAT_ram_00a60798 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_System_Array_Empty_SpellData___);
+		    DAT_ram_00a60798 = '\x01';
+		  }
+		  iVar2 = Method_System_Array_Empty_SpellData___;
+		  iVar1 = *(int *)(Method_System_Array_Empty_SpellData___ + 0x1c);
+		  if (iVar1 == 0) {
+		    System_ReadOnlySpan_char___GetPinnableReference(Method_System_Array_Empty_SpellData___);
+		    iVar1 = *(int *)(iVar2 + 0x1c);
+		  }
+		  iVar1 = *(int *)(iVar1 + 8);
+		  if ((*(byte *)(iVar1 + 0xbd) & 1) == 0) {
+		    iVar1 = func_ii_1079(iVar1);
+		  }
+		  if (*(int *)(iVar1 + 0x74) == 0) {
+		    func_ii_306000(iVar1);
+		  }
+		  iVar2 = *(int *)(*(int *)(iVar2 + 0x1c) + 8);
+		  if ((*(byte *)(iVar2 + 0xbd) & 1) == 0) {
+		    iVar2 = func_ii_1079(iVar2);
+		  }
+		  *(undefined4 *)(param1 + 0x1c) = **(undefined4 **)(iVar2 + 0x5c);
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_MaxDurability ---
+		undefined4 Core_Data_ArtikulData__get_MaxDurability(int *param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  int param1_00;
+		  
+		  if (DAT_ram_00a6079a == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Math_TypeInfo);
+		    DAT_ram_00a6079a = '\x01';
+		  }
+		  param1_00 = param1[0xc];
+		  uVar1 = (**(code **)((ulonglong)*(uint *)(*param1 + 0xe8) * 4))
+		                    (param1,*(undefined4 *)(*param1 + 0xec));
+		  if (*(int *)(System_Math_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(System_Math_TypeInfo);
+		  }
+		  uVar1 = UnityEngine_Mathf__Min(param1_00,uVar1,0);
+		  return uVar1;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_MinDurability ---
+		uint Core_Data_ArtikulData__get_MinDurability(int param1,undefined4 param2)
+		
+		{
+		  longlong lVar1;
+		  uint uVar2;
+		  
+		  if (DAT_ram_00a6079b == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Google_Protobuf_Collections_RepeatedField_ulong__get_Item__);
+		    DAT_ram_00a6079b = '\x01';
+		  }
+		  if (DAT_ram_00a60792 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Core_Dict_DictWrappers_Base_AbstractDictWrapper_ArtikulDic__uint__get_Data__)
+		    ;
+		    DAT_ram_00a60792 = '\x01';
+		  }
+		  uVar2 = 1;
+		  lVar1 = func_ii_7271(*(undefined4 *)(*(int *)(*(int *)(param1 + 8) + 0x10) + 0x2c),5,
+		                       Method_Google_Protobuf_Collections_RepeatedField_ulong__get_Item__);
+		  if (lVar1 == 0) {
+		    if (DAT_ram_00a6079c == '\0') {
+		      Mono_Security_ASN1__get_Item
+		                (&Method_Google_Protobuf_Collections_RepeatedField_ulong__get_Item__);
+		      DAT_ram_00a6079c = '\x01';
+		    }
+		    if (DAT_ram_00a60792 == '\0') {
+		      Mono_Security_ASN1__get_Item
+		                (&
+		                 Method_Core_Dict_DictWrappers_Base_AbstractDictWrapper_ArtikulDic__uint__get_Data__
+		                );
+		      DAT_ram_00a60792 = '\x01';
+		    }
+		    lVar1 = func_ii_7271(*(undefined4 *)(*(int *)(*(int *)(param1 + 8) + 0x10) + 0x2c),6,
+		                         Method_Google_Protobuf_Collections_RepeatedField_ulong__get_Item__);
+		    uVar2 = (uint)(lVar1 != 0);
+		  }
+		  return uVar2;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_IsTemporary ---
+		uint Core_Data_ArtikulData__get_IsTemporary(int param1,longlong *param2,undefined4 param3)
+		
+		{
+		  longlong lVar1;
+		  
+		  if (DAT_ram_00a6079b == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Google_Protobuf_Collections_RepeatedField_ulong__get_Item__);
+		    DAT_ram_00a6079b = '\x01';
+		  }
+		  if (DAT_ram_00a60792 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Core_Dict_DictWrappers_Base_AbstractDictWrapper_ArtikulDic__uint__get_Data__)
+		    ;
+		    DAT_ram_00a60792 = '\x01';
+		  }
+		  lVar1 = func_ii_7271(*(undefined4 *)(*(int *)(*(int *)(param1 + 8) + 0x10) + 0x2c),5,
+		                       Method_Google_Protobuf_Collections_RepeatedField_ulong__get_Item__);
+		  *param2 = lVar1;
+		  return (uint)(lVar1 != 0);
+		}
+		*/
+
+
+		/* --- GHIDRA: get_StackLimit ---
+		undefined4 Core_Data_ArtikulData__get_StackLimit(int param1,undefined4 param2)
+		
+		{
+		  undefined8 uVar1;
+		  
+		  if (DAT_ram_00a6079e == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Google_Protobuf_Collections_RepeatedField_ulong__get_Item__);
+		    DAT_ram_00a6079e = '\x01';
+		  }
+		  if (DAT_ram_00a60792 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Core_Dict_DictWrappers_Base_AbstractDictWrapper_ArtikulDic__uint__get_Data__)
+		    ;
+		    DAT_ram_00a60792 = '\x01';
+		  }
+		  uVar1 = func_ii_7271(*(undefined4 *)(*(int *)(*(int *)(param1 + 8) + 0x10) + 0x2c),1,
+		                       Method_Google_Protobuf_Collections_RepeatedField_ulong__get_Item__);
+		  return (int)uVar1;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_CurrentDurability ---
+		undefined4 Core_Data_ArtikulData__get_CurrentDurability(int param1,undefined4 param2)
+		
+		{
+		  undefined4 param1_00;
+		  int iVar1;
+		  
+		  if (DAT_ram_00a60792 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Core_Dict_DictWrappers_Base_AbstractDictWrapper_ArtikulDic__uint__get_Data__)
+		    ;
+		    DAT_ram_00a60792 = '\x01';
+		  }
+		  param1_00 = Core_Extensions_Dict_ArtikulDicExt__GetBgSubstrateAssetId
+		                        (*(undefined4 *)(*(int *)(param1 + 8) + 0x10),0);
+		  iVar1 = Newtonsoft_Json_Serialization_JsonSerializerInternalReader__ShouldDeserialize(param1_00,0)
+		  ;
+		  if (iVar1 != 0) {
+		    param1_00 = Core_Extensions_Dict_ItemQualityDicExt__GetBgSubstrateAssetId
+		                          (*(undefined4 *)(param1 + 0x14),0);
+		  }
+		  return param1_00;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_BigBgSubstrateAssetId ---
+		undefined4 Core_Data_ArtikulData__get_BigBgSubstrateAssetId(int param1,undefined4 param2)
+		
+		{
+		  undefined4 param1_00;
+		  int iVar1;
+		  
+		  if (DAT_ram_00a60792 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Core_Dict_DictWrappers_Base_AbstractDictWrapper_ArtikulDic__uint__get_Data__)
+		    ;
+		    DAT_ram_00a60792 = '\x01';
+		  }
+		  param1_00 = Core_Extensions_Dict_ArtikulDicExt__GetBigBgSubstrateAssetId
+		                        (*(undefined4 *)(*(int *)(param1 + 8) + 0x10),0);
+		  iVar1 = Newtonsoft_Json_Serialization_JsonSerializerInternalReader__ShouldDeserialize(param1_00,0)
+		  ;
+		  if (iVar1 != 0) {
+		    param1_00 = Core_Extensions_Dict_ItemQualityDicExt__GetBigBgSubstrateAssetId
+		                          (*(undefined4 *)(param1 + 0x14),0);
+		  }
+		  return param1_00;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_MiddleBgSubstrateAssetId ---
+		void Core_Data_ArtikulData__get_MiddleBgSubstrateAssetId
+		               (int param1,undefined4 param2,int *param3,undefined4 param4)
+		
+		{
+		  uint uVar1;
+		  uint *puVar2;
+		  undefined4 uVar3;
+		  int param1_00;
+		  int iVar4;
+		  int iVar5;
+		  int iVar6;
+		  int *piVar7;
+		  int local_4;
+		  
+		  if (DAT_ram_00a6079f == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_Dict_IDictProvider_TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Google_Protobuf_Collections_RepeatedField_ArtikulDic_Types_SpellInfo__get_Count__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Google_Protobuf_Collections_RepeatedField_ArtikulDic_Types_SpellInfo__get_Item__
+		              );
+		    Mono_Security_ASN1__get_Item(&Core_Data_Spells_SpellData___TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Method_Core_Data_Spells_SpellData_Create_SpellData___);
+		    Mono_Security_ASN1__get_Item(&Method_Core_Data_Spells_SpellData_Create_SpellData___);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_22046);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_27653);
+		    DAT_ram_00a6079f = '\x01';
+		  }
+		  local_4 = 0;
+		  *(undefined4 *)(param1 + 8) = param2;
+		  iVar5 = *param3;
+		  if (*(ushort *)(iVar5 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (Core_Dict_IDictProvider_TypeInfo == *(int *)(*(int *)(iVar5 + 0x58) + uVar1 * 8)) {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar5 + 0x58) + uVar1 * 8 + 4) * 8 + iVar5 + 0xd0);
+		        goto code_r0x81ce0840;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar5 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(param3,Core_Dict_IDictProvider_TypeInfo,2);
+		code_r0x81ce0840:
+		  uVar1 = 0;
+		  uVar3 = (**(code **)((ulonglong)*puVar2 * 4))(param3,puVar2[1]);
+		  uVar3 = Core_Extensions_Dict_DictExt__GetUserBuildingLevelDic(uVar3,StringLiteral_22046,0);
+		  *(undefined4 *)(param1 + 0x30) = uVar3;
+		  iVar5 = *param3;
+		  if (*(ushort *)(iVar5 + 0xb6) != 0) {
+		    do {
+		      if (Core_Dict_IDictProvider_TypeInfo == *(int *)(*(int *)(iVar5 + 0x58) + uVar1 * 8)) {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar5 + 0x58) + uVar1 * 8 + 4) * 8 + iVar5 + 0xd0);
+		        goto code_r0x81ce08d1;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar5 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(param3,Core_Dict_IDictProvider_TypeInfo,2);
+		code_r0x81ce08d1:
+		  uVar1 = 0;
+		  uVar3 = (**(code **)((ulonglong)*puVar2 * 4))(param3,puVar2[1]);
+		  uVar3 = Core_Extensions_Dict_DictExt__GetUserBuildingLevelDic(uVar3,StringLiteral_27653,0);
+		  *(undefined4 *)(param1 + 0x34) = uVar3;
+		  iVar5 = *param3;
+		  if (*(ushort *)(iVar5 + 0xb6) != 0) {
+		    do {
+		      if (Core_Dict_IDictProvider_TypeInfo == *(int *)(*(int *)(iVar5 + 0x58) + uVar1 * 8)) {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar5 + 0x58) + uVar1 * 8 + 4) * 8 + iVar5 + 0xd0);
+		        goto code_r0x81ce0964;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar5 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(param3,Core_Dict_IDictProvider_TypeInfo,2);
+		code_r0x81ce0964:
+		  uVar3 = (**(code **)((ulonglong)*puVar2 * 4))(param3,puVar2[1]);
+		  if (DAT_ram_00a60792 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Core_Dict_DictWrappers_Base_AbstractDictWrapper_ArtikulDic__uint__get_Data__)
+		    ;
+		    DAT_ram_00a60792 = '\x01';
+		  }
+		  uVar3 = Core_Extensions_Dict_DictExt__LogGetWarning
+		                    (uVar3,*(undefined4 *)(*(int *)(*(int *)(param1 + 8) + 0x10) + 0x20),0);
+		  *(undefined4 *)(param1 + 0xc) = uVar3;
+		  iVar5 = *param3;
+		  if (*(ushort *)(iVar5 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (Core_Dict_IDictProvider_TypeInfo == *(int *)(*(int *)(iVar5 + 0x58) + uVar1 * 8)) {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar5 + 0x58) + uVar1 * 8 + 4) * 8 + iVar5 + 0xd0);
+		        goto code_r0x81ce0a18;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar5 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(param3,Core_Dict_IDictProvider_TypeInfo,2);
+		code_r0x81ce0a18:
+		  uVar3 = (**(code **)((ulonglong)*puVar2 * 4))(param3,puVar2[1]);
+		  if (DAT_ram_00a60792 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Core_Dict_DictWrappers_Base_AbstractDictWrapper_ArtikulDic__uint__get_Data__)
+		    ;
+		    DAT_ram_00a60792 = '\x01';
+		  }
+		  uVar3 = Core_Extensions_Dict_DictExt__GetArtikulType
+		                    (uVar3,*(undefined4 *)(*(int *)(*(int *)(param1 + 8) + 0x10) + 0x10),0);
+		  *(undefined4 *)(param1 + 0x14) = uVar3;
+		  iVar5 = *param3;
+		  if (*(ushort *)(iVar5 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (Core_Dict_IDictProvider_TypeInfo == *(int *)(*(int *)(iVar5 + 0x58) + uVar1 * 8)) {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar5 + 0x58) + uVar1 * 8 + 4) * 8 + iVar5 + 0xd0);
+		        goto code_r0x81ce0acc;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar5 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(param3,Core_Dict_IDictProvider_TypeInfo,2);
+		code_r0x81ce0acc:
+		  uVar3 = (**(code **)((ulonglong)*puVar2 * 4))(param3,puVar2[1]);
+		  if (DAT_ram_00a60792 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Core_Dict_DictWrappers_Base_AbstractDictWrapper_ArtikulDic__uint__get_Data__)
+		    ;
+		    DAT_ram_00a60792 = '\x01';
+		  }
+		  iVar5 = Core_Extensions_Dict_DictExt__GetRewardDic
+		                    (uVar3,*(undefined4 *)(*(int *)(*(int *)(param1 + 8) + 0x10) + 0xc),&local_4,0);
+		  if (iVar5 != 0) {
+		    uVar1 = 0;
+		    iVar5 = *param3;
+		    if (*(ushort *)(iVar5 + 0xb6) != 0) {
+		      do {
+		        if (Core_Dict_IDictProvider_TypeInfo == *(int *)(*(int *)(iVar5 + 0x58) + uVar1 * 8)) {
+		          puVar2 = (uint *)(*(int *)(*(int *)(iVar5 + 0x58) + uVar1 * 8 + 4) * 8 + iVar5 + 0xd0);
+		          goto code_r0x81ce0b80;
+		        }
+		        uVar1 = uVar1 + 1;
+		      } while (*(ushort *)(iVar5 + 0xb6) != uVar1);
+		    }
+		    puVar2 = (uint *)func_ii_1080(param3,Core_Dict_IDictProvider_TypeInfo,2);
+		code_r0x81ce0b80:
+		    uVar1 = 0;
+		    uVar3 = (**(code **)((ulonglong)*puVar2 * 4))(param3,puVar2[1]);
+		    uVar3 = Core_Extensions_Dict_DictExt__GetStringParameter
+		                      (uVar3,*(undefined4 *)(local_4 + 0x10),0);
+		    *(undefined4 *)(param1 + 0x20) = uVar3;
+		    iVar5 = *param3;
+		    if (*(ushort *)(iVar5 + 0xb6) != 0) {
+		      do {
+		        if (Core_Dict_IDictProvider_TypeInfo == *(int *)(*(int *)(iVar5 + 0x58) + uVar1 * 8)) {
+		          puVar2 = (uint *)(*(int *)(*(int *)(iVar5 + 0x58) + uVar1 * 8 + 4) * 8 + iVar5 + 0xd0);
+		          goto code_r0x81ce0c15;
+		        }
+		        uVar1 = uVar1 + 1;
+		      } while (*(ushort *)(iVar5 + 0xb6) != uVar1);
+		    }
+		    puVar2 = (uint *)func_ii_1080(param3,Core_Dict_IDictProvider_TypeInfo,2);
+		code_r0x81ce0c15:
+		    uVar3 = (**(code **)((ulonglong)*puVar2 * 4))(param3,puVar2[1]);
+		    uVar3 = Core_Extensions_Dict_DictExt__GetStringParameter
+		                      (uVar3,*(undefined4 *)(local_4 + 0x14),0);
+		    *(undefined4 *)(param1 + 0x24) = uVar3;
+		  }
+		  if (DAT_ram_00a60792 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Core_Dict_DictWrappers_Base_AbstractDictWrapper_ArtikulDic__uint__get_Data__)
+		    ;
+		    DAT_ram_00a60792 = '\x01';
+		  }
+		  iVar5 = *(int *)(*(int *)(param1 + 8) + 0x10);
+		  iVar6 = *(int *)(iVar5 + 0x3c);
+		  if (iVar6 != 0) {
+		    uVar3 = Core_Data_Spells_SpellData__Create_object_
+		                      (iVar6,*(undefined4 *)(iVar5 + 0x10),
+		                       Method_Core_Data_Spells_SpellData_Create_SpellData___);
+		    *(undefined4 *)(param1 + 0x18) = uVar3;
+		    if (DAT_ram_00a60792 == '\0') {
+		      Mono_Security_ASN1__get_Item
+		                (&
+		                 Method_Core_Dict_DictWrappers_Base_AbstractDictWrapper_ArtikulDic__uint__get_Data__
+		                );
+		      DAT_ram_00a60792 = '\x01';
+		    }
+		  }
+		  iVar5 = *(int *)(*(int *)(*(int *)(*(int *)(param1 + 8) + 0x10) + 0x48) + 0xc);
+		  if (0 < iVar5) {
+		    iVar6 = 0;
+		    uVar3 = Mono_Security_ASN1Convert__ToOid(Core_Data_Spells_SpellData___TypeInfo,iVar5);
+		    *(undefined4 *)(param1 + 0x1c) = uVar3;
+		    if (DAT_ram_00a60792 == '\0') {
+		      Mono_Security_ASN1__get_Item
+		                (&
+		                 Method_Core_Dict_DictWrappers_Base_AbstractDictWrapper_ArtikulDic__uint__get_Data__
+		                );
+		      DAT_ram_00a60792 = '\x01';
+		    }
+		    iVar5 = *(int *)(*(int *)(*(int *)(*(int *)(param1 + 8) + 0x10) + 0x48) + 0xc);
+		    if (0 < iVar5) {
+		      do {
+		        piVar7 = *(int **)(param1 + 0x1c);
+		        if (DAT_ram_00a60792 == '\0') {
+		          Mono_Security_ASN1__get_Item
+		                    (&
+		                     Method_Core_Dict_DictWrappers_Base_AbstractDictWrapper_ArtikulDic__uint__get_Data__
+		                    );
+		          DAT_ram_00a60792 = '\x01';
+		        }
+		        uVar3 = Google_Protobuf_Collections_RepeatedField_Int32Enum___get_IsReadOnly
+		                          (*(undefined4 *)(*(int *)(*(int *)(param1 + 8) + 0x10) + 0x48),iVar6,
+		                           Method_Google_Protobuf_Collections_RepeatedField_ArtikulDic_Types_SpellInfo__get_Item__
+		                          );
+		        param1_00 = System_SpanHelpers__SequenceEqual___Il2CppFullySharedGenericType_
+		                              (uVar3,Method_Core_Data_Spells_SpellData_Create_SpellData___);
+		        if ((param1_00 != 0) &&
+		           (iVar4 = func_ii_1082(param1_00,*(undefined4 *)(*piVar7 + 0x20)), iVar4 == 0)) {
+		          uVar3 = func_ii_1083();
+		          func_ii_1050(uVar3,0);
+		          do {
+		            halt_trap();
+		          } while( true );
+		        }
+		        piVar7[iVar6 + 4] = param1_00;
+		        iVar6 = iVar6 + 1;
+		      } while (iVar6 != iVar5);
+		    }
+		  }
+		  return;
+		}
+		*/
+
 }

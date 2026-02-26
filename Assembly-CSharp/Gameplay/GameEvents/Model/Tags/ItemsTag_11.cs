@@ -20,6 +20,24 @@ namespace Gameplay.GameEvents.Model.Tags
 		[Address(RVA = "0x7EFF", Offset = "0x7EFF", VA = "0x7EFF")]
 		public ItemsTag_11()
 		{
+		/* --- GHIDRA: .ctor ---
+		int Gameplay_GameEvents_Model_Tags_ItemsTag_11___ctor(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  double dVar2;
+		  
+		  dVar2 = *(double *)(*(int *)(param1 + 0x14) + 0x10);
+		  if (ABS(dVar2) < 2147483648.0) {
+		    iVar1 = (int)dVar2;
+		  }
+		  else {
+		    iVar1 = -0x80000000;
+		  }
+		  return iVar1 + -1;
+		}
+		*/
+
 		}
 	}
 }

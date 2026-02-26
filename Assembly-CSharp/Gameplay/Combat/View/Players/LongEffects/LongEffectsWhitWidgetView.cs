@@ -14,6 +14,18 @@ namespace Gameplay.Combat.View.Players.LongEffects
 		[Address(RVA = "0x8876", Offset = "0x8876", VA = "0x8876", Slot = "4")]
 		public void OnPointerDown(PointerEventData eventData)
 		{
+		/* --- GHIDRA: OnPointerDown ---
+		void Gameplay_Combat_View_Players_LongEffects_LongEffectsWhitWidgetView__OnPointerDown
+		               (int param1,undefined4 param2)
+		
+		{
+		  *(undefined4 *)(param1 + 0x2c) = 0xffffffff;
+		  *(undefined8 *)(param1 + 0x24) = 0x3e99999a00000007;
+		  UnityEngine_RectTransform__GetParentSize(param1,0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x060038D9 RID: 14553 RVA: 0x00002050 File Offset: 0x00000250

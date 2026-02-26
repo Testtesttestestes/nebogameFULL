@@ -92,6 +92,38 @@ namespace Core.Gameplay.Managers.Ad.Model
 		[Address(RVA = "0xB8AD", Offset = "0xB8AD", VA = "0xB8AD")]
 		public AdTransaction(AdSource source, AdPlacement adPlacement, uint optionId)
 		{
+		/* --- GHIDRA: .ctor ---
+		undefined4 Core_Gameplay_Managers_Ad_Model_AdTransaction___ctor(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  undefined4 param3;
+		  undefined4 local_18;
+		  undefined4 local_14;
+		  undefined4 local_10;
+		  undefined4 local_c;
+		  undefined4 local_8;
+		  undefined4 local_4;
+		  
+		  if (DAT_ram_00a5a7bc == '\0') {
+		    Mono_Security_ASN1__get_Item(&Protocol_Services_AdPlacement_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Protocol_Services_AdSource_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_18871);
+		    DAT_ram_00a5a7bc = '\x01';
+		  }
+		  local_4 = *(undefined4 *)(param1 + 8);
+		  local_8 = 0xffffffff;
+		  local_c = Protocol_Services_AdSource_TypeInfo;
+		  uVar1 = Spine_SkeletonJson__GetFloat(&local_c,0);
+		  local_10 = *(undefined4 *)(param1 + 0xc);
+		  local_14 = 0xffffffff;
+		  local_18 = Protocol_Services_AdPlacement_TypeInfo;
+		  param3 = Spine_SkeletonJson__GetFloat(&local_18,0);
+		  uVar1 = func_ii_8529(StringLiteral_18871,uVar1,param3,*(undefined4 *)(param1 + 0x14),0);
+		  return uVar1;
+		}
+		*/
+
 		}
 
 		// Token: 0x06006DF8 RID: 28152 RVA: 0x00002052 File Offset: 0x00000252
@@ -99,7 +131,32 @@ namespace Core.Gameplay.Managers.Ad.Model
 		[Address(RVA = "0xB8AE", Offset = "0xB8AE", VA = "0xB8AE", Slot = "3")]
 		public override string ToString()
 		{
+		/* --- GHIDRA: ToString ---
+		void Core_Gameplay_Managers_Ad_Model_AdTransaction__ToString
+		               (undefined4 param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  Core_Gameplay_Managers_Ad_Model_AbstractAdModel__get_DefaultAdProviderId
+		            (param1,param2,param3,param3);
+		  return;
+		}
+		*/
+
 			return null;
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: set_Payload ---
+		undefined4 Core_Gameplay_Managers_Ad_Model_AdTransaction__set_Payload(int param1,undefined4 param2)
+		
+		{
+		  if (*(int *)(param1 + 0x14) != 0) {
+		    return *(undefined4 *)(*(int *)(param1 + 0x14) + 0x10);
+		  }
+		  return 0;
+		}
+		*/
+
 }

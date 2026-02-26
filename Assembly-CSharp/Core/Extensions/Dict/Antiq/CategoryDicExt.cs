@@ -13,6 +13,17 @@ namespace Core.Extensions.Dict.Antiq
 		[Address(RVA = "0xAC4D", Offset = "0xAC4D", VA = "0xAC4D")]
 		public static string GetTitle(this Antiq.Types.ArtifactGroupsDic.Types.CategoryDic dict)
 		{
+		/* --- GHIDRA: GetTitle ---
+		undefined4 Core_Extensions_Dict_Antiq_CategoryDicExt__GetTitle(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  uVar1 = Core_Extensions_Dict_DictExt__GetAsset(*(undefined4 *)(param1 + 0x18),0xd1,0);
+		  return uVar1;
+		}
+		*/
+
 			return null;
 		}
 	}

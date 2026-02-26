@@ -14,6 +14,22 @@ namespace GAF.Assets
 		[Address(RVA = "0xC25E", Offset = "0xC25E", VA = "0xC25E")]
 		public new GAFTexturesResourceInternal getResource(float _Scale, float _CSF)
 		{
+		/* --- GHIDRA: getResource ---
+		void GAF_Assets_GAFAnimationAsset__getResource(undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a54ead == '\0') {
+		    Mono_Security_ASN1__get_Item(&GAFInternal_Assets_GAFAnimationAssetInternal_TypeInfo);
+		    DAT_ram_00a54ead = '\x01';
+		  }
+		  if (*(int *)(GAFInternal_Assets_GAFAnimationAssetInternal_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(GAFInternal_Assets_GAFAnimationAssetInternal_TypeInfo);
+		  }
+		  GAFInternal_Assets_GAFAnimationAssetInternal__upgrade(param1,0);
+		  return;
+		}
+		*/
+
 			return null;
 		}
 
@@ -22,6 +38,15 @@ namespace GAF.Assets
 		[Address(RVA = "0xC25F", Offset = "0xC25F", VA = "0xC25F")]
 		public GAFAnimationAsset()
 		{
+		/* --- GHIDRA: .ctor ---
+		void GAF_Assets_GAFAnimationAsset___ctor(undefined4 param1,undefined4 param2)
+		
+		{
+		  GAFInternal_Assets_GAFTexturesResourceInternal__set_currentDataPath(param1,0);
+		  return;
+		}
+		*/
+
 		}
 	}
 }

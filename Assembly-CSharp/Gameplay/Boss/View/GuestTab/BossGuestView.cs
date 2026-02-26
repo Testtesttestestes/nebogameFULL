@@ -56,6 +56,25 @@ namespace Gameplay.Boss.View.GuestTab
 		[Address(RVA = "0x95C8", Offset = "0x95C8", VA = "0x95C8", Slot = "5")]
 		protected override BossGuestViewMediator CreateMediator()
 		{
+		/* --- GHIDRA: CreateMediator ---
+		void Gameplay_Boss_View_GuestTab_BossGuestView__CreateMediator(undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a57a26 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Gameplay_Boss_View_AbstractBossWindowView_BossGuestView__BossGuestViewMediator___ctor__
+		              );
+		    DAT_ram_00a57a26 = '\x01';
+		  }
+		  ScreenAdaptation_Common_AppSize__Update
+		            (param1,
+		             Method_Gameplay_Boss_View_AbstractBossWindowView_BossGuestView__BossGuestViewMediator___ctor__
+		            );
+		  return;
+		}
+		*/
+
 			return null;
 		}
 
@@ -64,6 +83,18 @@ namespace Gameplay.Boss.View.GuestTab
 		[Address(RVA = "0x95C9", Offset = "0x95C9", VA = "0x95C9")]
 		public BossGuestView()
 		{
+		/* --- GHIDRA: .ctor ---
+		undefined4 Gameplay_Boss_View_GuestTab_BossGuestView___ctor(undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a57a27 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_12577);
+		    DAT_ram_00a57a27 = '\x01';
+		  }
+		  return StringLiteral_12577;
+		}
+		*/
+
 		}
 
 		// Token: 0x0400270A RID: 9994
@@ -84,4 +115,31 @@ namespace Gameplay.Boss.View.GuestTab
 		[SerializeField]
 		private WikiUriRouter _wiki;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_RequirementsView ---
+		undefined4
+		Gameplay_Boss_View_GuestTab_BossGuestView__get_RequirementsView(int param1,undefined4 param2)
+		
+		{
+		  undefined4 param1_00;
+		  undefined4 param4;
+		  undefined4 param3;
+		  undefined4 param2_00;
+		  
+		  if (DAT_ram_00a57a25 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Gameplay_Boss_Controller_BossGuestViewMediator_TypeInfo);
+		    DAT_ram_00a57a25 = '\x01';
+		  }
+		  param4 = *(undefined4 *)(param1 + 0x1c);
+		  param3 = *(undefined4 *)(param1 + 0x18);
+		  param2_00 = *(undefined4 *)(param1 + 0x14);
+		  param1_00 = unnamed_function_1417(Gameplay_Boss_Controller_BossGuestViewMediator_TypeInfo);
+		  Gameplay_Boss_Controller_BossController__BossServiceOnMinionAttackServerCancelationEvent
+		            (param1_00,param2_00,param3,param4,0);
+		  return param1_00;
+		}
+		*/
+
 }

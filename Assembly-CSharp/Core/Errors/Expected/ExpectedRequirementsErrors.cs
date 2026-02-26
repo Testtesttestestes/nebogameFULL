@@ -32,6 +32,31 @@ namespace Core.Errors.Expected
 		[Address(RVA = "0xAE94", Offset = "0xAE94", VA = "0xAE94")]
 		public ExpectedRequirementsErrors()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Core_Errors_Expected_ExpectedRequirementsErrors___ctor
+		               (int param1,undefined4 param2,int param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  undefined4 uVar2;
+		  undefined4 uVar3;
+		  
+		  uVar2 = 0;
+		  uVar3 = 0;
+		  uVar1 = 0;
+		  if (param3 != 0) {
+		    uVar2 = *(undefined4 *)(param3 + 0x14);
+		    uVar3 = *(undefined4 *)(param3 + 0x18);
+		    uVar1 = *(undefined4 *)(param3 + 0x10);
+		  }
+		  *(undefined4 *)(param1 + 0x14) = uVar2;
+		  *(undefined4 *)(param1 + 0x10) = uVar3;
+		  *(undefined4 *)(param1 + 0xc) = uVar1;
+		  *(undefined4 *)(param1 + 8) = param2;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0200106D RID: 4205

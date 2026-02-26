@@ -189,6 +189,22 @@ namespace WebGLSupport
 		[Address(RVA = "0x569E", Offset = "0x569E", VA = "0x569E")]
 		public WrappedTMPInputField(TMP_InputField input)
 		{
+		/* --- GHIDRA: .ctor ---
+		undefined4 WebGLSupport_WrappedTMPInputField___ctor(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a648c9 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_UnityEngine_Component_GetComponent_RectTransform___);
+		    DAT_ram_00a648c9 = '\x01';
+		  }
+		  uVar1 = func_ii_5677(*(undefined4 *)(param1 + 8),
+		                       Method_UnityEngine_Component_GetComponent_RectTransform___);
+		  return uVar1;
+		}
+		*/
+
 		}
 
 		// Token: 0x060001F5 RID: 501 RVA: 0x00002052 File Offset: 0x00000252
@@ -196,6 +212,15 @@ namespace WebGLSupport
 		[Address(RVA = "0x569F", Offset = "0x569F", VA = "0x569F", Slot = "19")]
 		public RectTransform RectTransform()
 		{
+		/* --- GHIDRA: RectTransform ---
+		void WebGLSupport_WrappedTMPInputField__RectTransform(int param1,undefined4 param2)
+		
+		{
+		  TMPro_TMP_InputField__Validate(*(undefined4 *)(param1 + 8),0);
+		  return;
+		}
+		*/
+
 			return null;
 		}
 
@@ -204,6 +229,15 @@ namespace WebGLSupport
 		[Address(RVA = "0x56A0", Offset = "0x56A0", VA = "0x56A0", Slot = "20")]
 		public void ActivateInputField()
 		{
+		/* --- GHIDRA: ActivateInputField ---
+		void WebGLSupport_WrappedTMPInputField__ActivateInputField(int param1,undefined4 param2)
+		
+		{
+		  TMPro_TMP_InputField__ReleaseSelection(*(undefined4 *)(param1 + 8),0,0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x060001F7 RID: 503 RVA: 0x00002050 File Offset: 0x00000250
@@ -211,6 +245,29 @@ namespace WebGLSupport
 		[Address(RVA = "0x56A1", Offset = "0x56A1", VA = "0x56A1", Slot = "21")]
 		public void DeactivateInputField()
 		{
+		/* --- GHIDRA: DeactivateInputField ---
+		void WebGLSupport_WrappedTMPInputField__DeactivateInputField(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  int *piVar2;
+		  
+		  iVar1 = WebGLSupport_Detail_RebuildChecker___ctor(*(undefined4 *)(param1 + 0xc),0,param1);
+		  if (iVar1 != 0) {
+		    piVar2 = *(int **)(*(int *)(param1 + 8) + 200);
+		    iVar1 = *piVar2;
+		    (**(code **)((ulonglong)*(uint *)(iVar1 + 0x1a0) * 4))(piVar2,*(undefined4 *)(iVar1 + 0x1a4));
+		    piVar2 = *(int **)(*(int *)(param1 + 8) + 200);
+		    iVar1 = *piVar2;
+		    (**(code **)((ulonglong)*(uint *)(iVar1 + 0x198) * 4))(piVar2,*(undefined4 *)(iVar1 + 0x19c));
+		    iVar1 = **(int **)(param1 + 8);
+		    (**(code **)((ulonglong)*(uint *)(iVar1 + 0x300) * 4))
+		              (*(int **)(param1 + 8),4,*(undefined4 *)(iVar1 + 0x304));
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x060001F8 RID: 504 RVA: 0x00002050 File Offset: 0x00000250
@@ -218,6 +275,43 @@ namespace WebGLSupport
 		[Address(RVA = "0x56A2", Offset = "0x56A2", VA = "0x56A2", Slot = "22")]
 		public void Rebuild()
 		{
+		/* --- GHIDRA: Rebuild ---
+		uint WebGLSupport_WrappedTMPInputField__Rebuild
+		               (undefined4 param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  float4 fVar1;
+		  float4 fVar2;
+		  float4 fVar3;
+		  float4 fVar4;
+		  uint uVar5;
+		  float4 local_10;
+		  float4 local_c;
+		  float4 local_8;
+		  float4 local_4;
+		  
+		  uVar5 = 0;
+		  UnityEngine_Transform___ctor(&local_10,param2,0);
+		  fVar1 = local_10;
+		  UnityEngine_Transform___ctor(&local_10,param2,0);
+		  fVar2 = local_c;
+		  UnityEngine_RectTransform__remove_reapplyDrivenProperties(&local_10,param2,0);
+		  fVar3 = local_8;
+		  UnityEngine_RectTransform__remove_reapplyDrivenProperties(&local_10,param2,0);
+		  fVar4 = local_4;
+		  UnityEngine_Transform___ctor(&local_10,param3,0);
+		  UnityEngine_Transform___ctor(&local_10,param3,0);
+		  UnityEngine_RectTransform__remove_reapplyDrivenProperties(&local_10,param3,0);
+		  UnityEngine_RectTransform__remove_reapplyDrivenProperties(&local_10,param3,0);
+		  if ((((float)fVar1 < (float)local_10 + (float)local_8) &&
+		      ((float)local_10 < (float)fVar1 + (float)fVar3)) &&
+		     ((float)fVar2 < (float)local_c + (float)local_4)) {
+		    uVar5 = (uint)((float)local_c < (float)fVar2 + (float)fVar4);
+		  }
+		  return uVar5;
+		}
+		*/
+
 		}
 
 		// Token: 0x060001F9 RID: 505 RVA: 0x00002808 File Offset: 0x00000A08
@@ -225,6 +319,18 @@ namespace WebGLSupport
 		[Address(RVA = "0x56A3", Offset = "0x56A3", VA = "0x56A3")]
 		private bool rectOverlaps(RectTransform rectTrans1, RectTransform rectTrans2)
 		{
+		/* --- GHIDRA: rectOverlaps ---
+		void WebGLSupport_WrappedTMPInputField__rectOverlaps(undefined4 param1,undefined4 param2)
+		
+		{
+		  undefined4 param1_00;
+		  
+		  param1_00 = unnamed_function_1434(param1);
+		  import::env::WebGLWindowOnFocus(param1_00);
+		  return;
+		}
+		*/
+
 			return default(bool);
 		}
 
@@ -243,4 +349,202 @@ namespace WebGLSupport
 		[FieldOffset(Offset = "0x10")]
 		private Coroutine delayedGraphicRebuild;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_ReadOnly ---
+		undefined4 WebGLSupport_WrappedTMPInputField__get_ReadOnly(int param1,undefined4 param2)
+		
+		{
+		  return *(undefined4 *)(*(int *)(param1 + 8) + 0x160);
+		}
+		*/
+
+
+		/* --- GHIDRA: get_text ---
+		void WebGLSupport_WrappedTMPInputField__get_text(int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  TMPro_TMP_InputField__get_text(*(undefined4 *)(param1 + 8),param2,0);
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_text ---
+		undefined4 WebGLSupport_WrappedTMPInputField__set_text(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  int *param1_00;
+		  undefined4 uVar2;
+		  
+		  if (DAT_ram_00a648c7 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_UnityEngine_Component_GetComponent_TMP_Text___);
+		    Mono_Security_ASN1__get_Item(&UnityEngine_Object_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_5);
+		    DAT_ram_00a648c7 = '\x01';
+		  }
+		  uVar2 = *(undefined4 *)(*(int *)(param1 + 8) + 0xd0);
+		  if (*(int *)(UnityEngine_Object_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(UnityEngine_Object_TypeInfo);
+		  }
+		  iVar1 = UnityEngine_Component__GetComponent_object_(uVar2,0);
+		  if (iVar1 == 0) {
+		    return StringLiteral_5;
+		  }
+		  param1_00 = (int *)func_ii_5677(*(undefined4 *)(*(int *)(param1 + 8) + 0xd0),
+		                                  Method_UnityEngine_Component_GetComponent_TMP_Text___);
+		  if (*(int *)(UnityEngine_Object_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(UnityEngine_Object_TypeInfo);
+		  }
+		  iVar1 = UnityEngine_Component__GetComponent_object_(param1_00,0);
+		  if (iVar1 == 0) {
+		    return StringLiteral_5;
+		  }
+		  uVar2 = (**(code **)((ulonglong)*(uint *)(*param1_00 + 0x2c8) * 4))
+		                    (param1_00,*(undefined4 *)(*param1_00 + 0x2cc));
+		  return uVar2;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_placeholder ---
+		undefined4 WebGLSupport_WrappedTMPInputField__get_placeholder(int param1,undefined4 param2)
+		
+		{
+		  float fVar1;
+		  
+		  fVar1 = *(float *)(*(int *)(*(int *)(param1 + 8) + 200) + 0x16c);
+		  if (2.1474836e+09 <= ABS(fVar1)) {
+		    return 0x80000000;
+		  }
+		  return (int)fVar1;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_fontSize ---
+		undefined4 WebGLSupport_WrappedTMPInputField__get_fontSize(int param1,undefined4 param2)
+		
+		{
+		  return *(undefined4 *)(*(int *)(param1 + 8) + 0xf0);
+		}
+		*/
+
+
+		/* --- GHIDRA: get_contentType ---
+		undefined4 WebGLSupport_WrappedTMPInputField__get_contentType(int param1,undefined4 param2)
+		
+		{
+		  return *(undefined4 *)(*(int *)(param1 + 8) + 0x100);
+		}
+		*/
+
+
+		/* --- GHIDRA: get_lineType ---
+		undefined4 WebGLSupport_WrappedTMPInputField__get_lineType(int param1,undefined4 param2)
+		
+		{
+		  return *(undefined4 *)(*(int *)(param1 + 8) + 0x114);
+		}
+		*/
+
+
+		/* --- GHIDRA: get_characterLimit ---
+		undefined4 WebGLSupport_WrappedTMPInputField__get_characterLimit(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  uVar1 = TMPro_TMP_InputField__set_selectionAnchorPosition(*(undefined4 *)(param1 + 8),0);
+		  return uVar1;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_caretPosition ---
+		uint WebGLSupport_WrappedTMPInputField__get_caretPosition(int param1,undefined4 param2)
+		
+		{
+		  return (uint)*(byte *)(*(int *)(param1 + 8) + 0x198);
+		}
+		*/
+
+
+		/* --- GHIDRA: get_isFocused ---
+		undefined4 WebGLSupport_WrappedTMPInputField__get_isFocused(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  uVar1 = TMPro_TMP_InputField__set_selectionStringAnchorPosition(*(undefined4 *)(param1 + 8),0);
+		  return uVar1;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_selectionFocusPosition ---
+		void WebGLSupport_WrappedTMPInputField__get_selectionFocusPosition
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  TMPro_TMP_InputField__get_selectionStringFocusPosition(*(undefined4 *)(param1 + 8),param2,0);
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_selectionFocusPosition ---
+		undefined4
+		WebGLSupport_WrappedTMPInputField__set_selectionFocusPosition(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  uVar1 = TMPro_TMP_InputField__set_stringPosition(*(undefined4 *)(param1 + 8),0);
+		  return uVar1;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_selectionAnchorPosition ---
+		void WebGLSupport_WrappedTMPInputField__get_selectionAnchorPosition
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  TMPro_TMP_InputField__get_selectionStringAnchorPosition(*(undefined4 *)(param1 + 8),param2,0);
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_selectionAnchorPosition ---
+		uint WebGLSupport_WrappedTMPInputField__set_selectionAnchorPosition(int param1,undefined4 param2)
+		
+		{
+		  return (uint)*(byte *)(*(int *)(param1 + 8) + 0x1d4);
+		}
+		*/
+
+
+		/* --- GHIDRA: get_OnFocusSelectAll ---
+		void WebGLSupport_WrappedTMPInputField__get_OnFocusSelectAll
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  int iVar1;
+		  
+		  if (DAT_ram_00a648c8 == '\0') {
+		    Mono_Security_ASN1__get_Item(&WebGLSupport_Detail_RebuildChecker_TypeInfo);
+		    DAT_ram_00a648c8 = '\x01';
+		  }
+		  *(undefined4 *)(param1 + 8) = param2;
+		  iVar1 = unnamed_function_1417(WebGLSupport_Detail_RebuildChecker_TypeInfo);
+		  *(int *)(iVar1 + 8) = param1;
+		  *(int *)(param1 + 0xc) = iVar1;
+		  return;
+		}
+		*/
+
 }

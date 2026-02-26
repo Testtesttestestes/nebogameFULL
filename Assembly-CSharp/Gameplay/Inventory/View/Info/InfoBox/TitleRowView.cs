@@ -69,6 +69,34 @@ namespace Gameplay.Inventory.View.Info.InfoBox
 		[Address(RVA = "0x7959", Offset = "0x7959", VA = "0x7959", Slot = "6")]
 		public virtual void SetTitle(string value)
 		{
+		/* --- GHIDRA: SetTitle ---
+		void Gameplay_Inventory_View_Info_InfoBox_TitleRowView__SetTitle
+		               (int param1,uint *param2,undefined4 param3)
+		
+		{
+		  int iVar1;
+		  uint uVar2;
+		  undefined8 local_20;
+		  undefined8 local_18;
+		  float4 local_10;
+		  float4 local_c;
+		  float4 local_8;
+		  float4 local_4;
+		  
+		  uVar2 = *param2;
+		  local_8 = (float4)((float)(uVar2 >> 0x10 & 0xff) / 255.0);
+		  local_4 = (float4)((float)(uVar2 >> 0x18) / 255.0);
+		  local_10 = (float4)((float)(uVar2 & 0xff) / 255.0);
+		  local_c = (float4)((float)(uVar2 >> 8 & 0xff) / 255.0);
+		  iVar1 = **(int **)(param1 + 0x10);
+		  local_18 = CONCAT44(local_4,local_8);
+		  local_20 = CONCAT44(local_c,local_10);
+		  (**(code **)((ulonglong)*(uint *)(iVar1 + 0x178) * 4))
+		            (*(int **)(param1 + 0x10),&local_20,*(undefined4 *)(iVar1 + 0x17c));
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600283A RID: 10298 RVA: 0x00002050 File Offset: 0x00000250
@@ -76,6 +104,15 @@ namespace Gameplay.Inventory.View.Info.InfoBox
 		[Address(RVA = "0x795A", Offset = "0x795A", VA = "0x795A", Slot = "7")]
 		public virtual void SetTitleColor(in Color32 color)
 		{
+		/* --- GHIDRA: SetTitleColor ---
+		undefined4
+		Gameplay_Inventory_View_Info_InfoBox_TitleRowView__SetTitleColor(int param1,undefined4 param2)
+		
+		{
+		  return *(undefined4 *)(*(int *)(param1 + 0x10) + 0x1e4);
+		}
+		*/
+
 		}
 
 		// Token: 0x1700079F RID: 1951
@@ -133,6 +170,45 @@ namespace Gameplay.Inventory.View.Info.InfoBox
 		[Address(RVA = "0x7960", Offset = "0x7960", VA = "0x7960")]
 		public TitleRowView()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_Inventory_View_Info_InfoBox_TitleRowView___ctor(undefined4 param1,undefined4 param2)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a5a0de == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_ArtikulMenuActionDic_Types_Actions__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Gameplay_Inventory_View_ContextMenu_ArtifactContextMenu_TypeInfo);
+		    DAT_ram_00a5a0de = '\x01';
+		  }
+		  param1_00 = **(int **)(Gameplay_Inventory_View_ContextMenu_ArtifactContextMenu_TypeInfo + 0x5c);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = UnityEngine_UI_Image__set_sprite(param1_00,param1,0);
+		    param2_00 = System_Action_ArtikulMenuActionDic_Types_Actions__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_ArtikulMenuActionDic_Types_Actions__TypeInfo),
+		       iVar2 == 0)) break;
+		    iVar2 = func_ii_4329(*(undefined4 *)
+		                          (Gameplay_Inventory_View_ContextMenu_ArtifactContextMenu_TypeInfo + 0x5c),
+		                         iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
 		}
 
 		// Token: 0x0400162B RID: 5675
@@ -164,4 +240,136 @@ namespace Gameplay.Inventory.View.Info.InfoBox
 		[FieldOffset(Offset = "0x20")]
 		protected IInformationRow _data;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_Index ---
+		void Gameplay_Inventory_View_Info_InfoBox_TitleRowView__get_Index(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  
+		  if (((*(byte *)(param1 + 0x1c) & 1) != 0) &&
+		     (iVar1 = Cysharp_Threading_Tasks_CancellationTokenExtensions___cctor
+		                        (*(undefined4 *)(param1 + 0x14),0), iVar1 != 0)) {
+		    func_ii_7050(*(undefined4 *)(param1 + 0x14),*(undefined4 *)(param1 + 0x18),0);
+		  }
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_Index ---
+		void Gameplay_Inventory_View_Info_InfoBox_TitleRowView__set_Index
+		               (int param1,uint *param2,undefined4 param3)
+		
+		{
+		  int iVar1;
+		  uint uVar2;
+		  undefined8 local_20;
+		  undefined8 local_18;
+		  float4 local_10;
+		  float4 local_c;
+		  float4 local_8;
+		  float4 local_4;
+		  
+		  uVar2 = *param2;
+		  local_8 = (float4)((float)(uVar2 >> 0x10 & 0xff) / 255.0);
+		  local_4 = (float4)((float)(uVar2 >> 0x18) / 255.0);
+		  local_10 = (float4)((float)(uVar2 & 0xff) / 255.0);
+		  local_c = (float4)((float)(uVar2 >> 8 & 0xff) / 255.0);
+		  iVar1 = **(int **)(param1 + 0x28);
+		  local_18 = CONCAT44(local_4,local_8);
+		  local_20 = CONCAT44(local_c,local_10);
+		  (**(code **)((ulonglong)*(uint *)(iVar1 + 0x178) * 4))
+		            (*(int **)(param1 + 0x28),&local_20,*(undefined4 *)(iVar1 + 0x17c));
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_Data ---
+		void Gameplay_Inventory_View_Info_InfoBox_TitleRowView__get_Data(int *param1,undefined4 param2)
+		
+		{
+		  uint uVar1;
+		  uint *puVar2;
+		  undefined4 uVar3;
+		  int *param1_00;
+		  int iVar4;
+		  
+		  if (DAT_ram_00a5a0dd == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_Data_InfoRows_IInformationRow_TypeInfo);
+		    DAT_ram_00a5a0dd = '\x01';
+		  }
+		  param1_00 = (int *)param1[8];
+		  iVar4 = *param1_00;
+		  if (*(ushort *)(iVar4 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (Core_Data_InfoRows_IInformationRow_TypeInfo ==
+		          *(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8)) {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8 + 4) * 8 + iVar4 + 200);
+		        goto code_r0x811c77ce;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar4 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(param1_00,Core_Data_InfoRows_IInformationRow_TypeInfo,1);
+		code_r0x811c77ce:
+		  uVar3 = (**(code **)((ulonglong)*puVar2 * 4))(param1_00,puVar2[1]);
+		  (**(code **)((ulonglong)*(uint *)(*param1 + 0xf0) * 4))
+		            (param1,uVar3,*(undefined4 *)(*param1 + 0xf4));
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_Data ---
+		int * Gameplay_Inventory_View_Info_InfoBox_TitleRowView__set_Data(int *param1)
+		
+		{
+		  if (*param1 == 0) {
+		    return param1;
+		  }
+		  System_Data_DataSet__ValidateLocaleConstraint(*param1);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: get_HorizontalAlignmentTitleText ---
+		void Gameplay_Inventory_View_Info_InfoBox_TitleRowView__get_HorizontalAlignmentTitleText
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  TMPro_TMP_Text__get_horizontalAlignment(*(undefined4 *)(param1 + 0x10),param2,0);
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_HorizontalAlignmentTitleText ---
+		undefined4
+		Gameplay_Inventory_View_Info_InfoBox_TitleRowView__set_HorizontalAlignmentTitleText
+		          (int param1,undefined4 param2)
+		
+		{
+		  return *(undefined4 *)(*(int *)(param1 + 0x10) + 0x1e8);
+		}
+		*/
+
+
+		/* --- GHIDRA: get_VerticalAlignmentTitleText ---
+		void Gameplay_Inventory_View_Info_InfoBox_TitleRowView__get_VerticalAlignmentTitleText
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  TMPro_TMP_Text__get_verticalAlignment(*(undefined4 *)(param1 + 0x10),param2,0);
+		  return;
+		}
+		*/
+
 }

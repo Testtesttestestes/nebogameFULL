@@ -27,4 +27,17 @@ namespace Core.Data.User
 		{
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_GuideEnabled ---
+		void Core_Data_User_TutorialUserSettings__get_GuideEnabled(int param1,undefined4 param2)
+		
+		{
+		  *(undefined **)(param1 + 8) = &DAT_ram_01010101;
+		  *(undefined1 *)(param1 + 0xc) = 1;
+		  return;
+		}
+		*/
+
 }

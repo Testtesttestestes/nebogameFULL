@@ -70,6 +70,40 @@ namespace Gameplay.GdEvents.Model.Categories
 		[Address(RVA = "0x7D71", Offset = "0x7D71", VA = "0x7D71")]
 		public AbstractGdEventCatData(string title, ICurrentTimeProvider timeProvider, ITimeOffsetProvider timeOffsetProvider, TimerStrings timerStrings)
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_GdEvents_Model_Categories_AbstractGdEventCatData___ctor(int param1,undefined4 param2)
+		
+		{
+		  uint uVar1;
+		  uint *puVar2;
+		  int *param1_00;
+		  int iVar3;
+		  
+		  if (DAT_ram_00a5a2ec == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Collections_Generic_ICollection_GdEventData__TypeInfo);
+		    DAT_ram_00a5a2ec = '\x01';
+		  }
+		  param1_00 = *(int **)(param1 + 0xc);
+		  iVar3 = *param1_00;
+		  if (*(ushort *)(iVar3 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (System_Collections_Generic_ICollection_GdEventData__TypeInfo ==
+		          *(int *)(*(int *)(iVar3 + 0x58) + uVar1 * 8)) {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar3 + 0x58) + uVar1 * 8 + 4) * 8 + iVar3 + 0xd8);
+		        goto code_r0x811fa204;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar3 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(param1_00,
+		                                System_Collections_Generic_ICollection_GdEventData__TypeInfo,3);
+		code_r0x811fa204:
+		  (**(code **)((ulonglong)*puVar2 * 4))(param1_00,puVar2[1]);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06002CEE RID: 11502 RVA: 0x00002050 File Offset: 0x00000250
@@ -77,6 +111,54 @@ namespace Gameplay.GdEvents.Model.Categories
 		[Address(RVA = "0x7D72", Offset = "0x7D72", VA = "0x7D72")]
 		public void ResetItems()
 		{
+		/* --- GHIDRA: ResetItems ---
+		uint Gameplay_GdEvents_Model_Categories_AbstractGdEventCatData__ResetItems
+		               (int *param1,int param2,undefined4 param3)
+		
+		{
+		  uint uVar1;
+		  float param2_00;
+		  uint *puVar2;
+		  undefined4 param1_00;
+		  int *param1_01;
+		  int iVar3;
+		  int *piVar4;
+		  
+		  if (DAT_ram_00a5a2ed == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Collections_Generic_ICollection_GdEventData__TypeInfo);
+		    DAT_ram_00a5a2ed = '\x01';
+		  }
+		  piVar4 = *(int **)(param2 + 0x14);
+		  if (param1 != piVar4) {
+		    *(int **)(param2 + 0x14) = param1;
+		    uVar1 = 0;
+		    param1_00 = *(undefined4 *)(param2 + 0xc);
+		    param2_00 = (float)(**(code **)((ulonglong)*(uint *)(*param1 + 0xf8) * 4))
+		                                 (param1,param2,*(undefined4 *)(*param1 + 0xfc));
+		    Core_Extensions_Dict_DictExt__BinarySearch_object__uint_(param1_00,param2_00,0);
+		    param1_01 = (int *)param1[3];
+		    iVar3 = *param1_01;
+		    if (*(ushort *)(iVar3 + 0xb6) != 0) {
+		      do {
+		        if (System_Collections_Generic_ICollection_GdEventData__TypeInfo ==
+		            *(int *)(*(int *)(iVar3 + 0x58) + uVar1 * 8)) {
+		          puVar2 = (uint *)(*(int *)(*(int *)(iVar3 + 0x58) + uVar1 * 8 + 4) * 8 + iVar3 + 0xd0);
+		          goto code_r0x811fa2e1;
+		        }
+		        uVar1 = uVar1 + 1;
+		      } while (*(ushort *)(iVar3 + 0xb6) != uVar1);
+		    }
+		    puVar2 = (uint *)func_ii_1080(param1_01,
+		                                  System_Collections_Generic_ICollection_GdEventData__TypeInfo,2);
+		code_r0x811fa2e1:
+		    (**(code **)((ulonglong)*puVar2 * 4))(param1_01,param2,puVar2[1]);
+		    (**(code **)((ulonglong)*(uint *)(*param1 + 0x118) * 4))
+		              (param1,*(undefined4 *)(*param1 + 0x11c));
+		  }
+		  return (uint)(param1 != piVar4);
+		}
+		*/
+
 		}
 
 		// Token: 0x06002CEF RID: 11503 RVA: 0x00008A00 File Offset: 0x00006C00
@@ -84,6 +166,47 @@ namespace Gameplay.GdEvents.Model.Categories
 		[Address(RVA = "0x7D73", Offset = "0x7D73", VA = "0x7D73", Slot = "5")]
 		public virtual bool TryAdd(GdEventData evt)
 		{
+		/* --- GHIDRA: TryAdd ---
+		int Gameplay_GdEvents_Model_Categories_AbstractGdEventCatData__TryAdd
+		              (int *param1,int param2,undefined4 param3)
+		
+		{
+		  uint uVar1;
+		  uint *puVar2;
+		  int *param1_00;
+		  int iVar3;
+		  
+		  if (DAT_ram_00a5a2ee == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Collections_Generic_ICollection_GdEventData__TypeInfo);
+		    DAT_ram_00a5a2ee = '\x01';
+		  }
+		  param1_00 = (int *)param1[3];
+		  iVar3 = *param1_00;
+		  if (*(ushort *)(iVar3 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (System_Collections_Generic_ICollection_GdEventData__TypeInfo ==
+		          *(int *)(*(int *)(iVar3 + 0x58) + uVar1 * 8)) {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar3 + 0x58) + uVar1 * 8 + 4) * 8 + iVar3 + 0xf0);
+		        goto code_r0x811fa3a6;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar3 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(param1_00,
+		                                System_Collections_Generic_ICollection_GdEventData__TypeInfo,6);
+		code_r0x811fa3a6:
+		  iVar3 = (**(code **)((ulonglong)*puVar2 * 4))(param1_00,param2,puVar2[1]);
+		  if (iVar3 != 0) {
+		    *(undefined4 *)(param2 + 0x14) = 0;
+		    Core_Extensions_Dict_DictExt__BinarySearch_object__uint_(*(undefined4 *)(param2 + 0xc),0.0,0);
+		    (**(code **)((ulonglong)*(uint *)(*param1 + 0x118) * 4))
+		              (param1,*(undefined4 *)(*param1 + 0x11c));
+		  }
+		  return iVar3;
+		}
+		*/
+
 			return default(bool);
 		}
 
@@ -135,4 +258,44 @@ namespace Gameplay.GdEvents.Model.Categories
 		[FieldOffset(Offset = "0x18")]
 		protected TimerStrings _timerStrings;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_TimerStrings ---
+		void Gameplay_GdEvents_Model_Categories_AbstractGdEventCatData__get_TimerStrings
+		               (int param1,undefined4 param2)
+		
+		{
+		  uint uVar1;
+		  uint *puVar2;
+		  int *param1_00;
+		  int iVar3;
+		  
+		  if (DAT_ram_00a5a2ec == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Collections_Generic_ICollection_GdEventData__TypeInfo);
+		    DAT_ram_00a5a2ec = '\x01';
+		  }
+		  param1_00 = *(int **)(param1 + 0xc);
+		  iVar3 = *param1_00;
+		  if (*(ushort *)(iVar3 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (System_Collections_Generic_ICollection_GdEventData__TypeInfo ==
+		          *(int *)(*(int *)(iVar3 + 0x58) + uVar1 * 8)) {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar3 + 0x58) + uVar1 * 8 + 4) * 8 + iVar3 + 0xd8);
+		        goto code_r0x811fa14f;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar3 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(param1_00,
+		                                System_Collections_Generic_ICollection_GdEventData__TypeInfo,3);
+		code_r0x811fa14f:
+		  (**(code **)((ulonglong)*puVar2 * 4))(param1_00,puVar2[1]);
+		  *(undefined4 *)(param1 + 0x18) = 0;
+		  *(undefined8 *)(param1 + 0x10) = 0;
+		  return;
+		}
+		*/
+
 }

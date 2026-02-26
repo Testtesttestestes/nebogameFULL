@@ -46,6 +46,33 @@ namespace Gameplay.Ad.BattleBonusesAd.View
 		[Address(RVA = "0xA36E", Offset = "0xA36E", VA = "0xA36E", Slot = "22")]
 		protected override void OnShow(BattleBonusesAdWindow.BattleBonusesAdWindowArgs args)
 		{
+		/* --- GHIDRA: OnShow ---
+		void Gameplay_Ad_BattleBonusesAd_View_BattleBonusesAdWindow__OnShow(int param1,undefined4 param2)
+		
+		{
+		  int *piVar1;
+		  
+		  if (DAT_ram_00a58866 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Windows_BaseDialogWindow_BattleBonusesAdWindow_BattleBonusesAdWindowArgs__OnClose__
+		              );
+		    DAT_ram_00a58866 = '\x01';
+		  }
+		  UI_Windows_BaseDialogWindow_object___HandleTitle
+		            (param1,
+		             Method_UI_Windows_BaseDialogWindow_BattleBonusesAdWindow_BattleBonusesAdWindowArgs__OnClose__
+		            );
+		  piVar1 = *(int **)(param1 + 0x58);
+		  if (piVar1 != (int *)0x0) {
+		    (**(code **)((ulonglong)*(uint *)(*piVar1 + 0x130) * 4))
+		              (piVar1,*(undefined4 *)(*piVar1 + 0x134));
+		  }
+		  *(undefined4 *)(param1 + 0x58) = 0;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x060055CF RID: 21967 RVA: 0x00002050 File Offset: 0x00000250
@@ -53,6 +80,40 @@ namespace Gameplay.Ad.BattleBonusesAd.View
 		[Address(RVA = "0xA36F", Offset = "0xA36F", VA = "0xA36F", Slot = "19")]
 		protected override void OnClose()
 		{
+		/* --- GHIDRA: OnClose ---
+		void Gameplay_Ad_BattleBonusesAd_View_BattleBonusesAdWindow__OnClose(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  int *piVar2;
+		  int iVar3;
+		  
+		  if (DAT_ram_00a58867 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Windows_BaseDialogWindow_BattleBonusesAdWindow_BattleBonusesAdWindowArgs__HandleContent__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Windows_BaseWindow_BattleBonusesAdWindow_BattleBonusesAdWindowArgs__get_WindowArgs__
+		              );
+		    DAT_ram_00a58867 = '\x01';
+		  }
+		  UI_Windows_BaseDialogWindow_object___HandleButtons
+		            (param1,
+		             Method_UI_Windows_BaseDialogWindow_BattleBonusesAdWindow_BattleBonusesAdWindowArgs__HandleContent__
+		            );
+		  piVar2 = *(int **)(param1 + 0x50);
+		  iVar1 = func_ii_8093(param1,
+		                       Method_UI_Windows_BaseWindow_BattleBonusesAdWindow_BattleBonusesAdWindowArgs__get_WindowArgs__
+		                      );
+		  iVar3 = *piVar2;
+		  (**(code **)((ulonglong)*(uint *)(iVar3 + 0x138) * 4))
+		            (piVar2,*(undefined4 *)(iVar1 + 0x2c),*(undefined4 *)(iVar3 + 0x13c));
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x060055D0 RID: 21968 RVA: 0x00002050 File Offset: 0x00000250
@@ -60,6 +121,26 @@ namespace Gameplay.Ad.BattleBonusesAd.View
 		[Address(RVA = "0xA370", Offset = "0xA370", VA = "0xA370", Slot = "28")]
 		protected override void HandleContent()
 		{
+		/* --- GHIDRA: HandleContent ---
+		void Gameplay_Ad_BattleBonusesAd_View_BattleBonusesAdWindow__HandleContent
+		               (undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a58868 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Windows_BaseDialogWindow_BattleBonusesAdWindow_BattleBonusesAdWindowArgs___ctor__
+		              );
+		    DAT_ram_00a58868 = '\x01';
+		  }
+		  UI_Windows_BaseDialogWindow_BaseDialogWindowArgs_object____ctor
+		            (param1,
+		             Method_UI_Windows_BaseDialogWindow_BattleBonusesAdWindow_BattleBonusesAdWindowArgs___ctor__
+		            );
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x060055D1 RID: 21969 RVA: 0x00002050 File Offset: 0x00000250
@@ -67,6 +148,26 @@ namespace Gameplay.Ad.BattleBonusesAd.View
 		[Address(RVA = "0xA371", Offset = "0xA371", VA = "0xA371")]
 		public BattleBonusesAdWindow()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_Ad_BattleBonusesAd_View_BattleBonusesAdWindow___ctor
+		               (undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a58869 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Windows_BaseDialogWindow_BaseDialogWindowArgs_BattleBonusesAdWindow_BattleBonusesAdWindowArgs___ctor__
+		              );
+		    DAT_ram_00a58869 = '\x01';
+		  }
+		  UnityEngine_UIElements_BaseCompositeField___Il2CppFullySharedGenericType__object____Il2CppFullySharedGenericType___UpdateMixedValueContent
+		            (param1,
+		             Method_UI_Windows_BaseDialogWindow_BaseDialogWindowArgs_BattleBonusesAdWindow_BattleBonusesAdWindowArgs___ctor__
+		            );
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x04002E7B RID: 11899
@@ -122,4 +223,53 @@ namespace Gameplay.Ad.BattleBonusesAd.View
 			public BattleBonusesAdEvents Events;
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_WatchButton ---
+		void Gameplay_Ad_BattleBonusesAd_View_BattleBonusesAdWindow__get_WatchButton
+		               (int param1,int param2,undefined4 param3)
+		
+		{
+		  undefined4 param1_00;
+		  undefined4 param5;
+		  undefined4 param4;
+		  undefined4 param3_00;
+		  
+		  if (DAT_ram_00a58865 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Windows_BaseDialogWindow_BattleBonusesAdWindow_BattleBonusesAdWindowArgs__OnShow__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&Gameplay_Ad_BattleBonusesAd_Controller_BattleBonusesAdWindowMediator_TypeInfo);
+		    DAT_ram_00a58865 = '\x01';
+		  }
+		  UI_Windows_BaseDialogWindow_object___OnDestroy
+		            (param1,param2,
+		             Method_UI_Windows_BaseDialogWindow_BattleBonusesAdWindow_BattleBonusesAdWindowArgs__OnShow__
+		            );
+		  param5 = *(undefined4 *)(param2 + 0x30);
+		  param4 = *(undefined4 *)(param2 + 0x38);
+		  param3_00 = *(undefined4 *)(param2 + 0x34);
+		  param1_00 = unnamed_function_1417
+		                        (
+		                        Gameplay_Ad_BattleBonusesAd_Controller_BattleBonusesAdWindowMediator_TypeInfo
+		                        );
+		  if (DAT_ram_00a58879 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_MVC_AbstractCozyViewMediator_BattleBonusesAdModel__BattleBonusesAdEvents__BattleBonusesAdController__BattleBonusesAdWindow___ctor__
+		              );
+		    DAT_ram_00a58879 = '\x01';
+		  }
+		  MVC_AbstractCozyViewMediator_object__object__object__object____ctor
+		            (param1_00,param1,param3_00,param4,param5,
+		             Method_MVC_AbstractCozyViewMediator_BattleBonusesAdModel__BattleBonusesAdEvents__BattleBonusesAdController__BattleBonusesAdWindow___ctor__
+		            );
+		  *(undefined4 *)(param1 + 0x58) = param1_00;
+		  return;
+		}
+		*/
+
 }

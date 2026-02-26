@@ -92,6 +92,40 @@ namespace Gameplay.GameEvents.View
 		[Address(RVA = "0x7E1D", Offset = "0x7E1D", VA = "0x7E1D")]
 		private void OnDestroy()
 		{
+		/* --- GHIDRA: OnDestroy ---
+		void Gameplay_GameEvents_View_GameEventsListView__OnDestroy(int param1,undefined4 param2)
+		
+		{
+		  undefined4 param1_00;
+		  int *piVar1;
+		  int iVar2;
+		  
+		  if (DAT_ram_00a5748f == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Gameplay_GameEvents_View_GameEventsListView_HandleListAdapterInit__);
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_MonoBehaviourWithStates_GameEventsListView_GameEventsListViewStates__set_CurrentState__
+		              );
+		    DAT_ram_00a5748f = '\x01';
+		  }
+		  Gameplay_Boss_View_CaptainTab_BossTeamView__set_TeamInfoData
+		            (param1,1,
+		             Method_UI_MonoBehaviourWithStates_GameEventsListView_GameEventsListViewStates__set_CurrentState__
+		            );
+		  piVar1 = *(int **)(param1 + 0x20);
+		  param1_00 = unnamed_function_1417(System_Action_TypeInfo);
+		  UnityEngine_Events_UnityEvent__AddListener
+		            (param1_00,param1,
+		             Method_Gameplay_GameEvents_View_GameEventsListView_HandleListAdapterInit__,0);
+		  iVar2 = *piVar1;
+		  (**(code **)((ulonglong)*(uint *)(iVar2 + 0x298) * 4))
+		            (piVar1,param1_00,*(undefined4 *)(iVar2 + 0x29c));
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06002DA0 RID: 11680 RVA: 0x00002050 File Offset: 0x00000250
@@ -99,6 +133,37 @@ namespace Gameplay.GameEvents.View
 		[Address(RVA = "0x7E1E", Offset = "0x7E1E", VA = "0x7E1E")]
 		private void Awake()
 		{
+		/* --- GHIDRA: Awake ---
+		void Gameplay_GameEvents_View_GameEventsListView__Awake(int param1,undefined4 param2)
+		
+		{
+		  undefined4 param1_00;
+		  int *piVar1;
+		  int iVar2;
+		  
+		  if (DAT_ram_00a57490 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Gameplay_GameEvents_View_GameEventsListView_HandleListAdapterInit__);
+		    DAT_ram_00a57490 = '\x01';
+		  }
+		  piVar1 = *(int **)(param1 + 0x20);
+		  param1_00 = unnamed_function_1417(System_Action_TypeInfo);
+		  UnityEngine_Events_UnityEvent__AddListener
+		            (param1_00,param1,
+		             Method_Gameplay_GameEvents_View_GameEventsListView_HandleListAdapterInit__,0);
+		  iVar2 = *piVar1;
+		  (**(code **)((ulonglong)*(uint *)(iVar2 + 0x2a0) * 4))
+		            (piVar1,param1_00,*(undefined4 *)(iVar2 + 0x2a4));
+		  iVar2 = *(int *)(param1 + 0x38);
+		  if (iVar2 != 0) {
+		    (**(code **)((ulonglong)*(uint *)(iVar2 + 0xc) * 4))
+		              (*(undefined4 *)(iVar2 + 0x20),param1,*(undefined4 *)(iVar2 + 0x14));
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06002DA1 RID: 11681 RVA: 0x00002050 File Offset: 0x00000250
@@ -132,6 +197,52 @@ namespace Gameplay.GameEvents.View
 		[Address(RVA = "0x7E22", Offset = "0x7E22", VA = "0x7E22")]
 		private void HandleEventsChanges()
 		{
+		/* --- GHIDRA: HandleEventsChanges ---
+		void Gameplay_GameEvents_View_GameEventsListView__HandleEventsChanges(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  uint param2_00;
+		  undefined4 uVar2;
+		  int iVar3;
+		  
+		  if (DAT_ram_00a57491 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_System_Collections_Generic_List_GameEventsListView_GameEventsListItemWrapper__get_Count__
+		              );
+		    DAT_ram_00a57491 = '\x01';
+		  }
+		  param2_00 = 1;
+		  if (*(int *)(param1 + 0x3c) != 0) {
+		    param2_00 = (uint)(*(int *)(*(int *)(param1 + 0x3c) + 0xc) == 0);
+		  }
+		  iVar3 = *(int *)(param1 + 0x30);
+		  if (0 < *(int *)(iVar3 + 0xc)) {
+		    iVar1 = 0;
+		    do {
+		      uVar2 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_uint__object___MoveNext
+		                        (*(undefined4 *)(iVar3 + iVar1 * 4 + 0x10),0);
+		      Com_TheFallenGames_OSA_CustomAdapters_TableView_Tuple_Basic_BasicTupleValueViewsHolder__UpdateAsText
+		                (uVar2,param2_00,0);
+		      iVar1 = iVar1 + 1;
+		    } while (iVar1 < *(int *)(iVar3 + 0xc));
+		  }
+		  iVar3 = *(int *)(param1 + 0x34);
+		  if (0 < *(int *)(iVar3 + 0xc)) {
+		    iVar1 = 0;
+		    do {
+		      uVar2 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_uint__object___MoveNext
+		                        (*(undefined4 *)(iVar3 + iVar1 * 4 + 0x10),0);
+		      Com_TheFallenGames_OSA_CustomAdapters_TableView_Tuple_Basic_BasicTupleValueViewsHolder__UpdateAsText
+		                (uVar2,param2_00 ^ 1,0);
+		      iVar1 = iVar1 + 1;
+		    } while (iVar1 < *(int *)(iVar3 + 0xc));
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06002DA5 RID: 11685 RVA: 0x00002050 File Offset: 0x00000250
@@ -139,6 +250,59 @@ namespace Gameplay.GameEvents.View
 		[Address(RVA = "0x7E23", Offset = "0x7E23", VA = "0x7E23")]
 		private void ValidateEmptyList()
 		{
+		/* --- GHIDRA: ValidateEmptyList ---
+		void Gameplay_GameEvents_View_GameEventsListView__ValidateEmptyList
+		               (int param1,int param2,undefined4 param3)
+		
+		{
+		  int iVar1;
+		  int iVar2;
+		  int iVar3;
+		  int param2_00;
+		  
+		  param2_00 = 0;
+		  if (DAT_ram_00a57492 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_System_Collections_Generic_List_int__get_Count__);
+		    Mono_Security_ASN1__get_Item(&Method_System_Collections_Generic_List_int__get_Item__);
+		    DAT_ram_00a57492 = '\x01';
+		  }
+		  iVar2 = *(int *)(param2 + 0xc);
+		  if (0 < iVar2) {
+		    do {
+		      iVar1 = System_Linq_Enumerable__ToList_object_
+		                        (param2,param2_00,Method_System_Collections_Generic_List_int__get_Item__);
+		      if (DAT_ram_00a57493 == '\0') {
+		        Mono_Security_ASN1__get_Item
+		                  (&
+		                   Method_System_Collections_Generic_List_GameEventsListView_GameEventsListItemWrapper__RemoveAt__
+		                  );
+		        DAT_ram_00a57493 = '\x01';
+		      }
+		      iVar3 = *(int *)(param1 + 0x20);
+		      if (DAT_ram_00a574aa == '\0') {
+		        Mono_Security_ASN1__get_Item
+		                  (&
+		                   Method_Com_TheFallenGames_OSA_DataHelpers_SimpleDataHelper_GameEventsListView_GameEventsListItemWrapper__RemoveItems__
+		                  );
+		        DAT_ram_00a574aa = '\x01';
+		      }
+		      Com_TheFallenGames_OSA_DataHelpers_SimpleDataHelper_object___NotifyListChangedExternally
+		                (*(undefined4 *)(iVar3 + 0xa0),iVar1 - param2_00,1,0,
+		                 Method_Com_TheFallenGames_OSA_DataHelpers_SimpleDataHelper_GameEventsListView_GameEventsListItemWrapper__RemoveItems__
+		                );
+		      UnityEngine_TextCore_Glyph__set_atlasIndex
+		                (*(undefined4 *)(param1 + 0x3c),iVar1 - param2_00,
+		                 Method_System_Collections_Generic_List_GameEventsListView_GameEventsListItemWrapper__RemoveAt__
+		                );
+		      Gameplay_GameEvents_View_GameEventsListView__HandleEventsChanges(param1,param2_00);
+		      param2_00 = param2_00 + 1;
+		    } while (param2_00 != iVar2);
+		  }
+		  Gameplay_GameEvents_View_GameEventsListView__HandleEventsChanges(param1,param2_00);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06002DA6 RID: 11686 RVA: 0x00002050 File Offset: 0x00000250
@@ -146,6 +310,41 @@ namespace Gameplay.GameEvents.View
 		[Address(RVA = "0x7E24", Offset = "0x7E24", VA = "0x7E24")]
 		public void RemoveEvents(List<int> indexes)
 		{
+		/* --- GHIDRA: RemoveEvents ---
+		void Gameplay_GameEvents_View_GameEventsListView__RemoveEvents
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  int iVar1;
+		  
+		  if (DAT_ram_00a57493 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_System_Collections_Generic_List_GameEventsListView_GameEventsListItemWrapper__RemoveAt__
+		              );
+		    DAT_ram_00a57493 = '\x01';
+		  }
+		  iVar1 = *(int *)(param1 + 0x20);
+		  if (DAT_ram_00a574aa == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Com_TheFallenGames_OSA_DataHelpers_SimpleDataHelper_GameEventsListView_GameEventsListItemWrapper__RemoveItems__
+		              );
+		    DAT_ram_00a574aa = '\x01';
+		  }
+		  Com_TheFallenGames_OSA_DataHelpers_SimpleDataHelper_object___NotifyListChangedExternally
+		            (*(undefined4 *)(iVar1 + 0xa0),param2,1,0,
+		             Method_Com_TheFallenGames_OSA_DataHelpers_SimpleDataHelper_GameEventsListView_GameEventsListItemWrapper__RemoveItems__
+		            );
+		  UnityEngine_TextCore_Glyph__set_atlasIndex
+		            (*(undefined4 *)(param1 + 0x3c),param2,
+		             Method_System_Collections_Generic_List_GameEventsListView_GameEventsListItemWrapper__RemoveAt__
+		            );
+		  Gameplay_GameEvents_View_GameEventsListView__HandleEventsChanges(param1,param1);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06002DA7 RID: 11687 RVA: 0x00002050 File Offset: 0x00000250
@@ -153,6 +352,25 @@ namespace Gameplay.GameEvents.View
 		[Address(RVA = "0x7E25", Offset = "0x7E25", VA = "0x7E25")]
 		public void RemoveEvent(int index)
 		{
+		/* --- GHIDRA: RemoveEvent ---
+		void Gameplay_GameEvents_View_GameEventsListView__RemoveEvent(undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a57494 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_MonoBehaviourWithStates_GameEventsListView_GameEventsListViewStates___ctor__
+		              );
+		    DAT_ram_00a57494 = '\x01';
+		  }
+		  ScreenAdaptation_Common_AppSize__Update
+		            (param1,
+		             Method_UI_MonoBehaviourWithStates_GameEventsListView_GameEventsListViewStates___ctor__)
+		  ;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06002DA8 RID: 11688 RVA: 0x00002050 File Offset: 0x00000250
@@ -160,6 +378,16 @@ namespace Gameplay.GameEvents.View
 		[Address(RVA = "0x7E26", Offset = "0x7E26", VA = "0x7E26")]
 		public GameEventsListView()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_GameEvents_View_GameEventsListView___ctor(int param1,undefined4 param2)
+		
+		{
+		  *(undefined4 *)(param1 + 0x20) = 0;
+		  *(undefined8 *)(param1 + 0x18) = 0;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x040018FE RID: 6398
@@ -353,4 +581,165 @@ namespace Gameplay.GameEvents.View
 			EDIT
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_TabBar ---
+		void Gameplay_GameEvents_View_GameEventsListView__get_TabBar
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a5748c == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_GameEventsListView__TypeInfo);
+		    DAT_ram_00a5748c = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x38);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = UnityEngine_UI_Image__set_sprite(param1_00,param2,0);
+		    param2_00 = System_Action_GameEventsListView__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_GameEventsListView__TypeInfo), iVar2 == 0))
+		    break;
+		    iVar2 = func_ii_4329(param1 + 0x38,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: add_OnReady ---
+		void Gameplay_GameEvents_View_GameEventsListView__add_OnReady
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a5748d == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_GameEventsListView__TypeInfo);
+		    DAT_ram_00a5748d = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x38);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = func_ii_7048(param1_00,param2,0);
+		    param2_00 = System_Action_GameEventsListView__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_GameEventsListView__TypeInfo), iVar2 == 0))
+		    break;
+		    iVar2 = func_ii_4329(param1 + 0x38,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: remove_OnReady ---
+		void Gameplay_GameEvents_View_GameEventsListView__remove_OnReady(int param1,undefined4 param2)
+		
+		{
+		  undefined4 param1_00;
+		  int *piVar1;
+		  int iVar2;
+		  
+		  if (DAT_ram_00a5748e == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Gameplay_GameEvents_View_GameEventsListView_HandleListAdapterInit__);
+		    DAT_ram_00a5748e = '\x01';
+		  }
+		  piVar1 = *(int **)(param1 + 0x20);
+		  param1_00 = unnamed_function_1417(System_Action_TypeInfo);
+		  UnityEngine_Events_UnityEvent__AddListener
+		            (param1_00,param1,
+		             Method_Gameplay_GameEvents_View_GameEventsListView_HandleListAdapterInit__,0);
+		  iVar2 = *piVar1;
+		  (**(code **)((ulonglong)*(uint *)(iVar2 + 0x2a0) * 4))
+		            (piVar1,param1_00,*(undefined4 *)(iVar2 + 0x2a4));
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_Events ---
+		void Gameplay_GameEvents_View_GameEventsListView__get_Events
+		               (int param1,int param2,undefined4 param3)
+		
+		{
+		  undefined4 param2_00;
+		  int iVar1;
+		  
+		  if (param2 != *(int *)(param1 + 0x3c)) {
+		    *(int *)(param1 + 0x3c) = param2;
+		    Gameplay_GameEvents_View_GameEventsListView__HandleEventsChanges(param1,param1);
+		    param2_00 = *(undefined4 *)(param1 + 0x3c);
+		    iVar1 = *(int *)(param1 + 0x20);
+		    if (DAT_ram_00a574ab == '\0') {
+		      Mono_Security_ASN1__get_Item
+		                (&
+		                 Method_Com_TheFallenGames_OSA_DataHelpers_SimpleDataHelper_GameEventsListView_GameEventsListItemWrapper__ResetItems__
+		                );
+		      DAT_ram_00a574ab = '\x01';
+		    }
+		    Com_TheFallenGames_OSA_DataHelpers_SimpleDataHelper_object___RemoveOneFromStart
+		              (*(undefined4 *)(iVar1 + 0xa0),param2_00,0,
+		               Method_Com_TheFallenGames_OSA_DataHelpers_SimpleDataHelper_GameEventsListView_GameEventsListItemWrapper__ResetItems__
+		              );
+		  }
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_Events ---
+		void Gameplay_GameEvents_View_GameEventsListView__set_Events(int param1,undefined4 param2)
+		
+		{
+		  undefined4 param2_00;
+		  int iVar1;
+		  
+		  Gameplay_GameEvents_View_GameEventsListView__HandleEventsChanges(param1,param1);
+		  param2_00 = *(undefined4 *)(param1 + 0x3c);
+		  iVar1 = *(int *)(param1 + 0x20);
+		  if (DAT_ram_00a574ab == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Com_TheFallenGames_OSA_DataHelpers_SimpleDataHelper_GameEventsListView_GameEventsListItemWrapper__ResetItems__
+		              );
+		    DAT_ram_00a574ab = '\x01';
+		  }
+		  Com_TheFallenGames_OSA_DataHelpers_SimpleDataHelper_object___RemoveOneFromStart
+		            (*(undefined4 *)(iVar1 + 0xa0),param2_00,0,
+		             Method_Com_TheFallenGames_OSA_DataHelpers_SimpleDataHelper_GameEventsListView_GameEventsListItemWrapper__ResetItems__
+		            );
+		  return;
+		}
+		*/
+
 }

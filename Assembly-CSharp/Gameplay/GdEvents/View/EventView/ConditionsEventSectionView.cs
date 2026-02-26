@@ -90,6 +90,44 @@ namespace Gameplay.GdEvents.View.EventView
 		[Address(RVA = "0x7CDA", Offset = "0x7CDA", VA = "0x7CDA")]
 		public ConditionsEventSectionView()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_GdEvents_View_EventView_ConditionsEventSectionView___ctor
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  int iVar1;
+		  int iVar2;
+		  int iVar3;
+		  int local_4;
+		  
+		  if (DAT_ram_00a5a2b7 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UnityEngine_GameObject_TryGetComponent_AbstractEventSectionView___);
+		    Mono_Security_ASN1__get_Item(&Method_UI_MonoBehaviourWithStates_EventViewState__get_Configs__);
+		    DAT_ram_00a5a2b7 = '\x01';
+		  }
+		  local_4 = 0;
+		  if (*(char *)(param1 + 0x19) == '\0') {
+		    *(undefined1 *)(param1 + 0x19) = 1;
+		    iVar3 = *(int *)(param1 + 0x10);
+		    if (0 < *(int *)(iVar3 + 0xc)) {
+		      iVar1 = 0;
+		      do {
+		        iVar2 = func_ii_8014(*(undefined4 *)(*(int *)(iVar3 + iVar1 * 4 + 0x10) + 8),&local_4,
+		                             Method_UnityEngine_GameObject_TryGetComponent_AbstractEventSectionView___
+		                            );
+		        if ((iVar2 != 0) && (*(char *)(local_4 + 0x14) == '\0')) {
+		          *(undefined1 *)(local_4 + 0x14) = 1;
+		          *(undefined4 *)(local_4 + 0x18) = param2;
+		        }
+		        iVar1 = iVar1 + 1;
+		      } while (iVar1 < *(int *)(iVar3 + 0xc));
+		    }
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x04001844 RID: 6212
@@ -122,4 +160,55 @@ namespace Gameplay.GdEvents.View.EventView
 		[SerializeField]
 		private RequirementsView _requirements;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_Requirements ---
+		void Gameplay_GdEvents_View_EventView_ConditionsEventSectionView__get_Requirements
+		               (undefined4 param1,undefined4 *param2,int *param3,undefined4 param4)
+		
+		{
+		  uint uVar1;
+		  undefined4 param2_00;
+		  undefined4 param3_00;
+		  int *param1_00;
+		  uint *puVar2;
+		  int iVar3;
+		  
+		  if (DAT_ram_00a5a2b6 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Gameplay_GdEvents_Control_EventSections_ExecuteConditionsViewMediator_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Core_MVC_Interfaces_IViewMediator_TypeInfo);
+		    DAT_ram_00a5a2b6 = '\x01';
+		  }
+		  param2_00 = (**(code **)((ulonglong)*(uint *)(*param3 + 0x100) * 4))
+		                        (param3,*(undefined4 *)(*param3 + 0x104));
+		  param3_00 = (**(code **)((ulonglong)*(uint *)(*param3 + 0x110) * 4))
+		                        (param3,*(undefined4 *)(*param3 + 0x114));
+		  param1_00 = (int *)unnamed_function_1417
+		                               (
+		                               Gameplay_GdEvents_Control_EventSections_ExecuteConditionsViewMediator_TypeInfo
+		                               );
+		  Gameplay_GdEvents_Control_EventSections_DescriptionViewMediator___c__DisplayClass9_0___AprsButtonClickedEventHandler_b__1
+		            (param1_00,param2_00,param3_00,param3,0);
+		  *param2 = param1_00;
+		  iVar3 = *param1_00;
+		  if (*(ushort *)(iVar3 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (Core_MVC_Interfaces_IViewMediator_TypeInfo == *(int *)(*(int *)(iVar3 + 0x58) + uVar1 * 8)
+		         ) {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar3 + 0x58) + uVar1 * 8 + 4) * 8 + iVar3 + 0x100);
+		        goto code_r0x811f58f9;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar3 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(param1_00,Core_MVC_Interfaces_IViewMediator_TypeInfo,8);
+		code_r0x811f58f9:
+		  (**(code **)((ulonglong)*puVar2 * 4))(param1_00,param1,puVar2[1]);
+		  return;
+		}
+		*/
+
 }

@@ -33,6 +33,59 @@ namespace Gameplay.Market.View
 		[Address(RVA = "0x772C", Offset = "0x772C", VA = "0x772C")]
 		public void Init()
 		{
+		/* --- GHIDRA: Init ---
+		void Gameplay_Market_View_MarketLotInfoView__Init
+		               (int param1,int *param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  undefined4 uVar2;
+		  undefined4 *puVar3;
+		  int iVar4;
+		  undefined4 local_4;
+		  
+		  if (DAT_ram_00a59fe5 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_GameLocalization_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_3708);
+		    DAT_ram_00a59fe5 = '\x01';
+		  }
+		  local_4 = 0;
+		  iVar4 = **(int **)(param1 + 0x10);
+		  (**(code **)((ulonglong)*(uint *)(iVar4 + 0x138) * 4))
+		            (*(int **)(param1 + 0x10),param2[2],*(undefined4 *)(iVar4 + 0x13c));
+		  uVar2 = *(undefined4 *)(param1 + 0x18);
+		  uVar1 = Core_Data_ArtikulData__get_IsSellable(param2[2],0);
+		  UnityEngine_Component__GetComponentInChildren_object_(uVar2,uVar1,0);
+		  Gameplay_Market_View_MarketLotListElement_MarketLotListElementArgs__set_Selected
+		            (*(undefined4 *)(param1 + 0x1c),param2,param3,param1);
+		  iVar4 = (**(code **)((ulonglong)*(uint *)(*param2 + 0xf8) * 4))
+		                    (param2,&local_4,*(undefined4 *)(*param2 + 0xfc));
+		  uVar1 = *(undefined4 *)(param1 + 0x30);
+		  if (iVar4 == 0) {
+		    if (*(int *)(Core_GameLocalization_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(Core_GameLocalization_TypeInfo);
+		    }
+		    uVar2 = Core_Extensions_Dict_CultDicExt__GetTitle(StringLiteral_3708,1,0,1,0,0,0,0);
+		    UnityEngine_Component__GetComponentInChildren_object_(uVar1,uVar2,0);
+		    uVar1 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_uint__object___MoveNext
+		                      (*(undefined4 *)(param1 + 0x30),0);
+		    Com_TheFallenGames_OSA_CustomAdapters_TableView_Tuple_Basic_BasicTupleValueViewsHolder__UpdateAsText
+		              (uVar1,1,0);
+		    puVar3 = (undefined4 *)(param1 + 0x24);
+		  }
+		  else {
+		    uVar1 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_uint__object___MoveNext
+		                      (uVar1,0);
+		    Com_TheFallenGames_OSA_CustomAdapters_TableView_Tuple_Basic_BasicTupleValueViewsHolder__UpdateAsText
+		              (uVar1,0,0);
+		    puVar3 = (undefined4 *)(param1 + 0x20);
+		  }
+		  func_ii_7050(*(undefined4 *)(param1 + 0x28),*puVar3,0);
+		  AssetContent_GameImage__get_AssetId(*(undefined4 *)(param1 + 0x2c),param2[4],0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x060025EF RID: 9711 RVA: 0x00002050 File Offset: 0x00000250
@@ -103,4 +156,31 @@ namespace Gameplay.Market.View
 		[SerializeField]
 		private TextMeshProUGUI _buttonText;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_BuyButton ---
+		void Gameplay_Market_View_MarketLotInfoView__get_BuyButton(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  int param1_00;
+		  
+		  if (DAT_ram_00a59fe4 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Protocol_Dic_ArtikulMenuActionDic_Types_Actions___TypeInfo);
+		    DAT_ram_00a59fe4 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x10);
+		  iVar1 = Mono_Security_ASN1Convert__ToOid
+		                    (Protocol_Dic_ArtikulMenuActionDic_Types_Actions___TypeInfo,2);
+		  *(undefined8 *)(iVar1 + 0x10) = 0x1e00000005;
+		  *(undefined4 *)(param1_00 + 0x58) = 0;
+		  *(int *)(param1_00 + 0x54) = iVar1;
+		  *(undefined4 *)(param1_00 + 0x50) = 0;
+		  *(undefined1 *)(param1_00 + 0x45) = 1;
+		  UI_AbstractDeferredRenderer__KillCoroutine(param1_00,0);
+		  return;
+		}
+		*/
+
 }

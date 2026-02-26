@@ -39,6 +39,42 @@ public class CodeConventions
 	[Address(RVA = "0x5562", Offset = "0x5562", VA = "0x5562")]
 	protected void Bear()
 	{
+		/* --- GHIDRA: Bear ---
+		void CodeConventions__Bear(undefined4 param1,int param2,undefined4 param3)
+		
+		{
+		  undefined4 *puVar1;
+		  int iVar2;
+		  
+		  if (DAT_ram_00a64863 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_9806);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_9800);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_9802);
+		    DAT_ram_00a64863 = '\x01';
+		  }
+		  if (param2 < 0) {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(StringLiteral_9800,0);
+		  }
+		  else if (param2 != 0) {
+		    puVar1 = &StringLiteral_9806;
+		    iVar2 = *(int *)(OKG_Logs_Debug_TypeInfo + 0x74);
+		    goto joined_r0x825943fb;
+		  }
+		  puVar1 = &StringLiteral_9802;
+		  iVar2 = *(int *)(OKG_Logs_Debug_TypeInfo + 0x74);
+		joined_r0x825943fb:
+		  if (iVar2 == 0) {
+		    func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		  }
+		  System_Collections_Generic_Dictionary_uint__object___get_Count(*puVar1,0);
+		  return;
+		}
+		*/
+
 	}
 
 	// Token: 0x0600009E RID: 158 RVA: 0x00002050 File Offset: 0x00000250
@@ -95,6 +131,45 @@ public class CodeConventions
 	[Address(RVA = "0x5568", Offset = "0x5568", VA = "0x5568")]
 	public CodeConventions()
 	{
+		/* --- GHIDRA: .ctor ---
+		void CodeConventions___ctor(int param1,int param2,int param3,undefined4 param4)
+		
+		{
+		  char cVar1;
+		  int iVar2;
+		  undefined4 uVar3;
+		  
+		  uVar3 = *(undefined4 *)(param3 + 4);
+		  *(int *)(param1 + 0x14) = param3;
+		  *(undefined4 *)(param1 + 8) = uVar3;
+		  *(int *)(param1 + 0x10) = param2;
+		  cVar1 = *(char *)(param3 + 0x2e);
+		  *(int *)(param1 + 0x20) = param1;
+		  iVar2 = func_ii_4538(param3);
+		  if (iVar2 == 0) {
+		    if (param2 == 0) {
+		      uVar3 = Mono_Unity_CertHelper__AddCertificatesToNativeChain
+		                        (0,s_Delegate_to_an_instance_method_c_ram_0005d205);
+		      func_ii_1050(uVar3,0);
+		      do {
+		        halt_trap();
+		      } while( true );
+		    }
+		    *(undefined4 *)(param1 + 0xc) = *(undefined4 *)(param1 + 8);
+		    *(undefined4 *)(param1 + 0x20) = *(undefined4 *)(param1 + 0x10);
+		  }
+		  else if (cVar1 == '\0') {
+		    *(char **)(param1 + 0xc) = s___Scripting__UnityEngine__Player_ram_00004b60 + 0x50;
+		  }
+		  else {
+		    *(undefined4 *)(param1 + 0xc) = *(undefined4 *)(param1 + 8);
+		    *(undefined4 *)(param1 + 0x20) = *(undefined4 *)(param1 + 0x10);
+		  }
+		  *(char **)(param1 + 0x1c) = s___Scripting__UnityEngine__Player_ram_00004b60 + 0x51;
+		  return;
+		}
+		*/
+
 	}
 
 	// Token: 0x0400000C RID: 12
@@ -136,4 +211,37 @@ public class CodeConventions
 	// (Invoke) Token: 0x060000A5 RID: 165
 	[Token(Token = "0x2000008")]
 	public delegate void Bar();
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: add_FooEvent ---
+		void CodeConventions__add_FooEvent(int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  int param1_00;
+		  int *param1_01;
+		  int iVar2;
+		  
+		  if (DAT_ram_00a64862 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_TypeInfo);
+		    DAT_ram_00a64862 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x10);
+		  while ((param1_01 = (int *)func_ii_7048(param1_00,param2,0), param1_01 == (int *)0x0 ||
+		         (System_Action_TypeInfo == *param1_01))) {
+		    iVar2 = func_ii_4329(param1 + 0x10,param1_01,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,System_Action_TypeInfo);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
 }

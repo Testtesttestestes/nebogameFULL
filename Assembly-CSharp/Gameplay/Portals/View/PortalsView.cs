@@ -526,4 +526,22 @@ namespace Gameplay.Portals.View
 			RIGHT
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_SealAnimation ---
+		void Gameplay_Portals_View_PortalsView__get_SealAnimation(undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a580e7 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UI_MonoBehaviourWithStates_PortalsView_PortalsState___ctor__);
+		    DAT_ram_00a580e7 = '\x01';
+		  }
+		  ScreenAdaptation_Common_AppSize__Update
+		            (param1,Method_UI_MonoBehaviourWithStates_PortalsView_PortalsState___ctor__);
+		  return;
+		}
+		*/
+
 }

@@ -20,6 +20,23 @@ namespace UI.ValuePicker
 		[Address(RVA = "0x5C71", Offset = "0x5C71", VA = "0x5C71")]
 		public ValuePickerOsaViewHolder()
 		{
+		/* --- GHIDRA: .ctor ---
+		void UI_ValuePicker_ValuePickerOsaViewHolder___ctor
+		               (undefined4 param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  undefined4 param1_00;
+		  
+		  if (DAT_ram_00a5b8af == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_19433);
+		    DAT_ram_00a5b8af = '\x01';
+		  }
+		  param1_00 = TMPro_TMP_LinkInfo__GetLink(param2,0);
+		  Core_ExternAppMethods__OpenPaymentWindow(param1_00,StringLiteral_19433,0,0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x04000346 RID: 838

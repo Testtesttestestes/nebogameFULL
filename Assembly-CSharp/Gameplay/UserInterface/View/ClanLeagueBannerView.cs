@@ -67,4 +67,56 @@ namespace Gameplay.UserInterface.View
 		[FieldOffset(Offset = "0x1C")]
 		private ClanData _clanData;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_ClanData ---
+		void Gameplay_UserInterface_View_ClanLeagueBannerView__get_ClanData
+		               (int param1,int param2,undefined4 param3)
+		
+		{
+		  if (param2 != *(int *)(param1 + 0x1c)) {
+		    *(int *)(param1 + 0x1c) = param2;
+		    Gameplay_UserInterface_View_ClanLeagueBannerView__set_ClanData(param1,param1);
+		  }
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_ClanData ---
+		void Gameplay_UserInterface_View_ClanLeagueBannerView__set_ClanData(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  undefined4 uVar2;
+		  
+		  if (DAT_ram_00a5825a == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_AssetContent_Loaders_AbstractGameGraphicLoader_RawImage__Texture2D__set_AssetId__
+		              );
+		    DAT_ram_00a5825a = '\x01';
+		  }
+		  if (*(int *)(param1 + 0x1c) != 0) {
+		    uVar2 = *(undefined4 *)(param1 + 0x10);
+		    uVar1 = Core_Extensions_Dict_ClanLeagueDicExt__GetBannerAssetId
+		                      (*(undefined4 *)(*(int *)(param1 + 0x1c) + 0x20),0);
+		    Core_Extensions_Dict_AprDicExt__Get1024AssetId(uVar2,uVar1,0);
+		    uVar2 = *(undefined4 *)(param1 + 0x14);
+		    uVar1 = Core_Extensions_Dict_ClanLeagueDicExt__GetBanner2AssetId
+		                      (*(undefined4 *)(*(int *)(param1 + 0x1c) + 0x20),0);
+		    Core_Extensions_Dict_AprDicExt__Get1024AssetId(uVar2,uVar1,0);
+		    uVar2 = *(undefined4 *)(param1 + 0x18);
+		    uVar1 = Core_Extensions_Dict_ClanCultDicExt__GetClanCultWhitBgAssetId
+		                      (*(undefined4 *)(*(int *)(param1 + 0x1c) + 0x10),0);
+		    Core_Extensions_Dict_CultDicExt__GetIcon64AssetId
+		              (uVar2,uVar1,
+		               Method_AssetContent_Loaders_AbstractGameGraphicLoader_RawImage__Texture2D__set_AssetId__
+		              );
+		  }
+		  return;
+		}
+		*/
+
 }

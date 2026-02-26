@@ -146,6 +146,26 @@ namespace Gameplay.Boss.View.RatingTab
 		[Address(RVA = "0x9562", Offset = "0x9562", VA = "0x9562", Slot = "5")]
 		protected override BossRatingViewMediator CreateMediator()
 		{
+		/* --- GHIDRA: CreateMediator ---
+		void Gameplay_Boss_View_RatingTab_BossRatingView__CreateMediator
+		               (undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a579f7 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Gameplay_Boss_View_AbstractBossWindowView_BossRatingView__BossRatingViewMediator___ctor__
+		              );
+		    DAT_ram_00a579f7 = '\x01';
+		  }
+		  ScreenAdaptation_Common_AppSize__Update
+		            (param1,
+		             Method_Gameplay_Boss_View_AbstractBossWindowView_BossRatingView__BossRatingViewMediator___ctor__
+		            );
+		  return;
+		}
+		*/
+
 			return null;
 		}
 
@@ -216,4 +236,30 @@ namespace Gameplay.Boss.View.RatingTab
 		[SerializeField]
 		private GreenToggle _greenToggle;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_RightDesc ---
+		undefined4 Gameplay_Boss_View_RatingTab_BossRatingView__get_RightDesc(int param1,undefined4 param2)
+		
+		{
+		  undefined4 param1_00;
+		  undefined4 param4;
+		  undefined4 param3;
+		  undefined4 param2_00;
+		  
+		  if (DAT_ram_00a579f6 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Gameplay_Boss_Controller_BossRatingViewMediator_TypeInfo);
+		    DAT_ram_00a579f6 = '\x01';
+		  }
+		  param4 = *(undefined4 *)(param1 + 0x1c);
+		  param3 = *(undefined4 *)(param1 + 0x18);
+		  param2_00 = *(undefined4 *)(param1 + 0x14);
+		  param1_00 = unnamed_function_1417(Gameplay_Boss_Controller_BossRatingViewMediator_TypeInfo);
+		  Gameplay_Boss_Controller_BossMinionWindowMediator__MinionCanceledEvent
+		            (param1_00,param2_00,param3,param4,0);
+		  return param1_00;
+		}
+		*/
+
 }

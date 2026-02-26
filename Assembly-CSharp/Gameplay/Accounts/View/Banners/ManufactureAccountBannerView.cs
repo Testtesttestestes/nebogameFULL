@@ -26,6 +26,26 @@ namespace Gameplay.Accounts.View.Banners
 		[Address(RVA = "0xA3D9", Offset = "0xA3D9", VA = "0xA3D9", Slot = "12")]
 		protected override string FormatBacktimeCallback(float value)
 		{
+		/* --- GHIDRA: FormatBacktimeCallback ---
+		void Gameplay_Accounts_View_Banners_ManufactureAccountBannerView__FormatBacktimeCallback
+		               (undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a588a4 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Gameplay_Accounts_View_Banners_AbstractAccountBannerView_ManufactureAccount___ctor__
+		              );
+		    DAT_ram_00a588a4 = '\x01';
+		  }
+		  Sirenix_Serialization_FormatterEmitter_AOTEmittedFormatter___Il2CppFullySharedGenericType____ctor
+		            (param1,
+		             Method_Gameplay_Accounts_View_Banners_AbstractAccountBannerView_ManufactureAccount___ctor__
+		            );
+		  return;
+		}
+		*/
+
 			return null;
 		}
 
@@ -36,4 +56,37 @@ namespace Gameplay.Accounts.View.Banners
 		{
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_AccountId ---
+		undefined4
+		Gameplay_Accounts_View_Banners_ManufactureAccountBannerView__get_AccountId
+		          (undefined4 param1,float param2,undefined4 param3)
+		
+		{
+		  undefined4 uVar1;
+		  undefined4 param3_00;
+		  
+		  if (DAT_ram_00a588a3 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_GameLocalization_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Utils_TimeUtils_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_118);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_2480);
+		    DAT_ram_00a588a3 = '\x01';
+		  }
+		  if (*(int *)(Core_GameLocalization_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Core_GameLocalization_TypeInfo);
+		  }
+		  uVar1 = func_ii_7508(StringLiteral_2480,1,0,1,0,0,0,0);
+		  if (*(int *)(Utils_TimeUtils_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Utils_TimeUtils_TypeInfo);
+		  }
+		  param3_00 = Utils_TimeUtils__DateFormat((double)param2,0);
+		  uVar1 = UnityEngine_AndroidJavaObject__FromJavaArray_Nullable_int__
+		                    (uVar1,StringLiteral_118,param3_00,0);
+		  return uVar1;
+		}
+		*/
+
 }

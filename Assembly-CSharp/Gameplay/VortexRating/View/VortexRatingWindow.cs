@@ -128,6 +128,37 @@ namespace Gameplay.VortexRating.View
 		[Address(RVA = "0x66C2", Offset = "0x66C2", VA = "0x66C2", Slot = "22")]
 		protected override void OnShow(VortexRatingWindow.VortexWindowArgs args)
 		{
+		/* --- GHIDRA: OnShow ---
+		void Gameplay_VortexRating_View_VortexRatingWindow__OnShow(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  
+		  if (DAT_ram_00a581a6 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UI_Windows_ClosableBaseWindow_VortexRatingWindow_VortexWindowArgs__OnClose__)
+		    ;
+		    DAT_ram_00a581a6 = '\x01';
+		  }
+		  UI_Windows_ClosableBaseWindow_object___OnClickBack
+		            (param1,
+		             Method_UI_Windows_ClosableBaseWindow_VortexRatingWindow_VortexWindowArgs__OnClose__);
+		  MVC_AbstractController__Run(*(undefined4 *)(param1 + 0x60),0);
+		  iVar1 = **(int **)(param1 + 100);
+		  (**(code **)((ulonglong)*(uint *)(iVar1 + 0x130) * 4))
+		            (*(int **)(param1 + 100),*(undefined4 *)(iVar1 + 0x134));
+		  iVar1 = **(int **)(param1 + 0x60);
+		  (**(code **)((ulonglong)*(uint *)(iVar1 + 0xe8) * 4))
+		            (*(int **)(param1 + 0x60),*(undefined4 *)(iVar1 + 0xec));
+		  iVar1 = **(int **)(param1 + 0x58);
+		  (**(code **)((ulonglong)*(uint *)(iVar1 + 0xe8) * 4))
+		            (*(int **)(param1 + 0x58),*(undefined4 *)(iVar1 + 0xec));
+		  *(undefined8 *)(param1 + 0x60) = 0;
+		  *(undefined4 *)(param1 + 0x58) = 0;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06001501 RID: 5377 RVA: 0x00002050 File Offset: 0x00000250
@@ -135,6 +166,83 @@ namespace Gameplay.VortexRating.View
 		[Address(RVA = "0x66C3", Offset = "0x66C3", VA = "0x66C3", Slot = "19")]
 		protected override void OnClose()
 		{
+		/* --- GHIDRA: OnClose ---
+		void Gameplay_VortexRating_View_VortexRatingWindow__OnClose(int param1,undefined4 param2)
+		
+		{
+		  uint uVar1;
+		  uint *puVar2;
+		  undefined4 uVar3;
+		  undefined4 uVar4;
+		  int *piVar5;
+		  int iVar6;
+		  
+		  if (DAT_ram_00a581a7 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_Gameplay_IGame_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Gameplay_VortexRating_Controller_VortexRatingController_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Gameplay_VortexRating_Events_VortexRatingEvents_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Gameplay_VortexRating_Model_VortexRatingModel_TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&Gameplay_VortexRating_Controller_VortexRatingViewMediator_TypeInfo);
+		    DAT_ram_00a581a7 = '\x01';
+		  }
+		  if (DAT_ram_00a6456f == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_Gameplay_Game_TypeInfo);
+		    DAT_ram_00a6456f = '\x01';
+		  }
+		  uVar1 = 0;
+		  piVar5 = (int *)**(undefined4 **)(Core_Gameplay_Game_TypeInfo + 0x5c);
+		  iVar6 = *piVar5;
+		  if (*(ushort *)(iVar6 + 0xb6) != 0) {
+		    do {
+		      if (Core_Gameplay_IGame_TypeInfo == *(int *)(*(int *)(iVar6 + 0x58) + uVar1 * 8)) {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar6 + 0x58) + uVar1 * 8 + 4) * 8 + iVar6 + 0x140);
+		        goto code_r0x80eb1e48;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar6 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(piVar5,Core_Gameplay_IGame_TypeInfo,0x10);
+		code_r0x80eb1e48:
+		  uVar3 = (**(code **)((ulonglong)*puVar2 * 4))(piVar5,puVar2[1]);
+		  uVar3 = func_ii_7112(uVar3,0);
+		  uVar4 = unnamed_function_1417(Gameplay_VortexRating_Model_VortexRatingModel_TypeInfo);
+		  Gameplay_VortexRating_View_GreatOnesTab_GreatUserView___ctor(uVar4,uVar3,uVar3);
+		  *(undefined4 *)(param1 + 0x58) = uVar4;
+		  uVar3 = unnamed_function_1417(Gameplay_VortexRating_Events_VortexRatingEvents_TypeInfo);
+		  *(undefined4 *)(param1 + 0x5c) = uVar3;
+		  uVar4 = *(undefined4 *)(param1 + 0x58);
+		  iVar6 = unnamed_function_1417(Gameplay_VortexRating_Controller_VortexRatingController_TypeInfo);
+		  if (DAT_ram_00a581e2 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_MVC_AbstractController_VortexRatingModel__VortexRatingEvents___ctor__);
+		    Mono_Security_ASN1__get_Item(&Method_Core_Net_ServiceFactory_GetService_RatingService___);
+		    Mono_Security_ASN1__get_Item(&Core_Net_ServiceFactory_TypeInfo);
+		    DAT_ram_00a581e2 = '\x01';
+		  }
+		  Gameplay_Combat_AbstractCombat_object__object__object__object__object___set_User
+		            (iVar6,uVar4,uVar3,
+		             Method_MVC_AbstractController_VortexRatingModel__VortexRatingEvents___ctor__);
+		  if (*(int *)(Core_Net_ServiceFactory_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Core_Net_ServiceFactory_TypeInfo);
+		  }
+		  uVar3 = Core_Gameplay_Managers_LoggedManager__RequestLogin
+		                    (Method_Core_Net_ServiceFactory_GetService_RatingService___);
+		  *(undefined4 *)(iVar6 + 0x18) = uVar3;
+		  *(int *)(param1 + 0x60) = iVar6;
+		  uVar3 = *(undefined4 *)(param1 + 0x58);
+		  uVar4 = *(undefined4 *)(param1 + 0x5c);
+		  piVar5 = (int *)unnamed_function_1417
+		                            (Gameplay_VortexRating_Controller_VortexRatingViewMediator_TypeInfo);
+		  Gameplay_VortexRating_Controller_VortexRatingController__Dispose(piVar5,uVar3,uVar4,iVar6,iVar6);
+		  (**(code **)((ulonglong)*(uint *)(*piVar5 + 0x160) * 4))
+		            (piVar5,param1,*(undefined4 *)(*piVar5 + 0x164));
+		  *(int **)(param1 + 100) = piVar5;
+		  MVC_AbstractController__Dispose(*(undefined4 *)(param1 + 0x60),0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06001502 RID: 5378 RVA: 0x00002050 File Offset: 0x00000250
@@ -142,6 +250,28 @@ namespace Gameplay.VortexRating.View
 		[Address(RVA = "0x66C4", Offset = "0x66C4", VA = "0x66C4")]
 		private void SetupMVC()
 		{
+		/* --- GHIDRA: SetupMVC ---
+		void Gameplay_VortexRating_View_VortexRatingWindow__SetupMVC(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  
+		  MVC_AbstractController__Run(*(undefined4 *)(param1 + 0x60),0);
+		  iVar1 = **(int **)(param1 + 100);
+		  (**(code **)((ulonglong)*(uint *)(iVar1 + 0x130) * 4))
+		            (*(int **)(param1 + 100),*(undefined4 *)(iVar1 + 0x134));
+		  iVar1 = **(int **)(param1 + 0x60);
+		  (**(code **)((ulonglong)*(uint *)(iVar1 + 0xe8) * 4))
+		            (*(int **)(param1 + 0x60),*(undefined4 *)(iVar1 + 0xec));
+		  iVar1 = **(int **)(param1 + 0x58);
+		  (**(code **)((ulonglong)*(uint *)(iVar1 + 0xe8) * 4))
+		            (*(int **)(param1 + 0x58),*(undefined4 *)(iVar1 + 0xec));
+		  *(undefined8 *)(param1 + 0x60) = 0;
+		  *(undefined4 *)(param1 + 0x58) = 0;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06001503 RID: 5379 RVA: 0x00002050 File Offset: 0x00000250
@@ -149,6 +279,22 @@ namespace Gameplay.VortexRating.View
 		[Address(RVA = "0x66C5", Offset = "0x66C5", VA = "0x66C5")]
 		private void DestroyMVC()
 		{
+		/* --- GHIDRA: DestroyMVC ---
+		void Gameplay_VortexRating_View_VortexRatingWindow__DestroyMVC(undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a581a8 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UI_Windows_ClosableBaseWindow_VortexRatingWindow_VortexWindowArgs___ctor__);
+		    DAT_ram_00a581a8 = '\x01';
+		  }
+		  UI_MonoBehaviourWithStates_ClientStateChangedDelegate___Il2CppFullySharedGenericStructType___Invoke
+		            (param1,
+		             Method_UI_Windows_ClosableBaseWindow_VortexRatingWindow_VortexWindowArgs___ctor__);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06001504 RID: 5380 RVA: 0x00002050 File Offset: 0x00000250
@@ -236,4 +382,24 @@ namespace Gameplay.VortexRating.View
 			}
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_InRatingButton ---
+		void Gameplay_VortexRating_View_VortexRatingWindow__get_InRatingButton
+		               (undefined4 param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  if (DAT_ram_00a581a5 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UI_Windows_ClosableBaseWindow_VortexRatingWindow_VortexWindowArgs__OnShow__);
+		    DAT_ram_00a581a5 = '\x01';
+		  }
+		  func_ii_7769(param1,param2,
+		               Method_UI_Windows_ClosableBaseWindow_VortexRatingWindow_VortexWindowArgs__OnShow__);
+		  Gameplay_VortexRating_View_VortexRatingWindow__OnClose(param1,param1);
+		  return;
+		}
+		*/
+
 }

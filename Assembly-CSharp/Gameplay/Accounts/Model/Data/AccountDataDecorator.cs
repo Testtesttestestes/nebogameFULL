@@ -143,6 +143,24 @@ namespace Gameplay.Accounts.Model.Data
 		[Address(RVA = "0xA417", Offset = "0xA417", VA = "0xA417", Slot = "20")]
 		public virtual bool TryGetNested(out List<IAccountDataDecorator> accounts)
 		{
+		/* --- GHIDRA: TryGetNested ---
+		uint Gameplay_Accounts_Model_Data_AccountDataDecorator__TryGetNested
+		               (undefined4 param1,uint param2,uint param3,uint param4,undefined4 param5)
+		
+		{
+		  if ((param3 != 0) && (param4 != 0)) {
+		    return (uint)(param2 <= param4 && param3 <= param2);
+		  }
+		  if (param3 != 0) {
+		    return (uint)(param3 <= param2);
+		  }
+		  if (param4 != 0) {
+		    return (uint)(param2 <= param4);
+		  }
+		  return (uint)(param2 == 0);
+		}
+		*/
+
 			return default(bool);
 		}
 
@@ -161,4 +179,134 @@ namespace Gameplay.Accounts.Model.Data
 		{
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: set_StickerDic ---
+		undefined4
+		Gameplay_Accounts_Model_Data_AccountDataDecorator__set_StickerDic(int *param1,undefined4 param2)
+		
+		{
+		  uint uVar1;
+		  int *param1_00;
+		  uint *puVar2;
+		  undefined4 uVar3;
+		  int iVar4;
+		  
+		  if (DAT_ram_00a588b2 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_Data_Accounts_IAccountData_TypeInfo);
+		    DAT_ram_00a588b2 = '\x01';
+		  }
+		  param1_00 = (int *)(**(code **)((ulonglong)*(uint *)(*param1 + 0x140) * 4))
+		                               (param1,*(undefined4 *)(*param1 + 0x144));
+		  iVar4 = *param1_00;
+		  if (*(ushort *)(iVar4 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (Core_Data_Accounts_IAccountData_TypeInfo == *(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8))
+		      {
+		        puVar2 = (uint *)(iVar4 + *(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8 + 4) * 8 + 0xc0);
+		        goto code_r0x80f3ac04;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar4 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(param1_00,Core_Data_Accounts_IAccountData_TypeInfo,0);
+		code_r0x80f3ac04:
+		  uVar3 = (**(code **)((ulonglong)*puVar2 * 4))(param1_00,puVar2[1]);
+		  return uVar3;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_AccountInfo ---
+		undefined4
+		Gameplay_Accounts_Model_Data_AccountDataDecorator__get_AccountInfo(int *param1,undefined4 param2)
+		
+		{
+		  uint uVar1;
+		  int *param1_00;
+		  uint *puVar2;
+		  undefined4 uVar3;
+		  int iVar4;
+		  
+		  if (DAT_ram_00a588b3 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_Data_Accounts_IAccountData_TypeInfo);
+		    DAT_ram_00a588b3 = '\x01';
+		  }
+		  param1_00 = (int *)(**(code **)((ulonglong)*(uint *)(*param1 + 0x140) * 4))
+		                               (param1,*(undefined4 *)(*param1 + 0x144));
+		  iVar4 = *param1_00;
+		  if (*(ushort *)(iVar4 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (Core_Data_Accounts_IAccountData_TypeInfo == *(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8))
+		      {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8 + 4) * 8 + iVar4 + 200);
+		        goto code_r0x80f3acbc;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar4 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(param1_00,Core_Data_Accounts_IAccountData_TypeInfo,1);
+		code_r0x80f3acbc:
+		  uVar3 = (**(code **)((ulonglong)*puVar2 * 4))(param1_00,puVar2[1]);
+		  return uVar3;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_BackTime ---
+		undefined4
+		Gameplay_Accounts_Model_Data_AccountDataDecorator__get_BackTime(int *param1,undefined4 param2)
+		
+		{
+		  uint uVar1;
+		  int iVar2;
+		  int *param1_00;
+		  uint *puVar3;
+		  undefined4 uVar4;
+		  
+		  if (DAT_ram_00a588b4 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_Data_Accounts_IAccountData_TypeInfo);
+		    DAT_ram_00a588b4 = '\x01';
+		  }
+		  iVar2 = (**(code **)((ulonglong)*(uint *)(*param1 + 0x140) * 4))
+		                    (param1,*(undefined4 *)(*param1 + 0x144));
+		  if (iVar2 == 0) {
+		    return 1;
+		  }
+		  param1_00 = (int *)(**(code **)((ulonglong)*(uint *)(*param1 + 0x140) * 4))
+		                               (param1,*(undefined4 *)(*param1 + 0x144));
+		  uVar1 = 0;
+		  iVar2 = *param1_00;
+		  if (*(ushort *)(iVar2 + 0xb6) != 0) {
+		    do {
+		      if (Core_Data_Accounts_IAccountData_TypeInfo == *(int *)(*(int *)(iVar2 + 0x58) + uVar1 * 8))
+		      {
+		        puVar3 = (uint *)(*(int *)(*(int *)(iVar2 + 0x58) + uVar1 * 8 + 4) * 8 + iVar2 + 0xd0);
+		        goto code_r0x80f3ad91;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar2 + 0xb6) != uVar1);
+		  }
+		  puVar3 = (uint *)func_ii_1080(param1_00,Core_Data_Accounts_IAccountData_TypeInfo,2);
+		code_r0x80f3ad91:
+		  uVar4 = (**(code **)((ulonglong)*puVar3 * 4))(param1_00,puVar3[1]);
+		  return uVar4;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_IsExpired ---
+		undefined4
+		Gameplay_Accounts_Model_Data_AccountDataDecorator__get_IsExpired
+		          (undefined4 param1,undefined4 *param2,undefined4 param3)
+		
+		{
+		  *param2 = 0;
+		  return 0;
+		}
+		*/
+
 }

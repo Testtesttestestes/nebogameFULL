@@ -24,6 +24,26 @@ namespace Gameplay.Portals.View.MyBetsTab
 		[Address(RVA = "0x74D6", Offset = "0x74D6", VA = "0x74D6")]
 		public StageInPortalsMyBetsListElement()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_Portals_View_MyBetsTab_StageInPortalsMyBetsListElement___ctor
+		               (undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a58114 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Elements_GenericList_SelectableListElementArgs_StageInPortalsMyBetsListElement___ctor__
+		              );
+		    DAT_ram_00a58114 = '\x01';
+		  }
+		  UnityEngine_InputSystem_LowLevel_SelectObservable___Il2CppFullySharedGenericType____Il2CppFullySharedGenericType___Subscribe
+		            (param1,
+		             Method_UI_Elements_GenericList_SelectableListElementArgs_StageInPortalsMyBetsListElement___ctor__
+		            );
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x04001397 RID: 5015

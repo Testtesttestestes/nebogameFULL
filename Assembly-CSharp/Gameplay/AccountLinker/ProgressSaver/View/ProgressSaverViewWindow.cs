@@ -29,6 +29,49 @@ namespace Gameplay.AccountLinker.ProgressSaver.View
 		[Address(RVA = "0xA50D", Offset = "0xA50D", VA = "0xA50D", Slot = "19")]
 		protected override void OnClose()
 		{
+		/* --- GHIDRA: OnClose ---
+		void Gameplay_AccountLinker_ProgressSaver_View_ProgressSaverViewWindow__OnClose
+		               (int param1,int param2,undefined4 param3)
+		
+		{
+		  undefined4 param2_00;
+		  undefined4 param3_00;
+		  int *param1_00;
+		  undefined4 param4;
+		  int iVar1;
+		  
+		  if (DAT_ram_00a58932 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Windows_ClosableBaseWindow_ProgressSaverViewWindow_ProgressSaverViewWindowArgs__OnShow__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&Gameplay_AccountLinker_ProgressSaver_Controller_ProgressSaverViewMediator_TypeInfo);
+		    DAT_ram_00a58932 = '\x01';
+		  }
+		  func_ii_7769(param1,param2,
+		               Method_UI_Windows_ClosableBaseWindow_ProgressSaverViewWindow_ProgressSaverViewWindowArgs__OnShow__
+		              );
+		  iVar1 = **(int **)(param2 + 0x18);
+		  param2_00 = (**(code **)((ulonglong)*(uint *)(iVar1 + 0x100) * 4))
+		                        (*(int **)(param2 + 0x18),*(undefined4 *)(iVar1 + 0x104));
+		  iVar1 = **(int **)(param2 + 0x18);
+		  param3_00 = (**(code **)((ulonglong)*(uint *)(iVar1 + 0x110) * 4))
+		                        (*(int **)(param2 + 0x18),*(undefined4 *)(iVar1 + 0x114));
+		  param4 = *(undefined4 *)(param2 + 0x18);
+		  param1_00 = (int *)unnamed_function_1417
+		                               (
+		                               Gameplay_AccountLinker_ProgressSaver_Controller_ProgressSaverViewMediator_TypeInfo
+		                               );
+		  Gameplay_AccountLinker_ProgressSaver_Controller_ProgressSaverEnterPointFromMenuViewMediator___c___SetupView_b__18_2
+		            (param1_00,param2_00,param3_00,param4,0);
+		  *(int **)(param1 + 0x40) = param1_00;
+		  (**(code **)((ulonglong)*(uint *)(*param1_00 + 0x160) * 4))
+		            (param1_00,*(undefined4 *)(param1 + 0x3c),*(undefined4 *)(*param1_00 + 0x164));
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06005793 RID: 22419 RVA: 0x00002050 File Offset: 0x00000250
@@ -36,6 +79,26 @@ namespace Gameplay.AccountLinker.ProgressSaver.View
 		[Address(RVA = "0xA50E", Offset = "0xA50E", VA = "0xA50E", Slot = "22")]
 		protected override void OnShow(ProgressSaverViewWindow.ProgressSaverViewWindowArgs args)
 		{
+		/* --- GHIDRA: OnShow ---
+		void Gameplay_AccountLinker_ProgressSaver_View_ProgressSaverViewWindow__OnShow
+		               (undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a58933 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Windows_ClosableBaseWindow_ProgressSaverViewWindow_ProgressSaverViewWindowArgs___ctor__
+		              );
+		    DAT_ram_00a58933 = '\x01';
+		  }
+		  UI_MonoBehaviourWithStates_ClientStateChangedDelegate___Il2CppFullySharedGenericStructType___Invoke
+		            (param1,
+		             Method_UI_Windows_ClosableBaseWindow_ProgressSaverViewWindow_ProgressSaverViewWindowArgs___ctor__
+		            );
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06005794 RID: 22420 RVA: 0x00002050 File Offset: 0x00000250
@@ -86,4 +149,33 @@ namespace Gameplay.AccountLinker.ProgressSaver.View
 			}
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_WindowId ---
+		void Gameplay_AccountLinker_ProgressSaver_View_ProgressSaverViewWindow__get_WindowId
+		               (int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  
+		  if (DAT_ram_00a58931 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Windows_ClosableBaseWindow_ProgressSaverViewWindow_ProgressSaverViewWindowArgs__OnClose__
+		              );
+		    DAT_ram_00a58931 = '\x01';
+		  }
+		  UI_Windows_ClosableBaseWindow_object___OnClickBack
+		            (param1,
+		             Method_UI_Windows_ClosableBaseWindow_ProgressSaverViewWindow_ProgressSaverViewWindowArgs__OnClose__
+		            );
+		  iVar1 = **(int **)(param1 + 0x40);
+		  (**(code **)((ulonglong)*(uint *)(iVar1 + 0x130) * 4))
+		            (*(int **)(param1 + 0x40),*(undefined4 *)(iVar1 + 0x134));
+		  *(undefined4 *)(param1 + 0x40) = 0;
+		  return;
+		}
+		*/
+
 }

@@ -22,6 +22,23 @@ namespace UI.ValuePicker
 		[Address(RVA = "0x5C6F", Offset = "0x5C6F", VA = "0x5C6F")]
 		public ValuePickerOsaParams()
 		{
+		/* --- GHIDRA: .ctor ---
+		void UI_ValuePicker_ValuePickerOsaParams___ctor(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a5b8ae == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_UnityEngine_Component_GetComponent_ValuePickerItem___);
+		    DAT_ram_00a5b8ae = '\x01';
+		  }
+		  uVar1 = func_ii_5677(*(undefined4 *)(param1 + 8),
+		                       Method_UnityEngine_Component_GetComponent_ValuePickerItem___);
+		  *(undefined4 *)(param1 + 0x14) = uVar1;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x04000344 RID: 836

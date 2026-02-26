@@ -27,4 +27,20 @@ namespace WebGLSupport
 		{
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: WebGLInputMobileRegister ---
+		void WebGLSupport_WebGLInputMobilePlugin__WebGLInputMobileRegister
+		               (undefined4 param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  undefined4 param2_00;
+		  
+		  param2_00 = unnamed_function_1434(param2);
+		  import::env::WebGLInputMobileOnFocusOut(param1,param2_00);
+		  return;
+		}
+		*/
+
 }

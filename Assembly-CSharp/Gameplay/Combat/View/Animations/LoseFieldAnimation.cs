@@ -16,6 +16,26 @@ namespace Gameplay.Combat.View.Animations
 		[Address(RVA = "0x89A5", Offset = "0x89A5", VA = "0x89A5")]
 		public void StartAnimation(StoneMono[,] stones, Transform parent)
 		{
+		/* --- GHIDRA: StartAnimation ---
+		int Gameplay_Combat_View_Animations_LoseFieldAnimation__StartAnimation
+		              (undefined4 param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  int iVar1;
+		  
+		  if (DAT_ram_00a57e21 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Gameplay_Combat_View_Animations_LoseFieldAnimation__LoseEffect_d__2_TypeInfo);
+		    DAT_ram_00a57e21 = '\x01';
+		  }
+		  iVar1 = unnamed_function_1417
+		                    (Gameplay_Combat_View_Animations_LoseFieldAnimation__LoseEffect_d__2_TypeInfo);
+		  *(undefined4 *)(iVar1 + 0x10) = param2;
+		  *(undefined4 *)(iVar1 + 8) = 0;
+		  return iVar1;
+		}
+		*/
+
 		}
 
 		// Token: 0x06003A2A RID: 14890 RVA: 0x00002052 File Offset: 0x00000252
@@ -23,6 +43,17 @@ namespace Gameplay.Combat.View.Animations
 		[Address(RVA = "0x89A6", Offset = "0x89A6", VA = "0x89A6")]
 		private IEnumerator LoseEffect(StoneMono[,] stones)
 		{
+		/* --- GHIDRA: LoseEffect ---
+		void Gameplay_Combat_View_Animations_LoseFieldAnimation__LoseEffect(int param1,undefined4 param2)
+		
+		{
+		  if (*(int *)(param1 + 8) != 0) {
+		    func_ii_7950(*(int *)(param1 + 8),0);
+		  }
+		  return;
+		}
+		*/
+
 			return null;
 		}
 

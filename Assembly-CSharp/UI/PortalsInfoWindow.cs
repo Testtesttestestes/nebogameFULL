@@ -31,6 +31,54 @@ namespace UI
 		[Address(RVA = "0x5C2F", Offset = "0x5C2F", VA = "0x5C2F", Slot = "27")]
 		protected override void HandleDescription()
 		{
+		/* --- GHIDRA: HandleDescription ---
+		void UI_PortalsInfoWindow__HandleDescription(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  undefined4 param1_00;
+		  int *piVar2;
+		  int iVar3;
+		  
+		  if (DAT_ram_00a5b894 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Windows_BaseDialogWindow_PortalsInfoWindow_PortalsInfoWindowArgs__HandleContent__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Windows_BaseWindow_PortalsInfoWindow_PortalsInfoWindowArgs__get_WindowArgs__
+		              );
+		    DAT_ram_00a5b894 = '\x01';
+		  }
+		  UI_Windows_BaseDialogWindow_object___HandleButtons
+		            (param1,
+		             Method_UI_Windows_BaseDialogWindow_PortalsInfoWindow_PortalsInfoWindowArgs__HandleContent__
+		            );
+		  param1_00 = *(undefined4 *)(param1 + 0x50);
+		  iVar1 = func_ii_8093(param1,
+		                       Method_UI_Windows_BaseWindow_PortalsInfoWindow_PortalsInfoWindowArgs__get_WindowArgs__
+		                      );
+		  Core_Extensions_Dict_PortalDicExt__GetCurrencyIcon60x66(param1_00,*(undefined4 *)(iVar1 + 0x2c),0)
+		  ;
+		  piVar2 = *(int **)(param1 + 0x54);
+		  iVar1 = func_ii_8093(param1,
+		                       Method_UI_Windows_BaseWindow_PortalsInfoWindow_PortalsInfoWindowArgs__get_WindowArgs__
+		                      );
+		  iVar3 = *piVar2;
+		  (**(code **)((ulonglong)*(uint *)(iVar3 + 0x2d0) * 4))
+		            (piVar2,*(undefined4 *)(iVar1 + 0x30),*(undefined4 *)(iVar3 + 0x2d4));
+		  piVar2 = *(int **)(param1 + 0x58);
+		  iVar1 = func_ii_8093(param1,
+		                       Method_UI_Windows_BaseWindow_PortalsInfoWindow_PortalsInfoWindowArgs__get_WindowArgs__
+		                      );
+		  iVar3 = *piVar2;
+		  (**(code **)((ulonglong)*(uint *)(iVar3 + 0x2d0) * 4))
+		            (piVar2,*(undefined4 *)(iVar1 + 0x34),*(undefined4 *)(iVar3 + 0x2d4));
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x060008A0 RID: 2208 RVA: 0x00002050 File Offset: 0x00000250
@@ -38,6 +86,23 @@ namespace UI
 		[Address(RVA = "0x5C30", Offset = "0x5C30", VA = "0x5C30", Slot = "28")]
 		protected override void HandleContent()
 		{
+		/* --- GHIDRA: HandleContent ---
+		void UI_PortalsInfoWindow__HandleContent(undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a5b895 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UI_Windows_BaseDialogWindow_PortalsInfoWindow_PortalsInfoWindowArgs___ctor__)
+		    ;
+		    DAT_ram_00a5b895 = '\x01';
+		  }
+		  UI_Windows_BaseDialogWindow_BaseDialogWindowArgs_object____ctor
+		            (param1,
+		             Method_UI_Windows_BaseDialogWindow_PortalsInfoWindow_PortalsInfoWindowArgs___ctor__);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x060008A1 RID: 2209 RVA: 0x00002050 File Offset: 0x00000250
@@ -123,4 +188,37 @@ namespace UI
 			}
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_WindowId ---
+		void UI_PortalsInfoWindow__get_WindowId(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  int *piVar2;
+		  int iVar3;
+		  
+		  if (DAT_ram_00a5b893 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Windows_BaseDialogWindow_PortalsInfoWindow_PortalsInfoWindowArgs__get_DescriptionField__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Windows_BaseWindow_PortalsInfoWindow_PortalsInfoWindowArgs__get_WindowArgs__
+		              );
+		    DAT_ram_00a5b893 = '\x01';
+		  }
+		  piVar2 = *(int **)(param1 + 0x3c);
+		  iVar1 = func_ii_8093(param1,
+		                       Method_UI_Windows_BaseWindow_PortalsInfoWindow_PortalsInfoWindowArgs__get_WindowArgs__
+		                      );
+		  iVar3 = *piVar2;
+		  (**(code **)((ulonglong)*(uint *)(iVar3 + 0x2d0) * 4))
+		            (piVar2,*(undefined4 *)(iVar1 + 0x1c),*(undefined4 *)(iVar3 + 0x2d4));
+		  return;
+		}
+		*/
+
 }

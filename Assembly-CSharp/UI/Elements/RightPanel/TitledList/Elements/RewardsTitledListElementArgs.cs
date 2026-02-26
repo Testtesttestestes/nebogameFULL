@@ -12,6 +12,20 @@ namespace UI.Elements.RightPanel.TitledList.Elements
 		[Address(RVA = "0x602B", Offset = "0x602B", VA = "0x602B")]
 		public RewardsTitledListElementArgs()
 		{
+		/* --- GHIDRA: .ctor ---
+		void UI_Elements_RightPanel_TitledList_Elements_RewardsTitledListElementArgs___ctor
+		               (int param1,int param2,undefined4 param3)
+		
+		{
+		  int iVar1;
+		  
+		  iVar1 = **(int **)(param1 + 0x10);
+		  (**(code **)((ulonglong)*(uint *)(iVar1 + 0x2d0) * 4))
+		            (*(int **)(param1 + 0x10),*(undefined4 *)(param2 + 8),*(undefined4 *)(iVar1 + 0x2d4));
+		  return;
+		}
+		*/
+
 		}
 	}
 }

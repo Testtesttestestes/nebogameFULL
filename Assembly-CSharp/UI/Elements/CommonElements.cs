@@ -15,6 +15,17 @@ namespace UI.Elements
 		[Address(RVA = "0x5FC7", Offset = "0x5FC7", VA = "0x5FC7")]
 		public CommonElements()
 		{
+		/* --- GHIDRA: .ctor ---
+		void UI_Elements_CommonElements___ctor
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  Core_Extensions_Dict_PortalDicExt__GetCurrencyIcon60x66(*(undefined4 *)(param1 + 8),param2,0);
+		  UnityEngine_Component__GetComponentInChildren_object_(*(undefined4 *)(param1 + 0xc),param3,0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x020001EE RID: 494

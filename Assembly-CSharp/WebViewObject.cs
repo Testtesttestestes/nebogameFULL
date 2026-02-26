@@ -68,6 +68,30 @@ public class WebViewObject : MonoBehaviour
 	[Address(RVA = "0x558F", Offset = "0x558F", VA = "0x558F")]
 	public static bool IsWebViewAvailable()
 	{
+		/* --- GHIDRA: IsWebViewAvailable ---
+		void WebViewObject__IsWebViewAvailable
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4,undefined4 param5,
+		               undefined4 param6,undefined4 param7,undefined4 param8,undefined4 param9,
+		               undefined4 param10,undefined4 param11,undefined4 param12,undefined4 param13,
+		               undefined4 param14,undefined4 param15,undefined4 param16)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  *(undefined4 *)(param1 + 0x24) = param7;
+		  *(undefined4 *)(param1 + 0x20) = param5;
+		  *(undefined4 *)(param1 + 0x1c) = param6;
+		  *(undefined4 *)(param1 + 0x18) = param4;
+		  *(undefined4 *)(param1 + 0x14) = param3;
+		  *(undefined4 *)(param1 + 0x10) = param2;
+		  uVar1 = GAFInternal_Assets_GAFAnimationAssetInternal__collectExternalData(param1,0);
+		  uVar1 = unnamed_function_1428(uVar1);
+		  import::env::_gree_unity_webview_init(uVar1);
+		  unnamed_function_1427(uVar1);
+		  return;
+		}
+		*/
+
 		return default(bool);
 	}
 
@@ -76,6 +100,20 @@ public class WebViewObject : MonoBehaviour
 	[Address(RVA = "0x5590", Offset = "0x5590", VA = "0x5590")]
 	public void Init([Optional] Action<string> cb, [Optional] Action<string> err, [Optional] Action<string> httpErr, [Optional] Action<string> ld, [Optional] Action<string> started, [Optional] Action<string> hooked, bool transparent = false, bool zoom = true, string ua = "", int androidForceDarkMode = 0, bool enableWKWebView = true, int wkContentMode = 0, bool wkAllowsLinkPreview = true, bool separated = false)
 	{
+		/* --- GHIDRA: Init ---
+		void WebViewObject__Init(undefined4 param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  uVar1 = GAFInternal_Assets_GAFAnimationAssetInternal__collectExternalData(param1,0);
+		  uVar1 = unnamed_function_1428(uVar1);
+		  import::env::_gree_unity_webview_destroy(uVar1);
+		  unnamed_function_1427(uVar1);
+		  return;
+		}
+		*/
+
 	}
 
 	// Token: 0x060000CC RID: 204 RVA: 0x00002050 File Offset: 0x00000250
@@ -104,6 +142,72 @@ public class WebViewObject : MonoBehaviour
 	[Address(RVA = "0x5594", Offset = "0x5594", VA = "0x5594")]
 	public void SetCenterPositionWithScale(Vector2 center, Vector2 scale)
 	{
+		/* --- GHIDRA: SetCenterPositionWithScale ---
+		void WebViewObject__SetCenterPositionWithScale
+		               (int param1,int param2,int param3,int param4,int param5,uint param6,undefined4 param7
+		               )
+		
+		{
+		  undefined4 uVar1;
+		  float fVar2;
+		  float fVar3;
+		  float fVar4;
+		  float fVar5;
+		  int param5_00;
+		  int param4_00;
+		  int param3_00;
+		  int param2_00;
+		  
+		  *(char *)(param1 + 0x3c) = (char)param6;
+		  *(int *)(param1 + 0x38) = param5;
+		  *(int *)(param1 + 0x34) = param4;
+		  *(int *)(param1 + 0x30) = param3;
+		  *(int *)(param1 + 0x2c) = param2;
+		  fVar2 = (float)param5;
+		  fVar3 = (float)param4;
+		  fVar4 = (float)param3;
+		  fVar5 = (float)param2;
+		  if ((((fVar5 != *(float *)(param1 + 0x40)) || (*(float *)(param1 + 0x44) != fVar4)) ||
+		      (*(float *)(param1 + 0x48) != fVar3)) ||
+		     ((*(float *)(param1 + 0x4c) != fVar2 || (*(byte *)(param1 + 0x50) != param6)))) {
+		    *(char *)(param1 + 0x50) = (char)param6;
+		    *(float *)(param1 + 0x4c) = fVar2;
+		    *(float *)(param1 + 0x48) = fVar3;
+		    *(float *)(param1 + 0x44) = fVar4;
+		    *(float *)(param1 + 0x40) = fVar5;
+		    if (ABS(fVar2) < 2.1474836e+09) {
+		      param5_00 = (int)fVar2;
+		    }
+		    else {
+		      param5_00 = -0x80000000;
+		    }
+		    if (ABS(fVar3) < 2.1474836e+09) {
+		      param4_00 = (int)fVar3;
+		    }
+		    else {
+		      param4_00 = -0x80000000;
+		    }
+		    if (ABS(fVar4) < 2.1474836e+09) {
+		      param3_00 = (int)fVar4;
+		    }
+		    else {
+		      param3_00 = -0x80000000;
+		    }
+		    if (ABS(fVar5) < 2.1474836e+09) {
+		      param2_00 = (int)fVar5;
+		    }
+		    else {
+		      param2_00 = -0x80000000;
+		    }
+		    uVar1 = GAFInternal_Assets_GAFAnimationAssetInternal__collectExternalData(param1,0);
+		    uVar1 = unnamed_function_1428(uVar1);
+		    import::env::_gree_unity_webview_setMargins(uVar1,param2_00,param3_00,param4_00,param5_00);
+		    unnamed_function_1427(uVar1);
+		  }
+		  return;
+		}
+		*/
+
 	}
 
 	// Token: 0x060000D0 RID: 208 RVA: 0x00002050 File Offset: 0x00000250
@@ -111,6 +215,21 @@ public class WebViewObject : MonoBehaviour
 	[Address(RVA = "0x5595", Offset = "0x5595", VA = "0x5595")]
 	public void SetMargins(int left, int top, int right, int bottom, bool relative = false)
 	{
+		/* --- GHIDRA: SetMargins ---
+		void WebViewObject__SetMargins(int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  uVar1 = GAFInternal_Assets_GAFAnimationAssetInternal__collectExternalData(param1,0);
+		  uVar1 = unnamed_function_1428(uVar1);
+		  import::env::_gree_unity_webview_setVisibility(uVar1,param2);
+		  unnamed_function_1427(uVar1);
+		  *(char *)(param1 + 0x28) = (char)param2;
+		  return;
+		}
+		*/
+
 	}
 
 	// Token: 0x060000D1 RID: 209 RVA: 0x00002050 File Offset: 0x00000250
@@ -184,6 +303,27 @@ public class WebViewObject : MonoBehaviour
 	[Address(RVA = "0x559F", Offset = "0x559F", VA = "0x559F")]
 	public bool SetURLPattern(string allowPattern, string denyPattern, string hookPattern)
 	{
+		/* --- GHIDRA: SetURLPattern ---
+		void WebViewObject__SetURLPattern(undefined4 param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  int iVar1;
+		  undefined4 uVar2;
+		  undefined4 param2_00;
+		  
+		  iVar1 = func_ii_4769(param2,0);
+		  if (iVar1 == 0) {
+		    uVar2 = GAFInternal_Assets_GAFAnimationAssetInternal__collectExternalData(param1,0);
+		    uVar2 = unnamed_function_1428(uVar2);
+		    param2_00 = unnamed_function_1428(param2);
+		    import::env::_gree_unity_webview_loadURL(uVar2,param2_00);
+		    unnamed_function_1427(uVar2);
+		    unnamed_function_1427(param2_00);
+		  }
+		  return;
+		}
+		*/
+
 		return default(bool);
 	}
 
@@ -192,6 +332,24 @@ public class WebViewObject : MonoBehaviour
 	[Address(RVA = "0x55A0", Offset = "0x55A0", VA = "0x55A0")]
 	public void LoadURL(string url)
 	{
+		/* --- GHIDRA: LoadURL ---
+		void WebViewObject__LoadURL(undefined4 param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  int iVar1;
+		  
+		  if (DAT_ram_00a6486e == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_5);
+		    DAT_ram_00a6486e = '\x01';
+		  }
+		  iVar1 = func_ii_4769(param2,0);
+		  if (iVar1 == 0) {
+		    func_ii_4769(param3,0);
+		  }
+		  return;
+		}
+		*/
+
 	}
 
 	// Token: 0x060000DC RID: 220 RVA: 0x00002050 File Offset: 0x00000250
@@ -199,6 +357,23 @@ public class WebViewObject : MonoBehaviour
 	[Address(RVA = "0x55A1", Offset = "0x55A1", VA = "0x55A1")]
 	public void LoadHTML(string html, string baseUrl)
 	{
+		/* --- GHIDRA: LoadHTML ---
+		void WebViewObject__LoadHTML(undefined4 param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  undefined4 uVar1;
+		  undefined4 param2_00;
+		  
+		  uVar1 = GAFInternal_Assets_GAFAnimationAssetInternal__collectExternalData(param1,0);
+		  uVar1 = unnamed_function_1428(uVar1);
+		  param2_00 = unnamed_function_1428(param2);
+		  import::env::_gree_unity_webview_evaluateJS(uVar1,param2_00);
+		  unnamed_function_1427(uVar1);
+		  unnamed_function_1427(param2_00);
+		  return;
+		}
+		*/
+
 	}
 
 	// Token: 0x060000DD RID: 221 RVA: 0x00002050 File Offset: 0x00000250
@@ -279,6 +454,23 @@ public class WebViewObject : MonoBehaviour
 	[Address(RVA = "0x55AC", Offset = "0x55AC", VA = "0x55AC")]
 	public void CallOnLoaded(string url)
 	{
+		/* --- GHIDRA: CallOnLoaded ---
+		void WebViewObject__CallOnLoaded(int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  undefined4 uVar1;
+		  int iVar2;
+		  
+		  if (*(int *)(param1 + 0x10) != 0) {
+		    uVar1 = Core_Extensions_UriExt__QueryStringToDictionary(param2,0);
+		    iVar2 = *(int *)(param1 + 0x10);
+		    (**(code **)((ulonglong)*(uint *)(iVar2 + 0xc) * 4))
+		              (*(undefined4 *)(iVar2 + 0x20),uVar1,*(undefined4 *)(iVar2 + 0x14));
+		  }
+		  return;
+		}
+		*/
+
 	}
 
 	// Token: 0x060000E8 RID: 232 RVA: 0x00002050 File Offset: 0x00000250
@@ -286,6 +478,23 @@ public class WebViewObject : MonoBehaviour
 	[Address(RVA = "0x55AD", Offset = "0x55AD", VA = "0x55AD")]
 	public void CallFromJS(string message)
 	{
+		/* --- GHIDRA: CallFromJS ---
+		void WebViewObject__CallFromJS(int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  undefined4 uVar1;
+		  int iVar2;
+		  
+		  if (*(int *)(param1 + 0x24) != 0) {
+		    uVar1 = Core_Extensions_UriExt__QueryStringToDictionary(param2,0);
+		    iVar2 = *(int *)(param1 + 0x24);
+		    (**(code **)((ulonglong)*(uint *)(iVar2 + 0xc) * 4))
+		              (*(undefined4 *)(iVar2 + 0x20),uVar1,*(undefined4 *)(iVar2 + 0x14));
+		  }
+		  return;
+		}
+		*/
+
 	}
 
 	// Token: 0x060000E9 RID: 233 RVA: 0x00002050 File Offset: 0x00000250
@@ -336,6 +545,18 @@ public class WebViewObject : MonoBehaviour
 	[Address(RVA = "0x55B4", Offset = "0x55B4", VA = "0x55B4")]
 	public void SaveCookies()
 	{
+		/* --- GHIDRA: SaveCookies ---
+		undefined4 WebViewObject__SaveCookies(undefined4 param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  if (DAT_ram_00a6486f == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_5);
+		    DAT_ram_00a6486f = '\x01';
+		  }
+		  return StringLiteral_5;
+		}
+		*/
+
 	}
 
 	// Token: 0x060000F0 RID: 240 RVA: 0x00002052 File Offset: 0x00000252
@@ -372,6 +593,45 @@ public class WebViewObject : MonoBehaviour
 	[Address(RVA = "0x55B9", Offset = "0x55B9", VA = "0x55B9")]
 	public WebViewObject()
 	{
+		/* --- GHIDRA: .ctor ---
+		void WebViewObject___ctor(undefined4 *param1,undefined4 param2)
+		
+		{
+		  undefined4 param1_00;
+		  undefined4 param1_01;
+		  
+		  if (DAT_ram_00a64870 == '\0') {
+		    Mono_Security_ASN1__get_Item(&byte___TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Field__PrivateImplementationDetails__5A8A5B9484AC66388EE90435198AEAE0557EC6022A29D0168D8677D995B270EB
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Field__PrivateImplementationDetails__B263E5A91F272E716DFA494294D732ACAF7047E3B8A3A92E3C65191B499845C4
+		              );
+		    DAT_ram_00a64870 = '\x01';
+		  }
+		  param1_00 = Mono_Security_ASN1Convert__ToOid
+		                        (byte___TypeInfo,s_UnityEngine_RectTransform__set_a_ram_000397e8 + 0x14);
+		  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray
+		            (param1_00,
+		             Field__PrivateImplementationDetails__B263E5A91F272E716DFA494294D732ACAF7047E3B8A3A92E3C65191B499845C4
+		             ,0);
+		  param1_01 = Mono_Security_ASN1Convert__ToOid
+		                        (byte___TypeInfo,s_kGL_EXT_shader_texture_lod_ram_000326e1 + 8);
+		  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray
+		            (param1_01,
+		             Field__PrivateImplementationDetails__5A8A5B9484AC66388EE90435198AEAE0557EC6022A29D0168D8677D995B270EB
+		             ,0);
+		  param1[4] = 0;
+		  *(undefined8 *)(param1 + 2) = 0xca600000f80;
+		  param1[1] = param1_01;
+		  *param1 = param1_00;
+		  return;
+		}
+		*/
+
 	}
 
 	// Token: 0x0400002F RID: 47
@@ -473,4 +733,101 @@ public class WebViewObject : MonoBehaviour
 	[Token(Token = "0x4000042")]
 	[Il2CppDummyDll.FieldOffset(Offset = "0x54")]
 	private IntPtr webView;
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_IsKeyboardVisible ---
+		void WebViewObject__get_IsKeyboardVisible(undefined4 param1,undefined4 param2)
+		
+		{
+		  undefined4 param1_00;
+		  
+		  param1_00 = unnamed_function_1428(param1);
+		  import::env::_gree_unity_webview_init(param1_00);
+		  unnamed_function_1427(param1_00);
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: _gree_unity_webview_init ---
+		void WebViewObject___gree_unity_webview_init
+		               (undefined4 param1,undefined4 param2,undefined4 param3,undefined4 param4,
+		               undefined4 param5,undefined4 param6)
+		
+		{
+		  undefined4 param1_00;
+		  
+		  param1_00 = unnamed_function_1428(param1);
+		  import::env::_gree_unity_webview_setMargins(param1_00,param2,param3,param4,param5);
+		  unnamed_function_1427(param1_00);
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: _gree_unity_webview_setMargins ---
+		void WebViewObject___gree_unity_webview_setMargins
+		               (undefined4 param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  undefined4 param1_00;
+		  
+		  param1_00 = unnamed_function_1428(param1);
+		  import::env::_gree_unity_webview_setVisibility(param1_00,param2);
+		  unnamed_function_1427(param1_00);
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: _gree_unity_webview_setVisibility ---
+		void WebViewObject___gree_unity_webview_setVisibility
+		               (undefined4 param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  undefined4 param1_00;
+		  undefined4 param2_00;
+		  
+		  param1_00 = unnamed_function_1428(param1);
+		  param2_00 = unnamed_function_1428(param2);
+		  import::env::_gree_unity_webview_loadURL(param1_00,param2_00);
+		  unnamed_function_1427(param1_00);
+		  unnamed_function_1427(param2_00);
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: _gree_unity_webview_loadURL ---
+		void WebViewObject___gree_unity_webview_loadURL
+		               (undefined4 param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  undefined4 param1_00;
+		  undefined4 param2_00;
+		  
+		  param1_00 = unnamed_function_1428(param1);
+		  param2_00 = unnamed_function_1428(param2);
+		  import::env::_gree_unity_webview_evaluateJS(param1_00,param2_00);
+		  unnamed_function_1427(param1_00);
+		  unnamed_function_1427(param2_00);
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: _gree_unity_webview_evaluateJS ---
+		void WebViewObject___gree_unity_webview_evaluateJS(undefined4 param1,undefined4 param2)
+		
+		{
+		  undefined4 param1_00;
+		  
+		  param1_00 = unnamed_function_1428(param1);
+		  import::env::_gree_unity_webview_destroy(param1_00);
+		  unnamed_function_1427(param1_00);
+		  return;
+		}
+		*/
+
 }

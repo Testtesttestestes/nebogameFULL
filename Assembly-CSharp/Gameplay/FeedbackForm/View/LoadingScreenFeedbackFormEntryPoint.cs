@@ -14,6 +14,33 @@ namespace Gameplay.FeedbackForm.View
 		[Address(RVA = "0x8142", Offset = "0x8142", VA = "0x8142")]
 		private void OnDestroy()
 		{
+		/* --- GHIDRA: OnDestroy ---
+		void Gameplay_FeedbackForm_View_LoadingScreenFeedbackFormEntryPoint__OnDestroy
+		               (int param1,undefined4 param2)
+		
+		{
+		  undefined4 param1_00;
+		  undefined4 param1_01;
+		  
+		  if (DAT_ram_00a575f4 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_IndexButtonBasic__TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Gameplay_FeedbackForm_View_LoadingScreenFeedbackFormEntryPoint_HandleFeedbackButtonClickEvent__
+		              );
+		    DAT_ram_00a575f4 = '\x01';
+		  }
+		  param1_01 = *(undefined4 *)(param1 + 0x10);
+		  param1_00 = unnamed_function_1417(System_Action_IndexButtonBasic__TypeInfo);
+		  UnityEngine_UIElements_VisualElement__get_layout
+		            (param1_00,param1,
+		             Method_Gameplay_FeedbackForm_View_LoadingScreenFeedbackFormEntryPoint_HandleFeedbackButtonClickEvent__
+		             ,0);
+		  UI_IndexButtonBasic__get_CanvasGroup(param1_01,param1_00,0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x060030E0 RID: 12512 RVA: 0x00002050 File Offset: 0x00000250
@@ -21,6 +48,44 @@ namespace Gameplay.FeedbackForm.View
 		[Address(RVA = "0x8143", Offset = "0x8143", VA = "0x8143")]
 		private void Awake()
 		{
+		/* --- GHIDRA: Awake ---
+		void Gameplay_FeedbackForm_View_LoadingScreenFeedbackFormEntryPoint__Awake
+		               (undefined4 param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  undefined4 uVar1;
+		  undefined4 uVar2;
+		  undefined4 param1_00;
+		  undefined4 param1_01;
+		  int iVar3;
+		  
+		  uVar1 = 0;
+		  if (DAT_ram_00a575f5 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Gameplay_FeedbackForm_View_FeedbackFormWindow_FeedbackFormWindowArgs_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Method_UI_Windows_PopupController_Show_FeedbackFormWindow___);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_12616);
+		    DAT_ram_00a575f5 = '\x01';
+		  }
+		  uVar2 = System_Uri___ctor(0);
+		  param1_00 = System_Globalization_TimeSpanFormat_FormatLiterals__get_Start(uVar2,0);
+		  param1_01 = System_Uri___ctor(0);
+		  iVar3 = System_Uri___ctor(0);
+		  uVar2 = StringLiteral_12616;
+		  if (*(int *)(iVar3 + 0x28) != 0) {
+		    uVar1 = *(undefined4 *)(*(int *)(iVar3 + 0x28) + 0x14);
+		  }
+		  uVar1 = Gameplay_FeedbackForm_Model_Source_LoadScreenSource___ctor(param1_01,uVar1,uVar1);
+		  iVar3 = unnamed_function_1417
+		                    (Gameplay_FeedbackForm_View_FeedbackFormWindow_FeedbackFormWindowArgs_TypeInfo);
+		  UI_Windows_BaseWindowArgs__Dispose(iVar3,0);
+		  *(undefined4 *)(iVar3 + 0x1c) = uVar1;
+		  Gameplay_Antiq_View_GroupReviewWindow_WindowArgs___ctor
+		            (param1_00,uVar2,iVar3,Method_UI_Windows_PopupController_Show_FeedbackFormWindow___);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x060030E1 RID: 12513 RVA: 0x00002050 File Offset: 0x00000250

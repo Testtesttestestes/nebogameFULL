@@ -102,6 +102,16 @@ namespace Utils
 		[Address(RVA = "0x574B", Offset = "0x574B", VA = "0x574B", Slot = "9")]
 		public virtual void Dispose()
 		{
+		/* --- GHIDRA: Dispose ---
+		void Utils_OpToken__Dispose(int param1,undefined4 param2)
+		
+		{
+		  *(undefined4 *)(param1 + 0x10) = 0;
+		  *(undefined4 *)(param1 + 8) = 0;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x060002B7 RID: 695 RVA: 0x00002050 File Offset: 0x00000250
@@ -109,6 +119,28 @@ namespace Utils
 		[Address(RVA = "0x574C", Offset = "0x574C", VA = "0x574C")]
 		public OpToken()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Utils_OpToken___ctor(int param1,undefined4 param2)
+		
+		{
+		  if (*(int *)(param1 + 8) == 0) {
+		    *(undefined4 *)(param1 + 8) = 1;
+		  }
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: .ctor ---
+		void Utils_OpToken___ctor(int param1,undefined4 param2)
+		
+		{
+		  if (*(int *)(param1 + 8) == 0) {
+		    *(undefined4 *)(param1 + 8) = 1;
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x060002B8 RID: 696 RVA: 0x00002050 File Offset: 0x00000250
@@ -130,6 +162,15 @@ namespace Utils
 		[Address(RVA = "0x574F", Offset = "0x574F", VA = "0x574F", Slot = "11")]
 		public virtual void Cancel()
 		{
+		/* --- GHIDRA: Cancel ---
+		void Utils_OpToken__Cancel(undefined4 param1,undefined4 param2)
+		
+		{
+		  Utils_OpTokenRepository__Remove(param1,param1);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0200004C RID: 76
@@ -153,4 +194,71 @@ namespace Utils
 			CANCELLED
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_Index ---
+		void Utils_OpToken__get_Index(int *param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  undefined4 param1_00;
+		  int iVar2;
+		  int *piVar3;
+		  int local_c;
+		  int **local_8;
+		  int *local_4;
+		  
+		  local_c = 0;
+		  local_8 = &local_4;
+		  DAT_ram_009d3e38 = 0;
+		  local_4 = param1;
+		  import::env::invoke_vii(*(undefined4 *)(*param1 + 0x108),param1,*(undefined4 *)(*param1 + 0x10c));
+		  iVar1 = DAT_ram_009d3e38;
+		  DAT_ram_009d3e38 = 0;
+		  if (iVar1 != 1) {
+		    DAT_ram_009d3e38 = 0;
+		    return;
+		  }
+		  param1_00 = import::env::__cxa_find_matching_catch_3(&DAT_ram_0072c9c8);
+		  iVar1 = global_1;
+		  iVar2 = import::env::llvm_eh_typeid_for(&DAT_ram_0072c9c8);
+		  if (iVar1 == iVar2) {
+		    piVar3 = (int *)import::env::__cxa_begin_catch(param1_00);
+		    iVar2 = *piVar3;
+		    DAT_ram_009d3e38 = 0;
+		    local_c = iVar2;
+		    import::env::invoke_v(0x123);
+		    iVar1 = DAT_ram_009d3e38;
+		    DAT_ram_009d3e38 = 0;
+		    if (iVar1 != 1) {
+		      if (iVar2 == 0) {
+		        DAT_ram_009d3e38 = 0;
+		        return;
+		      }
+		      System_Data_DataSet__ValidateLocaleConstraint(iVar2);
+		      do {
+		        halt_trap();
+		      } while( true );
+		    }
+		    param1_00 = import::env::__cxa_find_matching_catch_2();
+		  }
+		  DAT_ram_009d3e38 = 0;
+		  import::env::invoke_ii(s___Scripting__UnityEngine__Raycas_ram_00004083 + 0x17,&local_c);
+		  iVar1 = DAT_ram_009d3e38;
+		  DAT_ram_009d3e38 = 0;
+		  if (iVar1 != 1) {
+		    import::env::__resumeException(param1_00);
+		    do {
+		      halt_trap();
+		    } while( true );
+		  }
+		  import::env::__cxa_find_matching_catch_3(0);
+		  unnamed_function_937();
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
 }

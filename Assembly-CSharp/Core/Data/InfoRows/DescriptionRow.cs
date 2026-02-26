@@ -13,6 +13,16 @@ namespace Core.Data.InfoRows
 		[Address(RVA = "0xB0F2", Offset = "0xB0F2", VA = "0xB0F2")]
 		public DescriptionRow()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Core_Data_InfoRows_DescriptionRow___ctor(int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  *(undefined4 *)(param1 + 8) = 4;
+		  *(undefined4 *)(param1 + 0x20) = param2;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0400360B RID: 13835

@@ -101,6 +101,22 @@ namespace Core.Application.SO
 		[Address(RVA = "0xB959", Offset = "0xB959", VA = "0xB959")]
 		public LevelPlaySettings()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Core_Application_SO_LevelPlaySettings___ctor(undefined4 param1)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a5a807 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_Application_SO_LevelPlaySettings___c_TypeInfo);
+		    DAT_ram_00a5a807 = '\x01';
+		  }
+		  uVar1 = unnamed_function_1417(Core_Application_SO_LevelPlaySettings___c_TypeInfo);
+		  **(undefined4 **)(Core_Application_SO_LevelPlaySettings___c_TypeInfo + 0x5c) = uVar1;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x040039E9 RID: 14825
@@ -139,4 +155,50 @@ namespace Core.Application.SO
 		[SerializeField]
 		private KeyValuePair<string, string>[] _rewardedUnitIds;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_RewardedUnitIds ---
+		undefined4 Core_Application_SO_LevelPlaySettings__get_RewardedUnitIds(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  undefined4 *puVar2;
+		  int param1_00;
+		  undefined4 param2_00;
+		  
+		  if (DAT_ram_00a5a806 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_System_Linq_Enumerable_Any_KeyValuePair_string__string____)
+		    ;
+		    Mono_Security_ASN1__get_Item(&System_Func_KeyValuePair_string__string___bool__TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Core_Application_SO_LevelPlaySettings___c__IsTestSuiteAvail_b__18_0__);
+		    Mono_Security_ASN1__get_Item(&Core_Application_SO_LevelPlaySettings___c_TypeInfo);
+		    DAT_ram_00a5a806 = '\x01';
+		  }
+		  uVar1 = *(undefined4 *)(param1 + 0x10);
+		  if (*(int *)(Core_Application_SO_LevelPlaySettings___c_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Core_Application_SO_LevelPlaySettings___c_TypeInfo);
+		  }
+		  puVar2 = *(undefined4 **)(Core_Application_SO_LevelPlaySettings___c_TypeInfo + 0x5c);
+		  param1_00 = puVar2[1];
+		  if (param1_00 == 0) {
+		    if (*(int *)(Core_Application_SO_LevelPlaySettings___c_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(Core_Application_SO_LevelPlaySettings___c_TypeInfo);
+		      puVar2 = *(undefined4 **)(Core_Application_SO_LevelPlaySettings___c_TypeInfo + 0x5c);
+		    }
+		    param2_00 = *puVar2;
+		    param1_00 = unnamed_function_1417(System_Func_KeyValuePair_string__string___bool__TypeInfo);
+		    System_Func_KeyValuePair_ulong__object___bool___Invoke
+		              (param1_00,param2_00,
+		               Method_Core_Application_SO_LevelPlaySettings___c__IsTestSuiteAvail_b__18_0__,0);
+		    *(int *)(*(int *)(Core_Application_SO_LevelPlaySettings___c_TypeInfo + 0x5c) + 4) = param1_00;
+		  }
+		  uVar1 = System_Linq_Enumerable__Any_KeyValuePair_object__object__
+		                    (uVar1,param1_00,
+		                     Method_System_Linq_Enumerable_Any_KeyValuePair_string__string____);
+		  return uVar1;
+		}
+		*/
+
 }

@@ -149,6 +149,24 @@ namespace Mycom.Tracker.Unity.Internal.Implementations.Fake
 		[Address(RVA = "0xBEC1", Offset = "0xBEC1", VA = "0xBEC1")]
 		public Tracker()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Mycom_Tracker_Unity_Internal_Implementations_Fake_Tracker___ctor(undefined4 param1)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a5970e == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Mycom_Tracker_Unity_Internal_Implementations_Fake_Tracker_TypeInfo);
+		    DAT_ram_00a5970e = '\x01';
+		  }
+		  uVar1 = unnamed_function_1417(Mycom_Tracker_Unity_Internal_Implementations_Fake_Tracker_TypeInfo);
+		  **(undefined4 **)(Mycom_Tracker_Unity_Internal_Implementations_Fake_Tracker_TypeInfo + 0x5c) =
+		       uVar1;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x04003D40 RID: 15680
@@ -156,4 +174,29 @@ namespace Mycom.Tracker.Unity.Internal.Implementations.Fake
 		[FieldOffset(Offset = "0x0")]
 		public static ITracker Instance;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: Mycom.Tracker.Unity.Internal.Interfaces.ITracker.get_MyTrackerParams ---
+		int Mycom_Tracker_Unity_Internal_Implementations_Fake_Tracker__Mycom_Tracker_Unity_Internal_Interfaces_ITracker_get_MyTrackerParams
+		              (undefined4 param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  int iVar2;
+		  
+		  if (DAT_ram_00a5970d == '\0') {
+		    Mono_Security_ASN1__get_Item(&Mycom_Tracker_Unity_MyTrackerConfig_TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&Mycom_Tracker_Unity_Internal_Implementations_Fake_TrackerConfig_TypeInfo);
+		    DAT_ram_00a5970d = '\x01';
+		  }
+		  uVar1 = unnamed_function_1417
+		                    (Mycom_Tracker_Unity_Internal_Implementations_Fake_TrackerConfig_TypeInfo);
+		  iVar2 = unnamed_function_1417(Mycom_Tracker_Unity_MyTrackerConfig_TypeInfo);
+		  *(undefined4 *)(iVar2 + 8) = uVar1;
+		  return iVar2;
+		}
+		*/
+
 }

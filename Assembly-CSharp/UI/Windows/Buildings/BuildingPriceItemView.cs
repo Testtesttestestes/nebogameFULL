@@ -78,4 +78,53 @@ namespace UI.Windows.Buildings
 		[FieldOffset(Offset = "0x20")]
 		private double _value;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_Resource ---
+		void UI_Windows_Buildings_BuildingPriceItemView__get_Resource
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  undefined4 param2_00;
+		  undefined4 param1_00;
+		  
+		  if (DAT_ram_00a58a9d == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_AssetContent_Loaders_AbstractGameGraphicLoader_RawImage__Texture2D__set_AssetId__
+		              );
+		    DAT_ram_00a58a9d = '\x01';
+		  }
+		  *(undefined4 *)(param1 + 0x18) = param2;
+		  param1_00 = *(undefined4 *)(param1 + 0x10);
+		  param2_00 = func_ii_7611(param2,0);
+		  Core_Extensions_Dict_CultDicExt__GetIcon64AssetId
+		            (param1_00,param2_00,
+		             Method_AssetContent_Loaders_AbstractGameGraphicLoader_RawImage__Texture2D__set_AssetId__
+		            );
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_Value ---
+		void UI_Windows_Buildings_BuildingPriceItemView__get_Value
+		               (int param1,double param2,undefined4 param3)
+		
+		{
+		  undefined4 uVar1;
+		  int *piVar2;
+		  int iVar3;
+		  
+		  *(double *)(param1 + 0x20) = param2;
+		  piVar2 = *(int **)(param1 + 0x14);
+		  uVar1 = func_ii_7515(param1 + 0x20,0);
+		  iVar3 = *piVar2;
+		  (**(code **)((ulonglong)*(uint *)(iVar3 + 0x2d0) * 4))
+		            (piVar2,uVar1,*(undefined4 *)(iVar3 + 0x2d4));
+		  return;
+		}
+		*/
+
 }

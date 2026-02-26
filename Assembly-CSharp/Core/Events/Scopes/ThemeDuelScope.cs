@@ -24,6 +24,25 @@ namespace Core.Events.Scopes
 		[Address(RVA = "0xADDE", Offset = "0xADDE", VA = "0xADDE")]
 		public ThemeDuelScope()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Core_Events_Scopes_ThemeDuelScope___ctor
+		               (int param1,undefined4 param2,undefined4 param3,undefined8 param4,undefined4 param5)
+		
+		{
+		  if (DAT_ram_00a5a348 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_EventArgs_TypeInfo);
+		    DAT_ram_00a5a348 = '\x01';
+		  }
+		  if (*(int *)(System_EventArgs_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(System_EventArgs_TypeInfo);
+		  }
+		  *(undefined8 *)(param1 + 0x10) = param4;
+		  *(undefined4 *)(param1 + 0xc) = param3;
+		  *(undefined4 *)(param1 + 8) = param2;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x04003486 RID: 13446

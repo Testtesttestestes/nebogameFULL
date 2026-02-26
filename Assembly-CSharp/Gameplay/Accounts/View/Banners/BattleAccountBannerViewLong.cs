@@ -12,6 +12,26 @@ namespace Gameplay.Accounts.View.Banners
 		[Address(RVA = "0xA3D6", Offset = "0xA3D6", VA = "0xA3D6", Slot = "12")]
 		protected override string FormatBacktimeCallback(float value)
 		{
+		/* --- GHIDRA: FormatBacktimeCallback ---
+		void Gameplay_Accounts_View_Banners_BattleAccountBannerViewLong__FormatBacktimeCallback
+		               (undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a588a1 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Gameplay_Accounts_View_Banners_AbstractAccountBannerView_BattleAccount___ctor__
+		              );
+		    DAT_ram_00a588a1 = '\x01';
+		  }
+		  Sirenix_Serialization_FormatterEmitter_AOTEmittedFormatter___Il2CppFullySharedGenericType____ctor
+		            (param1,
+		             Method_Gameplay_Accounts_View_Banners_AbstractAccountBannerView_BattleAccount___ctor__)
+		  ;
+		  return;
+		}
+		*/
+
 			return null;
 		}
 

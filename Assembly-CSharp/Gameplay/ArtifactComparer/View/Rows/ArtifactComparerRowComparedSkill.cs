@@ -17,6 +17,62 @@ namespace Gameplay.ArtifactComparer.View.Rows
 		[Address(RVA = "0x9E4F", Offset = "0x9E4F", VA = "0x9E4F", Slot = "4")]
 		protected override void HandleDataChanged()
 		{
+		/* --- GHIDRA: HandleDataChanged ---
+		void Gameplay_ArtifactComparer_View_Rows_ArtifactComparerRowComparedSkill__HandleDataChanged
+		               (int param1,int *param2,int param3,undefined4 param4)
+		
+		{
+		  undefined8 local_50;
+		  undefined8 local_48;
+		  undefined8 local_40;
+		  undefined8 local_38;
+		  undefined8 local_30;
+		  undefined8 local_28;
+		  undefined8 local_20;
+		  undefined8 local_18;
+		  undefined8 local_10;
+		  undefined8 local_8;
+		  
+		  if (param3 == 0) {
+		    func_ii_7050(param2,0,0);
+		    local_8 = 0x3f800000;
+		    local_10 = 0x3f8000003f800000;
+		    local_48 = 0x3f800000;
+		    local_50 = 0x3f8000003f800000;
+		    (**(code **)((ulonglong)*(uint *)(*param2 + 0x178) * 4))
+		              (param2,&local_50,*(undefined4 *)(*param2 + 0x17c));
+		  }
+		  else if (param3 == 1) {
+		    func_ii_7050(param2,*(undefined4 *)(param1 + 0x54),0);
+		    local_8 = 0x3f8000003f800000;
+		    local_10 = 0x3f8000003f800000;
+		    local_38 = 0x3f8000003f800000;
+		    local_40 = 0x3f8000003f800000;
+		    (**(code **)((ulonglong)*(uint *)(*param2 + 0x178) * 4))
+		              (param2,&local_40,*(undefined4 *)(*param2 + 0x17c));
+		  }
+		  else if (param3 == 2) {
+		    func_ii_7050(param2,*(undefined4 *)(param1 + 0x50),0);
+		    local_8 = 0x3f8000003f800000;
+		    local_10 = 0x3f8000003f800000;
+		    local_28 = 0x3f8000003f800000;
+		    local_30 = 0x3f8000003f800000;
+		    (**(code **)((ulonglong)*(uint *)(*param2 + 0x178) * 4))
+		              (param2,&local_30,*(undefined4 *)(*param2 + 0x17c));
+		  }
+		  else if (param3 == 3) {
+		    func_ii_7050(param2,*(undefined4 *)(param1 + 0x4c),0);
+		    local_8 = 0x3f8000003f800000;
+		    local_10 = 0x3f8000003f800000;
+		    local_18 = 0x3f8000003f800000;
+		    local_20 = 0x3f8000003f800000;
+		    (**(code **)((ulonglong)*(uint *)(*param2 + 0x178) * 4))
+		              (param2,&local_20,*(undefined4 *)(*param2 + 0x17c));
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600503F RID: 20543 RVA: 0x00002050 File Offset: 0x00000250

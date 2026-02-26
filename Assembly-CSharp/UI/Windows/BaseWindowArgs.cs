@@ -91,6 +91,28 @@ namespace UI.Windows
 		[Address(RVA = "0x6148", Offset = "0x6148", VA = "0x6148", Slot = "5")]
 		public virtual void Dispose()
 		{
+		/* --- GHIDRA: Dispose ---
+		void UI_Windows_BaseWindowArgs__Dispose(int param1,undefined4 param2)
+		
+		{
+		  undefined4 param1_00;
+		  
+		  if (DAT_ram_00a639d9 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_Dictionary_string__object___ctor__);
+		    Mono_Security_ASN1__get_Item(&System_Collections_Generic_Dictionary_string__object__TypeInfo);
+		    DAT_ram_00a639d9 = '\x01';
+		  }
+		  *(undefined1 *)(param1 + 0xc) = 1;
+		  *(undefined4 *)(param1 + 8) = 1;
+		  param1_00 = unnamed_function_1417(System_Collections_Generic_Dictionary_string__object__TypeInfo);
+		  System_Collections_Generic_Dictionary_object__StyleComplexSelector_PseudoStateData___set_Item
+		            (param1_00,Method_System_Collections_Generic_Dictionary_string__object___ctor__);
+		  *(undefined4 *)(param1 + 0x14) = param1_00;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06000EF5 RID: 3829 RVA: 0x00002050 File Offset: 0x00000250

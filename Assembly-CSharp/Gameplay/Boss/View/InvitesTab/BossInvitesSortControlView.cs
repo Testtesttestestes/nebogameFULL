@@ -16,6 +16,22 @@ namespace Gameplay.Boss.View.InvitesTab
 		[Address(RVA = "0x95B7", Offset = "0x95B7", VA = "0x95B7", Slot = "4")]
 		protected override List<IGameDataComparer<BossInviteData>> GetComparers()
 		{
+		/* --- GHIDRA: GetComparers ---
+		void Gameplay_Boss_View_InvitesTab_BossInvitesSortControlView__GetComparers
+		               (undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a57a22 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_UI_Sorting_AbstractSortControlView_BossInviteData___ctor__)
+		    ;
+		    DAT_ram_00a57a22 = '\x01';
+		  }
+		  UI_SkinsV2_AbstractSkinResolver___Il2CppFullySharedGenericType__object___StartRollback
+		            (param1,Method_UI_Sorting_AbstractSortControlView_BossInviteData___ctor__);
+		  return;
+		}
+		*/
+
 			return null;
 		}
 

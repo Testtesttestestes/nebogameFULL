@@ -181,6 +181,30 @@ namespace Gameplay.Chat.Model.Data
 		[Address(RVA = "0x9324", Offset = "0x9324", VA = "0x9324", Slot = "1")]
 		protected override void Finalize()
 		{
+		/* --- GHIDRA: Finalize ---
+		void Gameplay_Chat_Model_Data_ChatVisitorData__Finalize
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  undefined4 param1_00;
+		  
+		  if (DAT_ram_00a57b52 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_Dictionary_RoomKey__ChatRoomData___ctor__);
+		    Mono_Security_ASN1__get_Item
+		              (&System_Collections_Generic_Dictionary_RoomKey__ChatRoomData__TypeInfo);
+		    DAT_ram_00a57b52 = '\x01';
+		  }
+		  param1_00 = unnamed_function_1417
+		                        (System_Collections_Generic_Dictionary_RoomKey__ChatRoomData__TypeInfo);
+		  System_Collections_Generic_Dictionary_object__StyleComplexSelector_PseudoStateData___set_Item
+		            (param1_00,Method_System_Collections_Generic_Dictionary_RoomKey__ChatRoomData___ctor__);
+		  *(undefined4 *)(param1 + 0x1c) = param1_00;
+		  *(undefined4 *)(param1 + 0x14) = param2;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06004475 RID: 17525 RVA: 0x00002050 File Offset: 0x00000250
@@ -188,6 +212,21 @@ namespace Gameplay.Chat.Model.Data
 		[Address(RVA = "0x9325", Offset = "0x9325", VA = "0x9325")]
 		public ChatVisitorData(ChatUserInfo userInfo)
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_Chat_Model_Data_ChatVisitorData___ctor(int param1,undefined4 param2)
+		
+		{
+		  *(undefined8 *)(param1 + 0x14) = 0;
+		  *(undefined4 *)(param1 + 8) = 0;
+		  if (*(int *)(param1 + 0x10) != 0) {
+		    *(undefined8 *)(*(int *)(param1 + 0x10) + 0xc) = 0;
+		  }
+		  *(undefined4 *)(param1 + 0x1c) = 0;
+		  *(undefined4 *)(param1 + 0x10) = 0;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06004476 RID: 17526 RVA: 0x00002050 File Offset: 0x00000250
@@ -197,4 +236,44 @@ namespace Gameplay.Chat.Model.Data
 		{
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: set_BanData ---
+		uint Gameplay_Chat_Model_Data_ChatVisitorData__set_BanData(int param1,undefined4 param2)
+		
+		{
+		  return (*(byte *)(*(int *)(param1 + 0x14) + 0x14) & 2) >> 1;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_IsModerator ---
+		uint Gameplay_Chat_Model_Data_ChatVisitorData__get_IsModerator(int param1,undefined4 param2)
+		
+		{
+		  uint uVar1;
+		  
+		  if ((*(byte *)(*(int *)(param1 + 0x14) + 0x14) & 1) == 0) {
+		    uVar1 = 0;
+		  }
+		  else {
+		    uVar1 = (uint)(*(int *)(*(int *)(param1 + 0x14) + 0x18) != 0);
+		  }
+		  return uVar1;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_IsBanned ---
+		uint Gameplay_Chat_Model_Data_ChatVisitorData__get_IsBanned(int param1,undefined4 param2)
+		
+		{
+		  if (*(int *)(param1 + 8) != 0) {
+		    return (uint)(*(char *)(*(int *)(param1 + 8) + 0x18) != '\0');
+		  }
+		  return 0;
+		}
+		*/
+
 }

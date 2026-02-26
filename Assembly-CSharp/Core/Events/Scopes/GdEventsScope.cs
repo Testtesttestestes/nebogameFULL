@@ -26,6 +26,33 @@ namespace Core.Events.Scopes
 		[Address(RVA = "0xAD63", Offset = "0xAD63", VA = "0xAD63")]
 		public GdEventsScope()
 		{
+		/* --- GHIDRA: .ctor ---
+		undefined4 Core_Events_Scopes_GdEventsScope___ctor(int param1,undefined4 param2)
+		
+		{
+		  undefined4 param1_00;
+		  
+		  if (DAT_ram_00a5a351 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_Dictionary_string__object__set_Item__);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_27866);
+		    DAT_ram_00a5a351 = '\x01';
+		  }
+		  if (DAT_ram_00a5a349 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_Dictionary_string__object___ctor__);
+		    Mono_Security_ASN1__get_Item(&System_Collections_Generic_Dictionary_string__object__TypeInfo);
+		    DAT_ram_00a5a349 = '\x01';
+		  }
+		  param1_00 = unnamed_function_1417(System_Collections_Generic_Dictionary_string__object__TypeInfo);
+		  System_Collections_Generic_Dictionary_object__StyleComplexSelector_PseudoStateData___set_Item
+		            (param1_00,Method_System_Collections_Generic_Dictionary_string__object___ctor__);
+		  func_ii_2946(param1_00,StringLiteral_27866,*(undefined4 *)(*(int *)(param1 + 0x10) + 0x14),
+		               Method_System_Collections_Generic_Dictionary_string__object__set_Item__);
+		  return param1_00;
+		}
+		*/
+
 		}
 
 		// Token: 0x04003414 RID: 13332

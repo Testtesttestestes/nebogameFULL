@@ -34,4 +34,27 @@ namespace Gameplay.UserInfo.View.Equipment
 		[SerializeField]
 		private ExtraSlotsView _extraSlots;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_ExtraSlots ---
+		void Gameplay_UserInfo_View_Equipment_UserEquipmentView__get_ExtraSlots
+		               (undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a59902 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Gameplay_UserInfo_View_Equipment_BaseEquipmentView_UserEquipmentSlotConfig___ctor__
+		              );
+		    DAT_ram_00a59902 = '\x01';
+		  }
+		  ScreenAdaptation_Common_AppSize__Update
+		            (param1,
+		             Method_Gameplay_UserInfo_View_Equipment_BaseEquipmentView_UserEquipmentSlotConfig___ctor__
+		            );
+		  return;
+		}
+		*/
+
 }

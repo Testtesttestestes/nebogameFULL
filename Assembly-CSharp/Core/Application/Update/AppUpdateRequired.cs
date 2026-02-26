@@ -27,6 +27,19 @@ namespace Core.Application.Update
 		[Address(RVA = "0xB938", Offset = "0xB938", VA = "0xB938")]
 		public AppUpdateRequired()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Core_Application_Update_AppUpdateRequired___ctor(int *param1,undefined4 param2)
+		
+		{
+		  (**(code **)((ulonglong)*(uint *)(*param1 + 0x100) * 4))(param1,*(undefined4 *)(*param1 + 0x104));
+		  param1[4] = 0;
+		  param1[5] = 0;
+		  param1[2] = 0;
+		  param1[3] = 0;
+		  return;
+		}
+		*/
+
 		}
 	}
 }

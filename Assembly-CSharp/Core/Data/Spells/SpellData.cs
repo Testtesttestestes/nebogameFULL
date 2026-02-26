@@ -215,6 +215,105 @@ namespace Core.Data.Spells
 		[Address(RVA = "0xB0B5", Offset = "0xB0B5", VA = "0xB0B5")]
 		public SpellData()
 		{
+		/* --- GHIDRA: .ctor ---
+		undefined4 Core_Data_Spells_SpellData___ctor(int param1,int param2,undefined4 param3)
+		
+		{
+		  undefined4 uVar1;
+		  int iVar2;
+		  int iVar3;
+		  
+		  iVar2 = *(int *)(param1 + 0xc);
+		  if ((iVar2 == 0) || (*(int *)(iVar2 + 0x10) == 0)) {
+		    iVar3 = *(int *)(param2 + 0xc);
+		    if (*(int *)(iVar3 + 0x10) != 0) {
+		      return 0xffffffff;
+		    }
+		  }
+		  else {
+		    if (*(int *)(param2 + 0xc) == 0) {
+		      return 1;
+		    }
+		    if (*(int *)(*(int *)(param2 + 0xc) + 0x10) == 0) {
+		      return 1;
+		    }
+		    iVar3 = *(int *)(param2 + 0xc);
+		  }
+		  uVar1 = 1;
+		  if ((*(uint *)(iVar2 + 0x18) <= *(uint *)(iVar3 + 0x18)) &&
+		     (uVar1 = 0xffffffff, *(uint *)(iVar3 + 0x18) <= *(uint *)(iVar2 + 0x18))) {
+		    uVar1 = 0;
+		  }
+		  return uVar1;
+		}
+		*/
+
+		/* --- GHIDRA: .ctor ---
+		undefined4 Core_Data_Spells_SpellData___ctor(int param1,int param2,undefined4 param3)
+		
+		{
+		  undefined4 uVar1;
+		  int iVar2;
+		  int iVar3;
+		  
+		  iVar2 = *(int *)(param1 + 0xc);
+		  if ((iVar2 == 0) || (*(int *)(iVar2 + 0x10) == 0)) {
+		    iVar3 = *(int *)(param2 + 0xc);
+		    if (*(int *)(iVar3 + 0x10) != 0) {
+		      return 0xffffffff;
+		    }
+		  }
+		  else {
+		    if (*(int *)(param2 + 0xc) == 0) {
+		      return 1;
+		    }
+		    if (*(int *)(*(int *)(param2 + 0xc) + 0x10) == 0) {
+		      return 1;
+		    }
+		    iVar3 = *(int *)(param2 + 0xc);
+		  }
+		  uVar1 = 1;
+		  if ((*(uint *)(iVar2 + 0x18) <= *(uint *)(iVar3 + 0x18)) &&
+		     (uVar1 = 0xffffffff, *(uint *)(iVar3 + 0x18) <= *(uint *)(iVar2 + 0x18))) {
+		    uVar1 = 0;
+		  }
+		  return uVar1;
+		}
+		*/
+
+		/* --- GHIDRA: .ctor ---
+		undefined4 Core_Data_Spells_SpellData___ctor(int param1,int param2,undefined4 param3)
+		
+		{
+		  undefined4 uVar1;
+		  int iVar2;
+		  int iVar3;
+		  
+		  iVar2 = *(int *)(param1 + 0xc);
+		  if ((iVar2 == 0) || (*(int *)(iVar2 + 0x10) == 0)) {
+		    iVar3 = *(int *)(param2 + 0xc);
+		    if (*(int *)(iVar3 + 0x10) != 0) {
+		      return 0xffffffff;
+		    }
+		  }
+		  else {
+		    if (*(int *)(param2 + 0xc) == 0) {
+		      return 1;
+		    }
+		    if (*(int *)(*(int *)(param2 + 0xc) + 0x10) == 0) {
+		      return 1;
+		    }
+		    iVar3 = *(int *)(param2 + 0xc);
+		  }
+		  uVar1 = 1;
+		  if ((*(uint *)(iVar2 + 0x18) <= *(uint *)(iVar3 + 0x18)) &&
+		     (uVar1 = 0xffffffff, *(uint *)(iVar3 + 0x18) <= *(uint *)(iVar2 + 0x18))) {
+		    uVar1 = 0;
+		  }
+		  return uVar1;
+		}
+		*/
+
 		}
 
 		// Token: 0x060064D1 RID: 25809 RVA: 0x00002050 File Offset: 0x00000250
@@ -257,6 +356,28 @@ namespace Core.Data.Spells
 		[Address(RVA = "0xB0B8", Offset = "0xB0B8", VA = "0xB0B8")]
 		public static int SortSpells(SpellData a, SpellData b)
 		{
+		/* --- GHIDRA: SortSpells ---
+		void Core_Data_Spells_SpellData__SortSpells
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4,undefined4 param5)
+		
+		{
+		  int iVar1;
+		  
+		  if (DAT_ram_00a60811 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_Data_Effect_EffectDescription_TypeInfo);
+		    DAT_ram_00a60811 = '\x01';
+		  }
+		  *(undefined4 *)(param1 + 0x10) = param3;
+		  *(undefined4 *)(param1 + 0xc) = param2;
+		  iVar1 = unnamed_function_1417(Core_Data_Effect_EffectDescription_TypeInfo);
+		  *(undefined4 *)(iVar1 + 0x14) = param4;
+		  *(undefined4 *)(iVar1 + 0x10) = 0;
+		  *(undefined4 *)(iVar1 + 0xc) = param2;
+		  *(int *)(param1 + 0x14) = iVar1;
+		  return;
+		}
+		*/
+
 			return 0;
 		}
 
@@ -280,4 +401,265 @@ namespace Core.Data.Spells
 		[FieldOffset(Offset = "0x28")]
 		protected AbstractSpellsBasedDescription _description;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_Id ---
+		int * Core_Data_Spells_SpellData__get_Id(int *param1)
+		
+		{
+		  if (*param1 == 0) {
+		    return param1;
+		  }
+		  System_Data_DataSet__ValidateLocaleConstraint(*param1);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: get_Level ---
+		undefined8 Core_Data_Spells_SpellData__get_Level(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  
+		  if (DAT_ram_00a6080b == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_Dictionary_int__Skill__get_Item__);
+		    DAT_ram_00a6080b = '\x01';
+		  }
+		  iVar1 = System_Collections_Generic_Dictionary_int__Int32Enum___get_Count
+		                    (*(undefined4 *)(param1 + 0x18),0,
+		                     Method_System_Collections_Generic_Dictionary_int__Skill__get_Item__);
+		  return *(undefined8 *)(iVar1 + 0x10);
+		}
+		*/
+
+
+		/* --- GHIDRA: get_IsCultSpell ---
+		void Core_Data_Spells_SpellData__get_IsCultSpell(int param1,int *param2,undefined4 param3)
+		
+		{
+		  undefined4 uVar1;
+		  undefined4 uVar2;
+		  undefined4 uVar3;
+		  undefined4 uVar4;
+		  
+		  uVar1 = UnityEngine_AndroidJavaObject___GetRawObject(param2,0);
+		  uVar2 = (**(code **)((ulonglong)*(uint *)(*param2 + 0xf0) * 4))
+		                    (param2,*(undefined4 *)(*param2 + 0xf4));
+		  uVar3 = Gameplay_School_Model_SchoolSpellData__get_Level(param2,0);
+		  uVar4 = Gameplay_School_Model_SchoolSpellData__set_ActionBacktime(param2,0);
+		  *(undefined4 *)(param1 + 8) = 0xffffffff;
+		  *(undefined4 *)(param1 + 0x14) = uVar2;
+		  *(undefined4 *)(param1 + 0xc) = uVar1;
+		  *(char *)(param1 + 0x18) = (char)uVar4;
+		  *(undefined4 *)(param1 + 0x10) = uVar3;
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_ManaPriceOfUse ---
+		undefined8 Core_Data_Spells_SpellData__get_ManaPriceOfUse(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  
+		  if (DAT_ram_00a6080c == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_Dictionary_int__Skill__get_Item__);
+		    DAT_ram_00a6080c = '\x01';
+		  }
+		  iVar1 = System_Collections_Generic_Dictionary_int__Int32Enum___get_Count
+		                    (*(undefined4 *)(param1 + 0x18),7,
+		                     Method_System_Collections_Generic_Dictionary_int__Skill__get_Item__);
+		  return *(undefined8 *)(iVar1 + 0x10);
+		}
+		*/
+
+
+		/* --- GHIDRA: set_Enabled ---
+		int Core_Data_Spells_SpellData__set_Enabled(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  int *piVar2;
+		  int iVar3;
+		  int iVar4;
+		  
+		  if (DAT_ram_00a6080d == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_Data_Spells_SpellData___TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Core_Data_Spells_SpellsBasedDescription_TypeInfo);
+		    DAT_ram_00a6080d = '\x01';
+		  }
+		  iVar4 = *(int *)(param1 + 0x28);
+		  if (iVar4 == 0) {
+		    uVar1 = Core_Extensions_Dict_SpellDicExt__GetTitle(*(undefined4 *)(param1 + 0xc),0);
+		    piVar2 = (int *)Mono_Security_ASN1Convert__ToOid(Core_Data_Spells_SpellData___TypeInfo,1);
+		    iVar4 = func_ii_1082(param1,*(undefined4 *)(*piVar2 + 0x20));
+		    if (iVar4 == 0) {
+		      uVar1 = func_ii_1083();
+		      func_ii_1050(uVar1,0);
+		      do {
+		        halt_trap();
+		      } while( true );
+		    }
+		    piVar2[4] = param1;
+		    iVar4 = unnamed_function_1417(Core_Data_Spells_SpellsBasedDescription_TypeInfo);
+		    if (DAT_ram_00a60811 == '\0') {
+		      Mono_Security_ASN1__get_Item(&Core_Data_Effect_EffectDescription_TypeInfo);
+		      DAT_ram_00a60811 = '\x01';
+		    }
+		    *(int **)(iVar4 + 0x10) = piVar2;
+		    *(undefined4 *)(iVar4 + 0xc) = uVar1;
+		    iVar3 = unnamed_function_1417(Core_Data_Effect_EffectDescription_TypeInfo);
+		    *(undefined8 *)(iVar3 + 0x10) = 0;
+		    *(undefined4 *)(iVar3 + 0xc) = uVar1;
+		    *(int *)(iVar4 + 0x14) = iVar3;
+		    *(int *)(param1 + 0x28) = iVar4;
+		  }
+		  return iVar4;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_PriceOfUse ---
+		int * Core_Data_Spells_SpellData__get_PriceOfUse(int *param1)
+		
+		{
+		  if (*param1 == 0) {
+		    return param1;
+		  }
+		  System_Data_DataSet__ValidateLocaleConstraint(*param1);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: get_Description ---
+		void Core_Data_Spells_SpellData__get_Description(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a6080e == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_Dictionary_uint__EffectData___ctor__);
+		    Mono_Security_ASN1__get_Item(&System_Collections_Generic_Dictionary_uint__EffectData__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Core_Data_Skills_Skills_TypeInfo);
+		    DAT_ram_00a6080e = '\x01';
+		  }
+		  uVar1 = unnamed_function_1417(System_Collections_Generic_Dictionary_uint__EffectData__TypeInfo);
+		  System_Collections_Generic_List_GAFAnimationAssetInternal_KeyFrame____ctor
+		            (uVar1,Method_System_Collections_Generic_Dictionary_uint__EffectData___ctor__);
+		  *(undefined4 *)(param1 + 0x14) = uVar1;
+		  uVar1 = unnamed_function_1417(Core_Data_Skills_Skills_TypeInfo);
+		  if (DAT_ram_00a60832 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_System_Collections_Generic_Dictionary_int__Skill___ctor__);
+		    DAT_ram_00a60832 = '\x01';
+		  }
+		  System_Collections_Generic_Dictionary_int__TMP_ResourceManager_FontAssetRef___set_Item
+		            (uVar1,Method_System_Collections_Generic_Dictionary_int__Skill___ctor__);
+		  *(undefined4 *)(param1 + 0x18) = uVar1;
+		  uVar1 = unnamed_function_1417(Core_Data_Skills_Skills_TypeInfo);
+		  if (DAT_ram_00a60832 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_System_Collections_Generic_Dictionary_int__Skill___ctor__);
+		    DAT_ram_00a60832 = '\x01';
+		  }
+		  System_Collections_Generic_Dictionary_int__TMP_ResourceManager_FontAssetRef___set_Item
+		            (uVar1,Method_System_Collections_Generic_Dictionary_int__Skill___ctor__);
+		  *(undefined4 *)(param1 + 0x1c) = uVar1;
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: Create<object> ---
+		void Core_Data_Spells_SpellData__Create_object_(int param1,undefined4 param2,int param3)
+		
+		{
+		  short sVar1;
+		  short sVar2;
+		  undefined4 param1_00;
+		  int param1_01;
+		  
+		  if (*(int *)(param3 + 0x1c) == 0) {
+		    System_ReadOnlySpan_char___GetPinnableReference(param3);
+		  }
+		  *(undefined4 *)(param1 + 0x34) = param2;
+		  sVar1 = *(short *)(param1 + 0x12);
+		  sVar2 = *(short *)(param1 + 0x10);
+		  param1_01 = **(int **)(param3 + 0x1c);
+		  if ((*(byte *)(param1_01 + 0xbd) & 1) == 0) {
+		    param1_01 = func_ii_1079(param1_01);
+		  }
+		  param1_00 = unnamed_function_1417(param1_01);
+		  UnityEngine_Purchasing_Default_Factory__Create
+		            (param1_00,(int)sVar2,(int)sVar1,*(undefined4 *)(*(int *)(param3 + 0x1c) + 4));
+		  *(undefined4 *)(param1 + 0x38) = param1_00;
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: Create<object> ---
+		void Core_Data_Spells_SpellData__Create_object_(int param1,undefined4 param2,int param3)
+		
+		{
+		  short sVar1;
+		  short sVar2;
+		  undefined4 param1_00;
+		  int param1_01;
+		  
+		  if (*(int *)(param3 + 0x1c) == 0) {
+		    System_ReadOnlySpan_char___GetPinnableReference(param3);
+		  }
+		  *(undefined4 *)(param1 + 0x34) = param2;
+		  sVar1 = *(short *)(param1 + 0x12);
+		  sVar2 = *(short *)(param1 + 0x10);
+		  param1_01 = **(int **)(param3 + 0x1c);
+		  if ((*(byte *)(param1_01 + 0xbd) & 1) == 0) {
+		    param1_01 = func_ii_1079(param1_01);
+		  }
+		  param1_00 = unnamed_function_1417(param1_01);
+		  UnityEngine_Purchasing_Default_Factory__Create
+		            (param1_00,(int)sVar2,(int)sVar1,*(undefined4 *)(*(int *)(param3 + 0x1c) + 4));
+		  *(undefined4 *)(param1 + 0x38) = param1_00;
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: Create<object> ---
+		void Core_Data_Spells_SpellData__Create_object_(int param1,undefined4 param2,int param3)
+		
+		{
+		  short sVar1;
+		  short sVar2;
+		  undefined4 param1_00;
+		  int param1_01;
+		  
+		  if (*(int *)(param3 + 0x1c) == 0) {
+		    System_ReadOnlySpan_char___GetPinnableReference(param3);
+		  }
+		  *(undefined4 *)(param1 + 0x34) = param2;
+		  sVar1 = *(short *)(param1 + 0x12);
+		  sVar2 = *(short *)(param1 + 0x10);
+		  param1_01 = **(int **)(param3 + 0x1c);
+		  if ((*(byte *)(param1_01 + 0xbd) & 1) == 0) {
+		    param1_01 = func_ii_1079(param1_01);
+		  }
+		  param1_00 = unnamed_function_1417(param1_01);
+		  UnityEngine_Purchasing_Default_Factory__Create
+		            (param1_00,(int)sVar2,(int)sVar1,*(undefined4 *)(*(int *)(param3 + 0x1c) + 4));
+		  *(undefined4 *)(param1 + 0x38) = param1_00;
+		  return;
+		}
+		*/
+
 }

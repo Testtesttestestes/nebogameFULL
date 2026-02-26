@@ -268,6 +268,105 @@ namespace Core.Analytics.Okg.Data
 		[JsonConstructor]
 		public OkgAnalyticsData(string version, Build build)
 		{
+		/* --- GHIDRA: .ctor ---
+		int Core_Analytics_Okg_Data_OkgAnalyticsData___ctor(int param1,undefined4 param2)
+		
+		{
+		  int param1_00;
+		  int iVar1;
+		  undefined4 param1_01;
+		  undefined4 uVar2;
+		  undefined4 uVar3;
+		  undefined4 *puVar4;
+		  int param1_02;
+		  int param1_03;
+		  
+		  if (DAT_ram_00a5951f == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_System_Linq_Enumerable_ToDictionary_KeyValuePair_string__object___string__object___
+		              );
+		    Mono_Security_ASN1__get_Item(&System_Func_KeyValuePair_string__object___object__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&System_Func_KeyValuePair_string__object___string__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Core_Analytics_Okg_Data_OkgAnalyticsData_TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Core_Analytics_Okg_Data_OkgAnalyticsData___c__Clone_b__47_0__);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Core_Analytics_Okg_Data_OkgAnalyticsData___c__Clone_b__47_1__);
+		    Mono_Security_ASN1__get_Item(&Core_Analytics_Okg_Data_OkgAnalyticsData___c_TypeInfo);
+		    DAT_ram_00a5951f = '\x01';
+		  }
+		  uVar2 = *(undefined4 *)(param1 + 0x38);
+		  uVar3 = *(undefined4 *)(param1 + 0x28);
+		  iVar1 = unnamed_function_1417(Core_Analytics_Okg_Data_OkgAnalyticsData_TypeInfo);
+		  if (DAT_ram_00a5951e == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_Dictionary_string__object___ctor__);
+		    Mono_Security_ASN1__get_Item(&System_Collections_Generic_Dictionary_string__object__TypeInfo);
+		    DAT_ram_00a5951e = '\x01';
+		  }
+		  param1_01 = unnamed_function_1417(System_Collections_Generic_Dictionary_string__object__TypeInfo);
+		  System_Collections_Generic_Dictionary_object__StyleComplexSelector_PseudoStateData___set_Item
+		            (param1_01,Method_System_Collections_Generic_Dictionary_string__object___ctor__);
+		  *(undefined4 *)(iVar1 + 0x40) = param1_01;
+		  *(undefined4 *)(iVar1 + 0x38) = uVar2;
+		  *(undefined4 *)(iVar1 + 0x28) = uVar3;
+		  *(undefined4 *)(iVar1 + 0x30) = *(undefined4 *)(param1 + 0x30);
+		  *(undefined4 *)(iVar1 + 0x1c) = *(undefined4 *)(param1 + 0x1c);
+		  *(undefined4 *)(iVar1 + 8) = *(undefined4 *)(param1 + 8);
+		  *(undefined8 *)(iVar1 + 0x10) = *(undefined8 *)(param1 + 0x10);
+		  *(undefined4 *)(iVar1 + 0x18) = *(undefined4 *)(param1 + 0x18);
+		  *(undefined8 *)(iVar1 + 0x20) = *(undefined8 *)(param1 + 0x20);
+		  *(undefined4 *)(iVar1 + 0x2c) = *(undefined4 *)(param1 + 0x2c);
+		  *(undefined1 *)(iVar1 + 0x34) = *(undefined1 *)(param1 + 0x34);
+		  *(undefined4 *)(iVar1 + 0x3c) = *(undefined4 *)(param1 + 0x3c);
+		  uVar2 = *(undefined4 *)(param1 + 0x40);
+		  if (*(int *)(Core_Analytics_Okg_Data_OkgAnalyticsData___c_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Core_Analytics_Okg_Data_OkgAnalyticsData___c_TypeInfo);
+		  }
+		  puVar4 = *(undefined4 **)(Core_Analytics_Okg_Data_OkgAnalyticsData___c_TypeInfo + 0x5c);
+		  param1_02 = puVar4[1];
+		  param1_00 = Core_Analytics_Okg_Data_OkgAnalyticsData___c_TypeInfo;
+		  if (param1_02 == 0) {
+		    if (*(int *)(Core_Analytics_Okg_Data_OkgAnalyticsData___c_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(Core_Analytics_Okg_Data_OkgAnalyticsData___c_TypeInfo);
+		      puVar4 = *(undefined4 **)(Core_Analytics_Okg_Data_OkgAnalyticsData___c_TypeInfo + 0x5c);
+		    }
+		    uVar3 = *puVar4;
+		    param1_02 = unnamed_function_1417(System_Func_KeyValuePair_string__object___string__TypeInfo);
+		    func_ii_7795(param1_02,uVar3,
+		                 Method_Core_Analytics_Okg_Data_OkgAnalyticsData___c__Clone_b__47_0__,0);
+		    param1_00 = Core_Analytics_Okg_Data_OkgAnalyticsData___c_TypeInfo;
+		    *(int *)(*(int *)(Core_Analytics_Okg_Data_OkgAnalyticsData___c_TypeInfo + 0x5c) + 4) = param1_02
+		    ;
+		  }
+		  if (*(int *)(param1_00 + 0x74) == 0) {
+		    func_ii_306000(param1_00);
+		    param1_00 = Core_Analytics_Okg_Data_OkgAnalyticsData___c_TypeInfo;
+		  }
+		  puVar4 = *(undefined4 **)(param1_00 + 0x5c);
+		  param1_03 = puVar4[2];
+		  if (param1_03 == 0) {
+		    if (*(int *)(param1_00 + 0x74) == 0) {
+		      func_ii_306000(param1_00);
+		      puVar4 = *(undefined4 **)(Core_Analytics_Okg_Data_OkgAnalyticsData___c_TypeInfo + 0x5c);
+		    }
+		    uVar3 = *puVar4;
+		    param1_03 = unnamed_function_1417(System_Func_KeyValuePair_string__object___object__TypeInfo);
+		    func_ii_7795(param1_03,uVar3,
+		                 Method_Core_Analytics_Okg_Data_OkgAnalyticsData___c__Clone_b__47_1__,0);
+		    *(int *)(*(int *)(Core_Analytics_Okg_Data_OkgAnalyticsData___c_TypeInfo + 0x5c) + 8) = param1_03
+		    ;
+		  }
+		  uVar2 = System_Func_KeyValuePair_object__object___object____ctor
+		                    (uVar2,param1_02,param1_03,
+		                     Method_System_Linq_Enumerable_ToDictionary_KeyValuePair_string__object___string__object___
+		                    );
+		  *(undefined4 *)(iVar1 + 0x40) = uVar2;
+		  return iVar1;
+		}
+		*/
+
 		}
 
 		// Token: 0x060071B9 RID: 29113 RVA: 0x00002052 File Offset: 0x00000252
@@ -275,6 +374,90 @@ namespace Core.Analytics.Okg.Data
 		[Address(RVA = "0xBBC7", Offset = "0xBBC7", VA = "0xBBC7", Slot = "4")]
 		public object Clone()
 		{
+		/* --- GHIDRA: Clone ---
+		undefined4 Core_Analytics_Okg_Data_OkgAnalyticsData__Clone(int param1,undefined4 param2)
+		
+		{
+		  int param1_00;
+		  undefined4 uVar1;
+		  undefined4 local_20;
+		  undefined1 local_19;
+		  undefined8 local_18;
+		  undefined4 local_c;
+		  undefined8 local_8;
+		  
+		  if (DAT_ram_00a59520 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_Analytics_Okg_Data_Build_TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Core_Extensions_DictionaryExt_ToDebugString_string__object___);
+		    Mono_Security_ASN1__get_Item(&string___TypeInfo);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4005);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_17343);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_17352);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_1238);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_1260);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_1273);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_7535);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_1245);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_9946);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_6386);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_17685);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_7527);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_28690);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_2809);
+		    DAT_ram_00a59520 = '\x01';
+		  }
+		  param1_00 = Mono_Security_ASN1Convert__ToOid(string___TypeInfo,0x16);
+		  *(undefined4 *)(param1_00 + 0x10) = StringLiteral_6386;
+		  *(undefined4 *)(param1_00 + 0x14) = *(undefined4 *)(param1 + 8);
+		  *(undefined4 *)(param1_00 + 0x18) = StringLiteral_1238;
+		  local_8 = *(undefined8 *)(param1 + 0x10);
+		  uVar1 = func_ii_1081(DAT_ram_00a66964,&local_8);
+		  uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                    (StringLiteral_28690,StringLiteral_17343,uVar1,0);
+		  *(undefined4 *)(param1_00 + 0x1c) = uVar1;
+		  local_c = *(undefined4 *)(param1 + 0x18);
+		  uVar1 = func_ii_1081(DAT_ram_00a66954,&local_c);
+		  uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                    (StringLiteral_28690,StringLiteral_17352,uVar1,0);
+		  *(undefined4 *)(param1_00 + 0x20) = uVar1;
+		  *(undefined4 *)(param1_00 + 0x24) = StringLiteral_7527;
+		  *(undefined4 *)(param1_00 + 0x28) = *(undefined4 *)(param1 + 0x1c);
+		  *(undefined4 *)(param1_00 + 0x2c) = StringLiteral_1238;
+		  local_18 = *(undefined8 *)(param1 + 0x20);
+		  uVar1 = func_ii_1081(DAT_ram_00a66964,&local_18);
+		  uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                    (StringLiteral_28690,StringLiteral_7535,uVar1,0);
+		  *(undefined4 *)(param1_00 + 0x30) = uVar1;
+		  *(undefined4 *)(param1_00 + 0x34) = StringLiteral_17685;
+		  *(undefined4 *)(param1_00 + 0x38) = *(undefined4 *)(param1 + 0x28);
+		  *(undefined4 *)(param1_00 + 0x3c) = StringLiteral_1273;
+		  *(undefined4 *)(param1_00 + 0x40) = *(undefined4 *)(param1 + 0x2c);
+		  *(undefined4 *)(param1_00 + 0x44) = StringLiteral_1245;
+		  *(undefined4 *)(param1_00 + 0x48) = *(undefined4 *)(param1 + 0x30);
+		  *(undefined4 *)(param1_00 + 0x4c) = StringLiteral_1238;
+		  local_19 = *(undefined1 *)(param1 + 0x34);
+		  uVar1 = func_ii_1081(DAT_ram_00a66944,&local_19);
+		  uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                    (StringLiteral_28690,StringLiteral_9946,uVar1,0);
+		  *(undefined4 *)(param1_00 + 0x50) = uVar1;
+		  local_20 = *(undefined4 *)(param1 + 0x38);
+		  uVar1 = func_ii_1081(Core_Analytics_Okg_Data_Build_TypeInfo,&local_20);
+		  uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                    (StringLiteral_28690,StringLiteral_4005,uVar1,0);
+		  *(undefined4 *)(param1_00 + 0x54) = uVar1;
+		  *(undefined4 *)(param1_00 + 0x58) = StringLiteral_2809;
+		  *(undefined4 *)(param1_00 + 0x5c) = *(undefined4 *)(param1 + 0x3c);
+		  *(undefined4 *)(param1_00 + 0x60) = StringLiteral_1260;
+		  uVar1 = Core_Extensions_Dict_DictExt__GetArrayParameter___Il2CppFullySharedGenericType_
+		                    (*(undefined4 *)(param1 + 0x40),
+		                     Method_Core_Extensions_DictionaryExt_ToDebugString_string__object___);
+		  *(undefined4 *)(param1_00 + 100) = uVar1;
+		  uVar1 = System_Single__ToString(param1_00,0);
+		  return uVar1;
+		}
+		*/
+
 			return null;
 		}
 
@@ -283,7 +466,49 @@ namespace Core.Analytics.Okg.Data
 		[Address(RVA = "0xBBC8", Offset = "0xBBC8", VA = "0xBBC8", Slot = "3")]
 		public override string ToString()
 		{
+		/* --- GHIDRA: ToString ---
+		void Core_Analytics_Okg_Data_OkgAnalyticsData__ToString(undefined4 param1)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a59521 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_Analytics_Okg_Data_OkgAnalyticsData___c_TypeInfo);
+		    DAT_ram_00a59521 = '\x01';
+		  }
+		  uVar1 = unnamed_function_1417(Core_Analytics_Okg_Data_OkgAnalyticsData___c_TypeInfo);
+		  **(undefined4 **)(Core_Analytics_Okg_Data_OkgAnalyticsData___c_TypeInfo + 0x5c) = uVar1;
+		  return;
+		}
+		*/
+
 			return null;
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: set_Params ---
+		void Core_Analytics_Okg_Data_OkgAnalyticsData__set_Params
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  undefined4 param1_00;
+		  
+		  if (DAT_ram_00a5951e == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_Dictionary_string__object___ctor__);
+		    Mono_Security_ASN1__get_Item(&System_Collections_Generic_Dictionary_string__object__TypeInfo);
+		    DAT_ram_00a5951e = '\x01';
+		  }
+		  param1_00 = unnamed_function_1417(System_Collections_Generic_Dictionary_string__object__TypeInfo);
+		  System_Collections_Generic_Dictionary_object__StyleComplexSelector_PseudoStateData___set_Item
+		            (param1_00,Method_System_Collections_Generic_Dictionary_string__object___ctor__);
+		  *(undefined4 *)(param1 + 0x40) = param1_00;
+		  *(undefined4 *)(param1 + 0x38) = param3;
+		  *(undefined4 *)(param1 + 0x28) = param2;
+		  return;
+		}
+		*/
+
 }

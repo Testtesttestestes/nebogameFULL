@@ -131,6 +131,42 @@ namespace Core.Animations
 		[Address(RVA = "0xBA96", Offset = "0xBA96", VA = "0xBA96", Slot = "16")]
 		public void Play(bool loop)
 		{
+		/* --- GHIDRA: <Play>b__28_0 ---
+		void Core_Animations_GameSimpleUnityAnimation___Play_b__28_0
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a5a8a9 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_IGameAnimation__TypeInfo);
+		    DAT_ram_00a5a8a9 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x24);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = UnityEngine_UI_Image__set_sprite(param1_00,param2,0);
+		    param2_00 = System_Action_IGameAnimation__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_IGameAnimation__TypeInfo), iVar2 == 0)) break;
+		    iVar2 = func_ii_4329(param1 + 0x24,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
 		}
 
 		// Token: 0x06007052 RID: 28754 RVA: 0x00002050 File Offset: 0x00000250
@@ -180,6 +216,16 @@ namespace Core.Animations
 		[Address(RVA = "0xBA9C", Offset = "0xBA9C", VA = "0xBA9C", Slot = "20")]
 		public void SetGrayscale(float value)
 		{
+		/* --- GHIDRA: SetGrayscale ---
+		void Core_Animations_GameSimpleUnityAnimation__SetGrayscale(int param1,undefined4 param2)
+		
+		{
+		  *(undefined4 *)(param1 + 0x10) = 0x3fc00000;
+		  UnityEngine_RectTransform__GetParentSize(param1,0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06007058 RID: 28760 RVA: 0x00002050 File Offset: 0x00000250
@@ -194,4 +240,164 @@ namespace Core.Animations
 		[FieldOffset(Offset = "0x10")]
 		public float duration;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: add_ClickEvent ---
+		void Core_Animations_GameSimpleUnityAnimation__add_ClickEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a5a8a4 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_IGameAnimation__TypeInfo);
+		    DAT_ram_00a5a8a4 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x14);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = func_ii_7048(param1_00,param2,0);
+		    param2_00 = System_Action_IGameAnimation__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_IGameAnimation__TypeInfo), iVar2 == 0)) break;
+		    iVar2 = func_ii_4329(param1 + 0x14,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: set_SortingOrder ---
+		void Core_Animations_GameSimpleUnityAnimation__set_SortingOrder
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a5a8a5 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_IGameAnimation__TypeInfo);
+		    DAT_ram_00a5a8a5 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x24);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = UnityEngine_UI_Image__set_sprite(param1_00,param2,0);
+		    param2_00 = System_Action_IGameAnimation__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_IGameAnimation__TypeInfo), iVar2 == 0)) break;
+		    iVar2 = func_ii_4329(param1 + 0x24,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: add_CompleteEvent ---
+		void Core_Animations_GameSimpleUnityAnimation__add_CompleteEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a5a8a6 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_IGameAnimation__TypeInfo);
+		    DAT_ram_00a5a8a6 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x24);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = func_ii_7048(param1_00,param2,0);
+		    param2_00 = System_Action_IGameAnimation__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_IGameAnimation__TypeInfo), iVar2 == 0)) break;
+		    iVar2 = func_ii_4329(param1 + 0x24,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: remove_CompleteEvent ---
+		void Core_Animations_GameSimpleUnityAnimation__remove_CompleteEvent
+		               (undefined4 param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  if (DAT_ram_00a5a8a7 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_25625);
+		    DAT_ram_00a5a8a7 = '\x01';
+		  }
+		  Core_Animations_GameSimpleUnityAnimation__set_Loop(param1,param2,param2,param2);
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_Loop ---
+		void Core_Animations_GameSimpleUnityAnimation__set_Loop
+		               (int param1,undefined4 param2,int param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  undefined4 param2_00;
+		  float param1_00;
+		  
+		  if (DAT_ram_00a5a8a8 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_Core_Animations_GameSimpleUnityAnimation__Play_b__28_0__);
+		    Mono_Security_ASN1__get_Item(&DG_Tweening_TweenCallback_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Method_DG_Tweening_TweenSettingsExtensions_SetLink_Tween___);
+		    DAT_ram_00a5a8a8 = '\x01';
+		  }
+		  *(char *)(param1 + 0x28) = (char)param3;
+		  if (param3 != 0) {
+		    param1_00 = *(float *)(param1 + 0x10);
+		    uVar1 = unnamed_function_1417(DG_Tweening_TweenCallback_TypeInfo);
+		    DG_Tweening_Color2__op_Multiply
+		              (uVar1,param1,Method_Core_Animations_GameSimpleUnityAnimation__Play_b__28_0__,0);
+		    uVar1 = DG_Tweening_DOVirtual__EasedValue(param1_00,uVar1,1,0);
+		    param2_00 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_uint__object___MoveNext
+		                          (param1,0);
+		    DG_Tweening_TweenSettingsExtensions__SetDelay_object_
+		              (uVar1,param2_00,Method_DG_Tweening_TweenSettingsExtensions_SetLink_Tween___);
+		  }
+		  return;
+		}
+		*/
+
 }

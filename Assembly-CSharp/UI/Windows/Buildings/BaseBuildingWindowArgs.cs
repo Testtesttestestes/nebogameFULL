@@ -13,6 +13,23 @@ namespace UI.Windows.Buildings
 		[Address(RVA = "0x620A", Offset = "0x620A", VA = "0x620A")]
 		protected BaseBuildingWindowArgs(UserIsle isle, uint buildingTypeId)
 		{
+		/* --- GHIDRA: .ctor ---
+		void UI_Windows_Buildings_BaseBuildingWindowArgs___ctor
+		               (undefined4 param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  if (DAT_ram_00a58a8d == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UI_Windows_Buildings_BaseIsleBuildingWindowArgs_ClanIsle___ctor__);
+		    DAT_ram_00a58a8d = '\x01';
+		  }
+		  Core_GameResources_BaseGameResourcesFabric_object__object___get_TotalResourceCount
+		            (param1,param2,param3,
+		             Method_UI_Windows_Buildings_BaseIsleBuildingWindowArgs_ClanIsle___ctor__);
+		  return;
+		}
+		*/
+
 		}
 	}
 }

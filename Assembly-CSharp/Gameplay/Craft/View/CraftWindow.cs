@@ -168,6 +168,34 @@ namespace Gameplay.Craft.View
 		[Address(RVA = "0x84A3", Offset = "0x84A3", VA = "0x84A3")]
 		public void Init()
 		{
+		/* --- GHIDRA: Init ---
+		void Gameplay_Craft_View_CraftWindow__Init(int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  int param2_00;
+		  int iVar1;
+		  
+		  param2_00 = 0;
+		  if (DAT_ram_00a57d05 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UI_Windows_ClosableBaseWindow_CraftWindow_CraftWindowArgs__OnShow__);
+		    DAT_ram_00a57d05 = '\x01';
+		  }
+		  func_ii_7769(param1,param2,
+		               Method_UI_Windows_ClosableBaseWindow_CraftWindow_CraftWindowArgs__OnShow__);
+		  iVar1 = *(int *)(param1 + 0x70);
+		  if (0 < *(int *)(iVar1 + 0xc)) {
+		    do {
+		      Com_TheFallenGames_OSA_CustomAdapters_TableView_Tuple_Basic_BasicTupleValueViewsHolder__UpdateAsText
+		                (*(undefined4 *)(iVar1 + param2_00 * 4 + 0x10),0,0);
+		      param2_00 = param2_00 + 1;
+		    } while (param2_00 < *(int *)(iVar1 + 0xc));
+		  }
+		  Gameplay_Craft_View_CraftWindow__ScrollTo(param1,param2_00);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600347A RID: 13434 RVA: 0x00002050 File Offset: 0x00000250
@@ -175,6 +203,39 @@ namespace Gameplay.Craft.View
 		[Address(RVA = "0x84A4", Offset = "0x84A4", VA = "0x84A4", Slot = "22")]
 		protected override void OnShow(CraftWindow.CraftWindowArgs args)
 		{
+		/* --- GHIDRA: OnShow ---
+		void Gameplay_Craft_View_CraftWindow__OnShow(int param1,undefined4 param2)
+		
+		{
+		  undefined8 *puVar1;
+		  int iVar2;
+		  
+		  if (DAT_ram_00a57d06 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UI_Windows_ClosableBaseWindow_CraftWindow_CraftWindowArgs__OnClose__);
+		    DAT_ram_00a57d06 = '\x01';
+		  }
+		  UI_Windows_ClosableBaseWindow_object___OnClickBack
+		            (param1,Method_UI_Windows_ClosableBaseWindow_CraftWindow_CraftWindowArgs__OnClose__);
+		  if (*(char *)(param1 + 0x84) != '\0') {
+		    puVar1 = (undefined8 *)(param1 + 0x7c);
+		    MVC_AbstractController__Run(*(undefined4 *)puVar1,0);
+		    iVar2 = **(int **)(param1 + 0x80);
+		    (**(code **)((ulonglong)*(uint *)(iVar2 + 0x130) * 4))
+		              (*(int **)(param1 + 0x80),*(undefined4 *)(iVar2 + 0x134));
+		    iVar2 = **(int **)puVar1;
+		    (**(code **)((ulonglong)*(uint *)(iVar2 + 0xe8) * 4))
+		              (*(int **)puVar1,*(undefined4 *)(iVar2 + 0xec));
+		    iVar2 = **(int **)(param1 + 0x74);
+		    (**(code **)((ulonglong)*(uint *)(iVar2 + 0xe8) * 4))
+		              (*(int **)(param1 + 0x74),*(undefined4 *)(iVar2 + 0xec));
+		    *puVar1 = 0;
+		    *(undefined8 *)(param1 + 0x74) = 0;
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600347B RID: 13435 RVA: 0x00002050 File Offset: 0x00000250
@@ -182,6 +243,48 @@ namespace Gameplay.Craft.View
 		[Address(RVA = "0x84A5", Offset = "0x84A5", VA = "0x84A5", Slot = "19")]
 		protected override void OnClose()
 		{
+		/* --- GHIDRA: OnClose ---
+		void Gameplay_Craft_View_CraftWindow__OnClose(int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  int param2_00;
+		  undefined4 param1_00;
+		  int *param1_01;
+		  int iVar1;
+		  
+		  if (DAT_ram_00a57d07 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Com_TheFallenGames_OSA_Core_OSA_BaseParamsWithPrefab__CraftRecipesViewsHolder__get_IsInitialized__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Gameplay_Craft_View_CraftWindow___c__DisplayClass45_0__SetRecipes_b__0__);
+		    Mono_Security_ASN1__get_Item(&Gameplay_Craft_View_CraftWindow___c__DisplayClass45_0_TypeInfo);
+		    DAT_ram_00a57d07 = '\x01';
+		  }
+		  param2_00 = unnamed_function_1417(Gameplay_Craft_View_CraftWindow___c__DisplayClass45_0_TypeInfo);
+		  *(undefined4 *)(param2_00 + 0xc) = param2;
+		  *(int *)(param2_00 + 8) = param1;
+		  iVar1 = **(int **)(param1 + 0x44);
+		  (**(code **)((ulonglong)*(uint *)(iVar1 + 0x3b8) * 4))
+		            (*(int **)(param1 + 0x44),*(undefined4 *)(iVar1 + 0x3bc));
+		  param1_01 = *(int **)(param1 + 0x44);
+		  if ((char)param1_01[0x14] != '\0') {
+		    Gameplay_Craft_View_CraftRecipesOSAView__RemoveItemsFrom
+		              (param1_01,*(undefined4 *)(param2_00 + 0xc),param1_01);
+		    return;
+		  }
+		  param1_00 = unnamed_function_1417(System_Action_TypeInfo);
+		  UnityEngine_Events_UnityEvent__AddListener
+		            (param1_00,param2_00,
+		             Method_Gameplay_Craft_View_CraftWindow___c__DisplayClass45_0__SetRecipes_b__0__,0);
+		  (**(code **)((ulonglong)*(uint *)(*param1_01 + 0x298) * 4))
+		            (param1_01,param1_00,*(undefined4 *)(*param1_01 + 0x29c));
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600347C RID: 13436 RVA: 0x00002050 File Offset: 0x00000250
@@ -189,6 +292,20 @@ namespace Gameplay.Craft.View
 		[Address(RVA = "0x84A6", Offset = "0x84A6", VA = "0x84A6")]
 		public void SetRecipes(IList<CraftRecipeListElement.CraftRecipeListElementArgs> items)
 		{
+		/* --- GHIDRA: SetRecipes ---
+		undefined4
+		Gameplay_Craft_View_CraftWindow__SetRecipes
+		          (int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  uVar1 = Gameplay_Craft_View_CraftSlotListElement___ctor
+		                    (*(undefined4 *)(param1 + 0x60),param2,param3,param1);
+		  return uVar1;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600347D RID: 13437 RVA: 0x00002052 File Offset: 0x00000252
@@ -196,6 +313,36 @@ namespace Gameplay.Craft.View
 		[Address(RVA = "0x84A7", Offset = "0x84A7", VA = "0x84A7")]
 		public List<CraftSlotListElement> CreateManufactureSlots(IList<CraftSlotDic> dics, Action<CraftSlotListElement> selectCallback)
 		{
+		/* --- GHIDRA: CreateManufactureSlots ---
+		void Gameplay_Craft_View_CraftWindow__CreateManufactureSlots
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  undefined4 param3_00;
+		  int *piVar2;
+		  int iVar3;
+		  undefined4 local_8;
+		  undefined4 local_4;
+		  
+		  if (DAT_ram_00a57d08 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_28672);
+		    DAT_ram_00a57d08 = '\x01';
+		  }
+		  piVar2 = *(int **)(param1 + 0x68);
+		  local_4 = param2;
+		  uVar1 = func_ii_1081(DAT_ram_00a66954,&local_4);
+		  local_8 = param3;
+		  param3_00 = func_ii_1081(DAT_ram_00a66954,&local_8);
+		  uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                    (StringLiteral_28672,uVar1,param3_00,0);
+		  iVar3 = *piVar2;
+		  (**(code **)((ulonglong)*(uint *)(iVar3 + 0x2d0) * 4))
+		            (piVar2,uVar1,*(undefined4 *)(iVar3 + 0x2d4));
+		  return;
+		}
+		*/
+
 			return null;
 		}
 
@@ -204,6 +351,19 @@ namespace Gameplay.Craft.View
 		[Address(RVA = "0x84A8", Offset = "0x84A8", VA = "0x84A8")]
 		public void SetCounter(int currentValue, int totalValue)
 		{
+		/* --- GHIDRA: SetCounter ---
+		void Gameplay_Craft_View_CraftWindow__SetCounter(int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  int iVar1;
+		  
+		  iVar1 = **(int **)(param1 + 0x44);
+		  (**(code **)((ulonglong)*(uint *)(iVar1 + 0x390) * 4))
+		            (*(int **)(param1 + 0x44),param2,0,0,*(undefined4 *)(iVar1 + 0x394));
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600347F RID: 13439 RVA: 0x00002050 File Offset: 0x00000250
@@ -211,6 +371,71 @@ namespace Gameplay.Craft.View
 		[Address(RVA = "0x84A9", Offset = "0x84A9", VA = "0x84A9")]
 		public void ScrollTo(int index)
 		{
+		/* --- GHIDRA: ScrollTo ---
+		void Gameplay_Craft_View_CraftWindow__ScrollTo(int param1,undefined4 param2)
+		
+		{
+		  uint uVar1;
+		  uint *puVar2;
+		  undefined4 uVar3;
+		  undefined4 uVar4;
+		  int *piVar5;
+		  int iVar6;
+		  undefined4 uVar7;
+		  
+		  if (DAT_ram_00a57d09 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Gameplay_Craft_Controller_CraftController_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Gameplay_Craft_Events_CraftEvents_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Gameplay_Craft_Model_CraftModel_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Gameplay_Craft_Controller_CraftViewMediator_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Core_Gameplay_IGame_TypeInfo);
+		    DAT_ram_00a57d09 = '\x01';
+		  }
+		  if (*(char *)(param1 + 0x84) == '\0') {
+		    if (DAT_ram_00a6456f == '\0') {
+		      Mono_Security_ASN1__get_Item(&Core_Gameplay_Game_TypeInfo);
+		      DAT_ram_00a6456f = '\x01';
+		    }
+		    piVar5 = (int *)**(undefined4 **)(Core_Gameplay_Game_TypeInfo + 0x5c);
+		    iVar6 = *piVar5;
+		    if (*(ushort *)(iVar6 + 0xb6) != 0) {
+		      uVar1 = 0;
+		      do {
+		        if (Core_Gameplay_IGame_TypeInfo == *(int *)(*(int *)(iVar6 + 0x58) + uVar1 * 8)) {
+		          puVar2 = (uint *)(*(int *)(*(int *)(iVar6 + 0x58) + uVar1 * 8 + 4) * 8 + iVar6 + 0x140);
+		          goto code_r0x80e49ce8;
+		        }
+		        uVar1 = uVar1 + 1;
+		      } while (*(ushort *)(iVar6 + 0xb6) != uVar1);
+		    }
+		    puVar2 = (uint *)func_ii_1080(piVar5,Core_Gameplay_IGame_TypeInfo,0x10);
+		code_r0x80e49ce8:
+		    uVar3 = (**(code **)((ulonglong)*puVar2 * 4))(piVar5,puVar2[1]);
+		    uVar3 = func_ii_7112(uVar3,0);
+		    uVar4 = unnamed_function_1417(Gameplay_Craft_Model_CraftModel_TypeInfo);
+		    Gameplay_Craft_Model_CraftModel__set_OriginTime(uVar4,uVar3,0);
+		    *(undefined4 *)(param1 + 0x74) = uVar4;
+		    uVar3 = unnamed_function_1417(Gameplay_Craft_Events_CraftEvents_TypeInfo);
+		    *(undefined4 *)(param1 + 0x78) = uVar3;
+		    uVar7 = *(undefined4 *)(param1 + 0x74);
+		    uVar4 = unnamed_function_1417(Gameplay_Craft_Controller_CraftController_TypeInfo);
+		    Gameplay_Craft_Events_CraftEvents___ctor(uVar4,uVar7,uVar3,0);
+		    *(undefined4 *)(param1 + 0x7c) = uVar4;
+		    uVar3 = *(undefined4 *)(param1 + 0x74);
+		    uVar7 = *(undefined4 *)(param1 + 0x78);
+		    piVar5 = (int *)unnamed_function_1417(Gameplay_Craft_Controller_CraftViewMediator_TypeInfo);
+		    Gameplay_Craft_Controller_CraftController___c__DisplayClass4_0___TakeArtifacts_b__0
+		              (piVar5,uVar3,uVar7,uVar4,0);
+		    (**(code **)((ulonglong)*(uint *)(*piVar5 + 0x160) * 4))
+		              (piVar5,param1,*(undefined4 *)(*piVar5 + 0x164));
+		    *(int **)(param1 + 0x80) = piVar5;
+		    MVC_AbstractController__Dispose(*(undefined4 *)(param1 + 0x7c),0);
+		    *(undefined1 *)(param1 + 0x84) = 1;
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06003480 RID: 13440 RVA: 0x00002050 File Offset: 0x00000250
@@ -218,6 +443,32 @@ namespace Gameplay.Craft.View
 		[Address(RVA = "0x84AA", Offset = "0x84AA", VA = "0x84AA")]
 		private void SetupMVC()
 		{
+		/* --- GHIDRA: SetupMVC ---
+		void Gameplay_Craft_View_CraftWindow__SetupMVC(int param1,undefined4 param2)
+		
+		{
+		  undefined8 *puVar1;
+		  int iVar2;
+		  
+		  if (*(char *)(param1 + 0x84) != '\0') {
+		    puVar1 = (undefined8 *)(param1 + 0x7c);
+		    MVC_AbstractController__Run(*(undefined4 *)puVar1,0);
+		    iVar2 = **(int **)(param1 + 0x80);
+		    (**(code **)((ulonglong)*(uint *)(iVar2 + 0x130) * 4))
+		              (*(int **)(param1 + 0x80),*(undefined4 *)(iVar2 + 0x134));
+		    iVar2 = **(int **)puVar1;
+		    (**(code **)((ulonglong)*(uint *)(iVar2 + 0xe8) * 4))
+		              (*(int **)puVar1,*(undefined4 *)(iVar2 + 0xec));
+		    iVar2 = **(int **)(param1 + 0x74);
+		    (**(code **)((ulonglong)*(uint *)(iVar2 + 0xe8) * 4))
+		              (*(int **)(param1 + 0x74),*(undefined4 *)(iVar2 + 0xec));
+		    *puVar1 = 0;
+		    *(undefined8 *)(param1 + 0x74) = 0;
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06003481 RID: 13441 RVA: 0x00002050 File Offset: 0x00000250
@@ -225,6 +476,21 @@ namespace Gameplay.Craft.View
 		[Address(RVA = "0x84AB", Offset = "0x84AB", VA = "0x84AB")]
 		private void DestroyMVC()
 		{
+		/* --- GHIDRA: DestroyMVC ---
+		void Gameplay_Craft_View_CraftWindow__DestroyMVC(undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a57d0a == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UI_Windows_ClosableBaseWindow_CraftWindow_CraftWindowArgs___ctor__);
+		    DAT_ram_00a57d0a = '\x01';
+		  }
+		  UI_MonoBehaviourWithStates_ClientStateChangedDelegate___Il2CppFullySharedGenericStructType___Invoke
+		            (param1,Method_UI_Windows_ClosableBaseWindow_CraftWindow_CraftWindowArgs___ctor__);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06003482 RID: 13442 RVA: 0x00002050 File Offset: 0x00000250
@@ -364,4 +630,27 @@ namespace Gameplay.Craft.View
 			public uint SchemeId;
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_InChestButton ---
+		void Gameplay_Craft_View_CraftWindow__get_InChestButton(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  int iVar2;
+		  
+		  iVar2 = *(int *)(param1 + 0x70);
+		  if (0 < *(int *)(iVar2 + 0xc)) {
+		    iVar1 = 0;
+		    do {
+		      Com_TheFallenGames_OSA_CustomAdapters_TableView_Tuple_Basic_BasicTupleValueViewsHolder__UpdateAsText
+		                (*(undefined4 *)(iVar2 + iVar1 * 4 + 0x10),1,0);
+		      iVar1 = iVar1 + 1;
+		    } while (iVar1 < *(int *)(iVar2 + 0xc));
+		  }
+		  return;
+		}
+		*/
+
 }

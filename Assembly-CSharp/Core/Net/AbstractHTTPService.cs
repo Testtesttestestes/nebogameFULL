@@ -36,6 +36,52 @@ namespace Core.Net
 		[Address(RVA = "0xA764", Offset = "0xA764", VA = "0xA764", Slot = "5")]
 		public virtual void Dispose()
 		{
+		/* --- GHIDRA: Dispose ---
+		undefined4 Core_Net_AbstractHTTPService__Dispose(int *param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  undefined4 param1_00;
+		  undefined8 local_38;
+		  undefined8 local_30;
+		  undefined4 local_28;
+		  undefined8 local_24;
+		  undefined8 local_1c;
+		  int *local_14;
+		  undefined4 local_10;
+		  undefined8 local_c;
+		  undefined4 local_4;
+		  
+		  if (DAT_ram_00a6057c == '\0') {
+		    Mono_Security_ASN1__get_Item(&BestHTTP_HTTPRequest_TypeInfo);
+		    DAT_ram_00a6057c = '\x01';
+		  }
+		  param1_00 = unnamed_function_1417(BestHTTP_HTTPRequest_TypeInfo);
+		  BestHTTP_HTTPRequest___ctor(param1_00,param2,0,0);
+		  (**(code **)((ulonglong)*(uint *)(*param1 + 0x100) * 4))
+		            (param1,param1_00,*(undefined4 *)(*param1 + 0x104));
+		  if (DAT_ram_00a6057e == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_System_Runtime_CompilerServices_AsyncVoidMethodBuilder_Start_AbstractHTTPService__SetupAuthHeader_d__10___
+		              );
+		    DAT_ram_00a6057e = '\x01';
+		  }
+		  local_4 = 0;
+		  local_c = 0;
+		  System_Linq_Enumerable__ToDictionary_KeyValuePair_object__object___object__object_(&local_38,0);
+		  local_1c = local_30;
+		  local_28 = 0xffffffff;
+		  local_24 = local_38;
+		  local_14 = param1;
+		  local_10 = param1_00;
+		  System_Runtime_CompilerServices_AsyncVoidMethodBuilder__Start_AbstractGame__InitCompleted_d__257_
+		            (&local_24,&local_28,
+		             Method_System_Runtime_CompilerServices_AsyncVoidMethodBuilder_Start_AbstractHTTPService__SetupAuthHeader_d__10___
+		            );
+		  return param1_00;
+		}
+		*/
+
 		}
 
 		// Token: 0x06005A64 RID: 23140 RVA: 0x00002050 File Offset: 0x00000250
@@ -43,6 +89,17 @@ namespace Core.Net
 		[Address(RVA = "0x225C", Offset = "0x225C", VA = "0x225C")]
 		protected AbstractHTTPService(Uri uri, IAuthTokenSource authTokenSource, TimeSpan timeout)
 		{
+		/* --- GHIDRA: .ctor ---
+		void Core_Net_AbstractHTTPService___ctor
+		               (undefined4 param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  Core_Application_Managers_Configuration_Curator_AbstractCuratorDataProvider__Dispose
+		            (param1,param2,param3,0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06005A65 RID: 23141 RVA: 0x00002052 File Offset: 0x00000252
@@ -50,6 +107,52 @@ namespace Core.Net
 		[Address(RVA = "0xA765", Offset = "0xA765", VA = "0xA765", Slot = "6")]
 		protected virtual HTTPRequest CreateGet(Uri uri)
 		{
+		/* --- GHIDRA: CreateGet ---
+		undefined4 Core_Net_AbstractHTTPService__CreateGet(int *param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  undefined4 param1_00;
+		  undefined8 local_38;
+		  undefined8 local_30;
+		  undefined4 local_28;
+		  undefined8 local_24;
+		  undefined8 local_1c;
+		  int *local_14;
+		  undefined4 local_10;
+		  undefined8 local_c;
+		  undefined4 local_4;
+		  
+		  if (DAT_ram_00a6057d == '\0') {
+		    Mono_Security_ASN1__get_Item(&BestHTTP_HTTPRequest_TypeInfo);
+		    DAT_ram_00a6057d = '\x01';
+		  }
+		  param1_00 = unnamed_function_1417(BestHTTP_HTTPRequest_TypeInfo);
+		  BestHTTP_HTTPRequest___ctor(param1_00,param2,2,0);
+		  (**(code **)((ulonglong)*(uint *)(*param1 + 0x100) * 4))
+		            (param1,param1_00,*(undefined4 *)(*param1 + 0x104));
+		  if (DAT_ram_00a6057e == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_System_Runtime_CompilerServices_AsyncVoidMethodBuilder_Start_AbstractHTTPService__SetupAuthHeader_d__10___
+		              );
+		    DAT_ram_00a6057e = '\x01';
+		  }
+		  local_4 = 0;
+		  local_c = 0;
+		  System_Linq_Enumerable__ToDictionary_KeyValuePair_object__object___object__object_(&local_38,0);
+		  local_1c = local_30;
+		  local_28 = 0xffffffff;
+		  local_24 = local_38;
+		  local_14 = param1;
+		  local_10 = param1_00;
+		  System_Runtime_CompilerServices_AsyncVoidMethodBuilder__Start_AbstractGame__InitCompleted_d__257_
+		            (&local_24,&local_28,
+		             Method_System_Runtime_CompilerServices_AsyncVoidMethodBuilder_Start_AbstractHTTPService__SetupAuthHeader_d__10___
+		            );
+		  return param1_00;
+		}
+		*/
+
 			return null;
 		}
 
@@ -58,6 +161,43 @@ namespace Core.Net
 		[Address(RVA = "0xA766", Offset = "0xA766", VA = "0xA766", Slot = "7")]
 		protected virtual HTTPRequest CreatePost(Uri uri)
 		{
+		/* --- GHIDRA: CreatePost ---
+		void Core_Net_AbstractHTTPService__CreatePost(undefined4 param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  undefined8 local_38;
+		  undefined8 local_30;
+		  undefined4 local_28;
+		  undefined8 local_24;
+		  undefined8 local_1c;
+		  undefined4 local_14;
+		  undefined4 local_10;
+		  undefined8 local_c;
+		  undefined4 local_4;
+		  
+		  if (DAT_ram_00a6057e == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_System_Runtime_CompilerServices_AsyncVoidMethodBuilder_Start_AbstractHTTPService__SetupAuthHeader_d__10___
+		              );
+		    DAT_ram_00a6057e = '\x01';
+		  }
+		  local_4 = 0;
+		  local_c = 0;
+		  System_Linq_Enumerable__ToDictionary_KeyValuePair_object__object___object__object_(&local_38,0);
+		  local_1c = local_30;
+		  local_28 = 0xffffffff;
+		  local_24 = local_38;
+		  local_14 = param1;
+		  local_10 = param2;
+		  System_Runtime_CompilerServices_AsyncVoidMethodBuilder__Start_AbstractGame__InitCompleted_d__257_
+		            (&local_24,&local_28,
+		             Method_System_Runtime_CompilerServices_AsyncVoidMethodBuilder_Start_AbstractHTTPService__SetupAuthHeader_d__10___
+		            );
+		  return;
+		}
+		*/
+
 			return null;
 		}
 

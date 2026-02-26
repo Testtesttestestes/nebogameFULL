@@ -224,6 +224,130 @@ namespace Gameplay.Chat.Model.Data.Message.Format
 		[Address(RVA = "0x935E", Offset = "0x935E", VA = "0x935E")]
 		public ChatMsgPresenter(Dictionary<string, ChatMsgPresenter.SmilesTags> availableSmileSpritesTagsByCodes, string messageForLocalizedPhrase, string broadcastMessageLocalizedPhrase, string privateMessageLocalizedPhrase)
 		{
+		/* --- GHIDRA: .ctor ---
+		undefined4
+		Gameplay_Chat_Model_Data_Message_Format_ChatMsgPresenter___ctor
+		          (int param1,int param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  undefined4 param1_00;
+		  undefined4 uVar1;
+		  int iVar2;
+		  undefined4 uVar3;
+		  int iVar4;
+		  undefined4 param1_01;
+		  undefined4 *puVar5;
+		  undefined8 local_10;
+		  undefined4 local_8;
+		  undefined4 local_4;
+		  
+		  if (DAT_ram_00a57b5c == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_Dictionary_string__string__Add__);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_Dictionary_string__string___ctor__);
+		    Mono_Security_ASN1__get_Item(&System_Collections_Generic_Dictionary_string__string__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_19740);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_26655);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_26171);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_25487);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_25485);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_26656);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_2189);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_2188);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_25591);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_25486);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_19739);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_5);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_1739);
+		    DAT_ram_00a57b5c = '\x01';
+		  }
+		  param1_01 = StringLiteral_2189;
+		  uVar3 = StringLiteral_2188;
+		  local_4 = 0;
+		  local_8 = 0;
+		  local_10 = 0;
+		  iVar4 = *(int *)(param2 + 0x1c);
+		  Gameplay_Chat_Model_Data_Message_Format_ChatMsgPresenter__GetText
+		            (param1,param2,&local_4,&local_8,&local_10);
+		  param1_00 = unnamed_function_1417(System_Collections_Generic_Dictionary_string__string__TypeInfo);
+		  System_Collections_Generic_Dictionary_object__StyleComplexSelector_PseudoStateData___set_Item
+		            (param1_00,Method_System_Collections_Generic_Dictionary_string__string___ctor__);
+		  System_Reflection_FieldInfo__get_IsStatic
+		            (param1_00,StringLiteral_25591,local_4,
+		             Method_System_Collections_Generic_Dictionary_string__string__Add__);
+		  System_Reflection_FieldInfo__get_IsStatic
+		            (param1_00,StringLiteral_25485,local_8,
+		             Method_System_Collections_Generic_Dictionary_string__string__Add__);
+		  uVar1 = Gameplay_Chat_Model_Data_Message_Format_ChatMsgPresenter__GetText
+		                    (&local_10,param2,&local_10);
+		  uVar1 = Gameplay_Chat_Model_Data_Message_Format_ChatMsgPresenter__GetColor
+		                    (param1,uVar1,param3,&local_10);
+		  System_Reflection_FieldInfo__get_IsStatic
+		            (param1_00,StringLiteral_25487,uVar1,
+		             Method_System_Collections_Generic_Dictionary_string__string__Add__);
+		  if (*(int *)(param2 + 0x1c) == 0) {
+		    System_Reflection_FieldInfo__get_IsStatic
+		              (param1_00,StringLiteral_19739,StringLiteral_5,
+		               Method_System_Collections_Generic_Dictionary_string__string__Add__);
+		    System_Reflection_FieldInfo__get_IsStatic
+		              (param1_00,StringLiteral_19740,StringLiteral_1739,
+		               Method_System_Collections_Generic_Dictionary_string__string__Add__);
+		  }
+		  else {
+		    System_Reflection_FieldInfo__get_IsStatic
+		              (param1_00,StringLiteral_19739,
+		               *(undefined4 *)(*(int *)(*(int *)(*(int *)(param2 + 0x1c) + 0x14) + 0xc) + 0x18),
+		               Method_System_Collections_Generic_Dictionary_string__string__Add__);
+		    local_10 = *(undefined8 *)(*(int *)(*(int *)(*(int *)(param2 + 0x1c) + 0x14) + 0xc) + 0x10);
+		    iVar2 = func_ii_8783(&local_10,0);
+		    if (iVar2 == 0) {
+		      iVar2 = StringLiteral_5;
+		    }
+		    System_Reflection_FieldInfo__get_IsStatic
+		              (param1_00,StringLiteral_19740,iVar2,
+		               Method_System_Collections_Generic_Dictionary_string__string__Add__);
+		    System_Reflection_FieldInfo__get_IsStatic
+		              (param1_00,StringLiteral_25486,*(undefined4 *)(param1 + 0x34),
+		               Method_System_Collections_Generic_Dictionary_string__string__Add__);
+		  }
+		  if (*(int *)(*(int *)(param2 + 0x20) + 0x10) == 8) {
+		    System_Reflection_FieldInfo__get_IsStatic
+		              (param1_00,StringLiteral_26655,*(undefined4 *)(param1 + 0x38),
+		               Method_System_Collections_Generic_Dictionary_string__string__Add__);
+		    System_Reflection_FieldInfo__get_IsStatic
+		              (param1_00,StringLiteral_26656,StringLiteral_1739,
+		               Method_System_Collections_Generic_Dictionary_string__string__Add__);
+		  }
+		  else {
+		    System_Reflection_FieldInfo__get_IsStatic
+		              (param1_00,StringLiteral_26655,
+		               *(undefined4 *)(*(int *)(*(int *)(*(int *)(param2 + 0x18) + 0x14) + 0xc) + 0x18),
+		               Method_System_Collections_Generic_Dictionary_string__string__Add__);
+		    local_10 = *(undefined8 *)(*(int *)(*(int *)(*(int *)(param2 + 0x18) + 0x14) + 0xc) + 0x10);
+		    iVar2 = func_ii_8783(&local_10,0);
+		    if (iVar2 == 0) {
+		      iVar2 = StringLiteral_5;
+		    }
+		    System_Reflection_FieldInfo__get_IsStatic
+		              (param1_00,StringLiteral_26656,iVar2,
+		               Method_System_Collections_Generic_Dictionary_string__string__Add__);
+		  }
+		  puVar5 = &StringLiteral_5;
+		  if (*(int *)(*(int *)(param2 + 0x20) + 0x10) == 4) {
+		    puVar5 = (undefined4 *)(param1 + 0x3c);
+		  }
+		  System_Reflection_FieldInfo__get_IsStatic
+		            (param1_00,StringLiteral_26171,*puVar5,
+		             Method_System_Collections_Generic_Dictionary_string__string__Add__);
+		  if (iVar4 == 0) {
+		    param1_01 = uVar3;
+		  }
+		  uVar3 = Core_GameLocalization__GetTranslation(param1_01,param1_00,0);
+		  return uVar3;
+		}
+		*/
+
 		}
 
 		// Token: 0x060044B2 RID: 17586 RVA: 0x00002052 File Offset: 0x00000252
@@ -231,6 +355,116 @@ namespace Gameplay.Chat.Model.Data.Message.Format
 		[Address(RVA = "0x935F", Offset = "0x935F", VA = "0x935F", Slot = "4")]
 		public string GetText(ChatUserMessageData message, MessageDrawTarget messageDrawTarget)
 		{
+		/* --- GHIDRA: GetText ---
+		undefined4
+		Gameplay_Chat_Model_Data_Message_Format_ChatMsgPresenter__GetText
+		          (undefined4 param1,int param2,undefined4 param3)
+		
+		{
+		  undefined4 param3_00;
+		  int iVar1;
+		  undefined8 local_10;
+		  undefined4 local_4;
+		  
+		  if (DAT_ram_00a57b5d == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&System_Collections_Generic_KeyValuePair_string__string____TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_KeyValuePair_string__string___ctor__);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_2325);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_28217);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_2142);
+		    DAT_ram_00a57b5d = '\x01';
+		  }
+		  param3_00 = *(undefined4 *)(*(int *)(param2 + 0x20) + 0x14);
+		  iVar1 = *(int *)(*(int *)(param2 + 0x20) + 0x30);
+		  if (iVar1 != 0) {
+		    local_4 = *(undefined4 *)(iVar1 + 0xc);
+		    iVar1 = UnityEngine_InputForUI_PointerEvent_ButtonsState__Set(&local_4,2,0);
+		    if (iVar1 != 0) {
+		      iVar1 = Mono_Security_ASN1Convert__ToOid
+		                        (System_Collections_Generic_KeyValuePair_string__string____TypeInfo,1);
+		      local_10 = 0;
+		      System_Text_Formatting_StringView__get_IsEmpty
+		                (&local_10,StringLiteral_28217,param3_00,
+		                 Method_System_Collections_Generic_KeyValuePair_string__string___ctor__);
+		      *(undefined8 *)(iVar1 + 0x10) = local_10;
+		      param3_00 = Gameplay_Clans_Office_View_ClanWarsTab_ClanWarsRewardsTab_ClanWarsRewardsView__GetPlacesText
+		                            (StringLiteral_2142,iVar1,0);
+		    }
+		    local_4 = *(undefined4 *)(*(int *)(*(int *)(param2 + 0x20) + 0x30) + 0xc);
+		    iVar1 = UnityEngine_InputForUI_PointerEvent_ButtonsState__Set(&local_4,4,0);
+		    if (iVar1 != 0) {
+		      iVar1 = Mono_Security_ASN1Convert__ToOid
+		                        (System_Collections_Generic_KeyValuePair_string__string____TypeInfo,1);
+		      local_10 = 0;
+		      System_Text_Formatting_StringView__get_IsEmpty
+		                (&local_10,StringLiteral_28217,param3_00,
+		                 Method_System_Collections_Generic_KeyValuePair_string__string___ctor__);
+		      *(undefined8 *)(iVar1 + 0x10) = local_10;
+		      param3_00 = Gameplay_Clans_Office_View_ClanWarsTab_ClanWarsRewardsTab_ClanWarsRewardsView__GetPlacesText
+		                            (StringLiteral_2325,iVar1,0);
+		    }
+		  }
+		  return param3_00;
+		}
+		*/
+
+		/* --- GHIDRA: GetText ---
+		undefined4
+		Gameplay_Chat_Model_Data_Message_Format_ChatMsgPresenter__GetText
+		          (undefined4 param1,int param2,undefined4 param3)
+		
+		{
+		  undefined4 param3_00;
+		  int iVar1;
+		  undefined8 local_10;
+		  undefined4 local_4;
+		  
+		  if (DAT_ram_00a57b5d == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&System_Collections_Generic_KeyValuePair_string__string____TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_KeyValuePair_string__string___ctor__);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_2325);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_28217);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_2142);
+		    DAT_ram_00a57b5d = '\x01';
+		  }
+		  param3_00 = *(undefined4 *)(*(int *)(param2 + 0x20) + 0x14);
+		  iVar1 = *(int *)(*(int *)(param2 + 0x20) + 0x30);
+		  if (iVar1 != 0) {
+		    local_4 = *(undefined4 *)(iVar1 + 0xc);
+		    iVar1 = UnityEngine_InputForUI_PointerEvent_ButtonsState__Set(&local_4,2,0);
+		    if (iVar1 != 0) {
+		      iVar1 = Mono_Security_ASN1Convert__ToOid
+		                        (System_Collections_Generic_KeyValuePair_string__string____TypeInfo,1);
+		      local_10 = 0;
+		      System_Text_Formatting_StringView__get_IsEmpty
+		                (&local_10,StringLiteral_28217,param3_00,
+		                 Method_System_Collections_Generic_KeyValuePair_string__string___ctor__);
+		      *(undefined8 *)(iVar1 + 0x10) = local_10;
+		      param3_00 = Gameplay_Clans_Office_View_ClanWarsTab_ClanWarsRewardsTab_ClanWarsRewardsView__GetPlacesText
+		                            (StringLiteral_2142,iVar1,0);
+		    }
+		    local_4 = *(undefined4 *)(*(int *)(*(int *)(param2 + 0x20) + 0x30) + 0xc);
+		    iVar1 = UnityEngine_InputForUI_PointerEvent_ButtonsState__Set(&local_4,4,0);
+		    if (iVar1 != 0) {
+		      iVar1 = Mono_Security_ASN1Convert__ToOid
+		                        (System_Collections_Generic_KeyValuePair_string__string____TypeInfo,1);
+		      local_10 = 0;
+		      System_Text_Formatting_StringView__get_IsEmpty
+		                (&local_10,StringLiteral_28217,param3_00,
+		                 Method_System_Collections_Generic_KeyValuePair_string__string___ctor__);
+		      *(undefined8 *)(iVar1 + 0x10) = local_10;
+		      param3_00 = Gameplay_Clans_Office_View_ClanWarsTab_ClanWarsRewardsTab_ClanWarsRewardsView__GetPlacesText
+		                            (StringLiteral_2325,iVar1,0);
+		    }
+		  }
+		  return param3_00;
+		}
+		*/
+
 			return null;
 		}
 
@@ -247,6 +481,151 @@ namespace Gameplay.Chat.Model.Data.Message.Format
 		[Address(RVA = "0x9361", Offset = "0x9361", VA = "0x9361")]
 		public void GetColor(ChatUserMessageData message, out string nickColor, out string msgColor)
 		{
+		/* --- GHIDRA: GetColor ---
+		undefined4
+		Gameplay_Chat_Model_Data_Message_Format_ChatMsgPresenter__GetColor
+		          (int param1,undefined4 param2,int param3,undefined4 param4)
+		
+		{
+		  int iVar1;
+		  undefined4 param2_00;
+		  int iVar2;
+		  undefined4 uVar3;
+		  int iVar4;
+		  int *piVar5;
+		  int iVar6;
+		  int local_20;
+		  undefined8 *local_1c;
+		  undefined8 local_18;
+		  undefined4 local_10;
+		  undefined4 uStack_c;
+		  int local_8;
+		  undefined4 uStack_4;
+		  
+		  if (DAT_ram_00a57b5f == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_System_Collections_Generic_Dictionary_string__ChatMsgPresenter_SmilesTags__GetEnumerator__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_System_Collections_Generic_Dictionary_Enumerator_string__ChatMsgPresenter_SmilesTags__Dispose__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_System_Collections_Generic_Dictionary_Enumerator_string__ChatMsgPresenter_SmilesTags__MoveNext__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_System_Collections_Generic_Dictionary_Enumerator_string__ChatMsgPresenter_SmilesTags__get_Current__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_System_Collections_Generic_KeyValuePair_string__ChatMsgPresenter_SmilesTags__get_Key__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_System_Collections_Generic_KeyValuePair_string__ChatMsgPresenter_SmilesTags__get_Value__
+		              );
+		    DAT_ram_00a57b5f = '\x01';
+		  }
+		  local_8 = 0;
+		  uStack_4 = 0;
+		  local_10 = 0;
+		  uStack_c = 0;
+		  local_18 = 0;
+		  System_Collections_Generic_List_object___GetEnumerator
+		            (&local_18,*(undefined4 *)(param1 + 0x30),
+		             Method_System_Collections_Generic_Dictionary_string__ChatMsgPresenter_SmilesTags__GetEnumerator__
+		            );
+		  local_20 = 0;
+		  local_1c = &local_18;
+		  iVar6 = 0xc;
+		  if (param3 != 1) {
+		    iVar6 = 8;
+		  }
+		  while( true ) {
+		    param2_00 = param2;
+		    DAT_ram_009d3e38 = 0;
+		    iVar2 = import::env::invoke_iii
+		                      (s_struct_Uniforms___color__array<v_ram_00000aff + 0x158,&local_18,
+		                       Method_System_Collections_Generic_Dictionary_Enumerator_string__ChatMsgPresenter_SmilesTags__MoveNext__
+		                      );
+		    iVar1 = local_8;
+		    uVar3 = uStack_c;
+		    iVar4 = DAT_ram_009d3e38;
+		    DAT_ram_009d3e38 = 0;
+		    if (iVar4 == 1) {
+		      uVar3 = import::env::__cxa_find_matching_catch_3(&DAT_ram_0072c9c8);
+		      goto code_r0x80e27d11;
+		    }
+		    if (iVar2 == 0) {
+		      DAT_ram_009d3e38 = 0;
+		      return param2_00;
+		    }
+		    DAT_ram_009d3e38 = 0;
+		    iVar2 = import::env::invoke_iiii
+		                      (s_struct_Uniforms___color__array<v_ram_000013c7 + 0x22e,param2_00,uStack_c,0)
+		    ;
+		    iVar4 = DAT_ram_009d3e38;
+		    DAT_ram_009d3e38 = 0;
+		    if (iVar4 == 1) break;
+		    param2 = param2_00;
+		    if (iVar2 != -1) {
+		      DAT_ram_009d3e38 = 0;
+		      param2 = import::env::invoke_iiiii
+		                         (s_struct_Uniforms___color__array<v_ram_00001b87 + 0x2a,param2_00,uVar3,
+		                          *(undefined4 *)(iVar1 + iVar6),0);
+		      iVar4 = DAT_ram_009d3e38;
+		      DAT_ram_009d3e38 = 0;
+		      if (iVar4 == 1) {
+		        uVar3 = import::env::__cxa_find_matching_catch_3(&DAT_ram_0072c9c8);
+		code_r0x80e27d11:
+		        iVar6 = global_1;
+		        iVar4 = import::env::llvm_eh_typeid_for(&DAT_ram_0072c9c8);
+		        if (iVar6 == iVar4) {
+		          piVar5 = (int *)import::env::__cxa_begin_catch(uVar3);
+		          iVar4 = *piVar5;
+		          DAT_ram_009d3e38 = 0;
+		          local_20 = iVar4;
+		          import::env::invoke_v(0x123);
+		          iVar6 = DAT_ram_009d3e38;
+		          DAT_ram_009d3e38 = 0;
+		          if (iVar6 != 1) {
+		            if (iVar4 == 0) {
+		              DAT_ram_009d3e38 = 0;
+		              return param2_00;
+		            }
+		            System_Data_DataSet__ValidateLocaleConstraint(iVar4);
+		            do {
+		              halt_trap();
+		            } while( true );
+		          }
+		          uVar3 = import::env::__cxa_find_matching_catch_2();
+		        }
+		        DAT_ram_009d3e38 = 0;
+		        import::env::invoke_ii(s_struct_Uniforms___color__array<v_ram_00001b87 + 0x2b,&local_20);
+		        iVar6 = DAT_ram_009d3e38;
+		        DAT_ram_009d3e38 = 0;
+		        if (iVar6 != 1) {
+		          import::env::__resumeException(uVar3);
+		          do {
+		            halt_trap();
+		          } while( true );
+		        }
+		        import::env::__cxa_find_matching_catch_3(0);
+		        unnamed_function_937();
+		        do {
+		          halt_trap();
+		        } while( true );
+		      }
+		    }
+		  }
+		  uVar3 = import::env::__cxa_find_matching_catch_3(&DAT_ram_0072c9c8);
+		  goto code_r0x80e27d11;
+		}
+		*/
+
 		}
 
 		// Token: 0x060044B5 RID: 17589 RVA: 0x00002052 File Offset: 0x00000252
@@ -254,6 +633,26 @@ namespace Gameplay.Chat.Model.Data.Message.Format
 		[Address(RVA = "0x9362", Offset = "0x9362", VA = "0x9362")]
 		public string HandleSmiles(string text, MessageDrawTarget messageDrawTarget)
 		{
+		/* --- GHIDRA: HandleSmiles ---
+		void Gameplay_Chat_Model_Data_Message_Format_ChatMsgPresenter__HandleSmiles(undefined4 param1)
+		
+		{
+		  int iVar1;
+		  
+		  if (DAT_ram_00a57b60 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Gameplay_Chat_Model_Data_Message_Format_ChatMsgPresenter_TypeInfo)
+		    ;
+		    Mono_Security_ASN1__get_Item(&string___TypeInfo);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_1238);
+		    DAT_ram_00a57b60 = '\x01';
+		  }
+		  iVar1 = Mono_Security_ASN1Convert__ToOid(string___TypeInfo,1);
+		  *(undefined4 *)(iVar1 + 0x10) = StringLiteral_1238;
+		  **(int **)(Gameplay_Chat_Model_Data_Message_Format_ChatMsgPresenter_TypeInfo + 0x5c) = iVar1;
+		  return;
+		}
+		*/
+
 			return null;
 		}
 
@@ -364,4 +763,46 @@ namespace Gameplay.Chat.Model.Data.Message.Format
 			public readonly string Mini;
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: set_PrivateMsgColor ---
+		void Gameplay_Chat_Model_Data_Message_Format_ChatMsgPresenter__set_PrivateMsgColor
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4,undefined4 param5,
+		               undefined4 param6)
+		
+		{
+		  undefined4 uVar1;
+		  undefined4 uVar2;
+		  
+		  if (DAT_ram_00a57b5b == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_635);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_637);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_639);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_638);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_636);
+		    DAT_ram_00a57b5b = '\x01';
+		  }
+		  *(undefined4 *)(param1 + 8) = StringLiteral_639;
+		  uVar2 = StringLiteral_638;
+		  *(undefined4 *)(param1 + 0x10) = StringLiteral_638;
+		  *(undefined4 *)(param1 + 0xc) = uVar2;
+		  uVar1 = StringLiteral_637;
+		  *(undefined4 *)(param1 + 0x1c) = uVar2;
+		  *(undefined4 *)(param1 + 0x18) = uVar2;
+		  *(undefined4 *)(param1 + 0x14) = uVar1;
+		  uVar1 = StringLiteral_636;
+		  *(undefined4 *)(param1 + 0x24) = StringLiteral_636;
+		  *(undefined4 *)(param1 + 0x20) = uVar1;
+		  uVar1 = StringLiteral_635;
+		  *(undefined4 *)(param1 + 0x2c) = StringLiteral_635;
+		  *(undefined4 *)(param1 + 0x28) = uVar1;
+		  *(undefined4 *)(param1 + 0x3c) = param5;
+		  *(undefined4 *)(param1 + 0x38) = param4;
+		  *(undefined4 *)(param1 + 0x34) = param3;
+		  *(undefined4 *)(param1 + 0x30) = param2;
+		  return;
+		}
+		*/
+
 }

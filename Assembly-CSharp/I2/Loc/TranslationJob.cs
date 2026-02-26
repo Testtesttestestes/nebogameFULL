@@ -27,6 +27,18 @@ namespace I2.Loc
 		[Address(RVA = "0xBF55", Offset = "0xBF55", VA = "0xBF55")]
 		public TranslationJob()
 		{
+		/* --- GHIDRA: .ctor ---
+		void I2_Loc_TranslationJob___ctor(int param1,undefined4 param2)
+		
+		{
+		  if (*(int *)(param1 + 0xc) != 0) {
+		    UnityEngine_Networking_UnityWebRequest__Finalize(*(int *)(param1 + 0xc),0);
+		  }
+		  *(undefined4 *)(param1 + 0xc) = 0;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x04003D7C RID: 15740

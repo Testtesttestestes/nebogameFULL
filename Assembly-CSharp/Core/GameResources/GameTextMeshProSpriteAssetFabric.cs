@@ -13,6 +13,25 @@ namespace Core.GameResources
 		[Address(RVA = "0xA914", Offset = "0xA914", VA = "0xA914")]
 		public GameTextMeshProSpriteAssetFabric()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Core_GameResources_GameTextMeshProSpriteAssetFabric___ctor(undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a60660 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Core_GameResources_BaseGameResourcesFabric_GameAnimationLoader__GameResourcesManager_AnimationReadyDelegate___ctor__
+		              );
+		    DAT_ram_00a60660 = '\x01';
+		  }
+		  Sirenix_Serialization_BaseFormatter___Il2CppFullySharedGenericType___get_SerializedType
+		            (param1,
+		             Method_Core_GameResources_BaseGameResourcesFabric_GameAnimationLoader__GameResourcesManager_AnimationReadyDelegate___ctor__
+		            );
+		  return;
+		}
+		*/
+
 		}
 	}
 }

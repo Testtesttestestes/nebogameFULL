@@ -20,6 +20,66 @@ namespace Gameplay.WorldAxis.ColossusInfo.View
 		[Address(RVA = "0x647F", Offset = "0x647F", VA = "0x647F", Slot = "7")]
 		protected override void Awake()
 		{
+		/* --- GHIDRA: Awake ---
+		void Gameplay_WorldAxis_ColossusInfo_View_TreasuryOptionListElement__Awake
+		               (int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  undefined4 uVar2;
+		  undefined4 uVar3;
+		  int iVar4;
+		  undefined8 local_10;
+		  undefined4 local_4;
+		  
+		  if (DAT_ram_00a58bd4 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_GameLocalization_TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Elements_GenericList_GenericListElement_TreasuryOptionListElement_TreasuryOptionListElementArgs__get_args__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&System_Collections_Generic_KeyValuePair_string__string____TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_KeyValuePair_string__string___ctor__);
+		    Mono_Security_ASN1__get_Item(&Core_Money_Money_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_21978);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_17775);
+		    DAT_ram_00a58bd4 = '\x01';
+		  }
+		  iVar4 = **(int **)(param1 + 0x24);
+		  (**(code **)((ulonglong)*(uint *)(iVar4 + 0x138) * 4))
+		            (*(int **)(param1 + 0x24),*(undefined4 *)(*(int *)(param1 + 0x18) + 0x20),
+		             *(undefined4 *)(iVar4 + 0x13c));
+		  uVar1 = *(undefined4 *)(param1 + 0x28);
+		  uVar2 = *(undefined4 *)(*(int *)(param1 + 0x18) + 0x24);
+		  uVar3 = *(undefined4 *)(*(int *)(param1 + 0x18) + 0x28);
+		  if (*(int *)(Core_Money_Money_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Core_Money_Money_TypeInfo);
+		  }
+		  uVar2 = Core_Money_Money__op_Explicit(uVar2,0);
+		  UI_Price_Price__SetColor(uVar1,uVar3,uVar2,0);
+		  uVar1 = *(undefined4 *)(param1 + 0x2c);
+		  if (*(int *)(Core_GameLocalization_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Core_GameLocalization_TypeInfo);
+		  }
+		  uVar2 = Core_Extensions_Dict_CultDicExt__GetTitle(StringLiteral_17775,1,0,1,0,0,0,0);
+		  iVar4 = Mono_Security_ASN1Convert__ToOid
+		                    (System_Collections_Generic_KeyValuePair_string__string____TypeInfo,1);
+		  local_4 = *(undefined4 *)(*(int *)(param1 + 0x18) + 0x1c);
+		  uVar3 = Protocol_Combat_ProtoPlayerActionEvt___ctor(&local_4,0);
+		  local_10 = 0;
+		  System_Text_Formatting_StringView__get_IsEmpty
+		            (&local_10,StringLiteral_21978,uVar3,
+		             Method_System_Collections_Generic_KeyValuePair_string__string___ctor__);
+		  *(undefined8 *)(iVar4 + 0x10) = local_10;
+		  uVar2 = Gameplay_Clans_Office_View_ClanWarsTab_ClanWarsRewardsTab_ClanWarsRewardsView__GetPlacesText
+		                    (uVar2,iVar4,0);
+		  UnityEngine_Component__GetComponentInChildren_object_(uVar1,uVar2,0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06001286 RID: 4742 RVA: 0x00002050 File Offset: 0x00000250
@@ -34,6 +94,26 @@ namespace Gameplay.WorldAxis.ColossusInfo.View
 		[Address(RVA = "0x6481", Offset = "0x6481", VA = "0x6481", Slot = "10")]
 		protected override void CallElementClickedEvent(TreasuryOptionListElement.TreasuryOptionListElementArgs args)
 		{
+		/* --- GHIDRA: CallElementClickedEvent ---
+		void Gameplay_WorldAxis_ColossusInfo_View_TreasuryOptionListElement__CallElementClickedEvent
+		               (undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a58bd5 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Elements_GenericList_SelectableListElement_TreasuryOptionListElement_TreasuryOptionListElementArgs___ctor__
+		              );
+		    DAT_ram_00a58bd5 = '\x01';
+		  }
+		  UI_Elements_GenericList_SelectableListElementArgs___Il2CppFullySharedGenericType____ctor
+		            (param1,
+		             Method_UI_Elements_GenericList_SelectableListElement_TreasuryOptionListElement_TreasuryOptionListElementArgs___ctor__
+		            );
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06001288 RID: 4744 RVA: 0x00002050 File Offset: 0x00000250

@@ -25,6 +25,37 @@ namespace Gameplay.GameEvents.Model.Tags
 		[Address(RVA = "0x7F14", Offset = "0x7F14", VA = "0x7F14")]
 		public PromotionTag_38()
 		{
+		/* --- GHIDRA: .ctor ---
+		int Gameplay_GameEvents_Model_Tags_PromotionTag_38___ctor(int *param1,undefined4 param2)
+		
+		{
+		  undefined4 param2_00;
+		  int iVar1;
+		  int iVar2;
+		  uint uVar3;
+		  
+		  if (DAT_ram_00a574e2 == '\0') {
+		    Mono_Security_ASN1__get_Item(&double___TypeInfo);
+		    DAT_ram_00a574e2 = '\x01';
+		  }
+		  param2_00 = (**(code **)((ulonglong)*(uint *)(*param1 + 0xe8) * 4))
+		                        (param1,*(undefined4 *)(*param1 + 0xec));
+		  iVar1 = Mono_Security_ASN1Convert__ToOid(double___TypeInfo,param2_00);
+		  iVar2 = (**(code **)((ulonglong)*(uint *)(*param1 + 0xe8) * 4))
+		                    (param1,*(undefined4 *)(*param1 + 0xec));
+		  if (iVar2 != 0) {
+		    iVar2 = 0;
+		    do {
+		      *(undefined8 *)(iVar1 + iVar2 * 8 + 0x10) = *(undefined8 *)(param1[5] + iVar2 * 8 + 0x10);
+		      iVar2 = iVar2 + 1;
+		      uVar3 = (**(code **)((ulonglong)*(uint *)(*param1 + 0xe8) * 4))
+		                        (param1,*(undefined4 *)(*param1 + 0xec));
+		    } while ((longlong)iVar2 < (longlong)(ulonglong)uVar3);
+		  }
+		  return iVar1;
+		}
+		*/
+
 		}
 	}
 }

@@ -137,6 +137,28 @@ namespace Gameplay.Clans.Office.View.ClanMembersTab
 		[Address(RVA = "0x8CCA", Offset = "0x8CCA", VA = "0x8CCA")]
 		public void Init(IList<ClanMemberListElement.ClanMemberListElementArgs> members)
 		{
+		/* --- GHIDRA: Init ---
+		void Gameplay_Clans_Office_View_ClanMembersTab_ClanMembersView__Init
+		               (int param1,int param2,undefined4 param3)
+		
+		{
+		  func_ii_7603(*(undefined4 *)(param1 + 0x40),
+		               (*(uint *)(*(int *)(*(int *)(param2 + 0xc) + 0x1c) + 0x20) & 2) >> 1,0);
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: Init ---
+		void Gameplay_Clans_Office_View_ClanMembersTab_ClanMembersView__Init
+		               (int param1,int param2,undefined4 param3)
+		
+		{
+		  func_ii_7603(*(undefined4 *)(param1 + 0x40),
+		               (*(uint *)(*(int *)(*(int *)(param2 + 0xc) + 0x1c) + 0x20) & 2) >> 1,0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06003E0C RID: 15884 RVA: 0x00002050 File Offset: 0x00000250
@@ -151,6 +173,21 @@ namespace Gameplay.Clans.Office.View.ClanMembersTab
 		[Address(RVA = "0x8CCC", Offset = "0x8CCC", VA = "0x8CCC")]
 		public void UpdateToggle(ClanOfficeData data)
 		{
+		/* --- GHIDRA: UpdateToggle ---
+		void Gameplay_Clans_Office_View_ClanMembersTab_ClanMembersView__UpdateToggle
+		               (undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a57f83 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_UI_MonoBehaviourWithStates_ClanInfoWindow_State___ctor__);
+		    DAT_ram_00a57f83 = '\x01';
+		  }
+		  ScreenAdaptation_Common_AppSize__Update
+		            (param1,Method_UI_MonoBehaviourWithStates_ClanInfoWindow_State___ctor__);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06003E0E RID: 15886 RVA: 0x00002050 File Offset: 0x00000250
@@ -226,4 +263,40 @@ namespace Gameplay.Clans.Office.View.ClanMembersTab
 		[SerializeField]
 		private GameObject _additionalButtons;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_AdditionalButtons ---
+		void Gameplay_Clans_Office_View_ClanMembersTab_ClanMembersView__get_AdditionalButtons
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  int param1_00;
+		  undefined1 local_1;
+		  
+		  param1_00 = *(int *)(param1 + 0x24);
+		  if (DAT_ram_00a57f80 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Com_TheFallenGames_OSA_Core_OSA_BaseParamsWithPrefab__ClanMembersViewsHolder__SetVirtualAbstractNormalizedScrollPosition__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Com_TheFallenGames_OSA_DataHelpers_SimpleDataHelper_ClanMemberListElement_ClanMemberListElementArgs__ResetItems__
+		              );
+		    DAT_ram_00a57f80 = '\x01';
+		  }
+		  local_1 = 0;
+		  Com_TheFallenGames_OSA_DataHelpers_SimpleDataHelper_object___RemoveOneFromStart
+		            (*(undefined4 *)(param1_00 + 0xa0),param2,0,
+		             Method_Com_TheFallenGames_OSA_DataHelpers_SimpleDataHelper_ClanMemberListElement_ClanMemberListElementArgs__ResetItems__
+		            );
+		  Com_TheFallenGames_OSA_Core_OSA_object__object___SetViewsHolderEnabled
+		            (param1_00,1.0,1,&local_1,0,
+		             Method_Com_TheFallenGames_OSA_Core_OSA_BaseParamsWithPrefab__ClanMembersViewsHolder__SetVirtualAbstractNormalizedScrollPosition__
+		            );
+		  return;
+		}
+		*/
+
 }

@@ -109,6 +109,36 @@ namespace UI.Tabs
 		[Address(RVA = "0x5DDE", Offset = "0x5DDE", VA = "0x5DDE")]
 		public CategoryTabBarItemView()
 		{
+		/* --- GHIDRA: .ctor ---
+		void UI_Tabs_CategoryTabBarItemView___ctor(int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  int param1_00;
+		  int *param1_01;
+		  int iVar2;
+		  
+		  if (DAT_ram_00a599c9 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_TypeInfo);
+		    DAT_ram_00a599c9 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x10);
+		  while ((param1_01 = (int *)UnityEngine_UI_Image__set_sprite(param1_00,param2,0),
+		         param1_01 == (int *)0x0 || (System_Action_TypeInfo == *param1_01))) {
+		    iVar2 = func_ii_4329(param1 + 0x10,param1_01,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,System_Action_TypeInfo);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
 		}
 
 		// Token: 0x0400049B RID: 1179
@@ -162,4 +192,206 @@ namespace UI.Tabs
 		[FieldOffset(Offset = "0x4C")]
 		private bool _selected;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_GuideTarget ---
+		void UI_Tabs_CategoryTabBarItemView__get_GuideTarget(int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a599c6 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_TabBarItemData__TypeInfo);
+		    DAT_ram_00a599c6 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x44);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = UnityEngine_UI_Image__set_sprite(param1_00,param2,0);
+		    param2_00 = System_Action_TabBarItemData__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_TabBarItemData__TypeInfo), iVar2 == 0)) break;
+		    iVar2 = func_ii_4329(param1 + 0x44,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: add_SelectEvent ---
+		void UI_Tabs_CategoryTabBarItemView__add_SelectEvent(int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a599c7 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_TabBarItemData__TypeInfo);
+		    DAT_ram_00a599c7 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x44);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = func_ii_7048(param1_00,param2,0);
+		    param2_00 = System_Action_TabBarItemData__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_TabBarItemData__TypeInfo), iVar2 == 0)) break;
+		    iVar2 = func_ii_4329(param1 + 0x44,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: get_Data ---
+		void UI_Tabs_CategoryTabBarItemView__get_Data(int param1,int param2,undefined4 param3)
+		
+		{
+		  uint uVar1;
+		  undefined4 uVar2;
+		  uint *puVar3;
+		  undefined4 param2_00;
+		  int *piVar4;
+		  int iVar5;
+		  int iVar6;
+		  
+		  if (DAT_ram_00a599c8 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Gameplay_Tutorial_Guide_Model_Data_IGuideTarget_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&long___TypeInfo);
+		    DAT_ram_00a599c8 = '\x01';
+		  }
+		  *(int *)(param1 + 0x48) = param2;
+		  piVar4 = *(int **)(param1 + 0x10);
+		  uVar2 = System_Uri__get_Authority(*(undefined4 *)(param2 + 0x10),0);
+		  iVar5 = *piVar4;
+		  (**(code **)((ulonglong)*(uint *)(iVar5 + 0x2d0) * 4))
+		            (piVar4,uVar2,*(undefined4 *)(iVar5 + 0x2d4));
+		  if (DAT_ram_00a599c5 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_UnityEngine_Component_GetComponent_IGuideTarget___);
+		    DAT_ram_00a599c5 = '\x01';
+		  }
+		  piVar4 = *(int **)(param1 + 0x40);
+		  if (piVar4 == (int *)0x0) {
+		    piVar4 = (int *)func_ii_5677(param1,Method_UnityEngine_Component_GetComponent_IGuideTarget___);
+		    *(int **)(param1 + 0x40) = piVar4;
+		  }
+		  uVar1 = 0;
+		  iVar5 = *piVar4;
+		  if (*(ushort *)(iVar5 + 0xb6) != 0) {
+		    do {
+		      if (Gameplay_Tutorial_Guide_Model_Data_IGuideTarget_TypeInfo ==
+		          *(int *)(*(int *)(iVar5 + 0x58) + uVar1 * 8)) {
+		        puVar3 = (uint *)(*(int *)(*(int *)(iVar5 + 0x58) + uVar1 * 8 + 4) * 8 + iVar5 + 0xe0);
+		        goto code_r0x810a05e8;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar5 + 0xb6) != uVar1);
+		  }
+		  puVar3 = (uint *)func_ii_1080(piVar4,Gameplay_Tutorial_Guide_Model_Data_IGuideTarget_TypeInfo,4);
+		code_r0x810a05e8:
+		  uVar2 = (**(code **)((ulonglong)*puVar3 * 4))(piVar4,puVar3[1]);
+		  if (DAT_ram_00a599c5 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_UnityEngine_Component_GetComponent_IGuideTarget___);
+		    DAT_ram_00a599c5 = '\x01';
+		  }
+		  piVar4 = *(int **)(param1 + 0x40);
+		  if (piVar4 == (int *)0x0) {
+		    piVar4 = (int *)func_ii_5677(param1,Method_UnityEngine_Component_GetComponent_IGuideTarget___);
+		    *(int **)(param1 + 0x40) = piVar4;
+		  }
+		  uVar1 = 0;
+		  iVar5 = Mono_Security_ASN1Convert__ToOid(long___TypeInfo,1);
+		  *(ulonglong *)(iVar5 + 0x10) = (ulonglong)*(uint *)(*(int *)(param1 + 0x48) + 0x14);
+		  iVar6 = *piVar4;
+		  if (*(ushort *)(iVar6 + 0xb6) != 0) {
+		    do {
+		      if (Gameplay_Tutorial_Guide_Model_Data_IGuideTarget_TypeInfo ==
+		          *(int *)(*(int *)(iVar6 + 0x58) + uVar1 * 8)) {
+		        puVar3 = (uint *)(*(int *)(*(int *)(iVar6 + 0x58) + uVar1 * 8 + 4) * 8 + iVar6 + 0xe8);
+		        goto code_r0x810a06c2;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar6 + 0xb6) != uVar1);
+		  }
+		  puVar3 = (uint *)func_ii_1080(piVar4,Gameplay_Tutorial_Guide_Model_Data_IGuideTarget_TypeInfo,5);
+		code_r0x810a06c2:
+		  param2_00 = (**(code **)((ulonglong)*puVar3 * 4))(piVar4,iVar5,puVar3[1]);
+		  UnityEngine_Object__op_Implicit(uVar2,param2_00,0);
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_Selected ---
+		void UI_Tabs_CategoryTabBarItemView__get_Selected(int param1,int param2,undefined4 param3)
+		
+		{
+		  int iVar1;
+		  undefined8 local_20;
+		  undefined8 local_18;
+		  undefined8 local_10;
+		  undefined8 local_8;
+		  
+		  *(char *)(param1 + 0x4c) = (char)param2;
+		  iVar1 = 0x3c;
+		  if (param2 == 0) {
+		    iVar1 = 0x38;
+		  }
+		  func_ii_7050(*(undefined4 *)(param1 + 0x14),*(undefined4 *)(param1 + iVar1),0);
+		  iVar1 = 0x18;
+		  if (*(char *)(param1 + 0x4c) == '\0') {
+		    iVar1 = 0x28;
+		  }
+		  local_18 = ((undefined8 *)(param1 + iVar1))[1];
+		  local_20 = *(undefined8 *)(param1 + iVar1);
+		  iVar1 = **(int **)(param1 + 0x10);
+		  local_10 = local_20;
+		  local_8 = local_18;
+		  (**(code **)((ulonglong)*(uint *)(iVar1 + 0x178) * 4))
+		            (*(int **)(param1 + 0x10),&local_20,*(undefined4 *)(iVar1 + 0x17c));
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_Selected ---
+		void UI_Tabs_CategoryTabBarItemView__set_Selected(int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  int iVar1;
+		  
+		  iVar1 = *(int *)(param1 + 0x44);
+		  if (iVar1 != 0) {
+		    (**(code **)((ulonglong)*(uint *)(iVar1 + 0xc) * 4))
+		              (*(undefined4 *)(iVar1 + 0x20),*(undefined4 *)(param1 + 0x48),
+		               *(undefined4 *)(iVar1 + 0x14));
+		  }
+		  return;
+		}
+		*/
+
 }

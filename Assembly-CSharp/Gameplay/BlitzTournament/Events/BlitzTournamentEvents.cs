@@ -14,6 +14,28 @@ namespace Gameplay.BlitzTournament.Events
 		[Address(RVA = "0x98A1", Offset = "0x98A1", VA = "0x98A1")]
 		public BlitzTournamentEvents()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_BlitzTournament_Events_BlitzTournamentEvents___ctor
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4,undefined4 param5,
+		               undefined4 param6)
+		
+		{
+		  if (DAT_ram_00a608b5 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Gameplay_Combat_Control_CombatController_BlitzTournamentCombatModel__BlitzTournamentCombatEvents___ctor__
+		              );
+		    DAT_ram_00a608b5 = '\x01';
+		  }
+		  Sirenix_Serialization_ColorBlockFormatter___Il2CppFullySharedGenericType___Write
+		            (param1,param3,param4,param5,
+		             Method_Gameplay_Combat_Control_CombatController_BlitzTournamentCombatModel__BlitzTournamentCombatEvents___ctor__
+		            );
+		  *(undefined4 *)(param1 + 0x20) = param2;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x04002876 RID: 10358

@@ -15,6 +15,27 @@ namespace Gameplay.AccountLinker.ProgressSaver.WebGL.Controller
 		[Address(RVA = "0xA501", Offset = "0xA501", VA = "0xA501", Slot = "14")]
 		public override void Dispose()
 		{
+		/* --- GHIDRA: Dispose ---
+		void Gameplay_AccountLinker_ProgressSaver_WebGL_Controller_ProgressSaverEnterPointFromIndexViewMediator__Dispose
+		               (undefined4 param1,undefined4 param2,undefined4 param3,undefined4 param4,
+		               undefined4 param5)
+		
+		{
+		  if (DAT_ram_00a5892f == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Gameplay_AccountLinker_ProgressSaver_Controller_BaseProgressSaverEnterPointViewMediator_UserInterfaceView___ctor__
+		              );
+		    DAT_ram_00a5892f = '\x01';
+		  }
+		  UnityEngine_UIElements_BasePopupField___Il2CppFullySharedGenericType____Il2CppFullySharedGenericType___set_choices
+		            (param1,param2,param3,param4,
+		             Method_Gameplay_AccountLinker_ProgressSaver_Controller_BaseProgressSaverEnterPointViewMediator_UserInterfaceView___ctor__
+		            );
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06005787 RID: 22407 RVA: 0x00002050 File Offset: 0x00000250

@@ -36,6 +36,53 @@ namespace Gameplay.Auchan.View
 		[Address(RVA = "0x9C6D", Offset = "0x9C6D", VA = "0x9C6D")]
 		public AuchanGridWithCategoriesParams()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_Auchan_View_AuchanGridWithCategoriesParams___ctor(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a59851 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Com_TheFallenGames_OSA_CustomAdapters_GridView_CellGroupViewsHolder_AuchanArtifactCellViewHolder__CollectViews__
+		              );
+		    Mono_Security_ASN1__get_Item(&Method_UnityEngine_GameObject_AddComponent_ContentSizeFitter___);
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_frame8_Logic_Misc_Other_Extensions_TransformExtensions_GetComponentAtPath_TextMeshProUGUI___
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_frame8_Logic_Misc_Other_Extensions_TransformExtensions_GetComponentAtPath_Transform___
+		              );
+		    Mono_Security_ASN1__get_Item(&StringLiteral_8809);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_8808);
+		    DAT_ram_00a59851 = '\x01';
+		  }
+		  Com_TheFallenGames_OSA_CustomAdapters_GridView_CellGroupViewsHolder_object____ctor
+		            (param1,
+		             Method_Com_TheFallenGames_OSA_CustomAdapters_GridView_CellGroupViewsHolder_AuchanArtifactCellViewHolder__CollectViews__
+		            );
+		  uVar1 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_uint__object___MoveNext
+		                    (*(undefined4 *)(param1 + 8),0);
+		  uVar1 = UnityEngine_GameObject__GetComponent_object_
+		                    (uVar1,Method_UnityEngine_GameObject_AddComponent_ContentSizeFitter___);
+		  *(undefined4 *)(param1 + 0x24) = uVar1;
+		  UnityEngine_UI_ContentSizeFitter__get_verticalFit(uVar1,2,0);
+		  UnityEngine_Object__op_Implicit(*(undefined4 *)(param1 + 0x24),1,0);
+		  frame8_Logic_Misc_Other_Extensions_TransformExtensions__GetComponentAtPath_object_
+		            (*(undefined4 *)(param1 + 8),StringLiteral_8808,param1 + 0x28,
+		             Method_frame8_Logic_Misc_Other_Extensions_TransformExtensions_GetComponentAtPath_Transform___
+		            );
+		  frame8_Logic_Misc_Other_Extensions_TransformExtensions__GetComponentAtPath_object_
+		            (*(undefined4 *)(param1 + 8),StringLiteral_8809,param1 + 0x2c,
+		             Method_frame8_Logic_Misc_Other_Extensions_TransformExtensions_GetComponentAtPath_TextMeshProUGUI___
+		            );
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x04002AB8 RID: 10936
@@ -50,4 +97,26 @@ namespace Gameplay.Auchan.View
 		[SerializeField]
 		private Sprite[] _markersSprites;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_MarkerSprites ---
+		void Gameplay_Auchan_View_AuchanGridWithCategoriesParams__get_MarkerSprites
+		               (int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a59850 == '\0') {
+		    Mono_Security_ASN1__get_Item(&UnityEngine_Sprite___TypeInfo);
+		    DAT_ram_00a59850 = '\x01';
+		  }
+		  uVar1 = Mono_Security_ASN1Convert__ToOid(UnityEngine_Sprite___TypeInfo,4);
+		  *(undefined4 *)(param1 + 100) = uVar1;
+		  Com_TheFallenGames_OSA_CustomAdapters_GridView_GridParams__InitOrReinitCellGroupPrefabLayoutGroup
+		            (param1,0);
+		  return;
+		}
+		*/
+
 }

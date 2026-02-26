@@ -33,4 +33,24 @@ namespace Gameplay.UserInterface.Menu.ExternalLinks.Model
 			}
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_Buttons ---
+		void Gameplay_UserInterface_Menu_ExternalLinks_Model_ExternalLinksModel__get_Buttons
+		               (undefined4 param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  if (DAT_ram_00a5989b == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_MVC_AbstractController_ExternalLinksModel__ExternalLinksEvents___ctor__);
+		    DAT_ram_00a5989b = '\x01';
+		  }
+		  Gameplay_Combat_AbstractCombat_object__object__object__object__object___set_User
+		            (param1,param2,param3,
+		             Method_MVC_AbstractController_ExternalLinksModel__ExternalLinksEvents___ctor__);
+		  return;
+		}
+		*/
+
 }

@@ -81,6 +81,22 @@ namespace Gameplay.Ad.BattleFinishAd.View
 		[Address(RVA = "0xA353", Offset = "0xA353", VA = "0xA353")]
 		public void Init(BattleFinishAdView.BattleFinishAdViewArgs args)
 		{
+		/* --- GHIDRA: Init ---
+		void Gameplay_Ad_BattleFinishAd_View_BattleFinishAdView__Init(int param1,undefined4 param2)
+		
+		{
+		  int *piVar1;
+		  
+		  piVar1 = *(int **)(param1 + 0x1c);
+		  if (piVar1 != (int *)0x0) {
+		    (**(code **)((ulonglong)*(uint *)(*piVar1 + 0x130) * 4))
+		              (piVar1,*(undefined4 *)(*piVar1 + 0x134));
+		  }
+		  *(undefined4 *)(param1 + 0x1c) = 0;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x060055B4 RID: 21940 RVA: 0x00002050 File Offset: 0x00000250
@@ -88,6 +104,27 @@ namespace Gameplay.Ad.BattleFinishAd.View
 		[Address(RVA = "0xA354", Offset = "0xA354", VA = "0xA354")]
 		private void OnDestroy()
 		{
+		/* --- GHIDRA: OnDestroy ---
+		void Gameplay_Ad_BattleFinishAd_View_BattleFinishAdView__OnDestroy
+		               (undefined4 param1,undefined4 param2)
+		
+		{
+		  undefined4 param1_00;
+		  
+		  if (DAT_ram_00a58855 == '\0') {
+		    Mono_Security_ASN1__get_Item(&UnityEngine_Object_TypeInfo);
+		    DAT_ram_00a58855 = '\x01';
+		  }
+		  param1_00 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_uint__object___MoveNext
+		                        (param1,0);
+		  if (*(int *)(UnityEngine_Object_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(UnityEngine_Object_TypeInfo);
+		  }
+		  UnityEngine_Application__get_isPlaying(param1_00,0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x060055B5 RID: 21941 RVA: 0x00002050 File Offset: 0x00000250
@@ -155,4 +192,58 @@ namespace Gameplay.Ad.BattleFinishAd.View
 			public readonly IDictProvider DictProvider;
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_Args ---
+		void Gameplay_Ad_BattleFinishAd_View_BattleFinishAdView__get_Args
+		               (int param1,int param2,undefined4 param3)
+		
+		{
+		  undefined4 param1_00;
+		  int iVar1;
+		  undefined4 param5;
+		  undefined4 param4;
+		  undefined4 param3_00;
+		  
+		  if (DAT_ram_00a58854 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Core_Gameplay_Managers_Ad_Placements_AbstractAdPlacementManager_BattleFinishAdPlacementModel__BattleFinishAdPlacementController__BattleFinishAdPlacementEvents__get_Controller__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Core_Gameplay_Managers_Ad_Placements_AbstractAdPlacementManager_BattleFinishAdPlacementModel__BattleFinishAdPlacementController__BattleFinishAdPlacementEvents__get_Events__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Core_Gameplay_Managers_Ad_Placements_AbstractAdPlacementManager_BattleFinishAdPlacementModel__BattleFinishAdPlacementController__BattleFinishAdPlacementEvents__get_Model__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&Gameplay_Ad_BattleFinishAd_Controller_BattleFinishAdViewMediator_TypeInfo);
+		    DAT_ram_00a58854 = '\x01';
+		  }
+		  *(int *)(param1 + 0x20) = param2;
+		  iVar1 = *(int *)(param2 + 8);
+		  param5 = *(undefined4 *)(iVar1 + 0x18);
+		  param4 = *(undefined4 *)(iVar1 + 0x20);
+		  param3_00 = *(undefined4 *)(iVar1 + 0x1c);
+		  param1_00 = unnamed_function_1417
+		                        (Gameplay_Ad_BattleFinishAd_Controller_BattleFinishAdViewMediator_TypeInfo);
+		  if (DAT_ram_00a58857 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_MVC_AbstractCozyViewMediator_BattleFinishAdPlacementModel__BattleFinishAdPlacementEvents__BattleFinishAdPlacementController__BattleFinishAdView___ctor__
+		              );
+		    DAT_ram_00a58857 = '\x01';
+		  }
+		  MVC_AbstractCozyViewMediator_object__object__object__object____ctor
+		            (param1_00,param1,param3_00,param4,param5,
+		             Method_MVC_AbstractCozyViewMediator_BattleFinishAdPlacementModel__BattleFinishAdPlacementEvents__BattleFinishAdPlacementController__BattleFinishAdView___ctor__
+		            );
+		  *(undefined4 *)(param1 + 0x1c) = param1_00;
+		  return;
+		}
+		*/
+
 }

@@ -68,6 +68,60 @@ namespace Gameplay.WorldAxis.Office.View.Ratings
 		[Address(RVA = "0x640B", Offset = "0x640B", VA = "0x640B")]
 		public void InitCategories(IEnumerable<SortCategoryListElement.SortCategoryListElementArgs> args)
 		{
+		/* --- GHIDRA: InitCategories ---
+		void Gameplay_WorldAxis_Office_View_Ratings_UserRatingsView__InitCategories
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  int param2_00;
+		  undefined4 param1_00;
+		  int *piVar1;
+		  int iVar2;
+		  
+		  if (DAT_ram_00a58bab == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Com_TheFallenGames_OSA_Core_OSA_BaseParamsWithPrefab__UserSeasonRatingsOSAView_UsersRatingsViewsHolder__get_IsInitialized__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Gameplay_WorldAxis_Office_View_Ratings_UserRatingsView___c__DisplayClass15_0__Init_b__0__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Gameplay_WorldAxis_Office_View_Ratings_UserRatingsView___c__DisplayClass15_0_TypeInfo
+		              );
+		    DAT_ram_00a58bab = '\x01';
+		  }
+		  param2_00 = unnamed_function_1417
+		                        (
+		                        Gameplay_WorldAxis_Office_View_Ratings_UserRatingsView___c__DisplayClass15_0_TypeInfo
+		                        );
+		  *(undefined4 *)(param2_00 + 0xc) = param2;
+		  *(int *)(param2_00 + 8) = param1;
+		  iVar2 = **(int **)(param1 + 0x18);
+		  (**(code **)((ulonglong)*(uint *)(iVar2 + 0x3b8) * 4))
+		            (*(int **)(param1 + 0x18),*(undefined4 *)(iVar2 + 0x3bc));
+		  piVar1 = *(int **)(param1 + 0x18);
+		  if ((char)piVar1[0x14] != '\0') {
+		    (**(code **)((ulonglong)
+		                 *(uint *)(s_Allocator__0___MaxBlockCount__1__ram_00000478 + *piVar1 + 0x10) * 4))
+		              (piVar1,*(undefined4 *)(param2_00 + 0xc),
+		               *(undefined4 *)(s_Allocator__0___MaxBlockCount__1__ram_00000478 + *piVar1 + 0x14));
+		    return;
+		  }
+		  param1_00 = unnamed_function_1417(System_Action_TypeInfo);
+		  UnityEngine_Events_UnityEvent__AddListener
+		            (param1_00,param2_00,
+		             Method_Gameplay_WorldAxis_Office_View_Ratings_UserRatingsView___c__DisplayClass15_0__Init_b__0__
+		             ,0);
+		  (**(code **)((ulonglong)*(uint *)(*piVar1 + 0x298) * 4))
+		            (piVar1,param1_00,*(undefined4 *)(*piVar1 + 0x29c));
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06001211 RID: 4625 RVA: 0x00002050 File Offset: 0x00000250
@@ -120,4 +174,18 @@ namespace Gameplay.WorldAxis.Office.View.Ratings
 		[SerializeField]
 		private GameObject _noRatingLabel;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_NoRatingLabel ---
+		void Gameplay_WorldAxis_Office_View_Ratings_UserRatingsView__get_NoRatingLabel
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  Gameplay_WorldAxis_Office_View_Ratings_SortCategoryListElement_SortCategoryListElementArgs___ctor
+		            (*(undefined4 *)(param1 + 0x1c),param2,param1);
+		  return;
+		}
+		*/
+
 }

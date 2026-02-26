@@ -96,6 +96,60 @@ namespace Gameplay.EndlessPaymentOptionsList.View
 		[Address(RVA = "0x81DE", Offset = "0x81DE", VA = "0x81DE", Slot = "19")]
 		protected override void OnClose()
 		{
+		/* --- GHIDRA: OnClose ---
+		void Gameplay_EndlessPaymentOptionsList_View_EndlessPaymentOptionsListDiscountWindow__OnClose
+		               (int param1,int param2,undefined4 param3)
+		
+		{
+		  undefined4 param2_00;
+		  undefined4 param3_00;
+		  int *param1_00;
+		  undefined4 param4;
+		  int iVar1;
+		  
+		  if (DAT_ram_00a5762f == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Windows_ClosableBaseWindow_EndlessPaymentOptionsListDiscountWindow_EndlessPaymentOptionsListDiscountWindowArgs__OnShow__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Gameplay_EndlessPaymentOptionsList_Control_EndlessPaymentOptionListDiscountWindowMediator_TypeInfo
+		              );
+		    DAT_ram_00a5762f = '\x01';
+		  }
+		  func_ii_7769(param1,param2,
+		               Method_UI_Windows_ClosableBaseWindow_EndlessPaymentOptionsListDiscountWindow_EndlessPaymentOptionsListDiscountWindowArgs__OnShow__
+		              );
+		  iVar1 = **(int **)(param2 + 0x18);
+		  param2_00 = (**(code **)((ulonglong)*(uint *)(iVar1 + 0x100) * 4))
+		                        (*(int **)(param2 + 0x18),*(undefined4 *)(iVar1 + 0x104));
+		  iVar1 = **(int **)(param2 + 0x18);
+		  param3_00 = (**(code **)((ulonglong)*(uint *)(iVar1 + 0x110) * 4))
+		                        (*(int **)(param2 + 0x18),*(undefined4 *)(iVar1 + 0x114));
+		  param4 = *(undefined4 *)(param2 + 0x18);
+		  param1_00 = (int *)unnamed_function_1417
+		                               (
+		                               Gameplay_EndlessPaymentOptionsList_Control_EndlessPaymentOptionListDiscountWindowMediator_TypeInfo
+		                               );
+		  if (DAT_ram_00a57655 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_MVC_AbstractViewMediator_EndlessPaymentOptionsListModel__EndlessPaymentOptionsListEvents__EndlessPaymentOptionsListController__EndlessPaymentOptionsListDiscountWindow___ctor__
+		              );
+		    DAT_ram_00a57655 = '\x01';
+		  }
+		  Gameplay_Combat_TeamCombat_View_AbstractTeamCombatView_object___get_HideInstantElements
+		            (param1_00,param2_00,param3_00,param4,
+		             Method_MVC_AbstractViewMediator_EndlessPaymentOptionsListModel__EndlessPaymentOptionsListEvents__EndlessPaymentOptionsListController__EndlessPaymentOptionsListDiscountWindow___ctor__
+		            );
+		  *(int **)(param1 + 0x4c) = param1_00;
+		  (**(code **)((ulonglong)*(uint *)(*param1_00 + 0x160) * 4))
+		            (param1_00,param1,*(undefined4 *)(*param1_00 + 0x164));
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06003187 RID: 12679 RVA: 0x00002050 File Offset: 0x00000250
@@ -103,6 +157,26 @@ namespace Gameplay.EndlessPaymentOptionsList.View
 		[Address(RVA = "0x81DF", Offset = "0x81DF", VA = "0x81DF", Slot = "22")]
 		protected override void OnShow(EndlessPaymentOptionsListDiscountWindow.EndlessPaymentOptionsListDiscountWindowArgs args)
 		{
+		/* --- GHIDRA: OnShow ---
+		void Gameplay_EndlessPaymentOptionsList_View_EndlessPaymentOptionsListDiscountWindow__OnShow
+		               (undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a57630 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Windows_ClosableBaseWindow_EndlessPaymentOptionsListDiscountWindow_EndlessPaymentOptionsListDiscountWindowArgs___ctor__
+		              );
+		    DAT_ram_00a57630 = '\x01';
+		  }
+		  UI_MonoBehaviourWithStates_ClientStateChangedDelegate___Il2CppFullySharedGenericStructType___Invoke
+		            (param1,
+		             Method_UI_Windows_ClosableBaseWindow_EndlessPaymentOptionsListDiscountWindow_EndlessPaymentOptionsListDiscountWindowArgs___ctor__
+		            );
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06003188 RID: 12680 RVA: 0x00002050 File Offset: 0x00000250
@@ -110,6 +184,19 @@ namespace Gameplay.EndlessPaymentOptionsList.View
 		[Address(RVA = "0x81E0", Offset = "0x81E0", VA = "0x81E0")]
 		public EndlessPaymentOptionsListDiscountWindow()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_EndlessPaymentOptionsList_View_EndlessPaymentOptionsListDiscountWindow___ctor
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  UI_Windows_BaseWindowArgs__Dispose(param1,0);
+		  *(undefined4 *)(param1 + 0x1c) = param2;
+		  *(undefined1 *)(param1 + 0xc) = 0;
+		  *(undefined4 *)(param1 + 0x18) = param3;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x04001B16 RID: 6934
@@ -167,4 +254,34 @@ namespace Gameplay.EndlessPaymentOptionsList.View
 			public readonly EndlessPaymentOptionListData ListData;
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_ConfirmButton ---
+		void Gameplay_EndlessPaymentOptionsList_View_EndlessPaymentOptionsListDiscountWindow__get_ConfirmButton
+		               (int param1,undefined4 param2)
+		
+		{
+		  int *piVar1;
+		  
+		  if (DAT_ram_00a5762e == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Windows_ClosableBaseWindow_EndlessPaymentOptionsListDiscountWindow_EndlessPaymentOptionsListDiscountWindowArgs__OnClose__
+		              );
+		    DAT_ram_00a5762e = '\x01';
+		  }
+		  UI_Windows_ClosableBaseWindow_object___OnClickBack
+		            (param1,
+		             Method_UI_Windows_ClosableBaseWindow_EndlessPaymentOptionsListDiscountWindow_EndlessPaymentOptionsListDiscountWindowArgs__OnClose__
+		            );
+		  piVar1 = *(int **)(param1 + 0x4c);
+		  if (piVar1 != (int *)0x0) {
+		    (**(code **)((ulonglong)*(uint *)(*piVar1 + 0x130) * 4))
+		              (piVar1,*(undefined4 *)(*piVar1 + 0x134));
+		  }
+		  return;
+		}
+		*/
+
 }

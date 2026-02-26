@@ -17,6 +17,26 @@ namespace Gameplay.Tournaments.View
 		[Address(RVA = "0x6DC6", Offset = "0x6DC6", VA = "0x6DC6", Slot = "9")]
 		public override void UpdateView()
 		{
+		/* --- GHIDRA: UpdateView ---
+		void Gameplay_Tournaments_View_TournamentListElement__UpdateView
+		               (undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a584fc == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Gameplay_BlitzTournament_View_TournamentListElementBase_TournamentData___ctor__
+		              );
+		    DAT_ram_00a584fc = '\x01';
+		  }
+		  UnityEngine_ParticleSystemRenderer__GetMeshes
+		            (param1,
+		             Method_Gameplay_BlitzTournament_View_TournamentListElementBase_TournamentData___ctor__)
+		  ;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06001C48 RID: 7240 RVA: 0x00002050 File Offset: 0x00000250

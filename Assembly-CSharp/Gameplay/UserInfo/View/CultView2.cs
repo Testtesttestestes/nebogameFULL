@@ -48,6 +48,30 @@ namespace Gameplay.UserInfo.View
 		[Address(RVA = "0x6983", Offset = "0x6983", VA = "0x6983")]
 		public CultView2()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_UserInfo_View_CultView2___ctor(int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  int iVar1;
+		  undefined4 param1_00;
+		  
+		  if (DAT_ram_00a598d2 == '\0') {
+		    Mono_Security_ASN1__get_Item(&UnityEngine_Object_TypeInfo);
+		    DAT_ram_00a598d2 = '\x01';
+		  }
+		  param1_00 = *(undefined4 *)(param1 + 0x18);
+		  if (*(int *)(UnityEngine_Object_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(UnityEngine_Object_TypeInfo);
+		  }
+		  iVar1 = UnityEngine_TextCore_Text_TextElement__get_textAsset(param1_00,0,0);
+		  if (iVar1 != 0) {
+		    Core_Extensions_Dict_PortalDicExt__GetCurrencyIcon60x66(*(undefined4 *)(param1 + 0x18),param2,0)
+		    ;
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x04000C9E RID: 3230
@@ -61,4 +85,35 @@ namespace Gameplay.UserInfo.View
 		[FieldOffset(Offset = "0x14")]
 		private CultDic _cultDic;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_CultDic ---
+		void Gameplay_UserInfo_View_CultView2__get_CultDic(int *param1,int param2,undefined4 param3)
+		
+		{
+		  if (param2 != param1[5]) {
+		    param1[5] = param2;
+		    (**(code **)((ulonglong)*(uint *)(*param1 + 0xe0) * 4))(param1,*(undefined4 *)(*param1 + 0xe4));
+		  }
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_CultDic ---
+		void Gameplay_UserInfo_View_CultView2__set_CultDic(int param1,undefined4 param2)
+		
+		{
+		  undefined4 param2_00;
+		  
+		  if (*(int *)(param1 + 0x14) != 0) {
+		    param2_00 = Core_Extensions_Dict_CultDicExt__GetNickBarBgAssetId(*(int *)(param1 + 0x14),0);
+		    Core_Extensions_Dict_PortalDicExt__GetCurrencyIcon60x66
+		              (*(undefined4 *)(param1 + 0x10),param2_00,0);
+		  }
+		  return;
+		}
+		*/
+
 }

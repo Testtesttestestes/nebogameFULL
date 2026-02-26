@@ -98,6 +98,26 @@ namespace Gameplay.Clans.Buildings.Golem.View
 		[Address(RVA = "0x914B", Offset = "0x914B", VA = "0x914B")]
 		private void Awake()
 		{
+		/* --- GHIDRA: Awake ---
+		void Gameplay_Clans_Buildings_Golem_View_TruceStatusView__Awake(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  uVar1 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_uint__object___MoveNext
+		                    (*(undefined4 *)(param1 + 0x20),0);
+		  Com_TheFallenGames_OSA_CustomAdapters_TableView_Tuple_Basic_BasicTupleValueViewsHolder__UpdateAsText
+		            (uVar1,0,0);
+		  uVar1 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_uint__object___MoveNext
+		                    (*(undefined4 *)(param1 + 0x28),0);
+		  Com_TheFallenGames_OSA_CustomAdapters_TableView_Tuple_Basic_BasicTupleValueViewsHolder__UpdateAsText
+		            (uVar1,0,0);
+		  Com_TheFallenGames_OSA_CustomAdapters_TableView_Tuple_Basic_BasicTupleValueViewsHolder__UpdateAsText
+		            (*(undefined4 *)(param1 + 0x48),0,0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06004298 RID: 17048 RVA: 0x00002050 File Offset: 0x00000250
@@ -105,6 +125,23 @@ namespace Gameplay.Clans.Buildings.Golem.View
 		[Address(RVA = "0x914C", Offset = "0x914C", VA = "0x914C")]
 		public void PrepareView()
 		{
+		/* --- GHIDRA: PrepareView ---
+		void Gameplay_Clans_Buildings_Golem_View_TruceStatusView__PrepareView
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  undefined4 param2_00;
+		  undefined4 param1_00;
+		  undefined4 local_4;
+		  
+		  param1_00 = *(undefined4 *)(param1 + 0x40);
+		  local_4 = param2;
+		  param2_00 = func_ii_4443(&local_4,0);
+		  UnityEngine_Component__GetComponentInChildren_object_(param1_00,param2_00,0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06004299 RID: 17049 RVA: 0x00002050 File Offset: 0x00000250
@@ -112,6 +149,32 @@ namespace Gameplay.Clans.Buildings.Golem.View
 		[Address(RVA = "0x914D", Offset = "0x914D", VA = "0x914D")]
 		public void SetHonor(int honor)
 		{
+		/* --- GHIDRA: SetHonor ---
+		void Gameplay_Clans_Buildings_Golem_View_TruceStatusView__SetHonor
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  undefined4 param2_00;
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a5784a == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_GameLocalization_TypeInfo);
+		    DAT_ram_00a5784a = '\x01';
+		  }
+		  uVar1 = *(undefined4 *)(param1 + 0x20);
+		  if (*(int *)(Core_GameLocalization_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Core_GameLocalization_TypeInfo);
+		  }
+		  param2_00 = Core_Extensions_Dict_CultDicExt__GetTitle(param2,1,0,1,0,0,0,0);
+		  UnityEngine_Component__GetComponentInChildren_object_(uVar1,param2_00,0);
+		  uVar1 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_uint__object___MoveNext
+		                    (*(undefined4 *)(param1 + 0x20),0);
+		  Com_TheFallenGames_OSA_CustomAdapters_TableView_Tuple_Basic_BasicTupleValueViewsHolder__UpdateAsText
+		            (uVar1,1,0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600429A RID: 17050 RVA: 0x00002050 File Offset: 0x00000250
@@ -119,6 +182,32 @@ namespace Gameplay.Clans.Buildings.Golem.View
 		[Address(RVA = "0x914E", Offset = "0x914E", VA = "0x914E")]
 		public void SetStatusDescriptionKey(string localizationKey)
 		{
+		/* --- GHIDRA: SetStatusDescriptionKey ---
+		void Gameplay_Clans_Buildings_Golem_View_TruceStatusView__SetStatusDescriptionKey
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  undefined4 param2_00;
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a5784b == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_GameLocalization_TypeInfo);
+		    DAT_ram_00a5784b = '\x01';
+		  }
+		  uVar1 = *(undefined4 *)(param1 + 0x28);
+		  if (*(int *)(Core_GameLocalization_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Core_GameLocalization_TypeInfo);
+		  }
+		  param2_00 = Core_Extensions_Dict_CultDicExt__GetTitle(param2,1,0,1,0,0,0,0);
+		  UnityEngine_Component__GetComponentInChildren_object_(uVar1,param2_00,0);
+		  uVar1 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_uint__object___MoveNext
+		                    (*(undefined4 *)(param1 + 0x28),0);
+		  Com_TheFallenGames_OSA_CustomAdapters_TableView_Tuple_Basic_BasicTupleValueViewsHolder__UpdateAsText
+		            (uVar1,1,0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600429B RID: 17051 RVA: 0x00002050 File Offset: 0x00000250
@@ -126,6 +215,22 @@ namespace Gameplay.Clans.Buildings.Golem.View
 		[Address(RVA = "0x914F", Offset = "0x914F", VA = "0x914F")]
 		public void SetStatusAnnotationKey(string localizationKey)
 		{
+		/* --- GHIDRA: SetStatusAnnotationKey ---
+		void Gameplay_Clans_Buildings_Golem_View_TruceStatusView__SetStatusAnnotationKey
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  undefined4 param1_00;
+		  
+		  UnityEngine_Component__GetComponentInChildren_object_(*(undefined4 *)(param1 + 0x28),param2,0);
+		  param1_00 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_uint__object___MoveNext
+		                        (*(undefined4 *)(param1 + 0x28),0);
+		  Com_TheFallenGames_OSA_CustomAdapters_TableView_Tuple_Basic_BasicTupleValueViewsHolder__UpdateAsText
+		            (param1_00,1,0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600429C RID: 17052 RVA: 0x00002050 File Offset: 0x00000250
@@ -133,6 +238,18 @@ namespace Gameplay.Clans.Buildings.Golem.View
 		[Address(RVA = "0x9150", Offset = "0x9150", VA = "0x9150")]
 		public void SetStatusAnnotationText(string text)
 		{
+		/* --- GHIDRA: SetStatusAnnotationText ---
+		void Gameplay_Clans_Buildings_Golem_View_TruceStatusView__SetStatusAnnotationText
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  UI_Elements_RightPanel_TitleWithLevel__set_Level(*(undefined4 *)(param1 + 0x38),param2,0);
+		  Com_TheFallenGames_OSA_CustomAdapters_TableView_Tuple_Basic_BasicTupleValueViewsHolder__UpdateAsText
+		            (*(undefined4 *)(param1 + 0x48),1,0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600429D RID: 17053 RVA: 0x00002050 File Offset: 0x00000250
@@ -140,6 +257,36 @@ namespace Gameplay.Clans.Buildings.Golem.View
 		[Address(RVA = "0x9151", Offset = "0x9151", VA = "0x9151")]
 		public void SetBacktime(BackTime backtime)
 		{
+		/* --- GHIDRA: SetBacktime ---
+		void Gameplay_Clans_Buildings_Golem_View_TruceStatusView__SetBacktime
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a5784c == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UI_MonoBehaviourWithStates_TruceStatusView_State__HandleCurrentStateChanged__
+		              );
+		    DAT_ram_00a5784c = '\x01';
+		  }
+		  uVar1 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_uint__object___MoveNext
+		                    (*(undefined4 *)(param1 + 0x20),0);
+		  Com_TheFallenGames_OSA_CustomAdapters_TableView_Tuple_Basic_BasicTupleValueViewsHolder__UpdateAsText
+		            (uVar1,0,0);
+		  uVar1 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_uint__object___MoveNext
+		                    (*(undefined4 *)(param1 + 0x28),0);
+		  Com_TheFallenGames_OSA_CustomAdapters_TableView_Tuple_Basic_BasicTupleValueViewsHolder__UpdateAsText
+		            (uVar1,0,0);
+		  Com_TheFallenGames_OSA_CustomAdapters_TableView_Tuple_Basic_BasicTupleValueViewsHolder__UpdateAsText
+		            (*(undefined4 *)(param1 + 0x48),0,0);
+		  UI_MonoBehaviourWithStates_Int32Enum____ctor
+		            (param1,param2,param3,
+		             Method_UI_MonoBehaviourWithStates_TruceStatusView_State__HandleCurrentStateChanged__);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600429E RID: 17054 RVA: 0x00002050 File Offset: 0x00000250
@@ -147,6 +294,21 @@ namespace Gameplay.Clans.Buildings.Golem.View
 		[Address(RVA = "0x9152", Offset = "0x9152", VA = "0x9152", Slot = "4")]
 		protected override void HandleCurrentStateChanged(TruceStatusView.State fromState, TruceStatusView.State toState)
 		{
+		/* --- GHIDRA: HandleCurrentStateChanged ---
+		void Gameplay_Clans_Buildings_Golem_View_TruceStatusView__HandleCurrentStateChanged
+		               (undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a5784d == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_UI_MonoBehaviourWithStates_TruceStatusView_State___ctor__);
+		    DAT_ram_00a5784d = '\x01';
+		  }
+		  ScreenAdaptation_Common_AppSize__Update
+		            (param1,Method_UI_MonoBehaviourWithStates_TruceStatusView_State___ctor__);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600429F RID: 17055 RVA: 0x00002050 File Offset: 0x00000250
@@ -249,4 +411,50 @@ namespace Gameplay.Clans.Buildings.Golem.View
 			COMBAT
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_Price ---
+		void Gameplay_Clans_Buildings_Golem_View_TruceStatusView__get_Price(int param1,undefined4 param2)
+		
+		{
+		  uint uVar1;
+		  uint *puVar2;
+		  undefined4 uVar3;
+		  undefined4 param1_00;
+		  int *param1_01;
+		  int iVar4;
+		  
+		  if (DAT_ram_00a57849 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_Gameplay_IGame_TypeInfo);
+		    DAT_ram_00a57849 = '\x01';
+		  }
+		  param1_00 = *(undefined4 *)(param1 + 0x44);
+		  if (DAT_ram_00a6456f == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_Gameplay_Game_TypeInfo);
+		    DAT_ram_00a6456f = '\x01';
+		  }
+		  uVar1 = 0;
+		  param1_01 = (int *)**(undefined4 **)(Core_Gameplay_Game_TypeInfo + 0x5c);
+		  iVar4 = *param1_01;
+		  if (*(ushort *)(iVar4 + 0xb6) != 0) {
+		    do {
+		      if (Core_Gameplay_IGame_TypeInfo == *(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8)) {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8 + 4) * 8 + iVar4 + 0x178);
+		        goto code_r0x80de7b3c;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar4 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(param1_01,Core_Gameplay_IGame_TypeInfo,0x17);
+		code_r0x80de7b3c:
+		  uVar3 = (**(code **)((ulonglong)*puVar2 * 4))(param1_01,puVar2[1]);
+		  uVar3 = Newtonsoft_Json_Converters_XmlDocumentTypeWrapper__get_System(uVar3,0);
+		  uVar3 = Core_Extensions_Dict_DictExt__GetUserRatingKindDic(uVar3,4,0);
+		  uVar3 = Core_Extensions_Dict_ClanLeagueDicExt__GetIconAssetId(uVar3,0);
+		  Core_Extensions_Dict_PortalDicExt__GetCurrencyIcon60x66(param1_00,uVar3,0);
+		  return;
+		}
+		*/
+
 }

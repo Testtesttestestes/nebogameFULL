@@ -46,4 +46,24 @@ namespace Gameplay.Aprs.Controller.Filters
 		{
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: set_FilterInfo ---
+		uint Gameplay_Aprs_Controller_Filters_AprAchievedFilter__set_FilterInfo
+		               (int param1,int param2,undefined4 param3)
+		
+		{
+		  if (*(char *)(*(int *)(param1 + 8) + 0x10) == '\0') {
+		    return 1;
+		  }
+		  if (DAT_ram_00a59431 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_SortedList_uint__MedalInfo__get_Count__);
+		    DAT_ram_00a59431 = '\x01';
+		  }
+		  return (uint)(0 < *(int *)(*(int *)(param2 + 0x28) + 0x10));
+		}
+		*/
+
 }

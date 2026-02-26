@@ -125,6 +125,41 @@ namespace Gameplay.Combat.View.TurnDisplay
 		[Address(RVA = "0x87A5", Offset = "0x87A5", VA = "0x87A5")]
 		private IEnumerator HandleBackTimeCoroutine(TextMeshProUGUI display, BackTime backTime)
 		{
+		/* --- GHIDRA: HandleBackTimeCoroutine ---
+		undefined4
+		Gameplay_Combat_View_TurnDisplay_TurnStatePointerDefault__HandleBackTimeCoroutine
+		          (int param1,undefined4 *param2,undefined4 param3)
+		
+		{
+		  undefined4 uVar1;
+		  undefined4 uVar2;
+		  int iVar3;
+		  
+		  uVar1 = 0;
+		  uVar2 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_uint__object___MoveNext
+		                    (*(undefined4 *)(param1 + 0x18),0);
+		  iVar3 = func_ii_7305(uVar2,0);
+		  if (iVar3 == 0) {
+		    uVar2 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_uint__object___MoveNext
+		                      (*(undefined4 *)(param1 + 0x1c),0);
+		    iVar3 = func_ii_7305(uVar2,0);
+		    if (iVar3 == 0) {
+		      uVar2 = 0;
+		      goto code_r0x80c68451;
+		    }
+		    iVar3 = 0x14;
+		  }
+		  else {
+		    iVar3 = 0x10;
+		  }
+		  uVar1 = *(undefined4 *)(param1 + iVar3);
+		  uVar2 = 1;
+		code_r0x80c68451:
+		  *param2 = uVar1;
+		  return uVar2;
+		}
+		*/
+
 			return null;
 		}
 
@@ -133,6 +168,25 @@ namespace Gameplay.Combat.View.TurnDisplay
 		[Address(RVA = "0x87A6", Offset = "0x87A6", VA = "0x87A6")]
 		private bool TryGetTurnPointerElement(out TextMeshProUGUI display)
 		{
+		/* --- GHIDRA: TryGetTurnPointerElement ---
+		void Gameplay_Combat_View_TurnDisplay_TurnStatePointerDefault__TryGetTurnPointerElement
+		               (int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  uVar1 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_uint__object___MoveNext
+		                    (*(undefined4 *)(param1 + 0x18),0);
+		  Com_TheFallenGames_OSA_CustomAdapters_TableView_Tuple_Basic_BasicTupleValueViewsHolder__UpdateAsText
+		            (uVar1,0,0);
+		  uVar1 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_uint__object___MoveNext
+		                    (*(undefined4 *)(param1 + 0x1c),0);
+		  Com_TheFallenGames_OSA_CustomAdapters_TableView_Tuple_Basic_BasicTupleValueViewsHolder__UpdateAsText
+		            (uVar1,0,0);
+		  return;
+		}
+		*/
+
 			return default(bool);
 		}
 
@@ -141,6 +195,35 @@ namespace Gameplay.Combat.View.TurnDisplay
 		[Address(RVA = "0x87A7", Offset = "0x87A7", VA = "0x87A7")]
 		private void Awake()
 		{
+		/* --- GHIDRA: Awake ---
+		void Gameplay_Combat_View_TurnDisplay_TurnStatePointerDefault__Awake
+		               (int param1,int param2,float param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  int iVar2;
+		  
+		  if (*(int *)(param1 + 0x24) != param2) {
+		    *(int *)(param1 + 0x24) = param2;
+		    uVar1 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_uint__object___MoveNext
+		                      (*(undefined4 *)(param1 + 0x18),0);
+		    Com_TheFallenGames_OSA_CustomAdapters_TableView_Tuple_Basic_BasicTupleValueViewsHolder__UpdateAsText
+		              (uVar1,(uint)((*(uint *)(param1 + 0x24) & 0xfffffffd) == 1),0);
+		    uVar1 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_uint__object___MoveNext
+		                      (*(undefined4 *)(param1 + 0x1c),0);
+		    Com_TheFallenGames_OSA_CustomAdapters_TableView_Tuple_Basic_BasicTupleValueViewsHolder__UpdateAsText
+		              (uVar1,(uint)(*(int *)(param1 + 0x24) == 4 || *(int *)(param1 + 0x24) == 2),0);
+		    iVar2 = *(int *)(param1 + 0x2c);
+		    if (iVar2 != 0) {
+		      (**(code **)((ulonglong)*(uint *)(iVar2 + 0xc) * 4))
+		                (*(undefined4 *)(iVar2 + 0x20),*(undefined4 *)(iVar2 + 0x14));
+		    }
+		  }
+		  Gameplay_Combat_View_TurnDisplay_TurnStatePointerDefault__get_Timeout(param1,param3,param1);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x060037C6 RID: 14278 RVA: 0x00002050 File Offset: 0x00000250
@@ -148,6 +231,18 @@ namespace Gameplay.Combat.View.TurnDisplay
 		[Address(RVA = "0x87A8", Offset = "0x87A8", VA = "0x87A8", Slot = "11")]
 		public void SetTurnState(TurnStates state, float timeout)
 		{
+		/* --- GHIDRA: SetTurnState ---
+		void Gameplay_Combat_View_TurnDisplay_TurnStatePointerDefault__SetTurnState
+		               (int param1,undefined4 param2)
+		
+		{
+		  if (*(int *)(param1 + 0x34) != 0) {
+		    func_ii_20511(param1,*(int *)(param1 + 0x34),0);
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x060037C7 RID: 14279 RVA: 0x00002050 File Offset: 0x00000250
@@ -155,6 +250,16 @@ namespace Gameplay.Combat.View.TurnDisplay
 		[Address(RVA = "0x87A9", Offset = "0x87A9", VA = "0x87A9", Slot = "12")]
 		public void Stop()
 		{
+		/* --- GHIDRA: Stop ---
+		void Gameplay_Combat_View_TurnDisplay_TurnStatePointerDefault__Stop(int param1,undefined4 param2)
+		
+		{
+		  *(undefined4 *)(param1 + 0x20) = 0x40a00000;
+		  UnityEngine_RectTransform__GetParentSize(param1,0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x060037C8 RID: 14280 RVA: 0x00002050 File Offset: 0x00000250
@@ -209,4 +314,293 @@ namespace Gameplay.Combat.View.TurnDisplay
 		[FieldOffset(Offset = "0x38")]
 		private float _timeout;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: add_TimeOutEvent ---
+		void Gameplay_Combat_View_TurnDisplay_TurnStatePointerDefault__add_TimeOutEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  int param1_00;
+		  int *param1_01;
+		  int iVar2;
+		  
+		  if (DAT_ram_00a566d3 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_TypeInfo);
+		    DAT_ram_00a566d3 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x28);
+		  while ((param1_01 = (int *)func_ii_7048(param1_00,param2,0), param1_01 == (int *)0x0 ||
+		         (System_Action_TypeInfo == *param1_01))) {
+		    iVar2 = func_ii_4329(param1 + 0x28,param1_01,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,System_Action_TypeInfo);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: remove_TimeOutEvent ---
+		void Gameplay_Combat_View_TurnDisplay_TurnStatePointerDefault__remove_TimeOutEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  int param1_00;
+		  int *param1_01;
+		  int iVar2;
+		  
+		  if (DAT_ram_00a566d4 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_TypeInfo);
+		    DAT_ram_00a566d4 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x2c);
+		  while ((param1_01 = (int *)UnityEngine_UI_Image__set_sprite(param1_00,param2,0),
+		         param1_01 == (int *)0x0 || (System_Action_TypeInfo == *param1_01))) {
+		    iVar2 = func_ii_4329(param1 + 0x2c,param1_01,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,System_Action_TypeInfo);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: add_TurnStateChangedEvent ---
+		void Gameplay_Combat_View_TurnDisplay_TurnStatePointerDefault__add_TurnStateChangedEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  int param1_00;
+		  int *param1_01;
+		  int iVar2;
+		  
+		  if (DAT_ram_00a566d5 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_TypeInfo);
+		    DAT_ram_00a566d5 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x2c);
+		  while ((param1_01 = (int *)func_ii_7048(param1_00,param2,0), param1_01 == (int *)0x0 ||
+		         (System_Action_TypeInfo == *param1_01))) {
+		    iVar2 = func_ii_4329(param1 + 0x2c,param1_01,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,System_Action_TypeInfo);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: get_TurnState ---
+		void Gameplay_Combat_View_TurnDisplay_TurnStatePointerDefault__get_TurnState
+		               (int param1,int param2,undefined4 param3)
+		
+		{
+		  undefined4 uVar1;
+		  int iVar2;
+		  
+		  if (*(int *)(param1 + 0x24) != param2) {
+		    *(int *)(param1 + 0x24) = param2;
+		    uVar1 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_uint__object___MoveNext
+		                      (*(undefined4 *)(param1 + 0x18),0);
+		    Com_TheFallenGames_OSA_CustomAdapters_TableView_Tuple_Basic_BasicTupleValueViewsHolder__UpdateAsText
+		              (uVar1,(uint)((*(uint *)(param1 + 0x24) & 0xfffffffd) == 1),0);
+		    uVar1 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_uint__object___MoveNext
+		                      (*(undefined4 *)(param1 + 0x1c),0);
+		    Com_TheFallenGames_OSA_CustomAdapters_TableView_Tuple_Basic_BasicTupleValueViewsHolder__UpdateAsText
+		              (uVar1,(uint)(*(int *)(param1 + 0x24) == 4 || *(int *)(param1 + 0x24) == 2),0);
+		    iVar2 = *(int *)(param1 + 0x2c);
+		    if (iVar2 != 0) {
+		      (**(code **)((ulonglong)*(uint *)(iVar2 + 0xc) * 4))
+		                (*(undefined4 *)(iVar2 + 0x20),*(undefined4 *)(iVar2 + 0x14));
+		    }
+		  }
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_TurnState ---
+		void Gameplay_Combat_View_TurnDisplay_TurnStatePointerDefault__set_TurnState
+		               (int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  int iVar2;
+		  
+		  uVar1 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_uint__object___MoveNext
+		                    (*(undefined4 *)(param1 + 0x18),0);
+		  Com_TheFallenGames_OSA_CustomAdapters_TableView_Tuple_Basic_BasicTupleValueViewsHolder__UpdateAsText
+		            (uVar1,(uint)((*(uint *)(param1 + 0x24) & 0xfffffffd) == 1),0);
+		  uVar1 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_uint__object___MoveNext
+		                    (*(undefined4 *)(param1 + 0x1c),0);
+		  Com_TheFallenGames_OSA_CustomAdapters_TableView_Tuple_Basic_BasicTupleValueViewsHolder__UpdateAsText
+		            (uVar1,(uint)(*(int *)(param1 + 0x24) == 4 || *(int *)(param1 + 0x24) == 2),0);
+		  iVar2 = *(int *)(param1 + 0x2c);
+		  if (iVar2 != 0) {
+		    (**(code **)((ulonglong)*(uint *)(iVar2 + 0xc) * 4))
+		              (*(undefined4 *)(iVar2 + 0x20),*(undefined4 *)(iVar2 + 0x14));
+		  }
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_Timeout ---
+		void Gameplay_Combat_View_TurnDisplay_TurnStatePointerDefault__get_Timeout
+		               (int param1,float param2,undefined4 param3)
+		
+		{
+		  undefined4 uVar1;
+		  int iVar2;
+		  undefined4 param1_00;
+		  double dVar3;
+		  undefined4 *puVar4;
+		  float fVar5;
+		  double param1_01;
+		  ulonglong uVar6;
+		  float8 local_8;
+		  
+		  if (DAT_ram_00a566d6 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Utils_BackTime_TypeInfo);
+		    DAT_ram_00a566d6 = '\x01';
+		  }
+		  *(float *)(param1 + 0x38) = param2;
+		  if (*(int *)(param1 + 0x34) != 0) {
+		    func_ii_20511(param1,*(int *)(param1 + 0x34),0);
+		  }
+		  uVar1 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_uint__object___MoveNext
+		                    (*(undefined4 *)(param1 + 0x18),0);
+		  iVar2 = func_ii_7305(uVar1,0);
+		  if (iVar2 == 0) {
+		    uVar1 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_uint__object___MoveNext
+		                      (*(undefined4 *)(param1 + 0x1c),0);
+		    iVar2 = func_ii_7305(uVar1,0);
+		    if (iVar2 == 0) {
+		      return;
+		    }
+		    puVar4 = (undefined4 *)(param1 + 0x14);
+		  }
+		  else {
+		    puVar4 = (undefined4 *)(param1 + 0x10);
+		  }
+		  fVar5 = *(float *)(param1 + 0x38);
+		  uVar1 = *puVar4;
+		  if (DAT_ram_00a6445d == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Math_TypeInfo);
+		    DAT_ram_00a6445d = '\x01';
+		  }
+		  if (*(int *)(System_Math_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(System_Math_TypeInfo);
+		  }
+		  param1_01 = (double)fVar5;
+		  dVar3 = unnamed_function_4206(param1_01,&local_8);
+		  if (0.0 <= fVar5) {
+		    if (dVar3 == 0.5) {
+		      if (ABS((double)local_8) < 9.223372036854776e+18) {
+		        uVar6 = (ulonglong)(double)local_8;
+		      }
+		      else {
+		        uVar6 = 0;
+		      }
+		      if ((uVar6 & 1) != 0) {
+		        local_8 = (float8)((double)local_8 + 1.0);
+		      }
+		    }
+		    else {
+		      local_8 = (float8)FLOOR(param1_01 + 0.5);
+		    }
+		  }
+		  else if (dVar3 == -0.5) {
+		    if (ABS((double)local_8) < 9.223372036854776e+18) {
+		      uVar6 = (ulonglong)(double)local_8;
+		    }
+		    else {
+		      uVar6 = 0;
+		    }
+		    if ((uVar6 & 1) != 0) {
+		      local_8 = (float8)((double)local_8 + -1.0);
+		    }
+		  }
+		  else {
+		    local_8 = (float8)CEIL(param1_01 + -0.5);
+		  }
+		  if (ABS((double)local_8) < 2147483648.0) {
+		    iVar2 = (int)(double)local_8;
+		  }
+		  else {
+		    iVar2 = -0x80000000;
+		  }
+		  param1_00 = unnamed_function_1417(Utils_BackTime_TypeInfo);
+		  Core_Extensions_Dict_DictExt__BinarySearch_object__uint_(param1_00,(float)iVar2,0);
+		  if (DAT_ram_00a566d7 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Gameplay_Combat_View_TurnDisplay_TurnStatePointerDefault__HandleBackTimeCoroutine_d__25_TypeInfo
+		              );
+		    DAT_ram_00a566d7 = '\x01';
+		  }
+		  iVar2 = unnamed_function_1417
+		                    (
+		                    Gameplay_Combat_View_TurnDisplay_TurnStatePointerDefault__HandleBackTimeCoroutine_d__25_TypeInfo
+		                    );
+		  *(int *)(iVar2 + 0x18) = param1;
+		  *(undefined4 *)(iVar2 + 8) = 0;
+		  *(undefined4 *)(iVar2 + 0x14) = uVar1;
+		  *(undefined4 *)(iVar2 + 0x10) = param1_00;
+		  uVar1 = UnityEngine_MonoBehaviour__StartCoroutine(param1,iVar2,0);
+		  *(undefined4 *)(param1 + 0x34) = uVar1;
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_Timeout ---
+		int Gameplay_Combat_View_TurnDisplay_TurnStatePointerDefault__set_Timeout
+		              (undefined4 param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  int iVar1;
+		  
+		  if (DAT_ram_00a566d7 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Gameplay_Combat_View_TurnDisplay_TurnStatePointerDefault__HandleBackTimeCoroutine_d__25_TypeInfo
+		              );
+		    DAT_ram_00a566d7 = '\x01';
+		  }
+		  iVar1 = unnamed_function_1417
+		                    (
+		                    Gameplay_Combat_View_TurnDisplay_TurnStatePointerDefault__HandleBackTimeCoroutine_d__25_TypeInfo
+		                    );
+		  *(undefined4 *)(iVar1 + 0x18) = param1;
+		  *(undefined4 *)(iVar1 + 8) = 0;
+		  *(undefined4 *)(iVar1 + 0x14) = param2;
+		  *(undefined4 *)(iVar1 + 0x10) = param3;
+		  return iVar1;
+		}
+		*/
+
 }

@@ -13,6 +13,44 @@ namespace Platforms.Android.Notifications
 		[Address(RVA = "0x5B52", Offset = "0x5B52", VA = "0x5B52")]
 		public GameNotificationChannel(string id, string name, string description)
 		{
+		/* --- GHIDRA: .ctor ---
+		void Platforms_Android_Notifications_GameNotificationChannel___ctor(undefined4 param1)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a5b83f == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Platforms_Android_Notifications_GameNotificationChannel___c_TypeInfo);
+		    DAT_ram_00a5b83f = '\x01';
+		  }
+		  uVar1 = unnamed_function_1417
+		                    (Platforms_Android_Notifications_GameNotificationChannel___c_TypeInfo);
+		  **(undefined4 **)(Platforms_Android_Notifications_GameNotificationChannel___c_TypeInfo + 0x5c) =
+		       uVar1;
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: .ctor ---
+		void Platforms_Android_Notifications_GameNotificationChannel___ctor(undefined4 param1)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a5b83f == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Platforms_Android_Notifications_GameNotificationChannel___c_TypeInfo);
+		    DAT_ram_00a5b83f = '\x01';
+		  }
+		  uVar1 = unnamed_function_1417
+		                    (Platforms_Android_Notifications_GameNotificationChannel___c_TypeInfo);
+		  **(undefined4 **)(Platforms_Android_Notifications_GameNotificationChannel___c_TypeInfo + 0x5c) =
+		       uVar1;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06000764 RID: 1892 RVA: 0x00002050 File Offset: 0x00000250

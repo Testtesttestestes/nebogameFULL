@@ -57,4 +57,29 @@ namespace UI
 		[SerializeField]
 		private bool _reverse;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: set_OriginTime ---
+		void UI_BacktimeViewUGUIFill__set_OriginTime(int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  float fVar1;
+		  float param2_00;
+		  int iVar2;
+		  
+		  iVar2 = **(int **)(param1 + 0x20);
+		  (**(code **)((ulonglong)*(uint *)(iVar2 + 0x2d0) * 4))
+		            (*(int **)(param1 + 0x20),param2,*(undefined4 *)(iVar2 + 0x2d4));
+		  fVar1 = func_ii_7103(*(undefined4 *)(param1 + 0x18),0);
+		  fVar1 = fVar1 / (float)*(uint *)(param1 + 0x2c);
+		  param2_00 = 1.0 - fVar1;
+		  if (*(char *)(param1 + 0x28) == '\0') {
+		    param2_00 = fVar1;
+		  }
+		  UnityEngine_UI_Image__get_fillAmount(*(undefined4 *)(param1 + 0x24),param2_00,0);
+		  return;
+		}
+		*/
+
 }

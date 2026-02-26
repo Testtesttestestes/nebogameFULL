@@ -16,6 +16,38 @@ namespace Gameplay.WorldAxis.ColossusInfo.View
 		[Address(RVA = "0x6454", Offset = "0x6454", VA = "0x6454")]
 		public void Init(ColossusDic dic, IColossusCombatRewards rewards)
 		{
+		/* --- GHIDRA: Init ---
+		undefined4
+		Gameplay_WorldAxis_ColossusInfo_View_ColossusDescription__Init
+		          (undefined4 param1,double param2,undefined4 param3)
+		
+		{
+		  undefined4 uVar1;
+		  float8 local_10;
+		  float8 local_8;
+		  
+		  local_8 = (float8)param2;
+		  if (DAT_ram_00a58bc7 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_2184);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_2179);
+		    DAT_ram_00a58bc7 = '\x01';
+		  }
+		  local_10 = (float8)param2;
+		  if (0.0 < param2) {
+		    uVar1 = func_ii_1081(DAT_ram_00a66970,&local_10);
+		    uVar1 = func_ii_4419(StringLiteral_2179,uVar1,0);
+		  }
+		  else if (param2 < 0.0) {
+		    uVar1 = func_ii_1081(DAT_ram_00a66970,&local_10);
+		    uVar1 = func_ii_4419(StringLiteral_2184,uVar1,0);
+		  }
+		  else {
+		    uVar1 = func_ii_7515(&local_8,0);
+		  }
+		  return uVar1;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600125B RID: 4699 RVA: 0x00002052 File Offset: 0x00000252
@@ -31,6 +63,19 @@ namespace Gameplay.WorldAxis.ColossusInfo.View
 		[Address(RVA = "0x6456", Offset = "0x6456", VA = "0x6456")]
 		public ColossusDescription()
 		{
+		/* --- GHIDRA: .ctor ---
+		undefined4
+		Gameplay_WorldAxis_ColossusInfo_View_ColossusDescription___ctor(undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a58bc8 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_12686);
+		    DAT_ram_00a58bc8 = '\x01';
+		  }
+		  return StringLiteral_12686;
+		}
+		*/
+
 		}
 
 		// Token: 0x040009CC RID: 2508

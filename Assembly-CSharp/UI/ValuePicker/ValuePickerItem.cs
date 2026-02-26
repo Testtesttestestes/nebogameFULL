@@ -72,4 +72,49 @@ namespace UI.ValuePicker
 		[SerializeField]
 		private Color _color;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: set_Text ---
+		void UI_ValuePicker_ValuePickerItem__set_Text(int param1,int param2,undefined4 param3)
+		
+		{
+		  float param2_00;
+		  undefined8 *puVar1;
+		  undefined8 local_20;
+		  undefined8 local_18;
+		  undefined8 local_10;
+		  undefined8 local_8;
+		  
+		  func_ii_8007(*(undefined4 *)(param1 + 0x10),0,0);
+		  param2_00 = 1.0;
+		  if (param2 == 0) {
+		    param2_00 = 0.0;
+		  }
+		  func_ii_9125(*(undefined4 *)(param1 + 0x10),param2_00,0.3,0);
+		  func_ii_8007(*(undefined4 *)(param1 + 0x14),0,0);
+		  puVar1 = (undefined8 *)(param1 + 0x18);
+		  if (param2 == 0) {
+		    puVar1 = (undefined8 *)(param1 + 0x28);
+		  }
+		  local_18 = puVar1[1];
+		  local_20 = *puVar1;
+		  local_10 = local_20;
+		  local_8 = local_18;
+		  DG_Tweening_DOTweenModuleUI__DOFade(*(undefined4 *)(param1 + 0x14),&local_20,0.3,0);
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_Selected ---
+		void UI_ValuePicker_ValuePickerItem__set_Selected(int param1,undefined4 param2)
+		
+		{
+		  func_ii_8007(*(undefined4 *)(param1 + 0x10),0,0);
+		  func_ii_8007(*(undefined4 *)(param1 + 0x14),0,0);
+		  return;
+		}
+		*/
+
 }

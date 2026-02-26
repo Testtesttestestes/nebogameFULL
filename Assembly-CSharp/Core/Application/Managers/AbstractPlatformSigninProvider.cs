@@ -106,6 +106,16 @@ namespace Core.Application.Managers
 		[Address(RVA = "0xB9C4", Offset = "0xB9C4", VA = "0xB9C4", Slot = "15")]
 		public virtual void Reset()
 		{
+		/* --- GHIDRA: Reset ---
+		void Core_Application_Managers_AbstractPlatformSigninProvider__Reset(int *param1,undefined4 param2)
+		
+		{
+		  param1[4] = 0;
+		  (**(code **)((ulonglong)*(uint *)(*param1 + 0x128) * 4))(param1,0,*(undefined4 *)(*param1 + 300));
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06006F59 RID: 28505 RVA: 0x00002050 File Offset: 0x00000250
@@ -113,6 +123,77 @@ namespace Core.Application.Managers
 		[Address(RVA = "0xB9C5", Offset = "0xB9C5", VA = "0xB9C5", Slot = "16")]
 		public virtual void SignOut()
 		{
+		/* --- GHIDRA: SignOut ---
+		undefined4
+		Core_Application_Managers_AbstractPlatformSigninProvider__SignOut(int *param1,undefined4 param2)
+		
+		{
+		  int *param2_00;
+		  int iVar1;
+		  int iVar2;
+		  undefined4 uVar3;
+		  undefined4 local_8;
+		  int local_4;
+		  
+		  if (DAT_ram_00a5a83d == '\0') {
+		    Mono_Security_ASN1__get_Item(&Protocol_Consts_ClientPlatform_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&object___TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&Core_Application_Managers_AbstractPlatformSigninProvider_SigninState_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_12407);
+		    DAT_ram_00a5a83d = '\x01';
+		  }
+		  param2_00 = (int *)Mono_Security_ASN1Convert__ToOid(object___TypeInfo,4);
+		  local_4 = param1[2];
+		  iVar1 = func_ii_1081(Protocol_Consts_ClientPlatform_TypeInfo,&local_4);
+		  if ((iVar1 != 0) && (iVar2 = func_ii_1082(iVar1,*(undefined4 *)(*param2_00 + 0x20)), iVar2 == 0))
+		  {
+		    uVar3 = func_ii_1083();
+		    func_ii_1050(uVar3,0);
+		    do {
+		      halt_trap();
+		    } while( true );
+		  }
+		  param2_00[4] = iVar1;
+		  iVar1 = param1[3];
+		  if ((iVar1 != 0) && (iVar2 = func_ii_1082(iVar1,*(undefined4 *)(*param2_00 + 0x20)), iVar2 == 0))
+		  {
+		    uVar3 = func_ii_1083();
+		    func_ii_1050(uVar3,0);
+		    do {
+		      halt_trap();
+		    } while( true );
+		  }
+		  param2_00[5] = iVar1;
+		  local_8 = (**(code **)((ulonglong)*(uint *)(*param1 + 0x120) * 4))
+		                      (param1,*(undefined4 *)(*param1 + 0x124));
+		  iVar1 = func_ii_1081(Core_Application_Managers_AbstractPlatformSigninProvider_SigninState_TypeInfo
+		                       ,&local_8);
+		  if ((iVar1 != 0) && (iVar2 = func_ii_1082(iVar1,*(undefined4 *)(*param2_00 + 0x20)), iVar2 == 0))
+		  {
+		    uVar3 = func_ii_1083();
+		    func_ii_1050(uVar3,0);
+		    do {
+		      halt_trap();
+		    } while( true );
+		  }
+		  param2_00[6] = iVar1;
+		  iVar1 = param1[4];
+		  if ((iVar1 != 0) && (iVar2 = func_ii_1082(iVar1,*(undefined4 *)(*param2_00 + 0x20)), iVar2 == 0))
+		  {
+		    uVar3 = func_ii_1083();
+		    func_ii_1050(uVar3,0);
+		    do {
+		      halt_trap();
+		    } while( true );
+		  }
+		  param2_00[7] = iVar1;
+		  uVar3 = UnityEngine_InputSystem_Utilities_TypeHelpers__GetNiceTypeName
+		                    (StringLiteral_12407,param2_00,0);
+		  return uVar3;
+		}
+		*/
+
 		}
 
 		// Token: 0x06006F5A RID: 28506
@@ -124,6 +205,27 @@ namespace Core.Application.Managers
 		[Address(RVA = "0xB9C6", Offset = "0xB9C6", VA = "0xB9C6", Slot = "3")]
 		public override string ToString()
 		{
+		/* --- GHIDRA: ToString ---
+		undefined4
+		Core_Application_Managers_AbstractPlatformSigninProvider__ToString(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  undefined4 local_4;
+		  
+		  if (DAT_ram_00a5a83e == '\0') {
+		    Mono_Security_ASN1__get_Item(&Protocol_Auth2_Provider_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_14339);
+		    DAT_ram_00a5a83e = '\x01';
+		  }
+		  local_4 = *(undefined4 *)(param1 + 0xc);
+		  uVar1 = func_ii_1081(Protocol_Auth2_Provider_TypeInfo,&local_4);
+		  uVar1 = func_ii_8529(StringLiteral_14339,uVar1,*(undefined4 *)(param1 + 0x10),
+		                       *(undefined4 *)(param1 + 0x14),0);
+		  return uVar1;
+		}
+		*/
+
 			return null;
 		}
 

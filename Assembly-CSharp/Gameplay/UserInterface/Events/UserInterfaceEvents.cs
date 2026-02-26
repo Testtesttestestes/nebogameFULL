@@ -16,6 +16,27 @@ namespace Gameplay.UserInterface.Events
 		[Address(RVA = "0x6911", Offset = "0x6911", VA = "0x6911")]
 		public UserInterfaceEvents()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_UserInterface_Events_UserInterfaceEvents___ctor
+		               (undefined4 param1,undefined4 param2,undefined4 param3,undefined4 param4,
+		               undefined4 param5)
+		
+		{
+		  if (DAT_ram_00a5989f == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_MVC_AbstractViewMediator_UserInterfaceModel__UserInterfaceEvents__UserInterfaceController__LocationOwnerIndexView___ctor__
+		              );
+		    DAT_ram_00a5989f = '\x01';
+		  }
+		  Gameplay_Combat_TeamCombat_View_AbstractTeamCombatView_object___get_HideInstantElements
+		            (param1,param2,param3,param4,
+		             Method_MVC_AbstractViewMediator_UserInterfaceModel__UserInterfaceEvents__UserInterfaceController__LocationOwnerIndexView___ctor__
+		            );
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x04000C64 RID: 3172

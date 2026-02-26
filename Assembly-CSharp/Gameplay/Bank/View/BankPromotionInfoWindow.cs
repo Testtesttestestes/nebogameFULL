@@ -30,6 +30,52 @@ namespace Gameplay.Bank.View
 		[Address(RVA = "0x9AE1", Offset = "0x9AE1", VA = "0x9AE1")]
 		public static BankPromotionInfoWindow Show(PromotionsDic promotionsDic)
 		{
+		/* --- GHIDRA: Show ---
+		void Gameplay_Bank_View_BankPromotionInfoWindow__Show(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  undefined4 uVar2;
+		  undefined4 uVar3;
+		  
+		  if (DAT_ram_00a59798 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Windows_BaseDialogWindow_BankPromotionInfoWindow_BankPromotionInfoWindowArgs__HandleContent__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Windows_BaseWindow_BankPromotionInfoWindow_BankPromotionInfoWindowArgs__get_WindowArgs__
+		              );
+		    Mono_Security_ASN1__get_Item(&Core_GameLocalization_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_3539);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_3540);
+		    DAT_ram_00a59798 = '\x01';
+		  }
+		  UI_Windows_BaseDialogWindow_object___HandleButtons
+		            (param1,
+		             Method_UI_Windows_BaseDialogWindow_BankPromotionInfoWindow_BankPromotionInfoWindowArgs__HandleContent__
+		            );
+		  uVar3 = *(undefined4 *)(param1 + 0x50);
+		  iVar1 = func_ii_8093(param1,
+		                       Method_UI_Windows_BaseWindow_BankPromotionInfoWindow_BankPromotionInfoWindowArgs__get_WindowArgs__
+		                      );
+		  uVar2 = Core_Extensions_Dict_PromotionsDicExt__GetEventBannerEventAssetId
+		                    (*(undefined4 *)(iVar1 + 0x2c),0);
+		  Core_Extensions_Dict_PortalDicExt__GetCurrencyIcon60x66(uVar3,uVar2,0);
+		  uVar2 = *(undefined4 *)(param1 + 0x54);
+		  if (*(int *)(Core_GameLocalization_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Core_GameLocalization_TypeInfo);
+		  }
+		  uVar3 = Core_Extensions_Dict_CultDicExt__GetTitle(StringLiteral_3539,1,0,1,0,0,0,0);
+		  UI_Elements_DecoratedTitle__Rebuild(uVar2,uVar3,0);
+		  uVar3 = *(undefined4 *)(param1 + 0x58);
+		  uVar2 = Core_Extensions_Dict_CultDicExt__GetTitle(StringLiteral_3540,1,0,1,0,0,0,0);
+		  UI_Elements_DecoratedTitle__Rebuild(uVar3,uVar2,0);
+		  return;
+		}
+		*/
+
 			return null;
 		}
 
@@ -38,6 +84,25 @@ namespace Gameplay.Bank.View
 		[Address(RVA = "0x9AE2", Offset = "0x9AE2", VA = "0x9AE2", Slot = "28")]
 		protected override void HandleContent()
 		{
+		/* --- GHIDRA: HandleContent ---
+		void Gameplay_Bank_View_BankPromotionInfoWindow__HandleContent(undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a59799 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Windows_BaseDialogWindow_BankPromotionInfoWindow_BankPromotionInfoWindowArgs___ctor__
+		              );
+		    DAT_ram_00a59799 = '\x01';
+		  }
+		  UI_Windows_BaseDialogWindow_BaseDialogWindowArgs_object____ctor
+		            (param1,
+		             Method_UI_Windows_BaseDialogWindow_BankPromotionInfoWindow_BankPromotionInfoWindowArgs___ctor__
+		            );
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06004CA2 RID: 19618 RVA: 0x00002050 File Offset: 0x00000250
@@ -45,6 +110,25 @@ namespace Gameplay.Bank.View
 		[Address(RVA = "0x9AE3", Offset = "0x9AE3", VA = "0x9AE3")]
 		public BankPromotionInfoWindow()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_Bank_View_BankPromotionInfoWindow___ctor(undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a5979a == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Windows_BaseDialogWindow_BaseDialogWindowArgs_BankPromotionInfoWindow_BankPromotionInfoWindowArgs___ctor__
+		              );
+		    DAT_ram_00a5979a = '\x01';
+		  }
+		  UnityEngine_UIElements_BaseCompositeField___Il2CppFullySharedGenericType__object____Il2CppFullySharedGenericType___UpdateMixedValueContent
+		            (param1,
+		             Method_UI_Windows_BaseDialogWindow_BaseDialogWindowArgs_BankPromotionInfoWindow_BankPromotionInfoWindowArgs___ctor__
+		            );
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x040029D2 RID: 10706
@@ -86,4 +170,58 @@ namespace Gameplay.Bank.View
 			public PromotionsDic PromotionsDic;
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_WindowId ---
+		undefined4
+		Gameplay_Bank_View_BankPromotionInfoWindow__get_WindowId(undefined4 param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  int param1_00;
+		  undefined4 uVar2;
+		  
+		  if (DAT_ram_00a59797 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Gameplay_Bank_View_BankPromotionInfoWindow_BankPromotionInfoWindowArgs_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Core_GameLocalization_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Method_UI_Windows_PopupController_Show_BankPromotionInfoWindow___)
+		    ;
+		    Mono_Security_ASN1__get_Item(&StringLiteral_12570);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_3541);
+		    DAT_ram_00a59797 = '\x01';
+		  }
+		  uVar1 = System_Uri___ctor(0);
+		  uVar1 = System_Globalization_TimeSpanFormat_FormatLiterals__get_Start(uVar1,0);
+		  param1_00 = unnamed_function_1417
+		                        (
+		                        Gameplay_Bank_View_BankPromotionInfoWindow_BankPromotionInfoWindowArgs_TypeInfo
+		                        );
+		  if (DAT_ram_00a5979a == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Windows_BaseDialogWindow_BaseDialogWindowArgs_BankPromotionInfoWindow_BankPromotionInfoWindowArgs___ctor__
+		              );
+		    DAT_ram_00a5979a = '\x01';
+		  }
+		  UnityEngine_UIElements_BaseCompositeField___Il2CppFullySharedGenericType__object____Il2CppFullySharedGenericType___UpdateMixedValueContent
+		            (param1_00,
+		             Method_UI_Windows_BaseDialogWindow_BaseDialogWindowArgs_BankPromotionInfoWindow_BankPromotionInfoWindowArgs___ctor__
+		            );
+		  if (*(int *)(Core_GameLocalization_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Core_GameLocalization_TypeInfo);
+		  }
+		  uVar2 = Core_Extensions_Dict_CultDicExt__GetTitle(StringLiteral_3541,1,0,1,0,0,0,0);
+		  *(undefined4 *)(param1_00 + 0x18) = uVar2;
+		  uVar2 = Core_Extensions_Dict_PromotionsDicExt__GetInfoWindowImageAssetId(param1,0);
+		  *(undefined4 *)(param1_00 + 0x2c) = param1;
+		  *(undefined4 *)(param1_00 + 0x1c) = uVar2;
+		  uVar1 = Gameplay_Antiq_View_GroupReviewWindow_WindowArgs___ctor
+		                    (uVar1,StringLiteral_12570,param1_00,
+		                     Method_UI_Windows_PopupController_Show_BankPromotionInfoWindow___);
+		  return uVar1;
+		}
+		*/
+
 }

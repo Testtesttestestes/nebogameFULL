@@ -35,6 +35,31 @@ namespace Gameplay.GameEvents.Model.ActionsOnEvents
 		[Address(RVA = "0x7F8A", Offset = "0x7F8A", VA = "0x7F8A")]
 		public TextEventAction_10()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_GameEvents_Model_ActionsOnEvents_TextEventAction_10___ctor
+		               (int *param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  
+		  if (DAT_ram_00a57509 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_MVC_AbstractViewMediator_GameEventsModel__GameEventsEvents__GameEventsController__GameEventReadView__Dispose__
+		              );
+		    DAT_ram_00a57509 = '\x01';
+		  }
+		  iVar1 = (**(code **)((ulonglong)*(uint *)(*param1 + 0x158) * 4))
+		                    (param1,*(undefined4 *)(*param1 + 0x15c));
+		  func_ii_8007(*(undefined4 *)(iVar1 + 0x3c),0,0);
+		  MVC_AbstractViewMediator_object__object__object__object___Core_MVC_Interfaces_IViewMediator_set_View
+		            (param1,
+		             Method_MVC_AbstractViewMediator_GameEventsModel__GameEventsEvents__GameEventsController__GameEventReadView__Dispose__
+		            );
+		  return;
+		}
+		*/
+
 		}
 	}
 }

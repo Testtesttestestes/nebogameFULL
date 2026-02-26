@@ -13,6 +13,18 @@ namespace Core.Extensions
 		[Address(RVA = "0x2257", Offset = "0x2257", VA = "0x2257")]
 		public static Dictionary<string, string> QueryStringToDictionary(this Uri uri)
 		{
+		/* --- GHIDRA: QueryStringToDictionary ---
+		undefined4 Core_Extensions_UriExt__QueryStringToDictionary(undefined4 param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  uVar1 = func_ii_5618(0);
+		  uVar1 = UnityEngine_Networking_UnityWebRequest__EscapeURL(param1,uVar1,param1);
+		  return uVar1;
+		}
+		*/
+
 			return null;
 		}
 	}

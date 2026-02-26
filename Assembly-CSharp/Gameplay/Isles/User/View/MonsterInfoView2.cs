@@ -115,6 +115,27 @@ namespace Gameplay.Isles.User.View
 		[Address(RVA = "0x9FEF", Offset = "0x9FEF", VA = "0x9FEF")]
 		public void SetDifficultyAndLevel(uint level, string difficulty)
 		{
+		/* --- GHIDRA: SetDifficultyAndLevel ---
+		int Gameplay_Isles_User_View_MonsterInfoView2__SetDifficultyAndLevel(int param1,undefined4 param2)
+		
+		{
+		  undefined4 param2_00;
+		  int param1_00;
+		  
+		  if (DAT_ram_00a58d69 == '\0') {
+		    Mono_Security_ASN1__get_Item(&UI_Elements_RightPanel_TitledList_TitledListArgs_TypeInfo);
+		    DAT_ram_00a58d69 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x20);
+		  if (*(char *)(param1_00 + 0x2c) == '\0') {
+		    param2_00 = unnamed_function_1417(UI_Elements_RightPanel_TitledList_TitledListArgs_TypeInfo);
+		    UI_Elements_RightPanel_TitledList_TitledList__set_Title(param1_00,param2_00,0);
+		    param1_00 = *(int *)(param1 + 0x20);
+		  }
+		  return param1_00;
+		}
+		*/
+
 		}
 
 		// Token: 0x170010AD RID: 4269
@@ -209,4 +230,221 @@ namespace Gameplay.Isles.User.View
 		[FieldOffset(Offset = "0x2C")]
 		private RewardsTitledListElement _rewardsElement;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_Rewards ---
+		void Gameplay_Isles_User_View_MonsterInfoView2__get_Rewards
+		               (undefined4 param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  undefined4 param1_00;
+		  
+		  param1_00 = Gameplay_Isles_User_View_MonsterInfoView2__get_MonsterDifficultyElement(param1,param2)
+		  ;
+		  UI_Elements_RightPanel_TitledList_Elements_RewardsTitledListElement__get_Rewards
+		            (param1_00,param2,0);
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_KickButton ---
+		undefined4 Gameplay_Isles_User_View_MonsterInfoView2__get_KickButton(int param1,undefined4 param2)
+		
+		{
+		  return *(undefined4 *)(*(int *)(param1 + 0x18) + 0xb8);
+		}
+		*/
+
+
+		/* --- GHIDRA: get_AttackPrice ---
+		undefined4 Gameplay_Isles_User_View_MonsterInfoView2__get_AttackPrice(int param1,undefined4 param2)
+		
+		{
+		  return *(undefined4 *)(*(int *)(param1 + 0x1c) + 0xb8);
+		}
+		*/
+
+
+		/* --- GHIDRA: get_KickPrice ---
+		void Gameplay_Isles_User_View_MonsterInfoView2__get_KickPrice
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  Core_Extensions_Dict_PortalDicExt__GetCurrencyIcon60x66(*(undefined4 *)(param1 + 0x14),param2,0);
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_MonsterTitle ---
+		void Gameplay_Isles_User_View_MonsterInfoView2__set_MonsterTitle
+		               (undefined4 param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  undefined4 param1_00;
+		  undefined4 uVar1;
+		  undefined4 param3_00;
+		  undefined4 param4_00;
+		  undefined1 auStack_10 [12];
+		  undefined4 local_4;
+		  
+		  if (DAT_ram_00a58d68 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_GameLocalization_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_2621);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_28691);
+		    DAT_ram_00a58d68 = '\x01';
+		  }
+		  param1_00 = Gameplay_Isles_User_View_MonsterInfoView2__get_TitledList(param1,auStack_10);
+		  if (*(int *)(Core_GameLocalization_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Core_GameLocalization_TypeInfo);
+		  }
+		  uVar1 = Core_Extensions_Dict_CultDicExt__GetTitle(StringLiteral_2621,1,0,1,0,0,0,0);
+		  local_4 = param2;
+		  param3_00 = func_ii_1081(DAT_ram_00a66958,&local_4);
+		  param4_00 = Core_Extensions_Dict_CultDicExt__GetTitle(param3,1,0,1,0,0,0,0);
+		  uVar1 = func_ii_8529(StringLiteral_28691,uVar1,param3_00,param4_00,0);
+		  Core_Extensions_Dict_MonsterDictExt__GetTitle(param1_00,uVar1,0);
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_TitledList ---
+		int * Gameplay_Isles_User_View_MonsterInfoView2__get_TitledList(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  int *param1_00;
+		  undefined4 uVar2;
+		  uint uVar3;
+		  
+		  if (DAT_ram_00a58d6a == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               UI_Elements_RightPanel_TitledList_Elements_MonsterDifficultyAndLevelTitledListElement_MonsterDifficultyAndLevelTitledListElementArgs_TypeInfo
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               UI_Elements_RightPanel_TitledList_Elements_MonsterDifficultyAndLevelTitledListElement_TypeInfo
+		              );
+		    Mono_Security_ASN1__get_Item(&UnityEngine_Object_TypeInfo);
+		    DAT_ram_00a58d6a = '\x01';
+		  }
+		  uVar2 = *(undefined4 *)(param1 + 0x28);
+		  if (*(int *)(UnityEngine_Object_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(UnityEngine_Object_TypeInfo);
+		  }
+		  iVar1 = func_ii_3812(uVar2,0,0);
+		  if (iVar1 != 0) {
+		    if (DAT_ram_00a58d69 == '\0') {
+		      Mono_Security_ASN1__get_Item(&UI_Elements_RightPanel_TitledList_TitledListArgs_TypeInfo);
+		      DAT_ram_00a58d69 = '\x01';
+		    }
+		    iVar1 = *(int *)(param1 + 0x20);
+		    if (*(char *)(iVar1 + 0x2c) == '\0') {
+		      uVar2 = unnamed_function_1417(UI_Elements_RightPanel_TitledList_TitledListArgs_TypeInfo);
+		      UI_Elements_RightPanel_TitledList_TitledList__set_Title(iVar1,uVar2,0);
+		      iVar1 = *(int *)(param1 + 0x20);
+		    }
+		    uVar2 = unnamed_function_1417
+		                      (
+		                      UI_Elements_RightPanel_TitledList_Elements_MonsterDifficultyAndLevelTitledListElement_MonsterDifficultyAndLevelTitledListElementArgs_TypeInfo
+		                      );
+		    param1_00 = (int *)UI_Elements_RightPanel_TitledList_TitledList__Init(iVar1,uVar2,0);
+		    iVar1 = 
+		    UI_Elements_RightPanel_TitledList_Elements_MonsterDifficultyAndLevelTitledListElement_TypeInfo;
+		    if (param1_00 == (int *)0x0) {
+		      *(undefined4 *)(param1 + 0x28) = 0;
+		      return (int *)0;
+		    }
+		    uVar3 = (uint)*(byte *)(
+		                           UI_Elements_RightPanel_TitledList_Elements_MonsterDifficultyAndLevelTitledListElement_TypeInfo
+		                           + 0xb8);
+		    if ((uVar3 <= *(byte *)(*param1_00 + 0xb8)) &&
+		       (*(int *)(*(int *)(*param1_00 + 100) + (uVar3 - 1) * 4) ==
+		        UI_Elements_RightPanel_TitledList_Elements_MonsterDifficultyAndLevelTitledListElement_TypeInfo
+		       )) {
+		      *(int **)(param1 + 0x28) = param1_00;
+		      if ((uVar3 <= *(byte *)(*param1_00 + 0xb8)) &&
+		         (*(int *)(*(int *)(*param1_00 + 100) + (uVar3 - 1) * 4) == iVar1)) {
+		        return param1_00;
+		      }
+		    }
+		    System_Activator__CreateInstance(param1_00,iVar1);
+		    do {
+		      halt_trap();
+		    } while( true );
+		  }
+		  return (int *)*(undefined4 *)(param1 + 0x28);
+		}
+		*/
+
+
+		/* --- GHIDRA: get_MonsterDifficultyElement ---
+		int * Gameplay_Isles_User_View_MonsterInfoView2__get_MonsterDifficultyElement
+		                (int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  int *param1_00;
+		  undefined4 uVar2;
+		  uint uVar3;
+		  
+		  if (DAT_ram_00a58d6b == '\0') {
+		    Mono_Security_ASN1__get_Item(&UnityEngine_Object_TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&UI_Elements_RightPanel_TitledList_Elements_RewardsTitledListElementArgs_TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&UI_Elements_RightPanel_TitledList_Elements_RewardsTitledListElement_TypeInfo);
+		    DAT_ram_00a58d6b = '\x01';
+		  }
+		  uVar2 = *(undefined4 *)(param1 + 0x2c);
+		  if (*(int *)(UnityEngine_Object_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(UnityEngine_Object_TypeInfo);
+		  }
+		  iVar1 = UnityEngine_Component__GetComponent_object_(uVar2,0);
+		  if (iVar1 == 0) {
+		    if (DAT_ram_00a58d69 == '\0') {
+		      Mono_Security_ASN1__get_Item(&UI_Elements_RightPanel_TitledList_TitledListArgs_TypeInfo);
+		      DAT_ram_00a58d69 = '\x01';
+		    }
+		    iVar1 = *(int *)(param1 + 0x20);
+		    if (*(char *)(iVar1 + 0x2c) == '\0') {
+		      uVar2 = unnamed_function_1417(UI_Elements_RightPanel_TitledList_TitledListArgs_TypeInfo);
+		      UI_Elements_RightPanel_TitledList_TitledList__set_Title(iVar1,uVar2,0);
+		      iVar1 = *(int *)(param1 + 0x20);
+		    }
+		    uVar2 = unnamed_function_1417
+		                      (
+		                      UI_Elements_RightPanel_TitledList_Elements_RewardsTitledListElementArgs_TypeInfo
+		                      );
+		    param1_00 = (int *)UI_Elements_RightPanel_TitledList_TitledList__Init(iVar1,uVar2,0);
+		    iVar1 = UI_Elements_RightPanel_TitledList_Elements_RewardsTitledListElement_TypeInfo;
+		    if (param1_00 == (int *)0x0) {
+		      *(undefined4 *)(param1 + 0x2c) = 0;
+		      return (int *)0;
+		    }
+		    uVar3 = (uint)*(byte *)(
+		                           UI_Elements_RightPanel_TitledList_Elements_RewardsTitledListElement_TypeInfo
+		                           + 0xb8);
+		    if ((uVar3 <= *(byte *)(*param1_00 + 0xb8)) &&
+		       (*(int *)(*(int *)(*param1_00 + 100) + (uVar3 - 1) * 4) ==
+		        UI_Elements_RightPanel_TitledList_Elements_RewardsTitledListElement_TypeInfo)) {
+		      *(int **)(param1 + 0x2c) = param1_00;
+		      if ((uVar3 <= *(byte *)(*param1_00 + 0xb8)) &&
+		         (*(int *)(*(int *)(*param1_00 + 100) + (uVar3 - 1) * 4) == iVar1)) {
+		        return param1_00;
+		      }
+		    }
+		    System_Activator__CreateInstance(param1_00,iVar1);
+		    do {
+		      halt_trap();
+		    } while( true );
+		  }
+		  return (int *)*(undefined4 *)(param1 + 0x2c);
+		}
+		*/
+
 }

@@ -16,6 +16,43 @@ namespace Gameplay.World.Model
 		[Address(RVA = "0x65F8", Offset = "0x65F8", VA = "0x65F8")]
 		public IsleAnimationRequestVo(uint AnimationId, ulong OwnerId, uint LaunchesAtTime)
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_World_Model_IsleAnimationRequestVo___ctor
+		               (int param1,undefined4 *param2,undefined8 *param3,undefined4 *param4,
+		               undefined4 param5)
+		
+		{
+		  *param2 = *(undefined4 *)(param1 + 8);
+		  *param3 = *(undefined8 *)(param1 + 0x10);
+		  *param4 = *(undefined4 *)(param1 + 0x18);
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: <Clone>$ ---
+		void Gameplay_World_Model_IsleAnimationRequestVo___Clone__(int param1,int param2,undefined4 param3)
+		
+		{
+		  *(undefined4 *)(param1 + 8) = *(undefined4 *)(param2 + 8);
+		  *(undefined8 *)(param1 + 0x10) = *(undefined8 *)(param2 + 0x10);
+		  *(undefined4 *)(param1 + 0x18) = *(undefined4 *)(param2 + 0x18);
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_World_Model_IsleAnimationRequestVo___ctor
+		               (int param1,undefined4 *param2,undefined8 *param3,undefined4 *param4,
+		               undefined4 param5)
+		
+		{
+		  *param2 = *(undefined4 *)(param1 + 8);
+		  *param3 = *(undefined8 *)(param1 + 0x10);
+		  *param4 = *(undefined4 *)(param1 + 0x18);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x1700033E RID: 830
@@ -102,6 +139,38 @@ namespace Gameplay.World.Model
 		[CompilerGenerated]
 		public override string ToString()
 		{
+		/* --- GHIDRA: ToString ---
+		undefined4
+		Gameplay_World_Model_IsleAnimationRequestVo__ToString
+		          (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  undefined4 uVar1;
+		  undefined8 local_10;
+		  undefined4 local_4;
+		  
+		  if (DAT_ram_00a58c83 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_1259);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_1256);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_3125);
+		    DAT_ram_00a58c83 = '\x01';
+		  }
+		  func_ii_2010(param2,StringLiteral_3125,0);
+		  local_4 = *(undefined4 *)(param1 + 8);
+		  uVar1 = Protocol_Combat_ProtoPlayerActionEvt___ctor(&local_4,0);
+		  func_ii_2010(param2,uVar1,0);
+		  func_ii_2010(param2,StringLiteral_1259,0);
+		  local_10 = *(undefined8 *)(param1 + 0x10);
+		  uVar1 = func_ii_8783(&local_10,0);
+		  func_ii_2010(param2,uVar1,0);
+		  func_ii_2010(param2,StringLiteral_1256,0);
+		  local_4 = *(undefined4 *)(param1 + 0x18);
+		  uVar1 = Protocol_Combat_ProtoPlayerActionEvt___ctor(&local_4,0);
+		  func_ii_2010(param2,uVar1,0);
+		  return 1;
+		}
+		*/
+
 			return null;
 		}
 
@@ -140,6 +209,35 @@ namespace Gameplay.World.Model
 		[CompilerGenerated]
 		public override int GetHashCode()
 		{
+		/* --- GHIDRA: GetHashCode ---
+		undefined4
+		Gameplay_World_Model_IsleAnimationRequestVo__GetHashCode(int *param1,int *param2,undefined4 param3)
+		
+		{
+		  int *piVar1;
+		  undefined4 uVar2;
+		  
+		  piVar1 = (int *)0x0;
+		  if (DAT_ram_00a58c85 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Gameplay_World_Model_IsleAnimationRequestVo_TypeInfo);
+		    DAT_ram_00a58c85 = '\x01';
+		  }
+		  if (param2 != (int *)0x0) {
+		    if (((uint)*(byte *)(Gameplay_World_Model_IsleAnimationRequestVo_TypeInfo + 0xb8) <=
+		         (uint)*(byte *)(*param2 + 0xb8)) &&
+		       (piVar1 = param2,
+		       *(int *)(*(int *)(*param2 + 100) +
+		                (uint)*(byte *)(Gameplay_World_Model_IsleAnimationRequestVo_TypeInfo + 0xb8) * 4 +
+		               -4) != Gameplay_World_Model_IsleAnimationRequestVo_TypeInfo)) {
+		      piVar1 = (int *)0x0;
+		    }
+		  }
+		  uVar2 = (**(code **)((ulonglong)*(uint *)(*param1 + 0xf8) * 4))
+		                    (param1,piVar1,*(undefined4 *)(*param1 + 0xfc));
+		  return uVar2;
+		}
+		*/
+
 			return 0;
 		}
 
@@ -150,6 +248,42 @@ namespace Gameplay.World.Model
 		[CompilerGenerated]
 		public override bool Equals(object obj)
 		{
+		/* --- GHIDRA: Equals ---
+		int Gameplay_World_Model_IsleAnimationRequestVo__Equals(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  
+		  if (DAT_ram_00a58c87 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Gameplay_World_Model_IsleAnimationRequestVo_TypeInfo);
+		    DAT_ram_00a58c87 = '\x01';
+		  }
+		  iVar1 = unnamed_function_1417(Gameplay_World_Model_IsleAnimationRequestVo_TypeInfo);
+		  *(undefined4 *)(iVar1 + 8) = *(undefined4 *)(param1 + 8);
+		  *(undefined8 *)(iVar1 + 0x10) = *(undefined8 *)(param1 + 0x10);
+		  *(undefined4 *)(iVar1 + 0x18) = *(undefined4 *)(param1 + 0x18);
+		  return iVar1;
+		}
+		*/
+
+		/* --- GHIDRA: Equals ---
+		int Gameplay_World_Model_IsleAnimationRequestVo__Equals(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  
+		  if (DAT_ram_00a58c87 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Gameplay_World_Model_IsleAnimationRequestVo_TypeInfo);
+		    DAT_ram_00a58c87 = '\x01';
+		  }
+		  iVar1 = unnamed_function_1417(Gameplay_World_Model_IsleAnimationRequestVo_TypeInfo);
+		  *(undefined4 *)(iVar1 + 8) = *(undefined4 *)(param1 + 8);
+		  *(undefined8 *)(iVar1 + 0x10) = *(undefined8 *)(param1 + 0x10);
+		  *(undefined4 *)(iVar1 + 0x18) = *(undefined4 *)(param1 + 0x18);
+		  return iVar1;
+		}
+		*/
+
 			return default(bool);
 		}
 
@@ -179,4 +313,91 @@ namespace Gameplay.World.Model
 		{
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: set_LaunchesAtTime ---
+		undefined4
+		Gameplay_World_Model_IsleAnimationRequestVo__set_LaunchesAtTime(int *param1,undefined4 param2)
+		
+		{
+		  int *param1_00;
+		  int iVar1;
+		  undefined4 uVar2;
+		  
+		  if (DAT_ram_00a58c82 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Text_StringBuilder_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_9960);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_507);
+		    DAT_ram_00a58c82 = '\x01';
+		  }
+		  param1_00 = (int *)unnamed_function_1417(System_Text_StringBuilder_TypeInfo);
+		  func_ii_2101(param1_00,0);
+		  func_ii_2010(param1_00,StringLiteral_9960,0);
+		  func_ii_2010(param1_00,StringLiteral_507,0);
+		  iVar1 = (**(code **)((ulonglong)*(uint *)(*param1 + 0xf0) * 4))
+		                    (param1,param1_00,*(undefined4 *)(*param1 + 0xf4));
+		  if (iVar1 != 0) {
+		    func_ii_3135(param1_00,0x20,0);
+		  }
+		  func_ii_3135(param1_00,0x7d,0);
+		  uVar2 = (**(code **)((ulonglong)*(uint *)(*param1_00 + 0xd8) * 4))
+		                    (param1_00,*(undefined4 *)(*param1_00 + 0xdc));
+		  return uVar2;
+		}
+		*/
+
+
+		/* --- GHIDRA: op_Equality ---
+		int Gameplay_World_Model_IsleAnimationRequestVo__op_Equality(int *param1,undefined4 param2)
+		
+		{
+		  undefined4 in_register_20000014;
+		  int *piVar1;
+		  undefined4 uVar2;
+		  int iVar3;
+		  int iVar4;
+		  int iVar5;
+		  int iVar6;
+		  undefined8 uVar7;
+		  
+		  if (DAT_ram_00a58c84 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_EqualityComparer_ulong__get_Default__);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_EqualityComparer_Type__get_Default__);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_EqualityComparer_uint__get_Default__);
+		    DAT_ram_00a58c84 = '\x01';
+		  }
+		  piVar1 = (int *)UnityEngine_UIElements_PopupField___c__DisplayClass27_0_object____ctor
+		                            (Method_System_Collections_Generic_EqualityComparer_Type__get_Default__)
+		  ;
+		  uVar7 = CONCAT44(in_register_20000014,*(undefined4 *)(*param1 + 0xec));
+		  uVar2 = (**(code **)((ulonglong)*(uint *)(*param1 + 0xe8) * 4))(param1,uVar7);
+		  uVar7 = CONCAT44((int)((ulonglong)uVar7 >> 0x20),uVar2);
+		  iVar3 = (**(code **)((ulonglong)*(uint *)(*piVar1 + 0x108) * 4))
+		                    (piVar1,uVar7,*(undefined4 *)(*piVar1 + 0x10c));
+		  uVar2 = (undefined4)((ulonglong)uVar7 >> 0x20);
+		  piVar1 = (int *)System_Collections_Generic_EqualityComparer_uint___System_Collections_IEqualityComparer_GetHashCode
+		                            (Method_System_Collections_Generic_EqualityComparer_uint__get_Default__)
+		  ;
+		  iVar4 = (**(code **)((ulonglong)*(uint *)(*piVar1 + 0x108) * 4))
+		                    (piVar1,CONCAT44(uVar2,param1[2]),*(undefined4 *)(*piVar1 + 0x10c));
+		  piVar1 = (int *)System_Collections_Generic_EqualityComparer_ulong___System_Collections_IEqualityComparer_GetHashCode
+		                            (Method_System_Collections_Generic_EqualityComparer_ulong__get_Default__
+		                            );
+		  uVar7 = *(undefined8 *)(param1 + 4);
+		  iVar5 = (**(code **)((ulonglong)*(uint *)(*piVar1 + 0x108) * 4))
+		                    (piVar1,uVar7,*(undefined4 *)(*piVar1 + 0x10c));
+		  uVar2 = (undefined4)((ulonglong)uVar7 >> 0x20);
+		  piVar1 = (int *)System_Collections_Generic_EqualityComparer_uint___System_Collections_IEqualityComparer_GetHashCode
+		                            (Method_System_Collections_Generic_EqualityComparer_uint__get_Default__)
+		  ;
+		  iVar6 = (**(code **)((ulonglong)*(uint *)(*piVar1 + 0x108) * 4))
+		                    (piVar1,CONCAT44(uVar2,param1[6]),*(undefined4 *)(*piVar1 + 0x10c));
+		  return iVar6 + (iVar5 + (iVar4 + iVar3 * -0x5aaaaad7) * -0x5aaaaad7) * -0x5aaaaad7;
+		}
+		*/
+
 }

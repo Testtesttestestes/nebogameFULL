@@ -288,4 +288,32 @@ namespace Gameplay.UserInterface.View
 		[FieldOffset(Offset = "0x4C")]
 		private IndexButtonBasic _saveProgressButton;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_BankButton ---
+		int Gameplay_UserInterface_View_UserInterfaceButtonsView__get_BankButton
+		              (int param1,undefined4 *param2,undefined4 param3)
+		
+		{
+		  int iVar1;
+		  undefined4 param1_00;
+		  
+		  if (DAT_ram_00a5825f == '\0') {
+		    Mono_Security_ASN1__get_Item(&UnityEngine_Object_TypeInfo);
+		    DAT_ram_00a5825f = '\x01';
+		  }
+		  *param2 = 0;
+		  param1_00 = *(undefined4 *)(param1 + 0x4c);
+		  if (*(int *)(UnityEngine_Object_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(UnityEngine_Object_TypeInfo);
+		  }
+		  iVar1 = UnityEngine_Component__GetComponent_object_(param1_00,0);
+		  if (iVar1 != 0) {
+		    *param2 = *(undefined4 *)(param1 + 0x4c);
+		  }
+		  return iVar1;
+		}
+		*/
+
 }

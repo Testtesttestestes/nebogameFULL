@@ -15,6 +15,40 @@ namespace Gameplay.Rating.View
 		[Address(RVA = "0x72ED", Offset = "0x72ED", VA = "0x72ED", Slot = "11")]
 		protected override void ApplyArgs()
 		{
+		/* --- GHIDRA: ApplyArgs ---
+		void Gameplay_Rating_View_ClanRatingListElement__ApplyArgs(int param1,undefined4 param2)
+		
+		{
+		  undefined4 param1_00;
+		  undefined4 *puVar1;
+		  uint uVar2;
+		  
+		  if (DAT_ram_00a58020 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Elements_GenericList_GenericListElement_ClanInRatingListElement_ClanInRatingListElementArgs__get_args__
+		              );
+		    DAT_ram_00a58020 = '\x01';
+		  }
+		  uVar2 = *(uint *)(*(int *)(*(int *)(param1 + 0x18) + 0x24) + 0x1c);
+		  if ((longlong)*(int *)(*(int *)(param1 + 0x44) + 0xc) < (longlong)(ulonglong)uVar2) {
+		    param1_00 = *(undefined4 *)(param1 + 0x40);
+		    if (*(char *)(*(int *)(param1 + 0x18) + 0x28) == '\0') {
+		      puVar1 = (undefined4 *)(param1 + 0x48);
+		    }
+		    else {
+		      puVar1 = (undefined4 *)(param1 + 0x4c);
+		    }
+		  }
+		  else {
+		    puVar1 = (undefined4 *)(uVar2 * 4 + *(int *)(param1 + 0x44) + 0xc);
+		    param1_00 = *(undefined4 *)(param1 + 0x40);
+		  }
+		  func_ii_7050(param1_00,*puVar1,0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600218F RID: 8591 RVA: 0x00002050 File Offset: 0x00000250
@@ -29,6 +63,25 @@ namespace Gameplay.Rating.View
 		[Address(RVA = "0x72EF", Offset = "0x72EF", VA = "0x72EF")]
 		public ClanRatingListElement()
 		{
+		/* --- GHIDRA: .ctor ---
+		undefined4 Gameplay_Rating_View_ClanRatingListElement___ctor(undefined4 param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a58021 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Gameplay_Rating_View_UserInCommonRatingsViewsHolder_TypeInfo);
+		    DAT_ram_00a58021 = '\x01';
+		  }
+		  uVar1 = unnamed_function_1417(Gameplay_Rating_View_UserInCommonRatingsViewsHolder_TypeInfo);
+		  if (DAT_ram_00a58024 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_UI_ItemViewsHolder_UserInRatingListElement___ctor__);
+		    DAT_ram_00a58024 = '\x01';
+		  }
+		  return uVar1;
+		}
+		*/
+
 		}
 
 		// Token: 0x0400124F RID: 4687

@@ -54,6 +54,40 @@ namespace Gameplay.Clans.Office.View.AboutClansTab
 		[Address(RVA = "0x8CE0", Offset = "0x8CE0", VA = "0x8CE0")]
 		public AboutClansView()
 		{
+		/* --- GHIDRA: .ctor ---
+		undefined4
+		Gameplay_Clans_Office_View_AboutClansTab_AboutClansView___ctor(int param1,undefined4 param2)
+		
+		{
+		  uint uVar1;
+		  uint *puVar2;
+		  undefined4 uVar3;
+		  int *param1_00;
+		  int iVar4;
+		  
+		  if (DAT_ram_00a57f87 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_Dict_IDictProvider_TypeInfo);
+		    DAT_ram_00a57f87 = '\x01';
+		  }
+		  param1_00 = *(int **)(param1 + 0xc);
+		  iVar4 = *param1_00;
+		  if (*(ushort *)(iVar4 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (Core_Dict_IDictProvider_TypeInfo == *(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8)) {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8 + 4) * 8 + iVar4 + 0xd0);
+		        goto code_r0x80e85e84;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar4 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(param1_00,Core_Dict_IDictProvider_TypeInfo,2);
+		code_r0x80e85e84:
+		  uVar3 = (**(code **)((ulonglong)*puVar2 * 4))(param1_00,puVar2[1]);
+		  return uVar3;
+		}
+		*/
+
 		}
 
 		// Token: 0x040022E3 RID: 8931

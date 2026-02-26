@@ -54,6 +54,46 @@ namespace Gameplay.AccountLinker.Control
 		[Address(RVA = "0xA5C6", Offset = "0xA5C6", VA = "0xA5C6", Slot = "4")]
 		public void Dispose()
 		{
+		/* --- GHIDRA: Dispose ---
+		void Gameplay_AccountLinker_Control_NebogameSiteHelper__Dispose
+		               (undefined4 param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  undefined8 local_3c;
+		  undefined8 local_34;
+		  undefined4 local_2c;
+		  undefined8 local_28;
+		  undefined8 local_20;
+		  undefined4 local_18;
+		  undefined4 local_14;
+		  undefined4 local_10;
+		  undefined8 local_c;
+		  undefined4 local_4;
+		  
+		  if (DAT_ram_00a63bad == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_System_Runtime_CompilerServices_AsyncVoidMethodBuilder_Start_NebogameSiteHelper__RequestSetEmailAndPass_d__9___
+		              );
+		    DAT_ram_00a63bad = '\x01';
+		  }
+		  local_4 = 0;
+		  local_c = 0;
+		  System_Linq_Enumerable__ToDictionary_KeyValuePair_object__object___object__object_(&local_3c,0);
+		  local_20 = local_34;
+		  local_2c = 0xffffffff;
+		  local_28 = local_3c;
+		  local_18 = param2;
+		  local_14 = param3;
+		  local_10 = param1;
+		  System_Runtime_CompilerServices_AsyncVoidMethodBuilder__Start_MedalInfoViewMediator__HandleBuyMedalConfirmation_d__18_
+		            (&local_28,&local_2c,
+		             Method_System_Runtime_CompilerServices_AsyncVoidMethodBuilder_Start_NebogameSiteHelper__RequestSetEmailAndPass_d__9___
+		            );
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06005858 RID: 22616 RVA: 0x00002050 File Offset: 0x00000250
@@ -61,6 +101,30 @@ namespace Gameplay.AccountLinker.Control
 		[Address(RVA = "0xA5C7", Offset = "0xA5C7", VA = "0xA5C7")]
 		private void RequestSetEmailAndPass(string email, string password)
 		{
+		/* --- GHIDRA: RequestSetEmailAndPass ---
+		void Gameplay_AccountLinker_Control_NebogameSiteHelper__RequestSetEmailAndPass
+		               (undefined4 param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  undefined4 uVar1;
+		  undefined4 local_4;
+		  
+		  if (DAT_ram_00a63bae == '\0') {
+		    Mono_Security_ASN1__get_Item(&UnityEngine_Application_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_1689);
+		    DAT_ram_00a63bae = '\x01';
+		  }
+		  local_4 = param2;
+		  uVar1 = func_ii_4443(&local_4,0);
+		  uVar1 = Mono_Security_X509_X509Crl_X509CrlEntry___ctor(StringLiteral_1689,uVar1,0);
+		  if (*(int *)(UnityEngine_Application_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(UnityEngine_Application_TypeInfo);
+		  }
+		  UnityEngine_Application__get_cloudProjectId(uVar1,0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06005859 RID: 22617 RVA: 0x00002050 File Offset: 0x00000250
@@ -68,6 +132,71 @@ namespace Gameplay.AccountLinker.Control
 		[Address(RVA = "0xA5C8", Offset = "0xA5C8", VA = "0xA5C8")]
 		public void InvokeOAuth(Provider provider)
 		{
+		/* --- GHIDRA: InvokeOAuth ---
+		undefined4
+		Gameplay_AccountLinker_Control_NebogameSiteHelper__InvokeOAuth
+		          (undefined4 param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  int iVar1;
+		  undefined4 uVar2;
+		  undefined8 local_3c;
+		  undefined8 local_34;
+		  undefined4 local_2c;
+		  undefined8 local_28;
+		  undefined8 local_20;
+		  undefined4 local_18;
+		  undefined4 local_14;
+		  undefined4 local_10;
+		  undefined8 local_c;
+		  undefined4 local_4;
+		  
+		  if (DAT_ram_00a63baf == '\0') {
+		    Mono_Security_ASN1__get_Item(&Utils_StringUtils_TypeInfo);
+		    DAT_ram_00a63baf = '\x01';
+		  }
+		  if (*(int *)(Utils_StringUtils_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Utils_StringUtils_TypeInfo);
+		  }
+		  iVar1 = System_Text_RegularExpressions_Regex__IsMatch
+		                    (*(undefined4 *)(*(int *)(Utils_StringUtils_TypeInfo + 0x5c) + 4),param2,0);
+		  if (iVar1 == 0) {
+		    uVar2 = 0;
+		  }
+		  else {
+		    iVar1 = Newtonsoft_Json_Serialization_JsonSerializerInternalReader__ShouldDeserialize(param3,0);
+		    if (iVar1 == 0) {
+		      if (DAT_ram_00a63bad == '\0') {
+		        Mono_Security_ASN1__get_Item
+		                  (&
+		                   Method_System_Runtime_CompilerServices_AsyncVoidMethodBuilder_Start_NebogameSiteHelper__RequestSetEmailAndPass_d__9___
+		                  );
+		        DAT_ram_00a63bad = '\x01';
+		      }
+		      local_4 = 0;
+		      local_c = 0;
+		      System_Linq_Enumerable__ToDictionary_KeyValuePair_object__object___object__object_
+		                (&local_3c,0);
+		      local_20 = local_34;
+		      local_2c = 0xffffffff;
+		      local_28 = local_3c;
+		      local_18 = param2;
+		      local_14 = param3;
+		      local_10 = param1;
+		      System_Runtime_CompilerServices_AsyncVoidMethodBuilder__Start_MedalInfoViewMediator__HandleBuyMedalConfirmation_d__18_
+		                (&local_28,&local_2c,
+		                 Method_System_Runtime_CompilerServices_AsyncVoidMethodBuilder_Start_NebogameSiteHelper__RequestSetEmailAndPass_d__9___
+		                );
+		      uVar2 = 1;
+		    }
+		    else {
+		      uVar2 = 0;
+		    }
+		  }
+		  return uVar2;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600585A RID: 22618 RVA: 0x0000FAF8 File Offset: 0x0000DCF8
@@ -112,4 +241,107 @@ namespace Gameplay.AccountLinker.Control
 			public int error_code;
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: add_SetEmailErrorEvent ---
+		void Gameplay_AccountLinker_Control_NebogameSiteHelper__add_SetEmailErrorEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a63baa == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_int__TypeInfo);
+		    DAT_ram_00a63baa = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 8);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = func_ii_7048(param1_00,param2,0);
+		    param2_00 = System_Action_int__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_int__TypeInfo), iVar2 == 0)) break;
+		    iVar2 = func_ii_4329(param1 + 8,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: remove_SetEmailErrorEvent ---
+		void Gameplay_AccountLinker_Control_NebogameSiteHelper__remove_SetEmailErrorEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  int param1_00;
+		  int *param1_01;
+		  int iVar2;
+		  
+		  if (DAT_ram_00a63bab == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_TypeInfo);
+		    DAT_ram_00a63bab = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0xc);
+		  while ((param1_01 = (int *)UnityEngine_UI_Image__set_sprite(param1_00,param2,0),
+		         param1_01 == (int *)0x0 || (System_Action_TypeInfo == *param1_01))) {
+		    iVar2 = func_ii_4329(param1 + 0xc,param1_01,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,System_Action_TypeInfo);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: add_SetEmailCompleteEvent ---
+		void Gameplay_AccountLinker_Control_NebogameSiteHelper__add_SetEmailCompleteEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  int param1_00;
+		  int *param1_01;
+		  int iVar2;
+		  
+		  if (DAT_ram_00a63bac == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_TypeInfo);
+		    DAT_ram_00a63bac = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0xc);
+		  while ((param1_01 = (int *)func_ii_7048(param1_00,param2,0), param1_01 == (int *)0x0 ||
+		         (System_Action_TypeInfo == *param1_01))) {
+		    iVar2 = func_ii_4329(param1 + 0xc,param1_01,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,System_Action_TypeInfo);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
 }

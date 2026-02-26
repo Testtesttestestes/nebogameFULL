@@ -68,4 +68,32 @@ namespace Gameplay.Chat.View
 		[FieldOffset(Offset = "0x18")]
 		private ChatBanData _banData;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_BanData ---
+		void Gameplay_Chat_View_BanStub__get_BanData(int param1,int param2,undefined4 param3)
+		
+		{
+		  if ((*(int *)(param1 + 0x18) != param2) && (*(int *)(param1 + 0x18) = param2, param2 != 0)) {
+		    UI_Elements_RightPanel_TitleWithLevel__set_Level
+		              (*(undefined4 *)(param1 + 0x10),*(undefined4 *)(param2 + 0x10),0);
+		  }
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_BanData ---
+		void Gameplay_Chat_View_BanStub__set_BanData(int param1,undefined4 param2)
+		
+		{
+		  if (*(int *)(param1 + 0x18) != 0) {
+		    UI_Elements_RightPanel_TitleWithLevel__set_Level
+		              (*(undefined4 *)(param1 + 0x10),*(undefined4 *)(*(int *)(param1 + 0x18) + 0x10),0);
+		  }
+		  return;
+		}
+		*/
+
 }

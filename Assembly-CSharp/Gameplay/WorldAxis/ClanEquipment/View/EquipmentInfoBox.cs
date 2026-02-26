@@ -17,6 +17,27 @@ namespace Gameplay.WorldAxis.ClanEquipment.View
 		[Address(RVA = "0x653A", Offset = "0x653A", VA = "0x653A")]
 		public void Init(IList<ArtifactData> artifacts, UserData user)
 		{
+		/* --- GHIDRA: Init ---
+		void Gameplay_WorldAxis_ClanEquipment_View_EquipmentInfoBox__Init(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  
+		  if (DAT_ram_00a58c39 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Protocol_Dic_ArtikulMenuActionDic_Types_Actions___TypeInfo);
+		    DAT_ram_00a58c39 = '\x01';
+		  }
+		  iVar1 = Mono_Security_ASN1Convert__ToOid
+		                    (Protocol_Dic_ArtikulMenuActionDic_Types_Actions___TypeInfo,1);
+		  *(undefined4 *)(iVar1 + 0x10) = 5;
+		  *(undefined4 *)(param1 + 0x24) = 0;
+		  *(int *)(param1 + 0x20) = iVar1;
+		  *(undefined4 *)(param1 + 0x1c) = 0;
+		  UnityEngine_RectTransform__GetParentSize(param1,0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600134A RID: 4938 RVA: 0x00002050 File Offset: 0x00000250

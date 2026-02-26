@@ -19,6 +19,20 @@ namespace Gameplay.GameEvents.View.ActionsOnEvens
 		[Address(RVA = "0x7E83", Offset = "0x7E83", VA = "0x7E83")]
 		public ActionOnEventTextBox()
 		{
+		/* --- GHIDRA: .ctor ---
+		undefined4
+		Gameplay_GameEvents_View_ActionsOnEvens_ActionOnEventTextBox___ctor(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  undefined4 local_4;
+		  
+		  local_4 = *(undefined4 *)(*(int *)(param1 + 0x24) + 0x24);
+		  uVar1 = UnityEngine_InputForUI_PointerEvent_ButtonsState__Set(&local_4,4,0);
+		  return uVar1;
+		}
+		*/
+
 		}
 	}
 }

@@ -15,6 +15,18 @@ namespace CloudsFly
 		[Address(RVA = "0xBD75", Offset = "0xBD75", VA = "0xBD75")]
 		public void StartMove()
 		{
+		/* --- GHIDRA: StartMove ---
+		void CloudsFly_CloudBGParallax__StartMove(int param1,undefined4 param2)
+		
+		{
+		  if (*(int *)(param1 + 0x2c) != 0) {
+		    func_ii_20511(param1,*(int *)(param1 + 0x2c),0);
+		    *(undefined4 *)(param1 + 0x2c) = 0;
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600738A RID: 29578 RVA: 0x00002050 File Offset: 0x00000250
@@ -22,6 +34,23 @@ namespace CloudsFly
 		[Address(RVA = "0xBD76", Offset = "0xBD76", VA = "0xBD76")]
 		public void StopMove()
 		{
+		/* --- GHIDRA: StopMove ---
+		int CloudsFly_CloudBGParallax__StopMove(undefined4 param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  
+		  if (DAT_ram_00a59677 == '\0') {
+		    Mono_Security_ASN1__get_Item(&CloudsFly_CloudBGParallax__MoveBG_d__8_TypeInfo);
+		    DAT_ram_00a59677 = '\x01';
+		  }
+		  iVar1 = unnamed_function_1417(CloudsFly_CloudBGParallax__MoveBG_d__8_TypeInfo);
+		  *(undefined4 *)(iVar1 + 0x10) = param1;
+		  *(undefined4 *)(iVar1 + 8) = 0;
+		  return iVar1;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600738B RID: 29579 RVA: 0x00002052 File Offset: 0x00000252
@@ -29,6 +58,16 @@ namespace CloudsFly
 		[Address(RVA = "0xBD77", Offset = "0xBD77", VA = "0xBD77")]
 		private IEnumerator MoveBG()
 		{
+		/* --- GHIDRA: MoveBG ---
+		void CloudsFly_CloudBGParallax__MoveBG(int param1,undefined4 param2)
+		
+		{
+		  *(undefined4 *)(param1 + 0x18) = 0x3727c5ac;
+		  UnityEngine_RectTransform__GetParentSize(param1,0);
+		  return;
+		}
+		*/
+
 			return null;
 		}
 

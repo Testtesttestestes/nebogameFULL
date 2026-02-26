@@ -28,6 +28,42 @@ namespace Gameplay.AccountLinker.View
 		[Address(RVA = "0xA4EE", Offset = "0xA4EE", VA = "0xA4EE")]
 		private void OnDestroy()
 		{
+		/* --- GHIDRA: OnDestroy ---
+		void Gameplay_AccountLinker_View_SelectUserWindow__OnDestroy
+		               (int param1,int param2,undefined4 param3)
+		
+		{
+		  undefined4 param2_00;
+		  undefined4 param3_00;
+		  int *param1_00;
+		  undefined4 param4;
+		  int iVar1;
+		  
+		  if (DAT_ram_00a58929 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Gameplay_AccountLinker_Control_AccountLinkerSelectUserViewMediator_TypeInfo);
+		    DAT_ram_00a58929 = '\x01';
+		  }
+		  iVar1 = **(int **)(param2 + 0x18);
+		  param2_00 = (**(code **)((ulonglong)*(uint *)(iVar1 + 0x100) * 4))
+		                        (*(int **)(param2 + 0x18),*(undefined4 *)(iVar1 + 0x104));
+		  iVar1 = **(int **)(param2 + 0x18);
+		  param3_00 = (**(code **)((ulonglong)*(uint *)(iVar1 + 0x110) * 4))
+		                        (*(int **)(param2 + 0x18),*(undefined4 *)(iVar1 + 0x114));
+		  param4 = *(undefined4 *)(param2 + 0x18);
+		  param1_00 = (int *)unnamed_function_1417
+		                               (
+		                               Gameplay_AccountLinker_Control_AccountLinkerSelectUserViewMediator_TypeInfo
+		                               );
+		  Gameplay_AccountLinker_Control_AccountLinkerSelectUserViewMediator__Dispose
+		            (param1_00,param2_00,param3_00,param4,0);
+		  *(int **)(param1 + 0x38) = param1_00;
+		  (**(code **)((ulonglong)*(uint *)(*param1_00 + 0x160) * 4))
+		            (param1_00,*(undefined4 *)(param1 + 0x34),*(undefined4 *)(*param1_00 + 0x164));
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06005774 RID: 22388 RVA: 0x00002050 File Offset: 0x00000250
@@ -42,6 +78,21 @@ namespace Gameplay.AccountLinker.View
 		[Address(RVA = "0xA4F0", Offset = "0xA4F0", VA = "0xA4F0", Slot = "19")]
 		protected override void OnClose()
 		{
+		/* --- GHIDRA: OnClose ---
+		void Gameplay_AccountLinker_View_SelectUserWindow__OnClose(undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a5892a == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UI_Windows_BaseWindow_SelectUserWindow_SelectUserWindowArgs___ctor__);
+		    DAT_ram_00a5892a = '\x01';
+		  }
+		  UnityEngine_UIElements_BaseUxmlFactory___Il2CppFullySharedGenericType__object___get_uxmlType
+		            (param1,Method_UI_Windows_BaseWindow_SelectUserWindow_SelectUserWindowArgs___ctor__);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06005776 RID: 22390 RVA: 0x00002050 File Offset: 0x00000250
@@ -49,6 +100,15 @@ namespace Gameplay.AccountLinker.View
 		[Address(RVA = "0xA4F1", Offset = "0xA4F1", VA = "0xA4F1")]
 		public SelectUserWindow()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_AccountLinker_View_SelectUserWindow___ctor(undefined4 param1,undefined4 param2)
+		
+		{
+		  UI_Windows_BaseWindowArgs__Dispose(param1,0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x04002F60 RID: 12128
@@ -83,4 +143,21 @@ namespace Gameplay.AccountLinker.View
 			public AccountLinkerController Controller;
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_WindowId ---
+		void Gameplay_AccountLinker_View_SelectUserWindow__get_WindowId(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  
+		  iVar1 = **(int **)(param1 + 0x38);
+		  (**(code **)((ulonglong)*(uint *)(iVar1 + 0x130) * 4))
+		            (*(int **)(param1 + 0x38),*(undefined4 *)(iVar1 + 0x134));
+		  *(undefined4 *)(param1 + 0x38) = 0;
+		  return;
+		}
+		*/
+
 }

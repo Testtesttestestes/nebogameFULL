@@ -23,6 +23,26 @@ namespace Gameplay.WorldAxis.Office.View.Ratings
 		[Address(RVA = "0x6426", Offset = "0x6426", VA = "0x6426")]
 		public UserInRatingViewElements()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_WorldAxis_Office_View_Ratings_UserInRatingViewElements___ctor
+		               (int param1,int param2,undefined4 param3)
+		
+		{
+		  undefined4 uVar1;
+		  undefined4 uVar2;
+		  
+		  Gameplay_Rating_View_UserView__get_UserData(*(undefined4 *)(param1 + 8),param2,0);
+		  uVar2 = *(undefined4 *)(param1 + 0xc);
+		  uVar1 = Gameplay_Boss_View_CaptainTab_BossSkillInfoView__set_DominateCultDescription
+		                    (*(undefined4 *)(param2 + 0x4c),0);
+		  AssetContent_GameImage__get_AssetId(uVar2,uVar1,0);
+		  uVar2 = *(undefined4 *)(param1 + 0x10);
+		  uVar1 = Google_Protobuf_Collections_RepeatedField_object___GetEnumerator(param2,0);
+		  UnityEngine_Component__GetComponentInChildren_object_(uVar2,uVar1,0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x04000995 RID: 2453

@@ -20,6 +20,69 @@ namespace Gameplay.WorldAxis.Office.View.History
 		[Address(RVA = "0x6429", Offset = "0x6429", VA = "0x6429", Slot = "11")]
 		protected override void ApplyArgs()
 		{
+		/* --- GHIDRA: ApplyArgs ---
+		void Gameplay_WorldAxis_Office_View_History_BattleHistoryListElement__ApplyArgs
+		               (int param1,int param2,undefined4 param3)
+		
+		{
+		  undefined4 uVar1;
+		  int iVar2;
+		  int iVar3;
+		  undefined4 uVar4;
+		  undefined4 param1_00;
+		  int iVar5;
+		  int *piVar6;
+		  
+		  iVar5 = 0;
+		  if (DAT_ram_00a58bb7 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_UnityEngine_Object_Instantiate_ValueIconTitleValue___);
+		    Mono_Security_ASN1__get_Item(&UnityEngine_Object_TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&Gameplay_WorldAxis_Office_View_History_ValueIconTitleValue___TypeInfo);
+		    DAT_ram_00a58bb7 = '\x01';
+		  }
+		  if (*(char *)(param1 + 0x58) == '\0') {
+		    *(undefined1 *)(param1 + 0x58) = 1;
+		    uVar1 = Mono_Security_ASN1Convert__ToOid
+		                      (Gameplay_WorldAxis_Office_View_History_ValueIconTitleValue___TypeInfo,
+		                       *(undefined4 *)(*(int *)(param2 + 0x2c) + 0xc));
+		    *(undefined4 *)(param1 + 0x54) = uVar1;
+		    iVar3 = *(int *)(param2 + 0x2c);
+		    if (0 < *(int *)(iVar3 + 0xc)) {
+		      do {
+		        uVar1 = *(undefined4 *)(iVar3 + iVar5 * 4 + 0x10);
+		        uVar4 = *(undefined4 *)(param1 + 0x40);
+		        param1_00 = *(undefined4 *)(param1 + 0x3c);
+		        if (*(int *)(UnityEngine_Object_TypeInfo + 0x74) == 0) {
+		          func_ii_306000(UnityEngine_Object_TypeInfo);
+		        }
+		        iVar3 = func_ii_6805(param1_00,uVar4,
+		                             Method_UnityEngine_Object_Instantiate_ValueIconTitleValue___);
+		        uVar4 = Core_Extensions_Dict_ColossusFragmentsOptionsDicExt__GetEventPromoDescription
+		                          (uVar1,0);
+		        UnityEngine_Component__GetComponentInChildren_object_(*(undefined4 *)(iVar3 + 0x18),uVar4,0)
+		        ;
+		        uVar1 = Core_Extensions_Dict_ColossusRatingDicExt__GetDescription(uVar1,0);
+		        AssetContent_GameImage__get_AssetId(*(undefined4 *)(iVar3 + 0x1c),uVar1,0);
+		        piVar6 = *(int **)(param1 + 0x54);
+		        iVar2 = func_ii_1082(iVar3,*(undefined4 *)(*piVar6 + 0x20));
+		        if (iVar2 == 0) {
+		          uVar1 = func_ii_1083();
+		          func_ii_1050(uVar1,0);
+		          do {
+		            halt_trap();
+		          } while( true );
+		        }
+		        piVar6[iVar5 + 4] = iVar3;
+		        iVar5 = iVar5 + 1;
+		        iVar3 = *(int *)(param2 + 0x2c);
+		      } while (iVar5 < *(int *)(iVar3 + 0xc));
+		    }
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600122F RID: 4655 RVA: 0x00002050 File Offset: 0x00000250
@@ -34,6 +97,26 @@ namespace Gameplay.WorldAxis.Office.View.History
 		[Address(RVA = "0x642B", Offset = "0x642B", VA = "0x642B", Slot = "10")]
 		protected override void CallElementClickedEvent(BattleHistoryListElement.BattleHistoryListElementArgs args)
 		{
+		/* --- GHIDRA: CallElementClickedEvent ---
+		void Gameplay_WorldAxis_Office_View_History_BattleHistoryListElement__CallElementClickedEvent
+		               (undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a58bb8 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Elements_GenericList_SelectableListElement_BattleHistoryListElement_BattleHistoryListElementArgs___ctor__
+		              );
+		    DAT_ram_00a58bb8 = '\x01';
+		  }
+		  UI_Elements_GenericList_SelectableListElementArgs___Il2CppFullySharedGenericType____ctor
+		            (param1,
+		             Method_UI_Elements_GenericList_SelectableListElement_BattleHistoryListElement_BattleHistoryListElementArgs___ctor__
+		            );
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06001231 RID: 4657 RVA: 0x00002050 File Offset: 0x00000250
@@ -41,6 +124,26 @@ namespace Gameplay.WorldAxis.Office.View.History
 		[Address(RVA = "0x642C", Offset = "0x642C", VA = "0x642C")]
 		public BattleHistoryListElement()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_WorldAxis_Office_View_History_BattleHistoryListElement___ctor
+		               (undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a58bb9 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Elements_GenericList_SelectableListElementArgs_BattleHistoryListElement___ctor__
+		              );
+		    DAT_ram_00a58bb9 = '\x01';
+		  }
+		  UnityEngine_InputSystem_LowLevel_SelectObservable___Il2CppFullySharedGenericType____Il2CppFullySharedGenericType___Subscribe
+		            (param1,
+		             Method_UI_Elements_GenericList_SelectableListElementArgs_BattleHistoryListElement___ctor__
+		            );
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x04000999 RID: 2457

@@ -146,6 +146,19 @@ namespace Gameplay.Boss.View.Rewarding
 		[Address(RVA = "0x9537", Offset = "0x9537", VA = "0x9537")]
 		public BossRewardingView()
 		{
+		/* --- GHIDRA: .ctor ---
+		undefined4
+		Gameplay_Boss_View_Rewarding_BossRewardingView___ctor(undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a579e2 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_12580);
+		    DAT_ram_00a579e2 = '\x01';
+		  }
+		  return StringLiteral_12580;
+		}
+		*/
+
 		}
 
 		// Token: 0x040026A0 RID: 9888

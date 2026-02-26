@@ -53,6 +53,41 @@ namespace Core.Animations
 		[Address(RVA = "0xBABD", Offset = "0xBABD", VA = "0xBABD")]
 		private void Awake()
 		{
+		/* --- GHIDRA: Awake ---
+		void Core_Animations_GameSpineUiAnimation__Awake(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  int iVar2;
+		  undefined4 uVar3;
+		  
+		  if (*(int *)(param1 + 0x14) != 0) {
+		    Core_Materials_GrayscaleSpineUI__SetGrayscale(*(int *)(param1 + 0x14),0);
+		  }
+		  iVar2 = *(int *)(param1 + 0x18);
+		  if (iVar2 != 0) {
+		    if (DAT_ram_00a5a898 == '\0') {
+		      Mono_Security_ASN1__get_Item(&UnityEngine_Object_TypeInfo);
+		      DAT_ram_00a5a898 = '\x01';
+		    }
+		    uVar3 = *(undefined4 *)(iVar2 + 0xc);
+		    if (*(int *)(UnityEngine_Object_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(UnityEngine_Object_TypeInfo);
+		    }
+		    iVar1 = UnityEngine_TextCore_Text_TextElement__get_textAsset(uVar3,0,0);
+		    if (iVar1 != 0) {
+		      uVar3 = *(undefined4 *)(iVar2 + 0xc);
+		      if (*(int *)(UnityEngine_Object_TypeInfo + 0x74) == 0) {
+		        func_ii_306000(UnityEngine_Object_TypeInfo);
+		      }
+		      UnityEngine_Application__get_isPlaying(uVar3,0);
+		      *(undefined4 *)(iVar2 + 0xc) = 0;
+		    }
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600707B RID: 28795 RVA: 0x00002050 File Offset: 0x00000250
@@ -181,6 +216,26 @@ namespace Core.Animations
 		[Address(RVA = "0x1CBE", Offset = "0x1CBE", VA = "0x1CBE", Slot = "16")]
 		public void Play(bool loop)
 		{
+		/* --- GHIDRA: Play ---
+		void Core_Animations_GameSpineUiAnimation__Play(int param1,float param2,undefined4 param3)
+		
+		{
+		  *(undefined4 *)(param1 + 0xc) = 0xbf800000;
+		  *(float *)(param1 + 8) = param2;
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: Play ---
+		void Core_Animations_GameSpineUiAnimation__Play(int param1,float param2,undefined4 param3)
+		
+		{
+		  *(undefined4 *)(param1 + 0xc) = 0xbf800000;
+		  *(float *)(param1 + 8) = param2;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06007088 RID: 28808 RVA: 0x00002052 File Offset: 0x00000252
@@ -188,6 +243,47 @@ namespace Core.Animations
 		[Address(RVA = "0xBACA", Offset = "0xBACA", VA = "0xBACA")]
 		private string GetFirstAnimationName()
 		{
+		/* --- GHIDRA: GetFirstAnimationName ---
+		void Core_Animations_GameSpineUiAnimation__GetFirstAnimationName
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  int iVar1;
+		  undefined4 param1_00;
+		  undefined4 param1_01;
+		  
+		  if (DAT_ram_00a5a8bc == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Core_Animations_GameSpineUiAnimation_AnimationStateOnComplete__);
+		    Mono_Security_ASN1__get_Item(&Spine_AnimationState_TrackEntryDelegate_TypeInfo);
+		    DAT_ram_00a5a8bc = '\x01';
+		  }
+		  if (DAT_ram_00a5a8b5 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_UnityEngine_Component_GetComponent_SkeletonGraphic___);
+		    DAT_ram_00a5a8b5 = '\x01';
+		  }
+		  if (*(int *)(param1 + 0x10) == 0) {
+		    iVar1 = func_ii_5677(param1,Method_UnityEngine_Component_GetComponent_SkeletonGraphic___);
+		    *(int *)(param1 + 0x10) = iVar1;
+		  }
+		  else {
+		    iVar1 = *(int *)(param1 + 0x10);
+		  }
+		  param1_01 = *(undefined4 *)(iVar1 + 0xdc);
+		  param1_00 = unnamed_function_1417(Spine_AnimationState_TrackEntryDelegate_TypeInfo);
+		  Spine_AnimationState____ctor_b__45_0
+		            (param1_00,param1,Method_Core_Animations_GameSpineUiAnimation_AnimationStateOnComplete__
+		             ,0);
+		  Spine_AnimationState__add_Complete(param1_01,param1_00,0);
+		  iVar1 = *(int *)(param1 + 0x24);
+		  if (iVar1 != 0) {
+		    (**(code **)((ulonglong)*(uint *)(iVar1 + 0xc) * 4))
+		              (*(undefined4 *)(iVar1 + 0x20),param1,*(undefined4 *)(iVar1 + 0x14));
+		  }
+		  return;
+		}
+		*/
+
 			return null;
 		}
 
@@ -196,6 +292,41 @@ namespace Core.Animations
 		[Address(RVA = "0xBACB", Offset = "0xBACB", VA = "0xBACB")]
 		private void AnimationStateOnComplete(TrackEntry trackEntry)
 		{
+		/* --- GHIDRA: AnimationStateOnComplete ---
+		void Core_Animations_GameSpineUiAnimation__AnimationStateOnComplete(int param1,undefined4 param2)
+		
+		{
+		  undefined4 param1_00;
+		  int iVar1;
+		  
+		  if (DAT_ram_00a5a8b5 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_UnityEngine_Component_GetComponent_SkeletonGraphic___);
+		    DAT_ram_00a5a8b5 = '\x01';
+		  }
+		  if (*(int *)(param1 + 0x10) == 0) {
+		    param1_00 = func_ii_5677(param1,Method_UnityEngine_Component_GetComponent_SkeletonGraphic___);
+		    *(undefined4 *)(param1 + 0x10) = param1_00;
+		  }
+		  else {
+		    param1_00 = *(undefined4 *)(param1 + 0x10);
+		  }
+		  Spine_Unity_SkeletonGraphic__TrimRenderers(param1_00,1,0);
+		  if (DAT_ram_00a5a8b5 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_UnityEngine_Component_GetComponent_SkeletonGraphic___);
+		    DAT_ram_00a5a8b5 = '\x01';
+		  }
+		  if (*(int *)(param1 + 0x10) == 0) {
+		    iVar1 = func_ii_5677(param1,Method_UnityEngine_Component_GetComponent_SkeletonGraphic___);
+		    *(int *)(param1 + 0x10) = iVar1;
+		  }
+		  else {
+		    iVar1 = *(int *)(param1 + 0x10);
+		  }
+		  *(undefined4 *)(iVar1 + 0x94) = 0;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600708A RID: 28810 RVA: 0x00002050 File Offset: 0x00000250
@@ -203,6 +334,28 @@ namespace Core.Animations
 		[Address(RVA = "0xBACC", Offset = "0xBACC", VA = "0xBACC", Slot = "17")]
 		public void Stop()
 		{
+		/* --- GHIDRA: Stop ---
+		void Core_Animations_GameSpineUiAnimation__Stop(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  
+		  if (DAT_ram_00a5a8b5 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_UnityEngine_Component_GetComponent_SkeletonGraphic___);
+		    DAT_ram_00a5a8b5 = '\x01';
+		  }
+		  if (*(int *)(param1 + 0x10) == 0) {
+		    iVar1 = func_ii_5677(param1,Method_UnityEngine_Component_GetComponent_SkeletonGraphic___);
+		    *(int *)(param1 + 0x10) = iVar1;
+		  }
+		  else {
+		    iVar1 = *(int *)(param1 + 0x10);
+		  }
+		  *(undefined4 *)(iVar1 + 0x94) = 0;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600708B RID: 28811 RVA: 0x00002050 File Offset: 0x00000250
@@ -210,6 +363,27 @@ namespace Core.Animations
 		[Address(RVA = "0xBACD", Offset = "0xBACD", VA = "0xBACD", Slot = "19")]
 		public void Pause()
 		{
+		/* --- GHIDRA: Pause ---
+		void Core_Animations_GameSpineUiAnimation__Pause(int param1,float param2,undefined4 param3)
+		
+		{
+		  int param1_00;
+		  
+		  if (DAT_ram_00a5a8be == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_Materials_GrayscaleSpineUI_TypeInfo);
+		    DAT_ram_00a5a8be = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x14);
+		  if (param1_00 == 0) {
+		    param1_00 = unnamed_function_1417(Core_Materials_GrayscaleSpineUI_TypeInfo);
+		    UnityEngine_Purchasing_Default_WinProductDescription__set_price(param1_00,param1,0);
+		    *(int *)(param1 + 0x14) = param1_00;
+		  }
+		  Core_Materials_GrayscaleSpineUI___ctor(param1_00,param2,0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600708C RID: 28812 RVA: 0x00002050 File Offset: 0x00000250
@@ -224,6 +398,27 @@ namespace Core.Animations
 		[Address(RVA = "0xBACE", Offset = "0xBACE", VA = "0xBACE", Slot = "22")]
 		public void SetGrayscale(float value)
 		{
+		/* --- GHIDRA: SetGrayscale ---
+		void Core_Animations_GameSpineUiAnimation__SetGrayscale(int param1,float param2,undefined4 param3)
+		
+		{
+		  int param1_00;
+		  
+		  if (DAT_ram_00a5a8bf == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_Animations_AlphaSpineUI_TypeInfo);
+		    DAT_ram_00a5a8bf = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x18);
+		  if (param1_00 == 0) {
+		    param1_00 = unnamed_function_1417(Core_Animations_AlphaSpineUI_TypeInfo);
+		    *(int *)(param1_00 + 0x10) = param1;
+		    *(int *)(param1 + 0x18) = param1_00;
+		  }
+		  Core_Animations_AlphaSpineUI___ctor(param1_00,param2,param1_00);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600708E RID: 28814 RVA: 0x00002050 File Offset: 0x00000250
@@ -231,6 +426,35 @@ namespace Core.Animations
 		[Address(RVA = "0xBACF", Offset = "0xBACF", VA = "0xBACF", Slot = "23")]
 		public void SetAlpha(float value)
 		{
+		/* --- GHIDRA: SetAlpha ---
+		void Core_Animations_GameSpineUiAnimation__SetAlpha(undefined8 *param1,int param2,undefined4 param3)
+		
+		{
+		  undefined4 uVar1;
+		  undefined8 local_18;
+		  undefined8 local_10;
+		  undefined8 local_8;
+		  
+		  if (DAT_ram_00a5a8b5 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_UnityEngine_Component_GetComponent_SkeletonGraphic___);
+		    DAT_ram_00a5a8b5 = '\x01';
+		  }
+		  if (*(int *)(param2 + 0x10) == 0) {
+		    uVar1 = func_ii_5677(param2,Method_UnityEngine_Component_GetComponent_SkeletonGraphic___);
+		    *(undefined4 *)(param2 + 0x10) = uVar1;
+		  }
+		  else {
+		    uVar1 = *(undefined4 *)(param2 + 0x10);
+		  }
+		  uVar1 = Spine_Unity_SkeletonGraphic__get_MeshGenerator(uVar1,0);
+		  UnityEngine_Mesh__set_subMeshCount(&local_18,uVar1,0);
+		  param1[2] = local_8;
+		  param1[1] = local_10;
+		  *param1 = local_18;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x170016FB RID: 5883
@@ -251,6 +475,43 @@ namespace Core.Animations
 		[Address(RVA = "0xBAD1", Offset = "0xBAD1", VA = "0xBAD1")]
 		public GameSpineUiAnimation()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Core_Animations_GameSpineUiAnimation___ctor(undefined4 param1,undefined4 param2)
+		
+		{
+		  uint uVar1;
+		  int *param1_00;
+		  uint *puVar2;
+		  int iVar3;
+		  
+		  if (DAT_ram_00a5a8c0 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_UnityEngine_Component_GetComponent_IGameAnimation___);
+		    Mono_Security_ASN1__get_Item(&Core_Animations_IGameAnimation_TypeInfo);
+		    DAT_ram_00a5a8c0 = '\x01';
+		  }
+		  param1_00 = (int *)func_ii_5677(param1,Method_UnityEngine_Component_GetComponent_IGameAnimation___
+		                                 );
+		  if (param1_00 != (int *)0x0) {
+		    uVar1 = 0;
+		    iVar3 = *param1_00;
+		    if (*(ushort *)(iVar3 + 0xb6) != 0) {
+		      do {
+		        if (Core_Animations_IGameAnimation_TypeInfo == *(int *)(*(int *)(iVar3 + 0x58) + uVar1 * 8))
+		        {
+		          puVar2 = (uint *)(*(int *)(*(int *)(iVar3 + 0x58) + uVar1 * 8 + 4) * 8 + iVar3 + 0x120);
+		          goto code_r0x812869c7;
+		        }
+		        uVar1 = uVar1 + 1;
+		      } while (*(ushort *)(iVar3 + 0xb6) != uVar1);
+		    }
+		    puVar2 = (uint *)func_ii_1080(param1_00,Core_Animations_IGameAnimation_TypeInfo,0xc);
+		code_r0x812869c7:
+		    (**(code **)((ulonglong)*puVar2 * 4))(param1_00,1,puVar2[1]);
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x04003AAC RID: 15020
@@ -268,4 +529,317 @@ namespace Core.Animations
 		[FieldOffset(Offset = "0x18")]
 		private AlphaSpineUI _alpha;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: set_Loop ---
+		void Core_Animations_GameSpineUiAnimation__set_Loop(int param1,undefined4 param2)
+		
+		{
+		  int *piVar1;
+		  
+		  if (DAT_ram_00a5a8b6 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_Animations_GameSpineAnimationBindings_TypeInfo);
+		    DAT_ram_00a5a8b6 = '\x01';
+		  }
+		  if (DAT_ram_00a5a8b5 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_UnityEngine_Component_GetComponent_SkeletonGraphic___);
+		    DAT_ram_00a5a8b5 = '\x01';
+		  }
+		  if (*(int *)(param1 + 0x10) == 0) {
+		    piVar1 = (int *)func_ii_5677(param1,Method_UnityEngine_Component_GetComponent_SkeletonGraphic___
+		                                );
+		    *(int **)(param1 + 0x10) = piVar1;
+		  }
+		  else {
+		    piVar1 = *(int **)(param1 + 0x10);
+		  }
+		  (**(code **)((ulonglong)*(uint *)(*piVar1 + 0x1c8) * 4))
+		            (piVar1,*(undefined4 *)
+		                     (*(int *)(Core_Animations_GameSpineAnimationBindings_TypeInfo + 0x5c) + 4),
+		             *(undefined4 *)(*piVar1 + 0x1cc));
+		  Core_Animations_GameSpineUiAnimation__AnimationStateOnComplete(param1,param1);
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_SkeletonGraphic ---
+		undefined4
+		Core_Animations_GameSpineUiAnimation__get_SkeletonGraphic
+		          (undefined4 param1,float param2,float param3,undefined4 param4)
+		
+		{
+		  int param2_00;
+		  undefined4 uVar1;
+		  undefined4 param1_00;
+		  
+		  if (DAT_ram_00a548f5 == '\0') {
+		    Mono_Security_ASN1__get_Item(&DG_Tweening_Core_DOGetter_Color__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&DG_Tweening_Core_DOSetter_Color__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&DG_Tweening_DOTween_TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_DG_Tweening_TweenSettingsExtensions_SetTarget_TweenerCore_Color__Color__ColorOptions____
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&Method_DG_Tweening_DOTweenModuleUI___c__DisplayClass2_0__DOFade_b__0__);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_DG_Tweening_DOTweenModuleUI___c__DisplayClass2_0__DOFade_b__1__);
+		    Mono_Security_ASN1__get_Item(&DG_Tweening_DOTweenModuleUI___c__DisplayClass2_0_TypeInfo);
+		    DAT_ram_00a548f5 = '\x01';
+		  }
+		  param2_00 = unnamed_function_1417(DG_Tweening_DOTweenModuleUI___c__DisplayClass2_0_TypeInfo);
+		  *(undefined4 *)(param2_00 + 8) = param1;
+		  uVar1 = unnamed_function_1417(DG_Tweening_Core_DOGetter_Color__TypeInfo);
+		  UnityEngine_UIElements_CustomStyleProperty___Il2CppFullySharedGenericType___set_name
+		            (uVar1,param2_00,Method_DG_Tweening_DOTweenModuleUI___c__DisplayClass2_0__DOFade_b__0__,
+		             0);
+		  param1_00 = unnamed_function_1417(DG_Tweening_Core_DOSetter_Color__TypeInfo);
+		  DG_Tweening_Core_DOGetter___Il2CppFullySharedGenericType___Invoke
+		            (param1_00,param2_00,
+		             Method_DG_Tweening_DOTweenModuleUI___c__DisplayClass2_0__DOFade_b__1__,0);
+		  if (*(int *)(DG_Tweening_DOTween_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(DG_Tweening_DOTween_TypeInfo);
+		  }
+		  uVar1 = DG_Tweening_DOTween__ToAxis(uVar1,param1_00,param2,param3,0);
+		  DG_Tweening_TweenSettingsExtensions__SetSpeedBased_object_
+		            (uVar1,*(undefined4 *)(param2_00 + 8),
+		             Method_DG_Tweening_TweenSettingsExtensions_SetTarget_TweenerCore_Color__Color__ColorOptions____
+		            );
+		  return uVar1;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_MonoBehaviour ---
+		void Core_Animations_GameSpineUiAnimation__get_MonoBehaviour
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a5a8b7 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_IGameAnimation__TypeInfo);
+		    DAT_ram_00a5a8b7 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x20);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = UnityEngine_UI_Image__set_sprite(param1_00,param2,0);
+		    param2_00 = System_Action_IGameAnimation__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_IGameAnimation__TypeInfo), iVar2 == 0)) break;
+		    iVar2 = func_ii_4329(param1 + 0x20,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: add_ClickEvent ---
+		void Core_Animations_GameSpineUiAnimation__add_ClickEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a5a8b8 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_IGameAnimation__TypeInfo);
+		    DAT_ram_00a5a8b8 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x20);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = func_ii_7048(param1_00,param2,0);
+		    param2_00 = System_Action_IGameAnimation__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_IGameAnimation__TypeInfo), iVar2 == 0)) break;
+		    iVar2 = func_ii_4329(param1 + 0x20,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: remove_ClickEvent ---
+		void Core_Animations_GameSpineUiAnimation__remove_ClickEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a5a8b9 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_IGameAnimation__TypeInfo);
+		    DAT_ram_00a5a8b9 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x24);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = UnityEngine_UI_Image__set_sprite(param1_00,param2,0);
+		    param2_00 = System_Action_IGameAnimation__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_IGameAnimation__TypeInfo), iVar2 == 0)) break;
+		    iVar2 = func_ii_4329(param1 + 0x24,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: add_CompleteEvent ---
+		void Core_Animations_GameSpineUiAnimation__add_CompleteEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a5a8ba == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_IGameAnimation__TypeInfo);
+		    DAT_ram_00a5a8ba = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x24);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = func_ii_7048(param1_00,param2,0);
+		    param2_00 = System_Action_IGameAnimation__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_IGameAnimation__TypeInfo), iVar2 == 0)) break;
+		    iVar2 = func_ii_4329(param1 + 0x24,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: set_SortingLayerId ---
+		undefined4 Core_Animations_GameSpineUiAnimation__set_SortingLayerId(int param1,undefined4 param2)
+		
+		{
+		  int *piVar1;
+		  undefined4 uVar2;
+		  
+		  if (DAT_ram_00a5a8b5 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_UnityEngine_Component_GetComponent_SkeletonGraphic___);
+		    DAT_ram_00a5a8b5 = '\x01';
+		  }
+		  if (*(int *)(param1 + 0x10) == 0) {
+		    piVar1 = (int *)func_ii_5677(param1,Method_UnityEngine_Component_GetComponent_SkeletonGraphic___
+		                                );
+		    *(int **)(param1 + 0x10) = piVar1;
+		  }
+		  else {
+		    piVar1 = *(int **)(param1 + 0x10);
+		  }
+		  uVar2 = (**(code **)((ulonglong)*(uint *)(*piVar1 + 0x180) * 4))
+		                    (piVar1,*(undefined4 *)(*piVar1 + 0x184));
+		  return uVar2;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_Interactable ---
+		void Core_Animations_GameSpineUiAnimation__get_Interactable
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  int *piVar1;
+		  
+		  if (DAT_ram_00a5a8b5 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_UnityEngine_Component_GetComponent_SkeletonGraphic___);
+		    DAT_ram_00a5a8b5 = '\x01';
+		  }
+		  if (*(int *)(param1 + 0x10) == 0) {
+		    piVar1 = (int *)func_ii_5677(param1,Method_UnityEngine_Component_GetComponent_SkeletonGraphic___
+		                                );
+		    *(int **)(param1 + 0x10) = piVar1;
+		  }
+		  else {
+		    piVar1 = *(int **)(param1 + 0x10);
+		  }
+		  (**(code **)((ulonglong)*(uint *)(*piVar1 + 0x188) * 4))
+		            (piVar1,param2,*(undefined4 *)(*piVar1 + 0x18c));
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_SortingOrder ---
+		undefined4 Core_Animations_GameSpineUiAnimation__set_SortingOrder(int param1,undefined4 param2)
+		
+		{
+		  undefined4 param1_00;
+		  int iVar1;
+		  
+		  if (DAT_ram_00a5a8bb == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_System_Linq_Enumerable_First_Animation___);
+		    DAT_ram_00a5a8bb = '\x01';
+		  }
+		  if (DAT_ram_00a5a8b5 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_UnityEngine_Component_GetComponent_SkeletonGraphic___);
+		    DAT_ram_00a5a8b5 = '\x01';
+		  }
+		  if (*(int *)(param1 + 0x10) == 0) {
+		    param1_00 = func_ii_5677(param1,Method_UnityEngine_Component_GetComponent_SkeletonGraphic___);
+		    *(undefined4 *)(param1 + 0x10) = param1_00;
+		  }
+		  else {
+		    param1_00 = *(undefined4 *)(param1 + 0x10);
+		  }
+		  iVar1 = Spine_Unity_SkeletonGraphic__set_Skeleton(param1_00,0);
+		  iVar1 = System_Linq_Enumerable__Count_object_
+		                    (*(undefined4 *)(iVar1 + 0x20),Method_System_Linq_Enumerable_First_Animation___)
+		  ;
+		  return *(undefined4 *)(iVar1 + 8);
+		}
+		*/
+
 }

@@ -147,6 +147,26 @@ namespace Gameplay.Boss.View.InvitesTab
 		[Address(RVA = "0x95C3", Offset = "0x95C3", VA = "0x95C3", Slot = "5")]
 		protected override BossAssistantViewMediator CreateMediator()
 		{
+		/* --- GHIDRA: CreateMediator ---
+		void Gameplay_Boss_View_InvitesTab_BossInvitesView__CreateMediator
+		               (undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a57a24 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Gameplay_Boss_View_AbstractBossWindowView_BossInvitesView__BossAssistantViewMediator___ctor__
+		              );
+		    DAT_ram_00a57a24 = '\x01';
+		  }
+		  ScreenAdaptation_Common_AppSize__Update
+		            (param1,
+		             Method_Gameplay_Boss_View_AbstractBossWindowView_BossInvitesView__BossAssistantViewMediator___ctor__
+		            );
+		  return;
+		}
+		*/
+
 			return null;
 		}
 
@@ -217,4 +237,31 @@ namespace Gameplay.Boss.View.InvitesTab
 		[SerializeField]
 		private Button _refuseButton;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_ListAdapter ---
+		undefined4
+		Gameplay_Boss_View_InvitesTab_BossInvitesView__get_ListAdapter(int param1,undefined4 param2)
+		
+		{
+		  undefined4 param1_00;
+		  undefined4 param4;
+		  undefined4 param3;
+		  undefined4 param2_00;
+		  
+		  if (DAT_ram_00a57a23 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Gameplay_Boss_Controller_BossAssistantViewMediator_TypeInfo);
+		    DAT_ram_00a57a23 = '\x01';
+		  }
+		  param4 = *(undefined4 *)(param1 + 0x1c);
+		  param3 = *(undefined4 *)(param1 + 0x18);
+		  param2_00 = *(undefined4 *)(param1 + 0x14);
+		  param1_00 = unnamed_function_1417(Gameplay_Boss_Controller_BossAssistantViewMediator_TypeInfo);
+		  Gameplay_Boss_Controller_BossInstanceController___c__DisplayClass39_0___PrepareTeam_g__GetTeamAndPlaceHandler_1
+		            (param1_00,param2_00,param3,param4,0);
+		  return param1_00;
+		}
+		*/
+
 }

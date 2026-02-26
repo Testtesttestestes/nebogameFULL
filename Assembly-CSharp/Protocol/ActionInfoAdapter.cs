@@ -16,6 +16,54 @@ namespace Protocol
 		[Address(RVA = "0x5AFB", Offset = "0x5AFB", VA = "0x5AFB")]
 		public static IActionInfo Create(Protocol.Auchan.ActionInfo actionInfo)
 		{
+		/* --- GHIDRA: Create ---
+		int Protocol_ActionInfoAdapter__Create(undefined4 param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  
+		  if (DAT_ram_00a5b814 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Protocol_ActionInfoAdapter_PortalAdapter_TypeInfo);
+		    DAT_ram_00a5b814 = '\x01';
+		  }
+		  iVar1 = unnamed_function_1417(Protocol_ActionInfoAdapter_PortalAdapter_TypeInfo);
+		  *(undefined4 *)(iVar1 + 8) = param1;
+		  return iVar1;
+		}
+		*/
+
+		/* --- GHIDRA: Create ---
+		int Protocol_ActionInfoAdapter__Create(undefined4 param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  
+		  if (DAT_ram_00a5b814 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Protocol_ActionInfoAdapter_PortalAdapter_TypeInfo);
+		    DAT_ram_00a5b814 = '\x01';
+		  }
+		  iVar1 = unnamed_function_1417(Protocol_ActionInfoAdapter_PortalAdapter_TypeInfo);
+		  *(undefined4 *)(iVar1 + 8) = param1;
+		  return iVar1;
+		}
+		*/
+
+		/* --- GHIDRA: Create ---
+		int Protocol_ActionInfoAdapter__Create(undefined4 param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  
+		  if (DAT_ram_00a5b814 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Protocol_ActionInfoAdapter_PortalAdapter_TypeInfo);
+		    DAT_ram_00a5b814 = '\x01';
+		  }
+		  iVar1 = unnamed_function_1417(Protocol_ActionInfoAdapter_PortalAdapter_TypeInfo);
+		  *(undefined4 *)(iVar1 + 8) = param1;
+		  return iVar1;
+		}
+		*/
+
 			return null;
 		}
 

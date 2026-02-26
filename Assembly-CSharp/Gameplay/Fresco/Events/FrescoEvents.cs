@@ -14,6 +14,24 @@ namespace Gameplay.Fresco.Events
 		[Address(RVA = "0x80C3", Offset = "0x80C3", VA = "0x80C3")]
 		public FrescoEvents()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_Fresco_Events_FrescoEvents___ctor
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4,undefined4 param5,
+		               undefined4 param6)
+		
+		{
+		  if (DAT_ram_00a575a2 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_MVC_AbstractController_FrescoModel__FrescoEvents___ctor__);
+		    DAT_ram_00a575a2 = '\x01';
+		  }
+		  Gameplay_Combat_AbstractCombat_object__object__object__object__object___set_User
+		            (param1,param2,param3,Method_MVC_AbstractController_FrescoModel__FrescoEvents___ctor__);
+		  *(undefined4 *)(param1 + 0x1c) = param5;
+		  *(undefined4 *)(param1 + 0x18) = param4;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x04001A81 RID: 6785

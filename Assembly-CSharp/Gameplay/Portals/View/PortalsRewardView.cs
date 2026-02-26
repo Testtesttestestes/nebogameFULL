@@ -18,6 +18,38 @@ namespace Gameplay.Portals.View
 		[Address(RVA = "0x744B", Offset = "0x744B", VA = "0x744B")]
 		private void Start()
 		{
+		/* --- GHIDRA: Start ---
+		void Gameplay_Portals_View_PortalsRewardView__Start
+		               (int param1,uint param2,uint param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  undefined4 param3_00;
+		  int *piVar2;
+		  int iVar3;
+		  uint local_8;
+		  uint local_4;
+		  
+		  if (DAT_ram_00a580e5 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_28672);
+		    DAT_ram_00a580e5 = '\x01';
+		  }
+		  UI_Elements_ProgressBars_ProgressBar__set_Value
+		            (*(undefined4 *)(param1 + 0x24),(float)param2,(float)param3,0);
+		  piVar2 = *(int **)(param1 + 0x24);
+		  local_4 = param2;
+		  uVar1 = func_ii_1081(DAT_ram_00a66958,&local_4);
+		  local_8 = param3;
+		  param3_00 = func_ii_1081(DAT_ram_00a66958,&local_8);
+		  uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                    (StringLiteral_28672,uVar1,param3_00,0);
+		  iVar3 = *piVar2;
+		  (**(code **)((ulonglong)*(uint *)(iVar3 + 0x118) * 4))
+		            (piVar2,uVar1,*(undefined4 *)(iVar3 + 0x11c));
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x060022F8 RID: 8952 RVA: 0x00002050 File Offset: 0x00000250
@@ -39,6 +71,16 @@ namespace Gameplay.Portals.View
 		[Address(RVA = "0x744E", Offset = "0x744E", VA = "0x744E")]
 		public void SetTitle(string value)
 		{
+		/* --- GHIDRA: SetTitle ---
+		void Gameplay_Portals_View_PortalsRewardView__SetTitle
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  Core_Extensions_Dict_PortalDicExt__GetCurrencyIcon60x66(*(undefined4 *)(param1 + 0x28),param2,0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x060022FB RID: 8955 RVA: 0x00002050 File Offset: 0x00000250
@@ -46,6 +88,21 @@ namespace Gameplay.Portals.View
 		[Address(RVA = "0x744F", Offset = "0x744F", VA = "0x744F")]
 		public void SetIcon(string iconAsset)
 		{
+		/* --- GHIDRA: SetIcon ---
+		void Gameplay_Portals_View_PortalsRewardView__SetIcon(undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a580e6 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UI_MonoBehaviourWithStates_PortalsRewardView_RewardState___ctor__);
+		    DAT_ram_00a580e6 = '\x01';
+		  }
+		  ScreenAdaptation_Common_AppSize__Update
+		            (param1,Method_UI_MonoBehaviourWithStates_PortalsRewardView_RewardState___ctor__);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x060022FC RID: 8956 RVA: 0x00002050 File Offset: 0x00000250

@@ -174,6 +174,21 @@ namespace Gameplay.Clans.Office.View.VacanciesTab
 		[Address(RVA = "0x8BCF", Offset = "0x8BCF", VA = "0x8BCF")]
 		public void Init(IList<ClanInRatingListElement.ClanInRatingListElementArgs> items)
 		{
+		/* --- GHIDRA: Init ---
+		void Gameplay_Clans_Office_View_VacanciesTab_VacanciesView__Init
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  int iVar1;
+		  
+		  iVar1 = **(int **)(param1 + 0x10);
+		  (**(code **)((ulonglong)*(uint *)(s_Allocator__0___MaxBlockCount__1__ram_00000478 + iVar1 + 8) * 4
+		              ))(*(int **)(param1 + 0x10),param2,param3,
+		                 *(undefined4 *)(s_Allocator__0___MaxBlockCount__1__ram_00000478 + iVar1 + 0xc));
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06003D10 RID: 15632 RVA: 0x00002050 File Offset: 0x00000250
@@ -181,6 +196,26 @@ namespace Gameplay.Clans.Office.View.VacanciesTab
 		[Address(RVA = "0x8BD0", Offset = "0x8BD0", VA = "0x8BD0")]
 		public void Add(IList<ClanInRatingListElement.ClanInRatingListElementArgs> items, bool atEnd)
 		{
+		/* --- GHIDRA: Add ---
+		void Gameplay_Clans_Office_View_VacanciesTab_VacanciesView__Add
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  if (DAT_ram_00a57f17 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_OSAGenericBase_ClansInRatingsViewsHolder__ClanInRatingListElement_ClanInRatingListElementArgs__RemoveItems__
+		              );
+		    DAT_ram_00a57f17 = '\x01';
+		  }
+		  UI_OSAGenericBase_object__object___OnInitialized
+		            (*(undefined4 *)(param1 + 0x10),param2,param3,
+		             Method_UI_OSAGenericBase_ClansInRatingsViewsHolder__ClanInRatingListElement_ClanInRatingListElementArgs__RemoveItems__
+		            );
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06003D11 RID: 15633 RVA: 0x00002050 File Offset: 0x00000250
@@ -188,6 +223,26 @@ namespace Gameplay.Clans.Office.View.VacanciesTab
 		[Address(RVA = "0x8BD1", Offset = "0x8BD1", VA = "0x8BD1")]
 		public void Remove(int count, bool fromEnd)
 		{
+		/* --- GHIDRA: Remove ---
+		void Gameplay_Clans_Office_View_VacanciesTab_VacanciesView__Remove
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  if (DAT_ram_00a57f18 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_OSADynamicBase_ClansInRatingsViewsHolder__ClanInRatingListElement_ClanInRatingListElementArgs__ActivateRequestBounds__
+		              );
+		    DAT_ram_00a57f18 = '\x01';
+		  }
+		  UI_OSADynamicBase_object__object____ctor
+		            (*(undefined4 *)(param1 + 0x10),param2,param3,
+		             Method_UI_OSADynamicBase_ClansInRatingsViewsHolder__ClanInRatingListElement_ClanInRatingListElementArgs__ActivateRequestBounds__
+		            );
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06003D12 RID: 15634 RVA: 0x00002050 File Offset: 0x00000250
@@ -264,4 +319,82 @@ namespace Gameplay.Clans.Office.View.VacanciesTab
 		[SerializeField]
 		private Button _infoButton;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: set_MoreItemsAfterNeededEvent ---
+		undefined4
+		Gameplay_Clans_Office_View_VacanciesTab_VacanciesView__set_MoreItemsAfterNeededEvent
+		          (int param1,undefined4 param2)
+		
+		{
+		  return *(undefined4 *)(*(int *)(param1 + 0x10) + 0xac);
+		}
+		*/
+
+
+		/* --- GHIDRA: get_MoreItemsBeforeNeededEvent ---
+		void Gameplay_Clans_Office_View_VacanciesTab_VacanciesView__get_MoreItemsBeforeNeededEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  *(undefined4 *)(*(int *)(param1 + 0x10) + 0xac) = param2;
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_MoreItemsBeforeNeededEvent ---
+		void Gameplay_Clans_Office_View_VacanciesTab_VacanciesView__set_MoreItemsBeforeNeededEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  int param2_00;
+		  undefined4 param1_00;
+		  int *piVar1;
+		  int iVar2;
+		  
+		  if (DAT_ram_00a57f16 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Com_TheFallenGames_OSA_Core_OSA_BaseParamsWithPrefab__ClansInRatingsViewsHolder__get_IsInitialized__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Gameplay_Clans_Office_View_VacanciesTab_VacanciesView___c__DisplayClass34_0__Init_b__0__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&Gameplay_Clans_Office_View_VacanciesTab_VacanciesView___c__DisplayClass34_0_TypeInfo
+		              );
+		    DAT_ram_00a57f16 = '\x01';
+		  }
+		  param2_00 = unnamed_function_1417
+		                        (
+		                        Gameplay_Clans_Office_View_VacanciesTab_VacanciesView___c__DisplayClass34_0_TypeInfo
+		                        );
+		  *(undefined4 *)(param2_00 + 0xc) = param2;
+		  *(int *)(param2_00 + 8) = param1;
+		  iVar2 = **(int **)(param1 + 0x10);
+		  (**(code **)((ulonglong)*(uint *)(iVar2 + 0x3b8) * 4))
+		            (*(int **)(param1 + 0x10),*(undefined4 *)(iVar2 + 0x3bc));
+		  piVar1 = *(int **)(param1 + 0x10);
+		  if ((char)piVar1[0x14] != '\0') {
+		    (**(code **)((ulonglong)
+		                 *(uint *)(s_Allocator__0___MaxBlockCount__1__ram_00000478 + *piVar1 + 0x10) * 4))
+		              (piVar1,*(undefined4 *)(param2_00 + 0xc),
+		               *(undefined4 *)(s_Allocator__0___MaxBlockCount__1__ram_00000478 + *piVar1 + 0x14));
+		    return;
+		  }
+		  param1_00 = unnamed_function_1417(System_Action_TypeInfo);
+		  UnityEngine_Events_UnityEvent__AddListener
+		            (param1_00,param2_00,
+		             Method_Gameplay_Clans_Office_View_VacanciesTab_VacanciesView___c__DisplayClass34_0__Init_b__0__
+		             ,0);
+		  (**(code **)((ulonglong)*(uint *)(*piVar1 + 0x298) * 4))
+		            (piVar1,param1_00,*(undefined4 *)(*piVar1 + 0x29c));
+		  return;
+		}
+		*/
+
 }

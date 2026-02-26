@@ -12,6 +12,16 @@ namespace Core.GameResources.Loaders.WebGL
 		[Address(RVA = "0xA94C", Offset = "0xA94C", VA = "0xA94C")]
 		public GameSpriteAtlasLoader()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Core_GameResources_Loaders_Android_GameSpriteAtlasLoader___ctor
+		               (undefined4 param1,undefined4 param2)
+		
+		{
+		  Core_GameResources_AbstractGameSpriteLoader__ReleaseAssetBundle(param1,0);
+		  return;
+		}
+		*/
+
 		}
 	}
 }

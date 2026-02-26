@@ -109,6 +109,190 @@ namespace Gameplay.Antiq.View
 		[Address(RVA = "0xA258", Offset = "0xA258", VA = "0xA258")]
 		public void SetEnableGrayscale(bool value)
 		{
+		/* --- GHIDRA: SetEnableGrayscale ---
+		void Gameplay_Antiq_View_GroupReviewView__SetEnableGrayscale(int param1,undefined4 param2)
+		
+		{
+		  uint uVar1;
+		  undefined4 *puVar2;
+		  undefined4 uVar3;
+		  int iVar4;
+		  int *piVar5;
+		  uint *puVar6;
+		  int iVar7;
+		  int *piVar8;
+		  int local_14;
+		  int **local_10;
+		  int *local_c;
+		  int local_8;
+		  int *local_4;
+		  
+		  if (DAT_ram_00a59484 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_IDisposable_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&System_Collections_IEnumerator_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&UnityEngine_Object_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&UnityEngine_Transform_TypeInfo);
+		    DAT_ram_00a59484 = '\x01';
+		  }
+		  local_8 = 0;
+		  local_4 = (int *)UnityEngine_Transform__set_hasChanged(*(undefined4 *)(param1 + 0x30),0);
+		  local_c = &local_8;
+		  local_14 = 0;
+		  local_10 = &local_4;
+		  do {
+		    piVar5 = local_4;
+		    iVar7 = *local_4;
+		    if (*(ushort *)(iVar7 + 0xb6) != 0) {
+		      uVar1 = 0;
+		      do {
+		        piVar8 = (int *)(*(int *)(iVar7 + 0x58) + uVar1 * 8);
+		        if (System_Collections_IEnumerator_TypeInfo == *piVar8) {
+		          puVar2 = (undefined4 *)(iVar7 + piVar8[1] * 8 + 0xc0);
+		          goto code_r0x8100cd1a;
+		        }
+		        uVar1 = uVar1 + 1;
+		      } while (*(ushort *)(iVar7 + 0xb6) != uVar1);
+		    }
+		    DAT_ram_009d3e38 = 0;
+		    puVar2 = (undefined4 *)
+		             import::env::invoke_iiii
+		                       (s_Allocator__0___Blocksize__1__mus_ram_00000421 + 0x18,local_4,
+		                        System_Collections_IEnumerator_TypeInfo,0);
+		    if (DAT_ram_009d3e38 == 1) {
+		code_r0x8100cf5d:
+		      DAT_ram_009d3e38 = 0;
+		      uVar3 = import::env::__cxa_find_matching_catch_3(&DAT_ram_0072c9c8);
+		      goto code_r0x8100cf65;
+		    }
+		code_r0x8100cd1a:
+		    DAT_ram_009d3e38 = 0;
+		    iVar7 = import::env::invoke_iii(*puVar2,piVar5,puVar2[1]);
+		    piVar5 = local_4;
+		    if (DAT_ram_009d3e38 == 1) goto code_r0x8100cf5d;
+		    if (iVar7 == 0) goto code_r0x8100cfae;
+		    iVar7 = *local_4;
+		    if (*(ushort *)(iVar7 + 0xb6) != 0) {
+		      uVar1 = 0;
+		      do {
+		        piVar8 = (int *)(*(int *)(iVar7 + 0x58) + uVar1 * 8);
+		        if (System_Collections_IEnumerator_TypeInfo == *piVar8) {
+		          puVar2 = (undefined4 *)(piVar8[1] * 8 + iVar7 + 200);
+		          goto code_r0x8100cdf7;
+		        }
+		        uVar1 = uVar1 + 1;
+		      } while (*(ushort *)(iVar7 + 0xb6) != uVar1);
+		    }
+		    DAT_ram_009d3e38 = 0;
+		    puVar2 = (undefined4 *)
+		             import::env::invoke_iiii
+		                       (s_Allocator__0___Blocksize__1__mus_ram_00000421 + 0x18,local_4,
+		                        System_Collections_IEnumerator_TypeInfo,1);
+		    if (DAT_ram_009d3e38 == 1) {
+		code_r0x8100cf3f:
+		      DAT_ram_009d3e38 = 0;
+		      uVar3 = import::env::__cxa_find_matching_catch_3(&DAT_ram_0072c9c8);
+		      goto code_r0x8100cf65;
+		    }
+		code_r0x8100cdf7:
+		    DAT_ram_009d3e38 = 0;
+		    piVar5 = (int *)import::env::invoke_iii(*puVar2,piVar5,puVar2[1]);
+		    if (DAT_ram_009d3e38 == 1) goto code_r0x8100cf3f;
+		    if (piVar5 != (int *)0x0) {
+		      if (((uint)*(byte *)(*piVar5 + 0xb8) < (uint)*(byte *)(UnityEngine_Transform_TypeInfo + 0xb8))
+		         || (*(int *)(*(int *)(*piVar5 + 100) +
+		                      (uint)*(byte *)(UnityEngine_Transform_TypeInfo + 0xb8) * 4 + -4) !=
+		             UnityEngine_Transform_TypeInfo)) {
+		        DAT_ram_009d3e38 = 0;
+		        import::env::invoke_vii
+		                  (s_var<private>_posTex__array<vec4<_ram_00000655 + 0x183,piVar5,
+		                   UnityEngine_Transform_TypeInfo);
+		        iVar7 = DAT_ram_009d3e38;
+		        DAT_ram_009d3e38 = 0;
+		        if (iVar7 != 1) {
+		          do {
+		            halt_trap();
+		          } while( true );
+		        }
+		        uVar3 = import::env::__cxa_find_matching_catch_3(&DAT_ram_0072c9c8);
+		        goto code_r0x8100cf65;
+		      }
+		    }
+		    DAT_ram_009d3e38 = 0;
+		    uVar3 = import::env::invoke_iii
+		                      (s_struct_Uniforms___color__array<v_ram_00000aff + 0x25c,piVar5,0);
+		    if (DAT_ram_009d3e38 == 1) break;
+		    if (*(int *)(UnityEngine_Object_TypeInfo + 0x74) == 0) {
+		      DAT_ram_009d3e38 = 0;
+		      import::env::invoke_vi
+		                (s_var<private>_posTex__array<vec4<_ram_00000655 + 0x180,UnityEngine_Object_TypeInfo
+		                );
+		      if (DAT_ram_009d3e38 == 1) break;
+		    }
+		    DAT_ram_009d3e38 = 0;
+		    import::env::invoke_vii(s_struct_Uniforms___color__array<v_ram_00000aff + 0x274,uVar3,0);
+		  } while (DAT_ram_009d3e38 != 1);
+		  DAT_ram_009d3e38 = 0;
+		  uVar3 = import::env::__cxa_find_matching_catch_3(&DAT_ram_0072c9c8);
+		code_r0x8100cf65:
+		  iVar7 = global_1;
+		  iVar4 = import::env::llvm_eh_typeid_for(&DAT_ram_0072c9c8);
+		  if (iVar7 == iVar4) {
+		    piVar5 = (int *)import::env::__cxa_begin_catch(uVar3);
+		    local_14 = *piVar5;
+		    DAT_ram_009d3e38 = 0;
+		    import::env::invoke_v(0x123);
+		    iVar7 = DAT_ram_009d3e38;
+		    DAT_ram_009d3e38 = 0;
+		    if (iVar7 != 1) {
+		code_r0x8100cfae:
+		      DAT_ram_009d3e38 = 0;
+		      local_8 = func_ii_1082(local_4,System_IDisposable_TypeInfo);
+		      piVar5 = (int *)*local_c;
+		      if (piVar5 != (int *)0x0) {
+		        iVar7 = *piVar5;
+		        if (*(ushort *)(iVar7 + 0xb6) != 0) {
+		          uVar1 = 0;
+		          do {
+		            if (System_IDisposable_TypeInfo == *(int *)(*(int *)(iVar7 + 0x58) + uVar1 * 8)) {
+		              puVar6 = (uint *)(iVar7 + *(int *)(*(int *)(iVar7 + 0x58) + uVar1 * 8 + 4) * 8 + 0xc0)
+		              ;
+		              goto code_r0x8100d03e;
+		            }
+		            uVar1 = uVar1 + 1;
+		          } while (*(ushort *)(iVar7 + 0xb6) != uVar1);
+		        }
+		        puVar6 = (uint *)func_ii_1080(piVar5,System_IDisposable_TypeInfo,0);
+		code_r0x8100d03e:
+		        (**(code **)((ulonglong)*puVar6 * 4))(piVar5,puVar6[1]);
+		      }
+		      if (local_14 == 0) {
+		        return;
+		      }
+		      System_Data_DataSet__ValidateLocaleConstraint(local_14);
+		      do {
+		        halt_trap();
+		      } while( true );
+		    }
+		    uVar3 = import::env::__cxa_find_matching_catch_2();
+		  }
+		  DAT_ram_009d3e38 = 0;
+		  import::env::invoke_ii(s_struct_Uniforms___color__array<v_ram_00001b87 + 0x2d8,&local_14);
+		  iVar7 = DAT_ram_009d3e38;
+		  DAT_ram_009d3e38 = 0;
+		  if (iVar7 == 1) {
+		    import::env::__cxa_find_matching_catch_3(0);
+		    unnamed_function_937();
+		    do {
+		      halt_trap();
+		    } while( true );
+		  }
+		  import::env::__resumeException(uVar3);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
 		}
 
 		// Token: 0x060054AB RID: 21675 RVA: 0x00002050 File Offset: 0x00000250
@@ -123,6 +307,42 @@ namespace Gameplay.Antiq.View
 		[Address(RVA = "0x1D27", Offset = "0x1D27", VA = "0x1D27")]
 		public EffectView CreateEffectView()
 		{
+		/* --- GHIDRA: CreateEffectView ---
+		void Gameplay_Antiq_View_GroupReviewView__CreateEffectView
+		               (int param1,int param2,int param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  int *piVar2;
+		  int iVar3;
+		  
+		  piVar2 = *(int **)(param1 + 0x14);
+		  uVar1 = Core_Extensions_Dict_Antiq_EffectsDicExt__GetMessage(*(undefined4 *)(param2 + 0xc),0);
+		  iVar3 = *piVar2;
+		  (**(code **)((ulonglong)*(uint *)(iVar3 + 0x2d0) * 4))
+		            (piVar2,uVar1,*(undefined4 *)(iVar3 + 0x2d4));
+		  piVar2 = *(int **)(param1 + 0x18);
+		  uVar1 = Gameplay_Antiq_Model_EffectData__GetIntegerValue(param2,param1);
+		  iVar3 = *piVar2;
+		  (**(code **)((ulonglong)*(uint *)(iVar3 + 0x2d0) * 4))
+		            (piVar2,uVar1,*(undefined4 *)(iVar3 + 0x2d4));
+		  uVar1 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_uint__object___MoveNext
+		                    (*(undefined4 *)(param1 + 0x10),0);
+		  Com_TheFallenGames_OSA_CustomAdapters_TableView_Tuple_Basic_BasicTupleValueViewsHolder__UpdateAsText
+		            (uVar1,(uint)(param3 != 0),0);
+		  piVar2 = *(int **)(param1 + 0x10);
+		  if (param3 == 0) {
+		    uVar1 = 0;
+		  }
+		  else {
+		    uVar1 = Gameplay_Antiq_Model_EffectData__GetIntegerValue(param3,piVar2);
+		  }
+		  (**(code **)((ulonglong)*(uint *)(*piVar2 + 0x2d0) * 4))
+		            (piVar2,uVar1,*(undefined4 *)(*piVar2 + 0x2d4));
+		  return;
+		}
+		*/
+
 			return null;
 		}
 
@@ -371,4 +591,35 @@ namespace Gameplay.Antiq.View
 			private TMP_Text[] _maxLevel;
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_MaxLevelCounter ---
+		void Gameplay_Antiq_View_GroupReviewView__get_MaxLevelCounter
+		               (int param1,int param2,undefined4 param3)
+		
+		{
+		  int iVar1;
+		  float param2_00;
+		  int iVar2;
+		  
+		  param2_00 = 1.0;
+		  if (param2 == 0) {
+		    param2_00 = 0.0;
+		  }
+		  iVar2 = *(int *)(param1 + 0x28);
+		  if (0 < *(int *)(iVar2 + 0xc)) {
+		    iVar1 = 0;
+		    do {
+		      UI_ImageAnimation__ShowAnimation_d__9__System_Collections_IEnumerator_get_Current
+		                (*(undefined4 *)(iVar2 + iVar1 * 4 + 0x10),param2_00,0);
+		      iVar1 = iVar1 + 1;
+		    } while (iVar1 < *(int *)(iVar2 + 0xc));
+		  }
+		  AssetContent_GameAssetViewRawImage__TryGetCurrentContent
+		            (*(undefined4 *)(param1 + 0x2c),param2_00,0);
+		  return;
+		}
+		*/
+
 }

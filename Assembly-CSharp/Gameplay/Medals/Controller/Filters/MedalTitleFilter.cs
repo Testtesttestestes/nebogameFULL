@@ -44,6 +44,52 @@ namespace Gameplay.Medals.Controller.Filters
 		[Address(RVA = "0x770A", Offset = "0x770A", VA = "0x770A")]
 		public MedalTitleFilter()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_Medals_Controller_Filters_MedalTitleFilter___ctor(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a57de0 == '\0') {
+		    Mono_Security_ASN1__get_Item(&UI_Filters_FilterInfo_TypeInfo);
+		    DAT_ram_00a57de0 = '\x01';
+		  }
+		  uVar1 = unnamed_function_1417(UI_Filters_FilterInfo_TypeInfo);
+		  *(undefined4 *)(param1 + 0x10) = uVar1;
+		  return;
+		}
+		*/
+
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: set_FilterInfo ---
+		undefined4
+		Gameplay_Medals_Controller_Filters_MedalTitleFilter__set_FilterInfo
+		          (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  undefined4 uVar1;
+		  undefined4 param1_00;
+		  int *param1_01;
+		  
+		  if (*(char *)(*(int *)(param1 + 8) + 0x10) == '\0') {
+		    return 1;
+		  }
+		  param1_01 = *(int **)(*(int *)(param1 + 8) + 0xc);
+		  if ((param1_01 != (int *)0x0) && (DAT_ram_00a66978 != *param1_01)) {
+		    System_Activator__CreateInstance(param1_01,DAT_ram_00a66978);
+		    do {
+		      halt_trap();
+		    } while( true );
+		  }
+		  uVar1 = func_ii_7775(param1_01,0);
+		  param1_00 = Core_Data_MedalData___ctor(param2,0);
+		  uVar1 = func_ii_7903(param1_00,uVar1,0);
+		  return uVar1;
+		}
+		*/
+
 }

@@ -76,6 +76,25 @@ namespace Gameplay.Combat.Model
 		[Address(RVA = "0x8A5B", Offset = "0x8A5B", VA = "0x8A5B")]
 		public PetData(ArtifactData artifact, CombatPlayer player)
 		{
+		/* --- GHIDRA: .ctor ---
+		undefined8 Gameplay_Combat_Model_PetData___ctor(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  
+		  iVar1 = *(int *)(param1 + 0xc);
+		  if (DAT_ram_00a57e48 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_Dictionary_int__Skill__get_Item__);
+		    DAT_ram_00a57e48 = '\x01';
+		  }
+		  iVar1 = System_Collections_Generic_Dictionary_int__Int32Enum___get_Count
+		                    (*(undefined4 *)(iVar1 + 0x58),0,
+		                     Method_System_Collections_Generic_Dictionary_int__Skill__get_Item__);
+		  return *(undefined8 *)(iVar1 + 0x10);
+		}
+		*/
+
 		}
 
 		// Token: 0x17000BAA RID: 2986
@@ -111,4 +130,45 @@ namespace Gameplay.Combat.Model
 		{
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: set_Artifact ---
+		undefined4 Gameplay_Combat_Model_PetData__set_Artifact(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a57e54 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Core_Dict_DictWrappers_Base_AbstractDictWrapper_ArtikulDic__uint__get_Data__)
+		    ;
+		    DAT_ram_00a57e54 = '\x01';
+		  }
+		  uVar1 = Core_Extensions_Dict_DictExt__GetArtikul
+		                    (*(undefined4 *)(*(int *)(*(int *)(param1 + 8) + 8) + 0x10),0);
+		  return uVar1;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_CurrentHeal ---
+		undefined8 Gameplay_Combat_Model_PetData__get_CurrentHeal(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  
+		  iVar1 = *(int *)(param1 + 0xc);
+		  if (DAT_ram_00a57e49 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_Dictionary_int__Skill__get_Item__);
+		    DAT_ram_00a57e49 = '\x01';
+		  }
+		  iVar1 = System_Collections_Generic_Dictionary_int__Int32Enum___get_Count
+		                    (*(undefined4 *)(iVar1 + 0x58),0xe,
+		                     Method_System_Collections_Generic_Dictionary_int__Skill__get_Item__);
+		  return *(undefined8 *)(iVar1 + 0x10);
+		}
+		*/
+
 }

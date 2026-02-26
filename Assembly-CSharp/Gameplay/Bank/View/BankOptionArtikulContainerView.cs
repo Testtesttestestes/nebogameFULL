@@ -29,6 +29,19 @@ namespace Gameplay.Bank.View
 		[Address(RVA = "0x9A88", Offset = "0x9A88", VA = "0x9A88")]
 		public BankOptionArtikulContainerView()
 		{
+		/* --- GHIDRA: .ctor ---
+		undefined4
+		Gameplay_Bank_View_BankOptionArtikulContainerView___ctor(undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a59769 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_12569);
+		    DAT_ram_00a59769 = '\x01';
+		  }
+		  return StringLiteral_12569;
+		}
+		*/
+
 		}
 
 		// Token: 0x0400298E RID: 10638

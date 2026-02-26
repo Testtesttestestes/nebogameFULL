@@ -14,6 +14,41 @@ namespace Core
 		[Address(RVA = "0xA713", Offset = "0xA713", VA = "0xA713")]
 		private Version(Version.Builder builder)
 		{
+		/* --- GHIDRA: .ctor ---
+		undefined4 Core_Version___ctor(float *param1,undefined4 param2)
+		
+		{
+		  int *param1_00;
+		  int iVar1;
+		  undefined4 uVar2;
+		  
+		  if (DAT_ram_00a60559 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Text_StringBuilder_TypeInfo);
+		    DAT_ram_00a60559 = '\x01';
+		  }
+		  param1_00 = (int *)unnamed_function_1417(System_Text_StringBuilder_TypeInfo);
+		  func_ii_2101(param1_00,0);
+		  if ((uint)ABS(*param1) < 0x7f800001) {
+		    Sirenix_Serialization_BaseFormatter_Nullable_int____RegisterReferenceID(param1_00,*param1,0);
+		    func_ii_3135(param1_00,0x2e,0);
+		  }
+		  if ((uint)ABS(param1[1]) < 0x7f800001) {
+		    Sirenix_Serialization_BaseFormatter_Nullable_int____RegisterReferenceID(param1_00,param1[1],0);
+		    func_ii_3135(param1_00,0x2e,0);
+		  }
+		  if ((uint)ABS(param1[2]) < 0x7f800001) {
+		    Sirenix_Serialization_BaseFormatter_Nullable_int____RegisterReferenceID(param1_00,param1[2],0);
+		  }
+		  iVar1 = func_ii_4769(param1[3],0);
+		  if (iVar1 == 0) {
+		    func_ii_2010(param1_00,param1[3],0);
+		  }
+		  uVar2 = (**(code **)((ulonglong)*(uint *)(*param1_00 + 0xd8) * 4))
+		                    (param1_00,*(undefined4 *)(*param1_00 + 0xdc));
+		  return uVar2;
+		}
+		*/
+
 		}
 
 		// Token: 0x06005A02 RID: 23042 RVA: 0x00002052 File Offset: 0x00000252

@@ -21,6 +21,15 @@ namespace Gameplay.Sound.View
 		[Address(RVA = "0x9C06", Offset = "0x9C06", VA = "0x9C06")]
 		protected PlaySoundComponent()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_Sound_View_PlaySoundComponent___ctor(int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  Gameplay_Sound_View_GameAudioSource___ctor(param1,*(undefined4 *)(param1 + 0x10),param1);
+		  return;
+		}
+		*/
+
 		}
 	}
 }

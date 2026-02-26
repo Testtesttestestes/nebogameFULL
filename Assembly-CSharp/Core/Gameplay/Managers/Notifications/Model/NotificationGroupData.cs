@@ -100,4 +100,137 @@ namespace Core.Gameplay.Managers.Notifications.Model
 		[FieldOffset(Offset = "0x10")]
 		private bool _isGroupEnabled;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_SortOrder ---
+		undefined4
+		Core_Gameplay_Managers_Notifications_Model_NotificationGroupData__get_SortOrder
+		          (int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  uVar1 = Core_Extensions_Dict_NotificationCategoryDicExt__GetTitle(*(undefined4 *)(param1 + 8),0);
+		  return uVar1;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_Title ---
+		void Core_Gameplay_Managers_Notifications_Model_NotificationGroupData__get_Title
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a5a683 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_NotificationGroupData__TypeInfo);
+		    DAT_ram_00a5a683 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0xc);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = UnityEngine_UI_Image__set_sprite(param1_00,param2,0);
+		    param2_00 = System_Action_NotificationGroupData__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_NotificationGroupData__TypeInfo), iVar2 == 0))
+		    break;
+		    iVar2 = func_ii_4329(param1 + 0xc,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: add_GroupEnabledChangedEvent ---
+		void Core_Gameplay_Managers_Notifications_Model_NotificationGroupData__add_GroupEnabledChangedEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a5a684 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_NotificationGroupData__TypeInfo);
+		    DAT_ram_00a5a684 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0xc);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = func_ii_7048(param1_00,param2,0);
+		    param2_00 = System_Action_NotificationGroupData__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_NotificationGroupData__TypeInfo), iVar2 == 0))
+		    break;
+		    iVar2 = func_ii_4329(param1 + 0xc,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: get_IsGroupEnabled ---
+		void Core_Gameplay_Managers_Notifications_Model_NotificationGroupData__get_IsGroupEnabled
+		               (int param1,uint param2,undefined4 param3)
+		
+		{
+		  int iVar1;
+		  
+		  if (*(byte *)(param1 + 0x10) != param2) {
+		    *(char *)(param1 + 0x10) = (char)param2;
+		    iVar1 = *(int *)(param1 + 0xc);
+		    if (iVar1 != 0) {
+		      (**(code **)((ulonglong)*(uint *)(iVar1 + 0xc) * 4))
+		                (*(undefined4 *)(iVar1 + 0x20),param1,*(undefined4 *)(iVar1 + 0x14));
+		    }
+		  }
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_IsGroupEnabled ---
+		void Core_Gameplay_Managers_Notifications_Model_NotificationGroupData__set_IsGroupEnabled
+		               (int param1,int param2,undefined4 param3)
+		
+		{
+		  int iVar1;
+		  
+		  *(int *)(param1 + 8) = param2;
+		  if (*(char *)(param2 + 0x18) != *(char *)(param1 + 0x10)) {
+		    *(char *)(param1 + 0x10) = *(char *)(param2 + 0x18);
+		    iVar1 = *(int *)(param1 + 0xc);
+		    if (iVar1 != 0) {
+		      (**(code **)((ulonglong)*(uint *)(iVar1 + 0xc) * 4))
+		                (*(undefined4 *)(iVar1 + 0x20),param1,*(undefined4 *)(iVar1 + 0x14));
+		    }
+		  }
+		  return;
+		}
+		*/
+
 }

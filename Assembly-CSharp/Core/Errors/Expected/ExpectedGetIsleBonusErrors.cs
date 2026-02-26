@@ -13,6 +13,33 @@ namespace Core.Errors.Expected
 		[Address(RVA = "0xAE6B", Offset = "0xAE6B", VA = "0xAE6B", Slot = "4")]
 		public override bool Handle(int errorCode)
 		{
+		/* --- GHIDRA: Handle ---
+		void Core_Errors_Expected_ExpectedGetIsleBonusErrors__Handle
+		               (undefined4 param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  int param1_00;
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a5a37c == '\0') {
+		    Mono_Security_ASN1__get_Item(&UI_Windows_Alert_AlertArgs_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Core_GameLocalization_TypeInfo);
+		    DAT_ram_00a5a37c = '\x01';
+		  }
+		  param1_00 = unnamed_function_1417(UI_Windows_Alert_AlertArgs_TypeInfo);
+		  UI_Windows_Alert__Show(param1_00,0);
+		  if (*(int *)(Core_GameLocalization_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Core_GameLocalization_TypeInfo);
+		  }
+		  uVar1 = Core_Extensions_Dict_CultDicExt__GetTitle(param2,1,0,1,0,0,0,0);
+		  *(undefined4 *)(param1_00 + 0x18) = uVar1;
+		  uVar1 = Core_Extensions_Dict_CultDicExt__GetTitle(param3,1,0,1,0,0,0,0);
+		  *(undefined4 *)(param1_00 + 0x1c) = uVar1;
+		  UI_Windows_UnityInstantiator___ctor(param1_00,0);
+		  return;
+		}
+		*/
+
 			return default(bool);
 		}
 
@@ -21,6 +48,49 @@ namespace Core.Errors.Expected
 		[Address(RVA = "0xAE6C", Offset = "0xAE6C", VA = "0xAE6C")]
 		private void ShowAlert(string titleKey, string descKey)
 		{
+		/* --- GHIDRA: ShowAlert ---
+		void Core_Errors_Expected_ExpectedGetIsleBonusErrors__ShowAlert(int param1,undefined4 param2)
+		
+		{
+		  int *param1_00;
+		  int iVar1;
+		  
+		  if (DAT_ram_00a5a37d == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Core_Errors_Expected_ExpectedGetIsleBonusErrors_ExpectedGetIsleBonusErrorsArgs_TypeInfo
+		              );
+		    DAT_ram_00a5a37d = '\x01';
+		  }
+		  param1_00 = *(int **)(param1 + 8);
+		  if (param1_00 != (int *)0x0) {
+		    if (((uint)*(byte *)(*param1_00 + 0xb8) <
+		         (uint)*(byte *)(
+		                        Core_Errors_Expected_ExpectedGetIsleBonusErrors_ExpectedGetIsleBonusErrorsArgs_TypeInfo
+		                        + 0xb8)) ||
+		       (*(int *)(*(int *)(*param1_00 + 100) +
+		                 (uint)*(byte *)(
+		                                Core_Errors_Expected_ExpectedGetIsleBonusErrors_ExpectedGetIsleBonusErrorsArgs_TypeInfo
+		                                + 0xb8) * 4 + -4) !=
+		        Core_Errors_Expected_ExpectedGetIsleBonusErrors_ExpectedGetIsleBonusErrorsArgs_TypeInfo)) {
+		      System_Activator__CreateInstance
+		                (param1_00,
+		                 Core_Errors_Expected_ExpectedGetIsleBonusErrors_ExpectedGetIsleBonusErrorsArgs_TypeInfo
+		                );
+		      do {
+		        halt_trap();
+		      } while( true );
+		    }
+		  }
+		  iVar1 = param1_00[2];
+		  if (iVar1 != 0) {
+		    (**(code **)((ulonglong)*(uint *)(iVar1 + 0xc) * 4))
+		              (*(undefined4 *)(iVar1 + 0x20),*(undefined4 *)(iVar1 + 0x14));
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06006247 RID: 25159 RVA: 0x00002050 File Offset: 0x00000250

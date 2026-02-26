@@ -39,6 +39,19 @@ namespace Gameplay.Gifts.GdEvents.Model
 		[Address(RVA = "0x7BF4", Offset = "0x7BF4", VA = "0x7BF4", Slot = "5")]
 		public override void Dispose()
 		{
+		/* --- GHIDRA: Dispose ---
+		void Gameplay_Gifts_GdEvents_Model_GiftModel__Dispose
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4,undefined4 param5,
+		               undefined4 param6,undefined4 param7)
+		
+		{
+		  Gameplay_Gifts_Model_GiftsModel__Dispose(param1,param2,param3,param6,param1);
+		  *(undefined4 *)(param1 + 0x24) = param4;
+		  *(undefined4 *)(param1 + 0x20) = param5;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06002B5B RID: 11099 RVA: 0x00002050 File Offset: 0x00000250
@@ -46,6 +59,21 @@ namespace Gameplay.Gifts.GdEvents.Model
 		[Address(RVA = "0x7BF5", Offset = "0x7BF5", VA = "0x7BF5")]
 		public GiftModel(IGame game, IDictProvider dictProvider, IUserCache userCache, int usersLimit, UserData user)
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_Gifts_GdEvents_Model_GiftModel___ctor(int param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a5a256 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_MVC_AbstractController_GiftsModel__GiftsEvents__Dispose__);
+		    DAT_ram_00a5a256 = '\x01';
+		  }
+		  MVC_AbstractController_object__object____ctor
+		            (param1,Method_MVC_AbstractController_GiftsModel__GiftsEvents__Dispose__);
+		  *(undefined8 *)(param1 + 0x18) = 0;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x040017C1 RID: 6081
@@ -53,4 +81,19 @@ namespace Gameplay.Gifts.GdEvents.Model
 		[FieldOffset(Offset = "0x20")]
 		public readonly int UsersLimit;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: set_UserChache ---
+		void Gameplay_Gifts_GdEvents_Model_GiftModel__set_UserChache(int param1,undefined4 param2)
+		
+		{
+		  Core_ExternalIncomingScriptCall_CallbackItem___Il2CppFullySharedGenericType____ctor(param1,0);
+		  *(undefined4 *)(param1 + 0x1c) = 0;
+		  *(undefined4 *)(param1 + 0x24) = 0;
+		  *(undefined8 *)(param1 + 0x10) = 0;
+		  return;
+		}
+		*/
+
 }

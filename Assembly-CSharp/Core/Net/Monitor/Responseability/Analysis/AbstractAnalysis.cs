@@ -42,6 +42,27 @@ namespace Core.Net.Monitor.Responseability.Analysis
 		[Address(RVA = "0xA7D8", Offset = "0xA7D8", VA = "0xA7D8")]
 		public AbstractAnalysis(Configuration config)
 		{
+		/* --- GHIDRA: .ctor ---
+		void Core_Net_Monitor_Responseability_Analysis_AbstractAnalysis___ctor
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  undefined4 param1_00;
+		  
+		  if (DAT_ram_00a605b7 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_System_Collections_Generic_Queue_LatencyDto___ctor__);
+		    Mono_Security_ASN1__get_Item(&System_Collections_Generic_Queue_LatencyDto__TypeInfo);
+		    DAT_ram_00a605b7 = '\x01';
+		  }
+		  param1_00 = unnamed_function_1417(System_Collections_Generic_Queue_LatencyDto__TypeInfo);
+		  Sirenix_Serialization_StackFormatter_object____Il2CppFullySharedGenericType___SerializeImplementation
+		            (param1_00,Method_System_Collections_Generic_Queue_LatencyDto___ctor__);
+		  *(undefined4 *)(param1 + 0xc) = param1_00;
+		  *(undefined4 *)(param1 + 8) = param2;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06005AF9 RID: 23289

@@ -14,6 +14,36 @@ namespace Gameplay.Combat.Model
 		[Address(RVA = "0x8A4F", Offset = "0x8A4F", VA = "0x8A4F")]
 		public float GetAnimationTimeByFieldChangeType(int type)
 		{
+		/* --- GHIDRA: GetAnimationTimeByFieldChangeType ---
+		float Gameplay_Combat_Model_GameFieldGamesData__GetAnimationTimeByFieldChangeType
+		                (undefined4 param1,int param2,undefined4 param3)
+		
+		{
+		  float fVar1;
+		  
+		  fVar1 = 0.2;
+		  if (param2 != 2) {
+		    fVar1 = 0.0;
+		  }
+		  return fVar1;
+		}
+		*/
+
+		/* --- GHIDRA: GetAnimationTimeByFieldChangeType ---
+		float Gameplay_Combat_Model_GameFieldGamesData__GetAnimationTimeByFieldChangeType
+		                (undefined4 param1,int param2,undefined4 param3)
+		
+		{
+		  float fVar1;
+		  
+		  fVar1 = 0.2;
+		  if (param2 != 2) {
+		    fVar1 = 0.0;
+		  }
+		  return fVar1;
+		}
+		*/
+
 			return 0f;
 		}
 
@@ -38,6 +68,21 @@ namespace Gameplay.Combat.Model
 		[Address(RVA = "0x8A52", Offset = "0x8A52", VA = "0x8A52")]
 		public GameFieldGamesData()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_Combat_Model_GameFieldGamesData___ctor
+		               (int param1,undefined4 param2,undefined8 param3,undefined4 param4,undefined4 param5,
+		               undefined4 param6,undefined4 param7)
+		
+		{
+		  *(undefined4 *)(param1 + 0x20) = param6;
+		  *(undefined4 *)(param1 + 0x1c) = param5;
+		  *(undefined4 *)(param1 + 0x18) = param4;
+		  *(undefined8 *)(param1 + 0x10) = param3;
+		  *(undefined1 *)(param1 + 8) = (undefined1)param2;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0400207D RID: 8317

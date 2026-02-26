@@ -17,6 +17,47 @@ namespace Gameplay.Antiq.View
 		[Address(RVA = "0x1D28", Offset = "0x1D28", VA = "0x1D28")]
 		public void SetData(EffectData value, [CanBeNull] EffectData currentValue)
 		{
+		/* --- GHIDRA: SetData ---
+		uint Gameplay_Antiq_View_EffectView__SetData(int param1,undefined4 param2)
+		
+		{
+		  ulonglong uVar1;
+		  int iVar2;
+		  uint uVar3;
+		  byte local_10;
+		  ulonglong local_8;
+		  
+		  uVar3 = 0;
+		  uVar1 = 0;
+		  if (DAT_ram_00a587fc == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_System_Linq_Enumerable_Last_ArtifactData___);
+		    Mono_Security_ASN1__get_Item(&Method_System_Nullable_ulong__GetValueOrDefault__);
+		    Mono_Security_ASN1__get_Item(&Method_System_Nullable_ulong___ctor__);
+		    Mono_Security_ASN1__get_Item(&Method_System_Nullable_ulong__get_HasValue__);
+		    DAT_ram_00a587fc = '\x01';
+		  }
+		  iVar2 = System_Linq_Enumerable__IntersectIterator___Il2CppFullySharedGenericType_
+		                    (*(undefined4 *)(param1 + 8),Method_System_Linq_Enumerable_Last_ArtifactData___)
+		  ;
+		  if (iVar2 == *(int *)(param1 + 0x18)) {
+		    if (iVar2 == 0) {
+		      uVar3 = 0;
+		    }
+		    else {
+		      local_8 = 0;
+		      _local_10 = 0;
+		      Core_Log_Files_FileDownloadLogger__LogDownload
+		                (&local_10,*(undefined8 *)(*(int *)(iVar2 + 0xc) + 0x20),
+		                 Method_System_Nullable_ulong___ctor__);
+		      uVar3 = (uint)(local_10 != 0);
+		      uVar1 = local_8;
+		    }
+		    uVar3 = uVar3 & *(ulonglong *)(*(int *)(param1 + 0xc) + 0x20) <= uVar1;
+		  }
+		  return uVar3;
+		}
+		*/
+
 		}
 
 		// Token: 0x06005493 RID: 21651 RVA: 0x00002050 File Offset: 0x00000250

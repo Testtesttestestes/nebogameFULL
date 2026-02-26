@@ -110,6 +110,20 @@ namespace Gameplay.Aprs.View
 		[Address(RVA = "0xA13E", Offset = "0xA13E", VA = "0xA13E")]
 		public void SetCurrentAprData(AprData data)
 		{
+		/* --- GHIDRA: SetCurrentAprData ---
+		void Gameplay_Aprs_View_AprInfoWindow__SetCurrentAprData(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  
+		  iVar1 = **(int **)(param1 + 0x5c);
+		  (**(code **)((ulonglong)*(uint *)(iVar1 + 0x130) * 4))
+		            (*(int **)(param1 + 0x5c),*(undefined4 *)(iVar1 + 0x134));
+		  *(undefined4 *)(param1 + 0x5c) = 0;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06005380 RID: 21376 RVA: 0x00002050 File Offset: 0x00000250
@@ -117,6 +131,39 @@ namespace Gameplay.Aprs.View
 		[Address(RVA = "0xA13F", Offset = "0xA13F", VA = "0xA13F")]
 		private void OnDestroy()
 		{
+		/* --- GHIDRA: OnDestroy ---
+		void Gameplay_Aprs_View_AprInfoWindow__OnDestroy(int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  int iVar1;
+		  int *param1_00;
+		  undefined4 param2_00;
+		  undefined4 param3_00;
+		  undefined4 param4;
+		  
+		  if (DAT_ram_00a593f3 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Gameplay_Aprs_Controller_AprInfoWindowMediator_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Method_UI_Windows_BaseWindow_AprInfoWindowArgs__get_WindowArgs__);
+		    Mono_Security_ASN1__get_Item(&Method_UI_Windows_ClosableBaseWindow_AprInfoWindowArgs__OnShow__);
+		    DAT_ram_00a593f3 = '\x01';
+		  }
+		  func_ii_7769(param1,param2,Method_UI_Windows_ClosableBaseWindow_AprInfoWindowArgs__OnShow__);
+		  iVar1 = func_ii_8093(param1,Method_UI_Windows_BaseWindow_AprInfoWindowArgs__get_WindowArgs__);
+		  param2_00 = *(undefined4 *)(iVar1 + 0x24);
+		  iVar1 = func_ii_8093(param1,Method_UI_Windows_BaseWindow_AprInfoWindowArgs__get_WindowArgs__);
+		  param3_00 = *(undefined4 *)(iVar1 + 0x28);
+		  iVar1 = func_ii_8093(param1,Method_UI_Windows_BaseWindow_AprInfoWindowArgs__get_WindowArgs__);
+		  param4 = *(undefined4 *)(iVar1 + 0x20);
+		  param1_00 = (int *)unnamed_function_1417(Gameplay_Aprs_Controller_AprInfoWindowMediator_TypeInfo);
+		  Gameplay_Aprs_Controller_AprInfoWindowMediator__Dispose
+		            (param1_00,param2_00,param3_00,param4,param1);
+		  *(int **)(param1 + 0x5c) = param1_00;
+		  (**(code **)((ulonglong)*(uint *)(*param1_00 + 0x160) * 4))
+		            (param1_00,param1,*(undefined4 *)(*param1_00 + 0x164));
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06005381 RID: 21377 RVA: 0x00002050 File Offset: 0x00000250
@@ -124,6 +171,20 @@ namespace Gameplay.Aprs.View
 		[Address(RVA = "0xA140", Offset = "0xA140", VA = "0xA140", Slot = "22")]
 		protected override void OnShow(AprInfoWindowArgs args)
 		{
+		/* --- GHIDRA: OnShow ---
+		void Gameplay_Aprs_View_AprInfoWindow__OnShow(undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a593f4 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_UI_Windows_ClosableBaseWindow_AprInfoWindowArgs___ctor__);
+		    DAT_ram_00a593f4 = '\x01';
+		  }
+		  UI_MonoBehaviourWithStates_ClientStateChangedDelegate___Il2CppFullySharedGenericStructType___Invoke
+		            (param1,Method_UI_Windows_ClosableBaseWindow_AprInfoWindowArgs___ctor__);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06005382 RID: 21378 RVA: 0x00002050 File Offset: 0x00000250
@@ -190,4 +251,28 @@ namespace Gameplay.Aprs.View
 		[FieldOffset(Offset = "0x5C")]
 		private AprInfoWindowMediator _mediator;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_DiscountView ---
+		void Gameplay_Aprs_View_AprInfoWindow__get_DiscountView(int param1,int param2,undefined4 param3)
+		
+		{
+		  undefined4 param2_00;
+		  undefined4 param1_00;
+		  
+		  if (DAT_ram_00a593f2 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Core_Dict_DictWrappers_Base_AbstractDictWrapper_AprDic__uint__get_Data__);
+		    DAT_ram_00a593f2 = '\x01';
+		  }
+		  param1_00 = *(undefined4 *)(param1 + 0x44);
+		  param2_00 = UI_Wiki_WikiUriRouter__SetData(*(undefined4 *)(*(int *)(param2 + 0x1c) + 0x10),0);
+		  Core_Extensions_Dict_AprDicExt__Get1024AssetId(param1_00,param2_00,0);
+		  Gameplay_Aprs_View_AprInfoView__get_DurationPrefix(*(undefined4 *)(param1 + 0x54),param2,param2);
+		  *(int *)(*(int *)(param1 + 0x58) + 0x18) = param2;
+		  return;
+		}
+		*/
+
 }

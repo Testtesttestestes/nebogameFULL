@@ -13,6 +13,17 @@ namespace Gameplay.Combat.TeamCombat
 		[Address(RVA = "0x89CE", Offset = "0x89CE", VA = "0x89CE")]
 		public TeamCombatEvents()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_Combat_TeamCombat_TeamCombatEvents___ctor
+		               (undefined4 param1,undefined4 param2,undefined4 param3,undefined4 param4,
+		               undefined4 param5,undefined4 param6)
+		
+		{
+		  Gameplay_Combat_Model_CombatModel__Dispose(param1,param2,param3,param4,param5,param5);
+		  return;
+		}
+		*/
+
 		}
 	}
 }

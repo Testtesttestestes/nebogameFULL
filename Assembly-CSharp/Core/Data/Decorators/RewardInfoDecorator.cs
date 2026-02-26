@@ -15,6 +15,56 @@ namespace Core.Data.Decorators
 		[Address(RVA = "0xB116", Offset = "0xB116", VA = "0xB116")]
 		public RewardInfoDecorator(RewardInfo rewardInfo)
 		{
+		/* --- GHIDRA: .ctor ---
+		void Core_Data_Decorators_RewardInfoDecorator___ctor(int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  int param1_00;
+		  undefined4 param1_01;
+		  
+		  if (DAT_ram_00a60846 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_System_Collections_Generic_List_long___ctor__);
+		    Mono_Security_ASN1__get_Item(&System_Collections_Generic_List_long__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Protocol_Common_RewardInfo_TypeInfo);
+		    DAT_ram_00a60846 = '\x01';
+		  }
+		  param1_00 = unnamed_function_1417(Protocol_Common_RewardInfo_TypeInfo);
+		  func_ii_7941(param1_00,0);
+		  *(undefined4 *)(param1_00 + 0xc) = param2;
+		  Core_Data_Effect_EffectDescription__FormatUserSkillValue(param1,param1_00,param1);
+		  param1_01 = unnamed_function_1417(System_Collections_Generic_List_long__TypeInfo);
+		  GAFInternal_Objects_GAFBakedObjectImpl__get_isVisible
+		            (param1_01,Method_System_Collections_Generic_List_long___ctor__);
+		  *(undefined4 *)(param1 + 0xc) = param1_01;
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: .ctor ---
+		void Core_Data_Decorators_RewardInfoDecorator___ctor(int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  int param1_00;
+		  undefined4 param1_01;
+		  
+		  if (DAT_ram_00a60846 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_System_Collections_Generic_List_long___ctor__);
+		    Mono_Security_ASN1__get_Item(&System_Collections_Generic_List_long__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Protocol_Common_RewardInfo_TypeInfo);
+		    DAT_ram_00a60846 = '\x01';
+		  }
+		  param1_00 = unnamed_function_1417(Protocol_Common_RewardInfo_TypeInfo);
+		  func_ii_7941(param1_00,0);
+		  *(undefined4 *)(param1_00 + 0xc) = param2;
+		  Core_Data_Effect_EffectDescription__FormatUserSkillValue(param1,param1_00,param1);
+		  param1_01 = unnamed_function_1417(System_Collections_Generic_List_long__TypeInfo);
+		  GAFInternal_Objects_GAFBakedObjectImpl__get_isVisible
+		            (param1_01,Method_System_Collections_Generic_List_long___ctor__);
+		  *(undefined4 *)(param1 + 0xc) = param1_01;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600654E RID: 25934 RVA: 0x00002050 File Offset: 0x00000250
@@ -76,4 +126,23 @@ namespace Core.Data.Decorators
 		[FieldOffset(Offset = "0x8")]
 		private RewardInfo _rewardInfo;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: set_Params ---
+		void Core_Data_Decorators_RewardInfoDecorator__set_Params(undefined4 param1)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a60847 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_Data_Decorators_RewardInfoDecorator___c_TypeInfo);
+		    DAT_ram_00a60847 = '\x01';
+		  }
+		  uVar1 = unnamed_function_1417(Core_Data_Decorators_RewardInfoDecorator___c_TypeInfo);
+		  **(undefined4 **)(Core_Data_Decorators_RewardInfoDecorator___c_TypeInfo + 0x5c) = uVar1;
+		  return;
+		}
+		*/
+
 }

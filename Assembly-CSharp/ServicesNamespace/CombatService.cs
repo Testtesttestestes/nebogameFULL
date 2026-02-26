@@ -378,6 +378,59 @@ namespace ServicesNamespace
 		[Address(RVA = "0x593C", Offset = "0x593C", VA = "0x593C", Slot = "6")]
 		protected override void ServerEventHandler(SrvAnswer evt)
 		{
+		/* --- GHIDRA: ServerEventHandler ---
+		int * ServicesNamespace_CombatService__ServerEventHandler
+		                (int *param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  int *param1_00;
+		  int iVar1;
+		  undefined4 uVar2;
+		  undefined4 local_c;
+		  undefined8 local_8;
+		  
+		  if (DAT_ram_00a55960 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_SrvCommand__IMessage__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Protocol_Combat_CombatCommands_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Protocol_Combat_ProtoRequestCombatCmd_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Method_Core_Net_SrvCommand_SetCallback_ProtoRequestCombatAns___);
+		    Mono_Security_ASN1__get_Item(&Core_Net_SrvCommand_TypeInfo);
+		    DAT_ram_00a55960 = '\x01';
+		  }
+		  if (*(int *)(Core_Net_SrvCommand_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Core_Net_SrvCommand_TypeInfo);
+		  }
+		  param1_00 = (int *)Core_Net_AbstractService__PushCommand
+		                               (param1,*(undefined4 *)
+		                                        (*(int *)(Core_Net_SrvCommand_TypeInfo + 0x5c) + 4),0);
+		  iVar1 = System_IO_Compression_DeflateStreamNative_UnmanagedReadOrWrite__Invoke(param1_00,0);
+		  if (iVar1 != 0) {
+		    (**(code **)((ulonglong)*(uint *)(*param1_00 + 0x110) * 4))
+		              (param1_00,*(undefined4 *)(*param1_00 + 0x114));
+		    iVar1 = unnamed_function_1417(Protocol_Combat_ProtoRequestCombatCmd_TypeInfo);
+		    *(undefined4 *)(iVar1 + 0x10) = param3;
+		    *(undefined4 *)(iVar1 + 0xc) = param2;
+		    uVar2 = (**(code **)((ulonglong)*(uint *)(*param1 + 0xe0) * 4))
+		                      (param1,*(undefined4 *)(*param1 + 0xe4));
+		    if (*(int *)(Core_Net_SrvCommand_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(Core_Net_SrvCommand_TypeInfo);
+		    }
+		    iVar1 = Core_Net_SrvCommand___ctor(uVar2,6,iVar1,0);
+		    local_8 = 0x6ffffffff;
+		    local_c = Protocol_Combat_CombatCommands_TypeInfo;
+		    uVar2 = Spine_SkeletonJson__GetFloat(&local_c,0);
+		    *(undefined4 *)(iVar1 + 0x14) = uVar2;
+		    uVar2 = unnamed_function_1417(System_Action_SrvCommand__IMessage__TypeInfo);
+		    System_Runtime_CompilerServices_AsyncVoidMethodBuilder__AwaitUnsafeOnCompleted_UniTask_Awaiter_bool___BossCaptainViewMediator__SetupView_d__8_
+		              (uVar2,param1,*(undefined4 *)(*param1 + 0xec),0);
+		    Core_Data_Spells_SpellData__Create_object_
+		              (iVar1,uVar2,Method_Core_Net_SrvCommand_SetCallback_ProtoRequestCombatAns___);
+		    Core_Net_AbstractService__LogCommandAnswer(param1,iVar1,0);
+		  }
+		  return param1_00;
+		}
+		*/
+
 		}
 
 		// Token: 0x06000512 RID: 1298 RVA: 0x00002052 File Offset: 0x00000252
@@ -385,6 +438,54 @@ namespace ServicesNamespace
 		[Address(RVA = "0x593D", Offset = "0x593D", VA = "0x593D", Slot = "45")]
 		public virtual OpToken<IMessage, object> PutJoinRequest(ProtoRequestCombatCmd.Types.ArenaCombatTypes arenaCombatType, CombatTypes combatType)
 		{
+		/* --- GHIDRA: PutJoinRequest ---
+		int * ServicesNamespace_CombatService__PutJoinRequest(int *param1,undefined4 param2)
+		
+		{
+		  int *param1_00;
+		  int iVar1;
+		  undefined4 uVar2;
+		  undefined4 local_c;
+		  undefined8 local_8;
+		  
+		  if (DAT_ram_00a55961 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_SrvCommand__IMessage__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Protocol_Combat_CombatCommands_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Method_Core_Net_SrvCommand_SetCallback_ProtoJoinToCombatAns___);
+		    Mono_Security_ASN1__get_Item(&Core_Net_SrvCommand_TypeInfo);
+		    DAT_ram_00a55961 = '\x01';
+		  }
+		  if (*(int *)(Core_Net_SrvCommand_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Core_Net_SrvCommand_TypeInfo);
+		  }
+		  param1_00 = (int *)Core_Net_AbstractService__PushCommand
+		                               (param1,*(undefined4 *)
+		                                        (*(int *)(Core_Net_SrvCommand_TypeInfo + 0x5c) + 4),0);
+		  iVar1 = System_IO_Compression_DeflateStreamNative_UnmanagedReadOrWrite__Invoke(param1_00,0);
+		  if (iVar1 != 0) {
+		    (**(code **)((ulonglong)*(uint *)(*param1_00 + 0x110) * 4))
+		              (param1_00,*(undefined4 *)(*param1_00 + 0x114));
+		    uVar2 = (**(code **)((ulonglong)*(uint *)(*param1 + 0xe0) * 4))
+		                      (param1,*(undefined4 *)(*param1 + 0xe4));
+		    if (*(int *)(Core_Net_SrvCommand_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(Core_Net_SrvCommand_TypeInfo);
+		    }
+		    iVar1 = Core_Net_SrvCommand___ctor(uVar2,1,0,0);
+		    uVar2 = unnamed_function_1417(System_Action_SrvCommand__IMessage__TypeInfo);
+		    System_Runtime_CompilerServices_AsyncVoidMethodBuilder__AwaitUnsafeOnCompleted_UniTask_Awaiter_bool___BossCaptainViewMediator__SetupView_d__8_
+		              (uVar2,param1,*(undefined4 *)(*param1 + 0xec),0);
+		    Core_Data_Spells_SpellData__Create_object_
+		              (iVar1,uVar2,Method_Core_Net_SrvCommand_SetCallback_ProtoJoinToCombatAns___);
+		    local_8 = 0x1ffffffff;
+		    local_c = Protocol_Combat_CombatCommands_TypeInfo;
+		    uVar2 = Spine_SkeletonJson__GetFloat(&local_c,0);
+		    *(undefined4 *)(iVar1 + 0x14) = uVar2;
+		    Core_Net_AbstractService__LogCommandAnswer(param1,iVar1,0);
+		  }
+		  return param1_00;
+		}
+		*/
+
 			return null;
 		}
 
@@ -393,6 +494,80 @@ namespace ServicesNamespace
 		[Address(RVA = "0x593E", Offset = "0x593E", VA = "0x593E", Slot = "46")]
 		public virtual OpToken<IMessage, object> JoinToCombat()
 		{
+		/* --- GHIDRA: JoinToCombat ---
+		int * ServicesNamespace_CombatService__JoinToCombat
+		                (int *param1,undefined4 param2,undefined4 param3,undefined4 param4,undefined4 param5
+		                ,undefined4 param6,undefined4 param7)
+		
+		{
+		  int *param1_00;
+		  int iVar1;
+		  undefined4 uVar2;
+		  undefined4 param3_00;
+		  undefined4 local_18;
+		  undefined4 local_14;
+		  undefined4 local_10;
+		  undefined4 local_c;
+		  undefined8 local_8;
+		  
+		  if (DAT_ram_00a55962 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_SrvCommand__IMessage__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Protocol_Combat_CombatCommands_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Protocol_Combat_PlayerActionTypes_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Protocol_Combat_ProtoPlayerActionCmd_TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Google_Protobuf_Collections_RepeatedField_ulong__AddRange__);
+		    Mono_Security_ASN1__get_Item(&Method_Core_Net_SrvCommand_SetCallback_ProtoDefaultAns___);
+		    Mono_Security_ASN1__get_Item(&Core_Net_SrvCommand_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_19176);
+		    DAT_ram_00a55962 = '\x01';
+		  }
+		  if (*(int *)(Core_Net_SrvCommand_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Core_Net_SrvCommand_TypeInfo);
+		  }
+		  param1_00 = (int *)Core_Net_AbstractService__PushCommand
+		                               (param1,*(undefined4 *)
+		                                        (*(int *)(Core_Net_SrvCommand_TypeInfo + 0x5c) + 4),0);
+		  iVar1 = System_IO_Compression_DeflateStreamNative_UnmanagedReadOrWrite__Invoke(param1_00,0);
+		  if (iVar1 != 0) {
+		    (**(code **)((ulonglong)*(uint *)(*param1_00 + 0x110) * 4))
+		              (param1_00,*(undefined4 *)(*param1_00 + 0x114));
+		    iVar1 = unnamed_function_1417(Protocol_Combat_ProtoPlayerActionCmd_TypeInfo);
+		    Protocol_Combat_ProtoPlayerActionCmd__pb__Google_Protobuf_IMessage_get_Descriptor(iVar1,0);
+		    *(undefined4 *)(iVar1 + 0x18) = param5;
+		    *(undefined4 *)(iVar1 + 0x14) = param4;
+		    *(undefined4 *)(iVar1 + 0x10) = param3;
+		    *(undefined4 *)(iVar1 + 0xc) = param2;
+		    Google_Protobuf_Collections_RepeatedField_ulong___AddEntriesFrom
+		              (*(undefined4 *)(iVar1 + 0x1c),param6,
+		               Method_Google_Protobuf_Collections_RepeatedField_ulong__AddRange__);
+		    uVar2 = (**(code **)((ulonglong)*(uint *)(*param1 + 0xe0) * 4))
+		                      (param1,*(undefined4 *)(*param1 + 0xe4));
+		    if (*(int *)(Core_Net_SrvCommand_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(Core_Net_SrvCommand_TypeInfo);
+		    }
+		    iVar1 = Core_Net_SrvCommand___ctor(uVar2,2,iVar1,0);
+		    local_8 = 0x2ffffffff;
+		    local_c = Protocol_Combat_CombatCommands_TypeInfo;
+		    uVar2 = Spine_SkeletonJson__GetFloat(&local_c,0);
+		    local_14 = 0xffffffff;
+		    local_18 = Protocol_Combat_PlayerActionTypes_TypeInfo;
+		    local_10 = param2;
+		    param3_00 = Spine_SkeletonJson__GetFloat(&local_18,0);
+		    uVar2 = UnityEngine_AndroidJavaObject__FromJavaArray_Nullable_int__
+		                      (uVar2,StringLiteral_19176,param3_00,0);
+		    *(undefined4 *)(iVar1 + 0x14) = uVar2;
+		    uVar2 = unnamed_function_1417(System_Action_SrvCommand__IMessage__TypeInfo);
+		    System_Runtime_CompilerServices_AsyncVoidMethodBuilder__AwaitUnsafeOnCompleted_UniTask_Awaiter_bool___BossCaptainViewMediator__SetupView_d__8_
+		              (uVar2,param1,*(undefined4 *)(*param1 + 0xec),0);
+		    Core_Data_Spells_SpellData__Create_object_
+		              (iVar1,uVar2,Method_Core_Net_SrvCommand_SetCallback_ProtoDefaultAns___);
+		    Core_Net_AbstractService__LogCommandAnswer(param1,iVar1,0);
+		  }
+		  return param1_00;
+		}
+		*/
+
 			return null;
 		}
 
@@ -401,6 +576,54 @@ namespace ServicesNamespace
 		[Address(RVA = "0x593F", Offset = "0x593F", VA = "0x593F", Slot = "43")]
 		public OpToken<IMessage, object> PlayerAction(PlayerActionTypes id, Point src, Point dst, SpellKey spellKey, params ulong[] targetUserIds)
 		{
+		/* --- GHIDRA: PlayerAction ---
+		int * ServicesNamespace_CombatService__PlayerAction(int *param1,undefined4 param2)
+		
+		{
+		  int *param1_00;
+		  int iVar1;
+		  undefined4 uVar2;
+		  undefined4 local_c;
+		  undefined8 local_8;
+		  
+		  if (DAT_ram_00a55963 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_SrvCommand__IMessage__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Protocol_Combat_CombatCommands_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Method_Core_Net_SrvCommand_SetCallback_ProtoEmptyAns___);
+		    Mono_Security_ASN1__get_Item(&Core_Net_SrvCommand_TypeInfo);
+		    DAT_ram_00a55963 = '\x01';
+		  }
+		  if (*(int *)(Core_Net_SrvCommand_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Core_Net_SrvCommand_TypeInfo);
+		  }
+		  param1_00 = (int *)Core_Net_AbstractService__PushCommand
+		                               (param1,*(undefined4 *)
+		                                        (*(int *)(Core_Net_SrvCommand_TypeInfo + 0x5c) + 4),0);
+		  iVar1 = System_IO_Compression_DeflateStreamNative_UnmanagedReadOrWrite__Invoke(param1_00,0);
+		  if (iVar1 != 0) {
+		    (**(code **)((ulonglong)*(uint *)(*param1_00 + 0x110) * 4))
+		              (param1_00,*(undefined4 *)(*param1_00 + 0x114));
+		    uVar2 = (**(code **)((ulonglong)*(uint *)(*param1 + 0xe0) * 4))
+		                      (param1,*(undefined4 *)(*param1 + 0xe4));
+		    if (*(int *)(Core_Net_SrvCommand_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(Core_Net_SrvCommand_TypeInfo);
+		    }
+		    iVar1 = Core_Net_SrvCommand___ctor(uVar2,8,0,0);
+		    local_8 = 0x8ffffffff;
+		    local_c = Protocol_Combat_CombatCommands_TypeInfo;
+		    uVar2 = Spine_SkeletonJson__GetFloat(&local_c,0);
+		    *(undefined4 *)(iVar1 + 0x14) = uVar2;
+		    uVar2 = unnamed_function_1417(System_Action_SrvCommand__IMessage__TypeInfo);
+		    System_Runtime_CompilerServices_AsyncVoidMethodBuilder__AwaitUnsafeOnCompleted_UniTask_Awaiter_bool___BossCaptainViewMediator__SetupView_d__8_
+		              (uVar2,param1,*(undefined4 *)(*param1 + 0xec),0);
+		    Core_Data_Spells_SpellData__Create_object_
+		              (iVar1,uVar2,Method_Core_Net_SrvCommand_SetCallback_ProtoEmptyAns___);
+		    Core_Net_AbstractService__LogCommandAnswer(param1,iVar1,0);
+		  }
+		  return param1_00;
+		}
+		*/
+
 			return null;
 		}
 
@@ -412,4 +635,1550 @@ namespace ServicesNamespace
 			return null;
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: add_JumpToCombatEvent ---
+		void ServicesNamespace_CombatService__add_JumpToCombatEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a5593e == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_ProtoJumpToCombatEvt__TypeInfo);
+		    DAT_ram_00a5593e = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x14);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = func_ii_7048(param1_00,param2,0);
+		    param2_00 = System_Action_ProtoJumpToCombatEvt__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_ProtoJumpToCombatEvt__TypeInfo), iVar2 == 0))
+		    break;
+		    iVar2 = func_ii_4329(param1 + 0x14,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: remove_JumpToCombatEvent ---
+		void ServicesNamespace_CombatService__remove_JumpToCombatEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a5593f == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_ProtoSwitchTurnEvt__TypeInfo);
+		    DAT_ram_00a5593f = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x18);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = UnityEngine_UI_Image__set_sprite(param1_00,param2,0);
+		    param2_00 = System_Action_ProtoSwitchTurnEvt__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_ProtoSwitchTurnEvt__TypeInfo), iVar2 == 0))
+		    break;
+		    iVar2 = func_ii_4329(param1 + 0x18,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: add_SwitchTurnEvent ---
+		void ServicesNamespace_CombatService__add_SwitchTurnEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a55940 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_ProtoSwitchTurnEvt__TypeInfo);
+		    DAT_ram_00a55940 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x18);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = func_ii_7048(param1_00,param2,0);
+		    param2_00 = System_Action_ProtoSwitchTurnEvt__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_ProtoSwitchTurnEvt__TypeInfo), iVar2 == 0))
+		    break;
+		    iVar2 = func_ii_4329(param1 + 0x18,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: remove_SwitchTurnEvent ---
+		void ServicesNamespace_CombatService__remove_SwitchTurnEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a55941 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_ProtoFieldChangedEvt__TypeInfo);
+		    DAT_ram_00a55941 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x1c);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = UnityEngine_UI_Image__set_sprite(param1_00,param2,0);
+		    param2_00 = System_Action_ProtoFieldChangedEvt__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_ProtoFieldChangedEvt__TypeInfo), iVar2 == 0))
+		    break;
+		    iVar2 = func_ii_4329(param1 + 0x1c,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: add_FieldChangedEvent ---
+		void ServicesNamespace_CombatService__add_FieldChangedEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a55942 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_ProtoFieldChangedEvt__TypeInfo);
+		    DAT_ram_00a55942 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x1c);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = func_ii_7048(param1_00,param2,0);
+		    param2_00 = System_Action_ProtoFieldChangedEvt__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_ProtoFieldChangedEvt__TypeInfo), iVar2 == 0))
+		    break;
+		    iVar2 = func_ii_4329(param1 + 0x1c,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: remove_FieldChangedEvent ---
+		void ServicesNamespace_CombatService__remove_FieldChangedEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a55943 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_ProtoPlayerActionEvt__TypeInfo);
+		    DAT_ram_00a55943 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x20);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = UnityEngine_UI_Image__set_sprite(param1_00,param2,0);
+		    param2_00 = System_Action_ProtoPlayerActionEvt__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_ProtoPlayerActionEvt__TypeInfo), iVar2 == 0))
+		    break;
+		    iVar2 = func_ii_4329(param1 + 0x20,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: add_PlayersActionEvent ---
+		void ServicesNamespace_CombatService__add_PlayersActionEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a55944 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_ProtoPlayerActionEvt__TypeInfo);
+		    DAT_ram_00a55944 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x20);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = func_ii_7048(param1_00,param2,0);
+		    param2_00 = System_Action_ProtoPlayerActionEvt__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_ProtoPlayerActionEvt__TypeInfo), iVar2 == 0))
+		    break;
+		    iVar2 = func_ii_4329(param1 + 0x20,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: remove_PlayersActionEvent ---
+		void ServicesNamespace_CombatService__remove_PlayersActionEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a55945 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_ProtoCombatEventsEvt__TypeInfo);
+		    DAT_ram_00a55945 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x24);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = UnityEngine_UI_Image__set_sprite(param1_00,param2,0);
+		    param2_00 = System_Action_ProtoCombatEventsEvt__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_ProtoCombatEventsEvt__TypeInfo), iVar2 == 0))
+		    break;
+		    iVar2 = func_ii_4329(param1 + 0x24,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: add_CombatEventsEvent ---
+		void ServicesNamespace_CombatService__add_CombatEventsEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a55946 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_ProtoCombatEventsEvt__TypeInfo);
+		    DAT_ram_00a55946 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x24);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = func_ii_7048(param1_00,param2,0);
+		    param2_00 = System_Action_ProtoCombatEventsEvt__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_ProtoCombatEventsEvt__TypeInfo), iVar2 == 0))
+		    break;
+		    iVar2 = func_ii_4329(param1 + 0x24,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: remove_CombatEventsEvent ---
+		void ServicesNamespace_CombatService__remove_CombatEventsEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a55947 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_ProtoCombatCompleteEvt__TypeInfo);
+		    DAT_ram_00a55947 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x28);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = UnityEngine_UI_Image__set_sprite(param1_00,param2,0);
+		    param2_00 = System_Action_ProtoCombatCompleteEvt__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_ProtoCombatCompleteEvt__TypeInfo), iVar2 == 0))
+		    break;
+		    iVar2 = func_ii_4329(param1 + 0x28,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: add_CombatCompleteEvent ---
+		void ServicesNamespace_CombatService__add_CombatCompleteEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a55948 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_ProtoCombatCompleteEvt__TypeInfo);
+		    DAT_ram_00a55948 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x28);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = func_ii_7048(param1_00,param2,0);
+		    param2_00 = System_Action_ProtoCombatCompleteEvt__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_ProtoCombatCompleteEvt__TypeInfo), iVar2 == 0))
+		    break;
+		    iVar2 = func_ii_4329(param1 + 0x28,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: remove_CombatCompleteEvent ---
+		void ServicesNamespace_CombatService__remove_CombatCompleteEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a55949 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_ProtoShowHintEvt__TypeInfo);
+		    DAT_ram_00a55949 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x2c);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = UnityEngine_UI_Image__set_sprite(param1_00,param2,0);
+		    param2_00 = System_Action_ProtoShowHintEvt__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_ProtoShowHintEvt__TypeInfo), iVar2 == 0))
+		    break;
+		    iVar2 = func_ii_4329(param1 + 0x2c,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: add_ShowHintEvent ---
+		void ServicesNamespace_CombatService__add_ShowHintEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a5594a == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_ProtoShowHintEvt__TypeInfo);
+		    DAT_ram_00a5594a = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x2c);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = func_ii_7048(param1_00,param2,0);
+		    param2_00 = System_Action_ProtoShowHintEvt__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_ProtoShowHintEvt__TypeInfo), iVar2 == 0))
+		    break;
+		    iVar2 = func_ii_4329(param1 + 0x2c,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: remove_ShowHintEvent ---
+		void ServicesNamespace_CombatService__remove_ShowHintEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a5594b == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_ProtoCombatTerminatedEvt__TypeInfo);
+		    DAT_ram_00a5594b = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x30);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = UnityEngine_UI_Image__set_sprite(param1_00,param2,0);
+		    param2_00 = System_Action_ProtoCombatTerminatedEvt__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_ProtoCombatTerminatedEvt__TypeInfo), iVar2 == 0
+		       )) break;
+		    iVar2 = func_ii_4329(param1 + 0x30,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: add_CombatTerminatedEvent ---
+		void ServicesNamespace_CombatService__add_CombatTerminatedEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a5594c == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_ProtoCombatTerminatedEvt__TypeInfo);
+		    DAT_ram_00a5594c = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x30);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = func_ii_7048(param1_00,param2,0);
+		    param2_00 = System_Action_ProtoCombatTerminatedEvt__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_ProtoCombatTerminatedEvt__TypeInfo), iVar2 == 0
+		       )) break;
+		    iVar2 = func_ii_4329(param1 + 0x30,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: remove_CombatTerminatedEvent ---
+		void ServicesNamespace_CombatService__remove_CombatTerminatedEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a5594d == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_ProtoSkillsChangedEvt__TypeInfo);
+		    DAT_ram_00a5594d = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x34);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = UnityEngine_UI_Image__set_sprite(param1_00,param2,0);
+		    param2_00 = System_Action_ProtoSkillsChangedEvt__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_ProtoSkillsChangedEvt__TypeInfo), iVar2 == 0))
+		    break;
+		    iVar2 = func_ii_4329(param1 + 0x34,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: add_SkillsChangedEvent ---
+		void ServicesNamespace_CombatService__add_SkillsChangedEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a5594e == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_ProtoSkillsChangedEvt__TypeInfo);
+		    DAT_ram_00a5594e = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x34);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = func_ii_7048(param1_00,param2,0);
+		    param2_00 = System_Action_ProtoSkillsChangedEvt__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_ProtoSkillsChangedEvt__TypeInfo), iVar2 == 0))
+		    break;
+		    iVar2 = func_ii_4329(param1 + 0x34,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: remove_SkillsChangedEvent ---
+		void ServicesNamespace_CombatService__remove_SkillsChangedEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a5594f == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_ProtoSpellCoolDownChangedEvt__TypeInfo);
+		    DAT_ram_00a5594f = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x38);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = UnityEngine_UI_Image__set_sprite(param1_00,param2,0);
+		    param2_00 = System_Action_ProtoSpellCoolDownChangedEvt__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_ProtoSpellCoolDownChangedEvt__TypeInfo),
+		       iVar2 == 0)) break;
+		    iVar2 = func_ii_4329(param1 + 0x38,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: add_CooldownChangedEvent ---
+		void ServicesNamespace_CombatService__add_CooldownChangedEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a55950 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_ProtoSpellCoolDownChangedEvt__TypeInfo);
+		    DAT_ram_00a55950 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x38);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = func_ii_7048(param1_00,param2,0);
+		    param2_00 = System_Action_ProtoSpellCoolDownChangedEvt__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_ProtoSpellCoolDownChangedEvt__TypeInfo),
+		       iVar2 == 0)) break;
+		    iVar2 = func_ii_4329(param1 + 0x38,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: remove_CooldownChangedEvent ---
+		void ServicesNamespace_CombatService__remove_CooldownChangedEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a55951 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_ProtoSpellAppliedEvt__TypeInfo);
+		    DAT_ram_00a55951 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x3c);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = UnityEngine_UI_Image__set_sprite(param1_00,param2,0);
+		    param2_00 = System_Action_ProtoSpellAppliedEvt__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_ProtoSpellAppliedEvt__TypeInfo), iVar2 == 0))
+		    break;
+		    iVar2 = func_ii_4329(param1 + 0x3c,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: add_SpellAppliedEvent ---
+		void ServicesNamespace_CombatService__add_SpellAppliedEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a55952 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_ProtoSpellAppliedEvt__TypeInfo);
+		    DAT_ram_00a55952 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x3c);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = func_ii_7048(param1_00,param2,0);
+		    param2_00 = System_Action_ProtoSpellAppliedEvt__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_ProtoSpellAppliedEvt__TypeInfo), iVar2 == 0))
+		    break;
+		    iVar2 = func_ii_4329(param1 + 0x3c,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: remove_SpellAppliedEvent ---
+		void ServicesNamespace_CombatService__remove_SpellAppliedEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a55953 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_ProtoEffectsChangedEvt__TypeInfo);
+		    DAT_ram_00a55953 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x40);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = UnityEngine_UI_Image__set_sprite(param1_00,param2,0);
+		    param2_00 = System_Action_ProtoEffectsChangedEvt__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_ProtoEffectsChangedEvt__TypeInfo), iVar2 == 0))
+		    break;
+		    iVar2 = func_ii_4329(param1 + 0x40,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: add_EffectsChangedEvent ---
+		void ServicesNamespace_CombatService__add_EffectsChangedEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a55954 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_ProtoEffectsChangedEvt__TypeInfo);
+		    DAT_ram_00a55954 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x40);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = func_ii_7048(param1_00,param2,0);
+		    param2_00 = System_Action_ProtoEffectsChangedEvt__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_ProtoEffectsChangedEvt__TypeInfo), iVar2 == 0))
+		    break;
+		    iVar2 = func_ii_4329(param1 + 0x40,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: remove_EffectsChangedEvent ---
+		void ServicesNamespace_CombatService__remove_EffectsChangedEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a55955 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_ProtoChatEvt__TypeInfo);
+		    DAT_ram_00a55955 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x44);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = UnityEngine_UI_Image__set_sprite(param1_00,param2,0);
+		    param2_00 = System_Action_ProtoChatEvt__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_ProtoChatEvt__TypeInfo), iVar2 == 0)) break;
+		    iVar2 = func_ii_4329(param1 + 0x44,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: add_ChatEventEvent ---
+		void ServicesNamespace_CombatService__add_ChatEventEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a55956 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_ProtoChatEvt__TypeInfo);
+		    DAT_ram_00a55956 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x44);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = func_ii_7048(param1_00,param2,0);
+		    param2_00 = System_Action_ProtoChatEvt__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_ProtoChatEvt__TypeInfo), iVar2 == 0)) break;
+		    iVar2 = func_ii_4329(param1 + 0x44,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: remove_ChatEventEvent ---
+		void ServicesNamespace_CombatService__remove_ChatEventEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a55957 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_ProtoPlayerAddedEvt__TypeInfo);
+		    DAT_ram_00a55957 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x48);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = UnityEngine_UI_Image__set_sprite(param1_00,param2,0);
+		    param2_00 = System_Action_ProtoPlayerAddedEvt__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_ProtoPlayerAddedEvt__TypeInfo), iVar2 == 0))
+		    break;
+		    iVar2 = func_ii_4329(param1 + 0x48,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: add_PlayerAddedEvent ---
+		void ServicesNamespace_CombatService__add_PlayerAddedEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a55958 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_ProtoPlayerAddedEvt__TypeInfo);
+		    DAT_ram_00a55958 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x48);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = func_ii_7048(param1_00,param2,0);
+		    param2_00 = System_Action_ProtoPlayerAddedEvt__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_ProtoPlayerAddedEvt__TypeInfo), iVar2 == 0))
+		    break;
+		    iVar2 = func_ii_4329(param1 + 0x48,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: remove_PlayerAddedEvent ---
+		void ServicesNamespace_CombatService__remove_PlayerAddedEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a55959 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_ProtoDefaultUserCmd__TypeInfo);
+		    DAT_ram_00a55959 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x4c);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = UnityEngine_UI_Image__set_sprite(param1_00,param2,0);
+		    param2_00 = System_Action_ProtoDefaultUserCmd__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_ProtoDefaultUserCmd__TypeInfo), iVar2 == 0))
+		    break;
+		    iVar2 = func_ii_4329(param1 + 0x4c,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: add_PlayerRemovedEvent ---
+		void ServicesNamespace_CombatService__add_PlayerRemovedEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a5595a == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_ProtoDefaultUserCmd__TypeInfo);
+		    DAT_ram_00a5595a = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x4c);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = func_ii_7048(param1_00,param2,0);
+		    param2_00 = System_Action_ProtoDefaultUserCmd__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_ProtoDefaultUserCmd__TypeInfo), iVar2 == 0))
+		    break;
+		    iVar2 = func_ii_4329(param1 + 0x4c,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: remove_PlayerRemovedEvent ---
+		void ServicesNamespace_CombatService__remove_PlayerRemovedEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a5595b == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_ProtoThemeScoreChangedEvt__TypeInfo);
+		    DAT_ram_00a5595b = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x50);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = UnityEngine_UI_Image__set_sprite(param1_00,param2,0);
+		    param2_00 = System_Action_ProtoThemeScoreChangedEvt__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_ProtoThemeScoreChangedEvt__TypeInfo),
+		       iVar2 == 0)) break;
+		    iVar2 = func_ii_4329(param1 + 0x50,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: add_ThemeScoreChangedEvt ---
+		void ServicesNamespace_CombatService__add_ThemeScoreChangedEvt
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a5595c == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_ProtoThemeScoreChangedEvt__TypeInfo);
+		    DAT_ram_00a5595c = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x50);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = func_ii_7048(param1_00,param2,0);
+		    param2_00 = System_Action_ProtoThemeScoreChangedEvt__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_ProtoThemeScoreChangedEvt__TypeInfo),
+		       iVar2 == 0)) break;
+		    iVar2 = func_ii_4329(param1 + 0x50,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: remove_ThemeScoreChangedEvt ---
+		void ServicesNamespace_CombatService__remove_ThemeScoreChangedEvt
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a5595d == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_ProtoAntiqEffectTriggeredEvt__TypeInfo);
+		    DAT_ram_00a5595d = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x54);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = UnityEngine_UI_Image__set_sprite(param1_00,param2,0);
+		    param2_00 = System_Action_ProtoAntiqEffectTriggeredEvt__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_ProtoAntiqEffectTriggeredEvt__TypeInfo),
+		       iVar2 == 0)) break;
+		    iVar2 = func_ii_4329(param1 + 0x54,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: add_AntiqEffectTriggeredEvt ---
+		void ServicesNamespace_CombatService__add_AntiqEffectTriggeredEvt
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a5595e == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_ProtoAntiqEffectTriggeredEvt__TypeInfo);
+		    DAT_ram_00a5595e = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x54);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = func_ii_7048(param1_00,param2,0);
+		    param2_00 = System_Action_ProtoAntiqEffectTriggeredEvt__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_ProtoAntiqEffectTriggeredEvt__TypeInfo),
+		       iVar2 == 0)) break;
+		    iVar2 = func_ii_4329(param1 + 0x54,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: get_ServiceId ---
+		void ServicesNamespace_CombatService__get_ServiceId(int param1,int param2,undefined4 param3)
+		
+		{
+		  int *param1_00;
+		  int iVar1;
+		  
+		  if (DAT_ram_00a5595f == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_Core_Net_AbstractService_LogEvent_CombatEvents___);
+		    Mono_Security_ASN1__get_Item(&Protocol_Combat_ProtoAntiqEffectTriggeredEvt_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Protocol_Combat_ProtoChatEvt_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Protocol_Combat_ProtoCombatCompleteEvt_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Protocol_Combat_ProtoCombatEventsEvt_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Protocol_Combat_ProtoCombatTerminatedEvt_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Protocol_Common_ProtoDefaultUserCmd_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Protocol_Combat_ProtoEffectsChangedEvt_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Protocol_Combat_ProtoFieldChangedEvt_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Protocol_Combat_ProtoJumpToCombatEvt_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Protocol_Combat_ProtoPlayerActionEvt_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Protocol_Combat_ProtoPlayerAddedEvt_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Protocol_Combat_ProtoShowHintEvt_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Protocol_Combat_ProtoSkillsChangedEvt_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Protocol_Combat_ProtoSpellAppliedEvt_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Protocol_Combat_ProtoSpellCoolDownChangedEvt_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Protocol_Combat_ProtoSwitchTurnEvt_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Protocol_Combat_ProtoThemeScoreChangedEvt_TypeInfo);
+		    DAT_ram_00a5595f = '\x01';
+		  }
+		  iVar1 = *(int *)(param2 + 0x10);
+		  UnityEngine_Purchasing_Extension_AbstractPurchasingModule__BindExtension___Il2CppFullySharedGenericType_
+		            (param1,iVar1,*(undefined4 *)(param2 + 0x20),
+		             Method_Core_Net_AbstractService_LogEvent_CombatEvents___);
+		  if (iVar1 == 1) {
+		    iVar1 = *(int *)(param1 + 0x14);
+		    if (iVar1 == 0) {
+		      return;
+		    }
+		    param1_00 = *(int **)(param2 + 0x20);
+		    if ((param1_00 != (int *)0x0) && (Protocol_Combat_ProtoJumpToCombatEvt_TypeInfo != *param1_00))
+		    {
+		      System_Activator__CreateInstance(param1_00,Protocol_Combat_ProtoJumpToCombatEvt_TypeInfo);
+		      do {
+		        halt_trap();
+		      } while( true );
+		    }
+		  }
+		  else if (iVar1 == 2) {
+		    iVar1 = *(int *)(param1 + 0x20);
+		    if (iVar1 == 0) {
+		      return;
+		    }
+		    param1_00 = *(int **)(param2 + 0x20);
+		    if ((param1_00 != (int *)0x0) && (Protocol_Combat_ProtoPlayerActionEvt_TypeInfo != *param1_00))
+		    {
+		      System_Activator__CreateInstance(param1_00,Protocol_Combat_ProtoPlayerActionEvt_TypeInfo);
+		      do {
+		        halt_trap();
+		      } while( true );
+		    }
+		  }
+		  else if (iVar1 == 3) {
+		    iVar1 = *(int *)(param1 + 0x18);
+		    if (iVar1 == 0) {
+		      return;
+		    }
+		    param1_00 = *(int **)(param2 + 0x20);
+		    if ((param1_00 != (int *)0x0) && (Protocol_Combat_ProtoSwitchTurnEvt_TypeInfo != *param1_00)) {
+		      System_Activator__CreateInstance(param1_00,Protocol_Combat_ProtoSwitchTurnEvt_TypeInfo);
+		      do {
+		        halt_trap();
+		      } while( true );
+		    }
+		  }
+		  else if (iVar1 == 4) {
+		    iVar1 = *(int *)(param1 + 0x1c);
+		    if (iVar1 == 0) {
+		      return;
+		    }
+		    param1_00 = *(int **)(param2 + 0x20);
+		    if ((param1_00 != (int *)0x0) && (Protocol_Combat_ProtoFieldChangedEvt_TypeInfo != *param1_00))
+		    {
+		      System_Activator__CreateInstance(param1_00,Protocol_Combat_ProtoFieldChangedEvt_TypeInfo);
+		      do {
+		        halt_trap();
+		      } while( true );
+		    }
+		  }
+		  else if (iVar1 == 5) {
+		    iVar1 = *(int *)(param1 + 0x34);
+		    if (iVar1 == 0) {
+		      return;
+		    }
+		    param1_00 = *(int **)(param2 + 0x20);
+		    if ((param1_00 != (int *)0x0) && (Protocol_Combat_ProtoSkillsChangedEvt_TypeInfo != *param1_00))
+		    {
+		      System_Activator__CreateInstance(param1_00,Protocol_Combat_ProtoSkillsChangedEvt_TypeInfo);
+		      do {
+		        halt_trap();
+		      } while( true );
+		    }
+		  }
+		  else if (iVar1 == 6) {
+		    iVar1 = *(int *)(param1 + 0x24);
+		    if (iVar1 == 0) {
+		      return;
+		    }
+		    param1_00 = *(int **)(param2 + 0x20);
+		    if ((param1_00 != (int *)0x0) && (Protocol_Combat_ProtoCombatEventsEvt_TypeInfo != *param1_00))
+		    {
+		      System_Activator__CreateInstance(param1_00,Protocol_Combat_ProtoCombatEventsEvt_TypeInfo);
+		      do {
+		        halt_trap();
+		      } while( true );
+		    }
+		  }
+		  else if (iVar1 == 7) {
+		    iVar1 = *(int *)(param1 + 0x44);
+		    if (iVar1 == 0) {
+		      return;
+		    }
+		    param1_00 = *(int **)(param2 + 0x20);
+		    if ((param1_00 != (int *)0x0) && (Protocol_Combat_ProtoChatEvt_TypeInfo != *param1_00)) {
+		      System_Activator__CreateInstance(param1_00,Protocol_Combat_ProtoChatEvt_TypeInfo);
+		      do {
+		        halt_trap();
+		      } while( true );
+		    }
+		  }
+		  else if (iVar1 == 8) {
+		    iVar1 = *(int *)(param1 + 0x2c);
+		    if (iVar1 == 0) {
+		      return;
+		    }
+		    param1_00 = *(int **)(param2 + 0x20);
+		    if ((param1_00 != (int *)0x0) && (Protocol_Combat_ProtoShowHintEvt_TypeInfo != *param1_00)) {
+		      System_Activator__CreateInstance(param1_00,Protocol_Combat_ProtoShowHintEvt_TypeInfo);
+		      do {
+		        halt_trap();
+		      } while( true );
+		    }
+		  }
+		  else if (iVar1 == 9) {
+		    iVar1 = *(int *)(param1 + 0x38);
+		    if (iVar1 == 0) {
+		      return;
+		    }
+		    param1_00 = *(int **)(param2 + 0x20);
+		    if ((param1_00 != (int *)0x0) &&
+		       (Protocol_Combat_ProtoSpellCoolDownChangedEvt_TypeInfo != *param1_00)) {
+		      System_Activator__CreateInstance
+		                (param1_00,Protocol_Combat_ProtoSpellCoolDownChangedEvt_TypeInfo);
+		      do {
+		        halt_trap();
+		      } while( true );
+		    }
+		  }
+		  else if (iVar1 == 10) {
+		    iVar1 = *(int *)(param1 + 0x40);
+		    if (iVar1 == 0) {
+		      return;
+		    }
+		    param1_00 = *(int **)(param2 + 0x20);
+		    if ((param1_00 != (int *)0x0) && (Protocol_Combat_ProtoEffectsChangedEvt_TypeInfo != *param1_00)
+		       ) {
+		      System_Activator__CreateInstance(param1_00,Protocol_Combat_ProtoEffectsChangedEvt_TypeInfo);
+		      do {
+		        halt_trap();
+		      } while( true );
+		    }
+		  }
+		  else if (iVar1 == 0xb) {
+		    iVar1 = *(int *)(param1 + 0x3c);
+		    if (iVar1 == 0) {
+		      return;
+		    }
+		    param1_00 = *(int **)(param2 + 0x20);
+		    if ((param1_00 != (int *)0x0) && (Protocol_Combat_ProtoSpellAppliedEvt_TypeInfo != *param1_00))
+		    {
+		      System_Activator__CreateInstance(param1_00,Protocol_Combat_ProtoSpellAppliedEvt_TypeInfo);
+		      do {
+		        halt_trap();
+		      } while( true );
+		    }
+		  }
+		  else {
+		    if (iVar1 == 0xc) {
+		      return;
+		    }
+		    if (iVar1 == 0xd) {
+		      iVar1 = *(int *)(param1 + 0x48);
+		      if (iVar1 == 0) {
+		        return;
+		      }
+		      param1_00 = *(int **)(param2 + 0x20);
+		      if ((param1_00 != (int *)0x0) && (Protocol_Combat_ProtoPlayerAddedEvt_TypeInfo != *param1_00))
+		      {
+		        System_Activator__CreateInstance(param1_00,Protocol_Combat_ProtoPlayerAddedEvt_TypeInfo);
+		        do {
+		          halt_trap();
+		        } while( true );
+		      }
+		    }
+		    else if (iVar1 == 0xe) {
+		      iVar1 = *(int *)(param1 + 0x4c);
+		      if (iVar1 == 0) {
+		        return;
+		      }
+		      param1_00 = *(int **)(param2 + 0x20);
+		      if ((param1_00 != (int *)0x0) && (Protocol_Common_ProtoDefaultUserCmd_TypeInfo != *param1_00))
+		      {
+		        System_Activator__CreateInstance(param1_00,Protocol_Common_ProtoDefaultUserCmd_TypeInfo);
+		        do {
+		          halt_trap();
+		        } while( true );
+		      }
+		    }
+		    else if (iVar1 == 0xf) {
+		      iVar1 = *(int *)(param1 + 0x50);
+		      if (iVar1 == 0) {
+		        return;
+		      }
+		      param1_00 = *(int **)(param2 + 0x20);
+		      if ((param1_00 != (int *)0x0) &&
+		         (Protocol_Combat_ProtoThemeScoreChangedEvt_TypeInfo != *param1_00)) {
+		        System_Activator__CreateInstance
+		                  (param1_00,Protocol_Combat_ProtoThemeScoreChangedEvt_TypeInfo);
+		        do {
+		          halt_trap();
+		        } while( true );
+		      }
+		    }
+		    else {
+		      if (iVar1 == 0x10) {
+		        return;
+		      }
+		      if (iVar1 == 0x11) {
+		        iVar1 = *(int *)(param1 + 0x28);
+		        if (iVar1 == 0) {
+		          return;
+		        }
+		        param1_00 = *(int **)(param2 + 0x20);
+		        if ((param1_00 != (int *)0x0) &&
+		           (Protocol_Combat_ProtoCombatCompleteEvt_TypeInfo != *param1_00)) {
+		          System_Activator__CreateInstance
+		                    (param1_00,Protocol_Combat_ProtoCombatCompleteEvt_TypeInfo);
+		          do {
+		            halt_trap();
+		          } while( true );
+		        }
+		      }
+		      else if (iVar1 == 0x12) {
+		        iVar1 = *(int *)(param1 + 0x30);
+		        if (iVar1 == 0) {
+		          return;
+		        }
+		        param1_00 = *(int **)(param2 + 0x20);
+		        if ((param1_00 != (int *)0x0) &&
+		           (Protocol_Combat_ProtoCombatTerminatedEvt_TypeInfo != *param1_00)) {
+		          System_Activator__CreateInstance
+		                    (param1_00,Protocol_Combat_ProtoCombatTerminatedEvt_TypeInfo);
+		          do {
+		            halt_trap();
+		          } while( true );
+		        }
+		      }
+		      else {
+		        if (iVar1 != 0x13) {
+		          return;
+		        }
+		        iVar1 = *(int *)(param1 + 0x54);
+		        if (iVar1 == 0) {
+		          return;
+		        }
+		        param1_00 = *(int **)(param2 + 0x20);
+		        if ((param1_00 != (int *)0x0) &&
+		           (Protocol_Combat_ProtoAntiqEffectTriggeredEvt_TypeInfo != *param1_00)) {
+		          System_Activator__CreateInstance
+		                    (param1_00,Protocol_Combat_ProtoAntiqEffectTriggeredEvt_TypeInfo);
+		          do {
+		            halt_trap();
+		          } while( true );
+		        }
+		      }
+		    }
+		  }
+		  (**(code **)((ulonglong)*(uint *)(iVar1 + 0xc) * 4))
+		            (*(undefined4 *)(iVar1 + 0x20),param1_00,*(undefined4 *)(iVar1 + 0x14));
+		  return;
+		}
+		*/
+
 }

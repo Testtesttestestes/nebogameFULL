@@ -28,6 +28,45 @@ namespace Gameplay.ThemeDuel.View.ContextMenu
 		[Address(RVA = "0x6F66", Offset = "0x6F66", VA = "0x6F66", Slot = "5")]
 		public override bool Validate(IArtifactView artifactView)
 		{
+		/* --- GHIDRA: Validate ---
+		void Gameplay_ThemeDuel_View_ContextMenu_BuyThemeDuelContextMenuElement__Validate
+		               (undefined4 param1,int *param2,undefined4 param3)
+		
+		{
+		  uint uVar1;
+		  uint *puVar2;
+		  int iVar3;
+		  
+		  if (DAT_ram_00a585cf == '\0') {
+		    Mono_Security_ASN1__get_Item(&Gameplay_Inventory_Controller_ArtifactViewEvents_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Gameplay_Inventory_View_IArtifactView_TypeInfo);
+		    DAT_ram_00a585cf = '\x01';
+		  }
+		  iVar3 = *param2;
+		  if (*(ushort *)(iVar3 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (Gameplay_Inventory_View_IArtifactView_TypeInfo ==
+		          *(int *)(*(int *)(iVar3 + 0x58) + uVar1 * 8)) {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar3 + 0x58) + uVar1 * 8 + 4) * 8 + iVar3 + 0xd0);
+		        goto code_r0x80f0fad9;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar3 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(param2,Gameplay_Inventory_View_IArtifactView_TypeInfo,2);
+		code_r0x80f0fad9:
+		  iVar3 = (**(code **)((ulonglong)*puVar2 * 4))(param2,puVar2[1]);
+		  if ((*(int *)(iVar3 + 0x80) == 6) &&
+		     (iVar3 = **(int **)(Gameplay_Inventory_Controller_ArtifactViewEvents_TypeInfo + 0x5c),
+		     iVar3 != 0)) {
+		    (**(code **)((ulonglong)*(uint *)(iVar3 + 0xc) * 4))
+		              (*(undefined4 *)(iVar3 + 0x20),param2,*(undefined4 *)(iVar3 + 0x14));
+		  }
+		  return;
+		}
+		*/
+
 			return default(bool);
 		}
 
@@ -45,4 +84,39 @@ namespace Gameplay.ThemeDuel.View.ContextMenu
 		{
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_ActionId ---
+		uint Gameplay_ThemeDuel_View_ContextMenu_BuyThemeDuelContextMenuElement__get_ActionId
+		               (undefined4 param1,int *param2,undefined4 param3)
+		
+		{
+		  uint uVar1;
+		  uint *puVar2;
+		  int iVar3;
+		  
+		  if (DAT_ram_00a585ce == '\0') {
+		    Mono_Security_ASN1__get_Item(&Gameplay_Inventory_View_IArtifactView_TypeInfo);
+		    DAT_ram_00a585ce = '\x01';
+		  }
+		  iVar3 = *param2;
+		  if (*(ushort *)(iVar3 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (Gameplay_Inventory_View_IArtifactView_TypeInfo ==
+		          *(int *)(*(int *)(iVar3 + 0x58) + uVar1 * 8)) {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar3 + 0x58) + uVar1 * 8 + 4) * 8 + iVar3 + 0xd0);
+		        goto code_r0x80f0fa28;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar3 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(param2,Gameplay_Inventory_View_IArtifactView_TypeInfo,2);
+		code_r0x80f0fa28:
+		  iVar3 = (**(code **)((ulonglong)*puVar2 * 4))(param2,puVar2[1]);
+		  return (uint)(*(int *)(iVar3 + 0x80) == 6);
+		}
+		*/
+
 }

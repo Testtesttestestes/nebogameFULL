@@ -20,6 +20,44 @@ namespace Core.Errors.Expected
 		[Address(RVA = "0xAE26", Offset = "0xAE26", VA = "0xAE26")]
 		public ExpectedArenaWhitMonsterErrors()
 		{
+		/* --- GHIDRA: .ctor ---
+		undefined4
+		Core_Errors_Expected_ExpectedArenaWhitMonsterErrors___ctor(int param1,uint param2,undefined4 param3)
+		
+		{
+		  int *param1_00;
+		  
+		  if (DAT_ram_00a5a357 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_Errors_Expected_ExpectedAuchanError_ErrorArgs_TypeInfo);
+		    DAT_ram_00a5a357 = '\x01';
+		  }
+		  param1_00 = *(int **)(param1 + 8);
+		  if (param1_00 != (int *)0x0) {
+		    if (((uint)*(byte *)(*param1_00 + 0xb8) <
+		         (uint)*(byte *)(Core_Errors_Expected_ExpectedAuchanError_ErrorArgs_TypeInfo + 0xb8)) ||
+		       (*(int *)(*(int *)(*param1_00 + 100) +
+		                 (uint)*(byte *)(Core_Errors_Expected_ExpectedAuchanError_ErrorArgs_TypeInfo + 0xb8)
+		                 * 4 + -4) != Core_Errors_Expected_ExpectedAuchanError_ErrorArgs_TypeInfo)) {
+		      System_Activator__CreateInstance
+		                (param1_00,Core_Errors_Expected_ExpectedAuchanError_ErrorArgs_TypeInfo);
+		      do {
+		        halt_trap();
+		      } while( true );
+		    }
+		  }
+		  if (param2 == 0xfffffffc) {
+		    Core_Errors_Expected_ExpectedAuchanError__Handle(0xfffffffc,param1_00,0xfffffffc);
+		  }
+		  else {
+		    if (param2 < 0xfffffffe) {
+		      return 0;
+		    }
+		    Core_Errors_Expected_ExpectedAuchanError__ShowNoTradeAccountDialogWindow(param2,param2);
+		  }
+		  return 1;
+		}
+		*/
+
 		}
 	}
 }

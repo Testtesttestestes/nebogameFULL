@@ -26,6 +26,20 @@ namespace Gameplay.Inventory.View.Info
 		[Address(RVA = "0x7914", Offset = "0x7914", VA = "0x7914")]
 		public ArtifactInfoPropertyTitleView()
 		{
+		/* --- GHIDRA: .ctor ---
+		undefined4
+		Gameplay_Inventory_View_Info_ArtifactInfoPropertyTitleView___ctor
+		          (undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a5a0c4 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_12635);
+		    DAT_ram_00a5a0c4 = '\x01';
+		  }
+		  return StringLiteral_12635;
+		}
+		*/
+
 		}
 
 		// Token: 0x040015EB RID: 5611

@@ -21,6 +21,44 @@ namespace UI.Utils
 		[Address(RVA = "0x5C75", Offset = "0x5C75", VA = "0x5C75")]
 		public LateUpdateOnceInvoker()
 		{
+		/* --- GHIDRA: .ctor ---
+		void UI_Utils_LateUpdateOnceInvoker___ctor(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  int *piVar2;
+		  int iVar3;
+		  
+		  if (DAT_ram_00a5b8b0 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_TMP_TextInfo__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Method_UnityEngine_Component_GetComponent_LayoutElement___);
+		    Mono_Security_ASN1__get_Item(&Method_UnityEngine_Component_GetComponent_RectTransform___);
+		    Mono_Security_ASN1__get_Item(&Method_UnityEngine_Component_GetComponent_TextMeshProUGUI___);
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Utils_LayoutElementTMPBoundsPreferedWidthSetter_TextFiledOnOnPreRenderText__
+		              );
+		    DAT_ram_00a5b8b0 = '\x01';
+		  }
+		  uVar1 = func_ii_5677(param1,Method_UnityEngine_Component_GetComponent_TextMeshProUGUI___);
+		  *(undefined4 *)(param1 + 0x14) = uVar1;
+		  uVar1 = func_ii_5677(param1,Method_UnityEngine_Component_GetComponent_LayoutElement___);
+		  *(undefined4 *)(param1 + 0x18) = uVar1;
+		  uVar1 = func_ii_5677(param1,Method_UnityEngine_Component_GetComponent_RectTransform___);
+		  *(undefined4 *)(param1 + 0x10) = uVar1;
+		  piVar2 = *(int **)(param1 + 0x14);
+		  uVar1 = unnamed_function_1417(System_Action_TMP_TextInfo__TypeInfo);
+		  UnityEngine_UIElements_VisualElement__get_layout
+		            (uVar1,param1,
+		             Method_UI_Utils_LayoutElementTMPBoundsPreferedWidthSetter_TextFiledOnOnPreRenderText__,
+		             0);
+		  iVar3 = *piVar2;
+		  (**(code **)((ulonglong)*(uint *)(iVar3 + 0x330) * 4))
+		            (piVar2,uVar1,*(undefined4 *)(iVar3 + 0x334));
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x04000347 RID: 839

@@ -26,6 +26,26 @@ namespace Gameplay.WorldAxis.Office.View.Schedule
 		[Address(RVA = "0x63C7", Offset = "0x63C7", VA = "0x63C7", Slot = "10")]
 		protected override void CallElementClickedEvent(ColossusBattleListElement.ColossusBattleListElementArgs args)
 		{
+		/* --- GHIDRA: CallElementClickedEvent ---
+		void Gameplay_WorldAxis_Office_View_Schedule_ColossusBattleListElement__CallElementClickedEvent
+		               (undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a58b93 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Elements_GenericList_SelectableListElement_ColossusBattleListElement_ColossusBattleListElementArgs___ctor__
+		              );
+		    DAT_ram_00a58b93 = '\x01';
+		  }
+		  UI_Elements_GenericList_SelectableListElementArgs___Il2CppFullySharedGenericType____ctor
+		            (param1,
+		             Method_UI_Elements_GenericList_SelectableListElement_ColossusBattleListElement_ColossusBattleListElementArgs___ctor__
+		            );
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x060011CB RID: 4555 RVA: 0x00002050 File Offset: 0x00000250
@@ -33,6 +53,26 @@ namespace Gameplay.WorldAxis.Office.View.Schedule
 		[Address(RVA = "0x63C8", Offset = "0x63C8", VA = "0x63C8")]
 		public ColossusBattleListElement()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_WorldAxis_Office_View_Schedule_ColossusBattleListElement___ctor
+		               (undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a58b94 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Elements_GenericList_SelectableListElementArgs_ColossusBattleListElement___ctor__
+		              );
+		    DAT_ram_00a58b94 = '\x01';
+		  }
+		  UnityEngine_InputSystem_LowLevel_SelectObservable___Il2CppFullySharedGenericType____Il2CppFullySharedGenericType___Subscribe
+		            (param1,
+		             Method_UI_Elements_GenericList_SelectableListElementArgs_ColossusBattleListElement___ctor__
+		            );
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0400092D RID: 2349

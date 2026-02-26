@@ -119,6 +119,16 @@ namespace Gameplay.GameEvents.Model.Tags
 		[Address(RVA = "0x7EBE", Offset = "0x7EBE", VA = "0x7EBE")]
 		public bool IsSupport(string tagName)
 		{
+		/* --- GHIDRA: IsSupport ---
+		void Gameplay_GameEvents_Model_Tags_AbstractTag__IsSupport(int param1,undefined4 param2)
+		
+		{
+		  *(undefined4 *)(param1 + 0x14) = 0;
+		  *(undefined8 *)(param1 + 8) = 0;
+		  return;
+		}
+		*/
+
 			return default(bool);
 		}
 
@@ -182,4 +192,53 @@ namespace Gameplay.GameEvents.Model.Tags
 			public Action<GameObject> ViewCallback;
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: set_EventNumberParams ---
+		undefined4
+		Gameplay_GameEvents_Model_Tags_AbstractTag__set_EventNumberParams
+		          (int *param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a574ca == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Google_Protobuf_Collections_RepeatedField_string__Contains__);
+		    DAT_ram_00a574ca = '\x01';
+		  }
+		  uVar1 = (**(code **)((ulonglong)*(uint *)(*param1 + 0xf0) * 4))
+		                    (param1,*(undefined4 *)(*param1 + 0xf4));
+		  uVar1 = Google_Protobuf_Collections_RepeatedField_object___Clear
+		                    (uVar1,param2,
+		                     Method_Google_Protobuf_Collections_RepeatedField_string__Contains__);
+		  return uVar1;
+		}
+		*/
+
+
+		/* --- GHIDRA: GetView<object> ---
+		void Gameplay_GameEvents_Model_Tags_AbstractTag__GetView_object_
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  float param2_00;
+		  
+		  *(undefined4 *)(param1 + 0x24) = param3;
+		  *(undefined4 *)(param1 + 0x20) = param2;
+		  if ((*(char *)(param1 + 0x31) == '\0') && (*(char *)(param1 + 0x30) == '\0')) {
+		    param2_00 = 1.0;
+		  }
+		  else {
+		    param2_00 = 0.0;
+		  }
+		  AssetContent_GameAssetViewRawImage__TryGetCurrentContent
+		            (*(undefined4 *)(param1 + 0x1c),param2_00,0);
+		  Core_Data_MedalData__IsMedalAchieved(*(undefined4 *)(param1 + 0x18),param2_00,0);
+		  Core_Data_MedalData__IsMedalAchieved(*(undefined4 *)(param1 + 0x10),param2_00,0);
+		  return;
+		}
+		*/
+
 }

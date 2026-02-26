@@ -36,4 +36,16 @@ namespace UI.Elements.Buttons
 		[SerializeField]
 		private Price _price;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_Price ---
+		void UI_Elements_Buttons_ButtonWithCost__get_Price(undefined4 param1,undefined4 param2)
+		
+		{
+		  UnityEngine_UI_AnimationTriggers___ctor(param1,0);
+		  return;
+		}
+		*/
+
 }

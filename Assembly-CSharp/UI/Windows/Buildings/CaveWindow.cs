@@ -178,6 +178,98 @@ namespace UI.Windows.Buildings
 		[Address(RVA = "0x623A", Offset = "0x623A", VA = "0x623A", Slot = "22")]
 		protected override void OnShow(CaveWindowArgs args)
 		{
+		/* --- GHIDRA: <set_ResourceImageAssetId>b__27_0 ---
+		void UI_Windows_Buildings_CaveWindow___set_ResourceImageAssetId_b__27_0
+		               (int param1,undefined4 param2)
+		
+		{
+		  *(undefined4 *)(param1 + 0x6c) = 0;
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: OnShow ---
+		void UI_Windows_Buildings_CaveWindow__OnShow(int param1,undefined4 param2)
+		
+		{
+		  uint uVar1;
+		  undefined4 uVar2;
+		  uint *puVar3;
+		  undefined4 uVar4;
+		  int *piVar5;
+		  int iVar6;
+		  undefined4 uVar7;
+		  
+		  if (DAT_ram_00a58aa3 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Gameplay_Cave_CaveController_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Gameplay_Cave_CaveEvents_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Gameplay_Cave_CaveModel_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Gameplay_Cave_Controller_CaveWindowMediator_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Core_Gameplay_IGame_TypeInfo);
+		    DAT_ram_00a58aa3 = '\x01';
+		  }
+		  uVar2 = unnamed_function_1417(Gameplay_Cave_CaveEvents_TypeInfo);
+		  *(undefined4 *)(param1 + 0x70) = uVar2;
+		  if (DAT_ram_00a6456f == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_Gameplay_Game_TypeInfo);
+		    DAT_ram_00a6456f = '\x01';
+		  }
+		  uVar1 = 0;
+		  piVar5 = (int *)**(undefined4 **)(Core_Gameplay_Game_TypeInfo + 0x5c);
+		  iVar6 = *piVar5;
+		  if (*(ushort *)(iVar6 + 0xb6) != 0) {
+		    do {
+		      if (Core_Gameplay_IGame_TypeInfo == *(int *)(*(int *)(iVar6 + 0x58) + uVar1 * 8)) {
+		        puVar3 = (uint *)(*(int *)(*(int *)(iVar6 + 0x58) + uVar1 * 8 + 4) * 8 + iVar6 + 0x140);
+		        goto code_r0x80f6e984;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar6 + 0xb6) != uVar1);
+		  }
+		  puVar3 = (uint *)func_ii_1080(piVar5,Core_Gameplay_IGame_TypeInfo,0x10);
+		code_r0x80f6e984:
+		  uVar2 = (**(code **)((ulonglong)*puVar3 * 4))(piVar5,puVar3[1]);
+		  uVar2 = func_ii_7112(uVar2,0);
+		  if (DAT_ram_00a6456f == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_Gameplay_Game_TypeInfo);
+		    DAT_ram_00a6456f = '\x01';
+		  }
+		  piVar5 = (int *)**(undefined4 **)(Core_Gameplay_Game_TypeInfo + 0x5c);
+		  iVar6 = *piVar5;
+		  if (*(ushort *)(iVar6 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (Core_Gameplay_IGame_TypeInfo == *(int *)(*(int *)(iVar6 + 0x58) + uVar1 * 8)) {
+		        puVar3 = (uint *)(*(int *)(*(int *)(iVar6 + 0x58) + uVar1 * 8 + 4) * 8 + iVar6 + 0x220);
+		        goto code_r0x80f6ea36;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar6 + 0xb6) != uVar1);
+		  }
+		  puVar3 = (uint *)func_ii_1080(piVar5,Core_Gameplay_IGame_TypeInfo,0x2c);
+		code_r0x80f6ea36:
+		  iVar6 = (**(code **)((ulonglong)*puVar3 * 4))(piVar5,puVar3[1]);
+		  uVar7 = *(undefined4 *)(iVar6 + 0x18);
+		  uVar4 = unnamed_function_1417(Gameplay_Cave_CaveModel_TypeInfo);
+		  Gameplay_Cave_CaveModel__Dispose(uVar4,uVar2,uVar7,0);
+		  *(undefined4 *)(param1 + 0x74) = uVar4;
+		  uVar7 = *(undefined4 *)(param1 + 0x70);
+		  uVar2 = unnamed_function_1417(Gameplay_Cave_CaveController_TypeInfo);
+		  Gameplay_Chat_Control_ChatViewMediator___HandleMessageDeleteRequestEvent_b__31_0
+		            (uVar2,uVar4,uVar7,0);
+		  *(undefined4 *)(param1 + 0x78) = uVar2;
+		  uVar4 = *(undefined4 *)(param1 + 0x74);
+		  uVar7 = *(undefined4 *)(param1 + 0x70);
+		  piVar5 = (int *)unnamed_function_1417(Gameplay_Cave_Controller_CaveWindowMediator_TypeInfo);
+		  Gameplay_Cave_CaveModel_MonsterInCave___ctor(piVar5,uVar4,uVar7,uVar2,0);
+		  *(int **)(param1 + 0x7c) = piVar5;
+		  (**(code **)((ulonglong)*(uint *)(*piVar5 + 0x160) * 4))
+		            (piVar5,param1,*(undefined4 *)(*piVar5 + 0x164));
+		  MVC_AbstractController__Dispose(*(undefined4 *)(param1 + 0x78),0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06001031 RID: 4145 RVA: 0x00002050 File Offset: 0x00000250
@@ -185,6 +277,23 @@ namespace UI.Windows.Buildings
 		[Address(RVA = "0x623B", Offset = "0x623B", VA = "0x623B")]
 		private void InitMVC()
 		{
+		/* --- GHIDRA: InitMVC ---
+		void UI_Windows_Buildings_CaveWindow__InitMVC(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  
+		  iVar1 = **(int **)(param1 + 0x7c);
+		  (**(code **)((ulonglong)*(uint *)(iVar1 + 0x130) * 4))
+		            (*(int **)(param1 + 0x7c),*(undefined4 *)(iVar1 + 0x134));
+		  MVC_AbstractController__Run(*(undefined4 *)(param1 + 0x78),0);
+		  Gameplay_Cave_ResourceRewardBehaviour___ctor(*(undefined4 *)(param1 + 0x70),0);
+		  *(undefined8 *)(param1 + 0x78) = 0;
+		  *(undefined8 *)(param1 + 0x70) = 0;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06001032 RID: 4146 RVA: 0x00002050 File Offset: 0x00000250
@@ -192,6 +301,35 @@ namespace UI.Windows.Buildings
 		[Address(RVA = "0x623C", Offset = "0x623C", VA = "0x623C")]
 		private void DeinitMVC()
 		{
+		/* --- GHIDRA: DeinitMVC ---
+		void UI_Windows_Buildings_CaveWindow__DeinitMVC(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  
+		  if (DAT_ram_00a58aa4 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UI_Windows_Buildings_BaseBuildingWindow_CaveWindowArgs__UserIsle__OnClose__);
+		    DAT_ram_00a58aa4 = '\x01';
+		  }
+		  UI_Windows_Buildings_BaseBuildingWindow_object____Il2CppFullySharedGenericType____ctor
+		            (param1,
+		             Method_UI_Windows_Buildings_BaseBuildingWindow_CaveWindowArgs__UserIsle__OnClose__);
+		  if (*(int *)(param1 + 0x6c) != 0) {
+		    func_ii_7891(*(int *)(param1 + 0x6c),0,0);
+		  }
+		  *(undefined4 *)(param1 + 0x6c) = 0;
+		  iVar1 = **(int **)(param1 + 0x7c);
+		  (**(code **)((ulonglong)*(uint *)(iVar1 + 0x130) * 4))
+		            (*(int **)(param1 + 0x7c),*(undefined4 *)(iVar1 + 0x134));
+		  MVC_AbstractController__Run(*(undefined4 *)(param1 + 0x78),0);
+		  Gameplay_Cave_ResourceRewardBehaviour___ctor(*(undefined4 *)(param1 + 0x70),0);
+		  *(undefined8 *)(param1 + 0x78) = 0;
+		  *(undefined8 *)(param1 + 0x70) = 0;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06001033 RID: 4147 RVA: 0x00002050 File Offset: 0x00000250
@@ -199,6 +337,23 @@ namespace UI.Windows.Buildings
 		[Address(RVA = "0x623D", Offset = "0x623D", VA = "0x623D", Slot = "19")]
 		protected override void OnClose()
 		{
+		/* --- GHIDRA: OnClose ---
+		undefined4 UI_Windows_Buildings_CaveWindow__OnClose(int param1,undefined4 param2)
+		
+		{
+		  undefined4 param1_00;
+		  int iVar1;
+		  
+		  param1_00 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_uint__object___MoveNext
+		                        (*(undefined4 *)(param1 + 100),0);
+		  iVar1 = func_ii_7305(param1_00,0);
+		  if (iVar1 == 0) {
+		    return 1;
+		  }
+		  return (uint)(*(char *)(*(int *)(param1 + 100) + 0x3d) != '\0');
+		}
+		*/
+
 		}
 
 		// Token: 0x06001034 RID: 4148 RVA: 0x000045A8 File Offset: 0x000027A8
@@ -206,6 +361,21 @@ namespace UI.Windows.Buildings
 		[Address(RVA = "0x623E", Offset = "0x623E", VA = "0x623E", Slot = "17")]
 		public override bool CheckForClose()
 		{
+		/* --- GHIDRA: CheckForClose ---
+		void UI_Windows_Buildings_CaveWindow__CheckForClose(undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a58aa5 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UI_Windows_Buildings_BaseBuildingWindow_CaveWindowArgs___ctor__);
+		    DAT_ram_00a58aa5 = '\x01';
+		  }
+		  UI_Windows_Buildings_BaseBuildingWindow_object____Il2CppFullySharedGenericType___OnShow
+		            (param1,Method_UI_Windows_Buildings_BaseBuildingWindow_CaveWindowArgs___ctor__);
+		  return;
+		}
+		*/
+
 			return default(bool);
 		}
 
@@ -214,6 +384,44 @@ namespace UI.Windows.Buildings
 		[Address(RVA = "0x623F", Offset = "0x623F", VA = "0x623F")]
 		public CaveWindow()
 		{
+		/* --- GHIDRA: .ctor ---
+		void UI_Windows_Buildings_CaveWindow___ctor(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  undefined4 param1_00;
+		  
+		  if (DAT_ram_00a58aa6 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UI_Windows_Buildings_CaveWindow__set_ResourceImageAssetId_b__27_1__);
+		    Mono_Security_ASN1__get_Item(&DG_Tweening_TweenCallback_TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_DG_Tweening_TweenExtensions_Play_TweenerCore_Color__Color__ColorOptions____);
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_DG_Tweening_TweenSettingsExtensions_OnComplete_TweenerCore_Color__Color__ColorOptions____
+		              );
+		    DAT_ram_00a58aa6 = '\x01';
+		  }
+		  uVar1 = Core_Animations_GameSpineUiAnimation__get_SkeletonGraphic
+		                    (*(undefined4 *)(param1 + 0x4c),1.0,0.3,0);
+		  param1_00 = unnamed_function_1417(DG_Tweening_TweenCallback_TypeInfo);
+		  DG_Tweening_Color2__op_Multiply
+		            (param1_00,param1,
+		             Method_UI_Windows_Buildings_CaveWindow__set_ResourceImageAssetId_b__27_1__,0);
+		  uVar1 = DG_Tweening_TweenSettingsExtensions__From___Il2CppFullySharedGenericType____Il2CppFullySharedGenericType____Il2CppFullySharedGenericStructType_
+		                    (uVar1,param1_00,
+		                     Method_DG_Tweening_TweenSettingsExtensions_OnComplete_TweenerCore_Color__Color__ColorOptions____
+		                    );
+		  uVar1 = DG_Tweening_TweenExtensions__Pause_object_
+		                    (uVar1,
+		                     Method_DG_Tweening_TweenExtensions_Play_TweenerCore_Color__Color__ColorOptions____
+		                    );
+		  *(undefined4 *)(param1 + 0x6c) = uVar1;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x04000842 RID: 2114
@@ -311,4 +519,216 @@ namespace UI.Windows.Buildings
 		[FieldOffset(Offset = "0x7C")]
 		private CaveWindowMediator _caveViewMediator;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_HordeView ---
+		undefined4 UI_Windows_Buildings_CaveWindow__get_HordeView(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  uVar1 = AssetContent_GameImage___ctor(*(undefined4 *)(param1 + 0x4c),0);
+		  return uVar1;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_ResourceImageAssetId ---
+		void UI_Windows_Buildings_CaveWindow__get_ResourceImageAssetId
+		               (int param1,int param2,undefined4 param3)
+		
+		{
+		  undefined4 uVar1;
+		  undefined4 param1_00;
+		  
+		  if (DAT_ram_00a58aa0 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UI_Windows_Buildings_CaveWindow__set_ResourceImageAssetId_b__27_0__);
+		    Mono_Security_ASN1__get_Item(&DG_Tweening_TweenCallback_TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_DG_Tweening_TweenExtensions_Play_TweenerCore_Color__Color__ColorOptions____);
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_DG_Tweening_TweenSettingsExtensions_OnComplete_TweenerCore_Color__Color__ColorOptions____
+		              );
+		    DAT_ram_00a58aa0 = '\x01';
+		  }
+		  Core_Extensions_Dict_PortalDicExt__GetCurrencyIcon60x66(*(undefined4 *)(param1 + 0x4c),param2,0);
+		  uVar1 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_uint__object___MoveNext
+		                    (*(undefined4 *)(param1 + 0x4c),0);
+		  Com_TheFallenGames_OSA_CustomAdapters_TableView_Tuple_Basic_BasicTupleValueViewsHolder__UpdateAsText
+		            (uVar1,(uint)(param2 != 0),0);
+		  if (*(int *)(param1 + 0x6c) != 0) {
+		    func_ii_7891(*(int *)(param1 + 0x6c),0,0);
+		  }
+		  uVar1 = Core_Animations_GameSpineUiAnimation__get_SkeletonGraphic
+		                    (*(undefined4 *)(param1 + 0x4c),0.0,0.3,0);
+		  param1_00 = unnamed_function_1417(DG_Tweening_TweenCallback_TypeInfo);
+		  DG_Tweening_Color2__op_Multiply
+		            (param1_00,param1,
+		             Method_UI_Windows_Buildings_CaveWindow__set_ResourceImageAssetId_b__27_0__,0);
+		  uVar1 = DG_Tweening_TweenSettingsExtensions__From___Il2CppFullySharedGenericType____Il2CppFullySharedGenericType____Il2CppFullySharedGenericStructType_
+		                    (uVar1,param1_00,
+		                     Method_DG_Tweening_TweenSettingsExtensions_OnComplete_TweenerCore_Color__Color__ColorOptions____
+		                    );
+		  uVar1 = DG_Tweening_TweenExtensions__Pause_object_
+		                    (uVar1,
+		                     Method_DG_Tweening_TweenExtensions_Play_TweenerCore_Color__Color__ColorOptions____
+		                    );
+		  *(undefined4 *)(param1 + 0x6c) = uVar1;
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_ResourceImageAssetId ---
+		undefined4 UI_Windows_Buildings_CaveWindow__set_ResourceImageAssetId(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  int iVar2;
+		  
+		  iVar2 = **(int **)(param1 + 0x40);
+		  uVar1 = (**(code **)((ulonglong)*(uint *)(iVar2 + 0x2c8) * 4))
+		                    (*(int **)(param1 + 0x40),*(undefined4 *)(iVar2 + 0x2cc));
+		  return uVar1;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_ResourceText ---
+		void UI_Windows_Buildings_CaveWindow__get_ResourceText
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  undefined4 param1_00;
+		  uint uVar1;
+		  int iVar2;
+		  
+		  param1_00 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_uint__object___MoveNext
+		                        (*(undefined4 *)(param1 + 0x40),0);
+		  uVar1 = func_ii_4769(param2,0);
+		  Com_TheFallenGames_OSA_CustomAdapters_TableView_Tuple_Basic_BasicTupleValueViewsHolder__UpdateAsText
+		            (param1_00,uVar1 ^ 1,0);
+		  iVar2 = **(int **)(param1 + 0x40);
+		  (**(code **)((ulonglong)*(uint *)(iVar2 + 0x2d0) * 4))
+		            (*(int **)(param1 + 0x40),param2,*(undefined4 *)(iVar2 + 0x2d4));
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_ResourceText ---
+		void UI_Windows_Buildings_CaveWindow__set_ResourceText(int param1,int param2,undefined4 param3)
+		
+		{
+		  undefined4 uVar1;
+		  int *piVar2;
+		  int iVar3;
+		  int local_4;
+		  
+		  local_4 = param2;
+		  uVar1 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_uint__object___MoveNext
+		                    (*(undefined4 *)(param1 + 0x54),0);
+		  Com_TheFallenGames_OSA_CustomAdapters_TableView_Tuple_Basic_BasicTupleValueViewsHolder__UpdateAsText
+		            (uVar1,(uint)(0 < param2),0);
+		  uVar1 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_uint__object___MoveNext
+		                    (*(undefined4 *)(param1 + 0x50),0);
+		  Com_TheFallenGames_OSA_CustomAdapters_TableView_Tuple_Basic_BasicTupleValueViewsHolder__UpdateAsText
+		            (uVar1,(uint)(0 < param2),0);
+		  piVar2 = *(int **)(param1 + 0x54);
+		  uVar1 = func_ii_4443(&local_4,0);
+		  iVar3 = *piVar2;
+		  (**(code **)((ulonglong)*(uint *)(iVar3 + 0x2d0) * 4))
+		            (piVar2,uVar1,*(undefined4 *)(iVar3 + 0x2d4));
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_ResourceAmount ---
+		void UI_Windows_Buildings_CaveWindow__set_ResourceAmount
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  int param2_00;
+		  undefined4 uVar1;
+		  int param1_00;
+		  
+		  param2_00 = 0;
+		  if (DAT_ram_00a58aa1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_System_Collections_Generic_List_RectTransform__get_Count__)
+		    ;
+		    Mono_Security_ASN1__get_Item(&Method_System_Collections_Generic_List_RectTransform__get_Item__);
+		    DAT_ram_00a58aa1 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x5c);
+		  if (0 < *(int *)(param1_00 + 0xc)) {
+		    do {
+		      uVar1 = System_Linq_Enumerable__ToList_object_
+		                        (param1_00,param2_00,
+		                         Method_System_Collections_Generic_List_RectTransform__get_Item__);
+		      uVar1 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_uint__object___MoveNext
+		                        (uVar1,0);
+		      Com_TheFallenGames_OSA_CustomAdapters_TableView_Tuple_Basic_BasicTupleValueViewsHolder__UpdateAsText
+		                (uVar1,param2,0);
+		      param2_00 = param2_00 + 1;
+		      param1_00 = *(int *)(param1 + 0x5c);
+		    } while (param2_00 < *(int *)(param1_00 + 0xc));
+		  }
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_SearchPrice ---
+		void UI_Windows_Buildings_CaveWindow__get_SearchPrice(int param1,int param2,undefined4 param3)
+		
+		{
+		  undefined4 uVar1;
+		  int param1_00;
+		  
+		  if (DAT_ram_00a58aa2 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UI_Windows_Buildings_BaseBuildingWindow_CaveWindowArgs__UserIsle__OnShow__);
+		    DAT_ram_00a58aa2 = '\x01';
+		  }
+		  UI_Windows_Buildings_BaseBuildingWindow_object__object___OnClose
+		            (param1,param2,
+		             Method_UI_Windows_Buildings_BaseBuildingWindow_CaveWindowArgs__UserIsle__OnShow__);
+		  uVar1 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_uint__object___MoveNext
+		                    (*(undefined4 *)(param1 + 0x4c),0);
+		  Com_TheFallenGames_OSA_CustomAdapters_TableView_Tuple_Basic_BasicTupleValueViewsHolder__UpdateAsText
+		            (uVar1,0,0);
+		  uVar1 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_uint__object___MoveNext
+		                    (*(undefined4 *)(param1 + 0x60),0);
+		  Com_TheFallenGames_OSA_CustomAdapters_TableView_Tuple_Basic_BasicTupleValueViewsHolder__UpdateAsText
+		            (uVar1,0,0);
+		  if (DAT_ram_00a58aa1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_System_Collections_Generic_List_RectTransform__get_Count__)
+		    ;
+		    Mono_Security_ASN1__get_Item(&Method_System_Collections_Generic_List_RectTransform__get_Item__);
+		    DAT_ram_00a58aa1 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x5c);
+		  if (0 < *(int *)(param1_00 + 0xc)) {
+		    param2 = 0;
+		    do {
+		      uVar1 = System_Linq_Enumerable__ToList_object_
+		                        (param1_00,param2,
+		                         Method_System_Collections_Generic_List_RectTransform__get_Item__);
+		      uVar1 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_uint__object___MoveNext
+		                        (uVar1,0);
+		      Com_TheFallenGames_OSA_CustomAdapters_TableView_Tuple_Basic_BasicTupleValueViewsHolder__UpdateAsText
+		                (uVar1,0,0);
+		      param2 = param2 + 1;
+		      param1_00 = *(int *)(param1 + 0x5c);
+		    } while (param2 < *(int *)(param1_00 + 0xc));
+		  }
+		  UI_Windows_Buildings_CaveWindow__OnShow(param1,param2);
+		  return;
+		}
+		*/
+
 }

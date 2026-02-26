@@ -21,6 +21,27 @@ namespace Mycom.Tracker.Unity.Internal
 		[Address(RVA = "0xBEAF", Offset = "0xBEAF", VA = "0xBEAF")]
 		internal static string GetInstanceId()
 		{
+		/* --- GHIDRA: GetInstanceId ---
+		int Mycom_Tracker_Unity_Internal_PlatformFactory__GetInstanceId(undefined4 param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  int iVar2;
+		  
+		  if (DAT_ram_00a5970c == '\0') {
+		    Mono_Security_ASN1__get_Item(&Mycom_Tracker_Unity_MyTrackerParams_TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&Mycom_Tracker_Unity_Internal_Implementations_Fake_TrackerParams_TypeInfo);
+		    DAT_ram_00a5970c = '\x01';
+		  }
+		  uVar1 = unnamed_function_1417
+		                    (Mycom_Tracker_Unity_Internal_Implementations_Fake_TrackerParams_TypeInfo);
+		  iVar2 = unnamed_function_1417(Mycom_Tracker_Unity_MyTrackerParams_TypeInfo);
+		  *(undefined4 *)(iVar2 + 8) = uVar1;
+		  return iVar2;
+		}
+		*/
+
 			return null;
 		}
 	}

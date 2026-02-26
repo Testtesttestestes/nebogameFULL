@@ -115,6 +115,41 @@ namespace Gameplay.RateGame.View
 		[Address(RVA = "0x7400", Offset = "0x7400", VA = "0x7400")]
 		private void Awake()
 		{
+		/* --- GHIDRA: Awake ---
+		void Gameplay_RateGame_View_RateGameStar__Awake(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  undefined4 uVar2;
+		  
+		  if (DAT_ram_00a580bb == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_PointerEventData__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Method_Gameplay_RateGame_View_RateGameStar_BgOnOnClickEvent__);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Gameplay_RateGame_View_RateGameStar_BgOnOnPointerEnterEvent__);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Gameplay_RateGame_View_RateGameStar_BgOnOnPointerExitEvent__);
+		    DAT_ram_00a580bb = '\x01';
+		  }
+		  uVar2 = *(undefined4 *)(param1 + 0x10);
+		  uVar1 = unnamed_function_1417(System_Action_PointerEventData__TypeInfo);
+		  UnityEngine_UIElements_VisualElement__get_layout
+		            (uVar1,param1,Method_Gameplay_RateGame_View_RateGameStar_BgOnOnClickEvent__,0);
+		  Com_TheFallenGames_OSA_DataHelpers_SimpleDataHelper_object___get_Count(uVar2,uVar1,0);
+		  uVar2 = *(undefined4 *)(param1 + 0x10);
+		  uVar1 = unnamed_function_1417(System_Action_PointerEventData__TypeInfo);
+		  UnityEngine_UIElements_VisualElement__get_layout
+		            (uVar1,param1,Method_Gameplay_RateGame_View_RateGameStar_BgOnOnPointerEnterEvent__,0);
+		  Utils_MonoPointerClickHandler__add_OnPointerEnterEvent(uVar2,uVar1,0);
+		  uVar2 = *(undefined4 *)(param1 + 0x10);
+		  uVar1 = unnamed_function_1417(System_Action_PointerEventData__TypeInfo);
+		  UnityEngine_UIElements_VisualElement__get_layout
+		            (uVar1,param1,Method_Gameplay_RateGame_View_RateGameStar_BgOnOnPointerExitEvent__,0);
+		  Utils_MonoPointerClickHandler__add_OnPointerExitEvent(uVar2,uVar1,0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x060022AA RID: 8874 RVA: 0x00002050 File Offset: 0x00000250
@@ -122,6 +157,22 @@ namespace Gameplay.RateGame.View
 		[Address(RVA = "0x7401", Offset = "0x7401", VA = "0x7401")]
 		private void OnDestroy()
 		{
+		/* --- GHIDRA: OnDestroy ---
+		void Gameplay_RateGame_View_RateGameStar__OnDestroy(int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  int iVar1;
+		  
+		  iVar1 = *(int *)(param1 + 0x2c);
+		  if (iVar1 != 0) {
+		    (**(code **)((ulonglong)*(uint *)(iVar1 + 0xc) * 4))
+		              (*(undefined4 *)(iVar1 + 0x20),*(undefined4 *)(param1 + 0x20),
+		               *(undefined4 *)(iVar1 + 0x14));
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x060022AB RID: 8875 RVA: 0x00002050 File Offset: 0x00000250
@@ -129,6 +180,23 @@ namespace Gameplay.RateGame.View
 		[Address(RVA = "0x7402", Offset = "0x7402", VA = "0x7402")]
 		private void BgOnOnPointerExitEvent(PointerEventData obj)
 		{
+		/* --- GHIDRA: BgOnOnPointerExitEvent ---
+		void Gameplay_RateGame_View_RateGameStar__BgOnOnPointerExitEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  int iVar1;
+		  
+		  iVar1 = *(int *)(param1 + 0x28);
+		  if (iVar1 != 0) {
+		    (**(code **)((ulonglong)*(uint *)(iVar1 + 0xc) * 4))
+		              (*(undefined4 *)(iVar1 + 0x20),*(undefined4 *)(param1 + 0x20),
+		               *(undefined4 *)(iVar1 + 0x14));
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x060022AC RID: 8876 RVA: 0x00002050 File Offset: 0x00000250
@@ -136,6 +204,23 @@ namespace Gameplay.RateGame.View
 		[Address(RVA = "0x7403", Offset = "0x7403", VA = "0x7403")]
 		private void BgOnOnPointerEnterEvent(PointerEventData obj)
 		{
+		/* --- GHIDRA: BgOnOnPointerEnterEvent ---
+		void Gameplay_RateGame_View_RateGameStar__BgOnOnPointerEnterEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  int iVar1;
+		  
+		  iVar1 = *(int *)(param1 + 0x30);
+		  if (iVar1 != 0) {
+		    (**(code **)((ulonglong)*(uint *)(iVar1 + 0xc) * 4))
+		              (*(undefined4 *)(iVar1 + 0x20),*(undefined4 *)(param1 + 0x20),
+		               *(undefined4 *)(iVar1 + 0x14));
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x060022AD RID: 8877 RVA: 0x00002050 File Offset: 0x00000250
@@ -143,6 +228,18 @@ namespace Gameplay.RateGame.View
 		[Address(RVA = "0x7404", Offset = "0x7404", VA = "0x7404")]
 		private void BgOnOnClickEvent(PointerEventData obj)
 		{
+		/* --- GHIDRA: BgOnOnClickEvent ---
+		void Gameplay_RateGame_View_RateGameStar__BgOnOnClickEvent(int param1,undefined4 param2)
+		
+		{
+		  UnityEngine_ParticleSystem__Stop(*(undefined4 *)(param1 + 0x18),0);
+		  UnityEngine_ParticleSystem__Play(*(undefined4 *)(param1 + 0x18),0);
+		  UnityEngine_ParticleSystem__Stop(*(undefined4 *)(param1 + 0x1c),0);
+		  UnityEngine_ParticleSystem__Play(*(undefined4 *)(param1 + 0x1c),0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x060022AE RID: 8878 RVA: 0x00002050 File Offset: 0x00000250
@@ -200,4 +297,281 @@ namespace Gameplay.RateGame.View
 		[FieldOffset(Offset = "0x24")]
 		private bool _starEnabled;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_StarEnabled ---
+		void Gameplay_RateGame_View_RateGameStar__get_StarEnabled
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  undefined4 param1_00;
+		  
+		  *(undefined1 *)(param1 + 0x24) = (undefined1)param2;
+		  param1_00 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_uint__object___MoveNext
+		                        (*(undefined4 *)(param1 + 0x14),0);
+		  Com_TheFallenGames_OSA_CustomAdapters_TableView_Tuple_Basic_BasicTupleValueViewsHolder__UpdateAsText
+		            (param1_00,(uint)*(byte *)(param1 + 0x24),0);
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_StarEnabled ---
+		void Gameplay_RateGame_View_RateGameStar__set_StarEnabled
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a580b4 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_int__TypeInfo);
+		    DAT_ram_00a580b4 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x28);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = UnityEngine_UI_Image__set_sprite(param1_00,param2,0);
+		    param2_00 = System_Action_int__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_int__TypeInfo), iVar2 == 0)) break;
+		    iVar2 = func_ii_4329(param1 + 0x28,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: add_RollOverEvent ---
+		void Gameplay_RateGame_View_RateGameStar__add_RollOverEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a580b5 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_int__TypeInfo);
+		    DAT_ram_00a580b5 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x28);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = func_ii_7048(param1_00,param2,0);
+		    param2_00 = System_Action_int__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_int__TypeInfo), iVar2 == 0)) break;
+		    iVar2 = func_ii_4329(param1 + 0x28,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: remove_RollOverEvent ---
+		void Gameplay_RateGame_View_RateGameStar__remove_RollOverEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a580b6 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_int__TypeInfo);
+		    DAT_ram_00a580b6 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x2c);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = UnityEngine_UI_Image__set_sprite(param1_00,param2,0);
+		    param2_00 = System_Action_int__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_int__TypeInfo), iVar2 == 0)) break;
+		    iVar2 = func_ii_4329(param1 + 0x2c,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: add_RollOutEvent ---
+		void Gameplay_RateGame_View_RateGameStar__add_RollOutEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a580b7 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_int__TypeInfo);
+		    DAT_ram_00a580b7 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x2c);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = func_ii_7048(param1_00,param2,0);
+		    param2_00 = System_Action_int__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_int__TypeInfo), iVar2 == 0)) break;
+		    iVar2 = func_ii_4329(param1 + 0x2c,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: remove_RollOutEvent ---
+		void Gameplay_RateGame_View_RateGameStar__remove_RollOutEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a580b8 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_int__TypeInfo);
+		    DAT_ram_00a580b8 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x30);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = UnityEngine_UI_Image__set_sprite(param1_00,param2,0);
+		    param2_00 = System_Action_int__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_int__TypeInfo), iVar2 == 0)) break;
+		    iVar2 = func_ii_4329(param1 + 0x30,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: add_ClickEvent ---
+		void Gameplay_RateGame_View_RateGameStar__add_ClickEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a580b9 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_int__TypeInfo);
+		    DAT_ram_00a580b9 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x30);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = func_ii_7048(param1_00,param2,0);
+		    param2_00 = System_Action_int__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_int__TypeInfo), iVar2 == 0)) break;
+		    iVar2 = func_ii_4329(param1 + 0x30,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: remove_ClickEvent ---
+		void Gameplay_RateGame_View_RateGameStar__remove_ClickEvent(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  undefined4 uVar2;
+		  
+		  if (DAT_ram_00a580ba == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_PointerEventData__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Method_Gameplay_RateGame_View_RateGameStar_BgOnOnClickEvent__);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Gameplay_RateGame_View_RateGameStar_BgOnOnPointerEnterEvent__);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Gameplay_RateGame_View_RateGameStar_BgOnOnPointerExitEvent__);
+		    DAT_ram_00a580ba = '\x01';
+		  }
+		  uVar2 = *(undefined4 *)(param1 + 0x10);
+		  uVar1 = unnamed_function_1417(System_Action_PointerEventData__TypeInfo);
+		  UnityEngine_UIElements_VisualElement__get_layout
+		            (uVar1,param1,Method_Gameplay_RateGame_View_RateGameStar_BgOnOnClickEvent__,0);
+		  Gameplay_Chat_View_Smiles_SmileItemView__HandleSmileDicChanged(uVar2,uVar1,0);
+		  uVar2 = *(undefined4 *)(param1 + 0x10);
+		  uVar1 = unnamed_function_1417(System_Action_PointerEventData__TypeInfo);
+		  UnityEngine_UIElements_VisualElement__get_layout
+		            (uVar1,param1,Method_Gameplay_RateGame_View_RateGameStar_BgOnOnPointerEnterEvent__,0);
+		  Utils_MonoPointerClickHandler__remove_OnPointerDownEvent(uVar2,uVar1,0);
+		  uVar2 = *(undefined4 *)(param1 + 0x10);
+		  uVar1 = unnamed_function_1417(System_Action_PointerEventData__TypeInfo);
+		  UnityEngine_UIElements_VisualElement__get_layout
+		            (uVar1,param1,Method_Gameplay_RateGame_View_RateGameStar_BgOnOnPointerExitEvent__,0);
+		  Utils_MonoPointerClickHandler__remove_OnPointerEnterEvent(uVar2,uVar1,0);
+		  return;
+		}
+		*/
+
 }

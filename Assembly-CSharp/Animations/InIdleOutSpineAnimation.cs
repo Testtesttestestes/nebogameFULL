@@ -42,6 +42,37 @@ namespace Animations
 		[Address(RVA = "0xBE58", Offset = "0xBE58", VA = "0xBE58")]
 		public void StartAnimation()
 		{
+		/* --- GHIDRA: StartAnimation ---
+		void Animations_InIdleOutSpineAnimation__StartAnimation
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  int iVar1;
+		  undefined4 param1_00;
+		  undefined4 param1_01;
+		  
+		  if (DAT_ram_00a596bf == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_IGameAnimation__TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Animations_InIdleOutSpineAnimation_AnimationOnCompleteEvent__);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_24507);
+		    DAT_ram_00a596bf = '\x01';
+		  }
+		  iVar1 = Cysharp_Threading_Tasks_CancellationTokenExtensions___cctor
+		                    (*(undefined4 *)(param1 + 0x10),0);
+		  if (iVar1 != 0) {
+		    param1_01 = *(undefined4 *)(param1 + 0x10);
+		    param1_00 = unnamed_function_1417(System_Action_IGameAnimation__TypeInfo);
+		    UnityEngine_UIElements_VisualElement__get_layout
+		              (param1_00,param1,Method_Animations_InIdleOutSpineAnimation_AnimationOnCompleteEvent__
+		               ,0);
+		    Core_Animations_GameSpineUiAnimation__add_CompleteEvent(param1_01,param1_00,0);
+		    UnityEngine_WaitForSeconds___ctor(*(undefined4 *)(param1 + 0x10),StringLiteral_24507,1,0);
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600748D RID: 29837 RVA: 0x00002050 File Offset: 0x00000250
@@ -49,6 +80,49 @@ namespace Animations
 		[Address(RVA = "0xBE59", Offset = "0xBE59", VA = "0xBE59")]
 		private void AnimationOnCompleteEvent(IGameAnimation obj)
 		{
+		/* --- GHIDRA: AnimationOnCompleteEvent ---
+		void Animations_InIdleOutSpineAnimation__AnimationOnCompleteEvent(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  undefined4 uVar2;
+		  undefined4 param1_00;
+		  
+		  if (DAT_ram_00a596c0 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_IGameAnimation__TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Animations_InIdleOutSpineAnimation_AnimationOnCompleteEvent__);
+		    Mono_Security_ASN1__get_Item(&UnityEngine_Object_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_8060);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_22923);
+		    DAT_ram_00a596c0 = '\x01';
+		  }
+		  uVar2 = *(undefined4 *)(param1 + 0x10);
+		  if (*(int *)(UnityEngine_Object_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(UnityEngine_Object_TypeInfo);
+		  }
+		  iVar1 = UnityEngine_TextCore_Text_TextElement__get_textAsset(uVar2,0,0);
+		  if (iVar1 != 0) {
+		    param1_00 = *(undefined4 *)(param1 + 0x10);
+		    uVar2 = unnamed_function_1417(System_Action_IGameAnimation__TypeInfo);
+		    UnityEngine_UIElements_VisualElement__get_layout
+		              (uVar2,param1,Method_Animations_InIdleOutSpineAnimation_AnimationOnCompleteEvent__,0);
+		    Core_Animations_GameSpineUiAnimation__add_CompleteEvent(param1_00,uVar2,0);
+		    UnityEngine_WaitForSeconds___ctor(*(undefined4 *)(param1 + 0x10),StringLiteral_22923,0,0);
+		  }
+		  uVar2 = *(undefined4 *)(param1 + 0x14);
+		  if (*(int *)(UnityEngine_Object_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(UnityEngine_Object_TypeInfo);
+		  }
+		  iVar1 = UnityEngine_TextCore_Text_TextElement__get_textAsset(uVar2,0,0);
+		  if (iVar1 != 0) {
+		    UnityEngine_AnimatorStateInfo__get_speedMultiplier
+		              (*(undefined4 *)(param1 + 0x14),StringLiteral_8060,0);
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600748E RID: 29838 RVA: 0x00002050 File Offset: 0x00000250
@@ -56,6 +130,25 @@ namespace Animations
 		[Address(RVA = "0xBE5A", Offset = "0xBE5A", VA = "0xBE5A")]
 		public void FinishAnimation()
 		{
+		/* --- GHIDRA: FinishAnimation ---
+		void Animations_InIdleOutSpineAnimation__FinishAnimation(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  int iVar2;
+		  
+		  iVar2 = *(int *)(param1 + 0x18);
+		  if ((iVar2 != 0) && (0 < *(int *)(iVar2 + 0xc))) {
+		    iVar1 = 0;
+		    do {
+		      UnityEngine_ParticleSystem__Simulate(*(undefined4 *)(iVar2 + iVar1 * 4 + 0x10),1,0);
+		      iVar1 = iVar1 + 1;
+		    } while (iVar1 < *(int *)(iVar2 + 0xc));
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600748F RID: 29839 RVA: 0x00002050 File Offset: 0x00000250
@@ -64,6 +157,25 @@ namespace Animations
 		[UsedImplicitly]
 		public void StartParticleAnimations()
 		{
+		/* --- GHIDRA: StartParticleAnimations ---
+		void Animations_InIdleOutSpineAnimation__StartParticleAnimations(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  int iVar2;
+		  
+		  iVar2 = *(int *)(param1 + 0x18);
+		  if ((iVar2 != 0) && (0 < *(int *)(iVar2 + 0xc))) {
+		    iVar1 = 0;
+		    do {
+		      UnityEngine_ParticleSystem__Stop(*(undefined4 *)(iVar2 + iVar1 * 4 + 0x10),1,0);
+		      iVar1 = iVar1 + 1;
+		    } while (iVar1 < *(int *)(iVar2 + 0xc));
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06007490 RID: 29840 RVA: 0x00002050 File Offset: 0x00000250
@@ -79,6 +191,35 @@ namespace Animations
 		[Address(RVA = "0xBE5D", Offset = "0xBE5D", VA = "0xBE5D")]
 		public InIdleOutSpineAnimation()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Animations_InIdleOutSpineAnimation___ctor(undefined4 param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  undefined4 param1_00;
+		  
+		  if (DAT_ram_00a596c1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Mycom_Tracker_Unity_LibraryLogger_TypeInfo);
+		    DAT_ram_00a596c1 = '\x01';
+		  }
+		  iVar1 = func_ii_4769(param1,0);
+		  if (iVar1 == 0) {
+		    if (*(int *)(Mycom_Tracker_Unity_LibraryLogger_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(Mycom_Tracker_Unity_LibraryLogger_TypeInfo);
+		    }
+		    param1_00 = Mono_Security_X509_X509Crl_X509CrlEntry___ctor
+		                          (**(undefined4 **)(Mycom_Tracker_Unity_LibraryLogger_TypeInfo + 0x5c),
+		                           param1,0);
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(param1_00,0);
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x04003D24 RID: 15652
@@ -117,4 +258,44 @@ namespace Animations
 		[Token(Token = "0x4003D2A")]
 		public const string STATE_END = "end";
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_Particles ---
+		void Animations_InIdleOutSpineAnimation__get_Particles(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  undefined4 param1_00;
+		  undefined4 param1_01;
+		  
+		  if (DAT_ram_00a596be == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_IGameAnimation__TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Animations_InIdleOutSpineAnimation_AnimationOnCompleteEvent__);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_27389);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_14604);
+		    DAT_ram_00a596be = '\x01';
+		  }
+		  iVar1 = Cysharp_Threading_Tasks_CancellationTokenExtensions___cctor
+		                    (*(undefined4 *)(param1 + 0x10),0);
+		  if (iVar1 != 0) {
+		    param1_01 = *(undefined4 *)(param1 + 0x10);
+		    param1_00 = unnamed_function_1417(System_Action_IGameAnimation__TypeInfo);
+		    UnityEngine_UIElements_VisualElement__get_layout
+		              (param1_00,param1,Method_Animations_InIdleOutSpineAnimation_AnimationOnCompleteEvent__
+		               ,0);
+		    Core_Animations_GameSpineUiAnimation__remove_ClickEvent(param1_01,param1_00,0);
+		    UnityEngine_WaitForSeconds___ctor(*(undefined4 *)(param1 + 0x10),StringLiteral_27389,0,0);
+		  }
+		  iVar1 = Cysharp_Threading_Tasks_CancellationTokenExtensions___cctor
+		                    (*(undefined4 *)(param1 + 0x14),0);
+		  if (iVar1 != 0) {
+		    UnityEngine_AnimatorStateInfo__get_speedMultiplier
+		              (*(undefined4 *)(param1 + 0x14),StringLiteral_14604,0);
+		  }
+		  return;
+		}
+		*/
+
 }

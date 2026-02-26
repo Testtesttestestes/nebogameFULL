@@ -13,6 +13,28 @@ namespace Gameplay.GdEvents.View.EventsList
 		[Address(RVA = "0x7CAE", Offset = "0x7CAE", VA = "0x7CAE")]
 		public CategoryModel()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Com_TheFallenGames_OSA_Demos_GridWithCategories_CategoryModel___ctor
+		               (int param1,undefined4 param2)
+		
+		{
+		  undefined8 local_10;
+		  undefined8 local_8;
+		  
+		  if (DAT_ram_00a541b7 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Com_TheFallenGames_OSA_Demos_Common_DemosUtil_TypeInfo);
+		    DAT_ram_00a541b7 = '\x01';
+		  }
+		  if (*(int *)(Com_TheFallenGames_OSA_Demos_Common_DemosUtil_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Com_TheFallenGames_OSA_Demos_Common_DemosUtil_TypeInfo);
+		  }
+		  Com_TheFallenGames_OSA_Demos_Common_DemosUtil__GetRandomSmallImageURL(&local_10,1,0);
+		  *(undefined8 *)(param1 + 0x18) = local_8;
+		  *(undefined8 *)(param1 + 0x10) = local_10;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x04001829 RID: 6185

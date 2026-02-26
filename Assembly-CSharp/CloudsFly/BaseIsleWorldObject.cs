@@ -82,6 +82,57 @@ namespace CloudsFly
 		[Address(RVA = "0xBD5B", Offset = "0xBD5B", VA = "0xBD5B", Slot = "11")]
 		protected override void OnInit(IsleCloudObjectArgs args)
 		{
+		/* --- GHIDRA: OnInit ---
+		void CloudsFly_BaseIsleWorldObject__OnInit(int param1,undefined4 param2)
+		
+		{
+		  undefined8 uVar1;
+		  undefined4 uVar2;
+		  uint *puVar3;
+		  int *param1_00;
+		  int iVar4;
+		  uint uVar5;
+		  undefined8 local_20;
+		  undefined4 local_18;
+		  undefined8 local_10;
+		  undefined4 local_8;
+		  
+		  if (DAT_ram_00a5966f == '\0') {
+		    Mono_Security_ASN1__get_Item(&Gameplay_Isles_Base_IIsle_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Method_CloudsFly_WorldObject_IsleCloudObjectArgs__get_Args__);
+		    DAT_ram_00a5966f = '\x01';
+		  }
+		  uVar2 = System_Collections_Generic_SortedDictionary_Enumerator_object__object___get_Current
+		                    (param1,0);
+		  local_20 = *(undefined8 *)(*(int *)(param1 + 0x24) + 8);
+		  local_18 = *(undefined4 *)(*(int *)(param1 + 0x24) + 0x10);
+		  local_10 = local_20;
+		  local_8 = local_18;
+		  UnityEngine_Transform__get_position(uVar2,&local_20,0);
+		  param1_00 = *(int **)(*(int *)(param1 + 0x24) + 0x18);
+		  iVar4 = *param1_00;
+		  if (*(ushort *)(iVar4 + 0xb6) != 0) {
+		    uVar5 = 0;
+		    do {
+		      if (Gameplay_Isles_Base_IIsle_TypeInfo == *(int *)(*(int *)(iVar4 + 0x58) + uVar5 * 8)) {
+		        puVar3 = (uint *)(iVar4 + *(int *)(*(int *)(iVar4 + 0x58) + uVar5 * 8 + 4) * 8 + 0xc0);
+		        goto code_r0x81046c02;
+		      }
+		      uVar5 = uVar5 + 1;
+		    } while (*(ushort *)(iVar4 + 0xb6) != uVar5);
+		  }
+		  puVar3 = (uint *)func_ii_1080(param1_00,Gameplay_Isles_Base_IIsle_TypeInfo,0);
+		code_r0x81046c02:
+		  uVar1 = (**(code **)((ulonglong)*puVar3 * 4))(param1_00,puVar3[1]);
+		  *(undefined8 *)(param1 + 0x38) = uVar1;
+		  uVar2 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_uint__object___MoveNext
+		                    (param1,0);
+		  Com_TheFallenGames_OSA_CustomAdapters_TableView_Tuple_Basic_BasicTupleValueViewsHolder__UpdateAsText
+		            (uVar2,1,0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06007353 RID: 29523 RVA: 0x00002050 File Offset: 0x00000250
@@ -103,6 +154,17 @@ namespace CloudsFly
 		[Address(RVA = "0xBD5E", Offset = "0xBD5E", VA = "0xBD5E", Slot = "13")]
 		public virtual void UpdateOrder()
 		{
+		/* --- GHIDRA: UpdateOrder ---
+		void CloudsFly_BaseIsleWorldObject__UpdateOrder(int param1,undefined4 param2)
+		
+		{
+		  *(undefined8 *)(param1 + 0x38) = 0;
+		  Gameplay_Isles_Base_View_IsleBossContainer__ValidateBoss(*(undefined4 *)(param1 + 0x30),0);
+		  *(undefined4 *)(param1 + 0x40) = 0;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06007356 RID: 29526 RVA: 0x00002050 File Offset: 0x00000250
@@ -117,6 +179,22 @@ namespace CloudsFly
 		[Address(RVA = "0xBD60", Offset = "0xBD60", VA = "0xBD60")]
 		public BaseIsleWorldObject()
 		{
+		/* --- GHIDRA: .ctor ---
+		void CloudsFly_BaseIsleWorldObject___ctor
+		               (int param1,undefined8 *param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  undefined8 local_10;
+		  undefined4 local_8;
+		  
+		  local_8 = *(undefined4 *)(param2 + 1);
+		  local_10 = *param2;
+		  CloudsFly_WorldObject___ctor(param1,&local_10,0,0);
+		  *(undefined4 *)(param1 + 0x18) = param3;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x04003C59 RID: 15449
@@ -142,4 +220,40 @@ namespace CloudsFly
 		[FieldOffset(Offset = "0x40")]
 		private IsleCloudObjectArgs _previousArgs;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_CameraAnchor ---
+		void CloudsFly_BaseIsleWorldObject__get_CameraAnchor(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  uVar1 = UnityEngine_Renderer__set_sortingLayerName(*(undefined4 *)(param1 + 0x28),0);
+		  *(undefined4 *)(param1 + 0x18) = uVar1;
+		  CloudsFly_BaseWorldObjectRenderer__ValidateSortingOrder(param1,param1);
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_Id ---
+		void CloudsFly_BaseIsleWorldObject__set_Id(int *param1,int param2,undefined4 param3)
+		
+		{
+		  if (DAT_ram_00a5966e == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_CloudsFly_WorldObject_IsleCloudObjectArgs__get_Args__);
+		    DAT_ram_00a5966e = '\x01';
+		  }
+		  if ((param1[0x10] == 0) || (*(int *)(param1[0x10] + 0x18) != *(int *)(param2 + 0x18))) {
+		    (**(code **)((ulonglong)*(uint *)(*param1 + 0x130) * 4))
+		              (param1,*(undefined4 *)(*param1 + 0x134));
+		    param1[0x10] = param1[9];
+		    (**(code **)((ulonglong)*(uint *)(*param1 + 0x120) * 4))
+		              (param1,*(undefined4 *)(*param1 + 0x124));
+		  }
+		  return;
+		}
+		*/
+
 }

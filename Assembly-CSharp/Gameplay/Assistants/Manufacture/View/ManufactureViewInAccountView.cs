@@ -164,6 +164,22 @@ namespace Gameplay.Assistants.Manufacture.View
 		[Address(RVA = "0x9D25", Offset = "0x9D25", VA = "0x9D25")]
 		private void OnDestroy()
 		{
+		/* --- GHIDRA: OnDestroy ---
+		void Gameplay_Assistants_Manufacture_View_ManufactureViewInAccountView__OnDestroy
+		               (int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  
+		  iVar1 = **(int **)(param1 + 0x3c);
+		  (**(code **)((ulonglong)*(uint *)(iVar1 + 0x130) * 4))
+		            (*(int **)(param1 + 0x3c),*(undefined4 *)(iVar1 + 0x134));
+		  *(undefined4 *)(param1 + 0x3c) = 0;
+		  *(undefined4 *)(param1 + 0x44) = 0;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06004EFE RID: 20222 RVA: 0x00002050 File Offset: 0x00000250
@@ -310,4 +326,56 @@ namespace Gameplay.Assistants.Manufacture.View
 		[FieldOffset(Offset = "0x44")]
 		private ManufactureAssistant _assistant;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: set_IsInit ---
+		void Gameplay_Assistants_Manufacture_View_ManufactureViewInAccountView__set_IsInit
+		               (int param1,int param2,undefined4 param3)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  if (param2 != *(int *)(param1 + 0x44)) {
+		    *(int *)(param1 + 0x44) = param2;
+		    uVar1 = Gameplay_Assistants_Manufacture_ManufactureAssistant__Dispose(param2,param1,param1);
+		    *(undefined4 *)(param1 + 0x3c) = uVar1;
+		  }
+		  *(undefined1 *)(param1 + 0x40) = 1;
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_Assistant ---
+		void Gameplay_Assistants_Manufacture_View_ManufactureViewInAccountView__get_Assistant
+		               (int param1,int param2,undefined4 param3)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  if (param2 != *(int *)(param1 + 0x44)) {
+		    *(int *)(param1 + 0x44) = param2;
+		    uVar1 = Gameplay_Assistants_Manufacture_ManufactureAssistant__Dispose(param2,param1,param1);
+		    *(undefined4 *)(param1 + 0x3c) = uVar1;
+		  }
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_Assistant ---
+		void Gameplay_Assistants_Manufacture_View_ManufactureViewInAccountView__set_Assistant
+		               (int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  uVar1 = Gameplay_Assistants_Manufacture_ManufactureAssistant__Dispose
+		                    (*(undefined4 *)(param1 + 0x44),param1,param1);
+		  *(undefined4 *)(param1 + 0x3c) = uVar1;
+		  return;
+		}
+		*/
+
 }

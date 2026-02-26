@@ -130,6 +130,36 @@ namespace Gameplay.Auchan.Model
 		[Address(RVA = "0x1F1B", Offset = "0x1F1B", VA = "0x1F1B")]
 		public AuchanArtifactData(AuchanItem auchanItem, CacheManager cacheManager, UserData user)
 		{
+		/* --- GHIDRA: .ctor ---
+		undefined4 Gameplay_Auchan_Model_AuchanArtifactData___ctor(undefined4 param1)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a5986d == '\0') {
+		    Mono_Security_ASN1__get_Item(&Gameplay_Auchan_Model_AuchanArtifactData_TypeInfo);
+		    DAT_ram_00a5986d = '\x01';
+		  }
+		  uVar1 = unnamed_function_1417(Gameplay_Auchan_Model_AuchanArtifactData_TypeInfo);
+		  return uVar1;
+		}
+		*/
+
+		/* --- GHIDRA: .ctor ---
+		undefined4 Gameplay_Auchan_Model_AuchanArtifactData___ctor(undefined4 param1)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a5986d == '\0') {
+		    Mono_Security_ASN1__get_Item(&Gameplay_Auchan_Model_AuchanArtifactData_TypeInfo);
+		    DAT_ram_00a5986d = '\x01';
+		  }
+		  uVar1 = unnamed_function_1417(Gameplay_Auchan_Model_AuchanArtifactData_TypeInfo);
+		  return uVar1;
+		}
+		*/
+
 		}
 
 		// Token: 0x06004E6D RID: 20077 RVA: 0x00002050 File Offset: 0x00000250
@@ -144,7 +174,113 @@ namespace Gameplay.Auchan.Model
 		[Address(RVA = "0x9C9F", Offset = "0x9C9F", VA = "0x9C9F")]
 		internal static AuchanArtifactData CreateEmpty()
 		{
+		/* --- GHIDRA: CreateEmpty ---
+		undefined4 Gameplay_Auchan_Model_AuchanArtifactData__CreateEmpty(int param1,undefined4 param2)
+		
+		{
+		  uint uVar1;
+		  uint *puVar2;
+		  undefined4 uVar3;
+		  int *param1_00;
+		  int iVar4;
+		  
+		  if (DAT_ram_00a5986e == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_Dict_IDictProvider_TypeInfo);
+		    DAT_ram_00a5986e = '\x01';
+		  }
+		  param1_00 = *(int **)(param1 + 0x1c);
+		  iVar4 = *param1_00;
+		  if (*(ushort *)(iVar4 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (Core_Dict_IDictProvider_TypeInfo == *(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8)) {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8 + 4) * 8 + iVar4 + 0xd0);
+		        goto code_r0x8107c53a;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar4 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(param1_00,Core_Dict_IDictProvider_TypeInfo,2);
+		code_r0x8107c53a:
+		  uVar3 = (**(code **)((ulonglong)*puVar2 * 4))(param1_00,puVar2[1]);
+		  return uVar3;
+		}
+		*/
+
 			return null;
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: add_DataChangedEvent ---
+		void Gameplay_Auchan_Model_AuchanArtifactData__add_DataChangedEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  int param1_00;
+		  int *param1_01;
+		  int iVar2;
+		  
+		  if (DAT_ram_00a5986a == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_TypeInfo);
+		    DAT_ram_00a5986a = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 8);
+		  while ((param1_01 = (int *)func_ii_7048(param1_00,param2,0), param1_01 == (int *)0x0 ||
+		         (System_Action_TypeInfo == *param1_01))) {
+		    iVar2 = func_ii_4329(param1 + 8,param1_01,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,System_Action_TypeInfo);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: get_Backtime ---
+		undefined4 Gameplay_Auchan_Model_AuchanArtifactData__get_Backtime(int param1,undefined4 param2)
+		
+		{
+		  uint uVar1;
+		  uint *puVar2;
+		  int *param1_00;
+		  undefined4 uVar3;
+		  int iVar4;
+		  
+		  uVar1 = 0;
+		  if (DAT_ram_00a5986b == '\0') {
+		    Mono_Security_ASN1__get_Item(&Protocol_IActionInfo_TypeInfo);
+		    DAT_ram_00a5986b = '\x01';
+		  }
+		  param1_00 = *(int **)(param1 + 0x20);
+		  if (param1_00 == (int *)0x0) {
+		    uVar3 = 0;
+		  }
+		  else {
+		    iVar4 = *param1_00;
+		    if (*(ushort *)(iVar4 + 0xb6) != 0) {
+		      do {
+		        if (Protocol_IActionInfo_TypeInfo == *(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8)) {
+		          puVar2 = (uint *)(iVar4 + *(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8 + 4) * 8 + 0xc0);
+		          goto code_r0x8107a23c;
+		        }
+		        uVar1 = uVar1 + 1;
+		      } while (*(ushort *)(iVar4 + 0xb6) != uVar1);
+		    }
+		    puVar2 = (uint *)func_ii_1080(param1_00,Protocol_IActionInfo_TypeInfo,0);
+		code_r0x8107a23c:
+		    uVar3 = (**(code **)((ulonglong)*puVar2 * 4))(param1_00,puVar2[1]);
+		  }
+		  return uVar3;
+		}
+		*/
+
 }

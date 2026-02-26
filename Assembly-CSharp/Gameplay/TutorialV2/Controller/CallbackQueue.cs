@@ -26,6 +26,56 @@ namespace Gameplay.TutorialV2.Controller
 		[Address(RVA = "0x6B08", Offset = "0x6B08", VA = "0x6B08")]
 		public CallbackQueue(StepActionType actionType, IEnumerable<CallbackQueue.CallbackItem> sequence)
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_TutorialV2_Controller_CallbackQueue___ctor
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  undefined4 param1_00;
+		  
+		  if (DAT_ram_00a583b9 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_Queue_CallbackQueue_CallbackItem___ctor__);
+		    Mono_Security_ASN1__get_Item
+		              (&System_Collections_Generic_Queue_CallbackQueue_CallbackItem__TypeInfo);
+		    DAT_ram_00a583b9 = '\x01';
+		  }
+		  *(undefined4 *)(param1 + 8) = param2;
+		  param1_00 = unnamed_function_1417
+		                        (System_Collections_Generic_Queue_CallbackQueue_CallbackItem__TypeInfo);
+		  System_Collections_Generic_Queue_JobHandle___get_Count
+		            (param1_00,param3,
+		             Method_System_Collections_Generic_Queue_CallbackQueue_CallbackItem___ctor__);
+		  *(undefined4 *)(param1 + 0xc) = param1_00;
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_TutorialV2_Controller_CallbackQueue___ctor
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  undefined4 param1_00;
+		  
+		  if (DAT_ram_00a583b9 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_Queue_CallbackQueue_CallbackItem___ctor__);
+		    Mono_Security_ASN1__get_Item
+		              (&System_Collections_Generic_Queue_CallbackQueue_CallbackItem__TypeInfo);
+		    DAT_ram_00a583b9 = '\x01';
+		  }
+		  *(undefined4 *)(param1 + 8) = param2;
+		  param1_00 = unnamed_function_1417
+		                        (System_Collections_Generic_Queue_CallbackQueue_CallbackItem__TypeInfo);
+		  System_Collections_Generic_Queue_JobHandle___get_Count
+		            (param1_00,param3,
+		             Method_System_Collections_Generic_Queue_CallbackQueue_CallbackItem___ctor__);
+		  *(undefined4 *)(param1 + 0xc) = param1_00;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600196A RID: 6506 RVA: 0x00002050 File Offset: 0x00000250
@@ -40,6 +90,36 @@ namespace Gameplay.TutorialV2.Controller
 		[Address(RVA = "0x6B0A", Offset = "0x6B0A", VA = "0x6B0A", Slot = "6")]
 		public override void Hide()
 		{
+		/* --- GHIDRA: Hide ---
+		void Gameplay_TutorialV2_Controller_CallbackQueue__Hide
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  int iVar1;
+		  int iVar2;
+		  
+		  if (DAT_ram_00a583ba == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_Queue_CallbackQueue_CallbackItem__Dequeue__);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_Queue_CallbackQueue_CallbackItem__get_Count__);
+		    DAT_ram_00a583ba = '\x01';
+		  }
+		  if (*(int *)(*(int *)(param1 + 0xc) + 0x14) != 0) {
+		    iVar1 = func_ii_7387(*(int *)(param1 + 0xc),
+		                         Method_System_Collections_Generic_Queue_CallbackQueue_CallbackItem__Dequeue__
+		                        );
+		    iVar2 = *(int *)(iVar1 + 8);
+		    if (iVar2 != 0) {
+		      (**(code **)((ulonglong)*(uint *)(iVar2 + 0xc) * 4))
+		                (*(undefined4 *)(iVar2 + 0x20),*(undefined4 *)(iVar2 + 0x14));
+		    }
+		    *(undefined4 *)(iVar1 + 8) = 0;
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600196C RID: 6508 RVA: 0x00002050 File Offset: 0x00000250
@@ -76,4 +156,32 @@ namespace Gameplay.TutorialV2.Controller
 			public Action Callback;
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_StepActionType ---
+		void Gameplay_TutorialV2_Controller_CallbackQueue__get_StepActionType
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  undefined4 param1_00;
+		  
+		  if (DAT_ram_00a583b8 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_Queue_CallbackQueue_CallbackItem___ctor__);
+		    Mono_Security_ASN1__get_Item
+		              (&System_Collections_Generic_Queue_CallbackQueue_CallbackItem__TypeInfo);
+		    DAT_ram_00a583b8 = '\x01';
+		  }
+		  *(undefined4 *)(param1 + 8) = param2;
+		  param1_00 = unnamed_function_1417
+		                        (System_Collections_Generic_Queue_CallbackQueue_CallbackItem__TypeInfo);
+		  System_Collections_Generic_Queue_JobHandle___get_Count
+		            (param1_00,param3,
+		             Method_System_Collections_Generic_Queue_CallbackQueue_CallbackItem___ctor__);
+		  *(undefined4 *)(param1 + 0xc) = param1_00;
+		  return;
+		}
+		*/
+
 }

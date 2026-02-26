@@ -22,6 +22,41 @@ namespace Core.Application.Managers
 		[Address(RVA = "0x239A", Offset = "0x239A", VA = "0x239A")]
 		public SigninRecord()
 		{
+		/* --- GHIDRA: .ctor ---
+		undefined4
+		Core_Application_Managers_SigninRecord___ctor(undefined4 param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  int iVar1;
+		  undefined4 uVar2;
+		  undefined4 uVar3;
+		  undefined4 param3_00;
+		  
+		  if (DAT_ram_00a5b7ac == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_21847);
+		    DAT_ram_00a5b7ac = '\x01';
+		  }
+		  iVar1 = func_ii_4769(param2,0);
+		  if (iVar1 != 0) {
+		    uVar2 = unnamed_function_2232(&System_ArgumentException_TypeInfo);
+		    uVar2 = unnamed_function_1417(uVar2);
+		    uVar3 = unnamed_function_2232(&StringLiteral_7389);
+		    param3_00 = unnamed_function_2232(&StringLiteral_22962);
+		    System_IO_EndOfStreamException___ctor(uVar2,uVar3,param3_00,0);
+		    uVar3 = unnamed_function_2232
+		                      (&
+		                       Method_Unity_Services_Core_Environments_EnvironmentsOptionsExtensions_SetEnvironmentName__
+		                      );
+		    func_ii_1050(uVar2,uVar3);
+		    do {
+		      halt_trap();
+		    } while( true );
+		  }
+		  Unity_Services_Core_InitializationOptions___ctor(param1,StringLiteral_21847,param2,0);
+		  return param1;
+		}
+		*/
+
 		}
 
 		// Token: 0x04003A22 RID: 14882

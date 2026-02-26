@@ -16,6 +16,27 @@ namespace Gameplay.Clans.Combat.Model
 		[Address(RVA = "0x9024", Offset = "0x9024", VA = "0x9024")]
 		public ClanCombatPlayer(PlayerInfo playerInfo, UserData user, ICombatSpellDataFactory spellFactory)
 		{
+		/* --- GHIDRA: .ctor ---
+		undefined4 Gameplay_Clans_Combat_Model_ClanCombatPlayer___ctor(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  undefined4 param2_00;
+		  undefined8 local_8;
+		  
+		  if (DAT_ram_00a57797 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_5439);
+		    DAT_ram_00a57797 = '\x01';
+		  }
+		  param2_00 = *(undefined4 *)(*(int *)(*(int *)(param1 + 8) + 0xc) + 0x18);
+		  local_8 = Core_Data_UserData__get_UserId(param1,0);
+		  uVar1 = func_ii_1081(DAT_ram_00a66968,&local_8);
+		  uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                    (StringLiteral_5439,param2_00,uVar1,0);
+		  return uVar1;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600416E RID: 16750 RVA: 0x00002052 File Offset: 0x00000252
@@ -23,6 +44,17 @@ namespace Gameplay.Clans.Combat.Model
 		[Address(RVA = "0x9025", Offset = "0x9025", VA = "0x9025", Slot = "3")]
 		public override string ToString()
 		{
+		/* --- GHIDRA: ToString ---
+		undefined4 Gameplay_Clans_Combat_Model_ClanCombatPlayer__ToString(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  uVar1 = Core_Extensions_Dict_SpellDicExt__GetAnimationAssetId(*(undefined4 *)(param1 + 0xc),0);
+		  return uVar1;
+		}
+		*/
+
 			return null;
 		}
 	}

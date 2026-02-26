@@ -33,6 +33,30 @@ namespace Core.Application.Managers.Connection
 		[Address(RVA = "0xBA40", Offset = "0xBA40", VA = "0xBA40")]
 		public void IncreaseServer()
 		{
+		/* --- GHIDRA: IncreaseServer ---
+		undefined4
+		Core_Application_Managers_Connection_ServerConnectionDelay__IncreaseServer
+		          (int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  undefined4 param1_00;
+		  
+		  if (DAT_ram_00a5a87d == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Math_TypeInfo);
+		    DAT_ram_00a5a87d = '\x01';
+		  }
+		  uVar1 = *(undefined4 *)(param1 + 0xc);
+		  param1_00 = *(undefined4 *)(param1 + 8);
+		  if (*(int *)(System_Math_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(System_Math_TypeInfo);
+		  }
+		  uVar1 = UnityEngine_Mathf__Max(param1_00,uVar1,0);
+		  uVar1 = UnityEngine_Mathf__Max(uVar1,*(undefined4 *)(param1 + 0x10),0);
+		  return uVar1;
+		}
+		*/
+
 		}
 
 		// Token: 0x06006FF1 RID: 28657 RVA: 0x00014580 File Offset: 0x00012780
@@ -48,6 +72,24 @@ namespace Core.Application.Managers.Connection
 		[Address(RVA = "0x227A", Offset = "0x227A", VA = "0x227A")]
 		public void ResetAll()
 		{
+		/* --- GHIDRA: ResetAll ---
+		void Core_Application_Managers_Connection_ServerConnectionDelay__ResetAll
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  if (DAT_ram_00a5a348 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_EventArgs_TypeInfo);
+		    DAT_ram_00a5a348 = '\x01';
+		  }
+		  if (*(int *)(System_EventArgs_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(System_EventArgs_TypeInfo);
+		  }
+		  *(undefined4 *)(param1 + 0xc) = param3;
+		  *(undefined4 *)(param1 + 8) = param2;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06006FF3 RID: 28659 RVA: 0x00002050 File Offset: 0x00000250

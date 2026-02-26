@@ -411,6 +411,18 @@ namespace Gameplay.Fresco.View
 		[Address(RVA = "0x8019", Offset = "0x8019", VA = "0x8019")]
 		public FrescoEditView()
 		{
+		/* --- GHIDRA: .ctor ---
+		undefined4 Gameplay_Fresco_View_FrescoEditView___ctor(undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a57559 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_12617);
+		    DAT_ram_00a57559 = '\x01';
+		  }
+		  return StringLiteral_12617;
+		}
+		*/
+
 		}
 
 		// Token: 0x040019E6 RID: 6630
@@ -626,4 +638,21 @@ namespace Gameplay.Fresco.View
 			Finished
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_WindowRect ---
+		void Gameplay_Fresco_View_FrescoEditView__get_WindowRect(undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a57558 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_UI_MonoBehaviourWithStates_FrescoEditView_States___ctor__);
+		    DAT_ram_00a57558 = '\x01';
+		  }
+		  ScreenAdaptation_Common_AppSize__Update
+		            (param1,Method_UI_MonoBehaviourWithStates_FrescoEditView_States___ctor__);
+		  return;
+		}
+		*/
+
 }

@@ -42,4 +42,29 @@ namespace UI.Windows
 		[FieldOffset(Offset = "0x54")]
 		public readonly Type Found;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_Message ---
+		void UI_Windows_IncorrectWindowTypeFound__get_Message
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4,undefined4 param5,
+		               undefined4 param6)
+		
+		{
+		  if (DAT_ram_00a639f1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Exception_TypeInfo);
+		    DAT_ram_00a639f1 = '\x01';
+		  }
+		  if (*(int *)(System_Exception_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(System_Exception_TypeInfo);
+		  }
+		  System_Exception__Init(param1,0);
+		  *(undefined4 *)(param1 + 0x54) = param5;
+		  *(undefined4 *)(param1 + 0x50) = param4;
+		  *(undefined4 *)(param1 + 0x4c) = param3;
+		  *(undefined4 *)(param1 + 0x48) = param2;
+		  return;
+		}
+		*/
+
 }

@@ -68,6 +68,56 @@ namespace Gameplay.Clans.Combat.View.Players
 		[Address(RVA = "0x8FE2", Offset = "0x8FE2", VA = "0x8FE2", Slot = "4")]
 		public ICombatPLayerView Init(CombatPlayer player, IGameAudio gameAudio, Dictionaries dictionaries)
 		{
+		/* --- GHIDRA: Init ---
+		void Gameplay_Clans_Combat_View_Players_ClanCombatPlayerView__Init
+		               (int param1,longlong param2,longlong param3,undefined4 param4)
+		
+		{
+		  float fVar1;
+		  undefined4 uVar2;
+		  int iVar3;
+		  undefined4 uVar4;
+		  undefined4 param3_00;
+		  int iVar5;
+		  undefined8 local_18;
+		  longlong local_10;
+		  longlong local_8;
+		  
+		  local_10 = param3;
+		  local_8 = param2;
+		  if (DAT_ram_00a5777e == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&System_Collections_Generic_KeyValuePair_string__string____TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_KeyValuePair_string__string___ctor__);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_28217);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_1618);
+		    DAT_ram_00a5777e = '\x01';
+		  }
+		  fVar1 = UnityEngine_Camera__set_orthographicSize((float)param2,(float)param3,0);
+		  iVar5 = *(int *)(*(int *)(param1 + 0x24) + 0x18);
+		  uVar2 = Core_Extensions_Dict_UserSkillDicExt__GetDescription(*(undefined4 *)(param1 + 0x2c),0);
+		  iVar3 = Mono_Security_ASN1Convert__ToOid
+		                    (System_Collections_Generic_KeyValuePair_string__string____TypeInfo,1);
+		  uVar4 = UnityEngine_GameObject__SetActive(&local_8,0);
+		  param3_00 = UnityEngine_GameObject__SetActive(&local_10,0);
+		  uVar4 = UnityEngine_AndroidJavaObject__FromJavaArray_Nullable_int__
+		                    (uVar4,StringLiteral_1618,param3_00,0);
+		  local_18 = 0;
+		  System_Text_Formatting_StringView__get_IsEmpty
+		            (&local_18,StringLiteral_28217,uVar4,
+		             Method_System_Collections_Generic_KeyValuePair_string__string___ctor__);
+		  *(undefined8 *)(iVar3 + 0x10) = local_18;
+		  uVar2 = Gameplay_Clans_Office_View_ClanWarsTab_ClanWarsRewardsTab_ClanWarsRewardsView__GetPlacesText
+		                    (uVar2,iVar3,0);
+		  *(undefined4 *)(iVar5 + 0x28) = uVar2;
+		  iVar3 = **(int **)(param1 + 0x24);
+		  (**(code **)((ulonglong)*(uint *)(iVar3 + 0x108) * 4))
+		            (*(int **)(param1 + 0x24),fVar1,*(undefined4 *)(iVar3 + 0x10c));
+		  return;
+		}
+		*/
+
 			return null;
 		}
 
@@ -76,6 +126,56 @@ namespace Gameplay.Clans.Combat.View.Players
 		[Address(RVA = "0x8FE3", Offset = "0x8FE3", VA = "0x8FE3")]
 		private void SetHealth(long current, long total)
 		{
+		/* --- GHIDRA: SetHealth ---
+		void Gameplay_Clans_Combat_View_Players_ClanCombatPlayerView__SetHealth
+		               (int param1,longlong param2,longlong param3,undefined4 param4)
+		
+		{
+		  float fVar1;
+		  undefined4 uVar2;
+		  int iVar3;
+		  undefined4 uVar4;
+		  undefined4 param3_00;
+		  int iVar5;
+		  undefined8 local_18;
+		  longlong local_10;
+		  longlong local_8;
+		  
+		  local_10 = param3;
+		  local_8 = param2;
+		  if (DAT_ram_00a5777f == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&System_Collections_Generic_KeyValuePair_string__string____TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_KeyValuePair_string__string___ctor__);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_28217);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_1618);
+		    DAT_ram_00a5777f = '\x01';
+		  }
+		  fVar1 = UnityEngine_Camera__set_orthographicSize((float)param2,(float)param3,0);
+		  iVar5 = *(int *)(*(int *)(param1 + 0x28) + 0x18);
+		  uVar2 = Core_Extensions_Dict_UserSkillDicExt__GetDescription(*(undefined4 *)(param1 + 0x30),0);
+		  iVar3 = Mono_Security_ASN1Convert__ToOid
+		                    (System_Collections_Generic_KeyValuePair_string__string____TypeInfo,1);
+		  uVar4 = UnityEngine_GameObject__SetActive(&local_8,0);
+		  param3_00 = UnityEngine_GameObject__SetActive(&local_10,0);
+		  uVar4 = UnityEngine_AndroidJavaObject__FromJavaArray_Nullable_int__
+		                    (uVar4,StringLiteral_1618,param3_00,0);
+		  local_18 = 0;
+		  System_Text_Formatting_StringView__get_IsEmpty
+		            (&local_18,StringLiteral_28217,uVar4,
+		             Method_System_Collections_Generic_KeyValuePair_string__string___ctor__);
+		  *(undefined8 *)(iVar3 + 0x10) = local_18;
+		  uVar2 = Gameplay_Clans_Office_View_ClanWarsTab_ClanWarsRewardsTab_ClanWarsRewardsView__GetPlacesText
+		                    (uVar2,iVar3,0);
+		  *(undefined4 *)(iVar5 + 0x28) = uVar2;
+		  iVar3 = **(int **)(param1 + 0x28);
+		  (**(code **)((ulonglong)*(uint *)(iVar3 + 0x108) * 4))
+		            (*(int **)(param1 + 0x28),fVar1,*(undefined4 *)(iVar3 + 0x10c));
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600412D RID: 16685 RVA: 0x00002050 File Offset: 0x00000250
@@ -83,6 +183,21 @@ namespace Gameplay.Clans.Combat.View.Players
 		[Address(RVA = "0x8FE4", Offset = "0x8FE4", VA = "0x8FE4")]
 		private void SetMana(long current, long total)
 		{
+		/* --- GHIDRA: SetMana ---
+		void Gameplay_Clans_Combat_View_Players_ClanCombatPlayerView__SetMana(int param1,undefined4 param2)
+		
+		{
+		  undefined8 param2_00;
+		  undefined8 param3;
+		  
+		  param2_00 = Gameplay_Combat_Model_CombatPlayer__SetPlayerSkills(*(undefined4 *)(param1 + 0x34),0);
+		  param3 = Gameplay_Combat_Model_CombatPlayer__get_CurrentMana(*(undefined4 *)(param1 + 0x34),0);
+		  Gameplay_Clans_Combat_View_Players_ClanCombatPlayerView__SetHealth(param1,param2_00,param3,param1)
+		  ;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600412E RID: 16686 RVA: 0x00002050 File Offset: 0x00000250
@@ -90,6 +205,21 @@ namespace Gameplay.Clans.Combat.View.Players
 		[Address(RVA = "0x8FE5", Offset = "0x8FE5", VA = "0x8FE5")]
 		private void UpdateMana()
 		{
+		/* --- GHIDRA: UpdateMana ---
+		void Gameplay_Clans_Combat_View_Players_ClanCombatPlayerView__UpdateMana
+		               (int param1,undefined4 param2)
+		
+		{
+		  undefined8 param2_00;
+		  undefined8 param3;
+		  
+		  param2_00 = Gameplay_Combat_Model_CombatPlayer__get_TotalMana(*(undefined4 *)(param1 + 0x34),0);
+		  param3 = Gameplay_Combat_Model_CombatPlayer__get_CurrentHealth(*(undefined4 *)(param1 + 0x34),0);
+		  Gameplay_Clans_Combat_View_Players_ClanCombatPlayerView__Init(param1,param2_00,param3,param1);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600412F RID: 16687 RVA: 0x00002050 File Offset: 0x00000250
@@ -97,6 +227,29 @@ namespace Gameplay.Clans.Combat.View.Players
 		[Address(RVA = "0x8FE6", Offset = "0x8FE6", VA = "0x8FE6")]
 		private void UpdateHealth()
 		{
+		/* --- GHIDRA: UpdateHealth ---
+		void Gameplay_Clans_Combat_View_Players_ClanCombatPlayerView__UpdateHealth
+		               (int param1,int param2,undefined4 param3)
+		
+		{
+		  undefined8 uVar1;
+		  undefined8 uVar2;
+		  
+		  if (param2 != 3) {
+		    if (param2 == 4) {
+		      uVar1 = Gameplay_Combat_Model_CombatPlayer__SetPlayerSkills(*(undefined4 *)(param1 + 0x34),0);
+		      uVar2 = Gameplay_Combat_Model_CombatPlayer__get_CurrentMana(*(undefined4 *)(param1 + 0x34),0);
+		      Gameplay_Clans_Combat_View_Players_ClanCombatPlayerView__SetHealth(param1,uVar1,uVar2,param1);
+		    }
+		    return;
+		  }
+		  uVar1 = Gameplay_Combat_Model_CombatPlayer__get_TotalMana(*(undefined4 *)(param1 + 0x34),0);
+		  uVar2 = Gameplay_Combat_Model_CombatPlayer__get_CurrentHealth(*(undefined4 *)(param1 + 0x34),0);
+		  Gameplay_Clans_Combat_View_Players_ClanCombatPlayerView__Init(param1,uVar1,uVar2,param1);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06004130 RID: 16688 RVA: 0x00002050 File Offset: 0x00000250
@@ -118,6 +271,15 @@ namespace Gameplay.Clans.Combat.View.Players
 		[Address(RVA = "0x8FE9", Offset = "0x8FE9", VA = "0x8FE9", Slot = "7")]
 		public void UpdateLongEffects()
 		{
+		/* --- GHIDRA: UpdateLongEffects ---
+		void Gameplay_Clans_Combat_View_Players_ClanCombatPlayerView__UpdateLongEffects
+		               (undefined4 param1,float param2,float param3,undefined4 param4)
+		
+		{
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06004133 RID: 16691 RVA: 0x00002050 File Offset: 0x00000250
@@ -281,4 +443,214 @@ namespace Gameplay.Clans.Combat.View.Players
 		[FieldOffset(Offset = "0x34")]
 		private ClanCombatPlayer _player;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: set_CurrentManaUserSkillDic ---
+		int Gameplay_Clans_Combat_View_Players_ClanCombatPlayerView__set_CurrentManaUserSkillDic
+		              (int param1,undefined4 param2,undefined4 param3,undefined4 param4,undefined4 param5)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  Gameplay_Clans_Combat_View_Players_ClanCombatPlayerView__get_Player(param1,param2,param1);
+		  uVar1 = System_Collections_Generic_Dictionary_int__object___get_Item(param4,4,0);
+		  *(undefined4 *)(param1 + 0x2c) = uVar1;
+		  uVar1 = System_Collections_Generic_Dictionary_int__object___get_Item(param4,5,0);
+		  *(undefined1 *)(param1 + 0x38) = 1;
+		  *(undefined4 *)(param1 + 0x30) = uVar1;
+		  return param1;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_Player ---
+		void Gameplay_Clans_Combat_View_Players_ClanCombatPlayerView__get_Player
+		               (int param1,int *param2,undefined4 param3)
+		
+		{
+		  int param2_00;
+		  uint uVar1;
+		  
+		  if (DAT_ram_00a57780 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Gameplay_Clans_Combat_Model_ClanCombatPlayer_TypeInfo);
+		    DAT_ram_00a57780 = '\x01';
+		  }
+		  param2_00 = Gameplay_Clans_Combat_Model_ClanCombatPlayer_TypeInfo;
+		  if (param2 != *(int **)(param1 + 0x34)) {
+		    if (param2 == (int *)0x0) {
+		      *(undefined4 *)(param1 + 0x34) = 0;
+		    }
+		    else {
+		      uVar1 = (uint)*(byte *)(Gameplay_Clans_Combat_Model_ClanCombatPlayer_TypeInfo + 0xb8);
+		      if ((*(byte *)(*param2 + 0xb8) < uVar1) ||
+		         (*(int *)(*(int *)(*param2 + 100) + (uVar1 - 1) * 4) !=
+		          Gameplay_Clans_Combat_Model_ClanCombatPlayer_TypeInfo)) {
+		code_r0x80dd7ca3:
+		        System_Activator__CreateInstance(param2,param2_00);
+		        do {
+		          halt_trap();
+		        } while( true );
+		      }
+		      *(int **)(param1 + 0x34) = param2;
+		      if ((*(byte *)(*param2 + 0xb8) < uVar1) ||
+		         (*(int *)(*(int *)(*param2 + 100) + (uVar1 - 1) * 4) != param2_00)) goto code_r0x80dd7ca3;
+		    }
+		    Gameplay_Clans_Combat_View_Players_ClanCombatPlayerView__set_Player(param1,param2);
+		  }
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_Player ---
+		void Gameplay_Clans_Combat_View_Players_ClanCombatPlayerView__set_Player
+		               (int param1,undefined4 param2)
+		
+		{
+		  undefined4 in_register_20000014;
+		  undefined8 in_i2q;
+		  longlong lVar1;
+		  uint uVar2;
+		  undefined4 uVar3;
+		  undefined4 uVar4;
+		  undefined8 uVar5;
+		  undefined8 uVar6;
+		  int iVar7;
+		  int *piVar8;
+		  int iVar9;
+		  uint param2_00;
+		  undefined4 uVar10;
+		  int iVar11;
+		  undefined1 auStack_30 [8];
+		  undefined8 local_28;
+		  undefined4 local_20;
+		  float4 local_18;
+		  undefined4 local_14;
+		  undefined4 uStack_10;
+		  float4 local_c;
+		  undefined8 local_8;
+		  
+		  uVar2 = (uint)((ulonglong)in_i2q >> 0x20);
+		  iVar9 = 0;
+		  if (*(int *)(param1 + 0x34) != 0) {
+		    uVar3 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_uint__object___MoveNext
+		                      (*(undefined4 *)(*(int *)(param1 + 0x14) + 0x10),0);
+		    Com_TheFallenGames_OSA_CustomAdapters_TableView_Tuple_Basic_BasicTupleValueViewsHolder__UpdateAsText
+		              (uVar3,(uint)(*(int *)(*(int *)(param1 + 0x34) + 0x54) ==
+		                           *(int *)(*(int *)(*(int *)(param1 + 0x34) + 8) + 0x14)),0);
+		    uVar3 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_uint__object___MoveNext
+		                      (*(undefined4 *)(*(int *)(param1 + 0x14) + 0x14),0);
+		    param2_00 = (uint)(*(int *)(*(int *)(param1 + 0x34) + 0x54) !=
+		                      *(int *)(*(int *)(*(int *)(param1 + 0x34) + 8) + 0x14));
+		    uVar5 = CONCAT44(in_register_20000014,param2_00);
+		    lVar1 = (ulonglong)uVar2 << 0x20;
+		    Com_TheFallenGames_OSA_CustomAdapters_TableView_Tuple_Basic_BasicTupleValueViewsHolder__UpdateAsText
+		              (uVar3,param2_00,0);
+		    iVar7 = *(int *)(param1 + 0x14);
+		    if (0 < *(int *)(iVar7 + 0xc)) {
+		      do {
+		        uVar10 = (undefined4)((ulonglong)lVar1 >> 0x20);
+		        piVar8 = *(int **)(iVar7 + iVar9 * 4 + 0x10);
+		        uVar3 = (undefined4)((ulonglong)uVar5 >> 0x20);
+		        uVar4 = Google_Protobuf_Collections_RepeatedField_object___GetEnumerator
+		                          (*(undefined4 *)(*(int *)(param1 + 0x34) + 0x14),0);
+		        iVar11 = *piVar8;
+		        uVar5 = CONCAT44(uVar3,uVar4);
+		        lVar1 = CONCAT44(uVar10,*(undefined4 *)(iVar11 + 0x2d4));
+		        (**(code **)((ulonglong)*(uint *)(iVar11 + 0x2d0) * 4))(piVar8,uVar5,lVar1);
+		        iVar9 = iVar9 + 1;
+		      } while (iVar9 < *(int *)(iVar7 + 0xc));
+		    }
+		    uVar10 = (undefined4)((ulonglong)lVar1 >> 0x20);
+		    uVar3 = (undefined4)((ulonglong)uVar5 >> 0x20);
+		    iVar9 = *(int *)(param1 + 0x20);
+		    if (0 < *(int *)(iVar9 + 0xc)) {
+		      iVar7 = 0;
+		      do {
+		        uVar10 = *(undefined4 *)(iVar9 + iVar7 * 4 + 0x10);
+		        uVar3 = (undefined4)((ulonglong)uVar5 >> 0x20);
+		        uVar2 = (uint)((ulonglong)lVar1 >> 0x20);
+		        func_ii_20513(&local_c,uVar10,0);
+		        local_14 = (undefined4)local_8;
+		        uStack_10 = (undefined4)((ulonglong)local_8 >> 0x20);
+		        local_20 = uStack_10;
+		        local_18 = local_c;
+		        if (*(int *)(*(int *)(*(int *)(param1 + 0x34) + 8) + 0x14) !=
+		            *(int *)(*(int *)(param1 + 0x34) + 0x54)) {
+		          local_18 = (float4)-(float)local_c;
+		        }
+		        local_28 = CONCAT44(local_14,local_18);
+		        uVar5 = CONCAT44(uVar3,&local_28);
+		        lVar1 = (ulonglong)uVar2 << 0x20;
+		        Com_TheFallenGames_OSA_Core_OSA_object__object___SetNormalizedPosition(uVar10,&local_28,0);
+		        uVar10 = (undefined4)((ulonglong)lVar1 >> 0x20);
+		        uVar3 = (undefined4)((ulonglong)uVar5 >> 0x20);
+		        iVar7 = iVar7 + 1;
+		      } while (iVar7 < *(int *)(iVar9 + 0xc));
+		    }
+		    iVar9 = **(int **)(param1 + 0x10);
+		    (**(code **)((ulonglong)*(uint *)(iVar9 + 0x138) * 4))
+		              (*(int **)(param1 + 0x10),
+		               CONCAT44(uVar3,*(undefined4 *)(*(int *)(*(int *)(param1 + 0x34) + 0x14) + 0x38)),
+		               CONCAT44(uVar10,*(undefined4 *)(iVar9 + 0x13c)));
+		    uVar3 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_uint__object___MoveNext
+		                      (*(undefined4 *)(param1 + 0x18),0);
+		    Com_TheFallenGames_OSA_CustomAdapters_TableView_Tuple_Basic_BasicTupleValueViewsHolder__UpdateAsText
+		              (uVar3,(uint)*(byte *)(*(int *)(param1 + 0x34) + 0x65),0);
+		    uVar3 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_uint__object___MoveNext
+		                      (*(undefined4 *)(param1 + 0x1c),0);
+		    Com_TheFallenGames_OSA_CustomAdapters_TableView_Tuple_Basic_BasicTupleValueViewsHolder__UpdateAsText
+		              (uVar3,(uint)(*(char *)(*(int *)(param1 + 0x34) + 0x65) == '\0'),0);
+		    uVar5 = Gameplay_Combat_Model_CombatPlayer__get_TotalMana(*(undefined4 *)(param1 + 0x34),0);
+		    uVar6 = Gameplay_Combat_Model_CombatPlayer__get_CurrentHealth(*(undefined4 *)(param1 + 0x34),0);
+		    Gameplay_Clans_Combat_View_Players_ClanCombatPlayerView__Init(param1,uVar5,uVar6,auStack_30);
+		    uVar5 = Gameplay_Combat_Model_CombatPlayer__SetPlayerSkills(*(undefined4 *)(param1 + 0x34),0);
+		    uVar6 = Gameplay_Combat_Model_CombatPlayer__get_CurrentMana(*(undefined4 *)(param1 + 0x34),0);
+		    Gameplay_Clans_Combat_View_Players_ClanCombatPlayerView__SetHealth
+		              (param1,uVar5,uVar6,auStack_30);
+		  }
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_Select ---
+		int Gameplay_Clans_Combat_View_Players_ClanCombatPlayerView__set_Select
+		              (int param1,undefined4 param2)
+		
+		{
+		  int param1_00;
+		  int *param1_01;
+		  
+		  if (DAT_ram_00a57781 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Gameplay_Clans_Combat_Model_ClanCombatPlayer_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Method_UI_ToolTip_ToolTipData_ClanCombatPlayer___ctor__);
+		    Mono_Security_ASN1__get_Item(&Method_UI_ToolTip_ToolTipData_ClanCombatPlayer__set_Data__);
+		    Mono_Security_ASN1__get_Item(&UI_ToolTip_ToolTipData_ClanCombatPlayer__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_12527);
+		    DAT_ram_00a57781 = '\x01';
+		  }
+		  param1_00 = unnamed_function_1417(UI_ToolTip_ToolTipData_ClanCombatPlayer__TypeInfo);
+		  System_Buffers_TlsOverPerCoreLockedStacksArrayPool___Il2CppFullySharedGenericType___get_Id
+		            (param1_00,StringLiteral_12527,Method_UI_ToolTip_ToolTipData_ClanCombatPlayer___ctor__);
+		  param1_01 = *(int **)(param1 + 0x34);
+		  if (param1_01 != (int *)0x0) {
+		    if (((uint)*(byte *)(*param1_01 + 0xb8) <
+		         (uint)*(byte *)(Gameplay_Clans_Combat_Model_ClanCombatPlayer_TypeInfo + 0xb8)) ||
+		       (*(int *)(*(int *)(*param1_01 + 100) +
+		                 (uint)*(byte *)(Gameplay_Clans_Combat_Model_ClanCombatPlayer_TypeInfo + 0xb8) * 4 +
+		                -4) != Gameplay_Clans_Combat_Model_ClanCombatPlayer_TypeInfo)) {
+		      System_Activator__CreateInstance
+		                (param1_01,Gameplay_Clans_Combat_Model_ClanCombatPlayer_TypeInfo);
+		      do {
+		        halt_trap();
+		      } while( true );
+		    }
+		  }
+		  *(int **)(param1_00 + 0x1c) = param1_01;
+		  return param1_00;
+		}
+		*/
+
 }

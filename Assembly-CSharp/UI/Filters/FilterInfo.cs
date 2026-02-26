@@ -12,6 +12,30 @@ namespace UI.Filters
 		[Address(RVA = "0x5F72", Offset = "0x5F72", VA = "0x5F72")]
 		public FilterInfo()
 		{
+		/* --- GHIDRA: .ctor ---
+		void UI_Filters_FilterInfo___ctor(int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  undefined4 param2_00;
+		  undefined4 param1_00;
+		  
+		  if (DAT_ram_00a63919 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UI_Filters_AbstractFilterToggleView_ArtikulTypeFilters__Init__);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UI_Filters_AbstractFilterToggleView_ArtikulTypeFilters__get_Data__);
+		    DAT_ram_00a63919 = '\x01';
+		  }
+		  UnityEngine_Purchasing_Default_WinProductDescription__set_description
+		            (param1,param2,Method_UI_Filters_AbstractFilterToggleView_ArtikulTypeFilters__Init__);
+		  param1_00 = *(undefined4 *)(param1 + 0x14);
+		  param2_00 = Core_Extensions_Dict_ArtikulTypeFilterDicExt__GetIconEnabled
+		                        (*(undefined4 *)(param1 + 0x18),0);
+		  AssetContent_GameImage__get_AssetId(param1_00,param2_00,0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x040005FB RID: 1531

@@ -126,6 +126,20 @@ namespace Core.Application.Managers
 		[Address(RVA = "0xB986", Offset = "0xB986", VA = "0xB986")]
 		public DeepLinkManager(IApp application)
 		{
+		/* --- GHIDRA: .ctor ---
+		void Core_Application_Managers_DeepLinkManager___ctor(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  
+		  *(undefined8 *)(param1 + 0x14) = 0;
+		  iVar1 = *(int *)(param1 + 0xc);
+		  (**(code **)((ulonglong)*(uint *)(iVar1 + 0xc) * 4))
+		            (*(undefined4 *)(iVar1 + 0x20),param1,*(undefined4 *)(iVar1 + 0x14));
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06006F0B RID: 28427 RVA: 0x00002050 File Offset: 0x00000250
@@ -133,6 +147,19 @@ namespace Core.Application.Managers
 		[Address(RVA = "0xB987", Offset = "0xB987", VA = "0xB987", Slot = "9")]
 		public void Deinit()
 		{
+		/* --- GHIDRA: Deinit ---
+		void Core_Application_Managers_DeepLinkManager__Deinit(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  
+		  iVar1 = *(int *)(param1 + 8);
+		  (**(code **)((ulonglong)*(uint *)(iVar1 + 0xc) * 4))
+		            (*(undefined4 *)(iVar1 + 0x20),param1,*(undefined4 *)(iVar1 + 0x14));
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06006F0C RID: 28428 RVA: 0x00002050 File Offset: 0x00000250
@@ -140,6 +167,41 @@ namespace Core.Application.Managers
 		[Address(RVA = "0xB988", Offset = "0xB988", VA = "0xB988", Slot = "8")]
 		public void Init()
 		{
+		/* --- GHIDRA: Init ---
+		void Core_Application_Managers_DeepLinkManager__Init(int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  undefined4 param1_00;
+		  int iVar1;
+		  undefined4 param1_01;
+		  
+		  if (DAT_ram_00a5a81d == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Uri_TypeInfo);
+		    DAT_ram_00a5a81d = '\x01';
+		  }
+		  param1_00 = unnamed_function_1417(System_Uri_TypeInfo);
+		  UI_Windows_ClosableBaseWindow_object___HandleCloseButton(param1_00,param2,0);
+		  if (DAT_ram_00a5a81c == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Uri_TypeInfo);
+		    DAT_ram_00a5a81c = '\x01';
+		  }
+		  param1_01 = *(undefined4 *)(param1 + 0x18);
+		  if (*(int *)(System_Uri_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(System_Uri_TypeInfo);
+		  }
+		  iVar1 = System_Uri__ToString(param1_01,param1_00,0);
+		  if (iVar1 == 0) {
+		    *(undefined4 *)(param1 + 0x18) = param1_00;
+		    iVar1 = *(int *)(param1 + 0x10);
+		    if (iVar1 != 0) {
+		      (**(code **)((ulonglong)*(uint *)(iVar1 + 0xc) * 4))
+		                (*(undefined4 *)(iVar1 + 0x20),param1_00,*(undefined4 *)(iVar1 + 0x14));
+		    }
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06006F0D RID: 28429 RVA: 0x00002050 File Offset: 0x00000250
@@ -147,6 +209,35 @@ namespace Core.Application.Managers
 		[Address(RVA = "0xB989", Offset = "0xB989", VA = "0xB989")]
 		private void HandleDeepLinkActivatedEvent(string uri)
 		{
+		/* --- GHIDRA: HandleDeepLinkActivatedEvent ---
+		void Core_Application_Managers_DeepLinkManager__HandleDeepLinkActivatedEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  int iVar1;
+		  undefined4 param1_00;
+		  
+		  if (DAT_ram_00a5a81c == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Uri_TypeInfo);
+		    DAT_ram_00a5a81c = '\x01';
+		  }
+		  param1_00 = *(undefined4 *)(param1 + 0x18);
+		  if (*(int *)(System_Uri_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(System_Uri_TypeInfo);
+		  }
+		  iVar1 = System_Uri__ToString(param1_00,param2,0);
+		  if (iVar1 == 0) {
+		    *(undefined4 *)(param1 + 0x18) = param2;
+		    iVar1 = *(int *)(param1 + 0x10);
+		    if (iVar1 != 0) {
+		      (**(code **)((ulonglong)*(uint *)(iVar1 + 0xc) * 4))
+		                (*(undefined4 *)(iVar1 + 0x20),param2,*(undefined4 *)(iVar1 + 0x14));
+		    }
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06006F0E RID: 28430 RVA: 0x00002050 File Offset: 0x00000250
@@ -161,4 +252,228 @@ namespace Core.Application.Managers
 		[FieldOffset(Offset = "0x18")]
 		private Uri _linkUri;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_Name ---
+		void Core_Application_Managers_DeepLinkManager__get_Name
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a5a816 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_IBaseManager__TypeInfo);
+		    DAT_ram_00a5a816 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 8);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = UnityEngine_UI_Image__set_sprite(param1_00,param2,0);
+		    param2_00 = System_Action_IBaseManager__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_IBaseManager__TypeInfo), iVar2 == 0)) break;
+		    iVar2 = func_ii_4329(param1 + 8,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: add_InitCompleteEvent ---
+		void Core_Application_Managers_DeepLinkManager__add_InitCompleteEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a5a817 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_IBaseManager__TypeInfo);
+		    DAT_ram_00a5a817 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 8);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = func_ii_7048(param1_00,param2,0);
+		    param2_00 = System_Action_IBaseManager__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_IBaseManager__TypeInfo), iVar2 == 0)) break;
+		    iVar2 = func_ii_4329(param1 + 8,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: remove_InitCompleteEvent ---
+		void Core_Application_Managers_DeepLinkManager__remove_InitCompleteEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a5a818 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_IBaseManager__TypeInfo);
+		    DAT_ram_00a5a818 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0xc);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = UnityEngine_UI_Image__set_sprite(param1_00,param2,0);
+		    param2_00 = System_Action_IBaseManager__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_IBaseManager__TypeInfo), iVar2 == 0)) break;
+		    iVar2 = func_ii_4329(param1 + 0xc,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: add_DeinitCompleteEvent ---
+		void Core_Application_Managers_DeepLinkManager__add_DeinitCompleteEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a5a819 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_IBaseManager__TypeInfo);
+		    DAT_ram_00a5a819 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0xc);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = func_ii_7048(param1_00,param2,0);
+		    param2_00 = System_Action_IBaseManager__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_IBaseManager__TypeInfo), iVar2 == 0)) break;
+		    iVar2 = func_ii_4329(param1 + 0xc,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: remove_DeinitCompleteEvent ---
+		void Core_Application_Managers_DeepLinkManager__remove_DeinitCompleteEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a5a81a == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_Uri__TypeInfo);
+		    DAT_ram_00a5a81a = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x10);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = UnityEngine_UI_Image__set_sprite(param1_00,param2,0);
+		    param2_00 = System_Action_Uri__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_Uri__TypeInfo), iVar2 == 0)) break;
+		    iVar2 = func_ii_4329(param1 + 0x10,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: add_UriChangedEvent ---
+		void Core_Application_Managers_DeepLinkManager__add_UriChangedEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a5a81b == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_Uri__TypeInfo);
+		    DAT_ram_00a5a81b = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x10);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = func_ii_7048(param1_00,param2,0);
+		    param2_00 = System_Action_Uri__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_Uri__TypeInfo), iVar2 == 0)) break;
+		    iVar2 = func_ii_4329(param1 + 0x10,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
 }

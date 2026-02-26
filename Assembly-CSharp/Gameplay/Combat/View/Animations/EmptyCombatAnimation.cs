@@ -35,6 +35,43 @@ namespace Gameplay.Combat.View.Animations
 		[Address(RVA = "0x899E", Offset = "0x899E", VA = "0x899E", Slot = "12")]
 		public void Dispose()
 		{
+		/* --- GHIDRA: Dispose ---
+		void Gameplay_Combat_View_Animations_EmptyCombatAnimation__Dispose
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a57e1e == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_CombatAnimation_IContent__TypeInfo);
+		    DAT_ram_00a57e1e = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 8);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = UnityEngine_UI_Image__set_sprite(param1_00,param2,0);
+		    param2_00 = System_Action_CombatAnimation_IContent__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_CombatAnimation_IContent__TypeInfo), iVar2 == 0
+		       )) break;
+		    iVar2 = func_ii_4329(param1 + 8,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
 		}
 
 		// Token: 0x1400018C RID: 396
@@ -84,6 +121,99 @@ namespace Gameplay.Combat.View.Animations
 		[Address(RVA = "0x89A4", Offset = "0x89A4", VA = "0x89A4")]
 		public EmptyCombatAnimation()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_Combat_View_Animations_EmptyCombatAnimation___ctor
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  int param1_00;
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a57e21 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Gameplay_Combat_View_Animations_LoseFieldAnimation__LoseEffect_d__2_TypeInfo);
+		    DAT_ram_00a57e21 = '\x01';
+		  }
+		  param1_00 = unnamed_function_1417
+		                        (
+		                        Gameplay_Combat_View_Animations_LoseFieldAnimation__LoseEffect_d__2_TypeInfo
+		                        );
+		  *(undefined4 *)(param1_00 + 0x10) = param2;
+		  *(undefined4 *)(param1_00 + 8) = 0;
+		  uVar1 = Utils_CoroutineSource__GetMono(param1_00,0);
+		  *(undefined4 *)(param1 + 8) = uVar1;
+		  return;
+		}
+		*/
+
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: add_OnAnimExecuteEvent ---
+		void Gameplay_Combat_View_Animations_EmptyCombatAnimation__add_OnAnimExecuteEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a57e1f == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_CombatAnimation_IContent__TypeInfo);
+		    DAT_ram_00a57e1f = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 8);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = func_ii_7048(param1_00,param2,0);
+		    param2_00 = System_Action_CombatAnimation_IContent__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_CombatAnimation_IContent__TypeInfo), iVar2 == 0
+		       )) break;
+		    iVar2 = func_ii_4329(param1 + 8,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: remove_OnAnimExecuteEvent ---
+		int * Gameplay_Combat_View_Animations_EmptyCombatAnimation__remove_OnAnimExecuteEvent
+		                (undefined4 param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  int *param1_00;
+		  
+		  if (DAT_ram_00a57e20 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Utils_OpToken_CombatAnimation_IContent__CombatAnimation_IContent___ctor__);
+		    Mono_Security_ASN1__get_Item
+		              (&Utils_OpToken_CombatAnimation_IContent__CombatAnimation_IContent__TypeInfo);
+		    DAT_ram_00a57e20 = '\x01';
+		  }
+		  param1_00 = (int *)unnamed_function_1417
+		                               (
+		                               Utils_OpToken_CombatAnimation_IContent__CombatAnimation_IContent__TypeInfo
+		                               );
+		  Gameplay_FeedbackForm_Model_FeedbackFormModel__GetUid
+		            (param1_00,
+		             Method_Utils_OpToken_CombatAnimation_IContent__CombatAnimation_IContent___ctor__);
+		  (**(code **)((ulonglong)*(uint *)(*param1_00 + 0x118) * 4))
+		            (param1_00,*(undefined4 *)(*param1_00 + 0x11c));
+		  return param1_00;
+		}
+		*/
+
 }

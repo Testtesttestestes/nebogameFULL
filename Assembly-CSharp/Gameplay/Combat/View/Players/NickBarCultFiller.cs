@@ -48,6 +48,16 @@ namespace Gameplay.Combat.View.Players
 		[Address(RVA = "0x8825", Offset = "0x8825", VA = "0x8825")]
 		public void SetNickBackgroundAssetId(string assetId)
 		{
+		/* --- GHIDRA: SetNickBackgroundAssetId ---
+		void Gameplay_Combat_View_Players_NickBarCultFiller__SetNickBackgroundAssetId
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  Core_Extensions_Dict_PortalDicExt__GetCurrencyIcon60x66(*(undefined4 *)(param1 + 0x18),param2,0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600387C RID: 14460 RVA: 0x00002050 File Offset: 0x00000250
@@ -87,4 +97,116 @@ namespace Gameplay.Combat.View.Players
 		[FieldOffset(Offset = "0x1C")]
 		private CultDic _cultDic;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_CultDic ---
+		void Gameplay_Combat_View_Players_NickBarCultFiller__get_CultDic
+		               (int *param1,int param2,undefined4 param3)
+		
+		{
+		  param1[7] = param2;
+		  (**(code **)((ulonglong)*(uint *)(*param1 + 0xe0) * 4))(param1,*(undefined4 *)(*param1 + 0xe4));
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_CultDic ---
+		void Gameplay_Combat_View_Players_NickBarCultFiller__set_CultDic(int param1,undefined4 param2)
+		
+		{
+		  uint uVar1;
+		  uint *puVar2;
+		  undefined4 uVar3;
+		  int *piVar4;
+		  int iVar5;
+		  
+		  if (DAT_ram_00a56702 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_Gameplay_IGame_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_11326);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_11327);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_11324);
+		    DAT_ram_00a56702 = '\x01';
+		  }
+		  if (*(int *)(param1 + 0x1c) == 0) {
+		    if (DAT_ram_00a6456f == '\0') {
+		      Mono_Security_ASN1__get_Item(&Core_Gameplay_Game_TypeInfo);
+		      DAT_ram_00a6456f = '\x01';
+		    }
+		    piVar4 = (int *)**(undefined4 **)(Core_Gameplay_Game_TypeInfo + 0x5c);
+		    iVar5 = *piVar4;
+		    if (*(ushort *)(iVar5 + 0xb6) != 0) {
+		      uVar1 = 0;
+		      do {
+		        if (Core_Gameplay_IGame_TypeInfo == *(int *)(*(int *)(iVar5 + 0x58) + uVar1 * 8)) {
+		          puVar2 = (uint *)(*(int *)(*(int *)(iVar5 + 0x58) + uVar1 * 8 + 4) * 8 + iVar5 + 0x178);
+		          goto code_r0x80c6c916;
+		        }
+		        uVar1 = uVar1 + 1;
+		      } while (*(ushort *)(iVar5 + 0xb6) != uVar1);
+		    }
+		    puVar2 = (uint *)func_ii_1080(piVar4,Core_Gameplay_IGame_TypeInfo,0x17);
+		code_r0x80c6c916:
+		    uVar3 = (**(code **)((ulonglong)*puVar2 * 4))(piVar4,puVar2[1]);
+		    uVar3 = Newtonsoft_Json_Converters_XmlDocumentTypeWrapper__get_System(uVar3,0);
+		    uVar3 = Core_Extensions_Dict_DictExt__GetServiceOptionDic(uVar3,StringLiteral_11326,0);
+		    Core_Extensions_Dict_PortalDicExt__GetCurrencyIcon60x66(*(undefined4 *)(param1 + 0x18),uVar3,0);
+		    if (DAT_ram_00a6456f == '\0') {
+		      Mono_Security_ASN1__get_Item(&Core_Gameplay_Game_TypeInfo);
+		      DAT_ram_00a6456f = '\x01';
+		    }
+		    piVar4 = (int *)**(undefined4 **)(Core_Gameplay_Game_TypeInfo + 0x5c);
+		    iVar5 = *piVar4;
+		    if (*(ushort *)(iVar5 + 0xb6) != 0) {
+		      uVar1 = 0;
+		      do {
+		        if (Core_Gameplay_IGame_TypeInfo == *(int *)(*(int *)(iVar5 + 0x58) + uVar1 * 8)) {
+		          puVar2 = (uint *)(*(int *)(*(int *)(iVar5 + 0x58) + uVar1 * 8 + 4) * 8 + iVar5 + 0x178);
+		          goto code_r0x80c6c9e3;
+		        }
+		        uVar1 = uVar1 + 1;
+		      } while (*(ushort *)(iVar5 + 0xb6) != uVar1);
+		    }
+		    puVar2 = (uint *)func_ii_1080(piVar4,Core_Gameplay_IGame_TypeInfo,0x17);
+		code_r0x80c6c9e3:
+		    uVar3 = (**(code **)((ulonglong)*puVar2 * 4))(piVar4,puVar2[1]);
+		    uVar3 = Newtonsoft_Json_Converters_XmlDocumentTypeWrapper__get_System(uVar3,0);
+		    uVar3 = Core_Extensions_Dict_DictExt__GetServiceOptionDic(uVar3,StringLiteral_11324,0);
+		    Core_Extensions_Dict_PortalDicExt__GetCurrencyIcon60x66(*(undefined4 *)(param1 + 0x10),uVar3,0);
+		    if (DAT_ram_00a6456f == '\0') {
+		      Mono_Security_ASN1__get_Item(&Core_Gameplay_Game_TypeInfo);
+		      DAT_ram_00a6456f = '\x01';
+		    }
+		    piVar4 = (int *)**(undefined4 **)(Core_Gameplay_Game_TypeInfo + 0x5c);
+		    iVar5 = *piVar4;
+		    if (*(ushort *)(iVar5 + 0xb6) != 0) {
+		      uVar1 = 0;
+		      do {
+		        if (Core_Gameplay_IGame_TypeInfo == *(int *)(*(int *)(iVar5 + 0x58) + uVar1 * 8)) {
+		          puVar2 = (uint *)(*(int *)(*(int *)(iVar5 + 0x58) + uVar1 * 8 + 4) * 8 + iVar5 + 0x178);
+		          goto code_r0x80c6cab0;
+		        }
+		        uVar1 = uVar1 + 1;
+		      } while (*(ushort *)(iVar5 + 0xb6) != uVar1);
+		    }
+		    puVar2 = (uint *)func_ii_1080(piVar4,Core_Gameplay_IGame_TypeInfo,0x17);
+		code_r0x80c6cab0:
+		    uVar3 = (**(code **)((ulonglong)*puVar2 * 4))(piVar4,puVar2[1]);
+		    uVar3 = Newtonsoft_Json_Converters_XmlDocumentTypeWrapper__get_System(uVar3,0);
+		    uVar3 = Core_Extensions_Dict_DictExt__GetServiceOptionDic(uVar3,StringLiteral_11327,0);
+		  }
+		  else {
+		    uVar3 = Core_Extensions_Dict_CultDicExt__GetDecorDotForAvatarFrameAssetId
+		                      (*(int *)(param1 + 0x1c),0);
+		    Core_Extensions_Dict_PortalDicExt__GetCurrencyIcon60x66(*(undefined4 *)(param1 + 0x18),uVar3,0);
+		    uVar3 = Core_Extensions_Dict_CultDicExt__GetIcon38x34AssetId(*(undefined4 *)(param1 + 0x1c),0);
+		    Core_Extensions_Dict_PortalDicExt__GetCurrencyIcon60x66(*(undefined4 *)(param1 + 0x10),uVar3,0);
+		    uVar3 = Core_Extensions_Dict_CultDicExt__GetIcon46x52AssetId(*(undefined4 *)(param1 + 0x1c),0);
+		  }
+		  Core_Extensions_Dict_PortalDicExt__GetCurrencyIcon60x66(*(undefined4 *)(param1 + 0x14),uVar3,0);
+		  return;
+		}
+		*/
+
 }

@@ -12,6 +12,25 @@ namespace Gameplay.Combat.Model
 		[Address(RVA = "0x8A65", Offset = "0x8A65", VA = "0x8A65")]
 		public SpellTarget(CombatSpellData spell)
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_Combat_Model_SpellTarget___ctor(undefined4 param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  if (DAT_ram_00a57e57 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Gameplay_Combat_Model_SkillsChange_AbstractShortSpellInfo_ProtoSkillsChangedEvt_Types_ShortSpellInfo___ctor__
+		              );
+		    DAT_ram_00a57e57 = '\x01';
+		  }
+		  Unity_Services_Core_Environments_Internal_Environments__get_Current
+		            (param1,param2,
+		             Method_Gameplay_Combat_Model_SkillsChange_AbstractShortSpellInfo_ProtoSkillsChangedEvt_Types_ShortSpellInfo___ctor__
+		            );
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0400208D RID: 8333

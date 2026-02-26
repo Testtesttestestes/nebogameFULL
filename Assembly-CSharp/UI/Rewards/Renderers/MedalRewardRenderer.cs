@@ -21,6 +21,33 @@ namespace UI.Rewards.Renderers
 		[Address(RVA = "0x5EB3", Offset = "0x5EB3", VA = "0x5EB3")]
 		public MedalRewardRenderer()
 		{
+		/* --- GHIDRA: .ctor ---
+		undefined4 UI_Rewards_Renderers_MedalRewardRenderer___ctor(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  undefined4 uVar2;
+		  
+		  if (DAT_ram_00a59a32 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UnityEngine_Component_GetComponent_TitleIconLoaderValueRow___);
+		    Mono_Security_ASN1__get_Item(&UnityEngine_Object_TypeInfo);
+		    DAT_ram_00a59a32 = '\x01';
+		  }
+		  uVar2 = *(undefined4 *)(param1 + 0x28);
+		  if (*(int *)(UnityEngine_Object_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(UnityEngine_Object_TypeInfo);
+		  }
+		  iVar1 = func_ii_3812(uVar2,0,0);
+		  if (iVar1 == 0) {
+		    return *(undefined4 *)(param1 + 0x28);
+		  }
+		  uVar2 = func_ii_5677(param1,Method_UnityEngine_Component_GetComponent_TitleIconLoaderValueRow___);
+		  *(undefined4 *)(param1 + 0x28) = uVar2;
+		  return uVar2;
+		}
+		*/
+
 		}
 
 		// Token: 0x04000564 RID: 1380

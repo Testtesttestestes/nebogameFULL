@@ -124,6 +124,23 @@ namespace Gameplay.Duel.Model
 		[Address(RVA = "0x82B6", Offset = "0x82B6", VA = "0x82B6")]
 		public DuelModel(UserData user)
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_Duel_Model_DuelModel___ctor(int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  int iVar1;
+		  
+		  if (DAT_ram_00a57bd7 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Gameplay_Duel_Model_DuelModel_DuelUserData_TypeInfo);
+		    DAT_ram_00a57bd7 = '\x01';
+		  }
+		  iVar1 = unnamed_function_1417(Gameplay_Duel_Model_DuelModel_DuelUserData_TypeInfo);
+		  *(undefined4 *)(iVar1 + 8) = param2;
+		  *(int *)(param1 + 0x14) = iVar1;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06003262 RID: 12898 RVA: 0x00002050 File Offset: 0x00000250
@@ -131,6 +148,27 @@ namespace Gameplay.Duel.Model
 		[Address(RVA = "0x82B7", Offset = "0x82B7", VA = "0x82B7")]
 		public void SetOpponent(UserData opponent)
 		{
+		/* --- GHIDRA: SetOpponent ---
+		void Gameplay_Duel_Model_DuelModel__SetOpponent(int param1,int param2,undefined4 param3)
+		
+		{
+		  int iVar1;
+		  undefined4 uVar2;
+		  
+		  if (DAT_ram_00a57bd8 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Gameplay_Duel_Model_DuelModel_DuelData_TypeInfo);
+		    DAT_ram_00a57bd8 = '\x01';
+		  }
+		  iVar1 = unnamed_function_1417(Gameplay_Duel_Model_DuelModel_DuelData_TypeInfo);
+		  *(int *)(iVar1 + 0xc) = param2;
+		  uVar2 = Core_Extensions_Dict_DictExt__GetHordeMonstersByMainMonsterIdSorted
+		                    (*(undefined4 *)(param1 + 0xc),*(undefined4 *)(param2 + 0xc),0);
+		  *(undefined4 *)(iVar1 + 8) = uVar2;
+		  *(int *)(param1 + 0x18) = iVar1;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06003263 RID: 12899 RVA: 0x00002050 File Offset: 0x00000250
@@ -207,4 +245,56 @@ namespace Gameplay.Duel.Model
 			public ProtoGetDuelsInfoAns.Types.DuelInfo DuelInfo;
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: set_RequirementDic ---
+		void Gameplay_Duel_Model_DuelModel__set_RequirementDic
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  uint uVar1;
+		  undefined4 uVar2;
+		  uint *puVar3;
+		  int *param1_00;
+		  int iVar4;
+		  
+		  if (DAT_ram_00a57bd6 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Utils_BackTime_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Gameplay_Duel_Model_DuelModel_DuelUserData_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Core_Gameplay_IGame_TypeInfo);
+		    DAT_ram_00a57bd6 = '\x01';
+		  }
+		  uVar2 = unnamed_function_1417(Utils_BackTime_TypeInfo);
+		  Core_Extensions_Dict_DictExt__BinarySearch_object__uint_(uVar2,0.0,0);
+		  *(undefined4 *)(param1 + 0x1c) = uVar2;
+		  Unity_Services_Core_Environments_Internal_Environments__get_Current(param1,param2,0);
+		  if (DAT_ram_00a6456f == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_Gameplay_Game_TypeInfo);
+		    DAT_ram_00a6456f = '\x01';
+		  }
+		  uVar1 = 0;
+		  param1_00 = (int *)**(undefined4 **)(Core_Gameplay_Game_TypeInfo + 0x5c);
+		  iVar4 = *param1_00;
+		  if (*(ushort *)(iVar4 + 0xb6) != 0) {
+		    do {
+		      if (Core_Gameplay_IGame_TypeInfo == *(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8)) {
+		        puVar3 = (uint *)(*(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8 + 4) * 8 + iVar4 + 0x178);
+		        goto code_r0x80e331dd;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar4 + 0xb6) != uVar1);
+		  }
+		  puVar3 = (uint *)func_ii_1080(param1_00,Core_Gameplay_IGame_TypeInfo,0x17);
+		code_r0x80e331dd:
+		  uVar2 = (**(code **)((ulonglong)*puVar3 * 4))(param1_00,puVar3[1]);
+		  uVar2 = Newtonsoft_Json_Converters_XmlDocumentTypeWrapper__get_System(uVar2,0);
+		  *(undefined4 *)(param1 + 0xc) = uVar2;
+		  iVar4 = unnamed_function_1417(Gameplay_Duel_Model_DuelModel_DuelUserData_TypeInfo);
+		  *(undefined4 *)(iVar4 + 8) = param2;
+		  *(int *)(param1 + 0x10) = iVar4;
+		  return;
+		}
+		*/
+
 }

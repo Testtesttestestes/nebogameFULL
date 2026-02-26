@@ -16,6 +16,22 @@ namespace Core.Dict.DictWrappers.Wrappers
 		[Address(RVA = "0xAEF6", Offset = "0xAEF6", VA = "0xAEF6", Slot = "7")]
 		protected override UserBuildingLevelDic GetData(Dictionaries dictionaries)
 		{
+		/* --- GHIDRA: GetData ---
+		void Core_Dict_DictWrappers_Wrappers_UserBuildingLevelDicWrapper__GetData
+		               (undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a6074a == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Core_Dict_DictWrappers_Base_AbstractDictWrapper_UserBuildingLevelDic__UserBuildingLevelDicWrapper_UserBuildingLevelDicWrapperId___ctor__
+		              );
+		    DAT_ram_00a6074a = '\x01';
+		  }
+		  return;
+		}
+		*/
+
 			return null;
 		}
 

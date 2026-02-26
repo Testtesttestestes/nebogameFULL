@@ -56,4 +56,19 @@ namespace Gameplay.Bank.Model
 		[FieldOffset(Offset = "0x10")]
 		public readonly OptionTypesDic OptionTypesDic;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_TabId ---
+		void Gameplay_Bank_Model_BankTabData__get_TabId
+		               (int param1,undefined4 param2,int param3,undefined4 param4)
+		
+		{
+		  *(int *)(param1 + 0x10) = param3;
+		  *(undefined4 *)(param1 + 0xc) = param2;
+		  *(undefined4 *)(param1 + 8) = *(undefined4 *)(param3 + 0xc);
+		  return;
+		}
+		*/
+
 }

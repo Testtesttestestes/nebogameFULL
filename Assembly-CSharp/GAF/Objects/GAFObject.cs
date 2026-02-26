@@ -24,6 +24,31 @@ namespace GAF.Objects
 		[Address(RVA = "0xC257", Offset = "0xC257", VA = "0xC257")]
 		public GAFObject()
 		{
+		/* --- GHIDRA: .ctor ---
+		void GAF_Objects_GAFObject___ctor(undefined4 param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a54ea6 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_GAFInternal_Objects_GAFObjectsManagerInternal_GAFObject__reload__);
+		    DAT_ram_00a54ea6 = '\x01';
+		  }
+		  uVar1 = GAFInternal_Core_GAFBehaviour__get_cachedTransform(param1,0);
+		  UnityEngine_MaterialPropertyBlock_BindingsMarshaller__ConvertToNative(uVar1,0,0);
+		  uVar1 = GAFInternal_Core_GAFBehaviour__get_cachedTransform(param1,0);
+		  UnityEngine_Renderer__get_reflectionProbeUsage(uVar1,0,0);
+		  uVar1 = GAFInternal_Core_GAFBehaviour__get_cachedTransform(param1,0);
+		  UnityEngine_Renderer__get_shadowCastingMode(uVar1,0,0);
+		  uVar1 = GAFInternal_Core_GAFBehaviour__get_cachedTransform(param1,0);
+		  UnityEngine_Renderer__get_receiveShadows(uVar1,0,0);
+		  GAFInternal_Objects_GAFObjectsManagerInternal_object___initialize
+		            (param1,Method_GAFInternal_Objects_GAFObjectsManagerInternal_GAFObject__reload__);
+		  return;
+		}
+		*/
+
 		}
 	}
 }

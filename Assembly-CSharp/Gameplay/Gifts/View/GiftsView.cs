@@ -53,6 +53,18 @@ namespace Gameplay.Gifts.View
 		[Address(RVA = "0x7BB8", Offset = "0x7BB8", VA = "0x7BB8")]
 		public GiftsView()
 		{
+		/* --- GHIDRA: .ctor ---
+		undefined4 Gameplay_Gifts_View_GiftsView___ctor(undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a5a220 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_12627);
+		    DAT_ram_00a5a220 = '\x01';
+		  }
+		  return StringLiteral_12627;
+		}
+		*/
+
 		}
 
 		// Token: 0x0400178C RID: 6028

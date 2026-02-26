@@ -177,6 +177,20 @@ namespace Gameplay.TutorialV2.View
 		[Address(RVA = "0x6AF1", Offset = "0x6AF1", VA = "0x6AF1")]
 		private void Start()
 		{
+		/* --- GHIDRA: Start ---
+		void Gameplay_TutorialV2_View_TutorialView__Start(undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a583b2 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_UI_MonoBehaviourWithStates_TutorialView_States___ctor__);
+		    DAT_ram_00a583b2 = '\x01';
+		  }
+		  ScreenAdaptation_Common_AppSize__Update
+		            (param1,Method_UI_MonoBehaviourWithStates_TutorialView_States___ctor__);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06001953 RID: 6483 RVA: 0x00002050 File Offset: 0x00000250
@@ -184,6 +198,17 @@ namespace Gameplay.TutorialV2.View
 		[Address(RVA = "0x6AF2", Offset = "0x6AF2", VA = "0x6AF2")]
 		public TutorialView()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_TutorialV2_View_TutorialView___ctor(int param1,undefined4 param2)
+		
+		{
+		  Core_ExternalIncomingScriptCall_CallbackItem___Il2CppFullySharedGenericType____ctor(param1,0);
+		  *(undefined8 *)(param1 + 0x28) = 0;
+		  *(undefined8 *)(param1 + 0x20) = 0;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x04000D5E RID: 3422
@@ -279,4 +304,60 @@ namespace Gameplay.TutorialV2.View
 			REGISTARTION
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_RegistrationView ---
+		void Gameplay_TutorialV2_View_TutorialView__get_RegistrationView
+		               (undefined4 param1,undefined4 param2)
+		
+		{
+		  uint uVar1;
+		  uint *puVar2;
+		  int *piVar3;
+		  int iVar4;
+		  
+		  if (DAT_ram_00a583b1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_Gameplay_IGame_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Core_Gameplay_Managers_Tutorial_ITutorialManager_TypeInfo);
+		    DAT_ram_00a583b1 = '\x01';
+		  }
+		  if (DAT_ram_00a6456f == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_Gameplay_Game_TypeInfo);
+		    DAT_ram_00a6456f = '\x01';
+		  }
+		  uVar1 = 0;
+		  piVar3 = (int *)**(undefined4 **)(Core_Gameplay_Game_TypeInfo + 0x5c);
+		  iVar4 = *piVar3;
+		  if (*(ushort *)(iVar4 + 0xb6) != 0) {
+		    do {
+		      if (Core_Gameplay_IGame_TypeInfo == *(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8)) {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8 + 4) * 8 + iVar4 + 0x1a0);
+		        goto code_r0x80edbfd9;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar4 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(piVar3,Core_Gameplay_IGame_TypeInfo,0x1c);
+		code_r0x80edbfd9:
+		  piVar3 = (int *)(**(code **)((ulonglong)*puVar2 * 4))(piVar3,puVar2[1]);
+		  uVar1 = 0;
+		  iVar4 = *piVar3;
+		  if (*(ushort *)(iVar4 + 0xb6) != 0) {
+		    do {
+		      if (Core_Gameplay_Managers_Tutorial_ITutorialManager_TypeInfo ==
+		          *(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8)) {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8 + 4) * 8 + iVar4 + 200);
+		        goto code_r0x80edc05d;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar4 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(piVar3,Core_Gameplay_Managers_Tutorial_ITutorialManager_TypeInfo,1);
+		code_r0x80edc05d:
+		  (**(code **)((ulonglong)*puVar2 * 4))(piVar3,param1,puVar2[1]);
+		  return;
+		}
+		*/
+
 }

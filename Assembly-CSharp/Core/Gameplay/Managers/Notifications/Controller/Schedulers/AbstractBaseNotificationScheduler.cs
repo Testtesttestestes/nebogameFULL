@@ -81,6 +81,21 @@ namespace Core.Gameplay.Managers.Notifications.Controller.Schedulers
 		[Address(RVA = "0x2223", Offset = "0x2223", VA = "0x2223", Slot = "4")]
 		public void Dispose()
 		{
+		/* --- GHIDRA: Dispose ---
+		int * Core_Gameplay_Managers_Notifications_Controller_Schedulers_AbstractBaseNotificationScheduler__Dispose
+		                (int *param1)
+		
+		{
+		  if (*param1 == 0) {
+		    return param1;
+		  }
+		  System_Data_DataSet__ValidateLocaleConstraint(*param1);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
 		}
 
 		// Token: 0x06006BA9 RID: 27561 RVA: 0x00002050 File Offset: 0x00000250
@@ -88,6 +103,32 @@ namespace Core.Gameplay.Managers.Notifications.Controller.Schedulers
 		[Address(RVA = "0xB69E", Offset = "0xB69E", VA = "0xB69E")]
 		private void NotificationEnabledChangedEvent(uint notificationId)
 		{
+		/* --- GHIDRA: NotificationEnabledChangedEvent ---
+		undefined4
+		Core_Gameplay_Managers_Notifications_Controller_Schedulers_AbstractBaseNotificationScheduler__NotificationEnabledChangedEvent
+		          (undefined4 param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  undefined4 param1_00;
+		  
+		  if (DAT_ram_00a5a691 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_Dictionary_string__object___ctor__);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_Dictionary_string__object__set_Item__);
+		    Mono_Security_ASN1__get_Item(&System_Collections_Generic_Dictionary_string__object__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_25656);
+		    DAT_ram_00a5a691 = '\x01';
+		  }
+		  param1_00 = unnamed_function_1417(System_Collections_Generic_Dictionary_string__object__TypeInfo);
+		  System_Collections_Generic_Dictionary_object__StyleComplexSelector_PseudoStateData___set_Item
+		            (param1_00,Method_System_Collections_Generic_Dictionary_string__object___ctor__);
+		  func_ii_2946(param1_00,StringLiteral_25656,param1_00,
+		               Method_System_Collections_Generic_Dictionary_string__object__set_Item__);
+		  return param1_00;
+		}
+		*/
+
 		}
 
 		// Token: 0x06006BAA RID: 27562 RVA: 0x00002052 File Offset: 0x00000252

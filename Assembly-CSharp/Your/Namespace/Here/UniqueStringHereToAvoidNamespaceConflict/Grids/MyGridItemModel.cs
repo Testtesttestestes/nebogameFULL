@@ -12,6 +12,17 @@ namespace Your.Namespace.Here.UniqueStringHereToAvoidNamespaceConflicts2.Grids
 		[Address(RVA = "0x57DC", Offset = "0x57DC", VA = "0x57DC")]
 		public MyGridItemModel()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Your_Namespace_Here_UniqueStringHereToAvoidNamespaceConflicts_Grids_MyGridItemModel___ctor
+		               (undefined4 param1,undefined4 param2)
+		
+		{
+		  Com_TheFallenGames_OSA_CustomAdapters_GridView_CellViewsHolder__InitWithExistingRootPrefab
+		            (param1,0);
+		  return;
+		}
+		*/
+
 		}
 	}
 }

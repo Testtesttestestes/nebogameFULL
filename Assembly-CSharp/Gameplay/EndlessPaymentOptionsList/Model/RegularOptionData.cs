@@ -14,6 +14,27 @@ namespace Gameplay.EndlessPaymentOptionsList.Model
 		[Address(RVA = "0x824B", Offset = "0x824B", VA = "0x824B")]
 		public RegularOptionData(RegularOptionsDic optionDic)
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_EndlessPaymentOptionsList_Model_RegularOptionData___ctor
+		               (undefined4 param1,undefined4 param2,undefined4 param3,undefined4 param4,
+		               undefined4 param5)
+		
+		{
+		  if (DAT_ram_00a57655 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_MVC_AbstractViewMediator_EndlessPaymentOptionsListModel__EndlessPaymentOptionsListEvents__EndlessPaymentOptionsListController__EndlessPaymentOptionsListDiscountWindow___ctor__
+		              );
+		    DAT_ram_00a57655 = '\x01';
+		  }
+		  Gameplay_Combat_TeamCombat_View_AbstractTeamCombatView_object___get_HideInstantElements
+		            (param1,param2,param3,param4,
+		             Method_MVC_AbstractViewMediator_EndlessPaymentOptionsListModel__EndlessPaymentOptionsListEvents__EndlessPaymentOptionsListController__EndlessPaymentOptionsListDiscountWindow___ctor__
+		            );
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x04001B66 RID: 7014

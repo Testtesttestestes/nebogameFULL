@@ -24,6 +24,15 @@ namespace I2.Loc
 		[Address(RVA = "0xC06C", Offset = "0xC06C", VA = "0xC06C")]
 		protected ILocalizeTargetDescriptor()
 		{
+		/* --- GHIDRA: .ctor ---
+		void I2_Loc_ILocalizeTargetDescriptor___ctor(undefined4 param1)
+		
+		{
+		  I2_Loc_LocalizeTarget_TextMeshPro_Label___cctor(0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x04003E48 RID: 15944

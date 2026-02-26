@@ -15,6 +15,36 @@ namespace Gameplay.World.Model.View.IslandEngineActions
 		[Address(RVA = "0x6646", Offset = "0x6646", VA = "0x6646")]
 		public DelayIsleEngineAction(IIsleWorldObjectEngine engine, float delay)
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_World_Model_View_IslandEngineActions_DelayIsleEngineAction___ctor
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  int param1_00;
+		  undefined4 uVar1;
+		  
+		  uVar1 = *(undefined4 *)(param1 + 0xc);
+		  if (DAT_ram_00a58c9b == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Gameplay_World_Model_View_IslandEngineActions_DelayIsleEngineAction__DelayRoutine_d__4_TypeInfo
+		              );
+		    DAT_ram_00a58c9b = '\x01';
+		  }
+		  param1_00 = unnamed_function_1417
+		                        (
+		                        Gameplay_World_Model_View_IslandEngineActions_DelayIsleEngineAction__DelayRoutine_d__4_TypeInfo
+		                        );
+		  *(int *)(param1_00 + 0x18) = param1;
+		  *(undefined4 *)(param1_00 + 8) = 0;
+		  *(undefined4 *)(param1_00 + 0x14) = param2;
+		  *(undefined4 *)(param1_00 + 0x10) = uVar1;
+		  uVar1 = Utils_CoroutineSource__GetMono(param1_00,0);
+		  *(undefined4 *)(param1 + 0x10) = uVar1;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600147D RID: 5245 RVA: 0x00002050 File Offset: 0x00000250
@@ -22,6 +52,32 @@ namespace Gameplay.World.Model.View.IslandEngineActions
 		[Address(RVA = "0x6647", Offset = "0x6647", VA = "0x6647", Slot = "5")]
 		public override void Invoke(Action<BaseIsleEngineAction> endCallback)
 		{
+		/* --- GHIDRA: Invoke ---
+		int Gameplay_World_Model_View_IslandEngineActions_DelayIsleEngineAction__Invoke
+		              (undefined4 param1,undefined4 param2,float param3,undefined4 param4)
+		
+		{
+		  int iVar1;
+		  
+		  if (DAT_ram_00a58c9b == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Gameplay_World_Model_View_IslandEngineActions_DelayIsleEngineAction__DelayRoutine_d__4_TypeInfo
+		              );
+		    DAT_ram_00a58c9b = '\x01';
+		  }
+		  iVar1 = unnamed_function_1417
+		                    (
+		                    Gameplay_World_Model_View_IslandEngineActions_DelayIsleEngineAction__DelayRoutine_d__4_TypeInfo
+		                    );
+		  *(undefined4 *)(iVar1 + 0x18) = param1;
+		  *(undefined4 *)(iVar1 + 8) = 0;
+		  *(undefined4 *)(iVar1 + 0x14) = param2;
+		  *(float *)(iVar1 + 0x10) = param3;
+		  return iVar1;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600147E RID: 5246 RVA: 0x00002052 File Offset: 0x00000252
@@ -29,6 +85,19 @@ namespace Gameplay.World.Model.View.IslandEngineActions
 		[Address(RVA = "0x6648", Offset = "0x6648", VA = "0x6648")]
 		private IEnumerator DelayRoutine(Action<BaseIsleEngineAction> callback, float delay)
 		{
+		/* --- GHIDRA: DelayRoutine ---
+		void Gameplay_World_Model_View_IslandEngineActions_DelayIsleEngineAction__DelayRoutine
+		               (int param1,undefined4 param2)
+		
+		{
+		  if (*(int *)(param1 + 0x10) != 0) {
+		    func_ii_7950(*(int *)(param1 + 0x10),0);
+		  }
+		  *(undefined4 *)(param1 + 0x10) = 0;
+		  return;
+		}
+		*/
+
 			return null;
 		}
 

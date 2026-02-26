@@ -86,6 +86,32 @@ namespace Gameplay.VortexRating.View.VoteRewardsTab
 		[Address(RVA = "0x66CE", Offset = "0x66CE", VA = "0x66CE")]
 		private void Awake()
 		{
+		/* --- GHIDRA: Awake ---
+		void Gameplay_VortexRating_View_VoteRewardsTab_GiftListElement__Awake(int param1,undefined4 param2)
+		
+		{
+		  undefined4 param1_00;
+		  undefined4 param1_01;
+		  
+		  if (DAT_ram_00a581ad == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Gameplay_VortexRating_View_VoteRewardsTab_GiftListElement_ButtonClickedEventHandler__
+		              );
+		    Mono_Security_ASN1__get_Item(&UnityEngine_Events_UnityAction_TypeInfo);
+		    DAT_ram_00a581ad = '\x01';
+		  }
+		  param1_01 = *(undefined4 *)(*(int *)(param1 + 0x28) + 0xb4);
+		  param1_00 = unnamed_function_1417(UnityEngine_Events_UnityAction_TypeInfo);
+		  Utils_ObjectUtils__IsNotNull
+		            (param1_00,param1,
+		             Method_Gameplay_VortexRating_View_VoteRewardsTab_GiftListElement_ButtonClickedEventHandler__
+		             ,0);
+		  UnityEngine_Events_UnityAction___ctor(param1_01,param1_00,0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600150D RID: 5389 RVA: 0x00002050 File Offset: 0x00000250
@@ -93,6 +119,30 @@ namespace Gameplay.VortexRating.View.VoteRewardsTab
 		[Address(RVA = "0x66CF", Offset = "0x66CF", VA = "0x66CF")]
 		private void OnDestroy()
 		{
+		/* --- GHIDRA: OnDestroy ---
+		void Gameplay_VortexRating_View_VoteRewardsTab_GiftListElement__OnDestroy
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  UnityEngine_Component__GetComponentInChildren_object_(*(undefined4 *)(param1 + 0x2c),param2,0);
+		  uVar1 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_uint__object___MoveNext
+		                    (*(undefined4 *)(param1 + 0x20),0);
+		  Com_TheFallenGames_OSA_CustomAdapters_TableView_Tuple_Basic_BasicTupleValueViewsHolder__UpdateAsText
+		            (uVar1,0,0);
+		  uVar1 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_uint__object___MoveNext
+		                    (*(undefined4 *)(param1 + 0x24),0);
+		  Com_TheFallenGames_OSA_CustomAdapters_TableView_Tuple_Basic_BasicTupleValueViewsHolder__UpdateAsText
+		            (uVar1,0,0);
+		  uVar1 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_uint__object___MoveNext
+		                    (*(undefined4 *)(param1 + 0x1c),0);
+		  Com_TheFallenGames_OSA_CustomAdapters_TableView_Tuple_Basic_BasicTupleValueViewsHolder__UpdateAsText
+		            (uVar1,0,0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600150E RID: 5390 RVA: 0x00002050 File Offset: 0x00000250
@@ -100,6 +150,36 @@ namespace Gameplay.VortexRating.View.VoteRewardsTab
 		[Address(RVA = "0x66D0", Offset = "0x66D0", VA = "0x66D0")]
 		public void Init(string title)
 		{
+		/* --- GHIDRA: Init ---
+		void Gameplay_VortexRating_View_VoteRewardsTab_GiftListElement__Init(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  
+		  iVar1 = *(int *)(param1 + 0x34);
+		  if (iVar1 != 0) {
+		    (**(code **)((ulonglong)*(uint *)(iVar1 + 0xc) * 4))
+		              (*(undefined4 *)(iVar1 + 0x20),param1,*(undefined4 *)(iVar1 + 0x14));
+		  }
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: Init ---
+		void Gameplay_VortexRating_View_VoteRewardsTab_GiftListElement__Init(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  
+		  iVar1 = *(int *)(param1 + 0x34);
+		  if (iVar1 != 0) {
+		    (**(code **)((ulonglong)*(uint *)(iVar1 + 0xc) * 4))
+		              (*(undefined4 *)(iVar1 + 0x20),param1,*(undefined4 *)(iVar1 + 0x14));
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600150F RID: 5391 RVA: 0x00002050 File Offset: 0x00000250
@@ -114,6 +194,21 @@ namespace Gameplay.VortexRating.View.VoteRewardsTab
 		[Address(RVA = "0x66D2", Offset = "0x66D2", VA = "0x66D2")]
 		private void ButtonClickedEventHandler()
 		{
+		/* --- GHIDRA: ButtonClickedEventHandler ---
+		void Gameplay_VortexRating_View_VoteRewardsTab_GiftListElement__ButtonClickedEventHandler
+		               (undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a581af == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_UI_MonoBehaviourWithStates_GiftListElement_State___ctor__);
+		    DAT_ram_00a581af = '\x01';
+		  }
+		  ScreenAdaptation_Common_AppSize__Update
+		            (param1,Method_UI_MonoBehaviourWithStates_GiftListElement_State___ctor__);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06001511 RID: 5393 RVA: 0x00002050 File Offset: 0x00000250
@@ -174,4 +269,95 @@ namespace Gameplay.VortexRating.View.VoteRewardsTab
 			ASSIGNED
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: add_GiftListElementClickedEvent ---
+		void Gameplay_VortexRating_View_VoteRewardsTab_GiftListElement__add_GiftListElementClickedEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a581aa == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_GiftListElement__TypeInfo);
+		    DAT_ram_00a581aa = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x34);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = func_ii_7048(param1_00,param2,0);
+		    param2_00 = System_Action_GiftListElement__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_GiftListElement__TypeInfo), iVar2 == 0)) break;
+		    iVar2 = func_ii_4329(param1 + 0x34,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: set_SetId ---
+		void Gameplay_VortexRating_View_VoteRewardsTab_GiftListElement__set_SetId
+		               (undefined4 param1,int param2,undefined4 param3)
+		
+		{
+		  undefined4 param2_00;
+		  
+		  if (DAT_ram_00a581ab == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UI_MonoBehaviourWithStates_GiftListElement_State__set_CurrentState__);
+		    DAT_ram_00a581ab = '\x01';
+		  }
+		  param2_00 = 2;
+		  if (param2 == 0) {
+		    param2_00 = 1;
+		  }
+		  Gameplay_Boss_View_CaptainTab_BossTeamView__set_TeamInfoData
+		            (param1,param2_00,
+		             Method_UI_MonoBehaviourWithStates_GiftListElement_State__set_CurrentState__);
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_Selected ---
+		void Gameplay_VortexRating_View_VoteRewardsTab_GiftListElement__set_Selected
+		               (int param1,undefined4 param2)
+		
+		{
+		  undefined4 param1_00;
+		  undefined4 param1_01;
+		  
+		  if (DAT_ram_00a581ac == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Gameplay_VortexRating_View_VoteRewardsTab_GiftListElement_ButtonClickedEventHandler__
+		              );
+		    Mono_Security_ASN1__get_Item(&UnityEngine_Events_UnityAction_TypeInfo);
+		    DAT_ram_00a581ac = '\x01';
+		  }
+		  param1_01 = *(undefined4 *)(*(int *)(param1 + 0x28) + 0xb4);
+		  param1_00 = unnamed_function_1417(UnityEngine_Events_UnityAction_TypeInfo);
+		  Utils_ObjectUtils__IsNotNull
+		            (param1_00,param1,
+		             Method_Gameplay_VortexRating_View_VoteRewardsTab_GiftListElement_ButtonClickedEventHandler__
+		             ,0);
+		  Gameplay_Boss_View_CaptainTab_BossInfoView__add_AttackButtonClickEvent(param1_01,param1_00,0);
+		  return;
+		}
+		*/
+
 }

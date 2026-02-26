@@ -22,6 +22,41 @@ namespace Core.Extensions
 		[Address(RVA = "0x1ECE", Offset = "0x1ECE", VA = "0x1ECE")]
 		public static bool TryGetSprite(this SpriteAtlas atlas, string name, out Sprite sprite)
 		{
+		/* --- GHIDRA: TryGetSprite ---
+		void Core_Extensions_SpriteAtlasExt__TryGetSprite(int param1,int param2,undefined4 param3)
+		
+		{
+		  undefined4 uVar1;
+		  int iVar2;
+		  
+		  if (DAT_ram_00a6201e == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UnityEngine_Object_MarshalledUnityObject_MarshalNotNull_SpriteRenderer___);
+		    Mono_Security_ASN1__get_Item(&Method_UnityEngine_Object_MarshalledUnityObject_Marshal_Sprite___)
+		    ;
+		    DAT_ram_00a6201e = '\x01';
+		  }
+		  iVar2 = *(int *)(param1 + 8);
+		  if (iVar2 == 0) {
+		    System_Collections_Generic_ArraySortHelper_AppBuildInfo_Element___InternalBinarySearch(param1,0)
+		    ;
+		  }
+		  uVar1 = 0;
+		  if (*(int *)(Method_UnityEngine_Object_MarshalledUnityObject_Marshal_Sprite___ + 0x1c) == 0) {
+		    System_ReadOnlySpan_char___GetPinnableReference
+		              (Method_UnityEngine_Object_MarshalledUnityObject_Marshal_Sprite___);
+		  }
+		  if (param2 != 0) {
+		    uVar1 = *(undefined4 *)(param2 + 8);
+		  }
+		  if (DAT_ram_00a62028 == 0) {
+		    DAT_ram_00a62028 = func_ii_2140(s_UnityEngine_SpriteRenderer__set__ram_00060e88);
+		  }
+		  (**(code **)((ulonglong)DAT_ram_00a62028 * 4))(iVar2,uVar1);
+		  return;
+		}
+		*/
+
 			return default(bool);
 		}
 	}

@@ -50,6 +50,22 @@ namespace Gameplay.Chat.Model.Data.Message
 		[Address(RVA = "0x932A", Offset = "0x932A", VA = "0x932A")]
 		public ChatComplaintData(uint id, RoomKey messageRoomKey, ChatMessageData message, ChatVisitorData chatUser, IChatMsgPresenter presenter)
 		{
+		/* --- GHIDRA: .ctor ---
+		undefined4
+		Gameplay_Chat_Model_Data_Message_ChatComplaintData___ctor
+		          (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  undefined4 uVar1;
+		  int iVar2;
+		  
+		  iVar2 = **(int **)(param1 + 0x1c);
+		  uVar1 = (**(code **)((ulonglong)*(uint *)(iVar2 + 0xf0) * 4))
+		                    (*(int **)(param1 + 0x1c),param2,*(undefined4 *)(iVar2 + 0xf4));
+		  return uVar1;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600447B RID: 17531 RVA: 0x00002052 File Offset: 0x00000252
@@ -57,6 +73,20 @@ namespace Gameplay.Chat.Model.Data.Message
 		[Address(RVA = "0x932B", Offset = "0x932B", VA = "0x932B", Slot = "6")]
 		public override string GetText(MessageDrawTarget target)
 		{
+		/* --- GHIDRA: GetText ---
+		void Gameplay_Chat_Model_Data_Message_ChatComplaintData__GetText
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  int iVar1;
+		  
+		  iVar1 = **(int **)(param1 + 0x1c);
+		  (**(code **)((ulonglong)*(uint *)(iVar1 + 0xf8) * 4))
+		            (*(int **)(param1 + 0x1c),param2,*(undefined4 *)(iVar1 + 0xfc));
+		  return;
+		}
+		*/
+
 			return null;
 		}
 
@@ -65,6 +95,44 @@ namespace Gameplay.Chat.Model.Data.Message
 		[Address(RVA = "0x932C", Offset = "0x932C", VA = "0x932C", Slot = "7")]
 		public override void SetText(string value)
 		{
+		/* --- GHIDRA: SetText ---
+		undefined4
+		Gameplay_Chat_Model_Data_Message_ChatComplaintData__SetText(undefined4 param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  undefined8 param2_00;
+		  undefined8 local_30;
+		  undefined8 local_28;
+		  undefined8 local_20;
+		  undefined8 local_18;
+		  undefined8 local_10;
+		  undefined8 local_8;
+		  
+		  if (DAT_ram_00a57b53 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_DateTimeOffset_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Utils_TimeUtils_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_8655);
+		    DAT_ram_00a57b53 = '\x01';
+		  }
+		  if (*(int *)(Utils_TimeUtils_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Utils_TimeUtils_TypeInfo);
+		  }
+		  param2_00 = Utils_TimeUtils__Format(0);
+		  if (*(int *)(System_DateTimeOffset_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(System_DateTimeOffset_TypeInfo);
+		  }
+		  System_DateTimeOffset__FromUnixTimeSeconds(&local_20,param2_00,0);
+		  local_8 = local_18;
+		  local_10 = local_20;
+		  System_DateTimeOffset__ParseExact(&local_30,&local_10,0);
+		  local_8 = local_28;
+		  local_10 = local_30;
+		  uVar1 = System_DateTimeOffset__ToString(&local_10,StringLiteral_8655,0);
+		  return uVar1;
+		}
+		*/
+
 		}
 
 		// Token: 0x17000D89 RID: 3465
@@ -99,4 +167,53 @@ namespace Gameplay.Chat.Model.Data.Message
 			}
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_Message ---
+		void Gameplay_Chat_Model_Data_Message_ChatComplaintData__get_Message
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4,undefined4 param5,
+		               undefined4 param6,undefined4 param7)
+		
+		{
+		  *(undefined4 *)(param1 + 0x10) = param5;
+		  *(undefined4 *)(param1 + 8) = param2;
+		  *(undefined4 *)(param1 + 0x1c) = param4;
+		  *(undefined4 *)(param1 + 0x18) = param3;
+		  *(undefined4 *)(param1 + 0xc) = param6;
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_TimeString ---
+		undefined4
+		Gameplay_Chat_Model_Data_Message_ChatComplaintData__get_TimeString(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  int iVar2;
+		  
+		  iVar2 = **(int **)(param1 + 0x1c);
+		  uVar1 = (**(code **)((ulonglong)*(uint *)(iVar2 + 0xe0) * 4))
+		                    (*(int **)(param1 + 0x1c),*(undefined4 *)(iVar2 + 0xe4));
+		  return uVar1;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_IsReDrawRequired ---
+		void Gameplay_Chat_Model_Data_Message_ChatComplaintData__get_IsReDrawRequired
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  int iVar1;
+		  
+		  iVar1 = **(int **)(param1 + 0x1c);
+		  (**(code **)((ulonglong)*(uint *)(iVar1 + 0xe8) * 4))
+		            (*(int **)(param1 + 0x1c),param2,*(undefined4 *)(iVar1 + 0xec));
+		  return;
+		}
+		*/
+
 }

@@ -14,6 +14,16 @@ namespace Gameplay.Clans.Buildings.Golem.View
 		[Address(RVA = "0x9116", Offset = "0x9116", VA = "0x9116")]
 		public new static ConfirmSellGolemArtifactWindow Show(UserData user, Action<ArtifactData[]> resultCallback, params ArtifactData[] artifacts)
 		{
+		/* --- GHIDRA: Show ---
+		void Gameplay_Clans_Buildings_Golem_View_ConfirmSellGolemArtifactWindow__Show
+		               (undefined4 param1,undefined4 param2)
+		
+		{
+		  UI_Windows_ConfirmSellUserArtifactWindow__Show(param1,0);
+		  return;
+		}
+		*/
+
 			return null;
 		}
 
@@ -22,6 +32,16 @@ namespace Gameplay.Clans.Buildings.Golem.View
 		[Address(RVA = "0x9117", Offset = "0x9117", VA = "0x9117")]
 		public ConfirmSellGolemArtifactWindow()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_Clans_Buildings_Golem_View_ConfirmSellGolemArtifactWindow___ctor
+		               (undefined4 param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  UI_Windows_ConfirmSellUserArtifactWindow___ctor(param1,param2,param3,0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0400249A RID: 9370

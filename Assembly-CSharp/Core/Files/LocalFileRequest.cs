@@ -53,6 +53,18 @@ namespace Core.Files
 		[Address(RVA = "0xA975", Offset = "0xA975", VA = "0xA975")]
 		public LocalFileRequest(string path, byte[] content)
 		{
+		/* --- GHIDRA: .ctor ---
+		uint Core_Files_LocalFileRequest___ctor(int param1,undefined4 *param2,undefined4 param3)
+		
+		{
+		  *param2 = *(undefined4 *)(param1 + 0xc);
+		  if (*(int *)(param1 + 0xc) != 0) {
+		    return (uint)(*(int *)(*(int *)(param1 + 0xc) + 0xc) != 0);
+		  }
+		  return 0;
+		}
+		*/
+
 		}
 
 		// Token: 0x06005CED RID: 23789 RVA: 0x00010A88 File Offset: 0x0000EC88
@@ -68,6 +80,17 @@ namespace Core.Files
 		[Address(RVA = "0xA977", Offset = "0xA977", VA = "0xA977", Slot = "6")]
 		public bool TryGetResponseHeader(string key, out string value)
 		{
+		/* --- GHIDRA: TryGetResponseHeader ---
+		undefined4 Core_Files_LocalFileRequest__TryGetResponseHeader(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  uVar1 = System_Uri__TryCreate(*(undefined4 *)(param1 + 0x10),0x10,2,0);
+		  return uVar1;
+		}
+		*/
+
 			return default(bool);
 		}
 

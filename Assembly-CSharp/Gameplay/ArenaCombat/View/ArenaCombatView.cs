@@ -13,6 +13,15 @@ namespace Gameplay.ArenaCombat.View
 		[Address(RVA = "0xA0FF", Offset = "0xA0FF", VA = "0xA0FF", Slot = "6")]
 		protected override void Start()
 		{
+		/* --- GHIDRA: Start ---
+		void Gameplay_ArenaCombat_View_ArenaCombatView__Start(undefined4 param1,undefined4 param2)
+		
+		{
+		  Gameplay_Combat_View_OneOnOneCombatView__ShowOpponentDeath(param1,0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06005341 RID: 21313 RVA: 0x00002050 File Offset: 0x00000250
@@ -20,6 +29,16 @@ namespace Gameplay.ArenaCombat.View
 		[Address(RVA = "0xA100", Offset = "0xA100", VA = "0xA100")]
 		public ArenaCombatView()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_ArenaCombat_View_ArenaCombatView___ctor(int param1,undefined4 param2)
+		
+		{
+		  *(undefined8 *)(param1 + 0x5c) = 0;
+		  Gameplay_Combat_Model_CombatModel__GetState(param1,0);
+		  return;
+		}
+		*/
+
 		}
 	}
 }

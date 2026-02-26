@@ -21,6 +21,45 @@ namespace UI.Animations
 		[Address(RVA = "0x6107", Offset = "0x6107", VA = "0x6107")]
 		public ShineEffect()
 		{
+		/* --- GHIDRA: .cctor ---
+		void UI_Animations_ShineEffect___cctor(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a639c8 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UnityEngine_Object_FindObjectOfType_PlayerInputController___);
+		    Mono_Security_ASN1__get_Item(&UnityEngine_Object_TypeInfo);
+		    DAT_ram_00a639c8 = '\x01';
+		  }
+		  if (*(int *)(UnityEngine_Object_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(UnityEngine_Object_TypeInfo);
+		  }
+		  uVar1 = UnityEngine_Object__FindFirstObjectByType_object_
+		                    (Method_UnityEngine_Object_FindObjectOfType_PlayerInputController___);
+		  *(undefined4 *)(param1 + 0x10) = uVar1;
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: .ctor ---
+		void UI_Animations_ShineEffect___ctor(undefined4 param1)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a639c7 == '\0') {
+		    Mono_Security_ASN1__get_Item(&UI_Animations_ShineEffect_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_19261);
+		    DAT_ram_00a639c7 = '\x01';
+		  }
+		  uVar1 = UnityEngine_Shader__TagToID(StringLiteral_19261,0);
+		  **(undefined4 **)(UI_Animations_ShineEffect_TypeInfo + 0x5c) = uVar1;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0400074A RID: 1866

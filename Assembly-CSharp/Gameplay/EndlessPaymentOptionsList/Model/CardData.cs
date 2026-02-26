@@ -38,6 +38,22 @@ namespace Gameplay.EndlessPaymentOptionsList.Model
 		[Address(RVA = "0x8214", Offset = "0x8214", VA = "0x8214")]
 		public CardData(bool permanentlyLock, EndlessPaymentOptionData option, EndlessPaymentOptionListData list, ProtoGetEndlessPaymentOptionsAns.Types.EndlessPaymentOptionInfo info, IDictProvider dictProvider)
 		{
+		/* --- GHIDRA: .ctor ---
+		undefined4 Gameplay_EndlessPaymentOptionsList_Model_CardData___ctor(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a57643 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_System_Linq_Enumerable_ToArray_RewardInfo___);
+		    DAT_ram_00a57643 = '\x01';
+		  }
+		  uVar1 = func_ii_6295(*(undefined4 *)(*(int *)(param1 + 0x1c) + 0x14),
+		                       Method_System_Linq_Enumerable_ToArray_RewardInfo___);
+		  return uVar1;
+		}
+		*/
+
 		}
 
 		// Token: 0x060031BE RID: 12734 RVA: 0x00002052 File Offset: 0x00000252
@@ -45,6 +61,16 @@ namespace Gameplay.EndlessPaymentOptionsList.Model
 		[Address(RVA = "0x8215", Offset = "0x8215", VA = "0x8215")]
 		public RewardInfo[] GetRewards()
 		{
+		/* --- GHIDRA: GetRewards ---
+		void Gameplay_EndlessPaymentOptionsList_Model_CardData__GetRewards(int param1,undefined4 param2)
+		
+		{
+		  *(undefined1 *)(*(int *)(param1 + 0x1c) + 0x10) = 1;
+		  *(undefined1 *)(param1 + 0x20) = 1;
+		  return;
+		}
+		*/
+
 			return null;
 		}
 
@@ -53,6 +79,22 @@ namespace Gameplay.EndlessPaymentOptionsList.Model
 		[Address(RVA = "0x8216", Offset = "0x8216", VA = "0x8216")]
 		public void SetupPurchased()
 		{
+		/* --- GHIDRA: SetupPurchased ---
+		void Gameplay_EndlessPaymentOptionsList_Model_CardData__SetupPurchased
+		               (int param1,int param2,undefined4 param3)
+		
+		{
+		  *(int *)(param1 + 0x1c) = param2;
+		  if (*(char *)(param2 + 0x10) != '\0') {
+		    *(undefined1 *)(param2 + 0x10) = 1;
+		    *(undefined1 *)(param1 + 0x20) = 1;
+		    return;
+		  }
+		  *(undefined1 *)(param1 + 0x20) = 0;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x060031C0 RID: 12736 RVA: 0x00002050 File Offset: 0x00000250
@@ -60,6 +102,47 @@ namespace Gameplay.EndlessPaymentOptionsList.Model
 		[Address(RVA = "0x8217", Offset = "0x8217", VA = "0x8217")]
 		public void Update(ProtoGetEndlessPaymentOptionsAns.Types.EndlessPaymentOptionInfo info)
 		{
+		/* --- GHIDRA: Update ---
+		undefined4 Gameplay_EndlessPaymentOptionsList_Model_CardData__Update(int param1,undefined4 param2)
+		
+		{
+		  int param1_00;
+		  undefined4 uVar1;
+		  undefined1 local_6;
+		  undefined1 local_5;
+		  undefined4 local_4;
+		  
+		  if (DAT_ram_00a57644 == '\0') {
+		    Mono_Security_ASN1__get_Item(&string___TypeInfo);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_19447);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_12034);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_11567);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_9838);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_5077);
+		    DAT_ram_00a57644 = '\x01';
+		  }
+		  param1_00 = Mono_Security_ASN1Convert__ToOid(string___TypeInfo,5);
+		  *(undefined4 *)(param1_00 + 0x10) = StringLiteral_5077;
+		  local_4 = Com_TheFallenGames_OSA_Core_OSA_object__object___get_Parameters
+		                      (*(undefined4 *)(param1 + 0x10),0);
+		  uVar1 = func_ii_1081(DAT_ram_00a66958,&local_4);
+		  uVar1 = func_ii_4419(StringLiteral_12034,uVar1,0);
+		  *(undefined4 *)(param1_00 + 0x14) = uVar1;
+		  local_5 = *(undefined1 *)(param1 + 0x20);
+		  uVar1 = func_ii_1081(DAT_ram_00a66944,&local_5);
+		  uVar1 = func_ii_4419(StringLiteral_9838,uVar1,0);
+		  *(undefined4 *)(param1_00 + 0x18) = uVar1;
+		  local_6 = *(undefined1 *)(*(int *)(param1 + 0x1c) + 0x10);
+		  uVar1 = func_ii_1081(DAT_ram_00a66944,&local_6);
+		  uVar1 = func_ii_4419(StringLiteral_19447,uVar1,0);
+		  *(undefined4 *)(param1_00 + 0x1c) = uVar1;
+		  uVar1 = func_ii_4419(StringLiteral_11567,*(undefined4 *)(param1 + 0xc),0);
+		  *(undefined4 *)(param1_00 + 0x20) = uVar1;
+		  uVar1 = System_Single__ToString(param1_00,0);
+		  return uVar1;
+		}
+		*/
+
 		}
 
 		// Token: 0x060031C1 RID: 12737 RVA: 0x00002052 File Offset: 0x00000252
@@ -171,4 +254,32 @@ namespace Gameplay.EndlessPaymentOptionsList.Model
 			}
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: set_IsComplete ---
+		void Gameplay_EndlessPaymentOptionsList_Model_CardData__set_IsComplete
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4,undefined4 param5,
+		               undefined4 param6,undefined4 param7)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a57642 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Gameplay_EndlessPaymentOptionsList_Model_CardData_CardNode_TypeInfo);
+		    DAT_ram_00a57642 = '\x01';
+		  }
+		  uVar1 = unnamed_function_1417(Gameplay_EndlessPaymentOptionsList_Model_CardData_CardNode_TypeInfo)
+		  ;
+		  *(undefined4 *)(param1 + 0xc) = uVar1;
+		  *(undefined4 *)(param1 + 0x1c) = param5;
+		  *(undefined4 *)(param1 + 0x14) = param4;
+		  *(undefined4 *)(param1 + 0x10) = param3;
+		  *(undefined1 *)(param1 + 0x18) = (undefined1)param2;
+		  *(undefined4 *)(param1 + 8) = param6;
+		  return;
+		}
+		*/
+
 }

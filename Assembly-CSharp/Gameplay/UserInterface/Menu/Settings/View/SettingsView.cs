@@ -81,6 +81,19 @@ namespace Gameplay.UserInterface.Menu.Settings.View
 		[Address(RVA = "0x68E1", Offset = "0x68E1", VA = "0x68E1")]
 		public SettingsView()
 		{
+		/* --- GHIDRA: .ctor ---
+		undefined4
+		Gameplay_UserInterface_Menu_Settings_View_SettingsView___ctor(undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a59885 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_12663);
+		    DAT_ram_00a59885 = '\x01';
+		  }
+		  return StringLiteral_12663;
+		}
+		*/
+
 		}
 
 		// Token: 0x04000C4C RID: 3148

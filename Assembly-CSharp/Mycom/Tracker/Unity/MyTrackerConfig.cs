@@ -178,4 +178,555 @@ namespace Mycom.Tracker.Unity
 		[FieldOffset(Offset = "0x8")]
 		private readonly ITrackerConfig _trackerConfig;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_Id ---
+		undefined4 Mycom_Tracker_Unity_MyTrackerConfig__get_Id(int param1,undefined4 param2)
+		
+		{
+		  uint uVar1;
+		  uint *puVar2;
+		  undefined4 uVar3;
+		  int *param1_00;
+		  int iVar4;
+		  
+		  if (DAT_ram_00a596d3 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Mycom_Tracker_Unity_Internal_Interfaces_ITrackerConfig_TypeInfo);
+		    DAT_ram_00a596d3 = '\x01';
+		  }
+		  param1_00 = *(int **)(param1 + 8);
+		  iVar4 = *param1_00;
+		  if (*(ushort *)(iVar4 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (Mycom_Tracker_Unity_Internal_Interfaces_ITrackerConfig_TypeInfo ==
+		          *(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8)) {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8 + 4) * 8 + iVar4 + 200);
+		        goto code_r0x8104eca9;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar4 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(param1_00,
+		                                Mycom_Tracker_Unity_Internal_Interfaces_ITrackerConfig_TypeInfo,1);
+		code_r0x8104eca9:
+		  uVar3 = (**(code **)((ulonglong)*puVar2 * 4))(param1_00,puVar2[1]);
+		  return uVar3;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_BufferingPeriod ---
+		void Mycom_Tracker_Unity_MyTrackerConfig__get_BufferingPeriod
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  uint uVar1;
+		  uint *puVar2;
+		  int *param1_00;
+		  int iVar3;
+		  
+		  if (DAT_ram_00a596d4 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Mycom_Tracker_Unity_Internal_Interfaces_ITrackerConfig_TypeInfo);
+		    DAT_ram_00a596d4 = '\x01';
+		  }
+		  param1_00 = *(int **)(param1 + 8);
+		  iVar3 = *param1_00;
+		  if (*(ushort *)(iVar3 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (Mycom_Tracker_Unity_Internal_Interfaces_ITrackerConfig_TypeInfo ==
+		          *(int *)(*(int *)(iVar3 + 0x58) + uVar1 * 8)) {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar3 + 0x58) + uVar1 * 8 + 4) * 8 + iVar3 + 0xd0);
+		        goto code_r0x8104ed50;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar3 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(param1_00,
+		                                Mycom_Tracker_Unity_Internal_Interfaces_ITrackerConfig_TypeInfo,2);
+		code_r0x8104ed50:
+		  (**(code **)((ulonglong)*puVar2 * 4))(param1_00,param2,puVar2[1]);
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_BufferingPeriod ---
+		undefined4 Mycom_Tracker_Unity_MyTrackerConfig__set_BufferingPeriod(int param1,undefined4 param2)
+		
+		{
+		  uint uVar1;
+		  uint *puVar2;
+		  undefined4 uVar3;
+		  int *param1_00;
+		  int iVar4;
+		  
+		  if (DAT_ram_00a596d5 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Mycom_Tracker_Unity_Internal_Interfaces_ITrackerConfig_TypeInfo);
+		    DAT_ram_00a596d5 = '\x01';
+		  }
+		  param1_00 = *(int **)(param1 + 8);
+		  iVar4 = *param1_00;
+		  if (*(ushort *)(iVar4 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (Mycom_Tracker_Unity_Internal_Interfaces_ITrackerConfig_TypeInfo ==
+		          *(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8)) {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8 + 4) * 8 + iVar4 + 0xd8);
+		        goto code_r0x8104edf9;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar4 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(param1_00,
+		                                Mycom_Tracker_Unity_Internal_Interfaces_ITrackerConfig_TypeInfo,3);
+		code_r0x8104edf9:
+		  uVar3 = (**(code **)((ulonglong)*puVar2 * 4))(param1_00,puVar2[1]);
+		  return uVar3;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_ForcingPeriod ---
+		void Mycom_Tracker_Unity_MyTrackerConfig__get_ForcingPeriod
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  uint uVar1;
+		  uint *puVar2;
+		  int *param1_00;
+		  int iVar3;
+		  
+		  if (DAT_ram_00a596d6 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Mycom_Tracker_Unity_Internal_Interfaces_ITrackerConfig_TypeInfo);
+		    DAT_ram_00a596d6 = '\x01';
+		  }
+		  param1_00 = *(int **)(param1 + 8);
+		  iVar3 = *param1_00;
+		  if (*(ushort *)(iVar3 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (Mycom_Tracker_Unity_Internal_Interfaces_ITrackerConfig_TypeInfo ==
+		          *(int *)(*(int *)(iVar3 + 0x58) + uVar1 * 8)) {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar3 + 0x58) + uVar1 * 8 + 4) * 8 + iVar3 + 0xe0);
+		        goto code_r0x8104eea0;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar3 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(param1_00,
+		                                Mycom_Tracker_Unity_Internal_Interfaces_ITrackerConfig_TypeInfo,4);
+		code_r0x8104eea0:
+		  (**(code **)((ulonglong)*puVar2 * 4))(param1_00,param2,puVar2[1]);
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_ForcingPeriod ---
+		undefined4 Mycom_Tracker_Unity_MyTrackerConfig__set_ForcingPeriod(int param1,undefined4 param2)
+		
+		{
+		  uint uVar1;
+		  uint *puVar2;
+		  undefined4 uVar3;
+		  int *param1_00;
+		  int iVar4;
+		  
+		  if (DAT_ram_00a596d7 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Mycom_Tracker_Unity_Internal_Interfaces_ITrackerConfig_TypeInfo);
+		    DAT_ram_00a596d7 = '\x01';
+		  }
+		  param1_00 = *(int **)(param1 + 8);
+		  iVar4 = *param1_00;
+		  if (*(ushort *)(iVar4 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (Mycom_Tracker_Unity_Internal_Interfaces_ITrackerConfig_TypeInfo ==
+		          *(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8)) {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8 + 4) * 8 + iVar4 + 0xf8);
+		        goto code_r0x8104ef49;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar4 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(param1_00,
+		                                Mycom_Tracker_Unity_Internal_Interfaces_ITrackerConfig_TypeInfo,7);
+		code_r0x8104ef49:
+		  uVar3 = (**(code **)((ulonglong)*puVar2 * 4))(param1_00,puVar2[1]);
+		  return uVar3;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_IsTrackingEnvironmentEnabled ---
+		void Mycom_Tracker_Unity_MyTrackerConfig__get_IsTrackingEnvironmentEnabled
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  uint uVar1;
+		  uint *puVar2;
+		  int *param1_00;
+		  int iVar3;
+		  
+		  if (DAT_ram_00a596d8 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Mycom_Tracker_Unity_Internal_Interfaces_ITrackerConfig_TypeInfo);
+		    DAT_ram_00a596d8 = '\x01';
+		  }
+		  param1_00 = *(int **)(param1 + 8);
+		  iVar3 = *param1_00;
+		  if (*(ushort *)(iVar3 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (Mycom_Tracker_Unity_Internal_Interfaces_ITrackerConfig_TypeInfo ==
+		          *(int *)(*(int *)(iVar3 + 0x58) + uVar1 * 8)) {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar3 + 0x58) + uVar1 * 8 + 4) * 8 + iVar3 + 0x100);
+		        goto code_r0x8104eff0;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar3 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(param1_00,
+		                                Mycom_Tracker_Unity_Internal_Interfaces_ITrackerConfig_TypeInfo,8);
+		code_r0x8104eff0:
+		  (**(code **)((ulonglong)*puVar2 * 4))(param1_00,param2,puVar2[1]);
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_IsTrackingEnvironmentEnabled ---
+		undefined4
+		Mycom_Tracker_Unity_MyTrackerConfig__set_IsTrackingEnvironmentEnabled(int param1,undefined4 param2)
+		
+		{
+		  uint uVar1;
+		  uint *puVar2;
+		  undefined4 uVar3;
+		  int *param1_00;
+		  int iVar4;
+		  
+		  if (DAT_ram_00a596d9 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Mycom_Tracker_Unity_Internal_Interfaces_ITrackerConfig_TypeInfo);
+		    DAT_ram_00a596d9 = '\x01';
+		  }
+		  param1_00 = *(int **)(param1 + 8);
+		  iVar4 = *param1_00;
+		  if (*(ushort *)(iVar4 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (Mycom_Tracker_Unity_Internal_Interfaces_ITrackerConfig_TypeInfo ==
+		          *(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8)) {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8 + 4) * 8 + iVar4 + 0x108);
+		        goto code_r0x8104f099;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar4 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(param1_00,
+		                                Mycom_Tracker_Unity_Internal_Interfaces_ITrackerConfig_TypeInfo,9);
+		code_r0x8104f099:
+		  uVar3 = (**(code **)((ulonglong)*puVar2 * 4))(param1_00,puVar2[1]);
+		  return uVar3;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_IsTrackingLaunchEnabled ---
+		void Mycom_Tracker_Unity_MyTrackerConfig__get_IsTrackingLaunchEnabled
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  uint uVar1;
+		  uint *puVar2;
+		  int *param1_00;
+		  int iVar3;
+		  
+		  if (DAT_ram_00a596da == '\0') {
+		    Mono_Security_ASN1__get_Item(&Mycom_Tracker_Unity_Internal_Interfaces_ITrackerConfig_TypeInfo);
+		    DAT_ram_00a596da = '\x01';
+		  }
+		  param1_00 = *(int **)(param1 + 8);
+		  iVar3 = *param1_00;
+		  if (*(ushort *)(iVar3 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (Mycom_Tracker_Unity_Internal_Interfaces_ITrackerConfig_TypeInfo ==
+		          *(int *)(*(int *)(iVar3 + 0x58) + uVar1 * 8)) {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar3 + 0x58) + uVar1 * 8 + 4) * 8 + iVar3 + 0x110);
+		        goto code_r0x8104f140;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar3 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(param1_00,
+		                                Mycom_Tracker_Unity_Internal_Interfaces_ITrackerConfig_TypeInfo,10);
+		code_r0x8104f140:
+		  (**(code **)((ulonglong)*puVar2 * 4))(param1_00,param2,puVar2[1]);
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_IsTrackingLaunchEnabled ---
+		undefined4
+		Mycom_Tracker_Unity_MyTrackerConfig__set_IsTrackingLaunchEnabled(int param1,undefined4 param2)
+		
+		{
+		  uint uVar1;
+		  uint *puVar2;
+		  undefined4 uVar3;
+		  int *param1_00;
+		  int iVar4;
+		  
+		  if (DAT_ram_00a596db == '\0') {
+		    Mono_Security_ASN1__get_Item(&Mycom_Tracker_Unity_Internal_Interfaces_ITrackerConfig_TypeInfo);
+		    DAT_ram_00a596db = '\x01';
+		  }
+		  param1_00 = *(int **)(param1 + 8);
+		  iVar4 = *param1_00;
+		  if (*(ushort *)(iVar4 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (Mycom_Tracker_Unity_Internal_Interfaces_ITrackerConfig_TypeInfo ==
+		          *(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8)) {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8 + 4) * 8 + iVar4 + 0x118);
+		        goto code_r0x8104f1e9;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar4 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(param1_00,
+		                                Mycom_Tracker_Unity_Internal_Interfaces_ITrackerConfig_TypeInfo,0xb)
+		  ;
+		code_r0x8104f1e9:
+		  uVar3 = (**(code **)((ulonglong)*puVar2 * 4))(param1_00,puVar2[1]);
+		  return uVar3;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_IsTrackingLocationEnabled ---
+		void Mycom_Tracker_Unity_MyTrackerConfig__get_IsTrackingLocationEnabled
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  uint uVar1;
+		  uint *puVar2;
+		  int *param1_00;
+		  int iVar3;
+		  
+		  if (DAT_ram_00a596dc == '\0') {
+		    Mono_Security_ASN1__get_Item(&Mycom_Tracker_Unity_Internal_Interfaces_ITrackerConfig_TypeInfo);
+		    DAT_ram_00a596dc = '\x01';
+		  }
+		  param1_00 = *(int **)(param1 + 8);
+		  iVar3 = *param1_00;
+		  if (*(ushort *)(iVar3 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (Mycom_Tracker_Unity_Internal_Interfaces_ITrackerConfig_TypeInfo ==
+		          *(int *)(*(int *)(iVar3 + 0x58) + uVar1 * 8)) {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar3 + 0x58) + uVar1 * 8 + 4) * 8 + iVar3 + 0x120);
+		        goto code_r0x8104f290;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar3 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(param1_00,
+		                                Mycom_Tracker_Unity_Internal_Interfaces_ITrackerConfig_TypeInfo,0xc)
+		  ;
+		code_r0x8104f290:
+		  (**(code **)((ulonglong)*puVar2 * 4))(param1_00,param2,puVar2[1]);
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_IsTrackingLocationEnabled ---
+		undefined4
+		Mycom_Tracker_Unity_MyTrackerConfig__set_IsTrackingLocationEnabled(int param1,undefined4 param2)
+		
+		{
+		  uint uVar1;
+		  uint *puVar2;
+		  undefined4 uVar3;
+		  int *param1_00;
+		  int iVar4;
+		  
+		  if (DAT_ram_00a596dd == '\0') {
+		    Mono_Security_ASN1__get_Item(&Mycom_Tracker_Unity_Internal_Interfaces_ITrackerConfig_TypeInfo);
+		    DAT_ram_00a596dd = '\x01';
+		  }
+		  param1_00 = *(int **)(param1 + 8);
+		  iVar4 = *param1_00;
+		  if (*(ushort *)(iVar4 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (Mycom_Tracker_Unity_Internal_Interfaces_ITrackerConfig_TypeInfo ==
+		          *(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8)) {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8 + 4) * 8 + iVar4 + 0xe8);
+		        goto code_r0x8104f339;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar4 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(param1_00,
+		                                Mycom_Tracker_Unity_Internal_Interfaces_ITrackerConfig_TypeInfo,5);
+		code_r0x8104f339:
+		  uVar3 = (**(code **)((ulonglong)*puVar2 * 4))(param1_00,puVar2[1]);
+		  return uVar3;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_LaunchTimeout ---
+		void Mycom_Tracker_Unity_MyTrackerConfig__get_LaunchTimeout
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  uint uVar1;
+		  uint *puVar2;
+		  int *param1_00;
+		  int iVar3;
+		  
+		  if (DAT_ram_00a596de == '\0') {
+		    Mono_Security_ASN1__get_Item(&Mycom_Tracker_Unity_Internal_Interfaces_ITrackerConfig_TypeInfo);
+		    DAT_ram_00a596de = '\x01';
+		  }
+		  param1_00 = *(int **)(param1 + 8);
+		  iVar3 = *param1_00;
+		  if (*(ushort *)(iVar3 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (Mycom_Tracker_Unity_Internal_Interfaces_ITrackerConfig_TypeInfo ==
+		          *(int *)(*(int *)(iVar3 + 0x58) + uVar1 * 8)) {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar3 + 0x58) + uVar1 * 8 + 4) * 8 + iVar3 + 0xf0);
+		        goto code_r0x8104f3e0;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar3 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(param1_00,
+		                                Mycom_Tracker_Unity_Internal_Interfaces_ITrackerConfig_TypeInfo,6);
+		code_r0x8104f3e0:
+		  (**(code **)((ulonglong)*puVar2 * 4))(param1_00,param2,puVar2[1]);
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_LaunchTimeout ---
+		void Mycom_Tracker_Unity_MyTrackerConfig__set_LaunchTimeout
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  uint uVar1;
+		  uint *puVar2;
+		  int *param1_00;
+		  int iVar3;
+		  
+		  if (DAT_ram_00a596df == '\0') {
+		    Mono_Security_ASN1__get_Item(&Mycom_Tracker_Unity_Internal_Interfaces_ITrackerConfig_TypeInfo);
+		    DAT_ram_00a596df = '\x01';
+		  }
+		  param1_00 = *(int **)(param1 + 8);
+		  iVar3 = *param1_00;
+		  if (*(ushort *)(iVar3 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (Mycom_Tracker_Unity_Internal_Interfaces_ITrackerConfig_TypeInfo ==
+		          *(int *)(*(int *)(iVar3 + 0x58) + uVar1 * 8)) {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar3 + 0x58) + uVar1 * 8 + 4) * 8 + iVar3 + 0x128);
+		        goto code_r0x8104f489;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar3 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(param1_00,
+		                                Mycom_Tracker_Unity_Internal_Interfaces_ITrackerConfig_TypeInfo,0xd)
+		  ;
+		code_r0x8104f489:
+		  (**(code **)((ulonglong)*puVar2 * 4))(param1_00,param2,puVar2[1]);
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_ProxyHost ---
+		void Mycom_Tracker_Unity_MyTrackerConfig__set_ProxyHost
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  uint uVar1;
+		  uint *puVar2;
+		  int *param1_00;
+		  int iVar3;
+		  
+		  if (DAT_ram_00a596e0 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Mycom_Tracker_Unity_Internal_Interfaces_ITrackerConfig_TypeInfo);
+		    DAT_ram_00a596e0 = '\x01';
+		  }
+		  param1_00 = *(int **)(param1 + 8);
+		  iVar3 = *param1_00;
+		  if (*(ushort *)(iVar3 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (Mycom_Tracker_Unity_Internal_Interfaces_ITrackerConfig_TypeInfo ==
+		          *(int *)(*(int *)(iVar3 + 0x58) + uVar1 * 8)) {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar3 + 0x58) + uVar1 * 8 + 4) * 8 + iVar3 + 0x138);
+		        goto code_r0x8104f532;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar3 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(param1_00,
+		                                Mycom_Tracker_Unity_Internal_Interfaces_ITrackerConfig_TypeInfo,0xf)
+		  ;
+		code_r0x8104f532:
+		  (**(code **)((ulonglong)*puVar2 * 4))(param1_00,param2,puVar2[1]);
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_RegisterForSkAdAttribution ---
+		undefined4
+		Mycom_Tracker_Unity_MyTrackerConfig__set_RegisterForSkAdAttribution(int param1,undefined4 param2)
+		
+		{
+		  uint uVar1;
+		  uint *puVar2;
+		  undefined4 uVar3;
+		  int *param1_00;
+		  int iVar4;
+		  
+		  if (DAT_ram_00a596e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Mycom_Tracker_Unity_Internal_Interfaces_ITrackerConfig_TypeInfo);
+		    DAT_ram_00a596e1 = '\x01';
+		  }
+		  param1_00 = *(int **)(param1 + 8);
+		  iVar4 = *param1_00;
+		  if (*(ushort *)(iVar4 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (Mycom_Tracker_Unity_Internal_Interfaces_ITrackerConfig_TypeInfo ==
+		          *(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8)) {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8 + 4) * 8 + iVar4 + 0x130);
+		        goto code_r0x8104f5db;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar4 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(param1_00,
+		                                Mycom_Tracker_Unity_Internal_Interfaces_ITrackerConfig_TypeInfo,0xe)
+		  ;
+		code_r0x8104f5db:
+		  uVar3 = (**(code **)((ulonglong)*puVar2 * 4))(param1_00,puVar2[1]);
+		  return uVar3;
+		}
+		*/
+
 }

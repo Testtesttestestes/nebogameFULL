@@ -13,6 +13,17 @@ namespace Core.Extensions.Dict
 		[Address(RVA = "0xAC33", Offset = "0xAC33", VA = "0xAC33")]
 		public static string GetDescription(this TriggerDic triggerDic)
 		{
+		/* --- GHIDRA: GetDescription ---
+		undefined4 Core_Extensions_Dict_TriggerDicExt__GetDescription(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  uVar1 = Core_Extensions_Dict_DictExt__GetAsset(*(undefined4 *)(param1 + 0x28),100,0);
+		  return uVar1;
+		}
+		*/
+
 			return null;
 		}
 	}

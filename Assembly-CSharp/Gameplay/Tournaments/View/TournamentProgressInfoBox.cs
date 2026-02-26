@@ -94,6 +94,19 @@ namespace Gameplay.Tournaments.View
 		[Address(RVA = "0x6DD8", Offset = "0x6DD8", VA = "0x6DD8")]
 		public TournamentProgressInfoBox()
 		{
+		/* --- GHIDRA: .ctor ---
+		undefined4
+		Gameplay_Tournaments_View_TournamentProgressInfoBox___ctor(undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a58500 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_12674);
+		    DAT_ram_00a58500 = '\x01';
+		  }
+		  return StringLiteral_12674;
+		}
+		*/
+
 		}
 
 		// Token: 0x04000F5F RID: 3935
@@ -150,4 +163,23 @@ namespace Gameplay.Tournaments.View
 			WAITING
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_MultilineInfo ---
+		void Gameplay_Tournaments_View_TournamentProgressInfoBox__get_MultilineInfo
+		               (undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a584ff == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UI_MonoBehaviourWithStates_TournamentProgressInfoBox_State___ctor__);
+		    DAT_ram_00a584ff = '\x01';
+		  }
+		  ScreenAdaptation_Common_AppSize__Update
+		            (param1,Method_UI_MonoBehaviourWithStates_TournamentProgressInfoBox_State___ctor__);
+		  return;
+		}
+		*/
+
 }

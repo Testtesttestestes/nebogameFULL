@@ -82,6 +82,35 @@ namespace Gameplay.ArtifactComparer.View.SkillSelector
 		[Address(RVA = "0x9E3E", Offset = "0x9E3E", VA = "0x9E3E")]
 		private void OnValueChangedEvent(bool value)
 		{
+		/* --- GHIDRA: OnValueChangedEvent ---
+		void Gameplay_ArtifactComparer_View_SkillSelector_SkillSelectorItemView__OnValueChangedEvent
+		               (int param1,undefined4 param2)
+		
+		{
+		  undefined4 param1_00;
+		  undefined4 param1_01;
+		  
+		  if (DAT_ram_00a58a21 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Gameplay_ArtifactComparer_View_SkillSelector_SkillSelectorItemView_OnValueChangedEvent__
+		              );
+		    Mono_Security_ASN1__get_Item(&UnityEngine_Events_UnityAction_bool__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Method_UnityEngine_Events_UnityEvent_bool__RemoveListener__);
+		    DAT_ram_00a58a21 = '\x01';
+		  }
+		  param1_01 = *(undefined4 *)(*(int *)(param1 + 0x10) + 0xc0);
+		  param1_00 = unnamed_function_1417(UnityEngine_Events_UnityAction_bool__TypeInfo);
+		  UnityEngine_UI_Toggle__set_group
+		            (param1_00,param1,
+		             Method_Gameplay_ArtifactComparer_View_SkillSelector_SkillSelectorItemView_OnValueChangedEvent__
+		             ,0);
+		  UnityEngine_Events_UnityEvent_InputAction_CallbackContext___Invoke
+		            (param1_01,param1_00,Method_UnityEngine_Events_UnityEvent_bool__RemoveListener__);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600502E RID: 20526 RVA: 0x00002050 File Offset: 0x00000250
@@ -121,4 +150,95 @@ namespace Gameplay.ArtifactComparer.View.SkillSelector
 		[FieldOffset(Offset = "0x20")]
 		private int _skillId;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: add_SelectEvent ---
+		void Gameplay_ArtifactComparer_View_SkillSelector_SkillSelectorItemView__add_SelectEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a58a1e == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_SkillSelectorItemView__TypeInfo);
+		    DAT_ram_00a58a1e = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x1c);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = func_ii_7048(param1_00,param2,0);
+		    param2_00 = System_Action_SkillSelectorItemView__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_SkillSelectorItemView__TypeInfo), iVar2 == 0))
+		    break;
+		    iVar2 = func_ii_4329(param1 + 0x1c,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: get_SkillId ---
+		uint Gameplay_ArtifactComparer_View_SkillSelector_SkillSelectorItemView__get_SkillId
+		               (int param1,undefined4 param2)
+		
+		{
+		  return (uint)*(byte *)(*(int *)(param1 + 0x10) + 0xc4);
+		}
+		*/
+
+
+		/* --- GHIDRA: get_Selected ---
+		void Gameplay_ArtifactComparer_View_SkillSelector_SkillSelectorItemView__get_Selected
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  func_ii_7603(*(undefined4 *)(param1 + 0x10),param2,0);
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_Selected ---
+		void Gameplay_ArtifactComparer_View_SkillSelector_SkillSelectorItemView__set_Selected
+		               (int param1,undefined4 param2)
+		
+		{
+		  undefined4 param1_00;
+		  undefined4 param1_01;
+		  
+		  if (DAT_ram_00a58a20 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Gameplay_ArtifactComparer_View_SkillSelector_SkillSelectorItemView_OnValueChangedEvent__
+		              );
+		    Mono_Security_ASN1__get_Item(&UnityEngine_Events_UnityAction_bool__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Method_UnityEngine_Events_UnityEvent_bool__AddListener__);
+		    DAT_ram_00a58a20 = '\x01';
+		  }
+		  param1_01 = *(undefined4 *)(*(int *)(param1 + 0x10) + 0xc0);
+		  param1_00 = unnamed_function_1417(UnityEngine_Events_UnityAction_bool__TypeInfo);
+		  UnityEngine_UI_Toggle__set_group
+		            (param1_00,param1,
+		             Method_Gameplay_ArtifactComparer_View_SkillSelector_SkillSelectorItemView_OnValueChangedEvent__
+		             ,0);
+		  UnityEngine_Events_UnityEvent_InputAction_CallbackContext____ctor
+		            (param1_01,param1_00,Method_UnityEngine_Events_UnityEvent_bool__AddListener__);
+		  return;
+		}
+		*/
+
 }

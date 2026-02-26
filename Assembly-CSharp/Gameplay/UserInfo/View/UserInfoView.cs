@@ -264,6 +264,18 @@ namespace Gameplay.UserInfo.View
 		[Address(RVA = "0x69E7", Offset = "0x69E7", VA = "0x69E7")]
 		public UserInfoView()
 		{
+		/* --- GHIDRA: .ctor ---
+		undefined4 Gameplay_UserInfo_View_UserInfoView___ctor(undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a598f6 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_12683);
+		    DAT_ram_00a598f6 = '\x01';
+		  }
+		  return StringLiteral_12683;
+		}
+		*/
+
 		}
 
 		// Token: 0x04000CD5 RID: 3285
@@ -395,4 +407,21 @@ namespace Gameplay.UserInfo.View
 			GUEST
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_GuestMenu ---
+		void Gameplay_UserInfo_View_UserInfoView__get_GuestMenu(undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a598f5 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_UI_MonoBehaviourWithStates_UserInfoView_State___ctor__);
+		    DAT_ram_00a598f5 = '\x01';
+		  }
+		  ScreenAdaptation_Common_AppSize__Update
+		            (param1,Method_UI_MonoBehaviourWithStates_UserInfoView_State___ctor__);
+		  return;
+		}
+		*/
+
 }

@@ -20,6 +20,20 @@ namespace UI.Utils
 		[Address(RVA = "0x5C73", Offset = "0x5C73", VA = "0x5C73")]
 		public HyperLinksHandler()
 		{
+		/* --- GHIDRA: .ctor ---
+		void UI_Utils_HyperLinksHandler___ctor(int param1,undefined4 param2)
+		
+		{
+		  if (*(char *)(param1 + 0x14) == '\0') {
+		    if (*(int *)(param1 + 0x10) != 0) {
+		      UnityEngine_Events_UnityEvent__GetDelegate(*(int *)(param1 + 0x10),0);
+		    }
+		    *(undefined1 *)(param1 + 0x14) = 1;
+		  }
+		  return;
+		}
+		*/
+
 		}
 	}
 }

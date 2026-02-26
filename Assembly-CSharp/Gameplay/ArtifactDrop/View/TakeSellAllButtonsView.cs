@@ -40,6 +40,20 @@ namespace Gameplay.ArtifactDrop.View
 		[Address(RVA = "0x9DBB", Offset = "0x9DBB", VA = "0x9DBB")]
 		public TakeSellAllButtonsView()
 		{
+		/* --- GHIDRA: .ctor ---
+		undefined4 Gameplay_ArtifactDrop_View_TakeSellAllButtonsView___ctor(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  
+		  iVar1 = 0x10;
+		  if (*(char *)(param1 + 0x18) == '\0') {
+		    iVar1 = 0xc;
+		  }
+		  return *(undefined4 *)(param1 + iVar1);
+		}
+		*/
+
 		}
 
 		// Token: 0x04002B61 RID: 11105

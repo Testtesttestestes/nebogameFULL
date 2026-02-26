@@ -14,6 +14,20 @@ namespace Gameplay.Auchan.View
 		[Address(RVA = "0x1D63", Offset = "0x1D63", VA = "0x1D63")]
 		public AuchanArtifactCategoryData()
 		{
+		/* --- GHIDRA: .ctor ---
+		int * Gameplay_Auchan_View_AuchanArtifactCategoryData___ctor(int *param1)
+		
+		{
+		  if (*param1 == 0) {
+		    return param1;
+		  }
+		  System_Data_DataSet__ValidateLocaleConstraint(*param1);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
 		}
 
 		// Token: 0x04002ABD RID: 10941

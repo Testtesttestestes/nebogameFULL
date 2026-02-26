@@ -13,6 +13,19 @@ namespace Core.Gameplay.Managers.Configuration
 		[Address(RVA = "0xB8E4", Offset = "0xB8E4", VA = "0xB8E4")]
 		public ConfigRecord Clone()
 		{
+		/* --- GHIDRA: Clone ---
+		undefined4
+		Core_Gameplay_Managers_Configuration_ConfigRecord__Clone(undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a5a7e0 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_5666);
+		    DAT_ram_00a5a7e0 = '\x01';
+		  }
+		  return StringLiteral_5666;
+		}
+		*/
+
 			return null;
 		}
 

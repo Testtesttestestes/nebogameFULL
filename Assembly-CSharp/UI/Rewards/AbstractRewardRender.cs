@@ -27,6 +27,15 @@ namespace UI.Rewards
 		[Address(RVA = "0x5E48", Offset = "0x5E48", VA = "0x5E48", Slot = "5")]
 		public virtual AbstractRewardRender Render(RewardsContainer container, RewardData reward)
 		{
+		/* --- GHIDRA: Render ---
+		void UI_Rewards_AbstractRewardRender__Render(undefined4 *param1,int param2,undefined4 param3)
+		
+		{
+		  *param1 = *(undefined4 *)(param2 + 0x20);
+		  return;
+		}
+		*/
+
 			return null;
 		}
 
@@ -99,6 +108,15 @@ namespace UI.Rewards
 		[Address(RVA = "0x5E50", Offset = "0x5E50", VA = "0x5E50", Slot = "9")]
 		public virtual void Dispose()
 		{
+		/* --- GHIDRA: Dispose ---
+		void UI_Rewards_AbstractRewardRender__Dispose(int *param1,undefined4 param2)
+		
+		{
+		  (**(code **)((ulonglong)*(uint *)(*param1 + 0x108) * 4))(param1,*(undefined4 *)(*param1 + 0x10c));
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06000B2F RID: 2863 RVA: 0x00002050 File Offset: 0x00000250
@@ -106,6 +124,47 @@ namespace UI.Rewards
 		[Address(RVA = "0x5E51", Offset = "0x5E51", VA = "0x5E51")]
 		private void OnDestroy()
 		{
+		/* --- GHIDRA: OnDestroy ---
+		void UI_Rewards_AbstractRewardRender__OnDestroy(int param1,undefined4 param2)
+		
+		{
+		  int param1_00;
+		  int iVar1;
+		  uint uVar2;
+		  undefined8 local_20;
+		  undefined8 local_18;
+		  float4 local_10;
+		  float4 local_c;
+		  float4 local_8;
+		  float4 local_4;
+		  
+		  if (DAT_ram_00a59a01 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_UnityEngine_Component_GetComponent_IconValueRender___);
+		    Mono_Security_ASN1__get_Item(&UnityEngine_Object_TypeInfo);
+		    DAT_ram_00a59a01 = '\x01';
+		  }
+		  param1_00 = func_ii_5677(param1,Method_UnityEngine_Component_GetComponent_IconValueRender___);
+		  if (*(int *)(UnityEngine_Object_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(UnityEngine_Object_TypeInfo);
+		  }
+		  iVar1 = UnityEngine_Component__GetComponent_object_(param1_00,0);
+		  if (iVar1 != 0) {
+		    uVar2 = *(uint *)(param1 + 0x24);
+		    *(uint *)(param1_00 + 0x24) = uVar2;
+		    local_8 = (float4)((float)(uVar2 >> 0x10 & 0xff) / 255.0);
+		    local_4 = (float4)((float)(uVar2 >> 0x18) / 255.0);
+		    local_10 = (float4)((float)(uVar2 & 0xff) / 255.0);
+		    local_c = (float4)((float)(uVar2 >> 8 & 0xff) / 255.0);
+		    iVar1 = **(int **)(param1_00 + 0x2c);
+		    local_18 = CONCAT44(local_4,local_8);
+		    local_20 = CONCAT44(local_c,local_10);
+		    (**(code **)((ulonglong)*(uint *)(iVar1 + 0x178) * 4))
+		              (*(int **)(param1_00 + 0x2c),&local_20,*(undefined4 *)(iVar1 + 0x17c));
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06000B30 RID: 2864 RVA: 0x00002050 File Offset: 0x00000250
@@ -113,6 +172,37 @@ namespace UI.Rewards
 		[Address(RVA = "0x5E52", Offset = "0x5E52", VA = "0x5E52")]
 		protected void Start()
 		{
+		/* --- GHIDRA: Start ---
+		void UI_Rewards_AbstractRewardRender__Start(int param1,undefined4 param2)
+		
+		{
+		  undefined8 local_48;
+		  undefined8 local_40;
+		  undefined8 local_38;
+		  undefined8 local_30;
+		  undefined8 local_24;
+		  undefined8 local_1c;
+		  undefined8 local_14;
+		  undefined8 local_c;
+		  undefined4 local_4;
+		  
+		  local_c = 0x3f8000003f800000;
+		  local_30 = 0x3f8000003f800000;
+		  local_14 = 0x3f8000003f800000;
+		  local_38 = 0x3f8000003f800000;
+		  UnityEngine_Color32___ctor(&local_4,&local_38,0);
+		  *(undefined4 *)(param1 + 0x20) = local_4;
+		  local_1c = 0x3f8000003f800000;
+		  local_40 = 0x3f8000003f800000;
+		  local_24 = 0x3f8000003f800000;
+		  local_48 = 0x3f8000003f800000;
+		  UnityEngine_Color32___ctor(&local_4,&local_48,0);
+		  *(undefined4 *)(param1 + 0x24) = local_4;
+		  UnityEngine_RectTransform__GetParentSize(param1,0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06000B31 RID: 2865 RVA: 0x00002050 File Offset: 0x00000250
@@ -155,4 +245,42 @@ namespace UI.Rewards
 		[FieldOffset(Offset = "0x24")]
 		private Color32 _valueColor;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_RewardRender ---
+		undefined4
+		UI_Rewards_AbstractRewardRender__get_RewardRender
+		          (int *param1,int param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  param1[4] = param2;
+		  (**(code **)((ulonglong)*(uint *)(*param1 + 0xf8) * 4))
+		            (param1,param3,*(undefined4 *)(*param1 + 0xfc));
+		  return 0;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_LabelColor ---
+		void UI_Rewards_AbstractRewardRender__get_LabelColor
+		               (int param1,undefined4 *param2,undefined4 param3)
+		
+		{
+		  *(undefined4 *)(param1 + 0x20) = *param2;
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_Reward ---
+		void UI_Rewards_AbstractRewardRender__get_Reward(int *param1,int param2,undefined4 param3)
+		
+		{
+		  param1[7] = param2;
+		  (**(code **)((ulonglong)*(uint *)(*param1 + 0x100) * 4))(param1,*(undefined4 *)(*param1 + 0x104));
+		  return;
+		}
+		*/
+
 }

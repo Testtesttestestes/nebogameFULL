@@ -13,6 +13,20 @@ namespace Core.Extensions.Dict
 		[Address(RVA = "0x1C21", Offset = "0x1C21", VA = "0x1C21")]
 		public static string GetTitle(this MedalTypeDic medalDic)
 		{
+		/* --- GHIDRA: GetTitle ---
+		int * Core_Extensions_Dict_MedalTypeDicExt__GetTitle(int *param1)
+		
+		{
+		  if (*param1 == 0) {
+		    return param1;
+		  }
+		  System_Data_DataSet__ValidateLocaleConstraint(*param1);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
 			return null;
 		}
 	}

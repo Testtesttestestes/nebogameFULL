@@ -13,6 +13,16 @@ namespace Gameplay.MageSchool.Events
 		[Address(RVA = "0x780B", Offset = "0x780B", VA = "0x780B")]
 		public SchoolEvents()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_MageSchool_Events_SchoolEvents___ctor(undefined4 param1,int param2,undefined4 param3)
+		
+		{
+		  Gameplay_School_View_SpellCurrentDescriptionTitledListElement__OnInit
+		            (param1,*(undefined4 *)(param2 + 8),param2);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0400153C RID: 5436

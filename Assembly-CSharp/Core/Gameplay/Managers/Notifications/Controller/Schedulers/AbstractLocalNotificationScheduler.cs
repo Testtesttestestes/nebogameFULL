@@ -55,6 +55,23 @@ namespace Core.Gameplay.Managers.Notifications.Controller.Schedulers
 		[Address(RVA = "0xB6A5", Offset = "0xB6A5", VA = "0xB6A5", Slot = "9")]
 		protected override void HandleDispose()
 		{
+		/* --- GHIDRA: HandleDispose ---
+		void Core_Gameplay_Managers_Notifications_Controller_Schedulers_AbstractLocalNotificationScheduler__HandleDispose
+		               (int *param1,uint param2,undefined4 param3)
+		
+		{
+		  int iVar1;
+		  
+		  iVar1 = (**(code **)((ulonglong)*(uint *)(*param1 + 0xe8) * 4))
+		                    (param1,*(undefined4 *)(*param1 + 0xec));
+		  if ((ulonglong)param2 == (longlong)iVar1) {
+		    (**(code **)((ulonglong)*(uint *)(*param1 + 0x118) * 4))
+		              (param1,*(undefined4 *)(*param1 + 0x11c));
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06006BB4 RID: 27572 RVA: 0x00002050 File Offset: 0x00000250
@@ -75,4 +92,94 @@ namespace Core.Gameplay.Managers.Notifications.Controller.Schedulers
 		{
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: set_NotificationDic ---
+		uint Core_Gameplay_Managers_Notifications_Controller_Schedulers_AbstractLocalNotificationScheduler__set_NotificationDic
+		               (int *param1,undefined4 param2)
+		
+		{
+		  uint uVar1;
+		  uint *puVar2;
+		  undefined4 uVar3;
+		  int *param1_00;
+		  int iVar4;
+		  
+		  if (DAT_ram_00a5a692 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_Gameplay_IGame_TypeInfo);
+		    DAT_ram_00a5a692 = '\x01';
+		  }
+		  param1_00 = (int *)param1[3];
+		  iVar4 = *param1_00;
+		  if (*(ushort *)(iVar4 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (Core_Gameplay_IGame_TypeInfo == *(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8)) {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8 + 4) * 8 + iVar4 + 0x260);
+		        goto code_r0x81252bee;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar4 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(param1_00,Core_Gameplay_IGame_TypeInfo,0x34);
+		code_r0x81252bee:
+		  iVar4 = (**(code **)((ulonglong)*puVar2 * 4))(param1_00,puVar2[1]);
+		  iVar4 = *(int *)(iVar4 + 0x14);
+		  uVar3 = (**(code **)((ulonglong)*(uint *)(*param1 + 0xe8) * 4))
+		                    (param1,*(undefined4 *)(*param1 + 0xec));
+		  if (DAT_ram_00a5a67e == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_Dictionary_uint__uint__get_Item__);
+		    DAT_ram_00a5a67e = '\x01';
+		  }
+		  uVar3 = System_Collections_Generic_List_object___get_Item
+		                    (*(undefined4 *)(iVar4 + 0x10),uVar3,
+		                     Method_System_Collections_Generic_Dictionary_uint__uint__get_Item__);
+		  iVar4 = func_ii_8735(iVar4,uVar3,iVar4);
+		  return (uint)*(byte *)(iVar4 + 0x10);
+		}
+		*/
+
+
+		/* --- GHIDRA: get_IsNotificationEnabled ---
+		void Core_Gameplay_Managers_Notifications_Controller_Schedulers_AbstractLocalNotificationScheduler__get_IsNotificationEnabled
+		               (int *param1,undefined4 param2)
+		
+		{
+		  uint uVar1;
+		  uint *puVar2;
+		  undefined4 uVar3;
+		  undefined4 param2_00;
+		  int *param1_00;
+		  int iVar4;
+		  
+		  if (DAT_ram_00a5a693 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_Gameplay_IGame_TypeInfo);
+		    DAT_ram_00a5a693 = '\x01';
+		  }
+		  param1_00 = (int *)param1[3];
+		  iVar4 = *param1_00;
+		  if (*(ushort *)(iVar4 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (Core_Gameplay_IGame_TypeInfo == *(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8)) {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8 + 4) * 8 + iVar4 + 0x178);
+		        goto code_r0x81252ced;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar4 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(param1_00,Core_Gameplay_IGame_TypeInfo,0x17);
+		code_r0x81252ced:
+		  uVar3 = (**(code **)((ulonglong)*puVar2 * 4))(param1_00,puVar2[1]);
+		  uVar3 = Newtonsoft_Json_Converters_XmlDocumentTypeWrapper__get_System(uVar3,0);
+		  param2_00 = (**(code **)((ulonglong)*(uint *)(*param1 + 0xe8) * 4))
+		                        (param1,*(undefined4 *)(*param1 + 0xec));
+		  iVar4 = Core_Extensions_Dict_DictExt__GetUIElementsDic(uVar3,param2_00,0);
+		  param1[4] = iVar4;
+		  return;
+		}
+		*/
+
 }

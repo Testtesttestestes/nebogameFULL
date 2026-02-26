@@ -52,4 +52,30 @@ namespace Gameplay.VortexCombat.Model.FieldChange
 			return default(bool);
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_Points ---
+		undefined4
+		Gameplay_VortexCombat_Model_FieldChange_FieldChange__get_Points
+		          (undefined4 param1,undefined8 *param2,undefined4 param3)
+		
+		{
+		  *param2 = 0;
+		  return 0;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_Points ---
+		undefined4
+		Gameplay_Combat_Model_FieldChange_FieldChange__get_Points
+		          (int param1,undefined8 *param2,undefined4 param3)
+		
+		{
+		  *param2 = *(undefined8 *)(*(int *)(param1 + 8) + 0x18);
+		  return 1;
+		}
+		*/
+
 }

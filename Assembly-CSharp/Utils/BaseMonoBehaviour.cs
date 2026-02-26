@@ -21,6 +21,17 @@ namespace Utils
 		[Address(RVA = "0x56CF", Offset = "0x56CF", VA = "0x56CF")]
 		protected BaseMonoBehaviour()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Utils_BaseMonoBehaviour___ctor(undefined1 *param1,int param2,undefined4 param3)
+		
+		{
+		  param1[3] = 0xff;
+		  *param1 = (char)((uint)param2 >> 0x10);
+		  *(ushort *)(param1 + 1) = (ushort)(param2 << 8) | (ushort)((uint)param2 >> 8) & 0xff;
+		  return;
+		}
+		*/
+
 		}
 	}
 }

@@ -99,4 +99,108 @@ namespace Gameplay.Auchan.View
 		[FieldOffset(Offset = "0x1C")]
 		private ArtifactView _artifactView;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: set_ArtifactData ---
+		void Gameplay_Auchan_View_AuchanArtifactView__set_ArtifactData
+		               (int param1,int param2,undefined4 param3,int param4,undefined4 param5)
+		
+		{
+		  uint uVar1;
+		  int iVar2;
+		  int *piVar3;
+		  uint *puVar4;
+		  undefined4 uVar5;
+		  undefined4 uVar6;
+		  
+		  if (DAT_ram_00a59846 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Protocol_IActionInfo_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Core_Money_Money_TypeInfo);
+		    DAT_ram_00a59846 = '\x01';
+		  }
+		  *(int *)(param1 + 0x20) = param2;
+		  if (DAT_ram_00a59845 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_UnityEngine_Component_GetComponent_ArtifactView___);
+		    Mono_Security_ASN1__get_Item(&UnityEngine_Object_TypeInfo);
+		    DAT_ram_00a59845 = '\x01';
+		  }
+		  uVar5 = *(undefined4 *)(param1 + 0x1c);
+		  if (*(int *)(UnityEngine_Object_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(UnityEngine_Object_TypeInfo);
+		  }
+		  iVar2 = func_ii_3812(uVar5,0,0);
+		  if (iVar2 == 0) {
+		    piVar3 = *(int **)(param1 + 0x1c);
+		  }
+		  else {
+		    piVar3 = (int *)func_ii_5677(param1,Method_UnityEngine_Component_GetComponent_ArtifactView___);
+		    *(int **)(param1 + 0x1c) = piVar3;
+		  }
+		  (**(code **)((ulonglong)*(uint *)(*piVar3 + 0x138) * 4))
+		            (piVar3,*(undefined4 *)(param2 + 0x1c),*(undefined4 *)(*piVar3 + 0x13c));
+		  uVar6 = *(undefined4 *)(param1 + 0x10);
+		  uVar5 = func_ii_7954(*(undefined4 *)(param2 + 0x1c),0);
+		  if (*(int *)(Core_Money_Money_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Core_Money_Money_TypeInfo);
+		  }
+		  uVar5 = Core_Money_Money__op_Explicit(uVar5,0);
+		  UI_Price_Price__SetColor(uVar6,param3,uVar5,0);
+		  piVar3 = *(int **)(param2 + 0x20);
+		  if (piVar3 != (int *)0x0) {
+		    uVar1 = 0;
+		    iVar2 = *piVar3;
+		    if (*(ushort *)(iVar2 + 0xb6) != 0) {
+		      do {
+		        if (Protocol_IActionInfo_TypeInfo == *(int *)(*(int *)(iVar2 + 0x58) + uVar1 * 8)) {
+		          puVar4 = (uint *)(*(int *)(*(int *)(iVar2 + 0x58) + uVar1 * 8 + 4) * 8 + iVar2 + 0xe0);
+		          goto code_r0x81079b4f;
+		        }
+		        uVar1 = uVar1 + 1;
+		      } while (*(ushort *)(iVar2 + 0xb6) != uVar1);
+		    }
+		    puVar4 = (uint *)func_ii_1080(piVar3,Protocol_IActionInfo_TypeInfo,4);
+		code_r0x81079b4f:
+		    iVar2 = (**(code **)((ulonglong)*puVar4 * 4))(piVar3,puVar4[1]);
+		    if (-1 < iVar2 + -1) {
+		      func_ii_7050(*(undefined4 *)(param1 + 0x14),*(undefined4 *)(param4 + (iVar2 + -1) * 4 + 0x10),
+		                   0);
+		      uVar5 = 1;
+		      goto code_r0x81079b84;
+		    }
+		  }
+		  uVar5 = 0;
+		code_r0x81079b84:
+		  uVar1 = 0;
+		  UnityEngine_Object__op_Implicit(*(undefined4 *)(param1 + 0x14),uVar5,0);
+		  uVar5 = *(undefined4 *)(param1 + 0x18);
+		  if (DAT_ram_00a5986b == '\0') {
+		    Mono_Security_ASN1__get_Item(&Protocol_IActionInfo_TypeInfo);
+		    DAT_ram_00a5986b = '\x01';
+		  }
+		  piVar3 = *(int **)(param2 + 0x20);
+		  if (piVar3 == (int *)0x0) {
+		    uVar6 = 0;
+		  }
+		  else {
+		    iVar2 = *piVar3;
+		    if (*(ushort *)(iVar2 + 0xb6) != 0) {
+		      do {
+		        if (Protocol_IActionInfo_TypeInfo == *(int *)(*(int *)(iVar2 + 0x58) + uVar1 * 8)) {
+		          puVar4 = (uint *)(iVar2 + *(int *)(*(int *)(iVar2 + 0x58) + uVar1 * 8 + 4) * 8 + 0xc0);
+		          goto code_r0x81079c32;
+		        }
+		        uVar1 = uVar1 + 1;
+		      } while (*(ushort *)(iVar2 + 0xb6) != uVar1);
+		    }
+		    puVar4 = (uint *)func_ii_1080(piVar3,Protocol_IActionInfo_TypeInfo,0);
+		code_r0x81079c32:
+		    uVar6 = (**(code **)((ulonglong)*puVar4 * 4))(piVar3,puVar4[1]);
+		  }
+		  Com_TheFallenGames_OSA_CustomAdapters_TableView_Tuple_Basic_BasicTupleValueViewsHolder__UpdateAsText
+		            (uVar5,uVar6,0);
+		  return;
+		}
+		*/
+
 }

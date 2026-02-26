@@ -19,6 +19,20 @@ namespace UI.ToolTip.Implementations.View
 		[Address(RVA = "0x5D21", Offset = "0x5D21", VA = "0x5D21", Slot = "5")]
 		protected override void HandleDataChanged()
 		{
+		/* --- GHIDRA: HandleDataChanged ---
+		void UI_ToolTip_Implementations_View_UserToolTipView__HandleDataChanged
+		               (undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a59972 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_UI_ToolTip_BaseToolTip_UserData___ctor__);
+		    DAT_ram_00a59972 = '\x01';
+		  }
+		  ScreenAdaptation_Common_AppSize__Update(param1,Method_UI_ToolTip_BaseToolTip_UserData___ctor__);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x060009BA RID: 2490 RVA: 0x00002050 File Offset: 0x00000250
@@ -26,6 +40,31 @@ namespace UI.ToolTip.Implementations.View
 		[Address(RVA = "0x5D22", Offset = "0x5D22", VA = "0x5D22")]
 		public UserToolTipView()
 		{
+		/* --- GHIDRA: .ctor ---
+		void UI_ToolTip_Implementations_View_UserToolTipView___ctor(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  int *piVar2;
+		  int iVar3;
+		  
+		  if (DAT_ram_00a59973 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_GameLocalization_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_9084);
+		    DAT_ram_00a59973 = '\x01';
+		  }
+		  piVar2 = *(int **)(param1 + 0x2c);
+		  if (*(int *)(Core_GameLocalization_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Core_GameLocalization_TypeInfo);
+		  }
+		  uVar1 = func_ii_7508(StringLiteral_9084,1,0,1,0,0,0,0);
+		  iVar3 = *piVar2;
+		  (**(code **)((ulonglong)*(uint *)(iVar3 + 0x2d0) * 4))
+		            (piVar2,uVar1,*(undefined4 *)(iVar3 + 0x2d4));
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x040003D6 RID: 982

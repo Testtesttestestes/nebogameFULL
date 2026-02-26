@@ -55,6 +55,22 @@ namespace CloudsFly
 		[Address(RVA = "0xBDD3", Offset = "0xBDD3", VA = "0xBDD3", Slot = "6")]
 		private void ResetPositions(Vector3 deltaPos)
 		{
+		/* --- GHIDRA: ResetPositions ---
+		float CloudsFly_WorldObjectEngine__ResetPositions
+		                (int param1,float param2,float param3,float param4,undefined4 param5)
+		
+		{
+		  float fVar1;
+		  int iVar2;
+		  
+		  iVar2 = *(int *)(param1 + 0xc);
+		  fVar1 = (float)(**(code **)((ulonglong)*(uint *)(iVar2 + 0xc) * 4))
+		                           (*(undefined4 *)(iVar2 + 0x20),param2,param3,param4,
+		                            *(undefined4 *)(iVar2 + 0x14));
+		  return fVar1;
+		}
+		*/
+
 		}
 
 		// Token: 0x060073FC RID: 29692
@@ -73,6 +89,20 @@ namespace CloudsFly
 		[Address(RVA = "0xBDD5", Offset = "0xBDD5", VA = "0xBDD5")]
 		protected float GetRandomRange(float distance, float left, float right)
 		{
+		/* --- GHIDRA: GetRandomRange ---
+		float CloudsFly_WorldObjectEngine__GetRandomRange(int param1,float param2,undefined4 param3)
+		
+		{
+		  float fVar1;
+		  int iVar2;
+		  
+		  iVar2 = *(int *)(param1 + 0x10);
+		  fVar1 = (float)(**(code **)((ulonglong)*(uint *)(iVar2 + 0xc) * 4))
+		                           (*(undefined4 *)(iVar2 + 0x20),param2,*(undefined4 *)(iVar2 + 0x14));
+		  return fVar1;
+		}
+		*/
+
 			return 0f;
 		}
 
@@ -126,4 +156,72 @@ namespace CloudsFly
 		[FieldOffset(Offset = "0x20")]
 		protected WorldMovementResolver _movementResolver;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_BlockAutoReset ---
+		void CloudsFly_WorldObjectEngine__get_BlockAutoReset(int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  int iVar1;
+		  
+		  iVar1 = *(int *)(param1 + 0x18);
+		  (**(code **)((ulonglong)*(uint *)(iVar1 + 0xc) * 4))
+		            (*(undefined4 *)(iVar1 + 0x20),param2,*(undefined4 *)(iVar1 + 0x14));
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_BlockAutoReset ---
+		void CloudsFly_WorldObjectEngine__set_BlockAutoReset(int *param1,int param2,undefined4 param3)
+		
+		{
+		  param1[2] = *(int *)(param2 + 0x10);
+		  param1[3] = *(int *)(param2 + 0x2c);
+		  param1[4] = *(int *)(param2 + 0x30);
+		  param1[5] = *(int *)(param2 + 0x34);
+		  param1[6] = *(int *)(param2 + 0x38);
+		  param1[7] = *(int *)(param2 + 0x3c);
+		  param1[8] = *(int *)(param2 + 0x40);
+		  (**(code **)((ulonglong)*(uint *)(*param1 + 0xf8) * 4))
+		            (param1,param2,*(undefined4 *)(*param1 + 0xfc));
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: CloudsFly.IWorldObjectEngine.LateUpdate ---
+		void CloudsFly_WorldObjectEngine__CloudsFly_IWorldObjectEngine_LateUpdate
+		               (int *param1,undefined8 *param2,undefined4 param3)
+		
+		{
+		  undefined8 local_10;
+		  undefined4 local_8;
+		  
+		  local_8 = *(undefined4 *)(param2 + 1);
+		  local_10 = *param2;
+		  (**(code **)((ulonglong)*(uint *)(*param1 + 0x108) * 4))
+		            (param1,&local_10,*(undefined4 *)(*param1 + 0x10c));
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: CloudsFly.IWorldObjectEngine.ResetPositions ---
+		void CloudsFly_WorldObjectEngine__CloudsFly_IWorldObjectEngine_ResetPositions
+		               (int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  
+		  iVar1 = *(int *)(param1 + 0x1c);
+		  if (iVar1 != 0) {
+		    (**(code **)((ulonglong)*(uint *)(iVar1 + 0xc) * 4))
+		              (*(undefined4 *)(iVar1 + 0x20),*(undefined4 *)(iVar1 + 0x14));
+		  }
+		  return;
+		}
+		*/
+
 }

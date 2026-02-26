@@ -77,6 +77,74 @@ namespace Gameplay.Chat.Model.Data.Message
 		[Address(RVA = "0x9346", Offset = "0x9346", VA = "0x9346")]
 		public InputMessage(string text)
 		{
+		/* --- GHIDRA: .ctor ---
+		undefined4 Gameplay_Chat_Model_Data_Message_InputMessage___ctor(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  undefined4 uVar2;
+		  
+		  if (DAT_ram_00a57b59 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_118);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_1706);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_1715);
+		    DAT_ram_00a57b59 = '\x01';
+		  }
+		  iVar1 = Newtonsoft_Json_Serialization_JsonSerializerInternalReader__ShouldDeserialize
+		                    (*(undefined4 *)(param1 + 0xc),0);
+		  if (iVar1 == 0) {
+		    iVar1 = *(int *)(param1 + 8);
+		    if (iVar1 == 1) {
+		      uVar2 = System_Int32__ToString
+		                        (StringLiteral_1715,*(undefined4 *)(param1 + 0xc),StringLiteral_118,
+		                         *(undefined4 *)(param1 + 0x10),0);
+		      return uVar2;
+		    }
+		    if (((iVar1 != 2) && (iVar1 != 3)) && (iVar1 == 4)) {
+		      uVar2 = System_Int32__ToString
+		                        (StringLiteral_1706,*(undefined4 *)(param1 + 0xc),StringLiteral_118,
+		                         *(undefined4 *)(param1 + 0x10),0);
+		      return uVar2;
+		    }
+		  }
+		  return *(undefined4 *)(param1 + 0x10);
+		}
+		*/
+
+		/* --- GHIDRA: .ctor ---
+		undefined4 Gameplay_Chat_Model_Data_Message_InputMessage___ctor(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  undefined4 uVar2;
+		  
+		  if (DAT_ram_00a57b59 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_118);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_1706);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_1715);
+		    DAT_ram_00a57b59 = '\x01';
+		  }
+		  iVar1 = Newtonsoft_Json_Serialization_JsonSerializerInternalReader__ShouldDeserialize
+		                    (*(undefined4 *)(param1 + 0xc),0);
+		  if (iVar1 == 0) {
+		    iVar1 = *(int *)(param1 + 8);
+		    if (iVar1 == 1) {
+		      uVar2 = System_Int32__ToString
+		                        (StringLiteral_1715,*(undefined4 *)(param1 + 0xc),StringLiteral_118,
+		                         *(undefined4 *)(param1 + 0x10),0);
+		      return uVar2;
+		    }
+		    if (((iVar1 != 2) && (iVar1 != 3)) && (iVar1 == 4)) {
+		      uVar2 = System_Int32__ToString
+		                        (StringLiteral_1706,*(undefined4 *)(param1 + 0xc),StringLiteral_118,
+		                         *(undefined4 *)(param1 + 0x10),0);
+		      return uVar2;
+		    }
+		  }
+		  return *(undefined4 *)(param1 + 0x10);
+		}
+		*/
+
 		}
 
 		// Token: 0x0600449A RID: 17562 RVA: 0x00002050 File Offset: 0x00000250
@@ -91,6 +159,40 @@ namespace Gameplay.Chat.Model.Data.Message
 		[Address(RVA = "0x9348", Offset = "0x9348", VA = "0x9348", Slot = "3")]
 		public override string ToString()
 		{
+		/* --- GHIDRA: ToString ---
+		undefined4
+		Gameplay_Chat_Model_Data_Message_InputMessage__ToString(undefined4 param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  int iVar2;
+		  
+		  if (DAT_ram_00a57b5a == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_1705);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_1714);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_5);
+		    DAT_ram_00a57b5a = '\x01';
+		  }
+		  iVar2 = UnityEngine_WWWTranscoder__SevenBitClean(param1,StringLiteral_1705,0);
+		  if ((iVar2 != -1) ||
+		     (iVar2 = UnityEngine_WWWTranscoder__SevenBitClean(param1,StringLiteral_1714,0), iVar2 != -1)) {
+		    uVar1 = 0;
+		    iVar2 = System_Net_WebConnection__ReadLine(param1,0x20,0,0);
+		    if (1 < *(int *)(iVar2 + 0xc)) {
+		      uVar1 = *(undefined4 *)(iVar2 + 0x14);
+		    }
+		    iVar2 = Newtonsoft_Json_Serialization_JsonSerializerInternalReader__ShouldDeserialize(uVar1,0);
+		    if (iVar2 == 0) {
+		      param1 = func_ii_7088(param1,uVar1,StringLiteral_5,0);
+		    }
+		  }
+		  uVar1 = func_ii_7088(param1,StringLiteral_1714,StringLiteral_5,0);
+		  uVar1 = func_ii_7088(uVar1,StringLiteral_1705,StringLiteral_5,0);
+		  uVar1 = System_Convert__FromBase64String(uVar1,0);
+		  return uVar1;
+		}
+		*/
+
 			return null;
 		}
 
@@ -110,4 +212,54 @@ namespace Gameplay.Chat.Model.Data.Message
 		[Token(Token = "0x40025D5")]
 		public const string TO_MSG_CHARS = "/to";
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: set_MessageText ---
+		void Gameplay_Chat_Model_Data_Message_InputMessage__set_MessageText
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  undefined4 uVar1;
+		  int iVar2;
+		  
+		  if (DAT_ram_00a57b58 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_1705);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_1714);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_5);
+		    DAT_ram_00a57b58 = '\x01';
+		  }
+		  *(undefined4 *)(param1 + 8) = 1;
+		  iVar2 = UnityEngine_WWWTranscoder__SevenBitClean(param2,StringLiteral_1705,0);
+		  if ((iVar2 != -1) ||
+		     (iVar2 = UnityEngine_WWWTranscoder__SevenBitClean(param2,StringLiteral_1714,0), iVar2 != -1)) {
+		    uVar1 = 0;
+		    iVar2 = UnityEngine_WWWTranscoder__SevenBitClean(param2,StringLiteral_1705,0);
+		    if (iVar2 != -1) {
+		      *(undefined4 *)(param1 + 8) = 4;
+		    }
+		    iVar2 = System_Net_WebConnection__ReadLine(param2,0x20,0,0);
+		    if (1 < *(int *)(iVar2 + 0xc)) {
+		      uVar1 = *(undefined4 *)(iVar2 + 0x14);
+		    }
+		    *(undefined4 *)(param1 + 0xc) = uVar1;
+		    iVar2 = Newtonsoft_Json_Serialization_JsonSerializerInternalReader__ShouldDeserialize(uVar1,0);
+		    if (iVar2 == 0) {
+		      uVar1 = System_Convert__FromBase64String(*(undefined4 *)(param1 + 0xc),0);
+		      *(undefined4 *)(param1 + 0xc) = uVar1;
+		    }
+		  }
+		  uVar1 = func_ii_7088(param2,StringLiteral_1714,StringLiteral_5,0);
+		  uVar1 = func_ii_7088(uVar1,StringLiteral_1705,StringLiteral_5,0);
+		  iVar2 = Newtonsoft_Json_Serialization_JsonSerializerInternalReader__ShouldDeserialize
+		                    (*(undefined4 *)(param1 + 0xc),0);
+		  if (iVar2 == 0) {
+		    uVar1 = func_ii_7088(uVar1,*(undefined4 *)(param1 + 0xc),StringLiteral_5,0);
+		  }
+		  uVar1 = System_Convert__FromBase64String(uVar1,0);
+		  *(undefined4 *)(param1 + 0x10) = uVar1;
+		  return;
+		}
+		*/
+
 }

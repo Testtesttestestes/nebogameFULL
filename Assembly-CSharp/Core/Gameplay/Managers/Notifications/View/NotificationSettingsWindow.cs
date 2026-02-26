@@ -44,6 +44,34 @@ namespace Core.Gameplay.Managers.Notifications.View
 		[Address(RVA = "0xB670", Offset = "0xB670", VA = "0xB670", Slot = "22")]
 		protected override void OnShow(NotificationSettingsWindow.NotificationSettingsWindowArgs args)
 		{
+		/* --- GHIDRA: OnShow ---
+		void Core_Gameplay_Managers_Notifications_View_NotificationSettingsWindow__OnShow
+		               (int param1,undefined4 param2)
+		
+		{
+		  int *piVar1;
+		  
+		  if (DAT_ram_00a5a679 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Windows_ClosableBaseWindow_NotificationSettingsWindow_NotificationSettingsWindowArgs__OnClose__
+		              );
+		    DAT_ram_00a5a679 = '\x01';
+		  }
+		  UI_Windows_ClosableBaseWindow_object___OnClickBack
+		            (param1,
+		             Method_UI_Windows_ClosableBaseWindow_NotificationSettingsWindow_NotificationSettingsWindowArgs__OnClose__
+		            );
+		  piVar1 = *(int **)(param1 + 0x40);
+		  if (piVar1 != (int *)0x0) {
+		    (**(code **)((ulonglong)*(uint *)(*piVar1 + 0x130) * 4))
+		              (piVar1,*(undefined4 *)(*piVar1 + 0x134));
+		  }
+		  *(undefined4 *)(param1 + 0x40) = 0;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06006B73 RID: 27507 RVA: 0x00002050 File Offset: 0x00000250
@@ -51,6 +79,26 @@ namespace Core.Gameplay.Managers.Notifications.View
 		[Address(RVA = "0xB671", Offset = "0xB671", VA = "0xB671", Slot = "19")]
 		protected override void OnClose()
 		{
+		/* --- GHIDRA: OnClose ---
+		void Core_Gameplay_Managers_Notifications_View_NotificationSettingsWindow__OnClose
+		               (undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a5a67a == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Windows_ClosableBaseWindow_NotificationSettingsWindow_NotificationSettingsWindowArgs___ctor__
+		              );
+		    DAT_ram_00a5a67a = '\x01';
+		  }
+		  UI_MonoBehaviourWithStates_ClientStateChangedDelegate___Il2CppFullySharedGenericStructType___Invoke
+		            (param1,
+		             Method_UI_Windows_ClosableBaseWindow_NotificationSettingsWindow_NotificationSettingsWindowArgs___ctor__
+		            );
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06006B74 RID: 27508 RVA: 0x00002050 File Offset: 0x00000250
@@ -129,4 +177,71 @@ namespace Core.Gameplay.Managers.Notifications.View
 			}
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_SettingsView ---
+		undefined4
+		Core_Gameplay_Managers_Notifications_View_NotificationSettingsWindow__get_SettingsView
+		          (undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a5a677 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_12656);
+		    DAT_ram_00a5a677 = '\x01';
+		  }
+		  return StringLiteral_12656;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_WindowId ---
+		void Core_Gameplay_Managers_Notifications_View_NotificationSettingsWindow__get_WindowId
+		               (int param1,int param2,undefined4 param3)
+		
+		{
+		  int *param1_00;
+		  undefined4 param4;
+		  undefined4 param3_00;
+		  undefined4 param2_00;
+		  
+		  if (DAT_ram_00a5a678 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Windows_ClosableBaseWindow_NotificationSettingsWindow_NotificationSettingsWindowArgs__OnShow__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Core_Gameplay_Managers_Notifications_Controller_GameNotificationSettingsWindowMediator_TypeInfo
+		              );
+		    DAT_ram_00a5a678 = '\x01';
+		  }
+		  func_ii_7769(param1,param2,
+		               Method_UI_Windows_ClosableBaseWindow_NotificationSettingsWindow_NotificationSettingsWindowArgs__OnShow__
+		              );
+		  param4 = *(undefined4 *)(param2 + 0x18);
+		  param3_00 = *(undefined4 *)(param2 + 0x1c);
+		  param2_00 = *(undefined4 *)(param2 + 0x20);
+		  param1_00 = (int *)unnamed_function_1417
+		                               (
+		                               Core_Gameplay_Managers_Notifications_Controller_GameNotificationSettingsWindowMediator_TypeInfo
+		                               );
+		  if (DAT_ram_00a5a685 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_MVC_AbstractViewMediator_GameNotificationsModel__GameNotificationsEvents__GameNotificationsController__NotificationSettingsView___ctor__
+		              );
+		    DAT_ram_00a5a685 = '\x01';
+		  }
+		  Gameplay_Combat_TeamCombat_View_AbstractTeamCombatView_object___get_HideInstantElements
+		            (param1_00,param2_00,param3_00,param4,
+		             Method_MVC_AbstractViewMediator_GameNotificationsModel__GameNotificationsEvents__GameNotificationsController__NotificationSettingsView___ctor__
+		            );
+		  *(int **)(param1 + 0x40) = param1_00;
+		  (**(code **)((ulonglong)*(uint *)(*param1_00 + 0x160) * 4))
+		            (param1_00,*(undefined4 *)(param1 + 0x3c),*(undefined4 *)(*param1_00 + 0x164));
+		  return;
+		}
+		*/
+
 }

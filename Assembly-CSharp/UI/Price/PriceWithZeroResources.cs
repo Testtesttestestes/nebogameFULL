@@ -14,6 +14,22 @@ namespace UI.Price
 		[Address(RVA = "0x5F15", Offset = "0x5F15", VA = "0x5F15", Slot = "6")]
 		protected override List<Money> GetGameResources()
 		{
+		/* --- GHIDRA: GetGameResources ---
+		void UI_Price_PriceWithZeroResources__GetGameResources(undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a638ed == '\0') {
+		    Mono_Security_ASN1__get_Item(&UI_Price_Price_TypeInfo);
+		    DAT_ram_00a638ed = '\x01';
+		  }
+		  if (*(int *)(UI_Price_Price_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(UI_Price_Price_TypeInfo);
+		  }
+		  UI_Price_Price__HidePrices(param1,0);
+		  return;
+		}
+		*/
+
 			return null;
 		}
 
@@ -22,6 +38,22 @@ namespace UI.Price
 		[Address(RVA = "0x5F16", Offset = "0x5F16", VA = "0x5F16")]
 		public PriceWithZeroResources()
 		{
+		/* --- GHIDRA: .ctor ---
+		void UI_Price_PriceWithZeroResources___ctor(undefined4 param1)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a638ee == '\0') {
+		    Mono_Security_ASN1__get_Item(&UI_Price_PriceWithZeroResources___c_TypeInfo);
+		    DAT_ram_00a638ee = '\x01';
+		  }
+		  uVar1 = unnamed_function_1417(UI_Price_PriceWithZeroResources___c_TypeInfo);
+		  **(undefined4 **)(UI_Price_PriceWithZeroResources___c_TypeInfo + 0x5c) = uVar1;
+		  return;
+		}
+		*/
+
 		}
 	}
 }

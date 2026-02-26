@@ -25,6 +25,15 @@ namespace Animations
 		[Address(RVA = "0xBE3E", Offset = "0xBE3E", VA = "0xBE3E")]
 		public SlotsWheelAnimationOnyx()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Animations_SlotsWheelAnimationOnyx___ctor(undefined4 param1,undefined4 param2)
+		
+		{
+		  Core_Animations_GameSpineAnimation__SetAlpha(param1,0);
+		  return;
+		}
+		*/
+
 		}
 	}
 }

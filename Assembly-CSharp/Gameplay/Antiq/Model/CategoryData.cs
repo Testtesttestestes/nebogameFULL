@@ -39,6 +39,36 @@ namespace Gameplay.Antiq.Model
 		[Address(RVA = "0xA294", Offset = "0xA294", VA = "0xA294")]
 		public CategoryData(Antiq.Types.ArtifactGroupsDic.Types.CategoryDic categoryDic, string title)
 		{
+		/* --- GHIDRA: .ctor ---
+		int Gameplay_Antiq_Model_CategoryData___ctor(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  
+		  iVar1 = *(int *)(param1 + 0xc);
+		  if (iVar1 == 0) {
+		    iVar1 = Core_Extensions_Dict_Antiq_ArtifactGroupsDicExt__GetDescription
+		                      (*(undefined4 *)(param1 + 8),0);
+		  }
+		  return iVar1;
+		}
+		*/
+
+		/* --- GHIDRA: .ctor ---
+		int Gameplay_Antiq_Model_CategoryData___ctor(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  
+		  iVar1 = *(int *)(param1 + 0xc);
+		  if (iVar1 == 0) {
+		    iVar1 = Core_Extensions_Dict_Antiq_ArtifactGroupsDicExt__GetDescription
+		                      (*(undefined4 *)(param1 + 8),0);
+		  }
+		  return iVar1;
+		}
+		*/
+
 		}
 
 		// Token: 0x060054EF RID: 21743 RVA: 0x00002050 File Offset: 0x00000250

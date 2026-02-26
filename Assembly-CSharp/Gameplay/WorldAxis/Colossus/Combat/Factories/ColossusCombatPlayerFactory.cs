@@ -16,6 +16,25 @@ namespace Gameplay.WorldAxis.Colossus.Combat.Factories
 		[Address(RVA = "0x650B", Offset = "0x650B", VA = "0x650B", Slot = "5")]
 		public void Dispose()
 		{
+		/* --- GHIDRA: Dispose ---
+		undefined4
+		Gameplay_WorldAxis_Colossus_Combat_Factories_ColossusCombatPlayerFactory__Dispose
+		          (undefined4 param1,undefined4 param2,undefined4 param3,undefined4 param4,undefined4 param5
+		          )
+		
+		{
+		  undefined4 param1_00;
+		  
+		  if (DAT_ram_00a58c1e == '\0') {
+		    Mono_Security_ASN1__get_Item(&Gameplay_VortexCombat_Model_VortexCombatPlayer_TypeInfo);
+		    DAT_ram_00a58c1e = '\x01';
+		  }
+		  param1_00 = unnamed_function_1417(Gameplay_VortexCombat_Model_VortexCombatPlayer_TypeInfo);
+		  Gameplay_VortexCombat_Model_VortexCombatModel__GetAwaitText(param1_00,param2,param3,param4,0);
+		  return param1_00;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600131B RID: 4891 RVA: 0x00002052 File Offset: 0x00000252

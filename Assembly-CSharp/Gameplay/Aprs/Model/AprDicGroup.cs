@@ -84,6 +84,25 @@ namespace Gameplay.Aprs.Model
 		[Address(RVA = "0xA1BA", Offset = "0xA1BA", VA = "0xA1BA")]
 		public void AddMedal(MedalDicWrapper medal, MedalCategoryDic categoryDic, MedalTypeDic typeDic)
 		{
+		/* --- GHIDRA: AddMedal ---
+		undefined4 Gameplay_Aprs_Model_AprDicGroup__AddMedal(int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a5943a == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_Dictionary_uint__MedalDicWrapper__get_Item__);
+		    DAT_ram_00a5943a = '\x01';
+		  }
+		  uVar1 = System_Collections_Generic_List_object___get_Item
+		                    (*(undefined4 *)(param1 + 0xc),param2,
+		                     Method_System_Collections_Generic_Dictionary_uint__MedalDicWrapper__get_Item__)
+		  ;
+		  return uVar1;
+		}
+		*/
+
 		}
 
 		// Token: 0x06005403 RID: 21507 RVA: 0x00002052 File Offset: 0x00000252
@@ -99,6 +118,42 @@ namespace Gameplay.Aprs.Model
 		[Address(RVA = "0x1E3B", Offset = "0x1E3B", VA = "0x1E3B")]
 		public AprDicGroup()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_Aprs_Model_AprDicGroup___ctor
+		               (int param1,undefined4 param2,undefined4 param3,int param4)
+		
+		{
+		  uint uVar1;
+		  undefined4 uVar2;
+		  undefined4 uVar3;
+		  undefined4 param3_00;
+		  undefined4 local_4;
+		  
+		  uVar1 = System_Collections_Generic_SortedList_int__object___Insert
+		                    (*(undefined4 *)(param1 + 8),0,*(undefined4 *)(param1 + 0x10),param2,
+		                     *(undefined4 *)(param1 + 0x18),
+		                     *(undefined4 *)(*(int *)(*(int *)(param4 + 0x10) + 0x60) + 0x2c));
+		  if ((int)uVar1 < 0) {
+		    System_Array__BinarySearch_uint_
+		              (param1,uVar1 ^ 0xffffffff,param2,param3,
+		               *(undefined4 *)(*(int *)(*(int *)(param4 + 0x10) + 0x60) + 0x34));
+		    return;
+		  }
+		  local_4 = param2;
+		  uVar2 = func_ii_1081(*(undefined4 *)(*(int *)(*(int *)(param4 + 0x10) + 0x60) + 0x28),&local_4);
+		  uVar3 = unnamed_function_2232(&StringLiteral_3097);
+		  uVar2 = func_ii_11463(uVar3,uVar2,0);
+		  uVar3 = unnamed_function_2232(&System_ArgumentException_TypeInfo);
+		  uVar3 = unnamed_function_1417(uVar3);
+		  param3_00 = unnamed_function_2232(&StringLiteral_24954);
+		  System_IO_EndOfStreamException___ctor(uVar3,uVar2,param3_00,0);
+		  func_ii_1050(uVar3,param4);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
 		}
 
 		// Token: 0x04002D7E RID: 11646
@@ -116,4 +171,37 @@ namespace Gameplay.Aprs.Model
 		[FieldOffset(Offset = "0x10")]
 		private MedalCategoryDic _medalCategoryDic;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: set_IsVisible ---
+		void Gameplay_Aprs_Model_AprDicGroup__set_IsVisible
+		               (int param1,int param2,int param3,undefined4 param4,undefined4 param5)
+		
+		{
+		  undefined1 uVar1;
+		  
+		  if (DAT_ram_00a59439 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Core_Dict_DictWrappers_Base_AbstractDictWrapper_MedalDic__uint__get_Data__);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_Dictionary_uint__MedalDicWrapper__Add__);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_SortedList_uint__MedalDicWrapper__Add__);
+		    DAT_ram_00a59439 = '\x01';
+		  }
+		  Gameplay_Aprs_Model_AprDicGroup___ctor
+		            (*(undefined4 *)(param1 + 8),*(undefined4 *)(*(int *)(param2 + 0x10) + 0x38),param2,
+		             Method_System_Collections_Generic_SortedList_uint__MedalDicWrapper__Add__);
+		  System_Collections_Generic_List_LigatureSubstitutionRecord____ctor
+		            (*(undefined4 *)(param1 + 0xc),*(undefined4 *)(*(int *)(param2 + 0x10) + 0xc),param2,
+		             Method_System_Collections_Generic_Dictionary_uint__MedalDicWrapper__Add__);
+		  *(undefined4 *)(param1 + 0x14) = *(undefined4 *)(*(int *)(param2 + 0x10) + 0x34);
+		  uVar1 = *(undefined1 *)(param3 + 0x10);
+		  *(int *)(param1 + 0x10) = param3;
+		  *(undefined1 *)(param1 + 0x18) = uVar1;
+		  return;
+		}
+		*/
+
 }

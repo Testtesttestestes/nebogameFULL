@@ -90,6 +90,29 @@ namespace Gameplay.Accounts.View
 		[Address(RVA = "0xA3CB", Offset = "0xA3CB", VA = "0xA3CB")]
 		private void OnDestroy()
 		{
+		/* --- GHIDRA: OnDestroy ---
+		void Gameplay_Accounts_View_OptionBuyButtonItem__OnDestroy(int param1,undefined4 param2)
+		
+		{
+		  undefined4 param1_00;
+		  undefined4 param1_01;
+		  
+		  if (DAT_ram_00a5889b == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Gameplay_Accounts_View_OptionBuyButtonItem_HandleBtnClickEvent__);
+		    Mono_Security_ASN1__get_Item(&UnityEngine_Events_UnityAction_TypeInfo);
+		    DAT_ram_00a5889b = '\x01';
+		  }
+		  param1_01 = *(undefined4 *)(*(int *)(param1 + 0x14) + 0xb4);
+		  param1_00 = unnamed_function_1417(UnityEngine_Events_UnityAction_TypeInfo);
+		  Utils_ObjectUtils__IsNotNull
+		            (param1_00,param1,
+		             Method_Gameplay_Accounts_View_OptionBuyButtonItem_HandleBtnClickEvent__,0);
+		  Gameplay_Boss_View_CaptainTab_BossInfoView__add_AttackButtonClickEvent(param1_01,param1_00,0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600562E RID: 22062 RVA: 0x00002050 File Offset: 0x00000250
@@ -111,6 +134,18 @@ namespace Gameplay.Accounts.View
 		[Address(RVA = "0xA3CE", Offset = "0xA3CE", VA = "0xA3CE")]
 		public OptionBuyButtonItem()
 		{
+		/* --- GHIDRA: .ctor ---
+		undefined4 Gameplay_Accounts_View_OptionBuyButtonItem___ctor(undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a5889c == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_12555);
+		    DAT_ram_00a5889c = '\x01';
+		  }
+		  return StringLiteral_12555;
+		}
+		*/
+
 		}
 
 		// Token: 0x04002EBC RID: 11964
@@ -148,4 +183,68 @@ namespace Gameplay.Accounts.View
 		[FieldOffset(Offset = "0x28")]
 		public AccountOptionData OptionData;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: add_ClickEvent ---
+		void Gameplay_Accounts_View_OptionBuyButtonItem__add_ClickEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a58899 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_OptionBuyButtonItem__TypeInfo);
+		    DAT_ram_00a58899 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x24);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = func_ii_7048(param1_00,param2,0);
+		    param2_00 = System_Action_OptionBuyButtonItem__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_OptionBuyButtonItem__TypeInfo), iVar2 == 0))
+		    break;
+		    iVar2 = func_ii_4329(param1 + 0x24,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: get_VipPointsView ---
+		void Gameplay_Accounts_View_OptionBuyButtonItem__get_VipPointsView(int param1,undefined4 param2)
+		
+		{
+		  undefined4 param1_00;
+		  undefined4 param1_01;
+		  
+		  if (DAT_ram_00a5889a == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Gameplay_Accounts_View_OptionBuyButtonItem_HandleBtnClickEvent__);
+		    Mono_Security_ASN1__get_Item(&UnityEngine_Events_UnityAction_TypeInfo);
+		    DAT_ram_00a5889a = '\x01';
+		  }
+		  param1_01 = *(undefined4 *)(*(int *)(param1 + 0x14) + 0xb4);
+		  param1_00 = unnamed_function_1417(UnityEngine_Events_UnityAction_TypeInfo);
+		  Utils_ObjectUtils__IsNotNull
+		            (param1_00,param1,
+		             Method_Gameplay_Accounts_View_OptionBuyButtonItem_HandleBtnClickEvent__,0);
+		  UnityEngine_Events_UnityAction___ctor(param1_01,param1_00,0);
+		  return;
+		}
+		*/
+
 }

@@ -163,6 +163,90 @@ namespace Gameplay.Gifts.Model
 		[Address(RVA = "0x7BCD", Offset = "0x7BCD", VA = "0x7BCD", Slot = "5")]
 		public override void Dispose()
 		{
+		/* --- GHIDRA: Dispose ---
+		void Gameplay_Gifts_Model_GiftsModel__Dispose
+		               (int param1,undefined4 param2,int *param3,undefined4 param4,undefined4 param5)
+		
+		{
+		  uint uVar1;
+		  uint *puVar2;
+		  undefined4 uVar3;
+		  undefined4 *puVar4;
+		  undefined4 uVar5;
+		  int iVar6;
+		  
+		  if (DAT_ram_00a5a226 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_System_Linq_Enumerable_OrderBy_SocialGiftDic__uint___);
+		    Mono_Security_ASN1__get_Item(&Method_System_Linq_Enumerable_ToArray_SocialGiftDic___);
+		    Mono_Security_ASN1__get_Item(&Method_System_Linq_Enumerable_Where_SocialGiftDic___);
+		    Mono_Security_ASN1__get_Item(&System_Func_SocialGiftDic__bool__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&System_Func_SocialGiftDic__uint__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Core_Dict_IDictProvider_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Method_Gameplay_Gifts_Model_GiftsModel___c___ctor_b__27_0__);
+		    Mono_Security_ASN1__get_Item(&Method_Gameplay_Gifts_Model_GiftsModel___c___ctor_b__27_1__);
+		    Mono_Security_ASN1__get_Item(&Gameplay_Gifts_Model_GiftsModel___c_TypeInfo);
+		    DAT_ram_00a5a226 = '\x01';
+		  }
+		  Unity_Services_Core_Environments_Internal_Environments__get_Current(param1,param4,0);
+		  *(int **)(param1 + 0x18) = param3;
+		  *(undefined4 *)(param1 + 0x1c) = param2;
+		  iVar6 = *param3;
+		  if (*(ushort *)(iVar6 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (Core_Dict_IDictProvider_TypeInfo == *(int *)(*(int *)(iVar6 + 0x58) + uVar1 * 8)) {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar6 + 0x58) + uVar1 * 8 + 4) * 8 + iVar6 + 0xd0);
+		        goto code_r0x811e9414;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar6 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(param3,Core_Dict_IDictProvider_TypeInfo,2);
+		code_r0x811e9414:
+		  iVar6 = (**(code **)((ulonglong)*puVar2 * 4))(param3,puVar2[1]);
+		  uVar3 = *(undefined4 *)(iVar6 + 0xbc);
+		  if (*(int *)(Gameplay_Gifts_Model_GiftsModel___c_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Gameplay_Gifts_Model_GiftsModel___c_TypeInfo);
+		  }
+		  puVar4 = *(undefined4 **)(Gameplay_Gifts_Model_GiftsModel___c_TypeInfo + 0x5c);
+		  iVar6 = puVar4[1];
+		  if (iVar6 == 0) {
+		    if (*(int *)(Gameplay_Gifts_Model_GiftsModel___c_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(Gameplay_Gifts_Model_GiftsModel___c_TypeInfo);
+		      puVar4 = *(undefined4 **)(Gameplay_Gifts_Model_GiftsModel___c_TypeInfo + 0x5c);
+		    }
+		    uVar5 = *puVar4;
+		    iVar6 = unnamed_function_1417(System_Func_SocialGiftDic__bool__TypeInfo);
+		    System_Collections_Generic_Dictionary_uint__object___GetEnumerator
+		              (iVar6,uVar5,Method_Gameplay_Gifts_Model_GiftsModel___c___ctor_b__27_0__,0);
+		    *(int *)(*(int *)(Gameplay_Gifts_Model_GiftsModel___c_TypeInfo + 0x5c) + 4) = iVar6;
+		  }
+		  uVar3 = System_Linq_Enumerable__Where_PlayerLoopSystem_
+		                    (uVar3,iVar6,Method_System_Linq_Enumerable_Where_SocialGiftDic___);
+		  if (*(int *)(Gameplay_Gifts_Model_GiftsModel___c_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Gameplay_Gifts_Model_GiftsModel___c_TypeInfo);
+		  }
+		  puVar4 = *(undefined4 **)(Gameplay_Gifts_Model_GiftsModel___c_TypeInfo + 0x5c);
+		  iVar6 = puVar4[2];
+		  if (iVar6 == 0) {
+		    if (*(int *)(Gameplay_Gifts_Model_GiftsModel___c_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(Gameplay_Gifts_Model_GiftsModel___c_TypeInfo);
+		      puVar4 = *(undefined4 **)(Gameplay_Gifts_Model_GiftsModel___c_TypeInfo + 0x5c);
+		    }
+		    uVar5 = *puVar4;
+		    iVar6 = unnamed_function_1417(System_Func_SocialGiftDic__uint__TypeInfo);
+		    System_Collections_Generic_Dictionary_KeyCollection_uint__object___GetEnumerator
+		              (iVar6,uVar5,Method_Gameplay_Gifts_Model_GiftsModel___c___ctor_b__27_1__,0);
+		    *(int *)(*(int *)(Gameplay_Gifts_Model_GiftsModel___c_TypeInfo + 0x5c) + 8) = iVar6;
+		  }
+		  uVar3 = System_Linq_Enumerable__Min___Il2CppFullySharedGenericType____Il2CppFullySharedGenericType_
+		                    (uVar3,iVar6,Method_System_Linq_Enumerable_OrderBy_SocialGiftDic__uint___);
+		  uVar3 = func_ii_6295(uVar3,Method_System_Linq_Enumerable_ToArray_SocialGiftDic___);
+		  *(undefined4 *)(param1 + 0x10) = uVar3;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06002B33 RID: 11059 RVA: 0x00002050 File Offset: 0x00000250
@@ -177,6 +261,143 @@ namespace Gameplay.Gifts.Model
 		[Address(RVA = "0x7BCF", Offset = "0x7BCF", VA = "0x7BCF")]
 		public void SetUsersGifted(IList<ulong> usersList)
 		{
+		/* --- GHIDRA: SetUsersGifted ---
+		void Gameplay_Gifts_Model_GiftsModel__SetUsersGifted(undefined4 param1)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a5a227 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Gameplay_Gifts_Model_GiftsModel___c_TypeInfo);
+		    DAT_ram_00a5a227 = '\x01';
+		  }
+		  uVar1 = unnamed_function_1417(Gameplay_Gifts_Model_GiftsModel___c_TypeInfo);
+		  **(undefined4 **)(Gameplay_Gifts_Model_GiftsModel___c_TypeInfo + 0x5c) = uVar1;
+		  return;
+		}
+		*/
+
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: set_UsersGifted ---
+		undefined4 Gameplay_Gifts_Model_GiftsModel__set_UsersGifted(int param1,undefined4 param2)
+		
+		{
+		  uint uVar1;
+		  uint *puVar2;
+		  undefined4 uVar3;
+		  int *param1_00;
+		  int iVar4;
+		  
+		  if (DAT_ram_00a5a224 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Collections_Generic_ICollection_ulong__TypeInfo);
+		    DAT_ram_00a5a224 = '\x01';
+		  }
+		  param1_00 = *(int **)(param1 + 0x14);
+		  iVar4 = *param1_00;
+		  if (*(ushort *)(iVar4 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (System_Collections_Generic_ICollection_ulong__TypeInfo ==
+		          *(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8)) {
+		        puVar2 = (uint *)(iVar4 + *(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8 + 4) * 8 + 0xc0);
+		        goto code_r0x811e96bb;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar4 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(param1_00,System_Collections_Generic_ICollection_ulong__TypeInfo,0);
+		code_r0x811e96bb:
+		  uVar3 = (**(code **)((ulonglong)*puVar2 * 4))(param1_00,puVar2[1]);
+		  return uVar3;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_GiftsSent ---
+		undefined4 Gameplay_Gifts_Model_GiftsModel__get_GiftsSent(int param1,undefined4 param2)
+		
+		{
+		  uint uVar1;
+		  uint *puVar2;
+		  undefined4 uVar3;
+		  int *param1_00;
+		  int iVar4;
+		  
+		  if (DAT_ram_00a5a225 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_Dict_IDictProvider_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_25317);
+		    DAT_ram_00a5a225 = '\x01';
+		  }
+		  param1_00 = *(int **)(param1 + 0x18);
+		  iVar4 = *param1_00;
+		  if (*(ushort *)(iVar4 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (Core_Dict_IDictProvider_TypeInfo == *(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8)) {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8 + 4) * 8 + iVar4 + 0xd0);
+		        goto code_r0x811e976a;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar4 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(param1_00,Core_Dict_IDictProvider_TypeInfo,2);
+		code_r0x811e976a:
+		  uVar3 = (**(code **)((ulonglong)*puVar2 * 4))(param1_00,puVar2[1]);
+		  uVar3 = Core_Extensions_Dict_DictExt__GetUserBuildingLevelDic(uVar3,StringLiteral_25317,0);
+		  return uVar3;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_MaxSendGifts ---
+		int Gameplay_Gifts_Model_GiftsModel__get_MaxSendGifts(int param1,undefined4 param2)
+		
+		{
+		  uint uVar1;
+		  int iVar2;
+		  uint *puVar3;
+		  int *param1_00;
+		  int iVar4;
+		  
+		  iVar2 = Gameplay_Gifts_Model_GiftsModel__get_GiftsSent(param1,param1);
+		  if (DAT_ram_00a5a224 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Collections_Generic_ICollection_ulong__TypeInfo);
+		    DAT_ram_00a5a224 = '\x01';
+		  }
+		  param1_00 = *(int **)(param1 + 0x14);
+		  iVar4 = *param1_00;
+		  if (*(ushort *)(iVar4 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (System_Collections_Generic_ICollection_ulong__TypeInfo ==
+		          *(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8)) {
+		        puVar3 = (uint *)(iVar4 + *(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8 + 4) * 8 + 0xc0);
+		        goto code_r0x811e9829;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar4 + 0xb6) != uVar1);
+		  }
+		  puVar3 = (uint *)func_ii_1080(param1_00,System_Collections_Generic_ICollection_ulong__TypeInfo,0);
+		code_r0x811e9829:
+		  iVar4 = (**(code **)((ulonglong)*puVar3 * 4))(param1_00,puVar3[1]);
+		  return iVar2 - iVar4;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_Game ---
+		void Gameplay_Gifts_Model_GiftsModel__set_Game(int param1,undefined4 param2)
+		
+		{
+		  Core_ExternalIncomingScriptCall_CallbackItem___Il2CppFullySharedGenericType____ctor(param1,0);
+		  *(undefined4 *)(param1 + 0x1c) = 0;
+		  *(undefined8 *)(param1 + 0x10) = 0;
+		  return;
+		}
+		*/
+
 }

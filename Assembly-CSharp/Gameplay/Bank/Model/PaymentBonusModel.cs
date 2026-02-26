@@ -96,6 +96,61 @@ namespace Gameplay.Bank.Model
 		[Address(RVA = "0x9B8A", Offset = "0x9B8A", VA = "0x9B8A")]
 		public PaymentBonusModel(UserData user)
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_Bank_Model_PaymentBonusModel___ctor(int param1,int param2,undefined4 param3)
+		
+		{
+		  float param2_00;
+		  undefined4 param1_00;
+		  uint *puVar1;
+		  undefined4 uVar2;
+		  int *param1_01;
+		  int iVar3;
+		  ulonglong param1_02;
+		  uint uVar4;
+		  
+		  if (DAT_ram_00a597d5 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Utils_BackTime_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Core_Gameplay_IGame_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Utils_TimeUtils_TypeInfo);
+		    DAT_ram_00a597d5 = '\x01';
+		  }
+		  param1_02 = (ulonglong)*(uint *)(param2 + 0x10);
+		  if (*(int *)(Utils_TimeUtils_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Utils_TimeUtils_TypeInfo);
+		  }
+		  param2_00 = func_ii_7331(param1_02,0);
+		  uVar2 = (undefined4)(param1_02 >> 0x20);
+		  param1_00 = unnamed_function_1417(Utils_BackTime_TypeInfo);
+		  Core_Extensions_Dict_DictExt__BinarySearch_object__uint_(param1_00,param2_00,0);
+		  *(undefined4 *)(param1 + 0xc) = param1_00;
+		  if (DAT_ram_00a6456f == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_Gameplay_Game_TypeInfo);
+		    DAT_ram_00a6456f = '\x01';
+		  }
+		  param1_01 = (int *)**(undefined4 **)(Core_Gameplay_Game_TypeInfo + 0x5c);
+		  iVar3 = *param1_01;
+		  if (*(ushort *)(iVar3 + 0xb6) != 0) {
+		    uVar4 = 0;
+		    do {
+		      if (Core_Gameplay_IGame_TypeInfo == *(int *)(*(int *)(iVar3 + 0x58) + uVar4 * 8)) {
+		        puVar1 = (uint *)(*(int *)(*(int *)(iVar3 + 0x58) + uVar4 * 8 + 4) * 8 + iVar3 + 0x178);
+		        goto code_r0x8106fedf;
+		      }
+		      uVar4 = uVar4 + 1;
+		    } while (*(ushort *)(iVar3 + 0xb6) != uVar4);
+		  }
+		  puVar1 = (uint *)func_ii_1080(param1_01,Core_Gameplay_IGame_TypeInfo,0x17);
+		code_r0x8106fedf:
+		  uVar2 = (**(code **)((ulonglong)*puVar1 * 4))(CONCAT44(uVar2,param1_01),puVar1[1]);
+		  uVar2 = Newtonsoft_Json_Converters_XmlDocumentTypeWrapper__get_System(uVar2,0);
+		  uVar2 = Core_Extensions_Dict_DictExt__GetCurrenciesDic(uVar2,*(undefined4 *)(param2 + 0xc),0);
+		  *(undefined4 *)(param1 + 0x10) = uVar2;
+		  *(undefined4 *)(param1 + 0x14) = *(undefined4 *)(param2 + 0x14);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06004D52 RID: 19794 RVA: 0x00002050 File Offset: 0x00000250
@@ -105,4 +160,21 @@ namespace Gameplay.Bank.Model
 		{
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: set_CurrentRewards ---
+		uint Gameplay_Bank_Model_PaymentBonusModel__set_CurrentRewards(int param1,undefined4 param2)
+		
+		{
+		  float fVar1;
+		  
+		  if (*(int *)(param1 + 0x10) != 0) {
+		    fVar1 = func_ii_7103(*(undefined4 *)(param1 + 0xc),0);
+		    return (uint)(0.0 < fVar1);
+		  }
+		  return 0;
+		}
+		*/
+
 }

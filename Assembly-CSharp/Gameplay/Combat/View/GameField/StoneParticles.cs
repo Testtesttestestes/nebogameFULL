@@ -37,6 +37,138 @@ namespace Gameplay.Combat.View.GameField
 		[Address(RVA = "0x8903", Offset = "0x8903", VA = "0x8903")]
 		private void OnDestroy()
 		{
+		/* --- GHIDRA: OnDestroy ---
+		void Gameplay_Combat_View_GameField_StoneParticles__OnDestroy
+		               (int *param1,undefined4 param2,int param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  undefined4 uVar2;
+		  float param1_00;
+		  undefined8 local_160;
+		  undefined8 local_158;
+		  undefined8 local_150;
+		  undefined8 local_148;
+		  undefined8 local_140;
+		  undefined4 local_138;
+		  undefined8 local_130;
+		  undefined8 local_128;
+		  undefined8 local_120;
+		  undefined8 local_118;
+		  undefined8 local_110;
+		  undefined8 local_108;
+		  undefined8 local_100;
+		  undefined4 local_f8;
+		  undefined8 local_f0;
+		  undefined8 local_e8;
+		  undefined8 local_e0;
+		  undefined8 local_d8;
+		  undefined8 local_d0;
+		  undefined8 local_c8;
+		  undefined8 local_c0;
+		  undefined4 local_b8;
+		  undefined8 local_b0;
+		  undefined8 local_a8;
+		  undefined8 local_a0;
+		  undefined8 local_98;
+		  undefined8 local_90;
+		  undefined8 local_88;
+		  undefined8 local_80;
+		  undefined4 local_78;
+		  undefined8 local_74;
+		  undefined8 local_6c;
+		  undefined8 local_64;
+		  undefined8 local_5c;
+		  undefined8 local_54;
+		  undefined4 local_4c;
+		  undefined8 local_48;
+		  undefined8 local_40;
+		  undefined8 local_38;
+		  undefined8 local_30;
+		  undefined8 local_28;
+		  undefined4 local_20;
+		  int local_1c;
+		  int local_18;
+		  int local_14;
+		  undefined8 local_10;
+		  undefined8 local_8;
+		  
+		  if (DAT_ram_00a5675f == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UnityEngine_Component_GetComponent_ParticleSystemRenderer___);
+		    Mono_Security_ASN1__get_Item(&DG_Tweening_TweenCallback_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Method_DG_Tweening_TweenSettingsExtensions_SetLink_Tween___);
+		    DAT_ram_00a5675f = '\x01';
+		  }
+		  local_8 = 0;
+		  local_10 = 0;
+		  if (DAT_ram_00a56759 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_Dictionary_StonesTypes__Color__TryGetValue__);
+		    DAT_ram_00a56759 = '\x01';
+		  }
+		  System_Collections_Generic_Dictionary_Int32Enum__Color___TryAdd
+		            (*(undefined4 *)(param3 + 0x10),param2,&local_10,
+		             Method_System_Collections_Generic_Dictionary_StonesTypes__Color__TryGetValue__);
+		  uVar1 = func_ii_5677(param1[9],Method_UnityEngine_Component_GetComponent_ParticleSystemRenderer___
+		                      );
+		  uVar2 = func_ii_5677(param1[4],Method_UnityEngine_Component_GetComponent_ParticleSystemRenderer___
+		                      );
+		  Gameplay_Combat_View_GameField_StoneMono_StoneSkinProvider__SetupShardsMaterialProps
+		            (param3,param2,uVar1,&local_160);
+		  Gameplay_Combat_View_GameField_StoneMono_StoneSkinProvider__GetColor
+		            (param3,param2,uVar2,&local_160);
+		  local_14 = param1[9];
+		  local_a8 = local_8;
+		  local_b0 = local_10;
+		  UnityEngine_ParticleSystem_MinMaxGradient___ctor(&local_48,&local_b0,0);
+		  local_b8 = local_20;
+		  local_c0 = local_28;
+		  local_c8 = local_30;
+		  local_d0 = local_38;
+		  local_d8 = local_40;
+		  local_e0 = local_48;
+		  UnityEngine_ParticleSystem_MainModule___ctor(&local_14,&local_e0,0);
+		  local_18 = param1[5];
+		  local_e8 = local_8;
+		  local_f0 = local_10;
+		  UnityEngine_ParticleSystem_MinMaxGradient___ctor(&local_74,&local_f0,0);
+		  local_f8 = local_4c;
+		  local_100 = local_54;
+		  local_108 = local_5c;
+		  local_110 = local_64;
+		  local_118 = local_6c;
+		  local_120 = local_74;
+		  UnityEngine_ParticleSystem_MainModule___ctor(&local_18,&local_120,0);
+		  local_1c = param1[7];
+		  local_128 = local_8;
+		  local_130 = local_10;
+		  UnityEngine_ParticleSystem_MinMaxGradient___ctor(&local_a0,&local_130,0);
+		  local_138 = local_78;
+		  local_140 = local_80;
+		  local_148 = local_88;
+		  local_150 = local_90;
+		  local_158 = local_98;
+		  local_160 = local_a0;
+		  UnityEngine_ParticleSystem_MainModule___ctor(&local_1c,&local_160,0);
+		  UnityEngine_ParticleSystem__Play(param1[4],0);
+		  UnityEngine_ParticleSystem__Play(param1[5],0);
+		  UnityEngine_ParticleSystem__Play(param1[6],0);
+		  UnityEngine_ParticleSystem__Play(param1[7],0);
+		  UnityEngine_ParticleSystem__Play(param1[8],0);
+		  UnityEngine_ParticleSystem__Play(param1[9],0);
+		  param1_00 = (float)param1[10];
+		  uVar1 = unnamed_function_1417(DG_Tweening_TweenCallback_TypeInfo);
+		  DG_Tweening_Color2__op_Multiply(uVar1,param1,*(undefined4 *)(*param1 + 0xf4),0);
+		  uVar1 = DG_Tweening_DOVirtual__EasedValue(param1_00,uVar1,1,0);
+		  uVar2 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_uint__object___MoveNext
+		                    (param1,0);
+		  DG_Tweening_TweenSettingsExtensions__SetDelay_object_
+		            (uVar1,uVar2,Method_DG_Tweening_TweenSettingsExtensions_SetLink_Tween___);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06003973 RID: 14707 RVA: 0x00002050 File Offset: 0x00000250
@@ -44,6 +176,22 @@ namespace Gameplay.Combat.View.GameField
 		[Address(RVA = "0x8904", Offset = "0x8904", VA = "0x8904", Slot = "7")]
 		public void SpawnParticles(StonesTypes stonesType, StoneMono.StoneSkinProvider provider)
 		{
+		/* --- GHIDRA: SpawnParticles ---
+		void Gameplay_Combat_View_GameField_StoneParticles__SpawnParticles(int param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a56760 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_Utils_Cache_ObjectPool_StoneParticles__Release__);
+		    DAT_ram_00a56760 = '\x01';
+		  }
+		  if (*(char *)(param1 + 0x30) == '\0') {
+		    func_ii_7070(*(undefined4 *)(param1 + 0x2c),param1,
+		                 Method_Utils_Cache_ObjectPool_StoneParticles__Release__);
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06003974 RID: 14708 RVA: 0x00002050 File Offset: 0x00000250
@@ -51,6 +199,16 @@ namespace Gameplay.Combat.View.GameField
 		[Address(RVA = "0x8905", Offset = "0x8905", VA = "0x8905", Slot = "6")]
 		public void Release()
 		{
+		/* --- GHIDRA: Release ---
+		void Gameplay_Combat_View_GameField_StoneParticles__Release(int param1,undefined4 param2)
+		
+		{
+		  *(undefined4 *)(param1 + 0x28) = 0x3f000000;
+		  UnityEngine_RectTransform__GetParentSize(param1,0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06003975 RID: 14709 RVA: 0x00002050 File Offset: 0x00000250
@@ -123,4 +281,17 @@ namespace Gameplay.Combat.View.GameField
 		[FieldOffset(Offset = "0x30")]
 		private bool _isDestroyed;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: set_Pool ---
+		void Gameplay_Combat_View_GameField_StoneParticles__set_Pool(int param1,undefined4 param2)
+		
+		{
+		  *(undefined4 *)(param1 + 0x2c) = 0;
+		  *(undefined1 *)(param1 + 0x30) = 1;
+		  return;
+		}
+		*/
+
 }

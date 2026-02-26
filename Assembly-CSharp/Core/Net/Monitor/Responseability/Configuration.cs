@@ -13,6 +13,21 @@ namespace Core.Net.Monitor.Responseability
 		[Address(RVA = "0xA7AA", Offset = "0xA7AA", VA = "0xA7AA")]
 		public Configuration()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Core_Net_Monitor_Responseability_Configuration___ctor
+		               (int param1,undefined8 param2,undefined4 param3,undefined4 param4,undefined4 param5,
+		               undefined4 param6)
+		
+		{
+		  *(undefined4 *)(param1 + 0x38) = 1;
+		  *(undefined4 *)(param1 + 0x10) = param5;
+		  *(undefined4 *)(param1 + 0xc) = param4;
+		  *(undefined4 *)(param1 + 8) = param3;
+		  *(undefined8 *)(param1 + 0x18) = param2;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x04003192 RID: 12690

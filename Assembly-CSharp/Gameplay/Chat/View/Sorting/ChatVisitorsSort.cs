@@ -16,6 +16,21 @@ namespace Gameplay.Chat.View.Sorting
 		[Address(RVA = "0x9260", Offset = "0x9260", VA = "0x9260", Slot = "4")]
 		protected override List<IGameDataComparer<ChatVisitorData>> GetComparers()
 		{
+		/* --- GHIDRA: GetComparers ---
+		void Gameplay_Chat_View_Sorting_ChatVisitorsSort__GetComparers(undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a57afc == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UI_Sorting_AbstractSortControlView_ChatVisitorData___ctor__);
+		    DAT_ram_00a57afc = '\x01';
+		  }
+		  UI_SkinsV2_AbstractSkinResolver___Il2CppFullySharedGenericType__object___StartRollback
+		            (param1,Method_UI_Sorting_AbstractSortControlView_ChatVisitorData___ctor__);
+		  return;
+		}
+		*/
+
 			return null;
 		}
 

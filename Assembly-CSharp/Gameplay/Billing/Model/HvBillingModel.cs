@@ -57,6 +57,37 @@ namespace Gameplay.Billing.Model
 		[Address(RVA = "0x9935", Offset = "0x9935", VA = "0x9935", Slot = "9")]
 		public override bool IsOptionValid(string id)
 		{
+		/* --- GHIDRA: IsOptionValid ---
+		undefined4
+		Gameplay_Billing_Model_HvBillingModel__IsOptionValid(int param1,int param2,undefined4 param3)
+		
+		{
+		  float8 param2_00;
+		  undefined4 uVar1;
+		  undefined4 uVar2;
+		  float8 local_8;
+		  
+		  if (DAT_ram_00a60913 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Gameplay_Bank_Model_BankOptionData_ExtPriceData_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_118);
+		    DAT_ram_00a60913 = '\x01';
+		  }
+		  local_8 = (float8)Core_Extensions_Dict_AssistantDictExt__GetDescriptionActive
+		                              (*(undefined4 *)(param2 + 0x38),
+		                               *(undefined4 *)(*(int *)(param1 + 0xc) + 0xc),0);
+		  uVar1 = func_ii_7515(&local_8,0);
+		  uVar2 = Core_Extensions_Dict_CultRatingKindDicExt__GetDescription(*(undefined4 *)(param1 + 0xc),0)
+		  ;
+		  uVar2 = Core_Extensions_StringExt__Replacer(uVar2,(double)local_8,0);
+		  uVar1 = UnityEngine_AndroidJavaObject__FromJavaArray_Nullable_int__
+		                    (uVar1,StringLiteral_118,uVar2,0);
+		  param2_00 = local_8;
+		  uVar2 = unnamed_function_1417(Gameplay_Bank_Model_BankOptionData_ExtPriceData_TypeInfo);
+		  Gameplay_Bank_Model_BankOptionData__Create(uVar2,(double)param2_00,(double)param2_00,uVar1,0);
+		  return uVar2;
+		}
+		*/
+
 			return default(bool);
 		}
 
@@ -68,4 +99,34 @@ namespace Gameplay.Billing.Model
 			return null;
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_IsBalanceSupported ---
+		void Gameplay_Billing_Model_HvBillingModel__get_IsBalanceSupported
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4,undefined4 param5,
+		               undefined4 param6,undefined4 param7)
+		
+		{
+		  undefined4 param1_00;
+		  
+		  if (DAT_ram_00a60907 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_System_Collections_Generic_Queue_List_string____ctor__);
+		    Mono_Security_ASN1__get_Item(&System_Collections_Generic_Queue_List_string___TypeInfo);
+		    DAT_ram_00a60907 = '\x01';
+		  }
+		  param1_00 = unnamed_function_1417(System_Collections_Generic_Queue_List_string___TypeInfo);
+		  Sirenix_Serialization_StackFormatter_object____Il2CppFullySharedGenericType___SerializeImplementation
+		            (param1_00,Method_System_Collections_Generic_Queue_List_string____ctor__);
+		  *(undefined4 *)(param1 + 0x2c) = param1_00;
+		  Unity_Services_Core_Environments_Internal_Environments__get_Current(param1,param6,0);
+		  *(undefined4 *)(param1 + 0x30) = param4;
+		  *(undefined4 *)(param1 + 0x28) = param3;
+		  *(undefined4 *)(param1 + 0x34) = param2;
+		  *(undefined4 *)(param1 + 0x10) = param5;
+		  Gameplay_Billing_Model_AbstractBillingModel___ctor(param1,param1);
+		  return;
+		}
+		*/
+
 }

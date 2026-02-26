@@ -26,6 +26,68 @@ namespace UI.Windows
 		[Address(RVA = "0x6172", Offset = "0x6172", VA = "0x6172")]
 		public NotFoundWindowScript(string windowId, GameObject windowGameObject)
 		{
+		/* --- GHIDRA: .ctor ---
+		undefined4 UI_Windows_NotFoundWindowScript___ctor(int param1,undefined4 param2)
+		
+		{
+		  int *param2_00;
+		  int iVar1;
+		  undefined4 uVar2;
+		  int iVar3;
+		  
+		  if (DAT_ram_00a639f4 == '\0') {
+		    Mono_Security_ASN1__get_Item(&object___TypeInfo);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_8133);
+		    DAT_ram_00a639f4 = '\x01';
+		  }
+		  param2_00 = (int *)Mono_Security_ASN1Convert__ToOid(object___TypeInfo,4);
+		  iVar3 = *(int *)(param1 + 0x48);
+		  if ((iVar3 != 0) && (iVar1 = func_ii_1082(iVar3,*(undefined4 *)(*param2_00 + 0x20)), iVar1 == 0))
+		  {
+		    uVar2 = func_ii_1083();
+		    func_ii_1050(uVar2,0);
+		    do {
+		      halt_trap();
+		    } while( true );
+		  }
+		  param2_00[4] = iVar3;
+		  iVar3 = GAFInternal_Assets_GAFAnimationAssetInternal__collectExternalData
+		                    (*(undefined4 *)(param1 + 0x4c),0);
+		  if ((iVar3 != 0) && (iVar1 = func_ii_1082(iVar3,*(undefined4 *)(*param2_00 + 0x20)), iVar1 == 0))
+		  {
+		    uVar2 = func_ii_1083();
+		    func_ii_1050(uVar2,0);
+		    do {
+		      halt_trap();
+		    } while( true );
+		  }
+		  param2_00[5] = iVar3;
+		  iVar3 = *(int *)(param1 + 0x50);
+		  if ((iVar3 != 0) && (iVar1 = func_ii_1082(iVar3,*(undefined4 *)(*param2_00 + 0x20)), iVar1 == 0))
+		  {
+		    uVar2 = func_ii_1083();
+		    func_ii_1050(uVar2,0);
+		    do {
+		      halt_trap();
+		    } while( true );
+		  }
+		  param2_00[6] = iVar3;
+		  iVar3 = *(int *)(param1 + 0x54);
+		  if ((iVar3 != 0) && (iVar1 = func_ii_1082(iVar3,*(undefined4 *)(*param2_00 + 0x20)), iVar1 == 0))
+		  {
+		    uVar2 = func_ii_1083();
+		    func_ii_1050(uVar2,0);
+		    do {
+		      halt_trap();
+		    } while( true );
+		  }
+		  param2_00[7] = iVar3;
+		  uVar2 = UnityEngine_InputSystem_Utilities_TypeHelpers__GetNiceTypeName
+		                    (StringLiteral_8133,param2_00,0);
+		  return uVar2;
+		}
+		*/
+
 		}
 
 		// Token: 0x040007A5 RID: 1957
@@ -37,4 +99,26 @@ namespace UI.Windows
 		[FieldOffset(Offset = "0x4C")]
 		public readonly GameObject WindowGameObject;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_Message ---
+		void UI_Windows_NotFoundWindowScript__get_Message
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  if (DAT_ram_00a639f1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Exception_TypeInfo);
+		    DAT_ram_00a639f1 = '\x01';
+		  }
+		  if (*(int *)(System_Exception_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(System_Exception_TypeInfo);
+		  }
+		  System_Exception__Init(param1,0);
+		  *(undefined4 *)(param1 + 0x4c) = param3;
+		  *(undefined4 *)(param1 + 0x48) = param2;
+		  return;
+		}
+		*/
+
 }

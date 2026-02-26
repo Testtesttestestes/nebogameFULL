@@ -24,6 +24,21 @@ namespace Gameplay.Duel.View
 		[Address(RVA = "0x82A1", Offset = "0x82A1", VA = "0x82A1")]
 		public MarshalUserView()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_Duel_View_MarshalUserView___ctor(int param1,uint param2,undefined4 param3)
+		
+		{
+		  int iVar1;
+		  
+		  iVar1 = 0x38;
+		  if ((param2 & 1) == 0) {
+		    iVar1 = 0x34;
+		  }
+		  func_ii_7050(*(undefined4 *)(param1 + 0x10),*(undefined4 *)(param1 + iVar1),0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x04001B7F RID: 7039

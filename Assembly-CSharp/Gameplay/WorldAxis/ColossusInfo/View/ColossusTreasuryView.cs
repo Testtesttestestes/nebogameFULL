@@ -83,6 +83,22 @@ namespace Gameplay.WorldAxis.ColossusInfo.View
 		[Address(RVA = "0x6474", Offset = "0x6474", VA = "0x6474")]
 		public void Init(IList<TreasuryOptionListElement.TreasuryOptionListElementArgs> items)
 		{
+		/* --- GHIDRA: Init ---
+		void Gameplay_WorldAxis_ColossusInfo_View_ColossusTreasuryView__Init
+		               (undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a58bd0 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UI_MonoBehaviourWithStates_ColossusTreasuryView_State___ctor__);
+		    DAT_ram_00a58bd0 = '\x01';
+		  }
+		  ScreenAdaptation_Common_AppSize__Update
+		            (param1,Method_UI_MonoBehaviourWithStates_ColossusTreasuryView_State___ctor__);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600127B RID: 4731 RVA: 0x00002050 File Offset: 0x00000250
@@ -146,4 +162,61 @@ namespace Gameplay.WorldAxis.ColossusInfo.View
 			NO_GOLEM
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_ToTreasuryButton ---
+		void Gameplay_WorldAxis_ColossusInfo_View_ColossusTreasuryView__get_ToTreasuryButton
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  int param2_00;
+		  undefined4 param1_00;
+		  int *piVar1;
+		  int iVar2;
+		  
+		  if (DAT_ram_00a58bcf == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Com_TheFallenGames_OSA_Core_OSA_BaseParamsWithPrefab__ClansPoliciesViewsHolder__get_IsInitialized__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Gameplay_WorldAxis_ColossusInfo_View_ColossusTreasuryView___c__DisplayClass17_0__Init_b__0__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Gameplay_WorldAxis_ColossusInfo_View_ColossusTreasuryView___c__DisplayClass17_0_TypeInfo
+		              );
+		    DAT_ram_00a58bcf = '\x01';
+		  }
+		  param2_00 = unnamed_function_1417
+		                        (
+		                        Gameplay_WorldAxis_ColossusInfo_View_ColossusTreasuryView___c__DisplayClass17_0_TypeInfo
+		                        );
+		  *(undefined4 *)(param2_00 + 0xc) = param2;
+		  *(int *)(param2_00 + 8) = param1;
+		  iVar2 = **(int **)(param1 + 0x20);
+		  (**(code **)((ulonglong)*(uint *)(iVar2 + 0x3b8) * 4))
+		            (*(int **)(param1 + 0x20),*(undefined4 *)(iVar2 + 0x3bc));
+		  piVar1 = *(int **)(param1 + 0x20);
+		  if ((char)piVar1[0x14] != '\0') {
+		    (**(code **)((ulonglong)
+		                 *(uint *)(s_Allocator__0___MaxBlockCount__1__ram_00000478 + *piVar1 + 0x10) * 4))
+		              (piVar1,*(undefined4 *)(param2_00 + 0xc),
+		               *(undefined4 *)(s_Allocator__0___MaxBlockCount__1__ram_00000478 + *piVar1 + 0x14));
+		    return;
+		  }
+		  param1_00 = unnamed_function_1417(System_Action_TypeInfo);
+		  UnityEngine_Events_UnityEvent__AddListener
+		            (param1_00,param2_00,
+		             Method_Gameplay_WorldAxis_ColossusInfo_View_ColossusTreasuryView___c__DisplayClass17_0__Init_b__0__
+		             ,0);
+		  (**(code **)((ulonglong)*(uint *)(*piVar1 + 0x298) * 4))
+		            (piVar1,param1_00,*(undefined4 *)(*piVar1 + 0x29c));
+		  return;
+		}
+		*/
+
 }

@@ -15,6 +15,17 @@ namespace Gameplay.VortexRating.Model
 		[Address(RVA = "0x6726", Offset = "0x6726", VA = "0x6726")]
 		public GreatUserData()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_ThemeDuel_Model_GreatUserData___ctor
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  Gameplay_Rating_Model_RatingModel__get_CultsSubFilters(param1,param2,0);
+		  *(undefined4 *)(param1 + 0x4c) = param3;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x04000B5E RID: 2910

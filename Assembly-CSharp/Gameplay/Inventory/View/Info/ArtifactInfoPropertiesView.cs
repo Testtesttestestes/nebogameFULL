@@ -34,6 +34,17 @@ namespace Gameplay.Inventory.View.Info
 		[Address(RVA = "0x790B", Offset = "0x790B", VA = "0x790B")]
 		private void HandleInfoProviderChanged()
 		{
+		/* --- GHIDRA: HandleInfoProviderChanged ---
+		void Gameplay_Inventory_View_Info_ArtifactInfoPropertiesView__HandleInfoProviderChanged
+		               (int param1,undefined4 param2)
+		
+		{
+		  Gameplay_Inventory_View_Info_InfoBox_ArtifactInformationBox__HandleDataChanged
+		            (*(undefined4 *)(param1 + 0x10),param1);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x060027E6 RID: 10214 RVA: 0x00002050 File Offset: 0x00000250
@@ -48,6 +59,23 @@ namespace Gameplay.Inventory.View.Info
 		[Address(RVA = "0x790D", Offset = "0x790D", VA = "0x790D")]
 		public ArtifactInfoPropertiesView()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_Inventory_View_Info_ArtifactInfoPropertiesView___ctor
+		               (int param1,int param2,undefined4 param3)
+		
+		{
+		  int iVar1;
+		  
+		  iVar1 = 0x20;
+		  if (param2 == 0) {
+		    iVar1 = 0x24;
+		  }
+		  Com_TheFallenGames_OSA_CustomAdapters_TableView_Tuple_Basic_BasicTupleValueViewsHolder__ActivatePanelOnlyFor
+		            (*(undefined4 *)(param1 + 0x10),*(undefined4 *)(param1 + iVar1),0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x040015E1 RID: 5601
@@ -61,4 +89,45 @@ namespace Gameplay.Inventory.View.Info
 		[FieldOffset(Offset = "0x14")]
 		private ArtifactInfoProvider _infoProvider;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_InfoProvider ---
+		void Gameplay_Inventory_View_Info_ArtifactInfoPropertiesView__get_InfoProvider
+		               (int param1,int param2,undefined4 param3)
+		
+		{
+		  int param1_00;
+		  
+		  if (*(int *)(param1 + 0x14) != param2) {
+		    *(int *)(param1 + 0x14) = param2;
+		    param1_00 = *(int *)(param1 + 0x10);
+		    if (*(int *)(param1_00 + 0x28) != param2) {
+		      *(int *)(param1_00 + 0x28) = param2;
+		      Gameplay_Inventory_View_Info_InfoBox_ArtifactInformationBox__set_Data(param1_00,param2);
+		    }
+		  }
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_InfoProvider ---
+		void Gameplay_Inventory_View_Info_ArtifactInfoPropertiesView__set_InfoProvider
+		               (int param1,undefined4 param2)
+		
+		{
+		  int param1_00;
+		  int param2_00;
+		  
+		  param1_00 = *(int *)(param1 + 0x10);
+		  param2_00 = *(int *)(param1 + 0x14);
+		  if (*(int *)(param1_00 + 0x28) != param2_00) {
+		    *(int *)(param1_00 + 0x28) = param2_00;
+		    Gameplay_Inventory_View_Info_InfoBox_ArtifactInformationBox__set_Data(param1_00,param2_00);
+		  }
+		  return;
+		}
+		*/
+
 }

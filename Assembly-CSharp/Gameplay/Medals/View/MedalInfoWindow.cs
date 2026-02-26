@@ -196,6 +196,27 @@ namespace Gameplay.Medals.View
 		[Address(RVA = "0x7651", Offset = "0x7651", VA = "0x7651", Slot = "24")]
 		protected override void Awake()
 		{
+		/* --- GHIDRA: Awake ---
+		void Gameplay_Medals_View_MedalInfoWindow__Awake(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  
+		  if (DAT_ram_00a57d82 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UI_Windows_ClosableBaseWindow_MedalInfoWindowArgs__OnClose__);
+		    DAT_ram_00a57d82 = '\x01';
+		  }
+		  UI_Windows_ClosableBaseWindow_object___OnClickBack
+		            (param1,Method_UI_Windows_ClosableBaseWindow_MedalInfoWindowArgs__OnClose__);
+		  iVar1 = **(int **)(param1 + 0x78);
+		  (**(code **)((ulonglong)*(uint *)(iVar1 + 0x130) * 4))
+		            (*(int **)(param1 + 0x78),*(undefined4 *)(iVar1 + 0x134));
+		  *(undefined4 *)(param1 + 0x78) = 0;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06002507 RID: 9479 RVA: 0x00002050 File Offset: 0x00000250
@@ -203,6 +224,22 @@ namespace Gameplay.Medals.View
 		[Address(RVA = "0x7652", Offset = "0x7652", VA = "0x7652", Slot = "19")]
 		protected override void OnClose()
 		{
+		/* --- GHIDRA: OnClose ---
+		void Gameplay_Medals_View_MedalInfoWindow__OnClose
+		               (undefined4 param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  if (DAT_ram_00a57d83 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UI_Windows_ClosableBaseWindow_MedalInfoWindowArgs__OnShow__);
+		    DAT_ram_00a57d83 = '\x01';
+		  }
+		  func_ii_7769(param1,param2,Method_UI_Windows_ClosableBaseWindow_MedalInfoWindowArgs__OnShow__);
+		  Gameplay_Medals_View_MedalInfoWindow__DrawMedalsClamped(param1,param1);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06002508 RID: 9480 RVA: 0x00002050 File Offset: 0x00000250
@@ -210,6 +247,22 @@ namespace Gameplay.Medals.View
 		[Address(RVA = "0x7653", Offset = "0x7653", VA = "0x7653", Slot = "22")]
 		protected override void OnShow(MedalInfoWindowArgs args)
 		{
+		/* --- GHIDRA: OnShow ---
+		void Gameplay_Medals_View_MedalInfoWindow__OnShow(int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  uint uVar1;
+		  undefined4 param1_00;
+		  
+		  UnityEngine_Component__GetComponentInChildren_object_(*(undefined4 *)(param1 + 0x40),param2,0);
+		  param1_00 = *(undefined4 *)(param1 + 0x50);
+		  uVar1 = func_ii_4769(param2,0);
+		  Com_TheFallenGames_OSA_CustomAdapters_TableView_Tuple_Basic_BasicTupleValueViewsHolder__UpdateAsText
+		            (param1_00,uVar1 ^ 1,0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06002509 RID: 9481 RVA: 0x00002050 File Offset: 0x00000250
@@ -217,6 +270,219 @@ namespace Gameplay.Medals.View
 		[Address(RVA = "0x7654", Offset = "0x7654", VA = "0x7654")]
 		public void SetDescription(string description)
 		{
+		/* --- GHIDRA: SetDescription ---
+		undefined4
+		Gameplay_Medals_View_MedalInfoWindow__SetDescription
+		          (int param1,int param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  uint uVar1;
+		  undefined4 param1_00;
+		  int *piVar2;
+		  uint *puVar3;
+		  undefined4 *puVar4;
+		  undefined4 uVar5;
+		  int iVar6;
+		  undefined4 uVar7;
+		  undefined4 param2_00;
+		  int *piVar8;
+		  int iVar9;
+		  int local_c;
+		  int **local_8;
+		  int *local_4;
+		  
+		  if (DAT_ram_00a57d84 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_IDisposable_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&System_Collections_Generic_IEnumerable_MedalDicWrapper__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&System_Collections_Generic_IEnumerator_MedalDicWrapper__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&System_Collections_IEnumerator_TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_List_MedalViewSelectable___ctor__);
+		    Mono_Security_ASN1__get_Item(&System_Collections_Generic_List_MedalViewSelectable__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Method_UnityEngine_Object_Instantiate_MedalViewSelectable___);
+		    Mono_Security_ASN1__get_Item(&UnityEngine_Object_TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_SortedList_uint__MedalDicWrapper__get_Values__);
+		    DAT_ram_00a57d84 = '\x01';
+		  }
+		  param1_00 = unnamed_function_1417(System_Collections_Generic_List_MedalViewSelectable__TypeInfo);
+		  GAFInternal_Objects_GAFBakedObjectImpl__get_isVisible
+		            (param1_00,Method_System_Collections_Generic_List_MedalViewSelectable___ctor__);
+		  piVar2 = (int *)System_Collections_Generic_SortedList_uint__object___System_Collections_Generic_IReadOnlyDictionary_TKey_TValue__get_Keys
+		                            (*(undefined4 *)(*(int *)(param2 + 8) + 8),
+		                             Method_System_Collections_Generic_SortedList_uint__MedalDicWrapper__get_Values__
+		                            );
+		  iVar9 = *piVar2;
+		  if (*(ushort *)(iVar9 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (System_Collections_Generic_IEnumerable_MedalDicWrapper__TypeInfo ==
+		          *(int *)(*(int *)(iVar9 + 0x58) + uVar1 * 8)) {
+		        puVar3 = (uint *)(iVar9 + *(int *)(*(int *)(iVar9 + 0x58) + uVar1 * 8 + 4) * 8 + 0xc0);
+		        goto code_r0x80e5886b;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar9 + 0xb6) != uVar1);
+		  }
+		  puVar3 = (uint *)func_ii_1080(piVar2,
+		                                System_Collections_Generic_IEnumerable_MedalDicWrapper__TypeInfo,0);
+		code_r0x80e5886b:
+		  local_4 = (int *)(**(code **)((ulonglong)*puVar3 * 4))(piVar2,puVar3[1]);
+		  local_c = 0;
+		  local_8 = &local_4;
+		  do {
+		    piVar2 = local_4;
+		    iVar9 = *local_4;
+		    if (*(ushort *)(iVar9 + 0xb6) != 0) {
+		      uVar1 = 0;
+		      do {
+		        piVar8 = (int *)(*(int *)(iVar9 + 0x58) + uVar1 * 8);
+		        if (System_Collections_IEnumerator_TypeInfo == *piVar8) {
+		          puVar4 = (undefined4 *)(iVar9 + piVar8[1] * 8 + 0xc0);
+		          goto code_r0x80e5893d;
+		        }
+		        uVar1 = uVar1 + 1;
+		      } while (*(ushort *)(iVar9 + 0xb6) != uVar1);
+		    }
+		    DAT_ram_009d3e38 = 0;
+		    puVar4 = (undefined4 *)
+		             import::env::invoke_iiii
+		                       (s_Allocator__0___Blocksize__1__mus_ram_00000421 + 0x18,local_4,
+		                        System_Collections_IEnumerator_TypeInfo,0);
+		    if (DAT_ram_009d3e38 == 1) {
+		code_r0x80e58b42:
+		      DAT_ram_009d3e38 = 0;
+		      uVar5 = import::env::__cxa_find_matching_catch_3(&DAT_ram_0072c9c8);
+		      goto code_r0x80e58b4a;
+		    }
+		code_r0x80e5893d:
+		    DAT_ram_009d3e38 = 0;
+		    iVar9 = import::env::invoke_iii(*puVar4,piVar2,puVar4[1]);
+		    piVar2 = local_4;
+		    if (DAT_ram_009d3e38 == 1) goto code_r0x80e58b42;
+		    if (iVar9 == 0) {
+		      iVar9 = 0;
+		      goto code_r0x80e58b93;
+		    }
+		    iVar9 = *local_4;
+		    if (*(ushort *)(iVar9 + 0xb6) != 0) {
+		      uVar1 = 0;
+		      do {
+		        piVar8 = (int *)(*(int *)(iVar9 + 0x58) + uVar1 * 8);
+		        if (System_Collections_Generic_IEnumerator_MedalDicWrapper__TypeInfo == *piVar8) {
+		          puVar4 = (undefined4 *)(iVar9 + piVar8[1] * 8 + 0xc0);
+		          goto code_r0x80e58a17;
+		        }
+		        uVar1 = uVar1 + 1;
+		      } while (*(ushort *)(iVar9 + 0xb6) != uVar1);
+		    }
+		    DAT_ram_009d3e38 = 0;
+		    puVar4 = (undefined4 *)
+		             import::env::invoke_iiii
+		                       (s_Allocator__0___Blocksize__1__mus_ram_00000421 + 0x18,local_4,
+		                        System_Collections_Generic_IEnumerator_MedalDicWrapper__TypeInfo,0);
+		    if (DAT_ram_009d3e38 == 1) {
+		code_r0x80e58b1a:
+		      DAT_ram_009d3e38 = 0;
+		      uVar5 = import::env::__cxa_find_matching_catch_3(&DAT_ram_0072c9c8);
+		      goto code_r0x80e58b4a;
+		    }
+		code_r0x80e58a17:
+		    DAT_ram_009d3e38 = 0;
+		    uVar5 = import::env::invoke_iii(*puVar4,piVar2,puVar4[1]);
+		    if (DAT_ram_009d3e38 == 1) goto code_r0x80e58b1a;
+		    uVar7 = *(undefined4 *)(param1 + 0x5c);
+		    param2_00 = *(undefined4 *)(param1 + 0x74);
+		    if (*(int *)(UnityEngine_Object_TypeInfo + 0x74) == 0) {
+		      DAT_ram_009d3e38 = 0;
+		      import::env::invoke_vi
+		                (s_var<private>_posTex__array<vec4<_ram_00000655 + 0x180,UnityEngine_Object_TypeInfo
+		                );
+		      iVar9 = DAT_ram_009d3e38;
+		      DAT_ram_009d3e38 = 0;
+		      if (iVar9 == 1) {
+		        uVar5 = import::env::__cxa_find_matching_catch_3(&DAT_ram_0072c9c8);
+		        goto code_r0x80e58b4a;
+		      }
+		    }
+		    DAT_ram_009d3e38 = 0;
+		    uVar7 = import::env::invoke_iiii
+		                      (s_struct_Uniforms___color__array<v_ram_000017c8 + 0x2ce,param2_00,uVar7,
+		                       Method_UnityEngine_Object_Instantiate_MedalViewSelectable___);
+		    iVar9 = DAT_ram_009d3e38;
+		    DAT_ram_009d3e38 = 0;
+		    if (iVar9 == 1) {
+		      uVar5 = import::env::__cxa_find_matching_catch_3(&DAT_ram_0072c9c8);
+		      goto code_r0x80e58b4a;
+		    }
+		    DAT_ram_009d3e38 = 0;
+		    import::env::invoke_viiiiiii
+		              (s_struct_Uniforms___color__array<v_ram_00001b87 + 0x66,iVar9,param2,param3,param1_00,
+		               uVar5,uVar7,iVar9);
+		    iVar9 = DAT_ram_009d3e38;
+		    DAT_ram_009d3e38 = 0;
+		  } while (iVar9 != 1);
+		  uVar5 = import::env::__cxa_find_matching_catch_3(&DAT_ram_0072c9c8);
+		code_r0x80e58b4a:
+		  iVar9 = global_1;
+		  iVar6 = import::env::llvm_eh_typeid_for(&DAT_ram_0072c9c8);
+		  if (iVar9 == iVar6) {
+		    piVar2 = (int *)import::env::__cxa_begin_catch(uVar5);
+		    iVar9 = *piVar2;
+		    DAT_ram_009d3e38 = 0;
+		    local_c = iVar9;
+		    import::env::invoke_v(0x123);
+		    iVar6 = DAT_ram_009d3e38;
+		    DAT_ram_009d3e38 = 0;
+		    if (iVar6 != 1) {
+		code_r0x80e58b93:
+		      piVar2 = local_4;
+		      DAT_ram_009d3e38 = 0;
+		      if (local_4 != (int *)0x0) {
+		        uVar1 = 0;
+		        iVar6 = *local_4;
+		        if (*(ushort *)(iVar6 + 0xb6) != 0) {
+		          do {
+		            if (System_IDisposable_TypeInfo == *(int *)(*(int *)(iVar6 + 0x58) + uVar1 * 8)) {
+		              puVar3 = (uint *)(iVar6 + *(int *)(*(int *)(iVar6 + 0x58) + uVar1 * 8 + 4) * 8 + 0xc0)
+		              ;
+		              goto code_r0x80e58c0b;
+		            }
+		            uVar1 = uVar1 + 1;
+		          } while (*(ushort *)(iVar6 + 0xb6) != uVar1);
+		        }
+		        puVar3 = (uint *)func_ii_1080(local_4,System_IDisposable_TypeInfo,0);
+		code_r0x80e58c0b:
+		        (**(code **)((ulonglong)*puVar3 * 4))(piVar2,puVar3[1]);
+		      }
+		      if (iVar9 == 0) {
+		        return param1_00;
+		      }
+		      System_Data_DataSet__ValidateLocaleConstraint(iVar9);
+		      do {
+		        halt_trap();
+		      } while( true );
+		    }
+		    uVar5 = import::env::__cxa_find_matching_catch_2();
+		  }
+		  DAT_ram_009d3e38 = 0;
+		  import::env::invoke_ii(s_struct_Uniforms___color__array<v_ram_00001b87 + 0x67,&local_c);
+		  iVar9 = DAT_ram_009d3e38;
+		  DAT_ram_009d3e38 = 0;
+		  if (iVar9 == 1) {
+		    import::env::__cxa_find_matching_catch_3(0);
+		    unnamed_function_937();
+		    do {
+		      halt_trap();
+		    } while( true );
+		  }
+		  import::env::__resumeException(uVar5);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
 		}
 
 		// Token: 0x0600250A RID: 9482 RVA: 0x00002052 File Offset: 0x00000252
@@ -224,6 +490,217 @@ namespace Gameplay.Medals.View
 		[Address(RVA = "0x7655", Offset = "0x7655", VA = "0x7655")]
 		public List<MedalViewSelectable> DrawMedals(MedalData medalData, Action<MedalViewSelectable> callback)
 		{
+		/* --- GHIDRA: DrawMedals ---
+		undefined4
+		Gameplay_Medals_View_MedalInfoWindow__DrawMedals
+		          (int param1,int param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  uint uVar1;
+		  undefined4 param1_00;
+		  int *piVar2;
+		  uint *puVar3;
+		  undefined4 *puVar4;
+		  undefined4 uVar5;
+		  int param2_00;
+		  undefined4 param3_00;
+		  undefined4 param2_01;
+		  int iVar6;
+		  int *piVar7;
+		  int iVar8;
+		  int local_c;
+		  int **local_8;
+		  int *local_4;
+		  
+		  iVar6 = 0;
+		  if (DAT_ram_00a57d85 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_IDisposable_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&System_Collections_Generic_IEnumerable_MedalDicWrapper__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&System_Collections_Generic_IEnumerator_MedalDicWrapper__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&System_Collections_IEnumerator_TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_List_MedalViewSelectable___ctor__);
+		    Mono_Security_ASN1__get_Item(&System_Collections_Generic_List_MedalViewSelectable__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Method_UnityEngine_Object_Instantiate_MedalViewSelectable___);
+		    Mono_Security_ASN1__get_Item(&UnityEngine_Object_TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_SortedList_uint__MedalDicWrapper__get_Values__);
+		    DAT_ram_00a57d85 = '\x01';
+		  }
+		  param1_00 = unnamed_function_1417(System_Collections_Generic_List_MedalViewSelectable__TypeInfo);
+		  GAFInternal_Objects_GAFBakedObjectImpl__get_isVisible
+		            (param1_00,Method_System_Collections_Generic_List_MedalViewSelectable___ctor__);
+		  piVar2 = (int *)System_Collections_Generic_SortedList_uint__object___System_Collections_Generic_IReadOnlyDictionary_TKey_TValue__get_Keys
+		                            (*(undefined4 *)(*(int *)(param2 + 8) + 8),
+		                             Method_System_Collections_Generic_SortedList_uint__MedalDicWrapper__get_Values__
+		                            );
+		  iVar8 = *piVar2;
+		  if (*(ushort *)(iVar8 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (System_Collections_Generic_IEnumerable_MedalDicWrapper__TypeInfo ==
+		          *(int *)(*(int *)(iVar8 + 0x58) + uVar1 * 8)) {
+		        puVar3 = (uint *)(iVar8 + *(int *)(*(int *)(iVar8 + 0x58) + uVar1 * 8 + 4) * 8 + 0xc0);
+		        goto code_r0x80e58f23;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar8 + 0xb6) != uVar1);
+		  }
+		  puVar3 = (uint *)func_ii_1080(piVar2,
+		                                System_Collections_Generic_IEnumerable_MedalDicWrapper__TypeInfo,0);
+		code_r0x80e58f23:
+		  local_4 = (int *)(**(code **)((ulonglong)*puVar3 * 4))(piVar2,puVar3[1]);
+		  local_c = 0;
+		  local_8 = &local_4;
+		  do {
+		    piVar2 = local_4;
+		    iVar8 = *local_4;
+		    if (*(ushort *)(iVar8 + 0xb6) != 0) {
+		      uVar1 = 0;
+		      do {
+		        piVar7 = (int *)(*(int *)(iVar8 + 0x58) + uVar1 * 8);
+		        if (System_Collections_IEnumerator_TypeInfo == *piVar7) {
+		          puVar4 = (undefined4 *)(iVar8 + piVar7[1] * 8 + 0xc0);
+		          goto code_r0x80e58ff5;
+		        }
+		        uVar1 = uVar1 + 1;
+		      } while (*(ushort *)(iVar8 + 0xb6) != uVar1);
+		    }
+		    DAT_ram_009d3e38 = 0;
+		    puVar4 = (undefined4 *)
+		             import::env::invoke_iiii
+		                       (s_Allocator__0___Blocksize__1__mus_ram_00000421 + 0x18,local_4,
+		                        System_Collections_IEnumerator_TypeInfo,0);
+		    if (DAT_ram_009d3e38 == 1) {
+		code_r0x80e59039:
+		      DAT_ram_009d3e38 = 0;
+		      uVar5 = import::env::__cxa_find_matching_catch_3(&DAT_ram_0072c9c8);
+		code_r0x80e5920a:
+		      iVar6 = global_1;
+		      iVar8 = import::env::llvm_eh_typeid_for(&DAT_ram_0072c9c8);
+		      if (iVar6 == iVar8) {
+		        piVar2 = (int *)import::env::__cxa_begin_catch(uVar5);
+		        iVar6 = *piVar2;
+		        DAT_ram_009d3e38 = 0;
+		        local_c = iVar6;
+		        import::env::invoke_v(0x123);
+		        iVar8 = DAT_ram_009d3e38;
+		        DAT_ram_009d3e38 = 0;
+		        if (iVar8 != 1) break;
+		        uVar5 = import::env::__cxa_find_matching_catch_2();
+		      }
+		      DAT_ram_009d3e38 = 0;
+		      import::env::invoke_ii(s_struct_Uniforms___color__array<v_ram_00001b87 + 0x68,&local_c);
+		      iVar6 = DAT_ram_009d3e38;
+		      DAT_ram_009d3e38 = 0;
+		      if (iVar6 == 1) {
+		        import::env::__cxa_find_matching_catch_3(0);
+		        unnamed_function_937();
+		        do {
+		          halt_trap();
+		        } while( true );
+		      }
+		      import::env::__resumeException(uVar5);
+		      do {
+		        halt_trap();
+		      } while( true );
+		    }
+		code_r0x80e58ff5:
+		    DAT_ram_009d3e38 = 0;
+		    iVar8 = import::env::invoke_iii(*puVar4,piVar2,puVar4[1]);
+		    piVar2 = local_4;
+		    if (DAT_ram_009d3e38 == 1) goto code_r0x80e59039;
+		    if (iVar8 == 0) break;
+		    iVar8 = *local_4;
+		    if (*(ushort *)(iVar8 + 0xb6) != 0) {
+		      uVar1 = 0;
+		      do {
+		        piVar7 = (int *)(*(int *)(iVar8 + 0x58) + uVar1 * 8);
+		        if (System_Collections_Generic_IEnumerator_MedalDicWrapper__TypeInfo == *piVar7) {
+		          puVar4 = (undefined4 *)(iVar8 + piVar7[1] * 8 + 0xc0);
+		          goto code_r0x80e590de;
+		        }
+		        uVar1 = uVar1 + 1;
+		      } while (*(ushort *)(iVar8 + 0xb6) != uVar1);
+		    }
+		    DAT_ram_009d3e38 = 0;
+		    puVar4 = (undefined4 *)
+		             import::env::invoke_iiii
+		                       (s_Allocator__0___Blocksize__1__mus_ram_00000421 + 0x18,local_4,
+		                        System_Collections_Generic_IEnumerator_MedalDicWrapper__TypeInfo,0);
+		    if (DAT_ram_009d3e38 == 1) {
+		code_r0x80e591e4:
+		      DAT_ram_009d3e38 = 0;
+		      uVar5 = import::env::__cxa_find_matching_catch_3(&DAT_ram_0072c9c8);
+		      goto code_r0x80e5920a;
+		    }
+		code_r0x80e590de:
+		    DAT_ram_009d3e38 = 0;
+		    uVar5 = import::env::invoke_iii(*puVar4,piVar2,puVar4[1]);
+		    if (DAT_ram_009d3e38 == 1) goto code_r0x80e591e4;
+		    param3_00 = *(undefined4 *)(param1 + 0x5c);
+		    param2_01 = *(undefined4 *)(param1 + 0x74);
+		    if (*(int *)(UnityEngine_Object_TypeInfo + 0x74) == 0) {
+		      DAT_ram_009d3e38 = 0;
+		      import::env::invoke_vi
+		                (s_var<private>_posTex__array<vec4<_ram_00000655 + 0x180,UnityEngine_Object_TypeInfo
+		                );
+		      iVar8 = DAT_ram_009d3e38;
+		      DAT_ram_009d3e38 = 0;
+		      if (iVar8 != 1) goto code_r0x80e59166;
+		      uVar5 = import::env::__cxa_find_matching_catch_3(&DAT_ram_0072c9c8);
+		      goto code_r0x80e5920a;
+		    }
+		code_r0x80e59166:
+		    DAT_ram_009d3e38 = 0;
+		    param2_00 = import::env::invoke_iiii
+		                          (s_struct_Uniforms___color__array<v_ram_000017c8 + 0x2ce,param2_01,
+		                           param3_00,Method_UnityEngine_Object_Instantiate_MedalViewSelectable___);
+		    iVar8 = DAT_ram_009d3e38;
+		    DAT_ram_009d3e38 = 0;
+		    if (iVar8 == 1) {
+		      uVar5 = import::env::__cxa_find_matching_catch_3(&DAT_ram_0072c9c8);
+		      goto code_r0x80e5920a;
+		    }
+		    DAT_ram_009d3e38 = 0;
+		    import::env::invoke_viiiiiii
+		              (s_struct_Uniforms___color__array<v_ram_00001b87 + 0x66,param2_00,param2,param3,
+		               param1_00,uVar5,param2_00,param2_00);
+		    iVar8 = DAT_ram_009d3e38;
+		    DAT_ram_009d3e38 = 0;
+		    if (iVar8 == 1) {
+		      uVar5 = import::env::__cxa_find_matching_catch_3(&DAT_ram_0072c9c8);
+		      goto code_r0x80e5920a;
+		    }
+		  } while (*(char *)(*(int *)(param2_00 + 0x10) + 0x50) != '\0');
+		  piVar2 = local_4;
+		  DAT_ram_009d3e38 = 0;
+		  if (local_4 != (int *)0x0) {
+		    uVar1 = 0;
+		    iVar8 = *local_4;
+		    if (*(ushort *)(iVar8 + 0xb6) != 0) {
+		      do {
+		        if (System_IDisposable_TypeInfo == *(int *)(*(int *)(iVar8 + 0x58) + uVar1 * 8)) {
+		          puVar3 = (uint *)(iVar8 + *(int *)(*(int *)(iVar8 + 0x58) + uVar1 * 8 + 4) * 8 + 0xc0);
+		          goto code_r0x80e592cb;
+		        }
+		        uVar1 = uVar1 + 1;
+		      } while (*(ushort *)(iVar8 + 0xb6) != uVar1);
+		    }
+		    puVar3 = (uint *)func_ii_1080(local_4,System_IDisposable_TypeInfo,0);
+		code_r0x80e592cb:
+		    (**(code **)((ulonglong)*puVar3 * 4))(piVar2,puVar3[1]);
+		  }
+		  if (iVar6 == 0) {
+		    return param1_00;
+		  }
+		  System_Data_DataSet__ValidateLocaleConstraint(iVar6);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
 			return null;
 		}
 
@@ -232,6 +709,39 @@ namespace Gameplay.Medals.View
 		[Address(RVA = "0x7656", Offset = "0x7656", VA = "0x7656")]
 		public List<MedalViewSelectable> DrawMedalsClamped(MedalData medalData, Action<MedalViewSelectable> callback)
 		{
+		/* --- GHIDRA: DrawMedalsClamped ---
+		void Gameplay_Medals_View_MedalInfoWindow__DrawMedalsClamped(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  undefined4 param2_00;
+		  undefined4 param3;
+		  int *param1_00;
+		  int *param4;
+		  
+		  if (DAT_ram_00a57d87 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UI_Windows_BaseWindow_MedalInfoWindowArgs__get_WindowArgs__);
+		    Mono_Security_ASN1__get_Item(&Gameplay_Medals_Controller_MedalInfoViewMediator_TypeInfo);
+		    DAT_ram_00a57d87 = '\x01';
+		  }
+		  iVar1 = func_ii_8093(param1,Method_UI_Windows_BaseWindow_MedalInfoWindowArgs__get_WindowArgs__);
+		  param4 = *(int **)(iVar1 + 0x18);
+		  param2_00 = (**(code **)((ulonglong)*(uint *)(*param4 + 0x100) * 4))
+		                        (param4,*(undefined4 *)(*param4 + 0x104));
+		  param3 = (**(code **)((ulonglong)*(uint *)(*param4 + 0x110) * 4))
+		                     (param4,*(undefined4 *)(*param4 + 0x114));
+		  param1_00 = (int *)unnamed_function_1417
+		                               (Gameplay_Medals_Controller_MedalInfoViewMediator_TypeInfo);
+		  Gameplay_Medals_Events_MedalsEvents_MedalChangedEventDelegate__EndInvoke
+		            (param1_00,param2_00,param3,param4,param4);
+		  (**(code **)((ulonglong)*(uint *)(*param1_00 + 0x160) * 4))
+		            (param1_00,param1,*(undefined4 *)(*param1_00 + 0x164));
+		  *(int **)(param1 + 0x78) = param1_00;
+		  return;
+		}
+		*/
+
 			return null;
 		}
 
@@ -247,6 +757,20 @@ namespace Gameplay.Medals.View
 		[Address(RVA = "0x7657", Offset = "0x7657", VA = "0x7657")]
 		private void SetupMVC()
 		{
+		/* --- GHIDRA: SetupMVC ---
+		void Gameplay_Medals_View_MedalInfoWindow__SetupMVC(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  
+		  iVar1 = **(int **)(param1 + 0x78);
+		  (**(code **)((ulonglong)*(uint *)(iVar1 + 0x130) * 4))
+		            (*(int **)(param1 + 0x78),*(undefined4 *)(iVar1 + 0x134));
+		  *(undefined4 *)(param1 + 0x78) = 0;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600250E RID: 9486 RVA: 0x00002050 File Offset: 0x00000250
@@ -254,6 +778,21 @@ namespace Gameplay.Medals.View
 		[Address(RVA = "0x7658", Offset = "0x7658", VA = "0x7658")]
 		private void DestroyMVC()
 		{
+		/* --- GHIDRA: DestroyMVC ---
+		void Gameplay_Medals_View_MedalInfoWindow__DestroyMVC(undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a57d88 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_UI_Windows_ClosableBaseWindow_MedalInfoWindowArgs___ctor__)
+		    ;
+		    DAT_ram_00a57d88 = '\x01';
+		  }
+		  UI_MonoBehaviourWithStates_ClientStateChangedDelegate___Il2CppFullySharedGenericStructType___Invoke
+		            (param1,Method_UI_Windows_ClosableBaseWindow_MedalInfoWindowArgs___ctor__);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600250F RID: 9487 RVA: 0x00002050 File Offset: 0x00000250
@@ -362,4 +901,23 @@ namespace Gameplay.Medals.View
 		[FieldOffset(Offset = "0x78")]
 		private MedalInfoViewMediator _mediator;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_CollectionRow ---
+		void Gameplay_Medals_View_MedalInfoWindow__get_CollectionRow(int param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a57d81 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_UI_Windows_ClosableBaseWindow_MedalInfoWindowArgs__Awake__)
+		    ;
+		    DAT_ram_00a57d81 = '\x01';
+		  }
+		  UI_Windows_ClosableBaseWindow_object____ctor
+		            (param1,Method_UI_Windows_ClosableBaseWindow_MedalInfoWindowArgs__Awake__);
+		  *(undefined4 *)(*(int *)(param1 + 0x48) + 0x40) = 2;
+		  return;
+		}
+		*/
+
 }

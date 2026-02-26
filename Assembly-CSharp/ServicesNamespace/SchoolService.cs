@@ -111,6 +111,28 @@ namespace ServicesNamespace
 		[Address(RVA = "0x5A27", Offset = "0x5A27", VA = "0x5A27", Slot = "6")]
 		protected override void ServerEventHandler(SrvAnswer evt)
 		{
+		/* --- GHIDRA: ServerEventHandler ---
+		undefined4 ServicesNamespace_SchoolService__ServerEventHandler(undefined4 param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a55a30 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Protocol_School_ProtoGetUserSpellsCmd_TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_ServicesNamespace_SchoolService_MageSchoolRequest_ProtoGetUserSpellsAns___);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_10823);
+		    DAT_ram_00a55a30 = '\x01';
+		  }
+		  uVar1 = unnamed_function_1417(Protocol_School_ProtoGetUserSpellsCmd_TypeInfo);
+		  uVar1 = DefaultNamespace_SceneAppManager__TryGetSceneArgs___Il2CppFullySharedGenericType_
+		                    (param1,StringLiteral_10823,1,uVar1,
+		                     Method_ServicesNamespace_SchoolService_MageSchoolRequest_ProtoGetUserSpellsAns___
+		                    );
+		  return uVar1;
+		}
+		*/
+
 		}
 
 		// Token: 0x06000626 RID: 1574 RVA: 0x00002052 File Offset: 0x00000252
@@ -118,6 +140,33 @@ namespace ServicesNamespace
 		[Address(RVA = "0x5A28", Offset = "0x5A28", VA = "0x5A28")]
 		public OpToken<IMessage, object> GetUserSpells()
 		{
+		/* --- GHIDRA: GetUserSpells ---
+		undefined4
+		ServicesNamespace_SchoolService__GetUserSpells
+		          (undefined4 param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  int param4;
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a55a31 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Protocol_School_ProtoStartLearnSpellCmd_TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_ServicesNamespace_SchoolService_MageSchoolRequest_ProtoStartLearnSpellAns___)
+		    ;
+		    Mono_Security_ASN1__get_Item(&StringLiteral_10827);
+		    DAT_ram_00a55a31 = '\x01';
+		  }
+		  param4 = unnamed_function_1417(Protocol_School_ProtoStartLearnSpellCmd_TypeInfo);
+		  *(undefined4 *)(param4 + 0xc) = param2;
+		  uVar1 = DefaultNamespace_SceneAppManager__TryGetSceneArgs___Il2CppFullySharedGenericType_
+		                    (param1,StringLiteral_10827,2,param4,
+		                     Method_ServicesNamespace_SchoolService_MageSchoolRequest_ProtoStartLearnSpellAns___
+		                    );
+		  return uVar1;
+		}
+		*/
+
 			return null;
 		}
 
@@ -126,6 +175,31 @@ namespace ServicesNamespace
 		[Address(RVA = "0x5A29", Offset = "0x5A29", VA = "0x5A29")]
 		public OpToken<IMessage, object> StartLearnSpell(uint spellId)
 		{
+		/* --- GHIDRA: StartLearnSpell ---
+		undefined4
+		ServicesNamespace_SchoolService__StartLearnSpell
+		          (undefined4 param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  int param4;
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a55a32 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Protocol_School_ProtoCancelLearnSpellCmd_TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_ServicesNamespace_SchoolService_MageSchoolRequest_ProtoEmptyAns___);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_10825);
+		    DAT_ram_00a55a32 = '\x01';
+		  }
+		  param4 = unnamed_function_1417(Protocol_School_ProtoCancelLearnSpellCmd_TypeInfo);
+		  *(undefined4 *)(param4 + 0xc) = param2;
+		  uVar1 = DefaultNamespace_SceneAppManager__TryGetSceneArgs___Il2CppFullySharedGenericType_
+		                    (param1,StringLiteral_10825,3,param4,
+		                     Method_ServicesNamespace_SchoolService_MageSchoolRequest_ProtoEmptyAns___);
+		  return uVar1;
+		}
+		*/
+
 			return null;
 		}
 
@@ -134,6 +208,35 @@ namespace ServicesNamespace
 		[Address(RVA = "0x5A2A", Offset = "0x5A2A", VA = "0x5A2A")]
 		public OpToken<IMessage, object> CancelLearnSpell(uint spellId)
 		{
+		/* --- GHIDRA: CancelLearnSpell ---
+		undefined4
+		ServicesNamespace_SchoolService__CancelLearnSpell
+		          (undefined4 param1,undefined4 param2,undefined8 param3,undefined4 param4)
+		
+		{
+		  int param4_00;
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a55a33 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Protocol_School_ProtoAccelerateLearnSpellCmd_TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_ServicesNamespace_SchoolService_MageSchoolRequest_ProtoAccelerateLearnSpellAns___
+		              );
+		    Mono_Security_ASN1__get_Item(&StringLiteral_10824);
+		    DAT_ram_00a55a33 = '\x01';
+		  }
+		  param4_00 = unnamed_function_1417(Protocol_School_ProtoAccelerateLearnSpellCmd_TypeInfo);
+		  *(undefined8 *)(param4_00 + 0x10) = param3;
+		  *(undefined4 *)(param4_00 + 0x18) = param2;
+		  uVar1 = DefaultNamespace_SceneAppManager__TryGetSceneArgs___Il2CppFullySharedGenericType_
+		                    (param1,StringLiteral_10824,4,param4_00,
+		                     Method_ServicesNamespace_SchoolService_MageSchoolRequest_ProtoAccelerateLearnSpellAns___
+		                    );
+		  return uVar1;
+		}
+		*/
+
 			return null;
 		}
 
@@ -142,6 +245,32 @@ namespace ServicesNamespace
 		[Address(RVA = "0x5A2B", Offset = "0x5A2B", VA = "0x5A2B")]
 		public OpToken<IMessage, object> AccelerateLearnSpell(uint spellId, ulong ownerId)
 		{
+		/* --- GHIDRA: AccelerateLearnSpell ---
+		undefined4
+		ServicesNamespace_SchoolService__AccelerateLearnSpell
+		          (undefined4 param1,undefined8 param2,undefined4 param3)
+		
+		{
+		  int param4;
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a55a34 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Protocol_School_ProtoGetSchoolInfoCmd_TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_ServicesNamespace_SchoolService_MageSchoolRequest_ProtoGetSchoolInfoAns___);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_10826);
+		    DAT_ram_00a55a34 = '\x01';
+		  }
+		  param4 = unnamed_function_1417(Protocol_School_ProtoGetSchoolInfoCmd_TypeInfo);
+		  *(undefined8 *)(param4 + 0x10) = param2;
+		  uVar1 = DefaultNamespace_SceneAppManager__TryGetSceneArgs___Il2CppFullySharedGenericType_
+		                    (param1,StringLiteral_10826,5,param4,
+		                     Method_ServicesNamespace_SchoolService_MageSchoolRequest_ProtoGetSchoolInfoAns___
+		                    );
+		  return uVar1;
+		}
+		*/
+
 			return null;
 		}
 
@@ -150,6 +279,16 @@ namespace ServicesNamespace
 		[Address(RVA = "0x5A2C", Offset = "0x5A2C", VA = "0x5A2C")]
 		public OpToken<IMessage, object> GetSchoolInfo(ulong ownerId)
 		{
+		/* --- GHIDRA: GetSchoolInfo ---
+		void ServicesNamespace_SchoolService__GetSchoolInfo(int param1,undefined4 param2)
+		
+		{
+		  *(undefined2 *)(param1 + 0x14) = 7;
+		  Core_Net_AbstractService__ServerEventHandler(param1,0);
+		  return;
+		}
+		*/
+
 			return null;
 		}
 
@@ -165,6 +304,486 @@ namespace ServicesNamespace
 		[Address(RVA = "0x5A2D", Offset = "0x5A2D", VA = "0x5A2D")]
 		public SchoolService()
 		{
+		/* --- GHIDRA: .ctor ---
+		void ServicesNamespace_SchoolService___ctor(int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a55a35 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_ProtoAuchanButtonBacklightEvt__TypeInfo);
+		    DAT_ram_00a55a35 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x14);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = UnityEngine_UI_Image__set_sprite(param1_00,param2,0);
+		    param2_00 = System_Action_ProtoAuchanButtonBacklightEvt__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_ProtoAuchanButtonBacklightEvt__TypeInfo),
+		       iVar2 == 0)) break;
+		    iVar2 = func_ii_4329(param1 + 0x14,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_ServiceId ---
+		void ServicesNamespace_SchoolService__get_ServiceId(int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a55a27 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_ProtoLearnSpellAcceleratedEvt__TypeInfo);
+		    DAT_ram_00a55a27 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x18);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = UnityEngine_UI_Image__set_sprite(param1_00,param2,0);
+		    param2_00 = System_Action_ProtoLearnSpellAcceleratedEvt__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_ProtoLearnSpellAcceleratedEvt__TypeInfo),
+		       iVar2 == 0)) break;
+		    iVar2 = func_ii_4329(param1 + 0x18,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: add_LearnSpellAccelerated ---
+		void ServicesNamespace_SchoolService__add_LearnSpellAccelerated
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a55a28 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_ProtoLearnSpellAcceleratedEvt__TypeInfo);
+		    DAT_ram_00a55a28 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x18);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = func_ii_7048(param1_00,param2,0);
+		    param2_00 = System_Action_ProtoLearnSpellAcceleratedEvt__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_ProtoLearnSpellAcceleratedEvt__TypeInfo),
+		       iVar2 == 0)) break;
+		    iVar2 = func_ii_4329(param1 + 0x18,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: remove_LearnSpellAccelerated ---
+		void ServicesNamespace_SchoolService__remove_LearnSpellAccelerated
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a55a29 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_ProtoLearnSpellFinishedEvt__TypeInfo);
+		    DAT_ram_00a55a29 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x1c);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = UnityEngine_UI_Image__set_sprite(param1_00,param2,0);
+		    param2_00 = System_Action_ProtoLearnSpellFinishedEvt__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_ProtoLearnSpellFinishedEvt__TypeInfo),
+		       iVar2 == 0)) break;
+		    iVar2 = func_ii_4329(param1 + 0x1c,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: add_LearnSpellFinished ---
+		void ServicesNamespace_SchoolService__add_LearnSpellFinished
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a55a2a == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_ProtoLearnSpellFinishedEvt__TypeInfo);
+		    DAT_ram_00a55a2a = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x1c);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = func_ii_7048(param1_00,param2,0);
+		    param2_00 = System_Action_ProtoLearnSpellFinishedEvt__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_ProtoLearnSpellFinishedEvt__TypeInfo),
+		       iVar2 == 0)) break;
+		    iVar2 = func_ii_4329(param1 + 0x1c,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: remove_LearnSpellFinished ---
+		void ServicesNamespace_SchoolService__remove_LearnSpellFinished
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a55a2b == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_ProtoLearnSpellCanceledEvt__TypeInfo);
+		    DAT_ram_00a55a2b = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x20);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = UnityEngine_UI_Image__set_sprite(param1_00,param2,0);
+		    param2_00 = System_Action_ProtoLearnSpellCanceledEvt__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_ProtoLearnSpellCanceledEvt__TypeInfo),
+		       iVar2 == 0)) break;
+		    iVar2 = func_ii_4329(param1 + 0x20,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: add_LearnSpellCanceled ---
+		void ServicesNamespace_SchoolService__add_LearnSpellCanceled
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a55a2c == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_ProtoLearnSpellCanceledEvt__TypeInfo);
+		    DAT_ram_00a55a2c = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x20);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = func_ii_7048(param1_00,param2,0);
+		    param2_00 = System_Action_ProtoLearnSpellCanceledEvt__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_ProtoLearnSpellCanceledEvt__TypeInfo),
+		       iVar2 == 0)) break;
+		    iVar2 = func_ii_4329(param1 + 0x20,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: remove_LearnSpellCanceled ---
+		void ServicesNamespace_SchoolService__remove_LearnSpellCanceled
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a55a2d == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_ProtoLearnSpellStartedEvt__TypeInfo);
+		    DAT_ram_00a55a2d = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x24);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = UnityEngine_UI_Image__set_sprite(param1_00,param2,0);
+		    param2_00 = System_Action_ProtoLearnSpellStartedEvt__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_ProtoLearnSpellStartedEvt__TypeInfo),
+		       iVar2 == 0)) break;
+		    iVar2 = func_ii_4329(param1 + 0x24,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: add_LearnSpellStarted ---
+		void ServicesNamespace_SchoolService__add_LearnSpellStarted
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a55a2e == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_ProtoLearnSpellStartedEvt__TypeInfo);
+		    DAT_ram_00a55a2e = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x24);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = func_ii_7048(param1_00,param2,0);
+		    param2_00 = System_Action_ProtoLearnSpellStartedEvt__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_ProtoLearnSpellStartedEvt__TypeInfo),
+		       iVar2 == 0)) break;
+		    iVar2 = func_ii_4329(param1 + 0x24,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: remove_LearnSpellStarted ---
+		void ServicesNamespace_SchoolService__remove_LearnSpellStarted
+		               (int param1,int param2,undefined4 param3)
+		
+		{
+		  undefined4 uVar1;
+		  undefined4 param2_00;
+		  int iVar2;
+		  int *param1_00;
+		  
+		  if (DAT_ram_00a55a2f == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_Core_Net_AbstractService_LogEvent_SchoolEvents___);
+		    Mono_Security_ASN1__get_Item(&Protocol_School_ProtoLearnSpellAcceleratedEvt_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Protocol_School_ProtoLearnSpellCanceledEvt_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Protocol_School_ProtoLearnSpellFinishedEvt_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Protocol_School_ProtoLearnSpellStartedEvt_TypeInfo);
+		    DAT_ram_00a55a2f = '\x01';
+		  }
+		  UnityEngine_Purchasing_Extension_AbstractPurchasingModule__BindExtension___Il2CppFullySharedGenericType_
+		            (param1,*(undefined4 *)(param2 + 0x10),*(undefined4 *)(param2 + 0x20),
+		             Method_Core_Net_AbstractService_LogEvent_SchoolEvents___);
+		  iVar2 = *(int *)(param2 + 0x10);
+		  if (iVar2 != 0) {
+		    if (iVar2 == 1) {
+		      iVar2 = *(int *)(param1 + 0x18);
+		      if (iVar2 == 0) {
+		        return;
+		      }
+		      param1_00 = *(int **)(param2 + 0x20);
+		      if ((param1_00 != (int *)0x0) &&
+		         (Protocol_School_ProtoLearnSpellAcceleratedEvt_TypeInfo != *param1_00)) {
+		        System_Activator__CreateInstance
+		                  (param1_00,Protocol_School_ProtoLearnSpellAcceleratedEvt_TypeInfo);
+		        do {
+		          halt_trap();
+		        } while( true );
+		      }
+		    }
+		    else if (iVar2 == 2) {
+		      iVar2 = *(int *)(param1 + 0x1c);
+		      if (iVar2 == 0) {
+		        return;
+		      }
+		      param1_00 = *(int **)(param2 + 0x20);
+		      if ((param1_00 != (int *)0x0) &&
+		         (Protocol_School_ProtoLearnSpellFinishedEvt_TypeInfo != *param1_00)) {
+		        System_Activator__CreateInstance
+		                  (param1_00,Protocol_School_ProtoLearnSpellFinishedEvt_TypeInfo);
+		        do {
+		          halt_trap();
+		        } while( true );
+		      }
+		    }
+		    else if (iVar2 == 3) {
+		      iVar2 = *(int *)(param1 + 0x20);
+		      if (iVar2 == 0) {
+		        return;
+		      }
+		      param1_00 = *(int **)(param2 + 0x20);
+		      if ((param1_00 != (int *)0x0) &&
+		         (Protocol_School_ProtoLearnSpellCanceledEvt_TypeInfo != *param1_00)) {
+		        System_Activator__CreateInstance
+		                  (param1_00,Protocol_School_ProtoLearnSpellCanceledEvt_TypeInfo);
+		        do {
+		          halt_trap();
+		        } while( true );
+		      }
+		    }
+		    else {
+		      if (iVar2 != 4) {
+		        uVar1 = unnamed_function_2232(&System_ArgumentOutOfRangeException_TypeInfo);
+		        uVar1 = unnamed_function_1417(uVar1);
+		        System_ArgumentNullException___ctor(uVar1,0);
+		        param2_00 = unnamed_function_2232
+		                              (&Method_ServicesNamespace_SchoolService_ServerEventHandler__);
+		        func_ii_1050(uVar1,param2_00);
+		        do {
+		          halt_trap();
+		        } while( true );
+		      }
+		      iVar2 = *(int *)(param1 + 0x24);
+		      if (iVar2 == 0) {
+		        return;
+		      }
+		      param1_00 = *(int **)(param2 + 0x20);
+		      if ((param1_00 != (int *)0x0) &&
+		         (Protocol_School_ProtoLearnSpellStartedEvt_TypeInfo != *param1_00)) {
+		        System_Activator__CreateInstance
+		                  (param1_00,Protocol_School_ProtoLearnSpellStartedEvt_TypeInfo);
+		        do {
+		          halt_trap();
+		        } while( true );
+		      }
+		    }
+		    (**(code **)((ulonglong)*(uint *)(iVar2 + 0xc) * 4))
+		              (*(undefined4 *)(iVar2 + 0x20),param1_00,*(undefined4 *)(iVar2 + 0x14));
+		  }
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: MageSchoolRequest<__Il2CppFullySharedGenericType> ---
+		int ServicesNamespace_SchoolService__MageSchoolRequest___Il2CppFullySharedGenericType_(int param1)
+		
+		{
+		  int iVar1;
+		  int param1_00;
+		  undefined4 *puVar2;
+		  undefined4 uVar3;
+		  int param1_01;
+		  
+		  puVar2 = *(undefined4 **)(param1 + 0x1c);
+		  if (puVar2 == (undefined4 *)0x0) {
+		    System_ReadOnlySpan_char___GetPinnableReference(param1);
+		    puVar2 = *(undefined4 **)(param1 + 0x1c);
+		  }
+		  uVar3 = *puVar2;
+		  if (*(int *)(DAT_ram_00a669a0 + 0x74) == 0) {
+		    func_ii_306000(DAT_ram_00a669a0);
+		  }
+		  iVar1 = 0;
+		  uVar3 = func_ii_2734(uVar3,0);
+		  param1_00 = UnityEngine_ScriptableObject___ctor(uVar3,0);
+		  param1_01 = *(int *)(*(int *)(param1 + 0x1c) + 4);
+		  if ((*(byte *)(param1_01 + 0xbd) & 1) == 0) {
+		    param1_01 = func_ii_1079(param1_01);
+		  }
+		  if ((param1_00 != 0) && (iVar1 = func_ii_1082(param1_00,param1_01), iVar1 == 0)) {
+		    System_Activator__CreateInstance(param1_00,param1_01);
+		    do {
+		      halt_trap();
+		    } while( true );
+		  }
+		  return iVar1;
+		}
+		*/
+
 }

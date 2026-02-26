@@ -14,6 +14,17 @@ namespace Gameplay.Combat.View.Tweens
 		[Address(RVA = "0x8775", Offset = "0x8775", VA = "0x8775")]
 		private void OnEnable()
 		{
+		/* --- GHIDRA: OnEnable ---
+		void Gameplay_Combat_View_Tweens_PulsatingTweener__OnEnable(int param1,undefined4 param2)
+		
+		{
+		  if (*(int *)(param1 + 0x24) != 0) {
+		    func_ii_7891(*(int *)(param1 + 0x24),1,0);
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600378B RID: 14219 RVA: 0x00002050 File Offset: 0x00000250
@@ -21,6 +32,16 @@ namespace Gameplay.Combat.View.Tweens
 		[Address(RVA = "0x8776", Offset = "0x8776", VA = "0x8776")]
 		private void OnDisable()
 		{
+		/* --- GHIDRA: OnDisable ---
+		void Gameplay_Combat_View_Tweens_PulsatingTweener__OnDisable(int param1,undefined4 param2)
+		
+		{
+		  *(undefined8 *)(param1 + 0x1c) = 0x140000000;
+		  UnityEngine_RectTransform__GetParentSize(param1,0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600378C RID: 14220 RVA: 0x00002050 File Offset: 0x00000250
@@ -28,6 +49,26 @@ namespace Gameplay.Combat.View.Tweens
 		[Address(RVA = "0x8777", Offset = "0x8777", VA = "0x8777")]
 		public PulsatingTweener()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_Combat_View_Tweens_PulsatingTweener___ctor(int param1,undefined4 param2)
+		
+		{
+		  int param2_00;
+		  int iVar1;
+		  
+		  iVar1 = *(int *)(*(int *)(param1 + 0x10) + 0xc);
+		  if (0 < iVar1) {
+		    param2_00 = 0;
+		    do {
+		      Gameplay_Combat_View_Tweens_FromToTweener__Rollback
+		                (*(undefined4 *)(*(int *)(param1 + 0x10) + param2_00 * 4 + 0x10),param2_00);
+		      param2_00 = param2_00 + 1;
+		    } while (param2_00 != iVar1);
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x04001EA8 RID: 7848

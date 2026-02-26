@@ -14,6 +14,17 @@ namespace Gameplay.Discounts.View
 		[Address(RVA = "0x1DB8", Offset = "0x1DB8", VA = "0x1DB8")]
 		public DiscountInfoTitledListElementArgs(IDiscountArgs discount)
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_Discounts_View_DiscountInfoTitledListElementArgs___ctor
+		               (int *param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  (**(code **)((ulonglong)*(uint *)(*param1 + 0xe8) * 4))
+		            (param1,param2,*(undefined4 *)(*param1 + 0xec));
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x04001C2F RID: 7215

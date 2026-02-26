@@ -13,6 +13,15 @@ namespace Core
 		[Address(RVA = "0xA6F9", Offset = "0xA6F9", VA = "0xA6F9", Slot = "5")]
 		protected override bool ValidateCertificate(byte[] certificateData)
 		{
+		/* --- GHIDRA: ValidateCertificate ---
+		void Core_AcceptAllCertificates__ValidateCertificate(undefined4 param1,undefined4 param2)
+		
+		{
+		  UnityEngine_Networking_CertificateHandler__ReleaseFromScripting(param1,0);
+		  return;
+		}
+		*/
+
 			return default(bool);
 		}
 

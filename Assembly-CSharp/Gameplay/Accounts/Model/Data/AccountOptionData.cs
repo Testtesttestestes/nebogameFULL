@@ -57,6 +57,75 @@ namespace Gameplay.Accounts.Model.Data
 		[Address(RVA = "0xA41E", Offset = "0xA41E", VA = "0xA41E")]
 		public AccountOptionData(AccountOptionsDic optionsDic)
 		{
+		/* --- GHIDRA: .ctor ---
+		undefined4 Gameplay_Accounts_Model_Data_AccountOptionData___ctor(int *param1,undefined4 param2)
+		
+		{
+		  uint uVar1;
+		  int iVar2;
+		  int *param1_00;
+		  uint *puVar3;
+		  
+		  if (DAT_ram_00a588b6 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Gameplay_Accounts_Model_Data_BattleAccount_TypeInfo);
+		    DAT_ram_00a588b6 = '\x01';
+		  }
+		  if (DAT_ram_00a588b4 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_Data_Accounts_IAccountData_TypeInfo);
+		    DAT_ram_00a588b4 = '\x01';
+		  }
+		  iVar2 = (**(code **)((ulonglong)*(uint *)(*param1 + 0x140) * 4))
+		                    (param1,*(undefined4 *)(*param1 + 0x144));
+		  if (iVar2 != 0) {
+		    param1_00 = (int *)(**(code **)((ulonglong)*(uint *)(*param1 + 0x140) * 4))
+		                                 (param1,*(undefined4 *)(*param1 + 0x144));
+		    uVar1 = 0;
+		    iVar2 = *param1_00;
+		    if (*(ushort *)(iVar2 + 0xb6) != 0) {
+		      do {
+		        if (Core_Data_Accounts_IAccountData_TypeInfo == *(int *)(*(int *)(iVar2 + 0x58) + uVar1 * 8)
+		           ) {
+		          puVar3 = (uint *)(*(int *)(*(int *)(iVar2 + 0x58) + uVar1 * 8 + 4) * 8 + iVar2 + 0xd0);
+		          goto code_r0x80f3af12;
+		        }
+		        uVar1 = uVar1 + 1;
+		      } while (*(ushort *)(iVar2 + 0xb6) != uVar1);
+		    }
+		    puVar3 = (uint *)func_ii_1080(param1_00,Core_Data_Accounts_IAccountData_TypeInfo,2);
+		code_r0x80f3af12:
+		    iVar2 = (**(code **)((ulonglong)*puVar3 * 4))(param1_00,puVar3[1]);
+		    if (iVar2 == 0) {
+		      return param1[7];
+		    }
+		  }
+		  if (*(int *)(Gameplay_Accounts_Model_Data_BattleAccount_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Gameplay_Accounts_Model_Data_BattleAccount_TypeInfo);
+		  }
+		  if (DAT_ram_00a58947 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Gameplay_Accounts_Model_Data_BattleAccount_TypeInfo);
+		    DAT_ram_00a58947 = '\x01';
+		  }
+		  if (*(int *)(Gameplay_Accounts_Model_Data_BattleAccount_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Gameplay_Accounts_Model_Data_BattleAccount_TypeInfo);
+		  }
+		  return **(undefined4 **)(Gameplay_Accounts_Model_Data_BattleAccount_TypeInfo + 0x5c);
+		}
+		*/
+
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: set_ParentAccountOption ---
+		void Gameplay_Accounts_Model_Data_AccountOptionData__set_ParentAccountOption
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  Sirenix_OdinInspector_ListDrawerSettingsAttribute__get_OnTitleBarGUI(param1,1,0);
+		  *(undefined4 *)(param1 + 0x70) = param2;
+		  return;
+		}
+		*/
+
 }

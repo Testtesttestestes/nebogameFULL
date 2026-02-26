@@ -41,6 +41,105 @@ namespace CloudsFly
 		[Address(RVA = "0xBDDA", Offset = "0xBDDA", VA = "0xBDDA")]
 		protected WorldObjectEngineArgs()
 		{
+		/* --- GHIDRA: .ctor ---
+		void CloudsFly_WorldObjectEngineArgs___ctor(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  undefined4 param1_00;
+		  int *piVar2;
+		  int iVar3;
+		  int local_18;
+		  undefined8 *local_14;
+		  undefined8 local_10;
+		  undefined8 local_8;
+		  
+		  if (DAT_ram_00a5969a == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_List_Enumerator_Tween__Dispose__);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_List_Enumerator_Tween__MoveNext__);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_List_Enumerator_Tween__get_Current__);
+		    Mono_Security_ASN1__get_Item(&Method_System_Collections_Generic_List_Tween__Clear__);
+		    Mono_Security_ASN1__get_Item(&Method_System_Collections_Generic_List_Tween__GetEnumerator__);
+		    DAT_ram_00a5969a = '\x01';
+		  }
+		  local_8 = 0;
+		  local_10 = 0;
+		  System_Collections_Generic_List_RegexCharClass_SingleRange___ForEach
+		            (&local_10,*(undefined4 *)(param1 + 8),
+		             Method_System_Collections_Generic_List_Tween__GetEnumerator__);
+		  local_18 = 0;
+		  local_14 = &local_10;
+		  do {
+		    DAT_ram_009d3e38 = 0;
+		    iVar1 = import::env::invoke_iii
+		                      (s_struct_Uniforms___color__array<v_ram_00000aff + 0x44,&local_10,
+		                       Method_System_Collections_Generic_List_Enumerator_Tween__MoveNext__);
+		    iVar3 = DAT_ram_009d3e38;
+		    DAT_ram_009d3e38 = 0;
+		    if (iVar3 == 1) {
+		      param1_00 = import::env::__cxa_find_matching_catch_3(&DAT_ram_0072c9c8);
+		      goto code_r0x8104aa57;
+		    }
+		    if (iVar1 == 0) goto code_r0x8104aaad;
+		    DAT_ram_009d3e38 = 0;
+		    import::env::invoke_viii
+		              (s_struct_Uniforms___color__array<v_ram_00001b87 + 0x34d,local_8._4_4_,0,0);
+		    iVar3 = DAT_ram_009d3e38;
+		    DAT_ram_009d3e38 = 0;
+		  } while (iVar3 != 1);
+		  param1_00 = import::env::__cxa_find_matching_catch_3(&DAT_ram_0072c9c8);
+		code_r0x8104aa57:
+		  iVar3 = global_1;
+		  iVar1 = import::env::llvm_eh_typeid_for(&DAT_ram_0072c9c8);
+		  if (iVar3 == iVar1) {
+		    piVar2 = (int *)import::env::__cxa_begin_catch(param1_00);
+		    iVar1 = *piVar2;
+		    DAT_ram_009d3e38 = 0;
+		    local_18 = iVar1;
+		    import::env::invoke_v(0x123);
+		    iVar3 = DAT_ram_009d3e38;
+		    DAT_ram_009d3e38 = 0;
+		    if (iVar3 != 1) {
+		      if (iVar1 != 0) {
+		        System_Data_DataSet__ValidateLocaleConstraint(iVar1);
+		        do {
+		          halt_trap();
+		        } while( true );
+		      }
+		code_r0x8104aaad:
+		      DAT_ram_009d3e38 = 0;
+		      iVar3 = *(int *)(param1 + 8);
+		      iVar1 = *(int *)(iVar3 + 0xc);
+		      *(undefined4 *)(iVar3 + 0xc) = 0;
+		      *(int *)(iVar3 + 0x10) = *(int *)(iVar3 + 0x10) + 1;
+		      if (0 < iVar1) {
+		        func_ii_2064(*(undefined4 *)(iVar3 + 8),0,iVar1,0);
+		      }
+		      return;
+		    }
+		    param1_00 = import::env::__cxa_find_matching_catch_2();
+		  }
+		  DAT_ram_009d3e38 = 0;
+		  import::env::invoke_ii(s_struct_Uniforms___color__array<v_ram_00001b87 + 0x34e,&local_18);
+		  iVar3 = DAT_ram_009d3e38;
+		  DAT_ram_009d3e38 = 0;
+		  if (iVar3 == 1) {
+		    import::env::__cxa_find_matching_catch_3(0);
+		    unnamed_function_937();
+		    do {
+		      halt_trap();
+		    } while( true );
+		  }
+		  import::env::__resumeException(param1_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
 		}
 
 		// Token: 0x04003CC3 RID: 15555

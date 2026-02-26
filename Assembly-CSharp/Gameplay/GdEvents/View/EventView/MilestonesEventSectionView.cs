@@ -225,6 +225,54 @@ namespace Gameplay.GdEvents.View.EventView
 		[Address(RVA = "0x7D00", Offset = "0x7D00", VA = "0x7D00", Slot = "4")]
 		protected override void OnDestroy()
 		{
+		/* --- GHIDRA: OnDestroy ---
+		void Gameplay_GdEvents_View_EventView_MilestonesEventSectionView__OnDestroy
+		               (undefined4 param1,undefined4 *param2,int *param3,undefined4 param4)
+		
+		{
+		  uint uVar1;
+		  undefined4 param2_00;
+		  undefined4 param3_00;
+		  int *param1_00;
+		  uint *puVar2;
+		  int iVar3;
+		  
+		  if (DAT_ram_00a5a2bf == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_MVC_Interfaces_IViewMediator_TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&Gameplay_GdEvents_Control_EventSections_MilestoneViewMediator_TypeInfo);
+		    DAT_ram_00a5a2bf = '\x01';
+		  }
+		  param2_00 = (**(code **)((ulonglong)*(uint *)(*param3 + 0x100) * 4))
+		                        (param3,*(undefined4 *)(*param3 + 0x104));
+		  param3_00 = (**(code **)((ulonglong)*(uint *)(*param3 + 0x110) * 4))
+		                        (param3,*(undefined4 *)(*param3 + 0x114));
+		  param1_00 = (int *)unnamed_function_1417
+		                               (
+		                               Gameplay_GdEvents_Control_EventSections_MilestoneViewMediator_TypeInfo
+		                               );
+		  Gameplay_GdEvents_Control_EventSections_ExecuteConditionsViewMediator__TryShowRewards
+		            (param1_00,param2_00,param3_00,param3,0);
+		  *param2 = param1_00;
+		  iVar3 = *param1_00;
+		  if (*(ushort *)(iVar3 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (Core_MVC_Interfaces_IViewMediator_TypeInfo == *(int *)(*(int *)(iVar3 + 0x58) + uVar1 * 8)
+		         ) {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar3 + 0x58) + uVar1 * 8 + 4) * 8 + iVar3 + 0x100);
+		        goto code_r0x811f607b;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar3 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(param1_00,Core_MVC_Interfaces_IViewMediator_TypeInfo,8);
+		code_r0x811f607b:
+		  (**(code **)((ulonglong)*puVar2 * 4))(param1_00,param1,puVar2[1]);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06002C72 RID: 11378 RVA: 0x00002050 File Offset: 0x00000250
@@ -232,6 +280,21 @@ namespace Gameplay.GdEvents.View.EventView
 		[Address(RVA = "0x7D01", Offset = "0x7D01", VA = "0x7D01", Slot = "5")]
 		protected override void CreateMediator(ref IViewMediator mediator, GdEventsController controller)
 		{
+		/* --- GHIDRA: CreateMediator ---
+		void Gameplay_GdEvents_View_EventView_MilestonesEventSectionView__CreateMediator
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  if (DAT_ram_00a5a2c0 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_UnityEngine_Events_UnityEvent_GameActivityData__Invoke__);
+		    DAT_ram_00a5a2c0 = '\x01';
+		  }
+		  func_ii_16397(*(undefined4 *)(param1 + 0x60),param2,
+		                Method_UnityEngine_Events_UnityEvent_GameActivityData__Invoke__);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06002C73 RID: 11379 RVA: 0x00002050 File Offset: 0x00000250
@@ -239,6 +302,389 @@ namespace Gameplay.GdEvents.View.EventView
 		[Address(RVA = "0x7D02", Offset = "0x7D02", VA = "0x7D02")]
 		private void HandleActivityClickEvent(GameActivityData activity)
 		{
+		/* --- GHIDRA: HandleActivityClickEvent ---
+		void Gameplay_GdEvents_View_EventView_MilestonesEventSectionView__HandleActivityClickEvent
+		               (int param1,int *param2,undefined4 param3)
+		
+		{
+		  uint uVar1;
+		  undefined4 *puVar2;
+		  undefined4 uVar3;
+		  int iVar4;
+		  int *piVar5;
+		  uint *puVar6;
+		  int param2_00;
+		  int iVar7;
+		  undefined4 uVar8;
+		  int *piVar9;
+		  int local_18;
+		  int **local_14;
+		  int *local_10;
+		  int *local_c;
+		  int local_8;
+		  int *local_4;
+		  
+		  if (DAT_ram_00a5a2c1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_IDisposable_TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&System_Collections_Generic_IEnumerable_ActivityGroupData__TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&System_Collections_Generic_IEnumerator_ActivityGroupData__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&System_Collections_IEnumerator_TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Gameplay_GdEvents_View_EventView_MilestonesEventSectionView_HandleActivityClickEvent__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UnityEngine_Object_Instantiate_GameActivityContentGroupView___);
+		    Mono_Security_ASN1__get_Item(&UnityEngine_Object_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&UnityEngine_Transform_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&UnityEngine_Events_UnityAction_GameActivityData__TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UnityEngine_Events_UnityEvent_GameActivityData__AddListener__);
+		    DAT_ram_00a5a2c1 = '\x01';
+		  }
+		  local_8 = 0;
+		  local_c = (int *)0x0;
+		  local_4 = (int *)UnityEngine_Transform__set_hasChanged(*(undefined4 *)(param1 + 0x40),0);
+		  local_10 = &local_8;
+		  local_18 = 0;
+		  local_14 = &local_4;
+		  do {
+		    piVar5 = local_4;
+		    iVar7 = *local_4;
+		    if (*(ushort *)(iVar7 + 0xb6) != 0) {
+		      uVar1 = 0;
+		      do {
+		        piVar9 = (int *)(*(int *)(iVar7 + 0x58) + uVar1 * 8);
+		        if (System_Collections_IEnumerator_TypeInfo == *piVar9) {
+		          puVar2 = (undefined4 *)(iVar7 + piVar9[1] * 8 + 0xc0);
+		          goto code_r0x811f621d;
+		        }
+		        uVar1 = uVar1 + 1;
+		      } while (*(ushort *)(iVar7 + 0xb6) != uVar1);
+		    }
+		    DAT_ram_009d3e38 = 0;
+		    puVar2 = (undefined4 *)
+		             import::env::invoke_iiii
+		                       (s_Allocator__0___Blocksize__1__mus_ram_00000421 + 0x18,local_4,
+		                        System_Collections_IEnumerator_TypeInfo,0);
+		    if (DAT_ram_009d3e38 == 1) {
+		code_r0x811f6460:
+		      DAT_ram_009d3e38 = 0;
+		      uVar3 = import::env::__cxa_find_matching_catch_3(&DAT_ram_0072c9c8);
+		      goto code_r0x811f6468;
+		    }
+		code_r0x811f621d:
+		    DAT_ram_009d3e38 = 0;
+		    iVar7 = import::env::invoke_iii(*puVar2,piVar5,puVar2[1]);
+		    piVar5 = local_4;
+		    if (DAT_ram_009d3e38 == 1) goto code_r0x811f6460;
+		    if (iVar7 == 0) goto code_r0x811f64b1;
+		    iVar7 = *local_4;
+		    if (*(ushort *)(iVar7 + 0xb6) != 0) {
+		      uVar1 = 0;
+		      do {
+		        piVar9 = (int *)(*(int *)(iVar7 + 0x58) + uVar1 * 8);
+		        if (System_Collections_IEnumerator_TypeInfo == *piVar9) {
+		          puVar2 = (undefined4 *)(piVar9[1] * 8 + iVar7 + 200);
+		          goto code_r0x811f62fa;
+		        }
+		        uVar1 = uVar1 + 1;
+		      } while (*(ushort *)(iVar7 + 0xb6) != uVar1);
+		    }
+		    DAT_ram_009d3e38 = 0;
+		    puVar2 = (undefined4 *)
+		             import::env::invoke_iiii
+		                       (s_Allocator__0___Blocksize__1__mus_ram_00000421 + 0x18,local_4,
+		                        System_Collections_IEnumerator_TypeInfo,1);
+		    if (DAT_ram_009d3e38 == 1) {
+		code_r0x811f6442:
+		      DAT_ram_009d3e38 = 0;
+		      uVar3 = import::env::__cxa_find_matching_catch_3(&DAT_ram_0072c9c8);
+		      goto code_r0x811f6468;
+		    }
+		code_r0x811f62fa:
+		    DAT_ram_009d3e38 = 0;
+		    piVar5 = (int *)import::env::invoke_iii(*puVar2,piVar5,puVar2[1]);
+		    if (DAT_ram_009d3e38 == 1) goto code_r0x811f6442;
+		    if (piVar5 != (int *)0x0) {
+		      if (((uint)*(byte *)(*piVar5 + 0xb8) < (uint)*(byte *)(UnityEngine_Transform_TypeInfo + 0xb8))
+		         || (*(int *)(*(int *)(*piVar5 + 100) +
+		                      (uint)*(byte *)(UnityEngine_Transform_TypeInfo + 0xb8) * 4 + -4) !=
+		             UnityEngine_Transform_TypeInfo)) {
+		        DAT_ram_009d3e38 = 0;
+		        import::env::invoke_vii
+		                  (s_var<private>_posTex__array<vec4<_ram_00000655 + 0x183,piVar5,
+		                   UnityEngine_Transform_TypeInfo);
+		        iVar7 = DAT_ram_009d3e38;
+		        DAT_ram_009d3e38 = 0;
+		        if (iVar7 != 1) {
+		          do {
+		            halt_trap();
+		          } while( true );
+		        }
+		        uVar3 = import::env::__cxa_find_matching_catch_3(&DAT_ram_0072c9c8);
+		        goto code_r0x811f6468;
+		      }
+		    }
+		    DAT_ram_009d3e38 = 0;
+		    uVar3 = import::env::invoke_iii
+		                      (s_struct_Uniforms___color__array<v_ram_00000aff + 0x25c,piVar5,0);
+		    if (DAT_ram_009d3e38 == 1) break;
+		    if (*(int *)(UnityEngine_Object_TypeInfo + 0x74) == 0) {
+		      DAT_ram_009d3e38 = 0;
+		      import::env::invoke_vi
+		                (s_var<private>_posTex__array<vec4<_ram_00000655 + 0x180,UnityEngine_Object_TypeInfo
+		                );
+		      if (DAT_ram_009d3e38 == 1) break;
+		    }
+		    DAT_ram_009d3e38 = 0;
+		    import::env::invoke_vii(s_struct_Uniforms___color__array<v_ram_00000aff + 0x274,uVar3,0);
+		  } while (DAT_ram_009d3e38 != 1);
+		  DAT_ram_009d3e38 = 0;
+		  uVar3 = import::env::__cxa_find_matching_catch_3(&DAT_ram_0072c9c8);
+		code_r0x811f6468:
+		  iVar7 = global_1;
+		  iVar4 = import::env::llvm_eh_typeid_for(&DAT_ram_0072c9c8);
+		  if (iVar7 == iVar4) {
+		    piVar5 = (int *)import::env::__cxa_begin_catch(uVar3);
+		    local_18 = *piVar5;
+		    DAT_ram_009d3e38 = 0;
+		    import::env::invoke_v(0x123);
+		    iVar7 = DAT_ram_009d3e38;
+		    DAT_ram_009d3e38 = 0;
+		    if (iVar7 != 1) {
+		code_r0x811f64b1:
+		      DAT_ram_009d3e38 = 0;
+		      local_8 = func_ii_1082(local_4,System_IDisposable_TypeInfo);
+		      piVar5 = (int *)*local_10;
+		      if (piVar5 != (int *)0x0) {
+		        iVar7 = *piVar5;
+		        if (*(ushort *)(iVar7 + 0xb6) != 0) {
+		          uVar1 = 0;
+		          do {
+		            if (System_IDisposable_TypeInfo == *(int *)(*(int *)(iVar7 + 0x58) + uVar1 * 8)) {
+		              puVar6 = (uint *)(iVar7 + *(int *)(*(int *)(iVar7 + 0x58) + uVar1 * 8 + 4) * 8 + 0xc0)
+		              ;
+		              goto code_r0x811f6541;
+		            }
+		            uVar1 = uVar1 + 1;
+		          } while (*(ushort *)(iVar7 + 0xb6) != uVar1);
+		        }
+		        puVar6 = (uint *)func_ii_1080(piVar5,System_IDisposable_TypeInfo,0);
+		code_r0x811f6541:
+		        (**(code **)((ulonglong)*puVar6 * 4))(piVar5,puVar6[1]);
+		      }
+		      if (local_18 != 0) {
+		        System_Data_DataSet__ValidateLocaleConstraint(local_18);
+		        do {
+		          halt_trap();
+		        } while( true );
+		      }
+		      uVar1 = 0;
+		      iVar7 = *param2;
+		      if (*(ushort *)(iVar7 + 0xb6) != 0) {
+		        do {
+		          if (System_Collections_Generic_IEnumerable_ActivityGroupData__TypeInfo ==
+		              *(int *)(*(int *)(iVar7 + 0x58) + uVar1 * 8)) {
+		            puVar6 = (uint *)(iVar7 + *(int *)(*(int *)(iVar7 + 0x58) + uVar1 * 8 + 4) * 8 + 0xc0);
+		            goto code_r0x811f65c9;
+		          }
+		          uVar1 = uVar1 + 1;
+		        } while (*(ushort *)(iVar7 + 0xb6) != uVar1);
+		      }
+		      puVar6 = (uint *)func_ii_1080(param2,
+		                                    System_Collections_Generic_IEnumerable_ActivityGroupData__TypeInfo
+		                                    ,0);
+		code_r0x811f65c9:
+		      local_c = (int *)(**(code **)((ulonglong)*puVar6 * 4))(param2,puVar6[1]);
+		      local_18 = 0;
+		      local_14 = &local_c;
+		      do {
+		        piVar5 = local_c;
+		        iVar7 = *local_c;
+		        if (*(ushort *)(iVar7 + 0xb6) != 0) {
+		          uVar1 = 0;
+		          do {
+		            piVar9 = (int *)(*(int *)(iVar7 + 0x58) + uVar1 * 8);
+		            if (System_Collections_IEnumerator_TypeInfo == *piVar9) {
+		              puVar2 = (undefined4 *)(iVar7 + piVar9[1] * 8 + 0xc0);
+		              goto code_r0x811f66d5;
+		            }
+		            uVar1 = uVar1 + 1;
+		          } while (*(ushort *)(iVar7 + 0xb6) != uVar1);
+		        }
+		        DAT_ram_009d3e38 = 0;
+		        puVar2 = (undefined4 *)
+		                 import::env::invoke_iiii
+		                           (s_Allocator__0___Blocksize__1__mus_ram_00000421 + 0x18,local_c,
+		                            System_Collections_IEnumerator_TypeInfo,0);
+		        if (DAT_ram_009d3e38 == 1) {
+		code_r0x811f6996:
+		          DAT_ram_009d3e38 = 0;
+		          uVar3 = import::env::__cxa_find_matching_catch_3(&DAT_ram_0072c9c8);
+		          goto code_r0x811f699e;
+		        }
+		code_r0x811f66d5:
+		        DAT_ram_009d3e38 = 0;
+		        iVar7 = import::env::invoke_iii(*puVar2,piVar5,puVar2[1]);
+		        piVar5 = local_c;
+		        if (DAT_ram_009d3e38 == 1) goto code_r0x811f6996;
+		        if (iVar7 == 0) {
+		          iVar7 = 0;
+		          goto code_r0x811f69e7;
+		        }
+		        iVar7 = *local_c;
+		        if (*(ushort *)(iVar7 + 0xb6) != 0) {
+		          uVar1 = 0;
+		          do {
+		            piVar9 = (int *)(*(int *)(iVar7 + 0x58) + uVar1 * 8);
+		            if (System_Collections_Generic_IEnumerator_ActivityGroupData__TypeInfo == *piVar9) {
+		              puVar2 = (undefined4 *)(iVar7 + piVar9[1] * 8 + 0xc0);
+		              goto code_r0x811f67af;
+		            }
+		            uVar1 = uVar1 + 1;
+		          } while (*(ushort *)(iVar7 + 0xb6) != uVar1);
+		        }
+		        DAT_ram_009d3e38 = 0;
+		        puVar2 = (undefined4 *)
+		                 import::env::invoke_iiii
+		                           (s_Allocator__0___Blocksize__1__mus_ram_00000421 + 0x18,local_c,
+		                            System_Collections_Generic_IEnumerator_ActivityGroupData__TypeInfo,0);
+		        if (DAT_ram_009d3e38 == 1) {
+		code_r0x811f6964:
+		          DAT_ram_009d3e38 = 0;
+		          uVar3 = import::env::__cxa_find_matching_catch_3(&DAT_ram_0072c9c8);
+		          goto code_r0x811f699e;
+		        }
+		code_r0x811f67af:
+		        DAT_ram_009d3e38 = 0;
+		        iVar7 = import::env::invoke_iii(*puVar2,piVar5,puVar2[1]);
+		        if (DAT_ram_009d3e38 == 1) goto code_r0x811f6964;
+		        uVar3 = *(undefined4 *)(param1 + 0x40);
+		        uVar8 = *(undefined4 *)(param1 + 0x44);
+		        if (*(int *)(UnityEngine_Object_TypeInfo + 0x74) == 0) {
+		          DAT_ram_009d3e38 = 0;
+		          import::env::invoke_vi
+		                    (s_var<private>_posTex__array<vec4<_ram_00000655 + 0x180,
+		                     UnityEngine_Object_TypeInfo);
+		          iVar4 = DAT_ram_009d3e38;
+		          DAT_ram_009d3e38 = 0;
+		          if (iVar4 == 1) {
+		            uVar3 = import::env::__cxa_find_matching_catch_3(&DAT_ram_0072c9c8);
+		            goto code_r0x811f699e;
+		          }
+		        }
+		        DAT_ram_009d3e38 = 0;
+		        param2_00 = import::env::invoke_iiii
+		                              (s_struct_Uniforms___color__array<v_ram_000017c8 + 0x2ce,uVar8,uVar3,
+		                               Method_UnityEngine_Object_Instantiate_GameActivityContentGroupView___
+		                              );
+		        iVar4 = DAT_ram_009d3e38;
+		        DAT_ram_009d3e38 = 0;
+		        if (iVar4 == 1) {
+		          uVar3 = import::env::__cxa_find_matching_catch_3(&DAT_ram_0072c9c8);
+		          goto code_r0x811f699e;
+		        }
+		        if (iVar7 != *(int *)(param2_00 + 0x20)) {
+		          *(int *)(param2_00 + 0x20) = iVar7;
+		          DAT_ram_009d3e38 = 0;
+		          import::env::invoke_vii
+		                    (s_struct_Uniforms___color__array<v_ram_00001f04 + 0x286,param2_00,param2_00);
+		          iVar7 = DAT_ram_009d3e38;
+		          DAT_ram_009d3e38 = 0;
+		          if (iVar7 == 1) {
+		            uVar3 = import::env::__cxa_find_matching_catch_3(&DAT_ram_0072c9c8);
+		            goto code_r0x811f699e;
+		          }
+		        }
+		        uVar8 = *(undefined4 *)(param2_00 + 0x1c);
+		        DAT_ram_009d3e38 = 0;
+		        uVar3 = import::env::invoke_ii
+		                          (s_var<private>_posTex__array<vec4<_ram_00000655 + 0x199,
+		                           UnityEngine_Events_UnityAction_GameActivityData__TypeInfo);
+		        if (DAT_ram_009d3e38 == 1) break;
+		        DAT_ram_009d3e38 = 0;
+		        import::env::invoke_viiii
+		                  (s_struct_Uniforms___color__array<v_ram_00001b87 + 8,uVar3,param1,
+		                   Method_Gameplay_GdEvents_View_EventView_MilestonesEventSectionView_HandleActivityClickEvent__
+		                   ,0);
+		        if (DAT_ram_009d3e38 == 1) break;
+		        DAT_ram_009d3e38 = 0;
+		        import::env::invoke_viii
+		                  (s_struct_Uniforms___color__array<v_ram_00001b87 + 0xd,uVar8,uVar3,
+		                   Method_UnityEngine_Events_UnityEvent_GameActivityData__AddListener__);
+		      } while (DAT_ram_009d3e38 != 1);
+		      DAT_ram_009d3e38 = 0;
+		      uVar3 = import::env::__cxa_find_matching_catch_3(&DAT_ram_0072c9c8);
+		code_r0x811f699e:
+		      iVar7 = global_1;
+		      iVar4 = import::env::llvm_eh_typeid_for(&DAT_ram_0072c9c8);
+		      if (iVar7 == iVar4) {
+		        piVar5 = (int *)import::env::__cxa_begin_catch(uVar3);
+		        iVar7 = *piVar5;
+		        DAT_ram_009d3e38 = 0;
+		        local_18 = iVar7;
+		        import::env::invoke_v(0x123);
+		        iVar4 = DAT_ram_009d3e38;
+		        DAT_ram_009d3e38 = 0;
+		        if (iVar4 != 1) {
+		code_r0x811f69e7:
+		          piVar5 = local_c;
+		          DAT_ram_009d3e38 = 0;
+		          if (local_c != (int *)0x0) {
+		            uVar1 = 0;
+		            iVar4 = *local_c;
+		            if (*(ushort *)(iVar4 + 0xb6) != 0) {
+		              do {
+		                if (System_IDisposable_TypeInfo == *(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8)) {
+		                  puVar6 = (uint *)(iVar4 + *(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8 + 4) * 8 +
+		                                   0xc0);
+		                  goto code_r0x811f6a5f;
+		                }
+		                uVar1 = uVar1 + 1;
+		              } while (*(ushort *)(iVar4 + 0xb6) != uVar1);
+		            }
+		            puVar6 = (uint *)func_ii_1080(local_c,System_IDisposable_TypeInfo,0);
+		code_r0x811f6a5f:
+		            (**(code **)((ulonglong)*puVar6 * 4))(piVar5,puVar6[1]);
+		          }
+		          if (iVar7 != 0) {
+		            System_Data_DataSet__ValidateLocaleConstraint(iVar7);
+		            do {
+		              halt_trap();
+		            } while( true );
+		          }
+		          return;
+		        }
+		        uVar3 = import::env::__cxa_find_matching_catch_2();
+		      }
+		      DAT_ram_009d3e38 = 0;
+		      import::env::invoke_ii(s_struct_Uniforms___color__array<v_ram_00001f04 + 0x287,&local_18);
+		      goto joined_r0x811f6aae;
+		    }
+		    uVar3 = import::env::__cxa_find_matching_catch_2();
+		  }
+		  DAT_ram_009d3e38 = 0;
+		  import::env::invoke_ii(s_struct_Uniforms___color__array<v_ram_00001f04 + 0x285,&local_18);
+		joined_r0x811f6aae:
+		  if (DAT_ram_009d3e38 == 1) {
+		    DAT_ram_009d3e38 = 0;
+		    import::env::__cxa_find_matching_catch_3(0);
+		    unnamed_function_937();
+		    do {
+		      halt_trap();
+		    } while( true );
+		  }
+		  DAT_ram_009d3e38 = 0;
+		  import::env::__resumeException(uVar3);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
 		}
 
 		// Token: 0x06002C74 RID: 11380 RVA: 0x00002050 File Offset: 0x00000250
@@ -246,6 +692,27 @@ namespace Gameplay.GdEvents.View.EventView
 		[Address(RVA = "0x7D03", Offset = "0x7D03", VA = "0x7D03")]
 		public void SetActivities(IEnumerable<ActivityGroupData> activities)
 		{
+		/* --- GHIDRA: SetActivities ---
+		void Gameplay_GdEvents_View_EventView_MilestonesEventSectionView__SetActivities
+		               (int param1,undefined4 param2)
+		
+		{
+		  undefined4 param1_00;
+		  
+		  if (DAT_ram_00a5a2c2 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_UnityEngine_Events_UnityEvent_GameActivityData___ctor__);
+		    Mono_Security_ASN1__get_Item(&UnityEngine_Events_UnityEvent_GameActivityData__TypeInfo);
+		    DAT_ram_00a5a2c2 = '\x01';
+		  }
+		  param1_00 = unnamed_function_1417(UnityEngine_Events_UnityEvent_GameActivityData__TypeInfo);
+		  Sirenix_Serialization_UnityEventFormatter_object___GetUninitializedObject
+		            (param1_00,Method_UnityEngine_Events_UnityEvent_GameActivityData___ctor__);
+		  *(undefined4 *)(param1 + 0x60) = param1_00;
+		  UnityEngine_RectTransform__GetParentSize(param1,0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06002C75 RID: 11381 RVA: 0x00002050 File Offset: 0x00000250
@@ -363,4 +830,44 @@ namespace Gameplay.GdEvents.View.EventView
 		[NonSerialized]
 		public UnityEvent<GameActivityData> ActivityItemClickEvent;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_GiftsContent ---
+		void Gameplay_GdEvents_View_EventView_MilestonesEventSectionView__get_GiftsContent
+		               (int param1,undefined4 param2)
+		
+		{
+		  uint uVar1;
+		  uint *puVar2;
+		  int *param1_00;
+		  int iVar3;
+		  
+		  if (DAT_ram_00a5a2a9 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_MVC_Interfaces_IViewMediator_TypeInfo);
+		    DAT_ram_00a5a2a9 = '\x01';
+		  }
+		  param1_00 = *(int **)(param1 + 0x10);
+		  iVar3 = *param1_00;
+		  if (*(ushort *)(iVar3 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (Core_MVC_Interfaces_IViewMediator_TypeInfo == *(int *)(*(int *)(iVar3 + 0x58) + uVar1 * 8)
+		         ) {
+		        puVar2 = (uint *)(iVar3 + *(int *)(*(int *)(iVar3 + 0x58) + uVar1 * 8 + 4) * 8 + 0xc0);
+		        goto code_r0x811f5f64;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar3 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(param1_00,Core_MVC_Interfaces_IViewMediator_TypeInfo,0);
+		code_r0x811f5f64:
+		  (**(code **)((ulonglong)*puVar2 * 4))(param1_00,puVar2[1]);
+		  *(undefined4 *)(param1 + 0x10) = 0;
+		  *(undefined4 *)(param1 + 0x18) = 0;
+		  func_ii_14558(*(undefined4 *)(param1 + 0x60),0);
+		  return;
+		}
+		*/
+
 }
