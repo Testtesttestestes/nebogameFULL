@@ -67,6 +67,50 @@ namespace Gameplay.WorldAxis.Colossus.Combat.Model
 		[Address(RVA = "0x6501", Offset = "0x6501", VA = "0x6501", Slot = "5")]
 		public override void Dispose()
 		{
+		/* --- GHIDRA: Dispose ---
+		void Gameplay_WorldAxis_Colossus_Combat_Model_ColossusCombatModel__Dispose
+		               (int param1,int param2,undefined4 param3,undefined4 param4,undefined4 param5,
+		               undefined4 param6,undefined4 param7)
+		
+		{
+		  int iVar1;
+		  int iVar2;
+		  
+		  if (DAT_ram_00a58c1b == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_System_Array_Empty_long___);
+		    Mono_Security_ASN1__get_Item(&long___TypeInfo);
+		    DAT_ram_00a58c1b = '\x01';
+		  }
+		  iVar2 = Method_System_Array_Empty_long___;
+		  iVar1 = *(int *)(Method_System_Array_Empty_long___ + 0x1c);
+		  if (iVar1 == 0) {
+		    System_ReadOnlySpan_char___GetPinnableReference(Method_System_Array_Empty_long___);
+		    iVar1 = *(int *)(iVar2 + 0x1c);
+		  }
+		  iVar1 = *(int *)(iVar1 + 8);
+		  if ((*(byte *)(iVar1 + 0xbd) & 1) == 0) {
+		    iVar1 = func_ii_1079(iVar1);
+		  }
+		  if (*(int *)(iVar1 + 0x74) == 0) {
+		    func_ii_306000(iVar1);
+		  }
+		  iVar2 = *(int *)(*(int *)(iVar2 + 0x1c) + 8);
+		  if ((*(byte *)(iVar2 + 0xbd) & 1) == 0) {
+		    iVar2 = func_ii_1079(iVar2);
+		  }
+		  *(undefined4 *)(param1 + 100) = **(undefined4 **)(iVar2 + 0x5c);
+		  Gameplay_VortexCombat_Model_VortexCombatModel__Dispose(param1,param3,param4,param5,param6,0);
+		  *(int *)(param1 + 0x68) = param2;
+		  if (*(int *)(param2 + 0x10) != 0) {
+		    iVar2 = Mono_Security_ASN1Convert__ToOid(long___TypeInfo,1);
+		    *(ulonglong *)(iVar2 + 0x10) =
+		         (ulonglong)*(uint *)(*(int *)(*(int *)(param1 + 0x68) + 0x10) + 0xc);
+		    *(int *)(param1 + 100) = iVar2;
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600130C RID: 4876 RVA: 0x00002050 File Offset: 0x00000250
@@ -81,6 +125,30 @@ namespace Gameplay.WorldAxis.Colossus.Combat.Model
 		[Address(RVA = "0x6503", Offset = "0x6503", VA = "0x6503", Slot = "12")]
 		public override ResourceSet GetNextCombatCost()
 		{
+		/* --- GHIDRA: GetNextCombatCost ---
+		void Gameplay_WorldAxis_Colossus_Combat_Model_ColossusCombatModel__GetNextCombatCost
+		               (undefined4 param1,undefined4 *param2,undefined4 *param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a58c1c == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_GameLocalization_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_2800);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_2799);
+		    DAT_ram_00a58c1c = '\x01';
+		  }
+		  if (*(int *)(Core_GameLocalization_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Core_GameLocalization_TypeInfo);
+		  }
+		  uVar1 = Core_Extensions_Dict_CultDicExt__GetTitle(StringLiteral_2800,1,0,1,0,0,0,0);
+		  *param2 = uVar1;
+		  uVar1 = func_ii_7508(StringLiteral_2799,1,0,1,0,0,0,0);
+		  *param3 = uVar1;
+		  return;
+		}
+		*/
+
 			return null;
 		}
 
@@ -91,4 +159,18 @@ namespace Gameplay.WorldAxis.Colossus.Combat.Model
 		{
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: set_Params ---
+		void Gameplay_WorldAxis_Colossus_Combat_Model_ColossusCombatModel__set_Params
+		               (int param1,undefined4 param2)
+		
+		{
+		  Gameplay_VortexCombat_Model_VortexCombatModel__get_CombatParams(param1,0);
+		  *(undefined4 *)(param1 + 0x68) = 0;
+		  return;
+		}
+		*/
+
 }

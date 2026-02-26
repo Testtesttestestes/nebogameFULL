@@ -60,4 +60,57 @@ namespace UI.Elements.RightPanel
 		[SerializeField]
 		private LevelCounter _levelCounter;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: set_Title ---
+		void UI_Elements_RightPanel_TitleWithLevel__set_Title
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  undefined4 uVar1;
+		  int *piVar2;
+		  int iVar3;
+		  undefined4 local_4;
+		  
+		  piVar2 = *(int **)(*(int *)(param1 + 0x14) + 0x10);
+		  local_4 = param2;
+		  uVar1 = Protocol_Combat_ProtoPlayerActionEvt___ctor(&local_4,0);
+		  iVar3 = *piVar2;
+		  (**(code **)((ulonglong)*(uint *)(iVar3 + 0x2d0) * 4))
+		            (piVar2,uVar1,*(undefined4 *)(iVar3 + 0x2d4));
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_Level ---
+		void UI_Elements_RightPanel_TitleWithLevel__set_Level(int param1,int param2,undefined4 param3)
+		
+		{
+		  int param1_00;
+		  undefined4 uVar1;
+		  
+		  *(int *)(param1 + 0x18) = param2;
+		  if (*(int *)(param1 + 0x1c) != 0) {
+		    func_ii_7950(*(int *)(param1 + 0x1c),0);
+		    *(undefined4 *)(param1 + 0x1c) = 0;
+		    param2 = *(int *)(param1 + 0x18);
+		  }
+		  if (param2 != 0) {
+		    if (DAT_ram_00a5b861 == '\0') {
+		      Mono_Security_ASN1__get_Item(&UI_AbstractBacktimeView__DisplayCurrentBackTime_d__13_TypeInfo);
+		      DAT_ram_00a5b861 = '\x01';
+		    }
+		    param1_00 = unnamed_function_1417
+		                          (UI_AbstractBacktimeView__DisplayCurrentBackTime_d__13_TypeInfo);
+		    *(int *)(param1_00 + 0x10) = param1;
+		    *(undefined4 *)(param1_00 + 8) = 0;
+		    uVar1 = Utils_CoroutineSource__GetMono(param1_00,0);
+		    *(undefined4 *)(param1 + 0x1c) = uVar1;
+		  }
+		  return;
+		}
+		*/
+
 }

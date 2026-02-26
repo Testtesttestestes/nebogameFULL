@@ -46,6 +46,27 @@ namespace Gameplay.UserInterface.View.Menu
 		[Address(RVA = "0x68BD", Offset = "0x68BD", VA = "0x68BD", Slot = "22")]
 		protected override void OnShow(MenuWindow.MenuWindowArgs args)
 		{
+		/* --- GHIDRA: OnShow ---
+		void Gameplay_UserInterface_View_Menu_MenuWindow__OnShow(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  
+		  if (DAT_ram_00a59881 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UI_Windows_ClosableBaseWindow_MenuWindow_MenuWindowArgs__OnClose__);
+		    DAT_ram_00a59881 = '\x01';
+		  }
+		  UI_Windows_ClosableBaseWindow_object___OnClickBack
+		            (param1,Method_UI_Windows_ClosableBaseWindow_MenuWindow_MenuWindowArgs__OnClose__);
+		  iVar1 = **(int **)(param1 + 0x40);
+		  (**(code **)((ulonglong)*(uint *)(iVar1 + 0x130) * 4))
+		            (*(int **)(param1 + 0x40),*(undefined4 *)(iVar1 + 0x134));
+		  *(undefined4 *)(param1 + 0x40) = 0;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x060016FF RID: 5887 RVA: 0x00002050 File Offset: 0x00000250
@@ -53,6 +74,46 @@ namespace Gameplay.UserInterface.View.Menu
 		[Address(RVA = "0x68BE", Offset = "0x68BE", VA = "0x68BE", Slot = "19")]
 		protected override void OnClose()
 		{
+		/* --- GHIDRA: OnClose ---
+		void Gameplay_UserInterface_View_Menu_MenuWindow__OnClose
+		               (int param1,int param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  undefined4 param2_00;
+		  
+		  if (param2 == 1) {
+		    Gameplay_AccountLinker_ProgressSaver_Controller_ProgressSaverEnterPointFromMenuViewMediator__ValidateShowProgressButton
+		              (*(undefined4 *)(param1 + 0x40),0);
+		    return;
+		  }
+		  if (param2 == 2) {
+		    Gameplay_AccountLinker_ProgressSaver_Controller_ProgressSaverEnterPointFromMenuViewMediator__ShowSaveProgress
+		              (*(undefined4 *)(param1 + 0x40),0);
+		    return;
+		  }
+		  if (param2 == 3) {
+		    Gameplay_AccountLinker_ProgressSaver_Controller_ProgressSaverEnterPointFromMenuViewMediator__ShowSettings
+		              (*(undefined4 *)(param1 + 0x40),0);
+		    return;
+		  }
+		  if (param2 == 4) {
+		    Gameplay_AccountLinker_ProgressSaver_Controller_ProgressSaverEnterPointFromMenuViewMediator__ShowNotifications
+		              (*(undefined4 *)(param1 + 0x40),0);
+		    return;
+		  }
+		  uVar1 = unnamed_function_2232(&System_NotSupportedException_TypeInfo);
+		  uVar1 = unnamed_function_1417(uVar1);
+		  func_ii_20706(uVar1,0);
+		  param2_00 = unnamed_function_2232(&Method_Gameplay_UserInterface_View_Menu_MenuWindow_SelectTab__)
+		  ;
+		  func_ii_1050(uVar1,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
 		}
 
 		// Token: 0x06001700 RID: 5888 RVA: 0x00002050 File Offset: 0x00000250
@@ -60,6 +121,21 @@ namespace Gameplay.UserInterface.View.Menu
 		[Address(RVA = "0x68BF", Offset = "0x68BF", VA = "0x68BF")]
 		public void SelectTab(MenuWindow.MenuWindowArgs.SelectedTab tab, LocatorPayload payload)
 		{
+		/* --- GHIDRA: SelectTab ---
+		void Gameplay_UserInterface_View_Menu_MenuWindow__SelectTab(undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a59882 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UI_Windows_ClosableBaseWindow_MenuWindow_MenuWindowArgs___ctor__);
+		    DAT_ram_00a59882 = '\x01';
+		  }
+		  UI_MonoBehaviourWithStates_ClientStateChangedDelegate___Il2CppFullySharedGenericStructType___Invoke
+		            (param1,Method_UI_Windows_ClosableBaseWindow_MenuWindow_MenuWindowArgs___ctor__);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06001701 RID: 5889 RVA: 0x00002050 File Offset: 0x00000250
@@ -173,4 +249,122 @@ namespace Gameplay.UserInterface.View.Menu
 			}
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_MenuMenuView ---
+		void Gameplay_UserInterface_View_Menu_MenuWindow__get_MenuMenuView
+		               (int param1,int param2,undefined4 param3)
+		
+		{
+		  uint *puVar1;
+		  undefined4 param2_00;
+		  undefined4 param3_00;
+		  longlong lVar2;
+		  int iVar3;
+		  int *piVar4;
+		  undefined4 param4;
+		  undefined4 param6;
+		  undefined4 param5;
+		  int iVar5;
+		  uint uVar6;
+		  
+		  if (DAT_ram_00a59880 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UI_Windows_ClosableBaseWindow_MenuWindow_MenuWindowArgs__OnShow__);
+		    Mono_Security_ASN1__get_Item(&Core_Gameplay_IGame_TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Gameplay_AccountLinker_ProgressSaver_Controller_ProgressSaverEnterPointFromMenuViewMediator_TypeInfo
+		              );
+		    DAT_ram_00a59880 = '\x01';
+		  }
+		  func_ii_7769(param1,param2,
+		               Method_UI_Windows_ClosableBaseWindow_MenuWindow_MenuWindowArgs__OnShow__);
+		  iVar3 = *(int *)(param1 + 0x3c);
+		  lVar2 = System_Collections_Generic_LinkedList_Enumerator_object___MoveNext
+		                    (*(undefined4 *)(param2 + 0x18),0);
+		  if (lVar2 != *(longlong *)(iVar3 + 0x48)) {
+		    *(longlong *)(iVar3 + 0x48) = lVar2;
+		    Gameplay_UserInterface_View_Menu_MenuView__set_UserId(iVar3,iVar3);
+		  }
+		  if (DAT_ram_00a6456f == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_Gameplay_Game_TypeInfo);
+		    DAT_ram_00a6456f = '\x01';
+		  }
+		  piVar4 = (int *)**(undefined4 **)(Core_Gameplay_Game_TypeInfo + 0x5c);
+		  iVar3 = *piVar4;
+		  if (*(ushort *)(iVar3 + 0xb6) != 0) {
+		    uVar6 = 0;
+		    do {
+		      if (Core_Gameplay_IGame_TypeInfo == *(int *)(*(int *)(iVar3 + 0x58) + uVar6 * 8)) {
+		        puVar1 = (uint *)(*(int *)(*(int *)(iVar3 + 0x58) + uVar6 * 8 + 4) * 8 + iVar3 + 0x1a8);
+		        goto code_r0x8107e422;
+		      }
+		      uVar6 = uVar6 + 1;
+		    } while (*(ushort *)(iVar3 + 0xb6) != uVar6);
+		  }
+		  puVar1 = (uint *)func_ii_1080(piVar4,Core_Gameplay_IGame_TypeInfo,0x1d);
+		code_r0x8107e422:
+		  iVar3 = (**(code **)((ulonglong)*puVar1 * 4))(piVar4,puVar1[1]);
+		  iVar5 = **(int **)(iVar3 + 0x18);
+		  param2_00 = (**(code **)((ulonglong)*(uint *)(iVar5 + 0x100) * 4))
+		                        (*(int **)(iVar3 + 0x18),*(undefined4 *)(iVar5 + 0x104));
+		  if (DAT_ram_00a6456f == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_Gameplay_Game_TypeInfo);
+		    DAT_ram_00a6456f = '\x01';
+		  }
+		  piVar4 = (int *)**(undefined4 **)(Core_Gameplay_Game_TypeInfo + 0x5c);
+		  iVar3 = *piVar4;
+		  if (*(ushort *)(iVar3 + 0xb6) != 0) {
+		    uVar6 = 0;
+		    do {
+		      if (Core_Gameplay_IGame_TypeInfo == *(int *)(*(int *)(iVar3 + 0x58) + uVar6 * 8)) {
+		        puVar1 = (uint *)(*(int *)(*(int *)(iVar3 + 0x58) + uVar6 * 8 + 4) * 8 + iVar3 + 0x1a8);
+		        goto code_r0x8107e4e7;
+		      }
+		      uVar6 = uVar6 + 1;
+		    } while (*(ushort *)(iVar3 + 0xb6) != uVar6);
+		  }
+		  puVar1 = (uint *)func_ii_1080(piVar4,Core_Gameplay_IGame_TypeInfo,0x1d);
+		code_r0x8107e4e7:
+		  iVar3 = (**(code **)((ulonglong)*puVar1 * 4))(piVar4,puVar1[1]);
+		  iVar5 = **(int **)(iVar3 + 0x18);
+		  param3_00 = (**(code **)((ulonglong)*(uint *)(iVar5 + 0x110) * 4))
+		                        (*(int **)(iVar3 + 0x18),*(undefined4 *)(iVar5 + 0x114));
+		  if (DAT_ram_00a6456f == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_Gameplay_Game_TypeInfo);
+		    DAT_ram_00a6456f = '\x01';
+		  }
+		  piVar4 = (int *)**(undefined4 **)(Core_Gameplay_Game_TypeInfo + 0x5c);
+		  iVar3 = *piVar4;
+		  if (*(ushort *)(iVar3 + 0xb6) != 0) {
+		    uVar6 = 0;
+		    do {
+		      if (Core_Gameplay_IGame_TypeInfo == *(int *)(*(int *)(iVar3 + 0x58) + uVar6 * 8)) {
+		        puVar1 = (uint *)(*(int *)(*(int *)(iVar3 + 0x58) + uVar6 * 8 + 4) * 8 + iVar3 + 0x1a8);
+		        goto code_r0x8107e5ac;
+		      }
+		      uVar6 = uVar6 + 1;
+		    } while (*(ushort *)(iVar3 + 0xb6) != uVar6);
+		  }
+		  puVar1 = (uint *)func_ii_1080(piVar4,Core_Gameplay_IGame_TypeInfo,0x1d);
+		code_r0x8107e5ac:
+		  iVar3 = (**(code **)((ulonglong)*puVar1 * 4))(piVar4,puVar1[1]);
+		  param4 = *(undefined4 *)(iVar3 + 0x18);
+		  param6 = *(undefined4 *)(param2 + 0x24);
+		  param5 = *(undefined4 *)(param2 + 0x20);
+		  piVar4 = (int *)unnamed_function_1417
+		                            (
+		                            Gameplay_AccountLinker_ProgressSaver_Controller_ProgressSaverEnterPointFromMenuViewMediator_TypeInfo
+		                            );
+		  Gameplay_AccountLinker_ProgressSaver_Controller_ProgressSaverController___c__DisplayClass14_0___HandleInvalidNickErrorEvent_b__0
+		            (piVar4,param2_00,param3_00,param4,param5,param6,0);
+		  *(int **)(param1 + 0x40) = piVar4;
+		  (**(code **)((ulonglong)*(uint *)(*piVar4 + 0x160) * 4))
+		            (piVar4,*(undefined4 *)(param1 + 0x3c),*(undefined4 *)(*piVar4 + 0x164));
+		  return;
+		}
+		*/
+
 }

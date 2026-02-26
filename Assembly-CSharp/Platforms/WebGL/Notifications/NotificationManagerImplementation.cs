@@ -65,6 +65,20 @@ namespace Platforms.WebGL.Notifications
 		[Address(RVA = "0x5B38", Offset = "0x5B38", VA = "0x5B38", Slot = "12")]
 		public void Deinit()
 		{
+		/* --- GHIDRA: Deinit ---
+		undefined4
+		Platforms_WebGL_Notifications_NotificationManagerImplementation__Deinit
+		          (undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a5b832 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_11659);
+		    DAT_ram_00a5b832 = '\x01';
+		  }
+		  return StringLiteral_11659;
+		}
+		*/
+
 		}
 
 		// Token: 0x170000CA RID: 202
@@ -85,6 +99,16 @@ namespace Platforms.WebGL.Notifications
 		[Address(RVA = "0x5B3A", Offset = "0x5B3A", VA = "0x5B3A", Slot = "14")]
 		public void Dispose()
 		{
+		/* --- GHIDRA: Dispose ---
+		void Platforms_WebGL_Notifications_NotificationManagerImplementation__Dispose
+		               (undefined4 param1,undefined4 param2,undefined4 param3,undefined4 param4,
+		               undefined4 param5,undefined4 param6,undefined4 param7,undefined4 param8)
+		
+		{
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06000748 RID: 1864 RVA: 0x00002050 File Offset: 0x00000250
@@ -115,4 +139,117 @@ namespace Platforms.WebGL.Notifications
 		{
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: add_InitCompleteEvent ---
+		void Platforms_WebGL_Notifications_NotificationManagerImplementation__add_InitCompleteEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a5b82f == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_IBaseManager__TypeInfo);
+		    DAT_ram_00a5b82f = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 8);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = func_ii_7048(param1_00,param2,0);
+		    param2_00 = System_Action_IBaseManager__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_IBaseManager__TypeInfo), iVar2 == 0)) break;
+		    iVar2 = func_ii_4329(param1 + 8,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: remove_InitCompleteEvent ---
+		void Platforms_WebGL_Notifications_NotificationManagerImplementation__remove_InitCompleteEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a5b830 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_IBaseManager__TypeInfo);
+		    DAT_ram_00a5b830 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0xc);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = UnityEngine_UI_Image__set_sprite(param1_00,param2,0);
+		    param2_00 = System_Action_IBaseManager__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_IBaseManager__TypeInfo), iVar2 == 0)) break;
+		    iVar2 = func_ii_4329(param1 + 0xc,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: add_DeinitCompleteEvent ---
+		void Platforms_WebGL_Notifications_NotificationManagerImplementation__add_DeinitCompleteEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a5b831 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_IBaseManager__TypeInfo);
+		    DAT_ram_00a5b831 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0xc);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = func_ii_7048(param1_00,param2,0);
+		    param2_00 = System_Action_IBaseManager__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_IBaseManager__TypeInfo), iVar2 == 0)) break;
+		    iVar2 = func_ii_4329(param1 + 0xc,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
 }

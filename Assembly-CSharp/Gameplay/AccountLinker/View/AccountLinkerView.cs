@@ -95,6 +95,18 @@ namespace Gameplay.AccountLinker.View
 		[Address(RVA = "0xA4BE", Offset = "0xA4BE", VA = "0xA4BE")]
 		public AccountLinkerView()
 		{
+		/* --- GHIDRA: .ctor ---
+		undefined4 Gameplay_AccountLinker_View_AccountLinkerView___ctor(undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a5890b == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_12547);
+		    DAT_ram_00a5890b = '\x01';
+		  }
+		  return StringLiteral_12547;
+		}
+		*/
+
 		}
 
 		// Token: 0x04002F3C RID: 12092
@@ -151,4 +163,23 @@ namespace Gameplay.AccountLinker.View
 			SIGNIN
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_SigninVariantsView ---
+		void Gameplay_AccountLinker_View_AccountLinkerView__get_SigninVariantsView
+		               (undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a5890a == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UI_MonoBehaviourWithStates_AccountLinkerView_States___ctor__);
+		    DAT_ram_00a5890a = '\x01';
+		  }
+		  ScreenAdaptation_Common_AppSize__Update
+		            (param1,Method_UI_MonoBehaviourWithStates_AccountLinkerView_States___ctor__);
+		  return;
+		}
+		*/
+
 }

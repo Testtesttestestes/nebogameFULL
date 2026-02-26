@@ -13,6 +13,24 @@ namespace Gameplay.RegisterV2.View.CultSelector
 		[Address(RVA = "0x72B8", Offset = "0x72B8", VA = "0x72B8")]
 		public CultSectorList()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_RegisterV2_View_CultSelector_CultSectorList___ctor
+		               (undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a58381 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UI_Elements_GenericList_SelectedGenericListArgs_CultListElementArgs___ctor__)
+		    ;
+		    DAT_ram_00a58381 = '\x01';
+		  }
+		  UI_Elements_GenericList_SelectableListElement_object___get_Data
+		            (param1,
+		             Method_UI_Elements_GenericList_SelectedGenericListArgs_CultListElementArgs___ctor__);
+		  return;
+		}
+		*/
+
 		}
 	}
 }

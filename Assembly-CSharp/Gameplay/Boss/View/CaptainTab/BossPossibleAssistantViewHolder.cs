@@ -44,4 +44,26 @@ namespace Gameplay.Boss.View.CaptainTab
 		{
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: set_AssistantView ---
+		void Gameplay_Boss_View_CaptainTab_BossPossibleAssistantViewHolder__set_AssistantView
+		               (int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a57a5f == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_UnityEngine_Component_GetComponent_BossUserListItemView___)
+		    ;
+		    DAT_ram_00a57a5f = '\x01';
+		  }
+		  uVar1 = func_ii_5677(*(undefined4 *)(param1 + 8),
+		                       Method_UnityEngine_Component_GetComponent_BossUserListItemView___);
+		  *(undefined4 *)(param1 + 0x14) = uVar1;
+		  return;
+		}
+		*/
+
 }

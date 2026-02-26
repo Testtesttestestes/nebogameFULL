@@ -23,6 +23,34 @@ namespace Gameplay.UserInterface.View
 		[Address(RVA = "0x6842", Offset = "0x6842", VA = "0x6842")]
 		public ShowHideUIElementByRestrictions()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_UserInterface_View_ShowHideUIElementByRestrictions___ctor
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4,undefined4 param5)
+		
+		{
+		  int param5_00;
+		  int iVar1;
+		  int iVar2;
+		  int param1_00;
+		  
+		  iVar1 = *(int *)(param1 + 8);
+		  iVar2 = *(int *)(iVar1 + 0xc);
+		  if (0 < iVar2) {
+		    param5_00 = 0;
+		    do {
+		      param1_00 = *(int *)(iVar1 + param5_00 * 4 + 0x10);
+		      if (param1_00 != 0) {
+		        Gameplay_UserInterface_View_RankView_RankImages___ctor
+		                  (param1_00,param2,param3,param4,param5_00);
+		        iVar2 = *(int *)(iVar1 + 0xc);
+		      }
+		      param5_00 = param5_00 + 1;
+		    } while (param5_00 < iVar2);
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x04000BD6 RID: 3030

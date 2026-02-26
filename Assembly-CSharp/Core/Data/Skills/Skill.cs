@@ -12,6 +12,22 @@ namespace Core.Data.Skills
 		[Address(RVA = "0xB0CF", Offset = "0xB0CF", VA = "0xB0CF", Slot = "3")]
 		public override string ToString()
 		{
+		/* --- GHIDRA: ToString ---
+		uint Core_Data_Skills_Skill__ToString(int param1,int param2,undefined4 param3)
+		
+		{
+		  uint uVar1;
+		  ulonglong uVar2;
+		  
+		  uVar2 = *(ulonglong *)(param2 + 0x10) & 0x80000000;
+		  uVar1 = (uint)(uVar2 >> 0x1f);
+		  if ((*(byte *)(param1 + 0x13) & 0x80) == 0) {
+		    uVar1 = (uint)(uVar2 == 0);
+		  }
+		  return uVar1;
+		}
+		*/
+
 			return null;
 		}
 
@@ -33,6 +49,34 @@ namespace Core.Data.Skills
 		[Address(RVA = "0xB0D0", Offset = "0xB0D0", VA = "0xB0D0")]
 		public bool EqualType(Skill skill)
 		{
+		/* --- GHIDRA: EqualType ---
+		int Core_Data_Skills_Skill__EqualType(undefined8 param1,int param2,undefined4 param3)
+		
+		{
+		  int param2_00;
+		  longlong local_8;
+		  
+		  if (DAT_ram_00a6082c == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_1226);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_708);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_5);
+		    DAT_ram_00a6082c = '\x01';
+		  }
+		  local_8 = (longlong)(int)(((uint)param1 & 0x40000000) << 1 | (uint)param1 & 0x7fffffff);
+		  param2_00 = UnityEngine_GameObject__SetActive(&local_8,0);
+		  if (param2_00 == 0) {
+		    param2_00 = StringLiteral_5;
+		  }
+		  if ((param2 != 0) && (0 < local_8)) {
+		    param2_00 = Mono_Security_X509_X509Crl_X509CrlEntry___ctor(StringLiteral_1226,param2_00,0);
+		  }
+		  if (((uint)param1 & 0x80000000) != 0) {
+		    param2_00 = Mono_Security_X509_X509Crl_X509CrlEntry___ctor(param2_00,StringLiteral_708,0);
+		  }
+		  return param2_00;
+		}
+		*/
+
 			return default(bool);
 		}
 
@@ -57,6 +101,21 @@ namespace Core.Data.Skills
 		[Address(RVA = "0xB0D2", Offset = "0xB0D2", VA = "0xB0D2")]
 		public Skill()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Core_Data_Skills_Skill___ctor(undefined4 param1,int param2,undefined4 param3)
+		
+		{
+		  if (DAT_ram_00a6082d == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_System_Collections_Generic_Dictionary_int__Skill__Add__);
+		    DAT_ram_00a6082d = '\x01';
+		  }
+		  UnityEngine_Object__GetInstanceID
+		            (param1,*(undefined4 *)(param2 + 8),param2,
+		             Method_System_Collections_Generic_Dictionary_int__Skill__Add__);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x040035D7 RID: 13783
@@ -69,4 +128,31 @@ namespace Core.Data.Skills
 		[FieldOffset(Offset = "0x10")]
 		public long Value;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_IsProcent ---
+		int Core_Data_Skills_Skill__get_IsProcent(undefined8 param1,undefined4 param2)
+		
+		{
+		  int param1_00;
+		  longlong local_8;
+		  
+		  if (DAT_ram_00a607d9 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_708);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_5);
+		    DAT_ram_00a607d9 = '\x01';
+		  }
+		  local_8 = (longlong)(int)(((uint)param1 & 0x40000000) << 1 | (uint)param1 & 0x7fffffff);
+		  param1_00 = UnityEngine_GameObject__SetActive(&local_8,0);
+		  if (param1_00 == 0) {
+		    param1_00 = StringLiteral_5;
+		  }
+		  if (((uint)param1 & 0x80000000) != 0) {
+		    param1_00 = Mono_Security_X509_X509Crl_X509CrlEntry___ctor(param1_00,StringLiteral_708,0);
+		  }
+		  return param1_00;
+		}
+		*/
+
 }

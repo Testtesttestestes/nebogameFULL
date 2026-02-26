@@ -34,6 +34,118 @@ namespace Gameplay.Inventory.View.Info.InfoBox
 		[Address(RVA = "0x7936", Offset = "0x7936", VA = "0x7936")]
 		private void HandleBacktimeChanged()
 		{
+		/* --- GHIDRA: HandleBacktimeChanged ---
+		void Gameplay_Inventory_View_Info_InfoBox_BackTimeRowView__HandleBacktimeChanged
+		               (int param1,undefined4 param2)
+		
+		{
+		  undefined4 in_register_20000004;
+		  float fVar1;
+		  undefined4 uVar2;
+		  int *piVar3;
+		  int *piVar4;
+		  uint uVar5;
+		  double param1_00;
+		  int iVar6;
+		  undefined8 local_50;
+		  undefined8 local_48;
+		  undefined8 local_40;
+		  undefined8 local_38;
+		  undefined8 local_30;
+		  undefined8 local_28;
+		  undefined8 local_20;
+		  undefined8 local_18;
+		  float4 local_10;
+		  float4 local_c;
+		  float4 local_8;
+		  float4 local_4;
+		  
+		  if (DAT_ram_00a5a0d1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_Data_InfoRows_BackTimeRow_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Core_GameLocalization_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Utils_TimeUtils_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_15062);
+		    DAT_ram_00a5a0d1 = '\x01';
+		  }
+		  fVar1 = func_ii_7103(*(undefined4 *)(param1 + 0x38),0);
+		  piVar3 = *(int **)(param1 + 0x24);
+		  if (fVar1 == 0.0) {
+		    if (*(int *)(Core_GameLocalization_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(Core_GameLocalization_TypeInfo);
+		    }
+		    uVar2 = func_ii_7508(StringLiteral_15062,1,0,1,0,0,0,0);
+		  }
+		  else {
+		    if (*(int *)(Utils_TimeUtils_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(Utils_TimeUtils_TypeInfo);
+		    }
+		    param1_00 = (double)fVar1;
+		    uVar2 = Utils_TimeUtils__DateFormat(param1_00,0);
+		    in_register_20000004 = (undefined4)((ulonglong)param1_00 >> 0x20);
+		  }
+		  iVar6 = *piVar3;
+		  (**(code **)((ulonglong)*(uint *)(iVar6 + 0x2d0) * 4))
+		            (CONCAT44(in_register_20000004,piVar3),uVar2,*(undefined4 *)(iVar6 + 0x2d4));
+		  piVar3 = *(int **)(param1 + 0x20);
+		  if (piVar3 != (int *)0x0) {
+		    if (((uint)*(byte *)(*piVar3 + 0xb8) <
+		         (uint)*(byte *)(Core_Data_InfoRows_BackTimeRow_TypeInfo + 0xb8)) ||
+		       (*(int *)(*(int *)(*piVar3 + 100) +
+		                 (uint)*(byte *)(Core_Data_InfoRows_BackTimeRow_TypeInfo + 0xb8) * 4 + -4) !=
+		        Core_Data_InfoRows_BackTimeRow_TypeInfo)) {
+		      System_Activator__CreateInstance(piVar3,Core_Data_InfoRows_BackTimeRow_TypeInfo);
+		      do {
+		        halt_trap();
+		      } while( true );
+		    }
+		  }
+		  piVar4 = *(int **)(param1 + 0x10);
+		  if (fVar1 <= (float)piVar3[5]) {
+		    uVar5 = *(uint *)(param1 + 0x28);
+		    local_8 = (float4)((float)(uVar5 >> 0x10 & 0xff) / 255.0);
+		    local_4 = (float4)((float)(uVar5 >> 0x18) / 255.0);
+		    local_10 = (float4)((float)(uVar5 & 0xff) / 255.0);
+		    local_c = (float4)((float)(uVar5 >> 8 & 0xff) / 255.0);
+		    local_18 = CONCAT44(local_4,local_8);
+		    local_20 = CONCAT44(local_c,local_10);
+		    (**(code **)((ulonglong)*(uint *)(*piVar4 + 0x178) * 4))
+		              (piVar4,&local_20,*(undefined4 *)(*piVar4 + 0x17c));
+		    uVar5 = *(uint *)(param1 + 0x30);
+		    local_8 = (float4)((float)(uVar5 >> 0x10 & 0xff) / 255.0);
+		    local_4 = (float4)((float)(uVar5 >> 0x18) / 255.0);
+		    local_10 = (float4)((float)(uVar5 & 0xff) / 255.0);
+		    local_c = (float4)((float)(uVar5 >> 8 & 0xff) / 255.0);
+		    iVar6 = **(int **)(param1 + 0x24);
+		    local_28 = CONCAT44(local_4,local_8);
+		    local_30 = CONCAT44(local_c,local_10);
+		    (**(code **)((ulonglong)*(uint *)(iVar6 + 0x178) * 4))
+		              (*(int **)(param1 + 0x24),&local_30,*(undefined4 *)(iVar6 + 0x17c));
+		  }
+		  else {
+		    uVar5 = *(uint *)(param1 + 0x2c);
+		    local_8 = (float4)((float)(uVar5 >> 0x10 & 0xff) / 255.0);
+		    local_4 = (float4)((float)(uVar5 >> 0x18) / 255.0);
+		    local_10 = (float4)((float)(uVar5 & 0xff) / 255.0);
+		    local_c = (float4)((float)(uVar5 >> 8 & 0xff) / 255.0);
+		    local_38 = CONCAT44(local_4,local_8);
+		    local_40 = CONCAT44(local_c,local_10);
+		    (**(code **)((ulonglong)*(uint *)(*piVar4 + 0x178) * 4))
+		              (piVar4,&local_40,*(undefined4 *)(*piVar4 + 0x17c));
+		    uVar5 = *(uint *)(param1 + 0x34);
+		    local_8 = (float4)((float)(uVar5 >> 0x10 & 0xff) / 255.0);
+		    local_4 = (float4)((float)(uVar5 >> 0x18) / 255.0);
+		    local_10 = (float4)((float)(uVar5 & 0xff) / 255.0);
+		    local_c = (float4)((float)(uVar5 >> 8 & 0xff) / 255.0);
+		    iVar6 = **(int **)(param1 + 0x24);
+		    local_48 = CONCAT44(local_4,local_8);
+		    local_50 = CONCAT44(local_c,local_10);
+		    (**(code **)((ulonglong)*(uint *)(iVar6 + 0x178) * 4))
+		              (*(int **)(param1 + 0x24),&local_50,*(undefined4 *)(iVar6 + 0x17c));
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06002812 RID: 10258 RVA: 0x00002050 File Offset: 0x00000250
@@ -41,6 +153,46 @@ namespace Gameplay.Inventory.View.Info.InfoBox
 		[Address(RVA = "0x7937", Offset = "0x7937", VA = "0x7937")]
 		private void DisplayTime()
 		{
+		/* --- GHIDRA: DisplayTime ---
+		void Gameplay_Inventory_View_Info_InfoBox_BackTimeRowView__DisplayTime(int param1,undefined4 param2)
+		
+		{
+		  undefined4 param1_00;
+		  uint uVar1;
+		  int *param1_01;
+		  
+		  if (DAT_ram_00a5a0d2 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_Data_InfoRows_BackTimeRow_TypeInfo);
+		    DAT_ram_00a5a0d2 = '\x01';
+		  }
+		  Gameplay_Inventory_View_Info_InfoBox_TitleRowView__get_Data(param1,0);
+		  param1_01 = *(int **)(param1 + 0x20);
+		  if (param1_01 != (int *)0x0) {
+		    if (((uint)*(byte *)(*param1_01 + 0xb8) <
+		         (uint)*(byte *)(Core_Data_InfoRows_BackTimeRow_TypeInfo + 0xb8)) ||
+		       (*(int *)(*(int *)(*param1_01 + 100) +
+		                 (uint)*(byte *)(Core_Data_InfoRows_BackTimeRow_TypeInfo + 0xb8) * 4 + -4) !=
+		        Core_Data_InfoRows_BackTimeRow_TypeInfo)) {
+		      System_Activator__CreateInstance(param1_01,Core_Data_InfoRows_BackTimeRow_TypeInfo);
+		      do {
+		        halt_trap();
+		      } while( true );
+		    }
+		    param1_00 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_uint__object___MoveNext
+		                          (*(undefined4 *)(param1 + 0x10),0);
+		    uVar1 = Newtonsoft_Json_Serialization_JsonSerializerInternalReader__ShouldDeserialize
+		                      (param1_01[3],0);
+		    Com_TheFallenGames_OSA_CustomAdapters_TableView_Tuple_Basic_BasicTupleValueViewsHolder__UpdateAsText
+		              (param1_00,uVar1 ^ 1,0);
+		    if (param1_01[4] != *(int *)(param1 + 0x38)) {
+		      *(int *)(param1 + 0x38) = param1_01[4];
+		      Gameplay_Inventory_View_Info_InfoBox_BackTimeRowView__HandleBacktimeChanged(param1,param1);
+		    }
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06002813 RID: 10259 RVA: 0x00002050 File Offset: 0x00000250
@@ -92,4 +244,31 @@ namespace Gameplay.Inventory.View.Info.InfoBox
 		[FieldOffset(Offset = "0x38")]
 		protected BackTime _backtime;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_Backtime ---
+		void Gameplay_Inventory_View_Info_InfoBox_BackTimeRowView__get_Backtime
+		               (int param1,int param2,undefined4 param3)
+		
+		{
+		  if (param2 != *(int *)(param1 + 0x38)) {
+		    *(int *)(param1 + 0x38) = param2;
+		    Gameplay_Inventory_View_Info_InfoBox_BackTimeRowView__HandleBacktimeChanged(param1,param1);
+		  }
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_Backtime ---
+		void Gameplay_Inventory_View_Info_InfoBox_BackTimeRowView__set_Backtime
+		               (undefined4 param1,undefined4 param2)
+		
+		{
+		  Gameplay_Inventory_View_Info_InfoBox_BackTimeRowView__HandleBacktimeChanged(param1,param1);
+		  return;
+		}
+		*/
+
 }

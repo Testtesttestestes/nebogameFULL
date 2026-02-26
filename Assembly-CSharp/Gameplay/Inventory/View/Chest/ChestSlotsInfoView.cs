@@ -49,4 +49,37 @@ namespace Gameplay.Inventory.View.Chest
 		[SerializeField]
 		private ButtonWithCost _buyButton;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_BuyButton ---
+		void Gameplay_Inventory_View_Chest_ChestSlotsInfoView__get_BuyButton
+		               (int param1,undefined8 param2,undefined8 param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  undefined4 param3_00;
+		  int *piVar2;
+		  int iVar3;
+		  undefined8 local_10;
+		  undefined8 local_8;
+		  
+		  local_10 = param3;
+		  local_8 = param2;
+		  if (DAT_ram_00a5a0e9 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_1618);
+		    DAT_ram_00a5a0e9 = '\x01';
+		  }
+		  piVar2 = *(int **)(param1 + 0x10);
+		  uVar1 = UnityEngine_GameObject__SetActive(&local_8,0);
+		  param3_00 = UnityEngine_GameObject__SetActive(&local_10,0);
+		  uVar1 = UnityEngine_AndroidJavaObject__FromJavaArray_Nullable_int__
+		                    (uVar1,StringLiteral_1618,param3_00,0);
+		  iVar3 = *piVar2;
+		  (**(code **)((ulonglong)*(uint *)(iVar3 + 0x2d0) * 4))
+		            (piVar2,uVar1,*(undefined4 *)(iVar3 + 0x2d4));
+		  return;
+		}
+		*/
+
 }

@@ -37,4 +37,46 @@ namespace Gameplay.GameEvents.Model.ActionsOnEvents
 		{
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_SortOrder ---
+		void Gameplay_GameEvents_Model_ActionsOnEvents_RouteToAuchanActionOnEvent__get_SortOrder
+		               (undefined4 param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  uint uVar1;
+		  uint *puVar2;
+		  undefined4 param1_00;
+		  int *param1_01;
+		  int iVar3;
+		  
+		  if (DAT_ram_00a57503 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_Gameplay_IGame_TypeInfo);
+		    DAT_ram_00a57503 = '\x01';
+		  }
+		  if (DAT_ram_00a6456f == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_Gameplay_Game_TypeInfo);
+		    DAT_ram_00a6456f = '\x01';
+		  }
+		  uVar1 = 0;
+		  param1_01 = (int *)**(undefined4 **)(Core_Gameplay_Game_TypeInfo + 0x5c);
+		  iVar3 = *param1_01;
+		  if (*(ushort *)(iVar3 + 0xb6) != 0) {
+		    do {
+		      if (Core_Gameplay_IGame_TypeInfo == *(int *)(*(int *)(iVar3 + 0x58) + uVar1 * 8)) {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar3 + 0x58) + uVar1 * 8 + 4) * 8 + iVar3 + 0x1b0);
+		        goto code_r0x80d9b7dc;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar3 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(param1_01,Core_Gameplay_IGame_TypeInfo,0x1e);
+		code_r0x80d9b7dc:
+		  param1_00 = (**(code **)((ulonglong)*puVar2 * 4))(param1_01,puVar2[1]);
+		  Core_Gameplay_Managers_GameActivityRouting_GameFeatureRouterManager__ShowBank(param1_00,0);
+		  return;
+		}
+		*/
+
 }

@@ -15,6 +15,51 @@ namespace Gameplay.RegisterV2.View
 		[Address(RVA = "0x72A3", Offset = "0x72A3", VA = "0x72A3")]
 		private void OnDestroy()
 		{
+		/* --- GHIDRA: OnDestroy ---
+		void Gameplay_RegisterV2_View_SpellsAndCultDescriptionPanel__OnDestroy(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  undefined4 uVar2;
+		  
+		  if (DAT_ram_00a58373 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_MonoBehaviourWithStates_SpellsAndCultDescriptionPanel_SpellsAndCultDescriptionPanelState__set_CurrentState__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Gameplay_RegisterV2_View_SpellsAndCultDescriptionPanel_HandleCloseBtnClickEvent__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Gameplay_RegisterV2_View_SpellsAndCultDescriptionPanel_HandleOpenBtnClickEvent__
+		              );
+		    Mono_Security_ASN1__get_Item(&UnityEngine_Events_UnityAction_TypeInfo);
+		    DAT_ram_00a58373 = '\x01';
+		  }
+		  Gameplay_Boss_View_CaptainTab_BossTeamView__set_TeamInfoData
+		            (param1,2,
+		             Method_UI_MonoBehaviourWithStates_SpellsAndCultDescriptionPanel_SpellsAndCultDescriptionPanelState__set_CurrentState__
+		            );
+		  uVar2 = *(undefined4 *)(*(int *)(param1 + 0x1c) + 0xb4);
+		  uVar1 = unnamed_function_1417(UnityEngine_Events_UnityAction_TypeInfo);
+		  Utils_ObjectUtils__IsNotNull
+		            (uVar1,param1,
+		             Method_Gameplay_RegisterV2_View_SpellsAndCultDescriptionPanel_HandleOpenBtnClickEvent__
+		             ,0);
+		  Gameplay_Boss_View_CaptainTab_BossInfoView__add_AttackButtonClickEvent(uVar2,uVar1,0);
+		  uVar2 = *(undefined4 *)(*(int *)(param1 + 0x20) + 0xb4);
+		  uVar1 = unnamed_function_1417(UnityEngine_Events_UnityAction_TypeInfo);
+		  Utils_ObjectUtils__IsNotNull
+		            (uVar1,param1,
+		             Method_Gameplay_RegisterV2_View_SpellsAndCultDescriptionPanel_HandleCloseBtnClickEvent__
+		             ,0);
+		  Gameplay_Boss_View_CaptainTab_BossInfoView__add_AttackButtonClickEvent(uVar2,uVar1,0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06002142 RID: 8514 RVA: 0x00002050 File Offset: 0x00000250
@@ -22,6 +67,26 @@ namespace Gameplay.RegisterV2.View
 		[Address(RVA = "0x72A4", Offset = "0x72A4", VA = "0x72A4")]
 		private void Start()
 		{
+		/* --- GHIDRA: Start ---
+		void Gameplay_RegisterV2_View_SpellsAndCultDescriptionPanel__Start
+		               (undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a58374 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_MonoBehaviourWithStates_SpellsAndCultDescriptionPanel_SpellsAndCultDescriptionPanelState__set_CurrentState__
+		              );
+		    DAT_ram_00a58374 = '\x01';
+		  }
+		  Gameplay_Boss_View_CaptainTab_BossTeamView__set_TeamInfoData
+		            (param1,1,
+		             Method_UI_MonoBehaviourWithStates_SpellsAndCultDescriptionPanel_SpellsAndCultDescriptionPanelState__set_CurrentState__
+		            );
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06002143 RID: 8515 RVA: 0x00002050 File Offset: 0x00000250
@@ -29,6 +94,26 @@ namespace Gameplay.RegisterV2.View
 		[Address(RVA = "0x72A5", Offset = "0x72A5", VA = "0x72A5")]
 		private void HandleOpenBtnClickEvent()
 		{
+		/* --- GHIDRA: HandleOpenBtnClickEvent ---
+		void Gameplay_RegisterV2_View_SpellsAndCultDescriptionPanel__HandleOpenBtnClickEvent
+		               (undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a58375 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_MonoBehaviourWithStates_SpellsAndCultDescriptionPanel_SpellsAndCultDescriptionPanelState__set_CurrentState__
+		              );
+		    DAT_ram_00a58375 = '\x01';
+		  }
+		  Gameplay_Boss_View_CaptainTab_BossTeamView__set_TeamInfoData
+		            (param1,2,
+		             Method_UI_MonoBehaviourWithStates_SpellsAndCultDescriptionPanel_SpellsAndCultDescriptionPanelState__set_CurrentState__
+		            );
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06002144 RID: 8516 RVA: 0x00002050 File Offset: 0x00000250
@@ -36,6 +121,26 @@ namespace Gameplay.RegisterV2.View
 		[Address(RVA = "0x72A6", Offset = "0x72A6", VA = "0x72A6")]
 		private void HandleCloseBtnClickEvent()
 		{
+		/* --- GHIDRA: HandleCloseBtnClickEvent ---
+		void Gameplay_RegisterV2_View_SpellsAndCultDescriptionPanel__HandleCloseBtnClickEvent
+		               (undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a58376 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_MonoBehaviourWithStates_SpellsAndCultDescriptionPanel_SpellsAndCultDescriptionPanelState___ctor__
+		              );
+		    DAT_ram_00a58376 = '\x01';
+		  }
+		  ScreenAdaptation_Common_AppSize__Update
+		            (param1,
+		             Method_UI_MonoBehaviourWithStates_SpellsAndCultDescriptionPanel_SpellsAndCultDescriptionPanelState___ctor__
+		            );
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06002145 RID: 8517 RVA: 0x00002050 File Offset: 0x00000250

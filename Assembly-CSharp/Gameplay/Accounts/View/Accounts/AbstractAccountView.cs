@@ -132,4 +132,36 @@ namespace Gameplay.Accounts.View.Accounts
 		[FieldOffset(Offset = "0x28")]
 		private IAccountDataDecorator _data;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_Data ---
+		void Gameplay_Accounts_View_Accounts_AbstractAccountView__get_Data
+		               (int *param1,int param2,undefined4 param3)
+		
+		{
+		  if (param2 != param1[10]) {
+		    param1[10] = param2;
+		    (**(code **)((ulonglong)*(uint *)(*param1 + 0x100) * 4))
+		              (param1,*(undefined4 *)(*param1 + 0x104));
+		  }
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_Data ---
+		void Gameplay_Accounts_View_Accounts_AbstractAccountView__set_Data
+		               (int *param1,undefined4 param2,int param3,undefined4 param4)
+		
+		{
+		  if (param3 != param1[10]) {
+		    param1[10] = param3;
+		    (**(code **)((ulonglong)*(uint *)(*param1 + 0x100) * 4))
+		              (param1,*(undefined4 *)(*param1 + 0x104));
+		  }
+		  return;
+		}
+		*/
+
 }

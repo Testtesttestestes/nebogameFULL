@@ -30,6 +30,26 @@ namespace Gameplay.Inventory.View.Chest
 		[Address(RVA = "0x79D7", Offset = "0x79D7", VA = "0x79D7")]
 		public void ClearHeader()
 		{
+		/* --- GHIDRA: ClearHeader ---
+		void Gameplay_Inventory_View_Chest_MedalCellGroupViewHolder__ClearHeader
+		               (undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a5a11f == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Com_TheFallenGames_OSA_CustomAdapters_GridView_CellGroupViewsHolder_MedalCellViewHolder___ctor__
+		              );
+		    DAT_ram_00a5a11f = '\x01';
+		  }
+		  System_Linq_Expressions_Interpreter_CastInstruction_CastInstructionT___Il2CppFullySharedGenericType___Run
+		            (param1,
+		             Method_Com_TheFallenGames_OSA_CustomAdapters_GridView_CellGroupViewsHolder_MedalCellViewHolder___ctor__
+		            );
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x060028B9 RID: 10425 RVA: 0x00002050 File Offset: 0x00000250

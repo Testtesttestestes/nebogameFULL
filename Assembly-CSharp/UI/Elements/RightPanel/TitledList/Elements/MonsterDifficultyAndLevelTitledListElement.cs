@@ -33,6 +33,26 @@ namespace UI.Elements.RightPanel.TitledList.Elements
 		[Address(RVA = "0x601F", Offset = "0x601F", VA = "0x601F", Slot = "6")]
 		protected override void OnInit(MonsterDifficultyAndLevelTitledListElement.MonsterDifficultyAndLevelTitledListElementArgs args)
 		{
+		/* --- GHIDRA: OnInit ---
+		void UI_Elements_RightPanel_TitledList_Elements_MonsterDifficultyAndLevelTitledListElement__OnInit
+		               (undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a63964 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Elements_RightPanel_TitledList_BaseTitledListElement_MonsterDifficultyAndLevelTitledListElement_MonsterDifficultyAndLevelTitledListElementArgs___ctor__
+		              );
+		    DAT_ram_00a63964 = '\x01';
+		  }
+		  UnityEngine_ParticleSystemRenderer__GetMeshes
+		            (param1,
+		             Method_UI_Elements_RightPanel_TitledList_BaseTitledListElement_MonsterDifficultyAndLevelTitledListElement_MonsterDifficultyAndLevelTitledListElementArgs___ctor__
+		            );
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06000D3D RID: 3389 RVA: 0x00002050 File Offset: 0x00000250

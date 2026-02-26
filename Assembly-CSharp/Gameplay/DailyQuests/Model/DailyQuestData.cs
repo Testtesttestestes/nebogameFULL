@@ -282,4 +282,181 @@ namespace Gameplay.DailyQuests.Model
 		[FieldOffset(Offset = "0xC")]
 		private float _approximateProgress;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_ApproximateProgress ---
+		void Gameplay_DailyQuests_Model_DailyQuestData__get_ApproximateProgress
+		               (int param1,float param2,undefined4 param3)
+		
+		{
+		  int iVar1;
+		  
+		  if (*(float *)(param1 + 0xc) != param2) {
+		    *(float *)(param1 + 0xc) = param2;
+		    iVar1 = *(int *)(param1 + 0x1c);
+		    if (iVar1 != 0) {
+		      (**(code **)((ulonglong)*(uint *)(iVar1 + 0xc) * 4))
+		                (*(undefined4 *)(iVar1 + 0x20),*(undefined4 *)(iVar1 + 0x14));
+		    }
+		  }
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_ApproximateProgress ---
+		void Gameplay_DailyQuests_Model_DailyQuestData__set_ApproximateProgress
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  int param1_00;
+		  int *param1_01;
+		  int iVar2;
+		  
+		  if (DAT_ram_00a57c38 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_TypeInfo);
+		    DAT_ram_00a57c38 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x1c);
+		  while ((param1_01 = (int *)UnityEngine_UI_Image__set_sprite(param1_00,param2,0),
+		         param1_01 == (int *)0x0 || (System_Action_TypeInfo == *param1_01))) {
+		    iVar2 = func_ii_4329(param1 + 0x1c,param1_01,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,System_Action_TypeInfo);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: add_QuestChangedEvent ---
+		void Gameplay_DailyQuests_Model_DailyQuestData__add_QuestChangedEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  int param1_00;
+		  int *param1_01;
+		  int iVar2;
+		  
+		  if (DAT_ram_00a57c39 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_TypeInfo);
+		    DAT_ram_00a57c39 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x1c);
+		  while ((param1_01 = (int *)func_ii_7048(param1_00,param2,0), param1_01 == (int *)0x0 ||
+		         (System_Action_TypeInfo == *param1_01))) {
+		    iVar2 = func_ii_4329(param1 + 0x1c,param1_01,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,System_Action_TypeInfo);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: remove_QuestChangedEvent ---
+		void Gameplay_DailyQuests_Model_DailyQuestData__remove_QuestChangedEvent
+		               (int param1,undefined4 param2,int param3,undefined4 param4)
+		
+		{
+		  uint uVar1;
+		  undefined4 param1_00;
+		  float param2_00;
+		  
+		  if (DAT_ram_00a57c3a == '\0') {
+		    Mono_Security_ASN1__get_Item(&Utils_BackTime_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Utils_TimeUtils_TypeInfo);
+		    DAT_ram_00a57c3a = '\x01';
+		  }
+		  *(int *)(param1 + 0x10) = param3;
+		  *(undefined4 *)(param1 + 8) = param2;
+		  param1_00 = unnamed_function_1417(Utils_BackTime_TypeInfo);
+		  Core_Extensions_Dict_DictExt__BinarySearch_object__uint_(param1_00,0.0,0);
+		  uVar1 = *(uint *)(*(int *)(param1 + 8) + 0x14);
+		  if (*(int *)(Utils_TimeUtils_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Utils_TimeUtils_TypeInfo);
+		  }
+		  param2_00 = func_ii_7331((ulonglong)uVar1,0);
+		  Core_Extensions_Dict_DictExt__BinarySearch_object__uint_(param1_00,param2_00,0);
+		  *(undefined4 *)(param1 + 0x14) = param1_00;
+		  if (*(int *)(param3 + 0x1c) != 0) {
+		    *(undefined4 *)(param1 + 0x24) = 1;
+		  }
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_Id ---
+		undefined4 Gameplay_DailyQuests_Model_DailyQuestData__get_Id(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  uVar1 = Core_Extensions_Dict_DailyQuestsDicExt__GetTitle(*(undefined4 *)(param1 + 0x10),0);
+		  return uVar1;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_Description ---
+		undefined4 Gameplay_DailyQuests_Model_DailyQuestData__get_Description(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  uVar1 = Core_Extensions_Dict_DailyQuestCategoriesDicExt__GetTitle
+		                    (*(undefined4 *)(param1 + 0x10),0);
+		  return uVar1;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_Title ---
+		undefined4 Gameplay_DailyQuests_Model_DailyQuestData__get_Title(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  uVar1 = Core_Extensions_Dict_DailyQuestsDicExt__GetDescription(*(undefined4 *)(param1 + 0x10),0);
+		  return uVar1;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_IconAssetId ---
+		undefined4 Gameplay_DailyQuests_Model_DailyQuestData__get_IconAssetId(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  uVar1 = Core_Extensions_Dict_DailyQuestsDicExt__GetIcon(*(undefined4 *)(param1 + 0x10),0);
+		  return uVar1;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_CategoryId ---
+		undefined4 Gameplay_DailyQuests_Model_DailyQuestData__get_CategoryId(int param1,undefined4 param2)
+		
+		{
+		  return *(undefined4 *)(*(int *)(param1 + 0x10) + 0x18);
+		}
+		*/
+
 }

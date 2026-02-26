@@ -14,6 +14,27 @@ namespace Gameplay.AccountLinker.Model
 		[Address(RVA = "0xA565", Offset = "0xA565", VA = "0xA565")]
 		public LinkerUser(UserData user)
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_AccountLinker_Model_LinkerUser___ctor
+		               (undefined4 param1,undefined4 param2,undefined4 param3,undefined4 param4,
+		               undefined4 param5)
+		
+		{
+		  if (DAT_ram_00a63b65 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_MVC_AbstractViewMediator_AccountLinkerModel__AccountLinkerEvents__AccountLinkerController__ConfirmSelectedUserView___ctor__
+		              );
+		    DAT_ram_00a63b65 = '\x01';
+		  }
+		  Gameplay_Combat_TeamCombat_View_AbstractTeamCombatView_object___get_HideInstantElements
+		            (param1,param2,param3,param4,
+		             Method_MVC_AbstractViewMediator_AccountLinkerModel__AccountLinkerEvents__AccountLinkerController__ConfirmSelectedUserView___ctor__
+		            );
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x04002FAA RID: 12202

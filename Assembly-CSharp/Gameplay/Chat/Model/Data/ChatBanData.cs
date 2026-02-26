@@ -15,6 +15,32 @@ namespace Gameplay.Chat.Model.Data
 		[Address(RVA = "0x92FE", Offset = "0x92FE", VA = "0x92FE", Slot = "1")]
 		protected override void Finalize()
 		{
+		/* --- GHIDRA: Finalize ---
+		void Gameplay_Chat_Model_Data_ChatBanData__Finalize(int param1,int param2,undefined4 param3)
+		
+		{
+		  float param2_00;
+		  undefined4 param1_00;
+		  undefined8 param1_01;
+		  
+		  if (DAT_ram_00a57b4e == '\0') {
+		    Mono_Security_ASN1__get_Item(&Utils_BackTime_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Utils_TimeUtils_TypeInfo);
+		    DAT_ram_00a57b4e = '\x01';
+		  }
+		  *(int *)(param1 + 0xc) = param2;
+		  param1_01 = *(undefined8 *)(param2 + 0x10);
+		  if (*(int *)(Utils_TimeUtils_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Utils_TimeUtils_TypeInfo);
+		  }
+		  param2_00 = func_ii_7331(param1_01,0);
+		  param1_00 = unnamed_function_1417(Utils_BackTime_TypeInfo);
+		  Core_Extensions_Dict_DictExt__BinarySearch_object__uint_(param1_00,param2_00,0);
+		  *(undefined4 *)(param1 + 0x10) = param1_00;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600444F RID: 17487 RVA: 0x00002050 File Offset: 0x00000250

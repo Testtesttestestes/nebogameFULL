@@ -84,4 +84,21 @@ namespace UI.Elements.Buttons
 		[SerializeField]
 		private Toggle _toggle;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: set_Title ---
+		int * UI_Elements_Buttons_RadioButton__set_Title(int *param1)
+		
+		{
+		  if (*param1 == 0) {
+		    return param1;
+		  }
+		  System_Data_DataSet__ValidateLocaleConstraint(*param1);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
 }

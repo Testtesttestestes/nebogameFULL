@@ -59,6 +59,41 @@ namespace Gameplay.UserInterface.Menu.Settings.Model
 		[Address(RVA = "0x68ED", Offset = "0x68ED", VA = "0x68ED", Slot = "5")]
 		public override void Dispose()
 		{
+		/* --- GHIDRA: Dispose ---
+		void Gameplay_UserInterface_Menu_Settings_Model_SettingsModel__Dispose
+		               (int param1,int *param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  uint uVar1;
+		  uint *puVar2;
+		  undefined4 uVar3;
+		  int iVar4;
+		  
+		  if (DAT_ram_00a59889 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_Gameplay_IGame_TypeInfo);
+		    DAT_ram_00a59889 = '\x01';
+		  }
+		  Unity_Services_Core_Environments_Internal_Environments__get_Current(param1,param3,0);
+		  *(int **)(param1 + 0xc) = param2;
+		  iVar4 = *param2;
+		  if (*(ushort *)(iVar4 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (Core_Gameplay_IGame_TypeInfo == *(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8)) {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8 + 4) * 8 + iVar4 + 0x148);
+		        goto code_r0x8107ed9b;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar4 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(param2,Core_Gameplay_IGame_TypeInfo,0x11);
+		code_r0x8107ed9b:
+		  uVar3 = (**(code **)((ulonglong)*puVar2 * 4))(param2,puVar2[1]);
+		  *(undefined4 *)(param1 + 0x10) = uVar3;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600172F RID: 5935 RVA: 0x00002050 File Offset: 0x00000250
@@ -66,6 +101,23 @@ namespace Gameplay.UserInterface.Menu.Settings.Model
 		[Address(RVA = "0x68EE", Offset = "0x68EE", VA = "0x68EE")]
 		public SettingsModel(IGame game, UserData user)
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_UserInterface_Menu_Settings_Model_SettingsModel___ctor
+		               (undefined4 param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  if (DAT_ram_00a5988a == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_MVC_AbstractController_SettingsModel__SettingsEvents___ctor__);
+		    DAT_ram_00a5988a = '\x01';
+		  }
+		  Gameplay_Combat_AbstractCombat_object__object__object__object__object___set_User
+		            (param1,param2,param3,
+		             Method_MVC_AbstractController_SettingsModel__SettingsEvents___ctor__);
+		  return;
+		}
+		*/
+
 		}
 	}
 }

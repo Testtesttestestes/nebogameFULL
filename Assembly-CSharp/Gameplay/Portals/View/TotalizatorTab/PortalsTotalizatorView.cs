@@ -109,6 +109,22 @@ namespace Gameplay.Portals.View.TotalizatorTab
 		[Address(RVA = "0x7487", Offset = "0x7487", VA = "0x7487")]
 		public void Init(PortalsModel model)
 		{
+		/* --- GHIDRA: Init ---
+		void Gameplay_Portals_View_TotalizatorTab_PortalsTotalizatorView__Init
+		               (undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a580f7 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UI_MonoBehaviourWithStates_PortalsTotalizatorView_State___ctor__);
+		    DAT_ram_00a580f7 = '\x01';
+		  }
+		  ScreenAdaptation_Common_AppSize__Update
+		            (param1,Method_UI_MonoBehaviourWithStates_PortalsTotalizatorView_State___ctor__);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06002334 RID: 9012 RVA: 0x00002050 File Offset: 0x00000250
@@ -116,6 +132,45 @@ namespace Gameplay.Portals.View.TotalizatorTab
 		[Address(RVA = "0x7488", Offset = "0x7488", VA = "0x7488")]
 		public PortalsTotalizatorView()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_Portals_View_TotalizatorTab_PortalsTotalizatorView___ctor
+		               (int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  undefined4 uVar2;
+		  
+		  if (DAT_ram_00a580f8 == '\0') {
+		    Mono_Security_ASN1__get_Item(&UnityEngine_Events_UnityAction_TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Gameplay_Portals_View_TotalizatorTab_UserInPortalTotalizatorListElement_OnChoiceLose__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Gameplay_Portals_View_TotalizatorTab_UserInPortalTotalizatorListElement_OnChoiceWin__
+		              );
+		    DAT_ram_00a580f8 = '\x01';
+		  }
+		  Gameplay_Portals_View_RatingTab_PortalsRatingView___ctor(param1,param1);
+		  uVar2 = *(undefined4 *)(*(int *)(param1 + 0x58) + 0xb4);
+		  uVar1 = unnamed_function_1417(UnityEngine_Events_UnityAction_TypeInfo);
+		  Utils_ObjectUtils__IsNotNull
+		            (uVar1,param1,
+		             Method_Gameplay_Portals_View_TotalizatorTab_UserInPortalTotalizatorListElement_OnChoiceWin__
+		             ,0);
+		  Gameplay_Boss_View_CaptainTab_BossInfoView__add_AttackButtonClickEvent(uVar2,uVar1,0);
+		  uVar2 = *(undefined4 *)(*(int *)(param1 + 0x60) + 0xb4);
+		  uVar1 = unnamed_function_1417(UnityEngine_Events_UnityAction_TypeInfo);
+		  Utils_ObjectUtils__IsNotNull
+		            (uVar1,param1,
+		             Method_Gameplay_Portals_View_TotalizatorTab_UserInPortalTotalizatorListElement_OnChoiceLose__
+		             ,0);
+		  Gameplay_Boss_View_CaptainTab_BossInfoView__add_AttackButtonClickEvent(uVar2,uVar1,0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x04001348 RID: 4936
@@ -190,4 +245,41 @@ namespace Gameplay.Portals.View.TotalizatorTab
 			NOT_ENOUGH
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_BetNumber ---
+		void Gameplay_Portals_View_TotalizatorTab_PortalsTotalizatorView__get_BetNumber
+		               (int param1,int param2,undefined4 param3)
+		
+		{
+		  undefined4 uVar1;
+		  undefined4 param1_00;
+		  
+		  if (DAT_ram_00a580f6 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Com_TheFallenGames_OSA_Core_OSA_BaseParamsWithPrefab__UserInPortalsTotalizatorViewsHolder__Init__
+		              );
+		    DAT_ram_00a580f6 = '\x01';
+		  }
+		  uVar1 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_uint__object___MoveNext
+		                    (param1,0);
+		  Com_TheFallenGames_OSA_CustomAdapters_TableView_Tuple_Basic_BasicTupleValueViewsHolder__UpdateAsText
+		            (uVar1,1,0);
+		  uVar1 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_uint__object___MoveNext
+		                    (*(undefined4 *)(param1 + 0x1c),0);
+		  Com_TheFallenGames_OSA_CustomAdapters_TableView_Tuple_Basic_BasicTupleValueViewsHolder__UpdateAsText
+		            (uVar1,1,0);
+		  Com_TheFallenGames_OSA_Core_OSA_object__object___GetVirtualAbstractNormalizedScrollPosition
+		            (*(undefined4 *)(param1 + 0x1c),
+		             Method_Com_TheFallenGames_OSA_Core_OSA_BaseParamsWithPrefab__UserInPortalsTotalizatorViewsHolder__Init__
+		            );
+		  param1_00 = *(undefined4 *)(param1 + 0x38);
+		  uVar1 = Core_Extensions_Dict_PortalDicExt__GetMessage(*(undefined4 *)(param2 + 0x3c),0xdb,0);
+		  Core_Extensions_Dict_PortalDicExt__GetCurrencyIcon60x66(param1_00,uVar1,0);
+		  return;
+		}
+		*/
+
 }

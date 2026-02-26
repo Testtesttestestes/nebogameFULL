@@ -20,6 +20,22 @@ namespace I2.Loc
 		[Address(RVA = "0xC106", Offset = "0xC106", VA = "0xC106")]
 		public HindiFixer()
 		{
+		/* --- GHIDRA: .ctor ---
+		void I2_Loc_HindiFixer___ctor(undefined4 param1)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a54e04 == '\0') {
+		    Mono_Security_ASN1__get_Item(&I2_Loc_HindiFixer___c_TypeInfo);
+		    DAT_ram_00a54e04 = '\x01';
+		  }
+		  uVar1 = unnamed_function_1417(I2_Loc_HindiFixer___c_TypeInfo);
+		  **(undefined4 **)(I2_Loc_HindiFixer___c_TypeInfo + 0x5c) = uVar1;
+		  return;
+		}
+		*/
+
 		}
 	}
 }

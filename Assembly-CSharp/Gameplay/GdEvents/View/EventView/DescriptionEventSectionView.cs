@@ -156,6 +156,20 @@ namespace Gameplay.GdEvents.View.EventView
 		[Address(RVA = "0x7CE8", Offset = "0x7CE8", VA = "0x7CE8")]
 		public DescriptionEventSectionView()
 		{
+		/* --- GHIDRA: .ctor ---
+		undefined4
+		Gameplay_GdEvents_View_EventView_DescriptionEventSectionView___ctor
+		          (undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a5a2ba == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_12622);
+		    DAT_ram_00a5a2ba = '\x01';
+		  }
+		  return StringLiteral_12622;
+		}
+		*/
+
 		}
 
 		// Token: 0x0400184A RID: 6218
@@ -218,4 +232,64 @@ namespace Gameplay.GdEvents.View.EventView
 		[SerializeField]
 		private BattlePassGroupView _battlePassGroupView;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_BattlePassGroupView ---
+		void Gameplay_GdEvents_View_EventView_DescriptionEventSectionView__get_BattlePassGroupView
+		               (undefined4 param1,undefined4 *param2,int *param3,undefined4 param4)
+		
+		{
+		  uint uVar1;
+		  undefined4 param2_00;
+		  undefined4 param3_00;
+		  int *param1_00;
+		  uint *puVar2;
+		  int iVar3;
+		  
+		  if (DAT_ram_00a5a2b9 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Gameplay_GdEvents_Control_EventSections_DescriptionViewMediator_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Core_MVC_Interfaces_IViewMediator_TypeInfo);
+		    DAT_ram_00a5a2b9 = '\x01';
+		  }
+		  param2_00 = (**(code **)((ulonglong)*(uint *)(*param3 + 0x100) * 4))
+		                        (param3,*(undefined4 *)(*param3 + 0x104));
+		  param3_00 = (**(code **)((ulonglong)*(uint *)(*param3 + 0x110) * 4))
+		                        (param3,*(undefined4 *)(*param3 + 0x114));
+		  param1_00 = (int *)unnamed_function_1417
+		                               (
+		                               Gameplay_GdEvents_Control_EventSections_DescriptionViewMediator_TypeInfo
+		                               );
+		  if (DAT_ram_00a5a31a == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_MVC_AbstractViewMediator_GdEventsModel__GdEventsEvents__GdEventsController__DescriptionEventSectionView___ctor__
+		              );
+		    DAT_ram_00a5a31a = '\x01';
+		  }
+		  uVar1 = 0;
+		  Gameplay_Combat_TeamCombat_View_AbstractTeamCombatView_object___get_HideInstantElements
+		            (param1_00,param2_00,param3_00,param3,
+		             Method_MVC_AbstractViewMediator_GdEventsModel__GdEventsEvents__GdEventsController__DescriptionEventSectionView___ctor__
+		            );
+		  *param2 = param1_00;
+		  iVar3 = *param1_00;
+		  if (*(ushort *)(iVar3 + 0xb6) != 0) {
+		    do {
+		      if (Core_MVC_Interfaces_IViewMediator_TypeInfo == *(int *)(*(int *)(iVar3 + 0x58) + uVar1 * 8)
+		         ) {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar3 + 0x58) + uVar1 * 8 + 4) * 8 + iVar3 + 0x100);
+		        goto code_r0x811f5aff;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar3 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(param1_00,Core_MVC_Interfaces_IViewMediator_TypeInfo,8);
+		code_r0x811f5aff:
+		  (**(code **)((ulonglong)*puVar2 * 4))(param1_00,param1,puVar2[1]);
+		  return;
+		}
+		*/
+
 }

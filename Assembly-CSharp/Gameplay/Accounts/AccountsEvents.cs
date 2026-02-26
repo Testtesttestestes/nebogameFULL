@@ -15,6 +15,18 @@ namespace Gameplay.Accounts
 		[Address(RVA = "0xA3A1", Offset = "0xA3A1", VA = "0xA3A1")]
 		public AccountsEvents()
 		{
+		/* --- GHIDRA: .ctor ---
+		undefined4 Gameplay_Accounts_AccountsEvents___ctor(undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a58881 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_12553);
+		    DAT_ram_00a58881 = '\x01';
+		  }
+		  return StringLiteral_12553;
+		}
+		*/
+
 		}
 
 		// Token: 0x04002E97 RID: 11927

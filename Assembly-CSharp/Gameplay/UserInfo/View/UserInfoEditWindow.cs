@@ -29,6 +29,52 @@ namespace Gameplay.UserInfo.View
 		[Address(RVA = "0x69D0", Offset = "0x69D0", VA = "0x69D0", Slot = "19")]
 		protected override void OnClose()
 		{
+		/* --- GHIDRA: OnClose ---
+		void Gameplay_UserInfo_View_UserInfoEditWindow__OnClose(int param1,int param2,undefined4 param3)
+		
+		{
+		  undefined4 param3_00;
+		  int *param1_00;
+		  undefined4 param2_00;
+		  undefined4 param4;
+		  int iVar1;
+		  
+		  if (DAT_ram_00a598f3 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Windows_ClosableBaseWindow_UserInfoEditWindow_UserInfoEditWindowArgs__OnShow__
+		              );
+		    Mono_Security_ASN1__get_Item(&Gameplay_UserInfo_Control_UserInfoEditViewMediator_TypeInfo);
+		    DAT_ram_00a598f3 = '\x01';
+		  }
+		  func_ii_7769(param1,param2,
+		               Method_UI_Windows_ClosableBaseWindow_UserInfoEditWindow_UserInfoEditWindowArgs__OnShow__
+		              );
+		  param2_00 = *(undefined4 *)(param2 + 0x18);
+		  iVar1 = **(int **)(param2 + 0x1c);
+		  param3_00 = (**(code **)((ulonglong)*(uint *)(iVar1 + 0x110) * 4))
+		                        (*(int **)(param2 + 0x1c),*(undefined4 *)(iVar1 + 0x114));
+		  param4 = *(undefined4 *)(param2 + 0x1c);
+		  param1_00 = (int *)unnamed_function_1417
+		                               (Gameplay_UserInfo_Control_UserInfoEditViewMediator_TypeInfo);
+		  if (DAT_ram_00a59928 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_MVC_AbstractViewMediator_UserInfoModel__UserInfoEvents__UserInfoController__CultGenderNickSettingsView___ctor__
+		              );
+		    DAT_ram_00a59928 = '\x01';
+		  }
+		  Gameplay_Combat_TeamCombat_View_AbstractTeamCombatView_object___get_HideInstantElements
+		            (param1_00,param2_00,param3_00,param4,
+		             Method_MVC_AbstractViewMediator_UserInfoModel__UserInfoEvents__UserInfoController__CultGenderNickSettingsView___ctor__
+		            );
+		  *(int **)(param1 + 0x40) = param1_00;
+		  (**(code **)((ulonglong)*(uint *)(*param1_00 + 0x160) * 4))
+		            (param1_00,*(undefined4 *)(param1 + 0x3c),*(undefined4 *)(*param1_00 + 0x164));
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600181D RID: 6173 RVA: 0x00002050 File Offset: 0x00000250
@@ -36,6 +82,25 @@ namespace Gameplay.UserInfo.View
 		[Address(RVA = "0x69D1", Offset = "0x69D1", VA = "0x69D1", Slot = "22")]
 		protected override void OnShow(UserInfoEditWindow.UserInfoEditWindowArgs args)
 		{
+		/* --- GHIDRA: OnShow ---
+		void Gameplay_UserInfo_View_UserInfoEditWindow__OnShow(undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a598f4 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Windows_ClosableBaseWindow_UserInfoEditWindow_UserInfoEditWindowArgs___ctor__
+		              );
+		    DAT_ram_00a598f4 = '\x01';
+		  }
+		  UI_MonoBehaviourWithStates_ClientStateChangedDelegate___Il2CppFullySharedGenericStructType___Invoke
+		            (param1,
+		             Method_UI_Windows_ClosableBaseWindow_UserInfoEditWindow_UserInfoEditWindowArgs___ctor__
+		            );
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600181E RID: 6174 RVA: 0x00002050 File Offset: 0x00000250
@@ -82,4 +147,32 @@ namespace Gameplay.UserInfo.View
 			public readonly UserInfoController Controller;
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_WindowId ---
+		void Gameplay_UserInfo_View_UserInfoEditWindow__get_WindowId(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  
+		  if (DAT_ram_00a598f2 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Windows_ClosableBaseWindow_UserInfoEditWindow_UserInfoEditWindowArgs__OnClose__
+		              );
+		    DAT_ram_00a598f2 = '\x01';
+		  }
+		  UI_Windows_ClosableBaseWindow_object___OnClickBack
+		            (param1,
+		             Method_UI_Windows_ClosableBaseWindow_UserInfoEditWindow_UserInfoEditWindowArgs__OnClose__
+		            );
+		  iVar1 = **(int **)(param1 + 0x40);
+		  (**(code **)((ulonglong)*(uint *)(iVar1 + 0x130) * 4))
+		            (*(int **)(param1 + 0x40),*(undefined4 *)(iVar1 + 0x134));
+		  *(undefined4 *)(param1 + 0x40) = 0;
+		  return;
+		}
+		*/
+
 }

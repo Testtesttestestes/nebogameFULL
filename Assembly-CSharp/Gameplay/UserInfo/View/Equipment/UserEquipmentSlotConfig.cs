@@ -14,6 +14,22 @@ namespace Gameplay.UserInfo.View.Equipment
 		[Address(RVA = "0x6A08", Offset = "0x6A08", VA = "0x6A08", Slot = "6")]
 		public override int GetSlotId()
 		{
+		/* --- GHIDRA: GetSlotId ---
+		void Gameplay_UserInfo_View_Equipment_UserEquipmentSlotConfig__GetSlotId
+		               (undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a59901 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Gameplay_UserInfo_View_Equipment_BaseEquipmentSlotConfig_EquipmentSlotIds___ctor__
+		              );
+		    DAT_ram_00a59901 = '\x01';
+		  }
+		  return;
+		}
+		*/
+
 			return 0;
 		}
 

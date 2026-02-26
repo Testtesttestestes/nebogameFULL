@@ -96,6 +96,19 @@ namespace Gameplay.Inventory.Model
 		[Address(RVA = "0x7A3C", Offset = "0x7A3C", VA = "0x7A3C")]
 		private InventoryMetaFilterData(ArtikulTypeMetaFilterDic metaFilterDic)
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_Inventory_Model_InventoryMetaFilterData___ctor
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4,undefined4 param5,
+		               undefined4 param6,undefined4 param7,undefined4 param8)
+		
+		{
+		  Gameplay_Inventory_Model_InventoryBaseModel__get_TotalSlotsAvailable
+		            (param1,param3,param4,param5,param6,param7,param1);
+		  *(undefined4 *)(param1 + 0x58) = param2;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06002934 RID: 10548 RVA: 0x00002052 File Offset: 0x00000252
@@ -103,6 +116,20 @@ namespace Gameplay.Inventory.Model
 		[Address(RVA = "0x1F19", Offset = "0x1F19", VA = "0x1F19")]
 		public static InventoryMetaFilterData Create(ArtikulTypeMetaFilterDic metaFilterDic, Dictionaries dictionaries)
 		{
+		/* --- GHIDRA: Create ---
+		int * Gameplay_Inventory_Model_InventoryMetaFilterData__Create(int *param1)
+		
+		{
+		  if (*param1 == 0) {
+		    return param1;
+		  }
+		  System_Data_DataSet__ValidateLocaleConstraint(*param1);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
 			return null;
 		}
 
@@ -116,4 +143,20 @@ namespace Gameplay.Inventory.Model
 		[FieldOffset(Offset = "0x14")]
 		public Dictionary<uint, ArtikulTypeFilters> ArtikulFilterById;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_FilterId ---
+		undefined4
+		Gameplay_Inventory_Model_InventoryMetaFilterData__get_FilterId(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  uVar1 = Core_Extensions_Dict_ArtikulTypeMenuActionDicExt__GetRequirementMessage
+		                    (*(undefined4 *)(param1 + 8),0);
+		  return uVar1;
+		}
+		*/
+
 }

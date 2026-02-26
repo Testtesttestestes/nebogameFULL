@@ -13,6 +13,24 @@ namespace Core.Extensions.Dict
 		[Address(RVA = "0x1B78", Offset = "0x1B78", VA = "0x1B78")]
 		public static string GetTitle(this BossGroupDic bossGroupDic)
 		{
+		/* --- GHIDRA: GetTitle ---
+		void Core_Extensions_Dict_BossGroupDictExt__GetTitle(int param1,int param2,undefined4 param3)
+		
+		{
+		  int iVar1;
+		  
+		  if (*(int *)(param1 + 0xc) != param2) {
+		    *(int *)(param1 + 0xc) = param2;
+		    iVar1 = *(int *)(param1 + 8);
+		    if (iVar1 != 0) {
+		      (**(code **)((ulonglong)*(uint *)(iVar1 + 0xc) * 4))
+		                (*(undefined4 *)(iVar1 + 0x20),param2,*(undefined4 *)(iVar1 + 0x14));
+		    }
+		  }
+		  return;
+		}
+		*/
+
 			return null;
 		}
 	}

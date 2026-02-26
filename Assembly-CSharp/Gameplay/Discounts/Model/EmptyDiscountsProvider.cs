@@ -14,6 +14,17 @@ namespace Gameplay.Discounts.Model
 		[Address(RVA = "0x8424", Offset = "0x8424", VA = "0x8424", Slot = "4")]
 		public bool TryGetDiscount(DiscountTargets type, out DiscountData data)
 		{
+		/* --- GHIDRA: TryGetDiscount ---
+		undefined4
+		Gameplay_Discounts_Model_EmptyDiscountsProvider__TryGetDiscount
+		          (undefined4 param1,undefined4 param2,undefined8 *param3,undefined4 param4)
+		
+		{
+		  *param3 = 0x3ff0000000000000;
+		  return 0;
+		}
+		*/
+
 			return default(bool);
 		}
 

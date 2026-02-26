@@ -41,6 +41,56 @@ namespace Gameplay.GameEvents.Model.Tags.SourceTags.Tags
 		[Address(RVA = "0x7F34", Offset = "0x7F34", VA = "0x7F34")]
 		public DefaultSourceTag()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_GameEvents_Model_Tags_SourceTags_Tags_DefaultSourceTag___ctor
+		               (int *param1,undefined4 param2)
+		
+		{
+		  int param1_00;
+		  undefined4 param1_01;
+		  
+		  if (DAT_ram_00a574ee == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_Google_Protobuf_Collections_RepeatedField_string__Add__);
+		    Mono_Security_ASN1__get_Item(&Method_Google_Protobuf_Collections_RepeatedField_string___ctor__);
+		    Mono_Security_ASN1__get_Item(&Google_Protobuf_Collections_RepeatedField_string__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_28175);
+		    DAT_ram_00a574ee = '\x01';
+		  }
+		  param1_00 = unnamed_function_1417(Google_Protobuf_Collections_RepeatedField_string__TypeInfo);
+		  Google_Protobuf_Collections_RepeatedField___Il2CppFullySharedGenericType____cctor
+		            (param1_00,Method_Google_Protobuf_Collections_RepeatedField_string___ctor__);
+		  param1[6] = param1_00;
+		  param1_01 = (**(code **)((ulonglong)*(uint *)(*param1 + 0xf0) * 4))
+		                        (param1,*(undefined4 *)(*param1 + 0xf4));
+		  func_ii_6441(param1_01,StringLiteral_28175,
+		               Method_Google_Protobuf_Collections_RepeatedField_string__Add__);
+		  return;
+		}
+		*/
+
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_Len ---
+		void Gameplay_GameEvents_Model_Tags_SourceTags_Tags_DefaultSourceTag__get_Len
+		               (int param1,undefined4 param2)
+		
+		{
+		  undefined4 param1_00;
+		  
+		  if (DAT_ram_00a574ed == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_Google_Protobuf_Collections_RepeatedField_string___ctor__);
+		    Mono_Security_ASN1__get_Item(&Google_Protobuf_Collections_RepeatedField_string__TypeInfo);
+		    DAT_ram_00a574ed = '\x01';
+		  }
+		  param1_00 = unnamed_function_1417(Google_Protobuf_Collections_RepeatedField_string__TypeInfo);
+		  Google_Protobuf_Collections_RepeatedField___Il2CppFullySharedGenericType____cctor
+		            (param1_00,Method_Google_Protobuf_Collections_RepeatedField_string___ctor__);
+		  *(undefined4 *)(param1 + 0x18) = param1_00;
+		  return;
+		}
+		*/
+
 }

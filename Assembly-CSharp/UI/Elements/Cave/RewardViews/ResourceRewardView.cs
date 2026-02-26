@@ -53,4 +53,31 @@ namespace UI.Elements.Cave.RewardViews
 		[SerializeField]
 		private TextMeshProUGUI _amountText;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: set_ResourceImageURL ---
+		void UI_Elements_Cave_RewardViews_ResourceRewardView__set_ResourceImageURL
+		               (int param1,int param2,undefined4 param3)
+		
+		{
+		  undefined4 uVar1;
+		  int *piVar2;
+		  int iVar3;
+		  int local_4;
+		  
+		  local_4 = param2;
+		  uVar1 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_uint__object___MoveNext
+		                    (*(undefined4 *)(param1 + 0x14),0);
+		  Com_TheFallenGames_OSA_CustomAdapters_TableView_Tuple_Basic_BasicTupleValueViewsHolder__UpdateAsText
+		            (uVar1,(uint)(0 < param2),0);
+		  piVar2 = *(int **)(param1 + 0x14);
+		  uVar1 = func_ii_4443(&local_4,0);
+		  iVar3 = *piVar2;
+		  (**(code **)((ulonglong)*(uint *)(iVar3 + 0x2d0) * 4))
+		            (piVar2,uVar1,*(undefined4 *)(iVar3 + 0x2d4));
+		  return;
+		}
+		*/
+
 }

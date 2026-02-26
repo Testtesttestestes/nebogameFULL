@@ -69,6 +69,29 @@ namespace Gameplay.Clans.Buildings.Golem.View
 		[Address(RVA = "0x9163", Offset = "0x9163", VA = "0x9163", Slot = "22")]
 		protected override void OnShow(WarStatusWindow.WarStatusWindowArgs args)
 		{
+		/* --- GHIDRA: OnShow ---
+		void Gameplay_Clans_Buildings_Golem_View_WarStatusWindow__OnShow(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  
+		  if (DAT_ram_00a57853 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UI_Windows_ClosableBaseWindow_WarStatusWindow_WarStatusWindowArgs__OnClose__)
+		    ;
+		    DAT_ram_00a57853 = '\x01';
+		  }
+		  iVar1 = **(int **)(param1 + 0x4c);
+		  (**(code **)((ulonglong)*(uint *)(iVar1 + 0x130) * 4))
+		            (*(int **)(param1 + 0x4c),*(undefined4 *)(iVar1 + 0x134));
+		  *(undefined4 *)(param1 + 0x4c) = 0;
+		  UI_Windows_ClosableBaseWindow_object___OnClickBack
+		            (param1,
+		             Method_UI_Windows_ClosableBaseWindow_WarStatusWindow_WarStatusWindowArgs__OnClose__);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x060042B0 RID: 17072 RVA: 0x00002050 File Offset: 0x00000250
@@ -76,6 +99,23 @@ namespace Gameplay.Clans.Buildings.Golem.View
 		[Address(RVA = "0x9164", Offset = "0x9164", VA = "0x9164", Slot = "19")]
 		protected override void OnClose()
 		{
+		/* --- GHIDRA: OnClose ---
+		void Gameplay_Clans_Buildings_Golem_View_WarStatusWindow__OnClose
+		               (undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a57854 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UI_Windows_ClosableBaseWindow_WarStatusWindow_WarStatusWindowArgs___ctor__);
+		    DAT_ram_00a57854 = '\x01';
+		  }
+		  UI_MonoBehaviourWithStates_ClientStateChangedDelegate___Il2CppFullySharedGenericStructType___Invoke
+		            (param1,
+		             Method_UI_Windows_ClosableBaseWindow_WarStatusWindow_WarStatusWindowArgs___ctor__);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x060042B1 RID: 17073 RVA: 0x00002050 File Offset: 0x00000250
@@ -140,4 +180,31 @@ namespace Gameplay.Clans.Buildings.Golem.View
 			public WarStatusViewMasterMediator Mediator;
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_WarStatusView ---
+		void Gameplay_Clans_Buildings_Golem_View_WarStatusWindow__get_WarStatusView
+		               (int param1,int param2,undefined4 param3)
+		
+		{
+		  int *piVar1;
+		  
+		  if (DAT_ram_00a57852 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UI_Windows_ClosableBaseWindow_WarStatusWindow_WarStatusWindowArgs__OnShow__);
+		    DAT_ram_00a57852 = '\x01';
+		  }
+		  func_ii_7769(param1,param2,
+		               Method_UI_Windows_ClosableBaseWindow_WarStatusWindow_WarStatusWindowArgs__OnShow__);
+		  Core_Extensions_Dict_AprDicExt__Get1024AssetId
+		            (*(undefined4 *)(param1 + 0x3c),*(undefined4 *)(param2 + 0x18),0);
+		  piVar1 = *(int **)(param2 + 0x1c);
+		  *(int **)(param1 + 0x4c) = piVar1;
+		  (**(code **)((ulonglong)*(uint *)(*piVar1 + 0x160) * 4))
+		            (piVar1,param1,*(undefined4 *)(*piVar1 + 0x164));
+		  return;
+		}
+		*/
+
 }

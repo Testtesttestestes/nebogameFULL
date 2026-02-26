@@ -14,6 +14,20 @@ namespace Gameplay.Tutorial.Guide.Model.Data.Config
 		[Address(RVA = "0x6CEE", Offset = "0x6CEE", VA = "0x6CEE")]
 		public GraphicPointerConfig()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_Tutorial_Guide_Model_Data_Config_GraphicPointerConfig___ctor
+		               (int param1,undefined8 *param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  undefined8 uVar1;
+		  
+		  uVar1 = *param2;
+		  *(undefined4 *)(param1 + 0x10) = param3;
+		  *(undefined8 *)(param1 + 8) = uVar1;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x04000ED2 RID: 3794

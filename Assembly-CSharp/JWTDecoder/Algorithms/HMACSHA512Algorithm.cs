@@ -13,6 +13,25 @@ namespace JWTDecoder.Algorithms
 		[Address(RVA = "0x5B8F", Offset = "0x5B8F", VA = "0x5B8F", Slot = "4")]
 		public byte[] Sign(byte[] key, byte[] bytesToSign)
 		{
+		/* --- GHIDRA: Sign ---
+		undefined4 JWTDecoder_Algorithms_HMACSHA512Algorithm__Sign(undefined4 param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  undefined4 local_c;
+		  undefined8 local_8;
+		  
+		  if (DAT_ram_00a5b860 == '\0') {
+		    Mono_Security_ASN1__get_Item(&JWTDecoder_HashAlgorithm_TypeInfo);
+		    DAT_ram_00a5b860 = '\x01';
+		  }
+		  local_8 = 0x2ffffffff;
+		  local_c = JWTDecoder_HashAlgorithm_TypeInfo;
+		  uVar1 = Spine_SkeletonJson__GetFloat(&local_c,0);
+		  return uVar1;
+		}
+		*/
+
 			return null;
 		}
 

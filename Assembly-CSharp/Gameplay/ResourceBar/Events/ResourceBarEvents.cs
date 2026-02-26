@@ -14,6 +14,23 @@ namespace Gameplay.ResourceBar.Events
 		[Address(RVA = "0x7243", Offset = "0x7243", VA = "0x7243")]
 		public ResourceBarEvents()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_ResourceBar_Events_ResourceBarEvents___ctor
+		               (undefined4 param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  if (DAT_ram_00a58340 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_MVC_AbstractController_ResourceBarModel__ResourceBarEvents___ctor__);
+		    DAT_ram_00a58340 = '\x01';
+		  }
+		  Gameplay_Combat_AbstractCombat_object__object__object__object__object___set_User
+		            (param1,param2,param3,
+		             Method_MVC_AbstractController_ResourceBarModel__ResourceBarEvents___ctor__);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x040011F7 RID: 4599

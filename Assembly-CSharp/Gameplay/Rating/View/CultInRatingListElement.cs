@@ -31,6 +31,25 @@ namespace Gameplay.Rating.View
 		[Address(RVA = "0x72F6", Offset = "0x72F6", VA = "0x72F6")]
 		public CultInRatingListElement()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_Rating_View_CultInRatingListElement___ctor(undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a58027 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Elements_GenericList_SelectableListElementArgs_CultInRatingListElement___ctor__
+		              );
+		    DAT_ram_00a58027 = '\x01';
+		  }
+		  UnityEngine_InputSystem_LowLevel_SelectObservable___Il2CppFullySharedGenericType____Il2CppFullySharedGenericType___Subscribe
+		            (param1,
+		             Method_UI_Elements_GenericList_SelectableListElementArgs_CultInRatingListElement___ctor__
+		            );
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x04001253 RID: 4691

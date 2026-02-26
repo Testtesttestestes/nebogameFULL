@@ -12,6 +12,25 @@ namespace Mycom.Tracker.Unity.Ads
 		[Address(RVA = "0xBEF1", Offset = "0xBEF1", VA = "0xBEF1")]
 		internal AdEvent(AppEventEnum appEvent, AdNetworkEnum network, double revenue, string currency, string source, string placementId, string adId, string adFormat)
 		{
+		/* --- GHIDRA: .ctor ---
+		int Mycom_Tracker_Unity_Ads_AdEvent___ctor(undefined4 param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  
+		  if (DAT_ram_00a5970f == '\0') {
+		    Mono_Security_ASN1__get_Item(&Mycom_Tracker_Unity_Ads_AdEventBuilder_TypeInfo);
+		    DAT_ram_00a5970f = '\x01';
+		  }
+		  iVar1 = unnamed_function_1417(Mycom_Tracker_Unity_Ads_AdEventBuilder_TypeInfo);
+		  *(undefined4 *)(iVar1 + 0x18) = 0;
+		  *(undefined8 *)(iVar1 + 0x10) = 0x7ff8000000000000;
+		  *(undefined4 *)(iVar1 + 0xc) = param1;
+		  *(undefined4 *)(iVar1 + 8) = 0x11;
+		  return iVar1;
+		}
+		*/
+
 		}
 
 		// Token: 0x04003D41 RID: 15681

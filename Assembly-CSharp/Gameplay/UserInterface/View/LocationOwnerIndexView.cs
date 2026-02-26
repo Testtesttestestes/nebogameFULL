@@ -70,6 +70,32 @@ namespace Gameplay.UserInterface.View
 		[Address(RVA = "0x683D", Offset = "0x683D", VA = "0x683D")]
 		public LocationOwnerIndexView()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_UserInterface_View_LocationOwnerIndexView___ctor
+		               (int param1,int param2,undefined4 param3)
+		
+		{
+		  int iVar1;
+		  undefined4 param1_00;
+		  int iVar2;
+		  int iVar3;
+		  
+		  iVar2 = *(int *)(param1 + 0x10);
+		  if (0 < *(int *)(iVar2 + 0xc)) {
+		    iVar1 = 0;
+		    do {
+		      iVar3 = *(int *)(iVar2 + iVar1 * 4 + 0x10);
+		      param1_00 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_uint__object___MoveNext
+		                            (*(undefined4 *)(iVar3 + 0xc),0);
+		      Com_TheFallenGames_OSA_CustomAdapters_TableView_Tuple_Basic_BasicTupleValueViewsHolder__UpdateAsText
+		                (param1_00,(uint)(*(int *)(iVar3 + 8) == param2),0);
+		      iVar1 = iVar1 + 1;
+		    } while (iVar1 < *(int *)(iVar2 + 0xc));
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x04000BCF RID: 3023
@@ -95,4 +121,31 @@ namespace Gameplay.UserInterface.View
 		[FieldOffset(Offset = "0x1C")]
 		private LocationOwnerIndexViewMediator _mediator;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_RatingButton ---
+		void Gameplay_UserInterface_View_LocationOwnerIndexView__get_RatingButton
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4,undefined4 param5)
+		
+		{
+		  int *param1_00;
+		  
+		  if (DAT_ram_00a5825d == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Gameplay_UserInterface_Control_LocationOwnerIndexViewMediator_TypeInfo);
+		    DAT_ram_00a5825d = '\x01';
+		  }
+		  param1_00 = (int *)unnamed_function_1417
+		                               (
+		                               Gameplay_UserInterface_Control_LocationOwnerIndexViewMediator_TypeInfo
+		                               );
+		  Gameplay_UserInterface_Events_UserInterfaceEvents___ctor(param1_00,param2,param3,param4,0);
+		  *(int **)(param1 + 0x1c) = param1_00;
+		  (**(code **)((ulonglong)*(uint *)(*param1_00 + 0x160) * 4))
+		            (param1_00,param1,*(undefined4 *)(*param1_00 + 0x164));
+		  return;
+		}
+		*/
+
 }

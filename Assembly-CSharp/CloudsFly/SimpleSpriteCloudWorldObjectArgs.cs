@@ -13,6 +13,22 @@ namespace CloudsFly
 		[Address(RVA = "0xBDC0", Offset = "0xBDC0", VA = "0xBDC0")]
 		public SimpleSpriteCloudWorldObjectArgs(Vector3 position, Func<float, float, float> randomRange, Sprite sprite, float cloudDistance, float cloudStepDistance)
 		{
+		/* --- GHIDRA: .ctor ---
+		void CloudsFly_SimpleSpriteCloudWorldObjectArgs___ctor
+		               (int param1,undefined8 *param2,undefined4 param3,undefined4 param4,float param5,
+		               float param6,undefined4 param7)
+		
+		{
+		  *(undefined4 *)(param1 + 0x10) = *(undefined4 *)(param2 + 1);
+		  *(undefined8 *)(param1 + 8) = *param2;
+		  *(float *)(param1 + 0x20) = param6;
+		  *(float *)(param1 + 0x1c) = param5;
+		  *(undefined4 *)(param1 + 0x18) = param4;
+		  *(undefined4 *)(param1 + 0x14) = param3;
+		  return;
+		}
+		*/
+
 		}
 	}
 }

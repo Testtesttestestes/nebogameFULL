@@ -13,6 +13,26 @@ namespace Gameplay.Duel.Events
 		[Address(RVA = "0x82BC", Offset = "0x82BC", VA = "0x82BC")]
 		public DuelEvents()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_Duel_Events_DuelEvents___ctor
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4,undefined4 param5,
+		               undefined4 param6,undefined4 param7)
+		
+		{
+		  if (DAT_ram_00a57bd9 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Gameplay_Combat_Control_CombatController_CombatModel__CombatEvents___ctor__);
+		    DAT_ram_00a57bd9 = '\x01';
+		  }
+		  Sirenix_Serialization_ColorBlockFormatter___Il2CppFullySharedGenericType___Write
+		            (param1,param3,param4,param5,
+		             Method_Gameplay_Combat_Control_CombatController_CombatModel__CombatEvents___ctor__);
+		  *(undefined4 *)(param1 + 0x24) = param2;
+		  *(undefined1 *)(param1 + 0x20) = (undefined1)param6;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x04001BA5 RID: 7077

@@ -22,6 +22,22 @@ namespace Gameplay.Combat.View.Players.Pet
 		[Address(RVA = "0x884F", Offset = "0x884F", VA = "0x884F")]
 		public PetAvatar()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_Combat_View_Players_Pet_PetAvatar___ctor(int param1,undefined4 param2)
+		
+		{
+		  float param2_00;
+		  
+		  param2_00 = 1.0;
+		  if (*(char *)(param1 + 0x1c) == '\0') {
+		    param2_00 = 0.0;
+		  }
+		  AssetContent_Loaders_GameSpriteRendererLoader__HandleSpriteChanged
+		            (*(undefined4 *)(param1 + 0x24),param2_00,0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x04001F4E RID: 8014

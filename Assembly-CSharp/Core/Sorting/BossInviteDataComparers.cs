@@ -13,6 +13,35 @@ namespace Core.Sorting
 		[Address(RVA = "0xA725", Offset = "0xA725", VA = "0xA725")]
 		public BossInviteDataComparers()
 		{
+		/* --- GHIDRA: .ctor ---
+		undefined4
+		Core_Sorting_BossInviteDataComparers___ctor
+		          (undefined4 param1,int param2,int param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  int *piVar2;
+		  
+		  uVar1 = 0;
+		  if (DAT_ram_00a6055c == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_Sorting_UserDataComparers_ByNick_TypeInfo);
+		    DAT_ram_00a6055c = '\x01';
+		  }
+		  if ((((param2 != 0) && (param3 != 0)) && (*(int *)(param2 + 0x18) != 0)) &&
+		     (*(int *)(param3 + 0x18) != 0)) {
+		    piVar2 = (int *)unnamed_function_1417(Core_Sorting_UserDataComparers_ByNick_TypeInfo);
+		    if (DAT_ram_00a60567 == '\0') {
+		      Mono_Security_ASN1__get_Item(&Method_Core_Sorting_AbstractGameDataComparer_UserData___ctor__);
+		      DAT_ram_00a60567 = '\x01';
+		    }
+		    uVar1 = (**(code **)((ulonglong)*(uint *)(*piVar2 + 0x100) * 4))
+		                      (piVar2,*(undefined4 *)(param2 + 0x18),*(undefined4 *)(param3 + 0x18),
+		                       *(undefined4 *)(*piVar2 + 0x104));
+		  }
+		  return uVar1;
+		}
+		*/
+
 		}
 
 		// Token: 0x02000E6F RID: 3695

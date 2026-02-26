@@ -14,6 +14,19 @@ namespace Gameplay.Medals.View
 		[Address(RVA = "0x7674", Offset = "0x7674", VA = "0x7674")]
 		public MedalsCategoryTabBarItemData()
 		{
+		/* --- GHIDRA: .ctor ---
+		undefined4
+		Gameplay_Medals_View_MedalsCategoryTabBarItemData___ctor(undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a57d96 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_12652);
+		    DAT_ram_00a57d96 = '\x01';
+		  }
+		  return StringLiteral_12652;
+		}
+		*/
+
 		}
 
 		// Token: 0x04001453 RID: 5203

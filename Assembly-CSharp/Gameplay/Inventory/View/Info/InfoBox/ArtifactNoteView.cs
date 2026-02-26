@@ -39,6 +39,31 @@ namespace Gameplay.Inventory.View.Info.InfoBox
 		[Address(RVA = "0x7924", Offset = "0x7924", VA = "0x7924")]
 		public ArtifactNoteView()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_Inventory_View_Info_InfoBox_ArtifactNoteView___ctor(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  int *piVar2;
+		  int iVar3;
+		  
+		  if (DAT_ram_00a5a0cb == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_GameLocalization_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_2650);
+		    DAT_ram_00a5a0cb = '\x01';
+		  }
+		  piVar2 = *(int **)(param1 + 0x14);
+		  if (*(int *)(Core_GameLocalization_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Core_GameLocalization_TypeInfo);
+		  }
+		  uVar1 = Core_Extensions_Dict_CultDicExt__GetTitle(StringLiteral_2650,1,0,1,0,0,0,0);
+		  iVar3 = *piVar2;
+		  (**(code **)((ulonglong)*(uint *)(iVar3 + 0x2d0) * 4))
+		            (piVar2,uVar1,*(undefined4 *)(iVar3 + 0x2d4));
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x04001601 RID: 5633

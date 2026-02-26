@@ -14,6 +14,26 @@ namespace UI.ToolTip.Implementations.View
 		[Address(RVA = "0x5D1E", Offset = "0x5D1E", VA = "0x5D1E", Slot = "5")]
 		protected override void HandleDataChanged()
 		{
+		/* --- GHIDRA: HandleDataChanged ---
+		void UI_ToolTip_Implementations_View_TitleWhitListToolTipView__HandleDataChanged
+		               (undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a5996f == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_ToolTip_BaseToolTip_TitleWhitListToolTipView_TitleWhitListToolTipData___ctor__
+		              );
+		    DAT_ram_00a5996f = '\x01';
+		  }
+		  ScreenAdaptation_Common_AppSize__Update
+		            (param1,
+		             Method_UI_ToolTip_BaseToolTip_TitleWhitListToolTipView_TitleWhitListToolTipData___ctor__
+		            );
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x060009B7 RID: 2487 RVA: 0x00002050 File Offset: 0x00000250
@@ -21,6 +41,22 @@ namespace UI.ToolTip.Implementations.View
 		[Address(RVA = "0x5D1F", Offset = "0x5D1F", VA = "0x5D1F")]
 		public TitleWhitListToolTipView()
 		{
+		/* --- GHIDRA: .ctor ---
+		void UI_ToolTip_Implementations_View_TitleWhitListToolTipView___ctor(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a59970 == '\0') {
+		    Mono_Security_ASN1__get_Item(&string___TypeInfo);
+		    DAT_ram_00a59970 = '\x01';
+		  }
+		  uVar1 = Mono_Security_ASN1Convert__ToOid(string___TypeInfo,0);
+		  *(undefined4 *)(param1 + 0xc) = uVar1;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x040003CF RID: 975

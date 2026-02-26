@@ -13,6 +13,102 @@ namespace Gameplay.Rating.Model
 		[Address(RVA = "0x7375", Offset = "0x7375", VA = "0x7375")]
 		public SubRatingInfo(RatingKindTypeDic.Types.RatingKindType specId, UserRatingKindDic ratingKindDic)
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_Rating_Model_SubRatingInfo___ctor
+		               (int param1,undefined4 param2,int param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  undefined4 uVar2;
+		  undefined4 uVar3;
+		  undefined4 uVar4;
+		  
+		  uVar4 = *(undefined4 *)(param3 + 0xc);
+		  uVar1 = Core_Extensions_Dict_CultRatingKindDicExt__GetButton128AssetId(param3,0);
+		  uVar2 = Core_Extensions_Dict_CultRatingKindDicExt__GetTitle(param3,0);
+		  uVar3 = Core_Extensions_Dict_CultRatingKindDicExt__GetIcon32AssetId(param3,0);
+		  *(undefined1 *)(param1 + 0x1c) = *(undefined1 *)(param3 + 0x10);
+		  *(undefined4 *)(param1 + 0x18) = uVar3;
+		  *(undefined4 *)(param1 + 0x14) = uVar2;
+		  *(undefined4 *)(param1 + 0x10) = uVar1;
+		  *(undefined4 *)(param1 + 0xc) = uVar4;
+		  *(undefined4 *)(param1 + 8) = param2;
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_Rating_Model_SubRatingInfo___ctor
+		               (int param1,undefined4 param2,int param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  undefined4 uVar2;
+		  undefined4 uVar3;
+		  undefined4 uVar4;
+		  
+		  uVar4 = *(undefined4 *)(param3 + 0xc);
+		  uVar1 = Core_Extensions_Dict_CultRatingKindDicExt__GetButton128AssetId(param3,0);
+		  uVar2 = Core_Extensions_Dict_CultRatingKindDicExt__GetTitle(param3,0);
+		  uVar3 = Core_Extensions_Dict_CultRatingKindDicExt__GetIcon32AssetId(param3,0);
+		  *(undefined1 *)(param1 + 0x1c) = *(undefined1 *)(param3 + 0x10);
+		  *(undefined4 *)(param1 + 0x18) = uVar3;
+		  *(undefined4 *)(param1 + 0x14) = uVar2;
+		  *(undefined4 *)(param1 + 0x10) = uVar1;
+		  *(undefined4 *)(param1 + 0xc) = uVar4;
+		  *(undefined4 *)(param1 + 8) = param2;
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_Rating_Model_SubRatingInfo___ctor
+		               (int param1,undefined4 param2,int param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  undefined4 uVar2;
+		  undefined4 uVar3;
+		  undefined4 uVar4;
+		  
+		  uVar4 = *(undefined4 *)(param3 + 0xc);
+		  uVar1 = Core_Extensions_Dict_CultRatingKindDicExt__GetButton128AssetId(param3,0);
+		  uVar2 = Core_Extensions_Dict_CultRatingKindDicExt__GetTitle(param3,0);
+		  uVar3 = Core_Extensions_Dict_CultRatingKindDicExt__GetIcon32AssetId(param3,0);
+		  *(undefined1 *)(param1 + 0x1c) = *(undefined1 *)(param3 + 0x10);
+		  *(undefined4 *)(param1 + 0x18) = uVar3;
+		  *(undefined4 *)(param1 + 0x14) = uVar2;
+		  *(undefined4 *)(param1 + 0x10) = uVar1;
+		  *(undefined4 *)(param1 + 0xc) = uVar4;
+		  *(undefined4 *)(param1 + 8) = param2;
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_Rating_Model_SubRatingInfo___ctor
+		               (int param1,undefined4 param2,int param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  undefined4 uVar2;
+		  undefined4 uVar3;
+		  undefined4 uVar4;
+		  
+		  uVar4 = *(undefined4 *)(param3 + 0xc);
+		  uVar1 = Core_Extensions_Dict_CultRatingKindDicExt__GetButton128AssetId(param3,0);
+		  uVar2 = Core_Extensions_Dict_CultRatingKindDicExt__GetTitle(param3,0);
+		  uVar3 = Core_Extensions_Dict_CultRatingKindDicExt__GetIcon32AssetId(param3,0);
+		  *(undefined1 *)(param1 + 0x1c) = *(undefined1 *)(param3 + 0x10);
+		  *(undefined4 *)(param1 + 0x18) = uVar3;
+		  *(undefined4 *)(param1 + 0x14) = uVar2;
+		  *(undefined4 *)(param1 + 0x10) = uVar1;
+		  *(undefined4 *)(param1 + 0xc) = uVar4;
+		  *(undefined4 *)(param1 + 8) = param2;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06002217 RID: 8727 RVA: 0x00002050 File Offset: 0x00000250

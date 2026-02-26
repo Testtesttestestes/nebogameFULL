@@ -49,6 +49,31 @@ namespace UI.ToolTip.Implementations.View.Parts.Combat
 		[Address(RVA = "0x5D36", Offset = "0x5D36", VA = "0x5D36")]
 		public MercenarieRowView()
 		{
+		/* --- GHIDRA: .ctor ---
+		void UI_ToolTip_Implementations_View_Parts_Combat_MercenarieRowView___ctor
+		               (int param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a59979 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_ToolTip_BaseToolTip_BacktimeTitleToolTipView_BacktimeTitleArgs__HandleDataChanged__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UI_ToolTip_BaseToolTip_BacktimeTitleToolTipView_BacktimeTitleArgs__get_Data__
+		              );
+		    DAT_ram_00a59979 = '\x01';
+		  }
+		  if (*(int *)(param1 + 0x14) != 0) {
+		    UnityEngine_Component__GetComponentInChildren_object_
+		              (*(undefined4 *)(param1 + 0x18),*(undefined4 *)(*(int *)(param1 + 0x14) + 8),0);
+		    UI_Elements_RightPanel_TitleWithLevel__set_Level
+		              (*(undefined4 *)(param1 + 0x1c),*(undefined4 *)(*(int *)(param1 + 0x14) + 0xc),0);
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x040003ED RID: 1005
@@ -80,4 +105,20 @@ namespace UI.ToolTip.Implementations.View.Parts.Combat
 		[FieldOffset(Offset = "0x20")]
 		private TeamData.TeamAssistantData _data;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_Data ---
+		void UI_ToolTip_Implementations_View_Parts_Combat_MercenarieRowView__get_Data
+		               (int param1,int param2,undefined4 param3)
+		
+		{
+		  if (param2 != *(int *)(param1 + 0x20)) {
+		    *(int *)(param1 + 0x20) = param2;
+		    func_ii_8005(param1,param1);
+		  }
+		  return;
+		}
+		*/
+
 }

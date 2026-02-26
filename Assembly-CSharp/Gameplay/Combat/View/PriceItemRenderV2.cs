@@ -58,6 +58,56 @@ namespace Gameplay.Combat.View
 		[Address(RVA = "0x8714", Offset = "0x8714", VA = "0x8714")]
 		private static string GetAssetResIcon(Resources resId)
 		{
+		/* --- GHIDRA: GetAssetResIcon ---
+		void Gameplay_Combat_View_PriceItemRenderV2__GetAssetResIcon(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a566a2 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Func_Money_MoneyType__string__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&System_Func_Resources__string__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Method_Gameplay_Combat_View_PriceItemRenderV2_GetAssetResIcon__);
+		    Mono_Security_ASN1__get_Item(&Method_Gameplay_Combat_View_PriceItemRenderV2_GetAssetResIcon__);
+		    DAT_ram_00a566a2 = '\x01';
+		  }
+		  uVar1 = unnamed_function_1417(System_Func_Resources__string__TypeInfo);
+		  func_ii_8070(uVar1,0,Method_Gameplay_Combat_View_PriceItemRenderV2_GetAssetResIcon__,0);
+		  *(undefined4 *)(param1 + 0x48) = uVar1;
+		  uVar1 = unnamed_function_1417(System_Func_Money_MoneyType__string__TypeInfo);
+		  System_Linq_Enumerable__Where_object_
+		            (uVar1,0,Method_Gameplay_Combat_View_PriceItemRenderV2_GetAssetResIcon__,0);
+		  *(undefined4 *)(param1 + 0x4c) = uVar1;
+		  UI_Price_PriceItemRenderer__OnDestroy(param1,0);
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: GetAssetResIcon ---
+		void Gameplay_Combat_View_PriceItemRenderV2__GetAssetResIcon(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a566a2 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Func_Money_MoneyType__string__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&System_Func_Resources__string__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Method_Gameplay_Combat_View_PriceItemRenderV2_GetAssetResIcon__);
+		    Mono_Security_ASN1__get_Item(&Method_Gameplay_Combat_View_PriceItemRenderV2_GetAssetResIcon__);
+		    DAT_ram_00a566a2 = '\x01';
+		  }
+		  uVar1 = unnamed_function_1417(System_Func_Resources__string__TypeInfo);
+		  func_ii_8070(uVar1,0,Method_Gameplay_Combat_View_PriceItemRenderV2_GetAssetResIcon__,0);
+		  *(undefined4 *)(param1 + 0x48) = uVar1;
+		  uVar1 = unnamed_function_1417(System_Func_Money_MoneyType__string__TypeInfo);
+		  System_Linq_Enumerable__Where_object_
+		            (uVar1,0,Method_Gameplay_Combat_View_PriceItemRenderV2_GetAssetResIcon__,0);
+		  *(undefined4 *)(param1 + 0x4c) = uVar1;
+		  UI_Price_PriceItemRenderer__OnDestroy(param1,0);
+		  return;
+		}
+		*/
+
 			return null;
 		}
 
@@ -76,4 +126,49 @@ namespace Gameplay.Combat.View
 		{
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: set_GetMoneyAssetIdHandler ---
+		undefined4
+		Gameplay_Combat_View_PriceItemRenderV2__set_GetMoneyAssetIdHandler
+		          (undefined4 param1,undefined4 param2)
+		
+		{
+		  uint uVar1;
+		  uint *puVar2;
+		  undefined4 uVar3;
+		  int *param1_00;
+		  int iVar4;
+		  
+		  if (DAT_ram_00a566a0 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_Gameplay_IGame_TypeInfo);
+		    DAT_ram_00a566a0 = '\x01';
+		  }
+		  if (DAT_ram_00a6456f == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_Gameplay_Game_TypeInfo);
+		    DAT_ram_00a6456f = '\x01';
+		  }
+		  uVar1 = 0;
+		  param1_00 = (int *)**(undefined4 **)(Core_Gameplay_Game_TypeInfo + 0x5c);
+		  iVar4 = *param1_00;
+		  if (*(ushort *)(iVar4 + 0xb6) != 0) {
+		    do {
+		      if (Core_Gameplay_IGame_TypeInfo == *(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8)) {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8 + 4) * 8 + iVar4 + 0x178);
+		        goto code_r0x80c62968;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar4 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(param1_00,Core_Gameplay_IGame_TypeInfo,0x17);
+		code_r0x80c62968:
+		  uVar3 = (**(code **)((ulonglong)*puVar2 * 4))(param1_00,puVar2[1]);
+		  uVar3 = Newtonsoft_Json_Converters_XmlDocumentTypeWrapper__get_System(uVar3,0);
+		  uVar3 = Core_Extensions_Dict_ResourceSetExt__GetValue(uVar3,param1,0);
+		  uVar3 = Core_Extensions_Dict_ResourcesDicExt__GetIcon256AssetId(uVar3,0);
+		  return uVar3;
+		}
+		*/
+
 }

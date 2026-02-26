@@ -13,6 +13,22 @@ namespace Core.Extensions.Dict
 		[Address(RVA = "0x1D71", Offset = "0x1D71", VA = "0x1D71")]
 		public static string GetGemsSpriteAtlasAssetId(this GameFieldGemSetsDic dict)
 		{
+		/* --- GHIDRA: GetGemsSpriteAtlasAssetId ---
+		undefined4
+		Core_Extensions_Dict_GameFieldGemSetsDicExt__GetGemsSpriteAtlasAssetId
+		          (undefined4 param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  int iVar1;
+		  
+		  iVar1 = Core_Gameplay_Managers_DictManager__CheckSupportedService(param1,param2,param2);
+		  if (iVar1 != 0) {
+		    return *(undefined4 *)(iVar1 + 0x14);
+		  }
+		  return 0;
+		}
+		*/
+
 			return null;
 		}
 	}

@@ -189,6 +189,40 @@ namespace UI
 		[Address(RVA = "0x5BC5", Offset = "0x5BC5", VA = "0x5BC5")]
 		private void Awake()
 		{
+		/* --- GHIDRA: Awake ---
+		void UI_AppCanvas__Awake(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  undefined4 uVar2;
+		  
+		  if (DAT_ram_00a5b867 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Method_UI_AppCanvas_DevMenuUnlockerOnDevMenuUnlockedEvent__);
+		    Mono_Security_ASN1__get_Item(&Method_UI_AppCanvas_ShowDevMenu__);
+		    Mono_Security_ASN1__get_Item(&Core_GameLocalization_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_10750);
+		    DAT_ram_00a5b867 = '\x01';
+		  }
+		  uVar2 = *(undefined4 *)(param1 + 0x18);
+		  if (*(int *)(Core_GameLocalization_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Core_GameLocalization_TypeInfo);
+		  }
+		  uVar1 = Core_Extensions_Dict_CultDicExt__GetTitle(StringLiteral_10750,1,0,1,0,0,0,0);
+		  Core_Application_App__get_ToastController(uVar2,1,uVar1,0);
+		  uVar1 = *(undefined4 *)(param1 + 0x24);
+		  uVar2 = unnamed_function_1417(System_Action_TypeInfo);
+		  UnityEngine_Events_UnityEvent__AddListener
+		            (uVar2,param1,Method_UI_AppCanvas_DevMenuUnlockerOnDevMenuUnlockedEvent__,0);
+		  Core_Dev_DevMenuUnlocker__add_DevMenuUnlockedEvent(uVar1,uVar2,0);
+		  uVar1 = *(undefined4 *)(param1 + 0x24);
+		  uVar2 = unnamed_function_1417(System_Action_TypeInfo);
+		  UnityEngine_Events_UnityEvent__AddListener(uVar2,param1,Method_UI_AppCanvas_ShowDevMenu__,0);
+		  Core_Dev_DevMenuUnlocker__remove_DevMenuUnlockedEvent(uVar1,uVar2,0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06000808 RID: 2056 RVA: 0x00002050 File Offset: 0x00000250
@@ -196,6 +230,15 @@ namespace UI
 		[Address(RVA = "0x5BC6", Offset = "0x5BC6", VA = "0x5BC6")]
 		private void DevMenuUnlockerOnDevMenuUnlockedEvent()
 		{
+		/* --- GHIDRA: DevMenuUnlockerOnDevMenuUnlockedEvent ---
+		void UI_AppCanvas__DevMenuUnlockerOnDevMenuUnlockedEvent(int param1,undefined4 param2)
+		
+		{
+		  Core_Dev_DevMenuUnlocker__Validate(*(undefined4 *)(param1 + 0x24),0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06000809 RID: 2057 RVA: 0x00002050 File Offset: 0x00000250
@@ -203,6 +246,32 @@ namespace UI
 		[Address(RVA = "0x5BC7", Offset = "0x5BC7", VA = "0x5BC7")]
 		private void ShowDevMenu()
 		{
+		/* --- GHIDRA: ShowDevMenu ---
+		void UI_AppCanvas__ShowDevMenu(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  undefined4 uVar2;
+		  
+		  if (DAT_ram_00a5b868 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Method_UI_AppCanvas_DevMenuUnlockerOnDevMenuUnlockedEvent__);
+		    Mono_Security_ASN1__get_Item(&Method_UI_AppCanvas_ShowDevMenu__);
+		    DAT_ram_00a5b868 = '\x01';
+		  }
+		  uVar2 = *(undefined4 *)(param1 + 0x24);
+		  uVar1 = unnamed_function_1417(System_Action_TypeInfo);
+		  UnityEngine_Events_UnityEvent__AddListener
+		            (uVar1,param1,Method_UI_AppCanvas_DevMenuUnlockerOnDevMenuUnlockedEvent__,0);
+		  Core_Dev_DevMenuUnlocker__add_DevMenuUnlockedEvent(uVar2,uVar1,0);
+		  uVar2 = *(undefined4 *)(param1 + 0x24);
+		  uVar1 = unnamed_function_1417(System_Action_TypeInfo);
+		  UnityEngine_Events_UnityEvent__AddListener(uVar1,param1,Method_UI_AppCanvas_ShowDevMenu__,0);
+		  Core_Dev_DevMenuUnlocker__add_ClickedEvent(uVar2,uVar1,0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600080A RID: 2058 RVA: 0x00002050 File Offset: 0x00000250
@@ -291,4 +360,48 @@ namespace UI
 		[SerializeField]
 		private ResourceBarView _resourceBar;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_AudioSource ---
+		void UI_AppCanvas__get_AudioSource(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  undefined4 uVar2;
+		  undefined4 param1_00;
+		  undefined8 local_10;
+		  undefined8 local_8;
+		  
+		  if (DAT_ram_00a5b866 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Method_UI_AppCanvas_DevMenuUnlockerOnDevMenuUnlockedEvent__);
+		    Mono_Security_ASN1__get_Item(&Method_UnityEngine_Component_GetComponent_RectTransform___);
+		    Mono_Security_ASN1__get_Item(&UnityEngine_Object_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&UI_ToolTip_Controller_WebGL_ToolTipController_TypeInfo);
+		    DAT_ram_00a5b866 = '\x01';
+		  }
+		  param1_00 = *(undefined4 *)(param1 + 0x2c);
+		  uVar1 = func_ii_5677(param1_00,Method_UnityEngine_Component_GetComponent_RectTransform___);
+		  uVar2 = unnamed_function_1417(UI_ToolTip_Controller_WebGL_ToolTipController_TypeInfo);
+		  local_10 = 0;
+		  local_8 = 0;
+		  UI_ToolTip_Controller_BaseToolTipController__UpdateToolTipPositionCoroutine_d__22__System_Collections_IEnumerator_get_Current
+		            (uVar2,param1_00,uVar1,&local_10,0);
+		  *(undefined4 *)(param1 + 0x40) = uVar2;
+		  uVar1 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_uint__object___MoveNext
+		                    (param1,0);
+		  if (*(int *)(UnityEngine_Object_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(UnityEngine_Object_TypeInfo);
+		  }
+		  UnityEngine_Object__FindObjectsByType(uVar1,0);
+		  uVar2 = *(undefined4 *)(param1 + 0x24);
+		  uVar1 = unnamed_function_1417(System_Action_TypeInfo);
+		  UnityEngine_Events_UnityEvent__AddListener
+		            (uVar1,param1,Method_UI_AppCanvas_DevMenuUnlockerOnDevMenuUnlockedEvent__,0);
+		  Core_Dev_DevMenuShowConsole___ctor(uVar2,uVar1,0);
+		  return;
+		}
+		*/
+
 }

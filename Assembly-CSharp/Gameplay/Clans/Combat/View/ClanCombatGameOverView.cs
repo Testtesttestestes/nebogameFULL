@@ -20,6 +20,74 @@ namespace Gameplay.Clans.Combat.View
 		[Address(RVA = "0x8F8B", Offset = "0x8F8B", VA = "0x8F8B", Slot = "5")]
 		public override CombatGameOverView Show(CombatGameOverView.CombatGameOverViewArgs args)
 		{
+		/* --- GHIDRA: Show ---
+		int Gameplay_Clans_Combat_View_ClanCombatGameOverView__Show
+		              (int param1,int *param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  int *piVar1;
+		  int iVar2;
+		  undefined4 *puVar3;
+		  undefined4 uVar4;
+		  undefined4 param1_00;
+		  int iVar5;
+		  
+		  piVar1 = (int *)0x0;
+		  if (DAT_ram_00a57765 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_GameLocalization_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Gameplay_Clans_Combat_Model_GameOverData_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Method_UnityEngine_Object_Instantiate_InIdleOutSpineAnimation___);
+		    Mono_Security_ASN1__get_Item(&UnityEngine_Object_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_17762);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_10333);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_15056);
+		    DAT_ram_00a57765 = '\x01';
+		  }
+		  if (((uint)*(byte *)(Gameplay_Clans_Combat_Model_GameOverData_TypeInfo + 0xb8) <=
+		       (uint)*(byte *)(*param2 + 0xb8)) &&
+		     (piVar1 = param2,
+		     *(int *)(*(int *)(*param2 + 100) +
+		              (uint)*(byte *)(Gameplay_Clans_Combat_Model_GameOverData_TypeInfo + 0xb8) * 4 + -4) !=
+		     Gameplay_Clans_Combat_Model_GameOverData_TypeInfo)) {
+		    piVar1 = (int *)0x0;
+		  }
+		  puVar3 = &StringLiteral_17762;
+		  if ((char)param2[2] == '\0') {
+		    puVar3 = &StringLiteral_10333;
+		  }
+		  uVar4 = *puVar3;
+		  if (*(int *)(Core_GameLocalization_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Core_GameLocalization_TypeInfo);
+		  }
+		  uVar4 = Core_Extensions_Dict_CultDicExt__GetTitle(uVar4,1,0,1,0,0,0,0);
+		  if (piVar1[9] == 1) {
+		    if (*(int *)(Core_GameLocalization_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(Core_GameLocalization_TypeInfo);
+		    }
+		    uVar4 = Core_Extensions_Dict_CultDicExt__GetTitle(StringLiteral_15056,1,0,1,0,0,0,0);
+		    puVar3 = (undefined4 *)(param1 + 0x4c);
+		  }
+		  else {
+		    iVar2 = 0x2c;
+		    if ((char)param2[2] == '\0') {
+		      iVar2 = 0x30;
+		    }
+		    puVar3 = (undefined4 *)(param1 + iVar2);
+		  }
+		  param1_00 = *puVar3;
+		  if (*(int *)(UnityEngine_Object_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(UnityEngine_Object_TypeInfo);
+		  }
+		  iVar2 = func_ii_6805(param1_00,param3,
+		                       Method_UnityEngine_Object_Instantiate_InIdleOutSpineAnimation___);
+		  iVar5 = **(int **)(iVar2 + 0x1c);
+		  (**(code **)((ulonglong)*(uint *)(iVar5 + 0x2d0) * 4))
+		            (*(int **)(iVar2 + 0x1c),uVar4,*(undefined4 *)(iVar5 + 0x2d4));
+		  Animations_InIdleOutSpineAnimation__get_Particles(iVar2,0);
+		  return iVar2;
+		}
+		*/
+
 			return null;
 		}
 
@@ -28,6 +96,16 @@ namespace Gameplay.Clans.Combat.View
 		[Address(RVA = "0x8F8C", Offset = "0x8F8C", VA = "0x8F8C", Slot = "6")]
 		protected override InIdleOutSpineAnimation CreateResultAnimation(GameOverData gameOverData, Transform parent)
 		{
+		/* --- GHIDRA: CreateResultAnimation ---
+		void Gameplay_Clans_Combat_View_ClanCombatGameOverView__CreateResultAnimation
+		               (undefined4 param1,undefined4 param2)
+		
+		{
+		  Gameplay_Combat_View_CombatGameOverView__HandleCloseButtonClickEvent(param1,0);
+		  return;
+		}
+		*/
+
 			return null;
 		}
 

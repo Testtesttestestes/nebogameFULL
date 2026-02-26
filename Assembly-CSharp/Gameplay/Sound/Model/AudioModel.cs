@@ -210,6 +210,44 @@ namespace Gameplay.Sound.Model
 		[Address(RVA = "0x9C1D", Offset = "0x9C1D", VA = "0x9C1D", Slot = "5")]
 		public override void Dispose()
 		{
+		/* --- GHIDRA: Dispose ---
+		void Gameplay_Sound_Model_AudioModel__Dispose
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4,undefined4 param5,
+		               undefined4 param6)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a59824 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_Dictionary_string__AssetDic_____ctor__);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_Dictionary_string__AssetDic___ctor__);
+		    Mono_Security_ASN1__get_Item(&System_Collections_Generic_Dictionary_string__AssetDic__TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&System_Collections_Generic_Dictionary_string__AssetDic____TypeInfo);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_11255);
+		    DAT_ram_00a59824 = '\x01';
+		  }
+		  *(undefined4 *)(param1 + 0x2c) = 0xc2a00000;
+		  *(undefined8 *)(param1 + 0x20) = 0x3e4ccccd3e99999a;
+		  *(undefined4 *)(param1 + 0x30) = StringLiteral_11255;
+		  uVar1 = unnamed_function_1417(System_Collections_Generic_Dictionary_string__AssetDic__TypeInfo);
+		  System_Collections_Generic_Dictionary_object__StyleComplexSelector_PseudoStateData___set_Item
+		            (uVar1,Method_System_Collections_Generic_Dictionary_string__AssetDic___ctor__);
+		  *(undefined4 *)(param1 + 0x34) = uVar1;
+		  uVar1 = unnamed_function_1417(System_Collections_Generic_Dictionary_string__AssetDic____TypeInfo);
+		  System_Collections_Generic_Dictionary_object__StyleComplexSelector_PseudoStateData___set_Item
+		            (uVar1,Method_System_Collections_Generic_Dictionary_string__AssetDic_____ctor__);
+		  *(undefined4 *)(param1 + 0x38) = uVar1;
+		  Unity_Services_Core_Environments_Internal_Environments__get_Current(param1,param5,0);
+		  *(undefined4 *)(param1 + 0x14) = param4;
+		  *(undefined4 *)(param1 + 0x10) = param3;
+		  *(undefined4 *)(param1 + 0xc) = param2;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06004DE6 RID: 19942 RVA: 0x00002050 File Offset: 0x00000250
@@ -217,6 +255,70 @@ namespace Gameplay.Sound.Model
 		[Address(RVA = "0x9C1E", Offset = "0x9C1E", VA = "0x9C1E")]
 		public AudioModel(IUserSettings userSettings, ICache<AssetDic, AudioClip> audioCache, DictManager dictManager, UserData user)
 		{
+		/* --- GHIDRA: .ctor ---
+		undefined4
+		Gameplay_Sound_Model_AudioModel___ctor
+		          (int param1,undefined4 param2,undefined4 *param3,undefined4 param4)
+		
+		{
+		  int iVar1;
+		  int iVar2;
+		  int iVar3;
+		  int iVar4;
+		  undefined4 uVar5;
+		  
+		  if (DAT_ram_00a59825 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_Dictionary_string__AssetDic__Add__);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_Dictionary_string__AssetDic__TryGetValue__);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Google_Protobuf_Collections_RepeatedField_UISoundEffect__get_Count__);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Google_Protobuf_Collections_RepeatedField_UISoundEffect__get_Item__);
+		    DAT_ram_00a59825 = '\x01';
+		  }
+		  iVar1 = Spine_Unity_AttachmentTools_AttachmentRegionExtensions__GetRegion
+		                    (*(undefined4 *)(param1 + 0x34),param2,param3,
+		                     Method_System_Collections_Generic_Dictionary_string__AssetDic__TryGetValue__);
+		  if (iVar1 == 0) {
+		    iVar1 = 0;
+		    iVar2 = Newtonsoft_Json_Converters_XmlDocumentTypeWrapper__get_System
+		                      (*(undefined4 *)(param1 + 0x14),0);
+		    iVar2 = *(int *)(*(int *)(iVar2 + 0x2a0) + 0xc);
+		    if (iVar2 < 1) {
+		      uVar5 = 0;
+		    }
+		    else {
+		      do {
+		        iVar3 = Newtonsoft_Json_Converters_XmlDocumentTypeWrapper__get_System
+		                          (*(undefined4 *)(param1 + 0x14),0);
+		        iVar3 = Google_Protobuf_Collections_RepeatedField_Int32Enum___get_IsReadOnly
+		                          (*(undefined4 *)(iVar3 + 0x2a0),iVar1,
+		                           Method_Google_Protobuf_Collections_RepeatedField_UISoundEffect__get_Item__
+		                          );
+		        iVar4 = System_Collections_CollectionBase___ctor(*(undefined4 *)(iVar3 + 0xc),param2,0);
+		        if (iVar4 != 0) {
+		          uVar5 = Core_Gameplay_Managers_DictManager__CheckSupportedService
+		                            (*(undefined4 *)(param1 + 0x14),*(undefined4 *)(iVar3 + 0x10),0);
+		          *param3 = uVar5;
+		          System_Reflection_FieldInfo__get_IsStatic
+		                    (*(undefined4 *)(param1 + 0x34),param2,uVar5,
+		                     Method_System_Collections_Generic_Dictionary_string__AssetDic__Add__);
+		          return 1;
+		        }
+		        iVar1 = iVar1 + 1;
+		      } while (iVar1 != iVar2);
+		      uVar5 = 0;
+		    }
+		  }
+		  else {
+		    uVar5 = 1;
+		  }
+		  return uVar5;
+		}
+		*/
+
 		}
 
 		// Token: 0x06004DE7 RID: 19943 RVA: 0x0000E4F0 File Offset: 0x0000C6F0
@@ -224,6 +326,92 @@ namespace Gameplay.Sound.Model
 		[Address(RVA = "0x9C1F", Offset = "0x9C1F", VA = "0x9C1F")]
 		public bool TryGetSoundAsset(string key, out AssetDic asset)
 		{
+		/* --- GHIDRA: TryGetSoundAsset ---
+		undefined4
+		Gameplay_Sound_Model_AudioModel__TryGetSoundAsset
+		          (int param1,undefined4 param2,int *param3,undefined4 param4)
+		
+		{
+		  int iVar1;
+		  int iVar2;
+		  int iVar3;
+		  int iVar4;
+		  undefined4 uVar5;
+		  undefined4 param1_00;
+		  
+		  if (DAT_ram_00a59826 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Protocol_Dic_AssetDic___TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_Dictionary_string__AssetDic____Add__);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_Dictionary_string__AssetDic____TryGetValue__);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Google_Protobuf_Collections_RepeatedField_SoundPlaylist__get_Count__);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Google_Protobuf_Collections_RepeatedField_string__get_Count__);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Google_Protobuf_Collections_RepeatedField_SoundPlaylist__get_Item__);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Google_Protobuf_Collections_RepeatedField_string__get_Item__);
+		    DAT_ram_00a59826 = '\x01';
+		  }
+		  iVar1 = Spine_Unity_AttachmentTools_AttachmentRegionExtensions__GetRegion
+		                    (*(undefined4 *)(param1 + 0x38),param2,param3,
+		                     Method_System_Collections_Generic_Dictionary_string__AssetDic____TryGetValue__)
+		  ;
+		  if (iVar1 == 0) {
+		    iVar1 = 0;
+		    iVar2 = Newtonsoft_Json_Converters_XmlDocumentTypeWrapper__get_System
+		                      (*(undefined4 *)(param1 + 0x14),0);
+		    iVar2 = *(int *)(*(int *)(iVar2 + 0x2a4) + 0xc);
+		    if (iVar2 < 1) {
+		      uVar5 = 0;
+		    }
+		    else {
+		      do {
+		        iVar3 = Newtonsoft_Json_Converters_XmlDocumentTypeWrapper__get_System
+		                          (*(undefined4 *)(param1 + 0x14),0);
+		        iVar3 = Google_Protobuf_Collections_RepeatedField_Int32Enum___get_IsReadOnly
+		                          (*(undefined4 *)(iVar3 + 0x2a4),iVar1,
+		                           Method_Google_Protobuf_Collections_RepeatedField_SoundPlaylist__get_Item__
+		                          );
+		        iVar4 = System_Collections_CollectionBase___ctor(*(undefined4 *)(iVar3 + 0xc),param2,0);
+		        if (iVar4 != 0) {
+		          iVar1 = 0;
+		          iVar2 = Mono_Security_ASN1Convert__ToOid
+		                            (Protocol_Dic_AssetDic___TypeInfo,
+		                             *(undefined4 *)(*(int *)(iVar3 + 0x10) + 0xc));
+		          *param3 = iVar2;
+		          if (0 < *(int *)(iVar2 + 0xc)) {
+		            do {
+		              param1_00 = *(undefined4 *)(param1 + 0x14);
+		              uVar5 = Google_Protobuf_Collections_RepeatedField_Int32Enum___get_IsReadOnly
+		                                (*(undefined4 *)(iVar3 + 0x10),iVar1,
+		                                 Method_Google_Protobuf_Collections_RepeatedField_string__get_Item__
+		                                );
+		              uVar5 = Core_Gameplay_Managers_DictManager__CheckSupportedService(param1_00,uVar5,0);
+		              *(undefined4 *)(iVar2 + iVar1 * 4 + 0x10) = uVar5;
+		              iVar1 = iVar1 + 1;
+		              iVar2 = *param3;
+		            } while (iVar1 < *(int *)(iVar2 + 0xc));
+		          }
+		          System_Reflection_FieldInfo__get_IsStatic
+		                    (*(undefined4 *)(param1 + 0x38),param2,iVar2,
+		                     Method_System_Collections_Generic_Dictionary_string__AssetDic____Add__);
+		          return 1;
+		        }
+		        iVar1 = iVar1 + 1;
+		      } while (iVar1 != iVar2);
+		      uVar5 = 0;
+		    }
+		  }
+		  else {
+		    uVar5 = 1;
+		  }
+		  return uVar5;
+		}
+		*/
+
 			return default(bool);
 		}
 
@@ -232,6 +420,25 @@ namespace Gameplay.Sound.Model
 		[Address(RVA = "0x9C20", Offset = "0x9C20", VA = "0x9C20")]
 		public bool TryGetPlayListAssets(string name, out AssetDic[] assets)
 		{
+		/* --- GHIDRA: TryGetPlayListAssets ---
+		void Gameplay_Sound_Model_AudioModel__TryGetPlayListAssets(undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a59827 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_MVC_AbstractViewMediator_AudioModel__AudioEvents__AudioController__AudioControlsView__Dispose__
+		              );
+		    DAT_ram_00a59827 = '\x01';
+		  }
+		  MVC_AbstractViewMediator_object__object__object__object___Core_MVC_Interfaces_IViewMediator_set_View
+		            (param1,
+		             Method_MVC_AbstractViewMediator_AudioModel__AudioEvents__AudioController__AudioControlsView__Dispose__
+		            );
+		  return;
+		}
+		*/
+
 			return default(bool);
 		}
 

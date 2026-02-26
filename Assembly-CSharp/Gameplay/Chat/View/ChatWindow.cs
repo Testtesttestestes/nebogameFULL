@@ -44,4 +44,22 @@ namespace Gameplay.Chat.View
 			}
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_WindowId ---
+		void Gameplay_Chat_View_ChatWindow__get_WindowId(undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a57aed == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UI_Windows_ClosableBaseWindow_ChatWindow_ChatWindowArgs___ctor__);
+		    DAT_ram_00a57aed = '\x01';
+		  }
+		  UI_MonoBehaviourWithStates_ClientStateChangedDelegate___Il2CppFullySharedGenericStructType___Invoke
+		            (param1,Method_UI_Windows_ClosableBaseWindow_ChatWindow_ChatWindowArgs___ctor__);
+		  return;
+		}
+		*/
+
 }

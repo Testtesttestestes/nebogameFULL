@@ -13,6 +13,29 @@ namespace Gameplay.Collections.Events
 		[Address(RVA = "0x8B43", Offset = "0x8B43", VA = "0x8B43")]
 		public CollectionsEvents()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_Collections_Events_CollectionsEvents___ctor
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4,undefined4 param5,
+		               undefined4 param6,undefined4 param7)
+		
+		{
+		  if (DAT_ram_00a57ed0 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_MVC_AbstractViewMediator_CollectionsModel__CollectionsEvents__CollectionsController__CollectionInfoWindow___ctor__
+		              );
+		    DAT_ram_00a57ed0 = '\x01';
+		  }
+		  Gameplay_Combat_TeamCombat_View_AbstractTeamCombatView_object___get_HideInstantElements
+		            (param1,param2,param3,param4,
+		             Method_MVC_AbstractViewMediator_CollectionsModel__CollectionsEvents__CollectionsController__CollectionInfoWindow___ctor__
+		            );
+		  *(undefined4 *)(param1 + 0x1c) = param5;
+		  *(undefined4 *)(param1 + 0x20) = param6;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x04002176 RID: 8566

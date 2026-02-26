@@ -29,6 +29,46 @@ namespace UI.Windows
 		[Address(RVA = "0x61D8", Offset = "0x61D8", VA = "0x61D8", Slot = "28")]
 		protected override void HandleContent()
 		{
+		/* --- GHIDRA: HandleContent ---
+		undefined4 UI_Windows_RestoreArtifactWindow__HandleContent(int param1,undefined4 param2)
+		
+		{
+		  int *param1_00;
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a58a73 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_UI_Windows_PopupController_Show_RestoreArtifactWindow___);
+		    Mono_Security_ASN1__get_Item
+		              (&UI_Windows_RestoreArtifactWindow_RestoreArtifactWindowArgs_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_12642);
+		    DAT_ram_00a58a73 = '\x01';
+		  }
+		  param1_00 = (int *)unnamed_function_1417
+		                               (UI_Windows_RestoreArtifactWindow_RestoreArtifactWindowArgs_TypeInfo)
+		  ;
+		  if (DAT_ram_00a58a75 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Windows_BaseDialogWindow_BaseDialogWindowArgs_RestoreArtifactWindow_RestoreArtifactWindowArgs___ctor__
+		              );
+		    DAT_ram_00a58a75 = '\x01';
+		  }
+		  UnityEngine_UIElements_BaseCompositeField___Il2CppFullySharedGenericType__object____Il2CppFullySharedGenericType___UpdateMixedValueContent
+		            (param1_00,
+		             Method_UI_Windows_BaseDialogWindow_BaseDialogWindowArgs_RestoreArtifactWindow_RestoreArtifactWindowArgs___ctor__
+		            );
+		  param1_00[0xb] = param1;
+		  (**(code **)((ulonglong)*(uint *)(*param1_00 + 0xf0) * 4))
+		            (param1_00,*(undefined4 *)(*param1_00 + 0xf4));
+		  uVar1 = System_Uri___ctor(0);
+		  uVar1 = System_Globalization_TimeSpanFormat_FormatLiterals__get_Start(uVar1,0);
+		  uVar1 = Gameplay_Antiq_View_GroupReviewWindow_WindowArgs___ctor
+		                    (uVar1,StringLiteral_12642,param1_00,
+		                     Method_UI_Windows_PopupController_Show_RestoreArtifactWindow___);
+		  return uVar1;
+		}
+		*/
+
 		}
 
 		// Token: 0x06000FB0 RID: 4016 RVA: 0x00002052 File Offset: 0x00000252
@@ -36,6 +76,25 @@ namespace UI.Windows
 		[Address(RVA = "0x61D9", Offset = "0x61D9", VA = "0x61D9")]
 		public static RestoreArtifactWindow Show(ArtifactData artifactData)
 		{
+		/* --- GHIDRA: Show ---
+		void UI_Windows_RestoreArtifactWindow__Show(undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a58a74 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Windows_BaseDialogWindow_RestoreArtifactWindow_RestoreArtifactWindowArgs___ctor__
+		              );
+		    DAT_ram_00a58a74 = '\x01';
+		  }
+		  UI_Windows_BaseDialogWindow_BaseDialogWindowArgs_object____ctor
+		            (param1,
+		             Method_UI_Windows_BaseDialogWindow_RestoreArtifactWindow_RestoreArtifactWindowArgs___ctor__
+		            );
+		  return;
+		}
+		*/
+
 			return null;
 		}
 
@@ -96,4 +155,53 @@ namespace UI.Windows
 			}
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_WindowId ---
+		void UI_Windows_RestoreArtifactWindow__get_WindowId(int param1,undefined4 param2)
+		
+		{
+		  int *piVar1;
+		  int iVar2;
+		  undefined4 param2_00;
+		  undefined4 param1_00;
+		  
+		  if (DAT_ram_00a58a72 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Windows_BaseDialogWindow_RestoreArtifactWindow_RestoreArtifactWindowArgs__HandleContent__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Windows_BaseDialogWindow_RestoreArtifactWindow_RestoreArtifactWindowArgs__get_Content__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Windows_BaseWindow_RestoreArtifactWindow_RestoreArtifactWindowArgs__get_WindowArgs__
+		              );
+		    Mono_Security_ASN1__get_Item(&Method_UnityEngine_Object_Instantiate_ArtifactView___);
+		    Mono_Security_ASN1__get_Item(&UnityEngine_Object_TypeInfo);
+		    DAT_ram_00a58a72 = '\x01';
+		  }
+		  UI_Windows_BaseDialogWindow_object___HandleButtons
+		            (param1,
+		             Method_UI_Windows_BaseDialogWindow_RestoreArtifactWindow_RestoreArtifactWindowArgs__HandleContent__
+		            );
+		  param2_00 = *(undefined4 *)(param1 + 0x40);
+		  param1_00 = *(undefined4 *)(param1 + 0x50);
+		  if (*(int *)(UnityEngine_Object_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(UnityEngine_Object_TypeInfo);
+		  }
+		  piVar1 = (int *)func_ii_6805(param1_00,param2_00,
+		                               Method_UnityEngine_Object_Instantiate_ArtifactView___);
+		  iVar2 = func_ii_8093(param1,
+		                       Method_UI_Windows_BaseWindow_RestoreArtifactWindow_RestoreArtifactWindowArgs__get_WindowArgs__
+		                      );
+		  (**(code **)((ulonglong)*(uint *)(*piVar1 + 0x138) * 4))
+		            (piVar1,*(undefined4 *)(iVar2 + 0x2c),*(undefined4 *)(*piVar1 + 0x13c));
+		  return;
+		}
+		*/
+
 }

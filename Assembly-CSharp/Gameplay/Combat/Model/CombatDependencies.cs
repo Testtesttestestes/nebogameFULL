@@ -46,6 +46,108 @@ namespace Gameplay.Combat.Model
 		[Address(RVA = "0x89DD", Offset = "0x89DD", VA = "0x89DD")]
 		public CombatDependencies(ICombat combatWrapper, ICombatPlayerFactory combatPlayerFactory, ICombatSpellDataFactory combatSpellFactory, IUserCache userCache, IDictProvider dictProvider, IGameAudio audio, IUserSettings settings, IGameAssetProvider assetProvider, AbstractPrefetchManager assetsPrefetch, PopupController popupController, IArtifactDrop artifactDrop)
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_Combat_Model_CombatDependencies___ctor(int param1,undefined4 param2)
+		
+		{
+		  uint uVar1;
+		  uint *puVar2;
+		  int *piVar3;
+		  int iVar4;
+		  
+		  if (DAT_ram_00a57e2e == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_IDisposable_TypeInfo);
+		    DAT_ram_00a57e2e = '\x01';
+		  }
+		  piVar3 = *(int **)(param1 + 8);
+		  if (piVar3 != (int *)0x0) {
+		    uVar1 = 0;
+		    iVar4 = *piVar3;
+		    if (*(ushort *)(iVar4 + 0xb6) != 0) {
+		      do {
+		        if (System_IDisposable_TypeInfo == *(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8)) {
+		          puVar2 = (uint *)(iVar4 + *(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8 + 4) * 8 + 0xc0);
+		          goto code_r0x80e6ae8e;
+		        }
+		        uVar1 = uVar1 + 1;
+		      } while (*(ushort *)(iVar4 + 0xb6) != uVar1);
+		    }
+		    puVar2 = (uint *)func_ii_1080(piVar3,System_IDisposable_TypeInfo,0);
+		code_r0x80e6ae8e:
+		    (**(code **)((ulonglong)*puVar2 * 4))(piVar3,puVar2[1]);
+		  }
+		  piVar3 = *(int **)(param1 + 0xc);
+		  if (piVar3 != (int *)0x0) {
+		    uVar1 = 0;
+		    iVar4 = *piVar3;
+		    if (*(ushort *)(iVar4 + 0xb6) != 0) {
+		      do {
+		        if (System_IDisposable_TypeInfo == *(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8)) {
+		          puVar2 = (uint *)(iVar4 + *(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8 + 4) * 8 + 0xc0);
+		          goto code_r0x80e6af14;
+		        }
+		        uVar1 = uVar1 + 1;
+		      } while (*(ushort *)(iVar4 + 0xb6) != uVar1);
+		    }
+		    puVar2 = (uint *)func_ii_1080(piVar3,System_IDisposable_TypeInfo,0);
+		code_r0x80e6af14:
+		    (**(code **)((ulonglong)*puVar2 * 4))(piVar3,puVar2[1]);
+		  }
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_Combat_Model_CombatDependencies___ctor(int param1,undefined4 param2)
+		
+		{
+		  uint uVar1;
+		  uint *puVar2;
+		  int *piVar3;
+		  int iVar4;
+		  
+		  if (DAT_ram_00a57e2e == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_IDisposable_TypeInfo);
+		    DAT_ram_00a57e2e = '\x01';
+		  }
+		  piVar3 = *(int **)(param1 + 8);
+		  if (piVar3 != (int *)0x0) {
+		    uVar1 = 0;
+		    iVar4 = *piVar3;
+		    if (*(ushort *)(iVar4 + 0xb6) != 0) {
+		      do {
+		        if (System_IDisposable_TypeInfo == *(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8)) {
+		          puVar2 = (uint *)(iVar4 + *(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8 + 4) * 8 + 0xc0);
+		          goto code_r0x80e6ae8e;
+		        }
+		        uVar1 = uVar1 + 1;
+		      } while (*(ushort *)(iVar4 + 0xb6) != uVar1);
+		    }
+		    puVar2 = (uint *)func_ii_1080(piVar3,System_IDisposable_TypeInfo,0);
+		code_r0x80e6ae8e:
+		    (**(code **)((ulonglong)*puVar2 * 4))(piVar3,puVar2[1]);
+		  }
+		  piVar3 = *(int **)(param1 + 0xc);
+		  if (piVar3 != (int *)0x0) {
+		    uVar1 = 0;
+		    iVar4 = *piVar3;
+		    if (*(ushort *)(iVar4 + 0xb6) != 0) {
+		      do {
+		        if (System_IDisposable_TypeInfo == *(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8)) {
+		          puVar2 = (uint *)(iVar4 + *(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8 + 4) * 8 + 0xc0);
+		          goto code_r0x80e6af14;
+		        }
+		        uVar1 = uVar1 + 1;
+		      } while (*(ushort *)(iVar4 + 0xb6) != uVar1);
+		    }
+		    puVar2 = (uint *)func_ii_1080(piVar3,System_IDisposable_TypeInfo,0);
+		code_r0x80e6af14:
+		    (**(code **)((ulonglong)*puVar2 * 4))(piVar3,puVar2[1]);
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06003A68 RID: 14952 RVA: 0x00002050 File Offset: 0x00000250
@@ -60,6 +162,18 @@ namespace Gameplay.Combat.Model
 		[Address(RVA = "0x89DF", Offset = "0x89DF", VA = "0x89DF", Slot = "4")]
 		public void Dispose()
 		{
+		/* --- GHIDRA: Dispose ---
+		undefined4 Gameplay_Combat_Model_CombatDependencies__Dispose(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  uVar1 = Core_Extensions_Dict_ColossusRatingDicExt__GolossusBattleHistoryScoreIcon
+		                    (*(undefined4 *)(param1 + 8),0);
+		  return uVar1;
+		}
+		*/
+
 		}
 
 		// Token: 0x04002033 RID: 8243
@@ -128,4 +242,29 @@ namespace Gameplay.Combat.Model
 		[CanBeNull]
 		public readonly IArtifactDrop ArtifactDrop;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: set_LocalProps ---
+		void Gameplay_Combat_Model_CombatDependencies__set_LocalProps
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4,undefined4 param5,
+		               undefined4 param6,undefined4 param7,undefined4 param8,undefined4 param9,
+		               undefined4 param10,undefined4 param11,undefined4 param12,undefined4 param13)
+		
+		{
+		  *(undefined4 *)(param1 + 0x30) = param12;
+		  *(undefined4 *)(param1 + 0x2c) = param11;
+		  *(undefined4 *)(param1 + 0x28) = param10;
+		  *(undefined4 *)(param1 + 0x24) = param9;
+		  *(undefined4 *)(param1 + 0x20) = param8;
+		  *(undefined4 *)(param1 + 0x1c) = param7;
+		  *(undefined4 *)(param1 + 0x18) = param6;
+		  *(undefined4 *)(param1 + 0x10) = param5;
+		  *(undefined4 *)(param1 + 0xc) = param4;
+		  *(undefined4 *)(param1 + 8) = param3;
+		  *(undefined4 *)(param1 + 0x14) = param2;
+		  return;
+		}
+		*/
+
 }

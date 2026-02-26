@@ -109,6 +109,26 @@ namespace Gameplay.Boss.View.CaptainTab
 		[Address(RVA = "0x962D", Offset = "0x962D", VA = "0x962D")]
 		public void ExitEditMode()
 		{
+		/* --- GHIDRA: ExitEditMode ---
+		void Gameplay_Boss_View_CaptainTab_BossTeamEditView__ExitEditMode
+		               (undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a57a63 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Gameplay_Boss_View_AbstractBossWindowView_BossTeamEditView__BossTeamEditViewMediator___ctor__
+		              );
+		    DAT_ram_00a57a63 = '\x01';
+		  }
+		  ScreenAdaptation_Common_AppSize__Update
+		            (param1,
+		             Method_Gameplay_Boss_View_AbstractBossWindowView_BossTeamEditView__BossTeamEditViewMediator___ctor__
+		            );
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600479F RID: 18335 RVA: 0x00002050 File Offset: 0x00000250
@@ -116,6 +136,43 @@ namespace Gameplay.Boss.View.CaptainTab
 		[Address(RVA = "0x962E", Offset = "0x962E", VA = "0x962E")]
 		public BossTeamEditView()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_Boss_View_CaptainTab_BossTeamEditView___ctor
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a57a65 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_TeamData_TeamAssistantData__TypeInfo);
+		    DAT_ram_00a57a65 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x38);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = func_ii_7048(param1_00,param2,0);
+		    param2_00 = System_Action_TeamData_TeamAssistantData__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_TeamData_TeamAssistantData__TypeInfo),
+		       iVar2 == 0)) break;
+		    iVar2 = func_ii_4329(param1 + 0x38,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
 		}
 
 		// Token: 0x04002750 RID: 10064
@@ -148,4 +205,102 @@ namespace Gameplay.Boss.View.CaptainTab
 		[SerializeField]
 		private Button _cancelButton;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_TeamView ---
+		void Gameplay_Boss_View_CaptainTab_BossTeamEditView__get_TeamView
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  int param1_00;
+		  int *param1_01;
+		  int iVar2;
+		  
+		  if (DAT_ram_00a57a61 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_TypeInfo);
+		    DAT_ram_00a57a61 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x38);
+		  while ((param1_01 = (int *)func_ii_7048(param1_00,param2,0), param1_01 == (int *)0x0 ||
+		         (System_Action_TypeInfo == *param1_01))) {
+		    iVar2 = func_ii_4329(param1 + 0x38,param1_01,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,System_Action_TypeInfo);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: add_ExitEditModeEvent ---
+		void Gameplay_Boss_View_CaptainTab_BossTeamEditView__add_ExitEditModeEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a57a64 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_TeamData_TeamAssistantData__TypeInfo);
+		    DAT_ram_00a57a64 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x38);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = UnityEngine_UI_Image__set_sprite(param1_00,param2,0);
+		    param2_00 = System_Action_TeamData_TeamAssistantData__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_TeamData_TeamAssistantData__TypeInfo),
+		       iVar2 == 0)) break;
+		    iVar2 = func_ii_4329(param1 + 0x38,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: remove_ExitEditModeEvent ---
+		undefined4
+		Gameplay_Boss_View_CaptainTab_BossTeamEditView__remove_ExitEditModeEvent
+		          (int param1,undefined4 param2)
+		
+		{
+		  undefined4 param1_00;
+		  undefined4 param4;
+		  undefined4 param3;
+		  undefined4 param2_00;
+		  
+		  if (DAT_ram_00a57a62 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Gameplay_Boss_Controller_BossTeamEditViewMediator_TypeInfo);
+		    DAT_ram_00a57a62 = '\x01';
+		  }
+		  param4 = *(undefined4 *)(param1 + 0x1c);
+		  param3 = *(undefined4 *)(param1 + 0x18);
+		  param2_00 = *(undefined4 *)(param1 + 0x14);
+		  param1_00 = unnamed_function_1417(Gameplay_Boss_Controller_BossTeamEditViewMediator_TypeInfo);
+		  Gameplay_Boss_Controller_BossRolesViewMediator__ViewOnSelectedEvent
+		            (param1_00,param2_00,param3,param4,0);
+		  return param1_00;
+		}
+		*/
+
 }

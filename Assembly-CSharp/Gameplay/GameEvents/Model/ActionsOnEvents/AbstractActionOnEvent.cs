@@ -132,4 +132,18 @@ namespace Gameplay.GameEvents.Model.ActionsOnEvents
 		[FieldOffset(Offset = "0xC")]
 		public EventTypeDic.Types.ActionParams ActionParamsConfig;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: set_Selected ---
+		void Gameplay_GameEvents_Model_ActionsOnEvents_AbstractActionOnEvent__set_Selected
+		               (int param1,undefined4 param2)
+		
+		{
+		  *(undefined8 *)(param1 + 8) = 0;
+		  *(undefined4 *)(param1 + 0x10) = 0;
+		  return;
+		}
+		*/
+
 }

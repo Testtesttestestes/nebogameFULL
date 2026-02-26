@@ -13,6 +13,27 @@ namespace Core.Gameplay.Managers.Ad.Placements.BattleFinish.Events
 		[Address(RVA = "0xB878", Offset = "0xB878", VA = "0xB878")]
 		public BattleFinishAdPlacementEvents()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Core_Gameplay_Managers_Ad_Placements_BattleFinish_Events_BattleFinishAdPlacementEvents___ctor
+		               (undefined4 param1,undefined4 param2,undefined4 param3,undefined4 param4,
+		               undefined4 param5,undefined4 param6)
+		
+		{
+		  if (DAT_ram_00a5a799 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Core_Gameplay_Managers_Ad_Placements_Base_Controller_AbstractAdPlacementController_BattleFinishAdPlacementModel__BattleFinishAdPlacementEvents___ctor__
+		              );
+		    DAT_ram_00a5a799 = '\x01';
+		  }
+		  Gameplay_Accounts_View_Banners_AbstractAccountBannerView_object___set_Data
+		            (param1,param2,param3,param4,param5,
+		             Method_Core_Gameplay_Managers_Ad_Placements_Base_Controller_AbstractAdPlacementController_BattleFinishAdPlacementModel__BattleFinishAdPlacementEvents___ctor__
+		            );
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0400396D RID: 14701

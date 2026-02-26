@@ -19,6 +19,21 @@ namespace UI.ToolTip.Implementations.View.Combat.Clan
 		[Address(RVA = "0x5D55", Offset = "0x5D55", VA = "0x5D55", Slot = "5")]
 		protected override void HandleDataChanged()
 		{
+		/* --- GHIDRA: HandleDataChanged ---
+		void UI_ToolTip_Implementations_View_Combat_Clan_ClanCombatPlayerToolTip__HandleDataChanged
+		               (undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a5998f == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_UI_ToolTip_BaseToolTip_ClanCombatPlayer___ctor__);
+		    DAT_ram_00a5998f = '\x01';
+		  }
+		  ScreenAdaptation_Common_AppSize__Update
+		            (param1,Method_UI_ToolTip_BaseToolTip_ClanCombatPlayer___ctor__);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x060009F6 RID: 2550 RVA: 0x00002050 File Offset: 0x00000250

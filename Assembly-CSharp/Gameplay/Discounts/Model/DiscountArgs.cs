@@ -74,4 +74,75 @@ namespace Gameplay.Discounts.Model
 			}
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: set_Data ---
+		void Gameplay_Discounts_Model_DiscountArgs__set_Data(int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  uint uVar1;
+		  undefined4 uVar2;
+		  uint *puVar3;
+		  int iVar4;
+		  int *param1_00;
+		  int iVar5;
+		  
+		  if (DAT_ram_00a57cb9 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_System_Array_Empty_DiscountData___);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_Dictionary_DiscountTargets__double___ctor__);
+		    Mono_Security_ASN1__get_Item
+		              (&System_Collections_Generic_Dictionary_DiscountTargets__double__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Core_Gameplay_IGame_TypeInfo);
+		    DAT_ram_00a57cb9 = '\x01';
+		  }
+		  iVar5 = Method_System_Array_Empty_DiscountData___;
+		  iVar4 = *(int *)(Method_System_Array_Empty_DiscountData___ + 0x1c);
+		  if (iVar4 == 0) {
+		    System_ReadOnlySpan_char___GetPinnableReference(Method_System_Array_Empty_DiscountData___);
+		    iVar4 = *(int *)(iVar5 + 0x1c);
+		  }
+		  iVar4 = *(int *)(iVar4 + 8);
+		  if ((*(byte *)(iVar4 + 0xbd) & 1) == 0) {
+		    iVar4 = func_ii_1079(iVar4);
+		  }
+		  if (*(int *)(iVar4 + 0x74) == 0) {
+		    func_ii_306000(iVar4);
+		  }
+		  iVar5 = *(int *)(*(int *)(iVar5 + 0x1c) + 8);
+		  if ((*(byte *)(iVar5 + 0xbd) & 1) == 0) {
+		    iVar5 = func_ii_1079(iVar5);
+		  }
+		  *(undefined4 *)(param1 + 0x10) = **(undefined4 **)(iVar5 + 0x5c);
+		  uVar2 = unnamed_function_1417
+		                    (System_Collections_Generic_Dictionary_DiscountTargets__double__TypeInfo);
+		  System_Collections_Generic_Dictionary_Int32Enum__Int32Enum___set_Item
+		            (uVar2,Method_System_Collections_Generic_Dictionary_DiscountTargets__double___ctor__);
+		  *(undefined4 *)(param1 + 0x14) = uVar2;
+		  Unity_Services_Core_Environments_Internal_Environments__get_Current(param1,param2,0);
+		  if (DAT_ram_00a6456f == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_Gameplay_Game_TypeInfo);
+		    DAT_ram_00a6456f = '\x01';
+		  }
+		  param1_00 = (int *)**(undefined4 **)(Core_Gameplay_Game_TypeInfo + 0x5c);
+		  iVar5 = *param1_00;
+		  if (*(ushort *)(iVar5 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (Core_Gameplay_IGame_TypeInfo == *(int *)(*(int *)(iVar5 + 0x58) + uVar1 * 8)) {
+		        puVar3 = (uint *)(*(int *)(*(int *)(iVar5 + 0x58) + uVar1 * 8 + 4) * 8 + iVar5 + 0x178);
+		        goto code_r0x80e457c3;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar5 + 0xb6) != uVar1);
+		  }
+		  puVar3 = (uint *)func_ii_1080(param1_00,Core_Gameplay_IGame_TypeInfo,0x17);
+		code_r0x80e457c3:
+		  uVar2 = (**(code **)((ulonglong)*puVar3 * 4))(param1_00,puVar3[1]);
+		  *(undefined4 *)(param1 + 0xc) = uVar2;
+		  return;
+		}
+		*/
+
 }

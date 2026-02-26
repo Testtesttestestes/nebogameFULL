@@ -16,6 +16,26 @@ namespace Gameplay.VortexCombat.View.Player
 		[Address(RVA = "0x67D4", Offset = "0x67D4", VA = "0x67D4")]
 		private void HandleStoneTypeChanged()
 		{
+		/* --- GHIDRA: HandleStoneTypeChanged ---
+		void Gameplay_VortexCombat_View_Player_VortexCombatProgressBar__HandleStoneTypeChanged
+		               (undefined4 param1,int param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  int iVar1;
+		  int iVar2;
+		  
+		  iVar2 = *(int *)(param2 + 0xc);
+		  if (0 < iVar2) {
+		    iVar1 = 0;
+		    do {
+		      func_ii_7050(*(undefined4 *)(param2 + iVar1 * 4 + 0x10),param3,0);
+		      iVar1 = iVar1 + 1;
+		    } while (iVar1 != iVar2);
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06001614 RID: 5652 RVA: 0x00002050 File Offset: 0x00000250
@@ -49,6 +69,16 @@ namespace Gameplay.VortexCombat.View.Player
 		[Address(RVA = "0x67D8", Offset = "0x67D8", VA = "0x67D8")]
 		public void SetIcon(Sprite sprite)
 		{
+		/* --- GHIDRA: SetIcon ---
+		void Gameplay_VortexCombat_View_Player_VortexCombatProgressBar__SetIcon
+		               (undefined4 param1,undefined4 param2)
+		
+		{
+		  Gameplay_Combat_View_CombatProgressBar__set_Value(param1,0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06001618 RID: 5656 RVA: 0x00002050 File Offset: 0x00000250
@@ -56,6 +86,15 @@ namespace Gameplay.VortexCombat.View.Player
 		[Address(RVA = "0x67D9", Offset = "0x67D9", VA = "0x67D9")]
 		public VortexCombatProgressBar()
 		{
+		/* --- GHIDRA: .ctor ---
+		uint Gameplay_VortexCombat_View_Player_VortexCombatProgressBar___ctor
+		               (int param1,int param2,undefined4 param3)
+		
+		{
+		  return (uint)(*(int *)(param2 + 8) == *(int *)(param1 + 0x40));
+		}
+		*/
+
 		}
 
 		// Token: 0x04000BB1 RID: 2993
@@ -176,4 +215,32 @@ namespace Gameplay.VortexCombat.View.Player
 			private Sprite _bottomProgressBar;
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_StoneType ---
+		void Gameplay_VortexCombat_View_Player_VortexCombatProgressBar__get_StoneType
+		               (int param1,int param2,undefined4 param3)
+		
+		{
+		  if (param2 != *(int *)(param1 + 0x40)) {
+		    *(int *)(param1 + 0x40) = param2;
+		    Gameplay_VortexCombat_View_Player_VortexCombatPlayerView__Gameplay_Combat_View_Players_ICombatPLayerView_get_gameObject
+		              (param1,param1);
+		  }
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_StoneType ---
+		void Gameplay_VortexCombat_View_Player_VortexCombatProgressBar__set_StoneType
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  func_ii_7050(*(undefined4 *)(param1 + 0x30),param2,0);
+		  return;
+		}
+		*/
+
 }

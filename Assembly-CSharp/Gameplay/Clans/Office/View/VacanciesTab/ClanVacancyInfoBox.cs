@@ -58,6 +58,22 @@ namespace Gameplay.Clans.Office.View.VacanciesTab
 		[Address(RVA = "0x8BB9", Offset = "0x8BB9", VA = "0x8BB9")]
 		public void UpdateData(ClanInRatingListElement.ClanInRatingListElementArgs args, Dictionaries dict, UserData user, string honorAssetId)
 		{
+		/* --- GHIDRA: UpdateData ---
+		void Gameplay_Clans_Office_View_VacanciesTab_ClanVacancyInfoBox__UpdateData
+		               (undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a57f10 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UI_MonoBehaviourWithStates_ClanVacancyInfoBox_State___ctor__);
+		    DAT_ram_00a57f10 = '\x01';
+		  }
+		  ScreenAdaptation_Common_AppSize__Update
+		            (param1,Method_UI_MonoBehaviourWithStates_ClanVacancyInfoBox_State___ctor__);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06003CFA RID: 15610 RVA: 0x00002050 File Offset: 0x00000250
@@ -65,6 +81,29 @@ namespace Gameplay.Clans.Office.View.VacanciesTab
 		[Address(RVA = "0x8BBA", Offset = "0x8BBA", VA = "0x8BBA")]
 		public ClanVacancyInfoBox()
 		{
+		/* --- GHIDRA: .ctor ---
+		undefined4
+		Gameplay_Clans_Office_View_VacanciesTab_ClanVacancyInfoBox___ctor
+		          (undefined4 param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a57f11 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Gameplay_Clans_Office_View_VacanciesTab_ClansInRatingsViewsHolder_TypeInfo);
+		    DAT_ram_00a57f11 = '\x01';
+		  }
+		  uVar1 = unnamed_function_1417
+		                    (Gameplay_Clans_Office_View_VacanciesTab_ClansInRatingsViewsHolder_TypeInfo);
+		  if (DAT_ram_00a57f14 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_UI_ItemViewsHolder_ClanInRatingListElement___ctor__);
+		    DAT_ram_00a57f14 = '\x01';
+		  }
+		  return uVar1;
+		}
+		*/
+
 		}
 
 		// Token: 0x040021D5 RID: 8661
@@ -124,4 +163,48 @@ namespace Gameplay.Clans.Office.View.VacanciesTab
 			REQUESTED_CLAN
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_WithdrawButton ---
+		void Gameplay_Clans_Office_View_VacanciesTab_ClanVacancyInfoBox__get_WithdrawButton
+		               (int param1,int param2,undefined4 param3,undefined4 param4,undefined4 param5,
+		               undefined4 param6)
+		
+		{
+		  undefined4 uVar1;
+		  undefined4 param1_00;
+		  int *piVar2;
+		  undefined4 param1_01;
+		  int iVar3;
+		  undefined4 local_4;
+		  
+		  if (DAT_ram_00a57f0f == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Core_Gameplay_Managers_Requirements_CostRequirementsInfoProvider_TypeInfo);
+		    DAT_ram_00a57f0f = '\x01';
+		  }
+		  iVar3 = *(int *)(*(int *)(param2 + 0x1c) + 0x1c);
+		  Gameplay_Clans_Office_View_ClanTitle__get_Text
+		            (*(undefined4 *)(param1 + 0x1c),*(undefined4 *)(iVar3 + 0x18),0);
+		  Gameplay_Clans_Office_View_ClanLeagueBaseInfoView__Awake
+		            (*(undefined4 *)(param1 + 0x20),*(undefined4 *)(param2 + 0x1c),param5,0);
+		  piVar2 = *(int **)(param1 + 0x24);
+		  local_4 = Core_Extensions_ClanInfoExt__GetHonorRating(iVar3,0);
+		  uVar1 = func_ii_4443(&local_4,0);
+		  iVar3 = *piVar2;
+		  (**(code **)((ulonglong)*(uint *)(iVar3 + 0xe8) * 4))(piVar2,uVar1,*(undefined4 *)(iVar3 + 0xec));
+		  uVar1 = Gameplay_World_Model_ClanData__GetClanCultIconAssetId
+		                    (*(undefined4 *)(param2 + 0x1c),*(undefined4 *)(*(int *)(param2 + 0x24) + 0x18),
+		                     param3,0);
+		  param1_01 = *(undefined4 *)(param1 + 0x28);
+		  param1_00 = unnamed_function_1417
+		                        (Core_Gameplay_Managers_Requirements_CostRequirementsInfoProvider_TypeInfo);
+		  Core_Gameplay_Managers_Requirements_CostRequirementsInfoProvider__Dispose
+		            (param1_00,param4,param4,uVar1,0);
+		  UI_Requirements_RequirementsView__get_Data(param1_01,param1_00,0);
+		  return;
+		}
+		*/
+
 }

@@ -38,6 +38,53 @@ namespace Gameplay.Antiq.Model
 		[Address(RVA = "0xA2AD", Offset = "0xA2AD", VA = "0xA2AD")]
 		public GroupData(int index, Antiq.Types.ArtifactGroupsDic artifactGroupsDic, ReadOnlyCollection<ArtifactData> artifacts, CategoryData category)
 		{
+		/* --- GHIDRA: .ctor ---
+		undefined4 Gameplay_Antiq_Model_GroupData___ctor(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  int iVar2;
+		  undefined4 uVar3;
+		  
+		  if (DAT_ram_00a587fa == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_System_Linq_Enumerable_First_ArtifactData___);
+		    Mono_Security_ASN1__get_Item(&Method_System_Linq_Enumerable_Last_ArtifactData___);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_ObjectModel_ReadOnlyCollection_ArtifactData__IndexOf__);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_ObjectModel_ReadOnlyCollection_ArtifactData__get_Count__);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_ObjectModel_ReadOnlyCollection_ArtifactData__get_Item__);
+		    DAT_ram_00a587fa = '\x01';
+		  }
+		  if (*(int *)(param1 + 0x18) == 0) {
+		    uVar3 = System_Linq_Enumerable__Count_object_
+		                      (*(undefined4 *)(param1 + 8),
+		                       Method_System_Linq_Enumerable_First_ArtifactData___);
+		    return uVar3;
+		  }
+		  iVar1 = System_Collections_ObjectModel_ReadOnlyCollection_UsageHint___GetEnumerator
+		                    (*(undefined4 *)(param1 + 8),*(int *)(param1 + 0x18),
+		                     Method_System_Collections_ObjectModel_ReadOnlyCollection_ArtifactData__IndexOf__
+		                    );
+		  iVar2 = Sirenix_Utilities_ImmutableList___Il2CppFullySharedGenericType___System_Collections_IList_set_Item
+		                    (*(undefined4 *)(param1 + 8),
+		                     Method_System_Collections_ObjectModel_ReadOnlyCollection_ArtifactData__get_Count__
+		                    );
+		  if (iVar1 + 1 <= iVar2 + -1) {
+		    uVar3 = System_Collections_ObjectModel_ReadOnlyDictionary_object__object___get_Count
+		                      (*(undefined4 *)(param1 + 8),iVar1 + 1,
+		                       Method_System_Collections_ObjectModel_ReadOnlyCollection_ArtifactData__get_Item__
+		                      );
+		    return uVar3;
+		  }
+		  uVar3 = System_Linq_Enumerable__IntersectIterator___Il2CppFullySharedGenericType_
+		                    (*(undefined4 *)(param1 + 8),Method_System_Linq_Enumerable_Last_ArtifactData___)
+		  ;
+		  return uVar3;
+		}
+		*/
+
 		}
 
 		// Token: 0x06005509 RID: 21769 RVA: 0x00002052 File Offset: 0x00000252
@@ -45,6 +92,26 @@ namespace Gameplay.Antiq.Model
 		[Address(RVA = "0xA2AE", Offset = "0xA2AE", VA = "0xA2AE")]
 		public ArtifactData GetArtifact()
 		{
+		/* --- GHIDRA: GetArtifact ---
+		undefined8 Gameplay_Antiq_Model_GroupData__GetArtifact(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  
+		  if (DAT_ram_00a587fb == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_System_Linq_Enumerable_First_ArtifactData___);
+		    DAT_ram_00a587fb = '\x01';
+		  }
+		  iVar1 = *(int *)(param1 + 0x18);
+		  if (iVar1 == 0) {
+		    iVar1 = System_Linq_Enumerable__Count_object_
+		                      (*(undefined4 *)(param1 + 8),
+		                       Method_System_Linq_Enumerable_First_ArtifactData___);
+		  }
+		  return *(undefined8 *)(*(int *)(iVar1 + 0xc) + 0x20);
+		}
+		*/
+
 			return null;
 		}
 
@@ -53,6 +120,25 @@ namespace Gameplay.Antiq.Model
 		[Address(RVA = "0xA2AF", Offset = "0xA2AF", VA = "0xA2AF")]
 		public ulong GetLevel()
 		{
+		/* --- GHIDRA: GetLevel ---
+		undefined4 Gameplay_Antiq_Model_GroupData__GetLevel(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a587fd == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_ObjectModel_ReadOnlyCollection_ArtifactData__Contains__);
+		    DAT_ram_00a587fd = '\x01';
+		  }
+		  uVar1 = System_Collections_ObjectModel_ReadOnlyCollection_ushort___get_Item
+		                    (*(undefined4 *)(param1 + 8),*(undefined4 *)(param1 + 0x18),
+		                     Method_System_Collections_ObjectModel_ReadOnlyCollection_ArtifactData__Contains__
+		                    );
+		  return uVar1;
+		}
+		*/
+
 			return 0UL;
 		}
 
@@ -61,6 +147,29 @@ namespace Gameplay.Antiq.Model
 		[Address(RVA = "0x1D29", Offset = "0x1D29", VA = "0x1D29")]
 		public bool IsComplete()
 		{
+		/* --- GHIDRA: IsComplete ---
+		void Gameplay_Antiq_Model_GroupData__IsComplete(int param1,uint param2,undefined4 param3)
+		
+		{
+		  int iVar1;
+		  undefined4 param1_00;
+		  int iVar2;
+		  
+		  iVar2 = *(int *)(param1 + 0x1c);
+		  if (0 < *(int *)(iVar2 + 0xc)) {
+		    iVar1 = 0;
+		    do {
+		      param1_00 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_uint__object___MoveNext
+		                            (*(undefined4 *)(iVar2 + iVar1 * 4 + 0x10),0);
+		      Com_TheFallenGames_OSA_CustomAdapters_TableView_Tuple_Basic_BasicTupleValueViewsHolder__UpdateAsText
+		                (param1_00,param2 ^ 1,0);
+		      iVar1 = iVar1 + 1;
+		    } while (iVar1 < *(int *)(iVar2 + 0xc));
+		  }
+		  return;
+		}
+		*/
+
 			return default(bool);
 		}
 
@@ -69,6 +178,22 @@ namespace Gameplay.Antiq.Model
 		[Address(RVA = "0xA2B0", Offset = "0xA2B0", VA = "0xA2B0")]
 		public bool IsAchieved()
 		{
+		/* --- GHIDRA: IsAchieved ---
+		void Gameplay_Antiq_Model_GroupData__IsAchieved
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4,undefined4 param5)
+		
+		{
+		  if (DAT_ram_00a587fe == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_MVC_AbstractController_AntiqModel__AntiqEvents___ctor__);
+		    DAT_ram_00a587fe = '\x01';
+		  }
+		  Gameplay_Combat_AbstractCombat_object__object__object__object__object___set_User
+		            (param1,param2,param3,Method_MVC_AbstractController_AntiqModel__AntiqEvents___ctor__);
+		  *(undefined4 *)(param1 + 0x18) = param4;
+		  return;
+		}
+		*/
+
 			return default(bool);
 		}
 
@@ -92,4 +217,21 @@ namespace Gameplay.Antiq.Model
 		[FieldOffset(Offset = "0x14")]
 		public readonly int Index;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: set_CurrentAchieved ---
+		void Gameplay_Antiq_Model_GroupData__set_CurrentAchieved
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4,undefined4 param5,
+		               undefined4 param6)
+		
+		{
+		  *(undefined4 *)(param1 + 0xc) = param3;
+		  *(undefined4 *)(param1 + 0x14) = param2;
+		  *(undefined4 *)(param1 + 0x10) = param5;
+		  *(undefined4 *)(param1 + 8) = param4;
+		  return;
+		}
+		*/
+
 }

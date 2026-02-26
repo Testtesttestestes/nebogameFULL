@@ -168,6 +168,23 @@ namespace Gameplay.UserInterface.Model
 		[Address(RVA = "0x68D4", Offset = "0x68D4", VA = "0x68D4", Slot = "5")]
 		public override void Dispose()
 		{
+		/* --- GHIDRA: Dispose ---
+		void Gameplay_UserInterface_Model_UserInterfaceModel__Dispose
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4,undefined4 param5,
+		               undefined4 param6,undefined4 param7,undefined4 param8,undefined4 param9)
+		
+		{
+		  Unity_Services_Core_Environments_Internal_Environments__get_Current(param1,param8,0);
+		  *(undefined4 *)(param1 + 0x24) = param7;
+		  *(undefined4 *)(param1 + 0x18) = param6;
+		  *(undefined4 *)(param1 + 0x14) = param5;
+		  *(undefined4 *)(param1 + 0x10) = param4;
+		  *(undefined4 *)(param1 + 0xc) = param3;
+		  *(undefined4 *)(param1 + 0x20) = param2;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06001716 RID: 5910 RVA: 0x00002050 File Offset: 0x00000250
@@ -177,4 +194,21 @@ namespace Gameplay.UserInterface.Model
 		{
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: set_SceneAppManager ---
+		void Gameplay_UserInterface_Model_UserInterfaceModel__set_SceneAppManager
+		               (int param1,undefined4 param2)
+		
+		{
+		  *(undefined4 *)(param1 + 0x14) = 0;
+		  *(undefined8 *)(param1 + 0xc) = 0;
+		  *(undefined4 *)(param1 + 0x24) = 0;
+		  *(undefined8 *)(param1 + 0x1c) = 0;
+		  Core_ExternalIncomingScriptCall_CallbackItem___Il2CppFullySharedGenericType____ctor(param1,0);
+		  return;
+		}
+		*/
+
 }

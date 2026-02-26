@@ -53,6 +53,17 @@ namespace Gameplay.BlitzTournament.View
 		[Token(Token = "0x6004A18")]
 		protected TournamentListElementBase()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_BlitzTournament_View_TournamentListElementBase___ctor
+		               (undefined4 param1,undefined4 param2,undefined4 param3,undefined4 param4,
+		               undefined4 param5,undefined4 param6)
+		
+		{
+		  Gameplay_Combat_Model_CombatModel__Dispose(param1,param2,param3,param4,param5,0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x04002859 RID: 10329
@@ -85,4 +96,23 @@ namespace Gameplay.BlitzTournament.View
 		[SerializeField]
 		protected Image _borderImage;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: set_Index ---
+		void Gameplay_BlitzTournament_View_TournamentListElementBase__set_Index
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  int iVar1;
+		  
+		  iVar1 = *(int *)(param1 + 0x10);
+		  if (iVar1 != 0) {
+		    (**(code **)((ulonglong)*(uint *)(iVar1 + 0xc) * 4))
+		              (*(undefined4 *)(iVar1 + 0x20),param1,*(undefined4 *)(iVar1 + 0x14));
+		  }
+		  return;
+		}
+		*/
+
 }

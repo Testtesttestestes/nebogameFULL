@@ -46,4 +46,46 @@ namespace Gameplay.Aprs.Controller.Filters
 		{
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: set_FilterInfo ---
+		undefined4
+		Gameplay_Aprs_Controller_Filters_AprTitleFilter__set_FilterInfo
+		          (int param1,int param2,undefined4 param3)
+		
+		{
+		  undefined4 uVar1;
+		  undefined4 param1_00;
+		  int *param1_01;
+		  int param1_02;
+		  
+		  if (*(char *)(*(int *)(param1 + 8) + 0x10) == '\0') {
+		    return 1;
+		  }
+		  param1_01 = *(int **)(*(int *)(param1 + 8) + 0xc);
+		  if ((param1_01 != (int *)0x0) && (DAT_ram_00a66978 != *param1_01)) {
+		    System_Activator__CreateInstance(param1_01,DAT_ram_00a66978);
+		    do {
+		      halt_trap();
+		    } while( true );
+		  }
+		  uVar1 = func_ii_7775(param1_01,0);
+		  param1_02 = *(int *)(param2 + 0xc);
+		  if (param1_02 == 0) {
+		    if (DAT_ram_00a5942a == '\0') {
+		      Mono_Security_ASN1__get_Item
+		                (&Method_Core_Dict_DictWrappers_Base_AbstractDictWrapper_MedalDic__uint__get_Data__)
+		      ;
+		      DAT_ram_00a5942a = '\x01';
+		    }
+		    param1_00 = func_ii_14054(*(undefined4 *)(*(int *)(param2 + 0x14) + 0x10),0);
+		    param1_02 = func_ii_7775(param1_00,0);
+		    *(int *)(param2 + 0xc) = param1_02;
+		  }
+		  uVar1 = func_ii_7903(param1_02,uVar1,0);
+		  return uVar1;
+		}
+		*/
+
 }

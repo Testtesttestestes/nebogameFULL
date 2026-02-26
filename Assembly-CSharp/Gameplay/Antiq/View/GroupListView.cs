@@ -83,6 +83,18 @@ namespace Gameplay.Antiq.View
 		[Address(RVA = "0xA249", Offset = "0xA249", VA = "0xA249")]
 		public GroupListView()
 		{
+		/* --- GHIDRA: .ctor ---
+		undefined4 Gameplay_Antiq_View_GroupListView___ctor(undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a5947e == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_12559);
+		    DAT_ram_00a5947e = '\x01';
+		  }
+		  return StringLiteral_12559;
+		}
+		*/
+
 		}
 
 		// Token: 0x04002DC3 RID: 11715

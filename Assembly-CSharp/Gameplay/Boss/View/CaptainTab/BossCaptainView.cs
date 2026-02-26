@@ -80,6 +80,26 @@ namespace Gameplay.Boss.View.CaptainTab
 		[Address(RVA = "0x95F4", Offset = "0x95F4", VA = "0x95F4", Slot = "5")]
 		protected override BossCaptainViewMediator CreateMediator()
 		{
+		/* --- GHIDRA: CreateMediator ---
+		void Gameplay_Boss_View_CaptainTab_BossCaptainView__CreateMediator
+		               (undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a57a44 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Gameplay_Boss_View_AbstractBossWindowView_BossCaptainView__BossCaptainViewMediator___ctor__
+		              );
+		    DAT_ram_00a57a44 = '\x01';
+		  }
+		  ScreenAdaptation_Common_AppSize__Update
+		            (param1,
+		             Method_Gameplay_Boss_View_AbstractBossWindowView_BossCaptainView__BossCaptainViewMediator___ctor__
+		            );
+		  return;
+		}
+		*/
+
 			return null;
 		}
 
@@ -88,6 +108,25 @@ namespace Gameplay.Boss.View.CaptainTab
 		[Address(RVA = "0x95F5", Offset = "0x95F5", VA = "0x95F5")]
 		public BossCaptainView()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_Boss_View_CaptainTab_BossCaptainView___ctor(undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a57a45 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_MonoBehaviourWithStates_BossCaptainViewStateController_BossCaptainViewState___ctor__
+		              );
+		    DAT_ram_00a57a45 = '\x01';
+		  }
+		  ScreenAdaptation_Common_AppSize__Update
+		            (param1,
+		             Method_UI_MonoBehaviourWithStates_BossCaptainViewStateController_BossCaptainViewState___ctor__
+		            );
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x04002728 RID: 10024
@@ -120,4 +159,29 @@ namespace Gameplay.Boss.View.CaptainTab
 		[SerializeField]
 		private WikiUriRouter _wiki;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_TeamView ---
+		undefined4 Gameplay_Boss_View_CaptainTab_BossCaptainView__get_TeamView(int param1,undefined4 param2)
+		
+		{
+		  undefined4 param1_00;
+		  undefined4 param4;
+		  undefined4 param3;
+		  undefined4 param2_00;
+		  
+		  if (DAT_ram_00a57a43 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Gameplay_Boss_Controller_BossCaptainViewMediator_TypeInfo);
+		    DAT_ram_00a57a43 = '\x01';
+		  }
+		  param4 = *(undefined4 *)(param1 + 0x1c);
+		  param3 = *(undefined4 *)(param1 + 0x18);
+		  param2_00 = *(undefined4 *)(param1 + 0x14);
+		  param1_00 = unnamed_function_1417(Gameplay_Boss_Controller_BossCaptainViewMediator_TypeInfo);
+		  Gameplay_Boss_Controller_BossCaptainViewMediator__Dispose(param1_00,param2_00,param3,param4,0);
+		  return param1_00;
+		}
+		*/
+
 }

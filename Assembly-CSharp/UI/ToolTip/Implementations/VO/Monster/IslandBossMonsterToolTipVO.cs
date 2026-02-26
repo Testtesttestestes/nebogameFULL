@@ -22,6 +22,19 @@ namespace UI.ToolTip.Implementations.VO.Monster
 		[Address(RVA = "0x5D5E", Offset = "0x5D5E", VA = "0x5D5E", Slot = "4")]
 		public override uint GetLevel()
 		{
+		/* --- GHIDRA: GetLevel ---
+		undefined4
+		UI_ToolTip_Implementations_VO_Monster_IslandBossMonsterToolTipVO__GetLevel
+		          (int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  uVar1 = Core_Data_MonsterData__get_KickPrice(*(undefined4 *)(param1 + 8),0);
+		  return uVar1;
+		}
+		*/
+
 			return 0U;
 		}
 
@@ -30,6 +43,19 @@ namespace UI.ToolTip.Implementations.VO.Monster
 		[Address(RVA = "0x5D5F", Offset = "0x5D5F", VA = "0x5D5F", Slot = "5")]
 		public override string GetTitle()
 		{
+		/* --- GHIDRA: GetTitle ---
+		undefined4
+		UI_ToolTip_Implementations_VO_Monster_IslandBossMonsterToolTipVO__GetTitle
+		          (int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  uVar1 = Core_Data_MonsterData__get_Title(*(undefined4 *)(param1 + 8),0);
+		  return uVar1;
+		}
+		*/
+
 			return null;
 		}
 
@@ -38,6 +64,20 @@ namespace UI.ToolTip.Implementations.VO.Monster
 		[Address(RVA = "0x5D60", Offset = "0x5D60", VA = "0x5D60", Slot = "6")]
 		public override string GetDescription()
 		{
+		/* --- GHIDRA: GetDescription ---
+		undefined4
+		UI_ToolTip_Implementations_VO_Monster_IslandBossMonsterToolTipVO__GetDescription
+		          (undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a59990 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_3628);
+		    DAT_ram_00a59990 = '\x01';
+		  }
+		  return StringLiteral_3628;
+		}
+		*/
+
 			return null;
 		}
 

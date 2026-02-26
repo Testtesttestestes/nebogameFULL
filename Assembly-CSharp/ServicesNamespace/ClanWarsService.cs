@@ -170,6 +170,55 @@ namespace ServicesNamespace
 		[Address(RVA = "0x58B6", Offset = "0x58B6", VA = "0x58B6", Slot = "6")]
 		protected override void ServerEventHandler(SrvAnswer evt)
 		{
+		/* --- GHIDRA: ServerEventHandler ---
+		int * ServicesNamespace_ClanWarsService__ServerEventHandler(int *param1,undefined4 param2)
+		
+		{
+		  int *piVar1;
+		  undefined4 uVar2;
+		  int param1_00;
+		  undefined4 local_c;
+		  undefined8 local_8;
+		  
+		  if (DAT_ram_00a62913 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_SrvCommand__IMessage__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Protocol_ClanWar_ClanWarCommands_TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Core_Net_SrvCommand_SetCallback_ProtoGetSeasonBankDistributionAns___);
+		    Mono_Security_ASN1__get_Item(&Core_Net_SrvCommand_TypeInfo);
+		    DAT_ram_00a62913 = '\x01';
+		  }
+		  if (*(int *)(Core_Net_SrvCommand_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Core_Net_SrvCommand_TypeInfo);
+		  }
+		  piVar1 = (int *)Core_Net_AbstractService__PushCommand
+		                            (param1,*(undefined4 *)
+		                                     (*(int *)(Core_Net_SrvCommand_TypeInfo + 0x5c) + 4),0);
+		  if (piVar1[2] == 0) {
+		    (**(code **)((ulonglong)*(uint *)(*piVar1 + 0x110) * 4))
+		              (piVar1,*(undefined4 *)(*piVar1 + 0x114));
+		    uVar2 = (**(code **)((ulonglong)*(uint *)(*param1 + 0xe0) * 4))
+		                      (param1,*(undefined4 *)(*param1 + 0xe4));
+		    if (*(int *)(Core_Net_SrvCommand_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(Core_Net_SrvCommand_TypeInfo);
+		    }
+		    param1_00 = Core_Net_SrvCommand___ctor(uVar2,0xf,0,0);
+		    local_8 = 0xfffffffff;
+		    local_c = Protocol_ClanWar_ClanWarCommands_TypeInfo;
+		    uVar2 = Spine_SkeletonJson__GetFloat(&local_c,0);
+		    *(undefined4 *)(param1_00 + 0x14) = uVar2;
+		    uVar2 = unnamed_function_1417(System_Action_SrvCommand__IMessage__TypeInfo);
+		    System_Runtime_CompilerServices_AsyncVoidMethodBuilder__AwaitUnsafeOnCompleted_UniTask_Awaiter_bool___BossCaptainViewMediator__SetupView_d__8_
+		              (uVar2,param1,*(undefined4 *)(*param1 + 0xec),0);
+		    Core_Data_Spells_SpellData__Create_object_
+		              (param1_00,uVar2,
+		               Method_Core_Net_SrvCommand_SetCallback_ProtoGetSeasonBankDistributionAns___);
+		    Core_Net_AbstractService__LogCommandAnswer(param1,param1_00,0);
+		  }
+		  return piVar1;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600048C RID: 1164 RVA: 0x00002052 File Offset: 0x00000252
@@ -177,6 +226,55 @@ namespace ServicesNamespace
 		[Address(RVA = "0x58B7", Offset = "0x58B7", VA = "0x58B7")]
 		public OpToken<IMessage, object> GetSeasonBankDistribution()
 		{
+		/* --- GHIDRA: GetSeasonBankDistribution ---
+		int * ServicesNamespace_ClanWarsService__GetSeasonBankDistribution
+		                (int *param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  int *piVar1;
+		  undefined4 uVar2;
+		  int param1_00;
+		  undefined4 local_c;
+		  undefined8 local_8;
+		  
+		  if (DAT_ram_00a62914 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_SrvCommand__IMessage__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Protocol_ClanWar_ClanWarCommands_TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Core_Net_SrvCommand_SetCallback_ProtoRequestClanPolicyAns___);
+		    Mono_Security_ASN1__get_Item(&Core_Net_SrvCommand_TypeInfo);
+		    DAT_ram_00a62914 = '\x01';
+		  }
+		  if (*(int *)(Core_Net_SrvCommand_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Core_Net_SrvCommand_TypeInfo);
+		  }
+		  piVar1 = (int *)Core_Net_AbstractService__PushCommand
+		                            (param1,*(undefined4 *)
+		                                     (*(int *)(Core_Net_SrvCommand_TypeInfo + 0x5c) + 4),0);
+		  if (piVar1[2] == 0) {
+		    (**(code **)((ulonglong)*(uint *)(*piVar1 + 0x110) * 4))
+		              (piVar1,*(undefined4 *)(*piVar1 + 0x114));
+		    uVar2 = (**(code **)((ulonglong)*(uint *)(*param1 + 0xe0) * 4))
+		                      (param1,*(undefined4 *)(*param1 + 0xe4));
+		    if (*(int *)(Core_Net_SrvCommand_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(Core_Net_SrvCommand_TypeInfo);
+		    }
+		    param1_00 = Core_Net_SrvCommand___ctor(uVar2,2,param2,0);
+		    local_8 = 0x2ffffffff;
+		    local_c = Protocol_ClanWar_ClanWarCommands_TypeInfo;
+		    uVar2 = Spine_SkeletonJson__GetFloat(&local_c,0);
+		    *(undefined4 *)(param1_00 + 0x14) = uVar2;
+		    uVar2 = unnamed_function_1417(System_Action_SrvCommand__IMessage__TypeInfo);
+		    System_Runtime_CompilerServices_AsyncVoidMethodBuilder__AwaitUnsafeOnCompleted_UniTask_Awaiter_bool___BossCaptainViewMediator__SetupView_d__8_
+		              (uVar2,param1,*(undefined4 *)(*param1 + 0xec),0);
+		    Core_Data_Spells_SpellData__Create_object_
+		              (param1_00,uVar2,Method_Core_Net_SrvCommand_SetCallback_ProtoRequestClanPolicyAns___);
+		    Core_Net_AbstractService__LogCommandAnswer(param1,param1_00,0);
+		  }
+		  return piVar1;
+		}
+		*/
+
 			return null;
 		}
 
@@ -185,6 +283,54 @@ namespace ServicesNamespace
 		[Address(RVA = "0x58B8", Offset = "0x58B8", VA = "0x58B8")]
 		public OpToken<IMessage, object> RequestPolitics(ProtoRequestClanPolicyCmd msg)
 		{
+		/* --- GHIDRA: RequestPolitics ---
+		int * ServicesNamespace_ClanWarsService__RequestPolitics(int *param1,undefined4 param2)
+		
+		{
+		  int *piVar1;
+		  undefined4 uVar2;
+		  int param1_00;
+		  undefined4 local_c;
+		  undefined8 local_8;
+		  
+		  if (DAT_ram_00a62915 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_SrvCommand__IMessage__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Protocol_ClanWar_ClanWarCommands_TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Core_Net_SrvCommand_SetCallback_ProtoGetActiveWarInfoAns___);
+		    Mono_Security_ASN1__get_Item(&Core_Net_SrvCommand_TypeInfo);
+		    DAT_ram_00a62915 = '\x01';
+		  }
+		  if (*(int *)(Core_Net_SrvCommand_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Core_Net_SrvCommand_TypeInfo);
+		  }
+		  piVar1 = (int *)Core_Net_AbstractService__PushCommand
+		                            (param1,*(undefined4 *)
+		                                     (*(int *)(Core_Net_SrvCommand_TypeInfo + 0x5c) + 4),0);
+		  if (piVar1[2] == 0) {
+		    (**(code **)((ulonglong)*(uint *)(*piVar1 + 0x110) * 4))
+		              (piVar1,*(undefined4 *)(*piVar1 + 0x114));
+		    uVar2 = (**(code **)((ulonglong)*(uint *)(*param1 + 0xe0) * 4))
+		                      (param1,*(undefined4 *)(*param1 + 0xe4));
+		    if (*(int *)(Core_Net_SrvCommand_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(Core_Net_SrvCommand_TypeInfo);
+		    }
+		    param1_00 = Core_Net_SrvCommand___ctor(uVar2,0xc,0,0);
+		    local_8 = 0xcffffffff;
+		    local_c = Protocol_ClanWar_ClanWarCommands_TypeInfo;
+		    uVar2 = Spine_SkeletonJson__GetFloat(&local_c,0);
+		    *(undefined4 *)(param1_00 + 0x14) = uVar2;
+		    uVar2 = unnamed_function_1417(System_Action_SrvCommand__IMessage__TypeInfo);
+		    System_Runtime_CompilerServices_AsyncVoidMethodBuilder__AwaitUnsafeOnCompleted_UniTask_Awaiter_bool___BossCaptainViewMediator__SetupView_d__8_
+		              (uVar2,param1,*(undefined4 *)(*param1 + 0xec),0);
+		    Core_Data_Spells_SpellData__Create_object_
+		              (param1_00,uVar2,Method_Core_Net_SrvCommand_SetCallback_ProtoGetActiveWarInfoAns___);
+		    Core_Net_AbstractService__LogCommandAnswer(param1,param1_00,0);
+		  }
+		  return piVar1;
+		}
+		*/
+
 			return null;
 		}
 
@@ -193,6 +339,58 @@ namespace ServicesNamespace
 		[Address(RVA = "0x58B9", Offset = "0x58B9", VA = "0x58B9")]
 		public OpToken<IMessage, object> GetActiveWarInfo()
 		{
+		/* --- GHIDRA: GetActiveWarInfo ---
+		int * ServicesNamespace_ClanWarsService__GetActiveWarInfo
+		                (int *param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  int *piVar1;
+		  int iVar2;
+		  undefined4 uVar3;
+		  undefined4 local_c;
+		  undefined8 local_8;
+		  
+		  if (DAT_ram_00a62916 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_SrvCommand__IMessage__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Protocol_ClanWar_ClanWarCommands_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Protocol_ClanWar_ProtoGetWarsHistoryCmd_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Method_Core_Net_SrvCommand_SetCallback_ProtoGetWarsHistoryAns___);
+		    Mono_Security_ASN1__get_Item(&Core_Net_SrvCommand_TypeInfo);
+		    DAT_ram_00a62916 = '\x01';
+		  }
+		  if (*(int *)(Core_Net_SrvCommand_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Core_Net_SrvCommand_TypeInfo);
+		  }
+		  piVar1 = (int *)Core_Net_AbstractService__PushCommand
+		                            (param1,*(undefined4 *)
+		                                     (*(int *)(Core_Net_SrvCommand_TypeInfo + 0x5c) + 4),0);
+		  if (piVar1[2] == 0) {
+		    (**(code **)((ulonglong)*(uint *)(*piVar1 + 0x110) * 4))
+		              (piVar1,*(undefined4 *)(*piVar1 + 0x114));
+		    iVar2 = unnamed_function_1417(Protocol_ClanWar_ProtoGetWarsHistoryCmd_TypeInfo);
+		    *(undefined4 *)(iVar2 + 0x10) = param3;
+		    *(undefined4 *)(iVar2 + 0xc) = param2;
+		    uVar3 = (**(code **)((ulonglong)*(uint *)(*param1 + 0xe0) * 4))
+		                      (param1,*(undefined4 *)(*param1 + 0xe4));
+		    if (*(int *)(Core_Net_SrvCommand_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(Core_Net_SrvCommand_TypeInfo);
+		    }
+		    iVar2 = Core_Net_SrvCommand___ctor(uVar3,0xb,iVar2,0);
+		    local_8 = 0xbffffffff;
+		    local_c = Protocol_ClanWar_ClanWarCommands_TypeInfo;
+		    uVar3 = Spine_SkeletonJson__GetFloat(&local_c,0);
+		    *(undefined4 *)(iVar2 + 0x14) = uVar3;
+		    uVar3 = unnamed_function_1417(System_Action_SrvCommand__IMessage__TypeInfo);
+		    System_Runtime_CompilerServices_AsyncVoidMethodBuilder__AwaitUnsafeOnCompleted_UniTask_Awaiter_bool___BossCaptainViewMediator__SetupView_d__8_
+		              (uVar3,param1,*(undefined4 *)(*param1 + 0xec),0);
+		    Core_Data_Spells_SpellData__Create_object_
+		              (iVar2,uVar3,Method_Core_Net_SrvCommand_SetCallback_ProtoGetWarsHistoryAns___);
+		    Core_Net_AbstractService__LogCommandAnswer(param1,iVar2,0);
+		  }
+		  return piVar1;
+		}
+		*/
+
 			return null;
 		}
 
@@ -201,6 +399,55 @@ namespace ServicesNamespace
 		[Address(RVA = "0x58BA", Offset = "0x58BA", VA = "0x58BA")]
 		public OpToken<IMessage, object> GetWarsHistory(uint linesCount, uint previousWarId)
 		{
+		/* --- GHIDRA: GetWarsHistory ---
+		int * ServicesNamespace_ClanWarsService__GetWarsHistory(int *param1,undefined4 param2)
+		
+		{
+		  int *piVar1;
+		  undefined4 uVar2;
+		  int param1_00;
+		  undefined4 local_c;
+		  undefined8 local_8;
+		  
+		  if (DAT_ram_00a62917 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_SrvCommand__IMessage__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Protocol_ClanWar_ClanWarCommands_TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Core_Net_SrvCommand_SetCallback_ProtoGetCurrentSeasonInfoAns___);
+		    Mono_Security_ASN1__get_Item(&Core_Net_SrvCommand_TypeInfo);
+		    DAT_ram_00a62917 = '\x01';
+		  }
+		  if (*(int *)(Core_Net_SrvCommand_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Core_Net_SrvCommand_TypeInfo);
+		  }
+		  piVar1 = (int *)Core_Net_AbstractService__PushCommand
+		                            (param1,*(undefined4 *)
+		                                     (*(int *)(Core_Net_SrvCommand_TypeInfo + 0x5c) + 4),0);
+		  if (piVar1[2] == 0) {
+		    (**(code **)((ulonglong)*(uint *)(*piVar1 + 0x110) * 4))
+		              (piVar1,*(undefined4 *)(*piVar1 + 0x114));
+		    uVar2 = (**(code **)((ulonglong)*(uint *)(*param1 + 0xe0) * 4))
+		                      (param1,*(undefined4 *)(*param1 + 0xe4));
+		    if (*(int *)(Core_Net_SrvCommand_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(Core_Net_SrvCommand_TypeInfo);
+		    }
+		    param1_00 = Core_Net_SrvCommand___ctor(uVar2,0xd,0,0);
+		    local_8 = 0xdffffffff;
+		    local_c = Protocol_ClanWar_ClanWarCommands_TypeInfo;
+		    uVar2 = Spine_SkeletonJson__GetFloat(&local_c,0);
+		    *(undefined4 *)(param1_00 + 0x14) = uVar2;
+		    uVar2 = unnamed_function_1417(System_Action_SrvCommand__IMessage__TypeInfo);
+		    System_Runtime_CompilerServices_AsyncVoidMethodBuilder__AwaitUnsafeOnCompleted_UniTask_Awaiter_bool___BossCaptainViewMediator__SetupView_d__8_
+		              (uVar2,param1,*(undefined4 *)(*param1 + 0xec),0);
+		    Core_Data_Spells_SpellData__Create_object_
+		              (param1_00,uVar2,
+		               Method_Core_Net_SrvCommand_SetCallback_ProtoGetCurrentSeasonInfoAns___);
+		    Core_Net_AbstractService__LogCommandAnswer(param1,param1_00,0);
+		  }
+		  return piVar1;
+		}
+		*/
+
 			return null;
 		}
 
@@ -209,6 +456,53 @@ namespace ServicesNamespace
 		[Address(RVA = "0x58BB", Offset = "0x58BB", VA = "0x58BB")]
 		public OpToken<IMessage, object> GetCurrentSeasonInfo()
 		{
+		/* --- GHIDRA: GetCurrentSeasonInfo ---
+		int * ServicesNamespace_ClanWarsService__GetCurrentSeasonInfo(int *param1,undefined4 param2)
+		
+		{
+		  int *piVar1;
+		  undefined4 uVar2;
+		  int param1_00;
+		  undefined4 local_c;
+		  undefined8 local_8;
+		  
+		  if (DAT_ram_00a62918 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_SrvCommand__IMessage__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Protocol_ClanWar_ClanWarCommands_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Method_Core_Net_SrvCommand_SetCallback_ProtoDefaultAns___);
+		    Mono_Security_ASN1__get_Item(&Core_Net_SrvCommand_TypeInfo);
+		    DAT_ram_00a62918 = '\x01';
+		  }
+		  if (*(int *)(Core_Net_SrvCommand_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Core_Net_SrvCommand_TypeInfo);
+		  }
+		  piVar1 = (int *)Core_Net_AbstractService__PushCommand
+		                            (param1,*(undefined4 *)
+		                                     (*(int *)(Core_Net_SrvCommand_TypeInfo + 0x5c) + 4),0);
+		  if (piVar1[2] == 0) {
+		    (**(code **)((ulonglong)*(uint *)(*piVar1 + 0x110) * 4))
+		              (piVar1,*(undefined4 *)(*piVar1 + 0x114));
+		    uVar2 = (**(code **)((ulonglong)*(uint *)(*param1 + 0xe0) * 4))
+		                      (param1,*(undefined4 *)(*param1 + 0xe4));
+		    if (*(int *)(Core_Net_SrvCommand_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(Core_Net_SrvCommand_TypeInfo);
+		    }
+		    param1_00 = Core_Net_SrvCommand___ctor(uVar2,6,0,0);
+		    local_8 = 0x6ffffffff;
+		    local_c = Protocol_ClanWar_ClanWarCommands_TypeInfo;
+		    uVar2 = Spine_SkeletonJson__GetFloat(&local_c,0);
+		    *(undefined4 *)(param1_00 + 0x14) = uVar2;
+		    uVar2 = unnamed_function_1417(System_Action_SrvCommand__IMessage__TypeInfo);
+		    System_Runtime_CompilerServices_AsyncVoidMethodBuilder__AwaitUnsafeOnCompleted_UniTask_Awaiter_bool___BossCaptainViewMediator__SetupView_d__8_
+		              (uVar2,param1,*(undefined4 *)(*param1 + 0xec),0);
+		    Core_Data_Spells_SpellData__Create_object_
+		              (param1_00,uVar2,Method_Core_Net_SrvCommand_SetCallback_ProtoDefaultAns___);
+		    Core_Net_AbstractService__LogCommandAnswer(param1,param1_00,0);
+		  }
+		  return piVar1;
+		}
+		*/
+
 			return null;
 		}
 
@@ -217,6 +511,56 @@ namespace ServicesNamespace
 		[Address(RVA = "0x58BC", Offset = "0x58BC", VA = "0x58BC")]
 		public OpToken<IMessage, object> TakeOutGolem()
 		{
+		/* --- GHIDRA: TakeOutGolem ---
+		int * ServicesNamespace_ClanWarsService__TakeOutGolem(int *param1,undefined4 param2)
+		
+		{
+		  int *piVar1;
+		  undefined4 uVar2;
+		  undefined4 param1_00;
+		  int param1_01;
+		  undefined4 local_c;
+		  undefined8 local_8;
+		  
+		  if (DAT_ram_00a62919 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_SrvCommand__IMessage__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Protocol_ClanWar_ClanWarCommands_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Protocol_ClanWar_ProtoRepairGolemCmd_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Method_Core_Net_SrvCommand_SetCallback_ProtoDefaultAns___);
+		    Mono_Security_ASN1__get_Item(&Core_Net_SrvCommand_TypeInfo);
+		    DAT_ram_00a62919 = '\x01';
+		  }
+		  if (*(int *)(Core_Net_SrvCommand_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Core_Net_SrvCommand_TypeInfo);
+		  }
+		  piVar1 = (int *)Core_Net_AbstractService__PushCommand
+		                            (param1,*(undefined4 *)
+		                                     (*(int *)(Core_Net_SrvCommand_TypeInfo + 0x5c) + 4),0);
+		  if (piVar1[2] == 0) {
+		    (**(code **)((ulonglong)*(uint *)(*piVar1 + 0x110) * 4))
+		              (piVar1,*(undefined4 *)(*piVar1 + 0x114));
+		    uVar2 = unnamed_function_1417(Protocol_ClanWar_ProtoRepairGolemCmd_TypeInfo);
+		    param1_00 = (**(code **)((ulonglong)*(uint *)(*param1 + 0xe0) * 4))
+		                          (param1,*(undefined4 *)(*param1 + 0xe4));
+		    if (*(int *)(Core_Net_SrvCommand_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(Core_Net_SrvCommand_TypeInfo);
+		    }
+		    param1_01 = Core_Net_SrvCommand___ctor(param1_00,5,uVar2,0);
+		    local_8 = 0x5ffffffff;
+		    local_c = Protocol_ClanWar_ClanWarCommands_TypeInfo;
+		    uVar2 = Spine_SkeletonJson__GetFloat(&local_c,0);
+		    *(undefined4 *)(param1_01 + 0x14) = uVar2;
+		    uVar2 = unnamed_function_1417(System_Action_SrvCommand__IMessage__TypeInfo);
+		    System_Runtime_CompilerServices_AsyncVoidMethodBuilder__AwaitUnsafeOnCompleted_UniTask_Awaiter_bool___BossCaptainViewMediator__SetupView_d__8_
+		              (uVar2,param1,*(undefined4 *)(*param1 + 0xec),0);
+		    Core_Data_Spells_SpellData__Create_object_
+		              (param1_01,uVar2,Method_Core_Net_SrvCommand_SetCallback_ProtoDefaultAns___);
+		    Core_Net_AbstractService__LogCommandAnswer(param1,param1_01,0);
+		  }
+		  return piVar1;
+		}
+		*/
+
 			return null;
 		}
 
@@ -225,6 +569,57 @@ namespace ServicesNamespace
 		[Address(RVA = "0x58BD", Offset = "0x58BD", VA = "0x58BD")]
 		public OpToken<IMessage, object> RepairGolem()
 		{
+		/* --- GHIDRA: RepairGolem ---
+		int * ServicesNamespace_ClanWarsService__RepairGolem
+		                (int *param1,undefined8 param2,undefined4 param3)
+		
+		{
+		  int *piVar1;
+		  int iVar2;
+		  undefined4 uVar3;
+		  undefined4 local_c;
+		  undefined8 local_8;
+		  
+		  if (DAT_ram_00a6291a == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_SrvCommand__IMessage__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Protocol_ClanWar_ClanWarCommands_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Protocol_ClanWar_ProtoDeclarateWarCmd_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Method_Core_Net_SrvCommand_SetCallback_ProtoDeclarateWarAns___);
+		    Mono_Security_ASN1__get_Item(&Core_Net_SrvCommand_TypeInfo);
+		    DAT_ram_00a6291a = '\x01';
+		  }
+		  if (*(int *)(Core_Net_SrvCommand_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Core_Net_SrvCommand_TypeInfo);
+		  }
+		  piVar1 = (int *)Core_Net_AbstractService__PushCommand
+		                            (param1,*(undefined4 *)
+		                                     (*(int *)(Core_Net_SrvCommand_TypeInfo + 0x5c) + 4),0);
+		  if (piVar1[2] == 0) {
+		    (**(code **)((ulonglong)*(uint *)(*piVar1 + 0x110) * 4))
+		              (piVar1,*(undefined4 *)(*piVar1 + 0x114));
+		    iVar2 = unnamed_function_1417(Protocol_ClanWar_ProtoDeclarateWarCmd_TypeInfo);
+		    *(undefined8 *)(iVar2 + 0x10) = param2;
+		    uVar3 = (**(code **)((ulonglong)*(uint *)(*param1 + 0xe0) * 4))
+		                      (param1,*(undefined4 *)(*param1 + 0xe4));
+		    if (*(int *)(Core_Net_SrvCommand_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(Core_Net_SrvCommand_TypeInfo);
+		    }
+		    iVar2 = Core_Net_SrvCommand___ctor(uVar3,1,iVar2,0);
+		    local_8 = 0x1ffffffff;
+		    local_c = Protocol_ClanWar_ClanWarCommands_TypeInfo;
+		    uVar3 = Spine_SkeletonJson__GetFloat(&local_c,0);
+		    *(undefined4 *)(iVar2 + 0x14) = uVar3;
+		    uVar3 = unnamed_function_1417(System_Action_SrvCommand__IMessage__TypeInfo);
+		    System_Runtime_CompilerServices_AsyncVoidMethodBuilder__AwaitUnsafeOnCompleted_UniTask_Awaiter_bool___BossCaptainViewMediator__SetupView_d__8_
+		              (uVar3,param1,*(undefined4 *)(*param1 + 0xec),0);
+		    Core_Data_Spells_SpellData__Create_object_
+		              (iVar2,uVar3,Method_Core_Net_SrvCommand_SetCallback_ProtoDeclarateWarAns___);
+		    Core_Net_AbstractService__LogCommandAnswer(param1,iVar2,0);
+		  }
+		  return piVar1;
+		}
+		*/
+
 			return null;
 		}
 
@@ -233,6 +628,56 @@ namespace ServicesNamespace
 		[Address(RVA = "0x58BE", Offset = "0x58BE", VA = "0x58BE")]
 		public OpToken<IMessage, object> DeclareWar(ulong clanId)
 		{
+		/* --- GHIDRA: DeclareWar ---
+		int * ServicesNamespace_ClanWarsService__DeclareWar(int *param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  int *piVar1;
+		  int iVar2;
+		  undefined4 uVar3;
+		  undefined4 local_c;
+		  undefined8 local_8;
+		  
+		  if (DAT_ram_00a6291b == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_SrvCommand__IMessage__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Protocol_ClanWar_ClanWarCommands_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Protocol_ClanWar_ProtoPayOffCmd_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Method_Core_Net_SrvCommand_SetCallback_ProtoDefaultAns___);
+		    Mono_Security_ASN1__get_Item(&Core_Net_SrvCommand_TypeInfo);
+		    DAT_ram_00a6291b = '\x01';
+		  }
+		  if (*(int *)(Core_Net_SrvCommand_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Core_Net_SrvCommand_TypeInfo);
+		  }
+		  piVar1 = (int *)Core_Net_AbstractService__PushCommand
+		                            (param1,*(undefined4 *)
+		                                     (*(int *)(Core_Net_SrvCommand_TypeInfo + 0x5c) + 4),0);
+		  if (piVar1[2] == 0) {
+		    (**(code **)((ulonglong)*(uint *)(*piVar1 + 0x110) * 4))
+		              (piVar1,*(undefined4 *)(*piVar1 + 0x114));
+		    iVar2 = unnamed_function_1417(Protocol_ClanWar_ProtoPayOffCmd_TypeInfo);
+		    *(undefined4 *)(iVar2 + 0xc) = param2;
+		    uVar3 = (**(code **)((ulonglong)*(uint *)(*param1 + 0xe0) * 4))
+		                      (param1,*(undefined4 *)(*param1 + 0xe4));
+		    if (*(int *)(Core_Net_SrvCommand_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(Core_Net_SrvCommand_TypeInfo);
+		    }
+		    iVar2 = Core_Net_SrvCommand___ctor(uVar3,4,iVar2,0);
+		    local_8 = 0x4ffffffff;
+		    local_c = Protocol_ClanWar_ClanWarCommands_TypeInfo;
+		    uVar3 = Spine_SkeletonJson__GetFloat(&local_c,0);
+		    *(undefined4 *)(iVar2 + 0x14) = uVar3;
+		    uVar3 = unnamed_function_1417(System_Action_SrvCommand__IMessage__TypeInfo);
+		    System_Runtime_CompilerServices_AsyncVoidMethodBuilder__AwaitUnsafeOnCompleted_UniTask_Awaiter_bool___BossCaptainViewMediator__SetupView_d__8_
+		              (uVar3,param1,*(undefined4 *)(*param1 + 0xec),0);
+		    Core_Data_Spells_SpellData__Create_object_
+		              (iVar2,uVar3,Method_Core_Net_SrvCommand_SetCallback_ProtoDefaultAns___);
+		    Core_Net_AbstractService__LogCommandAnswer(param1,iVar2,0);
+		  }
+		  return piVar1;
+		}
+		*/
+
 			return null;
 		}
 
@@ -241,6 +686,57 @@ namespace ServicesNamespace
 		[Address(RVA = "0x58BF", Offset = "0x58BF", VA = "0x58BF")]
 		public OpToken<IMessage, object> PayOff(uint warId)
 		{
+		/* --- GHIDRA: PayOff ---
+		int * ServicesNamespace_ClanWarsService__PayOff(int *param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  int *piVar1;
+		  int iVar2;
+		  undefined4 uVar3;
+		  undefined4 local_c;
+		  undefined8 local_8;
+		  
+		  if (DAT_ram_00a6291c == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_SrvCommand__IMessage__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Protocol_ClanWar_ClanWarCommands_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Protocol_ClanWar_ProtoAcceleratePreparationCmd_TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Core_Net_SrvCommand_SetCallback_ProtoAcceleratePreparationAns___);
+		    Mono_Security_ASN1__get_Item(&Core_Net_SrvCommand_TypeInfo);
+		    DAT_ram_00a6291c = '\x01';
+		  }
+		  if (*(int *)(Core_Net_SrvCommand_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Core_Net_SrvCommand_TypeInfo);
+		  }
+		  piVar1 = (int *)Core_Net_AbstractService__PushCommand
+		                            (param1,*(undefined4 *)
+		                                     (*(int *)(Core_Net_SrvCommand_TypeInfo + 0x5c) + 4),0);
+		  if (piVar1[2] == 0) {
+		    (**(code **)((ulonglong)*(uint *)(*piVar1 + 0x110) * 4))
+		              (piVar1,*(undefined4 *)(*piVar1 + 0x114));
+		    iVar2 = unnamed_function_1417(Protocol_ClanWar_ProtoAcceleratePreparationCmd_TypeInfo);
+		    *(undefined4 *)(iVar2 + 0xc) = param2;
+		    uVar3 = (**(code **)((ulonglong)*(uint *)(*param1 + 0xe0) * 4))
+		                      (param1,*(undefined4 *)(*param1 + 0xe4));
+		    if (*(int *)(Core_Net_SrvCommand_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(Core_Net_SrvCommand_TypeInfo);
+		    }
+		    iVar2 = Core_Net_SrvCommand___ctor(uVar3,3,iVar2,0);
+		    local_8 = 0x3ffffffff;
+		    local_c = Protocol_ClanWar_ClanWarCommands_TypeInfo;
+		    uVar3 = Spine_SkeletonJson__GetFloat(&local_c,0);
+		    *(undefined4 *)(iVar2 + 0x14) = uVar3;
+		    uVar3 = unnamed_function_1417(System_Action_SrvCommand__IMessage__TypeInfo);
+		    System_Runtime_CompilerServices_AsyncVoidMethodBuilder__AwaitUnsafeOnCompleted_UniTask_Awaiter_bool___BossCaptainViewMediator__SetupView_d__8_
+		              (uVar3,param1,*(undefined4 *)(*param1 + 0xec),0);
+		    Core_Data_Spells_SpellData__Create_object_
+		              (iVar2,uVar3,Method_Core_Net_SrvCommand_SetCallback_ProtoAcceleratePreparationAns___);
+		    Core_Net_AbstractService__LogCommandAnswer(param1,iVar2,0);
+		  }
+		  return piVar1;
+		}
+		*/
+
 			return null;
 		}
 
@@ -249,6 +745,57 @@ namespace ServicesNamespace
 		[Address(RVA = "0x58C0", Offset = "0x58C0", VA = "0x58C0")]
 		public OpToken<IMessage, object> AcceleratePreparation(uint warId)
 		{
+		/* --- GHIDRA: AcceleratePreparation ---
+		int * ServicesNamespace_ClanWarsService__AcceleratePreparation
+		                (int *param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  int *piVar1;
+		  int iVar2;
+		  undefined4 uVar3;
+		  undefined4 local_c;
+		  undefined8 local_8;
+		  
+		  if (DAT_ram_00a6291d == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_SrvCommand__IMessage__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Protocol_ClanWar_ClanWarCommands_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Protocol_ClanWar_ProtoCancelAccelerationCmd_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Method_Core_Net_SrvCommand_SetCallback_ProtoDefaultAns___);
+		    Mono_Security_ASN1__get_Item(&Core_Net_SrvCommand_TypeInfo);
+		    DAT_ram_00a6291d = '\x01';
+		  }
+		  if (*(int *)(Core_Net_SrvCommand_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Core_Net_SrvCommand_TypeInfo);
+		  }
+		  piVar1 = (int *)Core_Net_AbstractService__PushCommand
+		                            (param1,*(undefined4 *)
+		                                     (*(int *)(Core_Net_SrvCommand_TypeInfo + 0x5c) + 4),0);
+		  if (piVar1[2] == 0) {
+		    (**(code **)((ulonglong)*(uint *)(*piVar1 + 0x110) * 4))
+		              (piVar1,*(undefined4 *)(*piVar1 + 0x114));
+		    iVar2 = unnamed_function_1417(Protocol_ClanWar_ProtoCancelAccelerationCmd_TypeInfo);
+		    *(undefined4 *)(iVar2 + 0xc) = param2;
+		    uVar3 = (**(code **)((ulonglong)*(uint *)(*param1 + 0xe0) * 4))
+		                      (param1,*(undefined4 *)(*param1 + 0xe4));
+		    if (*(int *)(Core_Net_SrvCommand_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(Core_Net_SrvCommand_TypeInfo);
+		    }
+		    iVar2 = Core_Net_SrvCommand___ctor(uVar3,8,iVar2,0);
+		    local_8 = 0x8ffffffff;
+		    local_c = Protocol_ClanWar_ClanWarCommands_TypeInfo;
+		    uVar3 = Spine_SkeletonJson__GetFloat(&local_c,0);
+		    *(undefined4 *)(iVar2 + 0x14) = uVar3;
+		    uVar3 = unnamed_function_1417(System_Action_SrvCommand__IMessage__TypeInfo);
+		    System_Runtime_CompilerServices_AsyncVoidMethodBuilder__AwaitUnsafeOnCompleted_UniTask_Awaiter_bool___BossCaptainViewMediator__SetupView_d__8_
+		              (uVar3,param1,*(undefined4 *)(*param1 + 0xec),0);
+		    Core_Data_Spells_SpellData__Create_object_
+		              (iVar2,uVar3,Method_Core_Net_SrvCommand_SetCallback_ProtoDefaultAns___);
+		    Core_Net_AbstractService__LogCommandAnswer(param1,iVar2,0);
+		  }
+		  return piVar1;
+		}
+		*/
+
 			return null;
 		}
 
@@ -257,6 +804,57 @@ namespace ServicesNamespace
 		[Address(RVA = "0x58C1", Offset = "0x58C1", VA = "0x58C1")]
 		public OpToken<IMessage, object> CancelAcceleration(uint warId)
 		{
+		/* --- GHIDRA: CancelAcceleration ---
+		int * ServicesNamespace_ClanWarsService__CancelAcceleration
+		                (int *param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  int *piVar1;
+		  int iVar2;
+		  undefined4 uVar3;
+		  undefined4 local_c;
+		  undefined8 local_8;
+		  
+		  if (DAT_ram_00a6291e == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_SrvCommand__IMessage__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Protocol_ClanWar_ClanWarCommands_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Protocol_ClanWar_ProtoJoinClanCombatAsViewerCmd_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Method_Core_Net_SrvCommand_SetCallback_ProtoJoinToCombatAns___);
+		    Mono_Security_ASN1__get_Item(&Core_Net_SrvCommand_TypeInfo);
+		    DAT_ram_00a6291e = '\x01';
+		  }
+		  if (*(int *)(Core_Net_SrvCommand_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Core_Net_SrvCommand_TypeInfo);
+		  }
+		  piVar1 = (int *)Core_Net_AbstractService__PushCommand
+		                            (param1,*(undefined4 *)
+		                                     (*(int *)(Core_Net_SrvCommand_TypeInfo + 0x5c) + 4),0);
+		  if (piVar1[2] == 0) {
+		    (**(code **)((ulonglong)*(uint *)(*piVar1 + 0x110) * 4))
+		              (piVar1,*(undefined4 *)(*piVar1 + 0x114));
+		    iVar2 = unnamed_function_1417(Protocol_ClanWar_ProtoJoinClanCombatAsViewerCmd_TypeInfo);
+		    *(undefined4 *)(iVar2 + 0xc) = param2;
+		    uVar3 = (**(code **)((ulonglong)*(uint *)(*param1 + 0xe0) * 4))
+		                      (param1,*(undefined4 *)(*param1 + 0xe4));
+		    if (*(int *)(Core_Net_SrvCommand_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(Core_Net_SrvCommand_TypeInfo);
+		    }
+		    iVar2 = Core_Net_SrvCommand___ctor(uVar3,9,iVar2,0);
+		    local_8 = 0x9ffffffff;
+		    local_c = Protocol_ClanWar_ClanWarCommands_TypeInfo;
+		    uVar3 = Spine_SkeletonJson__GetFloat(&local_c,0);
+		    *(undefined4 *)(iVar2 + 0x14) = uVar3;
+		    uVar3 = unnamed_function_1417(System_Action_SrvCommand__IMessage__TypeInfo);
+		    System_Runtime_CompilerServices_AsyncVoidMethodBuilder__AwaitUnsafeOnCompleted_UniTask_Awaiter_bool___BossCaptainViewMediator__SetupView_d__8_
+		              (uVar3,param1,*(undefined4 *)(*param1 + 0xec),0);
+		    Core_Data_Spells_SpellData__Create_object_
+		              (iVar2,uVar3,Method_Core_Net_SrvCommand_SetCallback_ProtoJoinToCombatAns___);
+		    Core_Net_AbstractService__LogCommandAnswer(param1,iVar2,0);
+		  }
+		  return piVar1;
+		}
+		*/
+
 			return null;
 		}
 
@@ -265,6 +863,57 @@ namespace ServicesNamespace
 		[Address(RVA = "0x58C2", Offset = "0x58C2", VA = "0x58C2")]
 		public OpToken<IMessage, object> JoinCombatAsViewer(uint clanWarId)
 		{
+		/* --- GHIDRA: JoinCombatAsViewer ---
+		int * ServicesNamespace_ClanWarsService__JoinCombatAsViewer
+		                (int *param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  int *piVar1;
+		  int iVar2;
+		  undefined4 uVar3;
+		  undefined4 local_c;
+		  undefined8 local_8;
+		  
+		  if (DAT_ram_00a6291f == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_SrvCommand__IMessage__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Protocol_ClanWar_ClanWarCommands_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Protocol_ClanWar_ProtoJoinClanCombatCmd_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Method_Core_Net_SrvCommand_SetCallback_ProtoJoinClanCombatAns___);
+		    Mono_Security_ASN1__get_Item(&Core_Net_SrvCommand_TypeInfo);
+		    DAT_ram_00a6291f = '\x01';
+		  }
+		  if (*(int *)(Core_Net_SrvCommand_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Core_Net_SrvCommand_TypeInfo);
+		  }
+		  piVar1 = (int *)Core_Net_AbstractService__PushCommand
+		                            (param1,*(undefined4 *)
+		                                     (*(int *)(Core_Net_SrvCommand_TypeInfo + 0x5c) + 4),0);
+		  if (piVar1[2] == 0) {
+		    (**(code **)((ulonglong)*(uint *)(*piVar1 + 0x110) * 4))
+		              (piVar1,*(undefined4 *)(*piVar1 + 0x114));
+		    iVar2 = unnamed_function_1417(Protocol_ClanWar_ProtoJoinClanCombatCmd_TypeInfo);
+		    *(undefined4 *)(iVar2 + 0xc) = param2;
+		    uVar3 = (**(code **)((ulonglong)*(uint *)(*param1 + 0xe0) * 4))
+		                      (param1,*(undefined4 *)(*param1 + 0xe4));
+		    if (*(int *)(Core_Net_SrvCommand_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(Core_Net_SrvCommand_TypeInfo);
+		    }
+		    iVar2 = Core_Net_SrvCommand___ctor(uVar3,7,iVar2,0);
+		    local_8 = 0x7ffffffff;
+		    local_c = Protocol_ClanWar_ClanWarCommands_TypeInfo;
+		    uVar3 = Spine_SkeletonJson__GetFloat(&local_c,0);
+		    *(undefined4 *)(iVar2 + 0x14) = uVar3;
+		    uVar3 = unnamed_function_1417(System_Action_SrvCommand__IMessage__TypeInfo);
+		    System_Runtime_CompilerServices_AsyncVoidMethodBuilder__AwaitUnsafeOnCompleted_UniTask_Awaiter_bool___BossCaptainViewMediator__SetupView_d__8_
+		              (uVar3,param1,*(undefined4 *)(*param1 + 0xec),0);
+		    Core_Data_Spells_SpellData__Create_object_
+		              (iVar2,uVar3,Method_Core_Net_SrvCommand_SetCallback_ProtoJoinClanCombatAns___);
+		    Core_Net_AbstractService__LogCommandAnswer(param1,iVar2,0);
+		  }
+		  return piVar1;
+		}
+		*/
+
 			return null;
 		}
 
@@ -273,6 +922,56 @@ namespace ServicesNamespace
 		[Address(RVA = "0x58C3", Offset = "0x58C3", VA = "0x58C3")]
 		public OpToken<IMessage, object> RequestClanCombat(uint clanWarId)
 		{
+		/* --- GHIDRA: RequestClanCombat ---
+		int * ServicesNamespace_ClanWarsService__RequestClanCombat(int *param1,undefined4 param2)
+		
+		{
+		  int *piVar1;
+		  undefined4 uVar2;
+		  undefined4 param1_00;
+		  int param1_01;
+		  undefined4 local_c;
+		  undefined8 local_8;
+		  
+		  if (DAT_ram_00a62920 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_SrvCommand__IMessage__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Protocol_ClanWar_ClanWarCommands_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Protocol_ClanWar_ProtoUnjoinClanCombatAsViewerCmd_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Method_Core_Net_SrvCommand_SetCallback_ProtoJoinClanCombatAns___);
+		    Mono_Security_ASN1__get_Item(&Core_Net_SrvCommand_TypeInfo);
+		    DAT_ram_00a62920 = '\x01';
+		  }
+		  if (*(int *)(Core_Net_SrvCommand_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Core_Net_SrvCommand_TypeInfo);
+		  }
+		  piVar1 = (int *)Core_Net_AbstractService__PushCommand
+		                            (param1,*(undefined4 *)
+		                                     (*(int *)(Core_Net_SrvCommand_TypeInfo + 0x5c) + 4),0);
+		  if (piVar1[2] == 0) {
+		    (**(code **)((ulonglong)*(uint *)(*piVar1 + 0x110) * 4))
+		              (piVar1,*(undefined4 *)(*piVar1 + 0x114));
+		    uVar2 = unnamed_function_1417(Protocol_ClanWar_ProtoUnjoinClanCombatAsViewerCmd_TypeInfo);
+		    param1_00 = (**(code **)((ulonglong)*(uint *)(*param1 + 0xe0) * 4))
+		                          (param1,*(undefined4 *)(*param1 + 0xe4));
+		    if (*(int *)(Core_Net_SrvCommand_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(Core_Net_SrvCommand_TypeInfo);
+		    }
+		    param1_01 = Core_Net_SrvCommand___ctor(param1_00,10,uVar2,0);
+		    local_8 = 0xaffffffff;
+		    local_c = Protocol_ClanWar_ClanWarCommands_TypeInfo;
+		    uVar2 = Spine_SkeletonJson__GetFloat(&local_c,0);
+		    *(undefined4 *)(param1_01 + 0x14) = uVar2;
+		    uVar2 = unnamed_function_1417(System_Action_SrvCommand__IMessage__TypeInfo);
+		    System_Runtime_CompilerServices_AsyncVoidMethodBuilder__AwaitUnsafeOnCompleted_UniTask_Awaiter_bool___BossCaptainViewMediator__SetupView_d__8_
+		              (uVar2,param1,*(undefined4 *)(*param1 + 0xec),0);
+		    Core_Data_Spells_SpellData__Create_object_
+		              (param1_01,uVar2,Method_Core_Net_SrvCommand_SetCallback_ProtoJoinClanCombatAns___);
+		    Core_Net_AbstractService__LogCommandAnswer(param1,param1_01,0);
+		  }
+		  return piVar1;
+		}
+		*/
+
 			return null;
 		}
 
@@ -291,4 +990,678 @@ namespace ServicesNamespace
 		{
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_ServiceId ---
+		void ServicesNamespace_ClanWarsService__get_ServiceId
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a62904 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_ProtoNewWarDeclaredEvt__TypeInfo);
+		    DAT_ram_00a62904 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x14);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = UnityEngine_UI_Image__set_sprite(param1_00,param2,0);
+		    param2_00 = System_Action_ProtoNewWarDeclaredEvt__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_ProtoNewWarDeclaredEvt__TypeInfo), iVar2 == 0))
+		    break;
+		    iVar2 = func_ii_4329(param1 + 0x14,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: add_NewWarDeclaredEvent ---
+		void ServicesNamespace_ClanWarsService__add_NewWarDeclaredEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a62905 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_ProtoNewWarDeclaredEvt__TypeInfo);
+		    DAT_ram_00a62905 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x14);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = func_ii_7048(param1_00,param2,0);
+		    param2_00 = System_Action_ProtoNewWarDeclaredEvt__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_ProtoNewWarDeclaredEvt__TypeInfo), iVar2 == 0))
+		    break;
+		    iVar2 = func_ii_4329(param1 + 0x14,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: remove_NewWarDeclaredEvent ---
+		void ServicesNamespace_ClanWarsService__remove_NewWarDeclaredEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a62906 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_ProtoWarStateChangedEvt__TypeInfo);
+		    DAT_ram_00a62906 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x18);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = UnityEngine_UI_Image__set_sprite(param1_00,param2,0);
+		    param2_00 = System_Action_ProtoWarStateChangedEvt__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_ProtoWarStateChangedEvt__TypeInfo), iVar2 == 0)
+		       ) break;
+		    iVar2 = func_ii_4329(param1 + 0x18,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: add_WarStateChanged ---
+		void ServicesNamespace_ClanWarsService__add_WarStateChanged
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a62907 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_ProtoWarStateChangedEvt__TypeInfo);
+		    DAT_ram_00a62907 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x18);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = func_ii_7048(param1_00,param2,0);
+		    param2_00 = System_Action_ProtoWarStateChangedEvt__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_ProtoWarStateChangedEvt__TypeInfo), iVar2 == 0)
+		       ) break;
+		    iVar2 = func_ii_4329(param1 + 0x18,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: remove_WarStateChanged ---
+		void ServicesNamespace_ClanWarsService__remove_WarStateChanged
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a62908 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_ProtoPlayersCountChangedEvt__TypeInfo);
+		    DAT_ram_00a62908 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x1c);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = UnityEngine_UI_Image__set_sprite(param1_00,param2,0);
+		    param2_00 = System_Action_ProtoPlayersCountChangedEvt__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_ProtoPlayersCountChangedEvt__TypeInfo),
+		       iVar2 == 0)) break;
+		    iVar2 = func_ii_4329(param1 + 0x1c,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: add_PlayersCountChangedEvent ---
+		void ServicesNamespace_ClanWarsService__add_PlayersCountChangedEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a62909 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_ProtoPlayersCountChangedEvt__TypeInfo);
+		    DAT_ram_00a62909 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x1c);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = func_ii_7048(param1_00,param2,0);
+		    param2_00 = System_Action_ProtoPlayersCountChangedEvt__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_ProtoPlayersCountChangedEvt__TypeInfo),
+		       iVar2 == 0)) break;
+		    iVar2 = func_ii_4329(param1 + 0x1c,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: remove_PlayersCountChangedEvent ---
+		void ServicesNamespace_ClanWarsService__remove_PlayersCountChangedEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a6290a == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_ProtoClanWarCompleteEvt__TypeInfo);
+		    DAT_ram_00a6290a = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x20);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = UnityEngine_UI_Image__set_sprite(param1_00,param2,0);
+		    param2_00 = System_Action_ProtoClanWarCompleteEvt__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_ProtoClanWarCompleteEvt__TypeInfo), iVar2 == 0)
+		       ) break;
+		    iVar2 = func_ii_4329(param1 + 0x20,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: add_ClanWarCompletedEvent ---
+		void ServicesNamespace_ClanWarsService__add_ClanWarCompletedEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a6290b == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_ProtoClanWarCompleteEvt__TypeInfo);
+		    DAT_ram_00a6290b = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x20);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = func_ii_7048(param1_00,param2,0);
+		    param2_00 = System_Action_ProtoClanWarCompleteEvt__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_ProtoClanWarCompleteEvt__TypeInfo), iVar2 == 0)
+		       ) break;
+		    iVar2 = func_ii_4329(param1 + 0x20,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: remove_ClanWarCompletedEvent ---
+		void ServicesNamespace_ClanWarsService__remove_ClanWarCompletedEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a6290c == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_ProtoSeasonStartedEvt__TypeInfo);
+		    DAT_ram_00a6290c = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x24);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = UnityEngine_UI_Image__set_sprite(param1_00,param2,0);
+		    param2_00 = System_Action_ProtoSeasonStartedEvt__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_ProtoSeasonStartedEvt__TypeInfo), iVar2 == 0))
+		    break;
+		    iVar2 = func_ii_4329(param1 + 0x24,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: add_SeasonStartedEvent ---
+		void ServicesNamespace_ClanWarsService__add_SeasonStartedEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a6290d == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_ProtoSeasonStartedEvt__TypeInfo);
+		    DAT_ram_00a6290d = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x24);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = func_ii_7048(param1_00,param2,0);
+		    param2_00 = System_Action_ProtoSeasonStartedEvt__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_ProtoSeasonStartedEvt__TypeInfo), iVar2 == 0))
+		    break;
+		    iVar2 = func_ii_4329(param1 + 0x24,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: remove_SeasonStartedEvent ---
+		void ServicesNamespace_ClanWarsService__remove_SeasonStartedEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a6290e == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_ProtoSeasonFinishedEvt__TypeInfo);
+		    DAT_ram_00a6290e = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x28);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = UnityEngine_UI_Image__set_sprite(param1_00,param2,0);
+		    param2_00 = System_Action_ProtoSeasonFinishedEvt__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_ProtoSeasonFinishedEvt__TypeInfo), iVar2 == 0))
+		    break;
+		    iVar2 = func_ii_4329(param1 + 0x28,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: add_SeasonFinishedEvent ---
+		void ServicesNamespace_ClanWarsService__add_SeasonFinishedEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a6290f == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_ProtoSeasonFinishedEvt__TypeInfo);
+		    DAT_ram_00a6290f = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x28);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = func_ii_7048(param1_00,param2,0);
+		    param2_00 = System_Action_ProtoSeasonFinishedEvt__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_ProtoSeasonFinishedEvt__TypeInfo), iVar2 == 0))
+		    break;
+		    iVar2 = func_ii_4329(param1 + 0x28,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: remove_SeasonFinishedEvent ---
+		void ServicesNamespace_ClanWarsService__remove_SeasonFinishedEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a62910 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_ProtoWarModeChangedEvt__TypeInfo);
+		    DAT_ram_00a62910 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x2c);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = UnityEngine_UI_Image__set_sprite(param1_00,param2,0);
+		    param2_00 = System_Action_ProtoWarModeChangedEvt__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_ProtoWarModeChangedEvt__TypeInfo), iVar2 == 0))
+		    break;
+		    iVar2 = func_ii_4329(param1 + 0x2c,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: add_WarModeChangedEvent ---
+		void ServicesNamespace_ClanWarsService__add_WarModeChangedEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a62911 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_ProtoWarModeChangedEvt__TypeInfo);
+		    DAT_ram_00a62911 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x2c);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = func_ii_7048(param1_00,param2,0);
+		    param2_00 = System_Action_ProtoWarModeChangedEvt__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_ProtoWarModeChangedEvt__TypeInfo), iVar2 == 0))
+		    break;
+		    iVar2 = func_ii_4329(param1 + 0x2c,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: remove_WarModeChangedEvent ---
+		void ServicesNamespace_ClanWarsService__remove_WarModeChangedEvent
+		               (int param1,int param2,undefined4 param3)
+		
+		{
+		  int *param1_00;
+		  int iVar1;
+		  
+		  if (DAT_ram_00a62912 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_Core_Net_AbstractService_LogEvent_ClanWarEvents___);
+		    Mono_Security_ASN1__get_Item(&Protocol_ClanWar_ProtoClanWarCompleteEvt_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Protocol_ClanWar_ProtoNewWarDeclaredEvt_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Protocol_ClanWar_ProtoPlayersCountChangedEvt_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Protocol_ClanWar_ProtoSeasonFinishedEvt_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Protocol_ClanWar_ProtoSeasonStartedEvt_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Protocol_ClanWar_ProtoWarModeChangedEvt_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Protocol_ClanWar_ProtoWarStateChangedEvt_TypeInfo);
+		    DAT_ram_00a62912 = '\x01';
+		  }
+		  iVar1 = *(int *)(param2 + 0x10);
+		  UnityEngine_Purchasing_Extension_AbstractPurchasingModule__BindExtension___Il2CppFullySharedGenericType_
+		            (param1,iVar1,*(undefined4 *)(param2 + 0x20),
+		             Method_Core_Net_AbstractService_LogEvent_ClanWarEvents___);
+		  if (iVar1 == 1) {
+		    iVar1 = *(int *)(param1 + 0x14);
+		    if (iVar1 == 0) {
+		      return;
+		    }
+		    param1_00 = *(int **)(param2 + 0x20);
+		    if ((param1_00 != (int *)0x0) &&
+		       (Protocol_ClanWar_ProtoNewWarDeclaredEvt_TypeInfo != *param1_00)) {
+		      System_Activator__CreateInstance(param1_00,Protocol_ClanWar_ProtoNewWarDeclaredEvt_TypeInfo);
+		      do {
+		        halt_trap();
+		      } while( true );
+		    }
+		  }
+		  else if (iVar1 == 2) {
+		    iVar1 = *(int *)(param1 + 0x18);
+		    if (iVar1 == 0) {
+		      return;
+		    }
+		    param1_00 = *(int **)(param2 + 0x20);
+		    if ((param1_00 != (int *)0x0) &&
+		       (Protocol_ClanWar_ProtoWarStateChangedEvt_TypeInfo != *param1_00)) {
+		      System_Activator__CreateInstance(param1_00,Protocol_ClanWar_ProtoWarStateChangedEvt_TypeInfo);
+		      do {
+		        halt_trap();
+		      } while( true );
+		    }
+		  }
+		  else {
+		    if (iVar1 == 3) {
+		      return;
+		    }
+		    if (iVar1 == 4) {
+		      iVar1 = *(int *)(param1 + 0x1c);
+		      if (iVar1 == 0) {
+		        return;
+		      }
+		      param1_00 = *(int **)(param2 + 0x20);
+		      if ((param1_00 != (int *)0x0) &&
+		         (Protocol_ClanWar_ProtoPlayersCountChangedEvt_TypeInfo != *param1_00)) {
+		        System_Activator__CreateInstance
+		                  (param1_00,Protocol_ClanWar_ProtoPlayersCountChangedEvt_TypeInfo);
+		        do {
+		          halt_trap();
+		        } while( true );
+		      }
+		    }
+		    else if (iVar1 == 5) {
+		      iVar1 = *(int *)(param1 + 0x20);
+		      if (iVar1 == 0) {
+		        return;
+		      }
+		      param1_00 = *(int **)(param2 + 0x20);
+		      if ((param1_00 != (int *)0x0) &&
+		         (Protocol_ClanWar_ProtoClanWarCompleteEvt_TypeInfo != *param1_00)) {
+		        System_Activator__CreateInstance
+		                  (param1_00,Protocol_ClanWar_ProtoClanWarCompleteEvt_TypeInfo);
+		        do {
+		          halt_trap();
+		        } while( true );
+		      }
+		    }
+		    else if (iVar1 == 6) {
+		      iVar1 = *(int *)(param1 + 0x24);
+		      if (iVar1 == 0) {
+		        return;
+		      }
+		      param1_00 = *(int **)(param2 + 0x20);
+		      if ((param1_00 != (int *)0x0) &&
+		         (Protocol_ClanWar_ProtoSeasonStartedEvt_TypeInfo != *param1_00)) {
+		        System_Activator__CreateInstance(param1_00,Protocol_ClanWar_ProtoSeasonStartedEvt_TypeInfo);
+		        do {
+		          halt_trap();
+		        } while( true );
+		      }
+		    }
+		    else if (iVar1 == 7) {
+		      iVar1 = *(int *)(param1 + 0x28);
+		      if (iVar1 == 0) {
+		        return;
+		      }
+		      param1_00 = *(int **)(param2 + 0x20);
+		      if ((param1_00 != (int *)0x0) &&
+		         (Protocol_ClanWar_ProtoSeasonFinishedEvt_TypeInfo != *param1_00)) {
+		        System_Activator__CreateInstance(param1_00,Protocol_ClanWar_ProtoSeasonFinishedEvt_TypeInfo)
+		        ;
+		        do {
+		          halt_trap();
+		        } while( true );
+		      }
+		    }
+		    else {
+		      if (iVar1 != 8) {
+		        return;
+		      }
+		      iVar1 = *(int *)(param1 + 0x2c);
+		      if (iVar1 == 0) {
+		        return;
+		      }
+		      param1_00 = *(int **)(param2 + 0x20);
+		      if ((param1_00 != (int *)0x0) &&
+		         (Protocol_ClanWar_ProtoWarModeChangedEvt_TypeInfo != *param1_00)) {
+		        System_Activator__CreateInstance(param1_00,Protocol_ClanWar_ProtoWarModeChangedEvt_TypeInfo)
+		        ;
+		        do {
+		          halt_trap();
+		        } while( true );
+		      }
+		    }
+		  }
+		  (**(code **)((ulonglong)*(uint *)(iVar1 + 0xc) * 4))
+		            (*(undefined4 *)(iVar1 + 0x20),param1_00,*(undefined4 *)(iVar1 + 0x14));
+		  return;
+		}
+		*/
+
 }

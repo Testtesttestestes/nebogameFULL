@@ -13,6 +13,24 @@ namespace Core.Extensions.Dict.Antiq
 		[Address(RVA = "0xAC48", Offset = "0xAC48", VA = "0xAC48")]
 		public static string GetImage(this Antiq.Types.ArtifactsDic dict)
 		{
+		/* --- GHIDRA: GetImage ---
+		undefined4 Core_Extensions_Dict_Antiq_ArtifactDicExt__GetImage(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  undefined4 uVar2;
+		  
+		  iVar1 = Core_Extensions_Dict_DictExt__GetApr(*(undefined4 *)(param1 + 0x2c),0xe4,0);
+		  if (iVar1 == 0) {
+		    uVar2 = 0;
+		  }
+		  else {
+		    uVar2 = *(undefined4 *)(iVar1 + 0x10);
+		  }
+		  return uVar2;
+		}
+		*/
+
 			return null;
 		}
 	}

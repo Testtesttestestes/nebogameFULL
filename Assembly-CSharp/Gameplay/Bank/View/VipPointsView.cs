@@ -15,6 +15,20 @@ namespace Gameplay.Bank.View
 		[Address(RVA = "0x9B10", Offset = "0x9B10", VA = "0x9B10", Slot = "19")]
 		protected override void HandleDataChanged()
 		{
+		/* --- GHIDRA: HandleDataChanged ---
+		void Gameplay_Bank_View_VipPointsView__HandleDataChanged(undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a597b2 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_UI_AbstractDataRenderer_Nullable_int____ctor__);
+		    DAT_ram_00a597b2 = '\x01';
+		  }
+		  UnityEngine_ParticleSystemRenderer__GetMeshes
+		            (param1,Method_UI_AbstractDataRenderer_Nullable_int____ctor__);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06004CD4 RID: 19668 RVA: 0x00002050 File Offset: 0x00000250

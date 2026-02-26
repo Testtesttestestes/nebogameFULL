@@ -14,6 +14,20 @@ namespace Gameplay.Assistants.Manufacture
 		[Address(RVA = "0x9D0B", Offset = "0x9D0B", VA = "0x9D0B")]
 		public ManufactureAssistantEvents()
 		{
+		/* --- GHIDRA: .ctor ---
+		undefined4
+		Gameplay_Assistants_Manufacture_ManufactureAssistantEvents___ctor
+		          (undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a5897b == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_12564);
+		    DAT_ram_00a5897b = '\x01';
+		  }
+		  return StringLiteral_12564;
+		}
+		*/
+
 		}
 
 		// Token: 0x04002B03 RID: 11011

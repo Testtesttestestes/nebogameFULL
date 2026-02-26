@@ -34,6 +34,36 @@ namespace Gameplay.TutorialV2.Controller
 		[Address(RVA = "0x6B57", Offset = "0x6B57", VA = "0x6B57", Slot = "6")]
 		public override void Hide()
 		{
+		/* --- GHIDRA: Hide ---
+		void Gameplay_TutorialV2_Controller_TutorialViewStatesQueue__Hide
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  undefined4 param2_00;
+		  undefined4 param1_00;
+		  
+		  if (DAT_ram_00a583e4 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UI_MonoBehaviourWithStates_TutorialView_States__set_CurrentState__);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_Queue_TutorialView_States__Dequeue__);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_Queue_TutorialView_States__get_Count__);
+		    DAT_ram_00a583e4 = '\x01';
+		  }
+		  if (*(int *)(*(int *)(param1 + 8) + 0x14) != 0) {
+		    param1_00 = *(undefined4 *)(param1 + 0xc);
+		    param2_00 = System_Collections_Generic_Queue_uint___Clear
+		                          (*(int *)(param1 + 8),
+		                           Method_System_Collections_Generic_Queue_TutorialView_States__Dequeue__);
+		    Gameplay_Boss_View_CaptainTab_BossTeamView__set_TeamInfoData
+		              (param1_00,param2_00,
+		               Method_UI_MonoBehaviourWithStates_TutorialView_States__set_CurrentState__);
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x060019C0 RID: 6592 RVA: 0x00002050 File Offset: 0x00000250
@@ -53,4 +83,29 @@ namespace Gameplay.TutorialV2.Controller
 		[FieldOffset(Offset = "0xC")]
 		private readonly TutorialView _view;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_StepActionType ---
+		void Gameplay_TutorialV2_Controller_TutorialViewStatesQueue__get_StepActionType
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  undefined4 param1_00;
+		  
+		  if (DAT_ram_00a583e3 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_Queue_TutorialView_States___ctor__);
+		    Mono_Security_ASN1__get_Item(&System_Collections_Generic_Queue_TutorialView_States__TypeInfo);
+		    DAT_ram_00a583e3 = '\x01';
+		  }
+		  param1_00 = unnamed_function_1417(System_Collections_Generic_Queue_TutorialView_States__TypeInfo);
+		  System_Collections_Generic_Queue_Int32Enum____ctor
+		            (param1_00,param3,Method_System_Collections_Generic_Queue_TutorialView_States___ctor__);
+		  *(undefined4 *)(param1 + 0xc) = param2;
+		  *(undefined4 *)(param1 + 8) = param1_00;
+		  return;
+		}
+		*/
+
 }

@@ -40,6 +40,86 @@ namespace Gameplay.Clans.Office.View.ClanMembersTab
 		[Address(RVA = "0x8C9F", Offset = "0x8C9F", VA = "0x8C9F")]
 		private void Awake()
 		{
+		/* --- GHIDRA: Awake ---
+		void Gameplay_Clans_Office_View_ClanMembersTab_ClanMemberListElement__Awake
+		               (int param1,undefined4 param2)
+		
+		{
+		  bool bVar1;
+		  int param1_00;
+		  int iVar2;
+		  undefined4 uVar3;
+		  int param1_01;
+		  undefined4 uVar4;
+		  int iVar5;
+		  
+		  if (DAT_ram_00a57f74 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_bool__TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Gameplay_Clans_Office_View_ClanMembersTab_ClanMemberListElement_CallElementClickedEvent__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Gameplay_Clans_Office_View_ClanMembersTab_ClanMemberListElement_SelectChangedEventHandler__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Elements_GenericList_GenericListElement_ClanMemberListElement_ClanMemberListElementArgs__get_args__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               UnityEngine_Events_UnityAction_ClanMemberListElement_ClanMemberListElementArgs__TypeInfo
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UnityEngine_Events_UnityEvent_ClanMemberListElement_ClanMemberListElementArgs__RemoveListener__
+		              );
+		    DAT_ram_00a57f74 = '\x01';
+		  }
+		  uVar4 = *(undefined4 *)(param1 + 0x14);
+		  uVar3 = unnamed_function_1417
+		                    (
+		                    UnityEngine_Events_UnityAction_ClanMemberListElement_ClanMemberListElementArgs__TypeInfo
+		                    );
+		  func_ii_7054(uVar3,param1,
+		               Method_Gameplay_Clans_Office_View_ClanMembersTab_ClanMemberListElement_CallElementClickedEvent__
+		               ,0);
+		  UnityEngine_Events_UnityEvent_InputAction_CallbackContext___Invoke
+		            (uVar4,uVar3,
+		             Method_UnityEngine_Events_UnityEvent_ClanMemberListElement_ClanMemberListElementArgs__RemoveListener__
+		            );
+		  iVar5 = *(int *)(param1 + 0x18);
+		  uVar3 = unnamed_function_1417(System_Action_bool__TypeInfo);
+		  System_Action_AsyncGPUReadbackRequest___Invoke
+		            (uVar3,param1,
+		             Method_Gameplay_Clans_Office_View_ClanMembersTab_ClanMemberListElement_SelectChangedEventHandler__
+		             ,0);
+		  if (DAT_ram_00a57f79 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_bool__TypeInfo);
+		    DAT_ram_00a57f79 = '\x01';
+		  }
+		  param1_00 = *(int *)(iVar5 + 0x10);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = func_ii_7048(param1_00,uVar3,0);
+		    uVar4 = System_Action_bool__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_bool__TypeInfo), iVar2 == 0)) break;
+		    iVar2 = func_ii_4329(iVar5 + 0x10,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,uVar4);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
 		}
 
 		// Token: 0x06003DE1 RID: 15841 RVA: 0x00002050 File Offset: 0x00000250
@@ -47,6 +127,22 @@ namespace Gameplay.Clans.Office.View.ClanMembersTab
 		[Address(RVA = "0x8CA0", Offset = "0x8CA0", VA = "0x8CA0")]
 		private void OnDestroy()
 		{
+		/* --- GHIDRA: OnDestroy ---
+		void Gameplay_Clans_Office_View_ClanMembersTab_ClanMemberListElement__OnDestroy
+		               (undefined4 param1,int param2,undefined4 param3)
+		
+		{
+		  int iVar1;
+		  
+		  iVar1 = *(int *)(param2 + 0x14);
+		  if (iVar1 != 0) {
+		    (**(code **)((ulonglong)*(uint *)(iVar1 + 0xc) * 4))
+		              (*(undefined4 *)(iVar1 + 0x20),param1,*(undefined4 *)(iVar1 + 0x14));
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06003DE2 RID: 15842 RVA: 0x00002050 File Offset: 0x00000250
@@ -54,6 +150,62 @@ namespace Gameplay.Clans.Office.View.ClanMembersTab
 		[Address(RVA = "0x8CA1", Offset = "0x8CA1", VA = "0x8CA1")]
 		private void CallElementClickedEvent(ClanMemberListElement.ClanMemberListElementArgs args)
 		{
+		/* --- GHIDRA: CallElementClickedEvent ---
+		void Gameplay_Clans_Office_View_ClanMembersTab_ClanMemberListElement__CallElementClickedEvent
+		               (int *param1,int param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  undefined4 uVar3;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a57f75 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_bool__TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Gameplay_Clans_Office_View_ClanMembersTab_ClanMemberListElement_SelectChangedEventHandler__
+		              );
+		    DAT_ram_00a57f75 = '\x01';
+		  }
+		  uVar3 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_uint__object___MoveNext
+		                    (param1,0);
+		  Com_TheFallenGames_OSA_CustomAdapters_TableView_Tuple_Basic_BasicTupleValueViewsHolder__UpdateAsText
+		            (uVar3,1,0);
+		  if (param2 != 0) {
+		    uVar3 = unnamed_function_1417(System_Action_bool__TypeInfo);
+		    System_Action_AsyncGPUReadbackRequest___Invoke
+		              (uVar3,param1,
+		               Method_Gameplay_Clans_Office_View_ClanMembersTab_ClanMemberListElement_SelectChangedEventHandler__
+		               ,0);
+		    if (DAT_ram_00a57f78 == '\0') {
+		      Mono_Security_ASN1__get_Item(&System_Action_bool__TypeInfo);
+		      DAT_ram_00a57f78 = '\x01';
+		    }
+		    param1_00 = *(int *)(param2 + 0x10);
+		    do {
+		      iVar2 = 0;
+		      param1_01 = UnityEngine_UI_Image__set_sprite(param1_00,uVar3,0);
+		      param2_00 = System_Action_bool__TypeInfo;
+		      if ((param1_01 != 0) &&
+		         (iVar2 = func_ii_1082(param1_01,System_Action_bool__TypeInfo), iVar2 == 0)) {
+		        System_Activator__CreateInstance(param1_01,param2_00);
+		        do {
+		          halt_trap();
+		        } while( true );
+		      }
+		      iVar2 = func_ii_4329(param2 + 0x10,iVar2,param1_00);
+		      bVar1 = iVar2 != param1_00;
+		      param1_00 = iVar2;
+		    } while (bVar1);
+		  }
+		  (**(code **)((ulonglong)*(uint *)(*param1 + 0x100) * 4))(param1,*(undefined4 *)(*param1 + 0x104));
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06003DE3 RID: 15843 RVA: 0x00002050 File Offset: 0x00000250
@@ -68,6 +220,17 @@ namespace Gameplay.Clans.Office.View.ClanMembersTab
 		[Address(RVA = "0x8CA3", Offset = "0x8CA3", VA = "0x8CA3")]
 		private void SelectChangedEventHandler(bool select)
 		{
+		/* --- GHIDRA: SelectChangedEventHandler ---
+		void Gameplay_Clans_Office_View_ClanMembersTab_ClanMemberListElement__SelectChangedEventHandler
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  Com_TheFallenGames_OSA_CustomAdapters_TableView_Tuple_Basic_BasicTupleValueViewsHolder__UpdateAsText
+		            (*(undefined4 *)(param1 + 0x20),param2,0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06003DE5 RID: 15845 RVA: 0x00002050 File Offset: 0x00000250
@@ -75,6 +238,63 @@ namespace Gameplay.Clans.Office.View.ClanMembersTab
 		[Address(RVA = "0x8CA4", Offset = "0x8CA4", VA = "0x8CA4", Slot = "7")]
 		protected virtual void Select(bool isSelected)
 		{
+		/* --- GHIDRA: Select ---
+		void Gameplay_Clans_Office_View_ClanMembersTab_ClanMemberListElement__Select
+		               (int *param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  undefined4 uVar2;
+		  int iVar3;
+		  ulonglong uVar4;
+		  int param1_00;
+		  double param1_01;
+		  
+		  if (DAT_ram_00a57f76 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Elements_GenericList_GenericListElement_ClanMemberListElement_ClanMemberListElementArgs__get_args__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UI_MonoBehaviourWithStates_ClanMemberListElementBg_States__set_CurrentState__
+		              );
+		    Mono_Security_ASN1__get_Item(&Utils_StringUtils_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_28780);
+		    DAT_ram_00a57f76 = '\x01';
+		  }
+		  iVar3 = param1[0xb];
+		  param1_00 = *(int *)(param1[6] + 0x18);
+		  uVar1 = Google_Protobuf_Collections_RepeatedField_object___GetEnumerator(param1_00,0);
+		  UnityEngine_Component__GetComponentInChildren_object_(iVar3,uVar1,0);
+		  iVar3 = param1[0xd];
+		  uVar4 = *(ulonglong *)(param1[6] + 0x28);
+		  if (*(int *)(Utils_StringUtils_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Utils_StringUtils_TypeInfo);
+		  }
+		  param1_01 = (double)uVar4;
+		  uVar2 = UI_SimpleIconValue__set_IconAssetId(param1_01,StringLiteral_28780,0);
+		  uVar1 = (undefined4)((ulonglong)param1_01 >> 0x20);
+		  UnityEngine_Component__GetComponentInChildren_object_(iVar3,uVar2,0);
+		  iVar3 = param1[0xc];
+		  uVar2 = func_ii_4443(param1[6] + 8,0);
+		  UnityEngine_Component__GetComponentInChildren_object_(iVar3,uVar2,0);
+		  Com_TheFallenGames_OSA_CustomAdapters_TableView_Tuple_Basic_BasicTupleValueViewsHolder__UpdateAsText
+		            (param1[0xe],(uint)*(byte *)(param1[6] + 0x24),0);
+		  Gameplay_Rating_View_UserView__get_UserData(param1[9],param1_00,0);
+		  iVar3 = param1[10];
+		  uVar2 = Gameplay_Boss_View_CaptainTab_BossSkillInfoView__set_DominateCultDescription
+		                    (*(undefined4 *)(param1_00 + 0x4c),0);
+		  AssetContent_GameImage__get_AssetId(iVar3,uVar2,0);
+		  Gameplay_Boss_View_CaptainTab_BossTeamView__set_TeamInfoData
+		            (param1[0xf],(uint)*(byte *)(param1[6] + 0x25),
+		             Method_UI_MonoBehaviourWithStates_ClanMemberListElementBg_States__set_CurrentState__);
+		  (**(code **)((ulonglong)*(uint *)(*param1 + 0xf8) * 4))
+		            (CONCAT44(uVar1,param1),*(undefined1 *)(param1[6] + 0xc),*(undefined4 *)(*param1 + 0xfc)
+		            );
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06003DE6 RID: 15846 RVA: 0x00002050 File Offset: 0x00000250
@@ -82,6 +302,26 @@ namespace Gameplay.Clans.Office.View.ClanMembersTab
 		[Address(RVA = "0x8CA5", Offset = "0x8CA5", VA = "0x8CA5", Slot = "8")]
 		protected virtual void ApplyArgs()
 		{
+		/* --- GHIDRA: ApplyArgs ---
+		void Gameplay_Clans_Office_View_ClanMembersTab_ClanMemberListElement__ApplyArgs
+		               (undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a57f77 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Elements_GenericList_GenericListElement_ClanMemberListElement_ClanMemberListElementArgs___ctor__
+		              );
+		    DAT_ram_00a57f77 = '\x01';
+		  }
+		  UI_Elements_GenericList_GenericListArgs___Il2CppFullySharedGenericType____ctor
+		            (param1,
+		             Method_UI_Elements_GenericList_GenericListElement_ClanMemberListElement_ClanMemberListElementArgs___ctor__
+		            );
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06003DE7 RID: 15847 RVA: 0x00002050 File Offset: 0x00000250
@@ -89,6 +329,42 @@ namespace Gameplay.Clans.Office.View.ClanMembersTab
 		[Address(RVA = "0x8CA6", Offset = "0x8CA6", VA = "0x8CA6")]
 		public ClanMemberListElement()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_Clans_Office_View_ClanMembersTab_ClanMemberListElement___ctor
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a57f78 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_bool__TypeInfo);
+		    DAT_ram_00a57f78 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x10);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = UnityEngine_UI_Image__set_sprite(param1_00,param2,0);
+		    param2_00 = System_Action_bool__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_bool__TypeInfo), iVar2 == 0)) break;
+		    iVar2 = func_ii_4329(param1 + 0x10,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
 		}
 
 		// Token: 0x040022B0 RID: 8880
@@ -263,4 +539,151 @@ namespace Gameplay.Clans.Office.View.ClanMembersTab
 			public bool IsMy;
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_Data ---
+		void Gameplay_Clans_Office_View_ClanMembersTab_ClanMemberListElement__get_Data
+		               (int *param1,int param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 uVar2;
+		  int iVar3;
+		  int param1_00;
+		  undefined4 uVar4;
+		  int iVar5;
+		  int iVar6;
+		  
+		  if (DAT_ram_00a57f72 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_bool__TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Gameplay_Clans_Office_View_ClanMembersTab_ClanMemberListElement_SelectChangedEventHandler__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Elements_GenericList_GenericListElement_ClanMemberListElement_ClanMemberListElementArgs__Init__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Elements_GenericList_GenericListElement_ClanMemberListElement_ClanMemberListElementArgs__get_Initted__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Elements_GenericList_GenericListElement_ClanMemberListElement_ClanMemberListElementArgs__get_args__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Elements_GenericList_GenericListElement_ClanMemberListElement_ClanMemberListElementArgs__set_args__
+		              );
+		    DAT_ram_00a57f72 = '\x01';
+		  }
+		  if ((char)param1[7] == '\0') {
+		    UI_Elements_Buildings_SpellItemArgs___ctor
+		              (param1,param2,
+		               Method_UI_Elements_GenericList_GenericListElement_ClanMemberListElement_ClanMemberListElementArgs__Init__
+		              );
+		    return;
+		  }
+		  iVar6 = param1[6];
+		  if (iVar6 != 0) {
+		    uVar4 = unnamed_function_1417(System_Action_bool__TypeInfo);
+		    System_Action_AsyncGPUReadbackRequest___Invoke
+		              (uVar4,param1,
+		               Method_Gameplay_Clans_Office_View_ClanMembersTab_ClanMemberListElement_SelectChangedEventHandler__
+		               ,0);
+		    if (DAT_ram_00a57f79 == '\0') {
+		      Mono_Security_ASN1__get_Item(&System_Action_bool__TypeInfo);
+		      DAT_ram_00a57f79 = '\x01';
+		    }
+		    iVar3 = *(int *)(iVar6 + 0x10);
+		    do {
+		      iVar5 = 0;
+		      param1_00 = func_ii_7048(iVar3,uVar4,0);
+		      uVar2 = System_Action_bool__TypeInfo;
+		      if ((param1_00 != 0) &&
+		         (iVar5 = func_ii_1082(param1_00,System_Action_bool__TypeInfo), iVar5 == 0)) {
+		        System_Activator__CreateInstance(param1_00,uVar2);
+		        do {
+		          halt_trap();
+		        } while( true );
+		      }
+		      iVar5 = func_ii_4329(iVar6 + 0x10,iVar5,iVar3);
+		      bVar1 = iVar5 != iVar3;
+		      iVar3 = iVar5;
+		    } while (bVar1);
+		  }
+		  param1[6] = param2;
+		  if (param2 != 0) {
+		    uVar4 = unnamed_function_1417(System_Action_bool__TypeInfo);
+		    System_Action_AsyncGPUReadbackRequest___Invoke
+		              (uVar4,param1,
+		               Method_Gameplay_Clans_Office_View_ClanMembersTab_ClanMemberListElement_SelectChangedEventHandler__
+		               ,0);
+		    if (DAT_ram_00a57f78 == '\0') {
+		      Mono_Security_ASN1__get_Item(&System_Action_bool__TypeInfo);
+		      DAT_ram_00a57f78 = '\x01';
+		    }
+		    iVar6 = *(int *)(param2 + 0x10);
+		    do {
+		      iVar3 = 0;
+		      iVar5 = UnityEngine_UI_Image__set_sprite(iVar6,uVar4,0);
+		      uVar2 = System_Action_bool__TypeInfo;
+		      if ((iVar5 != 0) && (iVar3 = func_ii_1082(iVar5,System_Action_bool__TypeInfo), iVar3 == 0)) {
+		        System_Activator__CreateInstance(iVar5,uVar2);
+		        do {
+		          halt_trap();
+		        } while( true );
+		      }
+		      iVar3 = func_ii_4329(param2 + 0x10,iVar3,iVar6);
+		      bVar1 = iVar3 != iVar6;
+		      iVar6 = iVar3;
+		    } while (bVar1);
+		  }
+		  (**(code **)((ulonglong)*(uint *)(*param1 + 0x100) * 4))(param1,*(undefined4 *)(*param1 + 0x104));
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_Data ---
+		void Gameplay_Clans_Office_View_ClanMembersTab_ClanMemberListElement__set_Data
+		               (int param1,undefined4 param2)
+		
+		{
+		  undefined4 param1_00;
+		  undefined4 param1_01;
+		  
+		  if (DAT_ram_00a57f73 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Gameplay_Clans_Office_View_ClanMembersTab_ClanMemberListElement_CallElementClickedEvent__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               UnityEngine_Events_UnityAction_ClanMemberListElement_ClanMemberListElementArgs__TypeInfo
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UnityEngine_Events_UnityEvent_ClanMemberListElement_ClanMemberListElementArgs__AddListener__
+		              );
+		    DAT_ram_00a57f73 = '\x01';
+		  }
+		  param1_01 = *(undefined4 *)(param1 + 0x14);
+		  param1_00 = unnamed_function_1417
+		                        (
+		                        UnityEngine_Events_UnityAction_ClanMemberListElement_ClanMemberListElementArgs__TypeInfo
+		                        );
+		  func_ii_7054(param1_00,param1,
+		               Method_Gameplay_Clans_Office_View_ClanMembersTab_ClanMemberListElement_CallElementClickedEvent__
+		               ,0);
+		  UnityEngine_Events_UnityEvent_InputAction_CallbackContext____ctor
+		            (param1_01,param1_00,
+		             Method_UnityEngine_Events_UnityEvent_ClanMemberListElement_ClanMemberListElementArgs__AddListener__
+		            );
+		  return;
+		}
+		*/
+
 }

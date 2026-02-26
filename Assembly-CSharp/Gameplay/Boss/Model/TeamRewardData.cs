@@ -161,4 +161,196 @@ namespace Gameplay.Boss.Model
 			public UserData UserData;
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_TeamId ---
+		void Gameplay_Boss_Model_TeamRewardData__get_TeamId
+		               (int param1,int param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  undefined4 *puVar2;
+		  int iVar3;
+		  int *piVar4;
+		  uint *puVar5;
+		  undefined8 param3_00;
+		  int iVar6;
+		  int *piVar7;
+		  uint uVar8;
+		  int local_c;
+		  int **local_8;
+		  int *local_4;
+		  
+		  if (DAT_ram_00a57899 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_IDisposable_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&System_Collections_Generic_IEnumerator_ulong__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&System_Collections_IEnumerator_TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_List_TeamRewardData_TeamMemberData__Add__);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_List_TeamRewardData_TeamMemberData___ctor__);
+		    Mono_Security_ASN1__get_Item
+		              (&System_Collections_Generic_List_TeamRewardData_TeamMemberData__TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Google_Protobuf_Collections_RepeatedField_ulong__GetEnumerator__);
+		    Mono_Security_ASN1__get_Item(&Gameplay_Boss_Model_TeamRewardData_TeamMemberData_TypeInfo);
+		    DAT_ram_00a57899 = '\x01';
+		  }
+		  *(undefined1 *)(param1 + 0x10) = (undefined1)param3;
+		  *(int *)(param1 + 8) = param2;
+		  uVar1 = unnamed_function_1417
+		                    (System_Collections_Generic_List_TeamRewardData_TeamMemberData__TypeInfo);
+		  GAFInternal_Objects_GAFBakedObjectImpl__get_isVisible
+		            (uVar1,Method_System_Collections_Generic_List_TeamRewardData_TeamMemberData___ctor__);
+		  *(undefined4 *)(param1 + 0xc) = uVar1;
+		  local_4 = (int *)Google_Protobuf_Collections_RepeatedField_long___Equals
+		                             (*(undefined4 *)(param2 + 0x18),
+		                              Method_Google_Protobuf_Collections_RepeatedField_ulong__GetEnumerator__
+		                             );
+		  local_c = 0;
+		  local_8 = &local_4;
+		code_r0x80deff02:
+		  do {
+		    piVar4 = local_4;
+		    iVar6 = *local_4;
+		    if (*(ushort *)(iVar6 + 0xb6) != 0) {
+		      uVar8 = 0;
+		      do {
+		        piVar7 = (int *)(*(int *)(iVar6 + 0x58) + uVar8 * 8);
+		        if (System_Collections_IEnumerator_TypeInfo == *piVar7) {
+		          puVar2 = (undefined4 *)(iVar6 + piVar7[1] * 8 + 0xc0);
+		          goto code_r0x80deff96;
+		        }
+		        uVar8 = uVar8 + 1;
+		      } while (*(ushort *)(iVar6 + 0xb6) != uVar8);
+		    }
+		    DAT_ram_009d3e38 = 0;
+		    puVar2 = (undefined4 *)
+		             import::env::invoke_iiii
+		                       (s_Allocator__0___Blocksize__1__mus_ram_00000421 + 0x18,local_4,
+		                        System_Collections_IEnumerator_TypeInfo,0);
+		    if (DAT_ram_009d3e38 == 1) {
+		code_r0x80df01c3:
+		      DAT_ram_009d3e38 = 0;
+		      uVar1 = import::env::__cxa_find_matching_catch_3(&DAT_ram_0072c9c8);
+		      goto code_r0x80df01cb;
+		    }
+		code_r0x80deff96:
+		    DAT_ram_009d3e38 = 0;
+		    iVar6 = import::env::invoke_iii(*puVar2,piVar4,puVar2[1]);
+		    piVar4 = local_4;
+		    if (DAT_ram_009d3e38 == 1) goto code_r0x80df01c3;
+		    if (iVar6 == 0) goto code_r0x80df0214;
+		    iVar6 = *local_4;
+		    if (*(ushort *)(iVar6 + 0xb6) != 0) {
+		      uVar8 = 0;
+		      do {
+		        piVar7 = (int *)(*(int *)(iVar6 + 0x58) + uVar8 * 8);
+		        if (System_Collections_Generic_IEnumerator_ulong__TypeInfo == *piVar7) {
+		          puVar2 = (undefined4 *)(iVar6 + piVar7[1] * 8 + 0xc0);
+		          goto code_r0x80df0073;
+		        }
+		        uVar8 = uVar8 + 1;
+		      } while (*(ushort *)(iVar6 + 0xb6) != uVar8);
+		    }
+		    DAT_ram_009d3e38 = 0;
+		    puVar2 = (undefined4 *)
+		             import::env::invoke_iiii
+		                       (s_Allocator__0___Blocksize__1__mus_ram_00000421 + 0x18,local_4,
+		                        System_Collections_Generic_IEnumerator_ulong__TypeInfo,0);
+		    if (DAT_ram_009d3e38 == 1) {
+		code_r0x80df01af:
+		      DAT_ram_009d3e38 = 0;
+		      uVar1 = import::env::__cxa_find_matching_catch_3(&DAT_ram_0072c9c8);
+		      goto code_r0x80df01cb;
+		    }
+		code_r0x80df0073:
+		    DAT_ram_009d3e38 = 0;
+		    param3_00 = unnamed_function_184054(*puVar2,piVar4,puVar2[1]);
+		    if (DAT_ram_009d3e38 == 1) goto code_r0x80df01af;
+		    iVar6 = *(int *)(param1 + 0xc);
+		    DAT_ram_009d3e38 = 0;
+		    uVar1 = import::env::invoke_ii
+		                      (s_var<private>_posTex__array<vec4<_ram_00000655 + 0x199,
+		                       Gameplay_Boss_Model_TeamRewardData_TeamMemberData_TypeInfo);
+		    if (DAT_ram_009d3e38 == 1) break;
+		    DAT_ram_009d3e38 = 0;
+		    unnamed_function_184058
+		              (s_struct_Uniforms___color__array<v_ram_000017c8 + 0x375,uVar1,param3_00,iVar6);
+		    iVar3 = Method_System_Collections_Generic_List_TeamRewardData_TeamMemberData__Add__;
+		    if (DAT_ram_009d3e38 == 1) break;
+		    *(int *)(iVar6 + 0x10) = *(int *)(iVar6 + 0x10) + 1;
+		    uVar8 = *(uint *)(iVar6 + 0xc);
+		    if (uVar8 < *(uint *)(*(int *)(iVar6 + 8) + 0xc)) {
+		      *(uint *)(iVar6 + 0xc) = uVar8 + 1;
+		      *(undefined4 *)(*(int *)(iVar6 + 8) + uVar8 * 4 + 0x10) = uVar1;
+		      goto code_r0x80deff02;
+		    }
+		    DAT_ram_009d3e38 = 0;
+		    import::env::invoke_viii
+		              (s_struct_Uniforms___color__array<v_ram_00000aff + 0x6e,iVar6,uVar1,
+		               *(undefined4 *)(*(int *)(*(int *)(iVar3 + 0x10) + 0x60) + 0x38));
+		  } while (DAT_ram_009d3e38 != 1);
+		  DAT_ram_009d3e38 = 0;
+		  uVar1 = import::env::__cxa_find_matching_catch_3(&DAT_ram_0072c9c8);
+		code_r0x80df01cb:
+		  iVar6 = global_1;
+		  iVar3 = import::env::llvm_eh_typeid_for(&DAT_ram_0072c9c8);
+		  if (iVar6 == iVar3) {
+		    piVar4 = (int *)import::env::__cxa_begin_catch(uVar1);
+		    local_c = *piVar4;
+		    DAT_ram_009d3e38 = 0;
+		    import::env::invoke_v(0x123);
+		    iVar6 = DAT_ram_009d3e38;
+		    DAT_ram_009d3e38 = 0;
+		    if (iVar6 != 1) {
+		code_r0x80df0214:
+		      DAT_ram_009d3e38 = 0;
+		      piVar4 = *local_8;
+		      if (piVar4 != (int *)0x0) {
+		        uVar8 = 0;
+		        iVar6 = *piVar4;
+		        if (*(ushort *)(iVar6 + 0xb6) != 0) {
+		          do {
+		            if (System_IDisposable_TypeInfo == *(int *)(*(int *)(iVar6 + 0x58) + uVar8 * 8)) {
+		              puVar5 = (uint *)(iVar6 + *(int *)(*(int *)(iVar6 + 0x58) + uVar8 * 8 + 4) * 8 + 0xc0)
+		              ;
+		              goto code_r0x80df028f;
+		            }
+		            uVar8 = uVar8 + 1;
+		          } while (*(ushort *)(iVar6 + 0xb6) != uVar8);
+		        }
+		        puVar5 = (uint *)func_ii_1080(piVar4,System_IDisposable_TypeInfo,0);
+		code_r0x80df028f:
+		        (**(code **)((ulonglong)*puVar5 * 4))(piVar4,puVar5[1]);
+		      }
+		      if (local_c == 0) {
+		        return;
+		      }
+		      System_Data_DataSet__ValidateLocaleConstraint(local_c);
+		      do {
+		        halt_trap();
+		      } while( true );
+		    }
+		    uVar1 = import::env::__cxa_find_matching_catch_2();
+		  }
+		  DAT_ram_009d3e38 = 0;
+		  import::env::invoke_ii(s_struct_Uniforms___color__array<v_ram_000017c8 + 0x376,&local_c);
+		  iVar6 = DAT_ram_009d3e38;
+		  DAT_ram_009d3e38 = 0;
+		  if (iVar6 == 1) {
+		    import::env::__cxa_find_matching_catch_3(0);
+		    unnamed_function_937();
+		    do {
+		      halt_trap();
+		    } while( true );
+		  }
+		  import::env::__resumeException(uVar1);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
 }

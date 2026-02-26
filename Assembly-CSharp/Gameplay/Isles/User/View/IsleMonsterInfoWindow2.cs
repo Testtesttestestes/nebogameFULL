@@ -69,6 +69,15 @@ namespace Gameplay.Isles.User.View
 		[Address(RVA = "0x9FD4", Offset = "0x9FD4", VA = "0x9FD4", Slot = "22")]
 		protected override void OnShow(AttackMonsterWindowArgs args)
 		{
+		/* --- GHIDRA: OnShow ---
+		void Gameplay_Isles_User_View_IsleMonsterInfoWindow2__OnShow(undefined4 param1,undefined4 param2)
+		
+		{
+		  System_ComponentModel_BindingList___Il2CppFullySharedGenericType___OnAddingNew(param1,3,0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x060051FE RID: 20990 RVA: 0x00002050 File Offset: 0x00000250
@@ -76,6 +85,41 @@ namespace Gameplay.Isles.User.View
 		[Address(RVA = "0x9FD5", Offset = "0x9FD5", VA = "0x9FD5")]
 		private void CloseAreaEventHandler()
 		{
+		/* --- GHIDRA: CloseAreaEventHandler ---
+		void Gameplay_Isles_User_View_IsleMonsterInfoWindow2__CloseAreaEventHandler
+		               (int param1,undefined4 param2)
+		
+		{
+		  undefined4 param1_00;
+		  undefined4 param1_01;
+		  int *piVar1;
+		  
+		  if (DAT_ram_00a58d62 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Gameplay_Isles_User_View_IsleMonsterInfoWindow2_CloseAreaEventHandler__);
+		    Mono_Security_ASN1__get_Item(&UnityEngine_Events_UnityAction_TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UI_Windows_WindowWhitCloseButton_AttackMonsterWindowArgs__OnClose__);
+		    DAT_ram_00a58d62 = '\x01';
+		  }
+		  param1_01 = *(undefined4 *)(*(int *)(param1 + 0x40) + 0xb4);
+		  param1_00 = unnamed_function_1417(UnityEngine_Events_UnityAction_TypeInfo);
+		  Utils_ObjectUtils__IsNotNull
+		            (param1_00,param1,
+		             Method_Gameplay_Isles_User_View_IsleMonsterInfoWindow2_CloseAreaEventHandler__,0);
+		  UnityEngine_Events_UnityAction___ctor(param1_01,param1_00,0);
+		  UI_Windows_WindowWhitCloseButton_object___OnClickClose
+		            (param1,Method_UI_Windows_WindowWhitCloseButton_AttackMonsterWindowArgs__OnClose__);
+		  piVar1 = *(int **)(param1 + 0x44);
+		  if (piVar1 != (int *)0x0) {
+		    (**(code **)((ulonglong)*(uint *)(*piVar1 + 0x130) * 4))
+		              (piVar1,*(undefined4 *)(*piVar1 + 0x134));
+		  }
+		  *(undefined4 *)(param1 + 0x44) = 0;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x060051FF RID: 20991 RVA: 0x00002050 File Offset: 0x00000250
@@ -83,6 +127,21 @@ namespace Gameplay.Isles.User.View
 		[Address(RVA = "0x9FD6", Offset = "0x9FD6", VA = "0x9FD6", Slot = "19")]
 		protected override void OnClose()
 		{
+		/* --- GHIDRA: OnClose ---
+		void Gameplay_Isles_User_View_IsleMonsterInfoWindow2__OnClose(undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a58d63 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UI_Windows_WindowWhitCloseButton_AttackMonsterWindowArgs___ctor__);
+		    DAT_ram_00a58d63 = '\x01';
+		  }
+		  System_Linq_Enumerable_WhereSelectListIterator_JsonParser_JsonValue__Vector3___Where
+		            (param1,Method_UI_Windows_WindowWhitCloseButton_AttackMonsterWindowArgs___ctor__);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06005200 RID: 20992 RVA: 0x00002050 File Offset: 0x00000250
@@ -90,6 +149,19 @@ namespace Gameplay.Isles.User.View
 		[Address(RVA = "0x9FD7", Offset = "0x9FD7", VA = "0x9FD7")]
 		public IsleMonsterInfoWindow2()
 		{
+		/* --- GHIDRA: .ctor ---
+		undefined4
+		Gameplay_Isles_User_View_IsleMonsterInfoWindow2___ctor(undefined4 param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  uVar1 = Gameplay_Isles_User_View_MonsterInfoView__get_MonsterDifficultyElement(param1,param1);
+		  uVar1 = System_Xml_XmlElement__get_ParentNode(uVar1,0);
+		  return uVar1;
+		}
+		*/
+
 		}
 
 		// Token: 0x04002C91 RID: 11409
@@ -119,4 +191,75 @@ namespace Gameplay.Isles.User.View
 		[FieldOffset(Offset = "0x44")]
 		private IsleMonsterInfoWindowMediator2 _mediator;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_IsFullscreenWindow ---
+		void Gameplay_Isles_User_View_IsleMonsterInfoWindow2__get_IsFullscreenWindow
+		               (int param1,int param2,undefined4 param3)
+		
+		{
+		  undefined4 uVar1;
+		  int *param1_00;
+		  undefined4 uVar2;
+		  int iVar3;
+		  undefined4 param2_00;
+		  
+		  if (DAT_ram_00a58d61 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Gameplay_Isles_Base_AbstractIsle_UserIsleEvents__UserIsleModel__UserIsleController__UserBuildingTypes__get_Controller__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Gameplay_Isles_Base_AbstractIsle_UserIsleEvents__UserIsleModel__UserIsleController__UserBuildingTypes__get_Events__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Gameplay_Isles_Base_AbstractIsle_UserIsleEvents__UserIsleModel__UserIsleController__UserBuildingTypes__get_Model__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Gameplay_Isles_User_View_IsleMonsterInfoWindow2_CloseAreaEventHandler__);
+		    Mono_Security_ASN1__get_Item
+		              (&Gameplay_Isles_User_Controller_IsleMonsterInfoWindowMediator2_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&UnityEngine_Events_UnityAction_TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UI_Windows_WindowWhitCloseButton_AttackMonsterWindowArgs__OnShow__);
+		    DAT_ram_00a58d61 = '\x01';
+		  }
+		  uVar2 = *(undefined4 *)(*(int *)(param1 + 0x40) + 0xb4);
+		  uVar1 = unnamed_function_1417(UnityEngine_Events_UnityAction_TypeInfo);
+		  Utils_ObjectUtils__IsNotNull
+		            (uVar1,param1,
+		             Method_Gameplay_Isles_User_View_IsleMonsterInfoWindow2_CloseAreaEventHandler__,0);
+		  Gameplay_Boss_View_CaptainTab_BossInfoView__add_AttackButtonClickEvent(uVar2,uVar1,0);
+		  UI_Windows_WindowWhitCloseButton_object___OnDestroy
+		            (param1,param2,Method_UI_Windows_WindowWhitCloseButton_AttackMonsterWindowArgs__OnShow__
+		            );
+		  iVar3 = *(int *)(param2 + 0x18);
+		  uVar1 = *(undefined4 *)(iVar3 + 0x14);
+		  uVar2 = *(undefined4 *)(iVar3 + 0xc);
+		  param2_00 = *(undefined4 *)(iVar3 + 0x10);
+		  param1_00 = (int *)unnamed_function_1417
+		                               (
+		                               Gameplay_Isles_User_Controller_IsleMonsterInfoWindowMediator2_TypeInfo
+		                               );
+		  if (DAT_ram_00a58dc1 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_MVC_AbstractViewMediator_UserIsleModel__UserIsleEvents__UserIsleController__IsleMonsterInfoWindow2___ctor__
+		              );
+		    DAT_ram_00a58dc1 = '\x01';
+		  }
+		  Gameplay_Combat_TeamCombat_View_AbstractTeamCombatView_object___get_HideInstantElements
+		            (param1_00,param2_00,uVar2,uVar1,
+		             Method_MVC_AbstractViewMediator_UserIsleModel__UserIsleEvents__UserIsleController__IsleMonsterInfoWindow2___ctor__
+		            );
+		  *(int **)(param1 + 0x44) = param1_00;
+		  (**(code **)((ulonglong)*(uint *)(*param1_00 + 0x160) * 4))
+		            (param1_00,param1,*(undefined4 *)(*param1_00 + 0x164));
+		  return;
+		}
+		*/
+
 }

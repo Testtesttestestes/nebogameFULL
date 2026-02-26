@@ -20,6 +20,69 @@ namespace Core.Errors.Expected
 		[Address(RVA = "0xAE64", Offset = "0xAE64", VA = "0xAE64")]
 		public ExpectedFromShop2UserErrors()
 		{
+		/* --- GHIDRA: .ctor ---
+		undefined4
+		Core_Errors_Expected_ExpectedFromShop2UserErrors___ctor
+		          (undefined4 param1,int param2,undefined4 param3)
+		
+		{
+		  undefined4 uVar1;
+		  undefined4 uVar2;
+		  
+		  if (DAT_ram_00a5a378 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_GameLocalization_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_3711);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_3712);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_3713);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_3710);
+		    DAT_ram_00a5a378 = '\x01';
+		  }
+		  if (param2 == -4) {
+		    uVar1 = System_Uri___ctor(0);
+		    uVar1 = System_Globalization_TimeSpanFormat_FormatLiterals__get_DayHourSep(uVar1,0);
+		    if (*(int *)(Core_GameLocalization_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(Core_GameLocalization_TypeInfo);
+		    }
+		    uVar2 = Core_Extensions_Dict_CultDicExt__GetTitle(StringLiteral_3712,1,0,1,0,0,0,0);
+		    Core_Application_App__get_ToastController(uVar1,2,uVar2,0);
+		    return 1;
+		  }
+		  if (param2 == -3) {
+		    uVar1 = System_Uri___ctor(0);
+		    uVar1 = System_Globalization_TimeSpanFormat_FormatLiterals__get_DayHourSep(uVar1,0);
+		    if (*(int *)(Core_GameLocalization_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(Core_GameLocalization_TypeInfo);
+		    }
+		    uVar2 = Core_Extensions_Dict_CultDicExt__GetTitle(StringLiteral_3713,1,0,1,0,0,0,0);
+		    Core_Application_App__get_ToastController(uVar1,2,uVar2,0);
+		    return 1;
+		  }
+		  if (param2 != -2) {
+		    if (param2 != -1) {
+		      uVar1 = Core_Errors_Expected_ExpectedEndlessOptionsBillingErrors___c___Handle_b__0_0
+		                        (param2,param2,param2);
+		      return uVar1;
+		    }
+		    uVar1 = System_Uri___ctor(0);
+		    uVar1 = System_Globalization_TimeSpanFormat_FormatLiterals__get_DayHourSep(uVar1,0);
+		    if (*(int *)(Core_GameLocalization_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(Core_GameLocalization_TypeInfo);
+		    }
+		    uVar2 = Core_Extensions_Dict_CultDicExt__GetTitle(StringLiteral_3711,1,0,1,0,0,0,0);
+		    Core_Application_App__get_ToastController(uVar1,2,uVar2,0);
+		    return 1;
+		  }
+		  uVar1 = System_Uri___ctor(0);
+		  uVar1 = System_Globalization_TimeSpanFormat_FormatLiterals__get_DayHourSep(uVar1,0);
+		  if (*(int *)(Core_GameLocalization_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Core_GameLocalization_TypeInfo);
+		  }
+		  uVar2 = Core_Extensions_Dict_CultDicExt__GetTitle(StringLiteral_3710,1,0,1,0,0,0,0);
+		  Core_Application_App__get_ToastController(uVar1,2,uVar2,0);
+		  return 1;
+		}
+		*/
+
 		}
 	}
 }

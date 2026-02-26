@@ -27,4 +27,32 @@ namespace Mycom.Tracker.Unity.Ads
 		[FieldOffset(Offset = "0xC")]
 		public static readonly string Rewarded;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: .cctor ---
+		undefined4
+		Mycom_Tracker_Unity_Ads_AdFormat___cctor(undefined4 param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  undefined4 uVar1;
+		  int *piVar2;
+		  
+		  if (DAT_ram_00a59715 == '\0') {
+		    Mono_Security_ASN1__get_Item(&I2_Loc_I2CustomPersistentStorage_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&I2_Loc_PersistentStorage_TypeInfo);
+		    DAT_ram_00a59715 = '\x01';
+		  }
+		  piVar2 = (int *)**(int **)(I2_Loc_PersistentStorage_TypeInfo + 0x5c);
+		  if (piVar2 == (int *)0x0) {
+		    uVar1 = unnamed_function_1417(I2_Loc_I2CustomPersistentStorage_TypeInfo);
+		    **(undefined4 **)(I2_Loc_PersistentStorage_TypeInfo + 0x5c) = uVar1;
+		    piVar2 = (int *)**(int **)(I2_Loc_PersistentStorage_TypeInfo + 0x5c);
+		  }
+		  uVar1 = (**(code **)((ulonglong)*(uint *)(*piVar2 + 0xe8) * 4))
+		                    (piVar2,param1,param2,*(undefined4 *)(*piVar2 + 0xec));
+		  return uVar1;
+		}
+		*/
+
 }

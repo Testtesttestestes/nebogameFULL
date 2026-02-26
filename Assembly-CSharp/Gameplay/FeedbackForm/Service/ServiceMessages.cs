@@ -17,6 +17,20 @@ namespace Gameplay.FeedbackForm.Service
 		[Address(RVA = "0x814A", Offset = "0x814A", VA = "0x814A")]
 		public ServiceMessages()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_FeedbackForm_Service_ServiceMessages___ctor
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4,undefined4 param5,
+		               undefined4 param6)
+		
+		{
+		  *(undefined4 *)(param1 + 0x18) = param5;
+		  *(undefined4 *)(param1 + 0x14) = param4;
+		  *(undefined4 *)(param1 + 0x10) = param3;
+		  *(undefined4 *)(param1 + 0xc) = param2;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0200081E RID: 2078

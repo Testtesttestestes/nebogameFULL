@@ -16,6 +16,23 @@ namespace UI
 		[Address(RVA = "0x5C08", Offset = "0x5C08", VA = "0x5C08")]
 		private void OnEnable()
 		{
+		/* --- GHIDRA: OnEnable ---
+		int UI_ImageAnimation__OnEnable(undefined4 param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  
+		  if (DAT_ram_00a5b87c == '\0') {
+		    Mono_Security_ASN1__get_Item(&UI_ImageAnimation__ShowAnimation_d__9_TypeInfo);
+		    DAT_ram_00a5b87c = '\x01';
+		  }
+		  iVar1 = unnamed_function_1417(UI_ImageAnimation__ShowAnimation_d__9_TypeInfo);
+		  *(undefined4 *)(iVar1 + 0x10) = param1;
+		  *(undefined4 *)(iVar1 + 8) = 0;
+		  return iVar1;
+		}
+		*/
+
 		}
 
 		// Token: 0x06000853 RID: 2131 RVA: 0x00002052 File Offset: 0x00000252
@@ -23,6 +40,19 @@ namespace UI
 		[Address(RVA = "0x5C09", Offset = "0x5C09", VA = "0x5C09")]
 		private IEnumerator ShowAnimation()
 		{
+		/* --- GHIDRA: ShowAnimation ---
+		void UI_ImageAnimation__ShowAnimation(int param1,undefined4 param2)
+		
+		{
+		  *(undefined8 *)(param1 + 0x28) = 0x3f80000000000001;
+		  *(undefined8 *)(param1 + 0x20) = 0x3f99999a3f800000;
+		  *(undefined8 *)(param1 + 0x18) = 0x4000000040000000;
+		  *(undefined8 *)(param1 + 0x30) = 0x100000000;
+		  UnityEngine_RectTransform__GetParentSize(param1,0);
+		  return;
+		}
+		*/
+
 			return null;
 		}
 

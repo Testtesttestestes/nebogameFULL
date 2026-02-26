@@ -47,6 +47,29 @@ namespace Core.Gameplay.Managers.GameActivityRouting.Locators.App
 		[Address(RVA = "0xB7EB", Offset = "0xB7EB", VA = "0xB7EB")]
 		public ConnectAppLocator(IApp app)
 		{
+		/* --- GHIDRA: .ctor ---
+		undefined4
+		Core_Gameplay_Managers_GameActivityRouting_Locators_App_ConnectAppLocator___ctor
+		          (undefined4 param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  undefined4 uVar1;
+		  undefined4 param2_00;
+		  
+		  uVar1 = unnamed_function_2232(&System_NotImplementedException_TypeInfo);
+		  uVar1 = unnamed_function_1417(uVar1);
+		  UnityEngine_InputSystem_InputActionRebindingExtensions__ApplyBindingOverride(uVar1,0);
+		  param2_00 = unnamed_function_2232
+		                        (&
+		                         Method_Core_Gameplay_Managers_GameActivityRouting_Locators_App_ConnectAppLocator_TryExecute__
+		                        );
+		  func_ii_1050(uVar1,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
 		}
 
 		// Token: 0x06006D03 RID: 27907 RVA: 0x00014100 File Offset: 0x00012300
@@ -54,6 +77,39 @@ namespace Core.Gameplay.Managers.GameActivityRouting.Locators.App
 		[Address(RVA = "0xB7EC", Offset = "0xB7EC", VA = "0xB7EC", Slot = "6")]
 		public bool TryExecute(Uri uri)
 		{
+		/* --- GHIDRA: TryExecute ---
+		undefined4
+		Core_Gameplay_Managers_GameActivityRouting_Locators_App_ConnectAppLocator__TryExecute
+		          (undefined4 param1,undefined4 param2)
+		
+		{
+		  int param2_00;
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a5a73b == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_14086);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_1253);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_1236);
+		    DAT_ram_00a5a73b = '\x01';
+		  }
+		  if (DAT_ram_00a5a739 == '\0') {
+		    Mono_Security_ASN1__get_Item(&string___TypeInfo);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_27696);
+		    DAT_ram_00a5a739 = '\x01';
+		  }
+		  param2_00 = Mono_Security_ASN1Convert__ToOid(string___TypeInfo,1);
+		  *(undefined4 *)(param2_00 + 0x10) = StringLiteral_27696;
+		  uVar1 = UnityEngine_Assertions_Assert__IsFalse(StringLiteral_1236,param2_00,0);
+		  if (DAT_ram_00a5a73a == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_21896);
+		    DAT_ram_00a5a73a = '\x01';
+		  }
+		  uVar1 = System_Int32__ToString(StringLiteral_14086,uVar1,StringLiteral_1253,StringLiteral_21896,0)
+		  ;
+		  return uVar1;
+		}
+		*/
+
 			return default(bool);
 		}
 
@@ -62,6 +118,20 @@ namespace Core.Gameplay.Managers.GameActivityRouting.Locators.App
 		[Address(RVA = "0xB7ED", Offset = "0xB7ED", VA = "0xB7ED", Slot = "3")]
 		public override string ToString()
 		{
+		/* --- GHIDRA: ToString ---
+		undefined4
+		Core_Gameplay_Managers_GameActivityRouting_Locators_App_ConnectAppLocator__ToString
+		          (undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a5a73c == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_7306);
+		    DAT_ram_00a5a73c = '\x01';
+		  }
+		  return StringLiteral_7306;
+		}
+		*/
+
 			return null;
 		}
 
@@ -70,4 +140,21 @@ namespace Core.Gameplay.Managers.GameActivityRouting.Locators.App
 		[FieldOffset(Offset = "0x8")]
 		private IApp _app;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_Schemes ---
+		undefined4
+		Core_Gameplay_Managers_GameActivityRouting_Locators_App_ConnectAppLocator__get_Schemes
+		          (undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a5a73a == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_21896);
+		    DAT_ram_00a5a73a = '\x01';
+		  }
+		  return StringLiteral_21896;
+		}
+		*/
+
 }

@@ -14,6 +14,20 @@ namespace Gameplay.Clans.Buildings.Ziggurat.View
 		[Address(RVA = "0x90A2", Offset = "0x90A2", VA = "0x90A2", Slot = "4")]
 		public override void Init(ClanIsle isle)
 		{
+		/* --- GHIDRA: Init ---
+		void Gameplay_Clans_Buildings_Ziggurat_View_ZigguratView__Init(undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a577ec == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_UI_Windows_Buildings_MainBuildingView_ClanIsle___ctor__);
+		    DAT_ram_00a577ec = '\x01';
+		  }
+		  ScreenAdaptation_Common_AppSize__Update
+		            (param1,Method_UI_Windows_Buildings_MainBuildingView_ClanIsle___ctor__);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x060041EF RID: 16879 RVA: 0x00002050 File Offset: 0x00000250
@@ -21,6 +35,19 @@ namespace Gameplay.Clans.Buildings.Ziggurat.View
 		[Address(RVA = "0x90A3", Offset = "0x90A3", VA = "0x90A3")]
 		public ZigguratView()
 		{
+		/* --- GHIDRA: .ctor ---
+		undefined4
+		Gameplay_Clans_Buildings_Ziggurat_View_ZigguratView___ctor(undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a577ed == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_12588);
+		    DAT_ram_00a577ed = '\x01';
+		  }
+		  return StringLiteral_12588;
+		}
+		*/
+
 		}
 	}
 }

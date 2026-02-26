@@ -75,6 +75,21 @@ namespace Gameplay.GdEvents.View.EventsList
 		[Address(RVA = "0x7C97", Offset = "0x7C97", VA = "0x7C97", Slot = "5")]
 		public void OnPointerClick(PointerEventData eventData)
 		{
+		/* --- GHIDRA: OnPointerClick ---
+		void Gameplay_GdEvents_View_EventsList_GdEventItemView__OnPointerClick
+		               (undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a5a292 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_UI_MonoBehaviourWithStates_Category___ctor__);
+		    DAT_ram_00a5a292 = '\x01';
+		  }
+		  ScreenAdaptation_Common_AppSize__Update
+		            (param1,Method_UI_MonoBehaviourWithStates_Category___ctor__);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06002C08 RID: 11272 RVA: 0x00002050 File Offset: 0x00000250
@@ -82,6 +97,19 @@ namespace Gameplay.GdEvents.View.EventsList
 		[Address(RVA = "0x7C98", Offset = "0x7C98", VA = "0x7C98")]
 		public GdEventItemView()
 		{
+		/* --- GHIDRA: .ctor ---
+		undefined4
+		Gameplay_GdEvents_View_EventsList_GdEventItemView___ctor(undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a5a293 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_12621);
+		    DAT_ram_00a5a293 = '\x01';
+		  }
+		  return StringLiteral_12621;
+		}
+		*/
+
 		}
 
 		// Token: 0x04001818 RID: 6168
@@ -119,4 +147,92 @@ namespace Gameplay.GdEvents.View.EventsList
 		[FieldOffset(Offset = "0x34")]
 		private CellModel _data;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_Data ---
+		void Gameplay_GdEvents_View_EventsList_GdEventItemView__get_Data
+		               (int param1,int param2,undefined4 param3)
+		
+		{
+		  if (param2 != *(int *)(param1 + 0x34)) {
+		    *(int *)(param1 + 0x34) = param2;
+		    Gameplay_GdEvents_View_EventsList_GdEventItemView__set_Data(param1,param1);
+		  }
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_Data ---
+		void Gameplay_GdEvents_View_EventsList_GdEventItemView__set_Data(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  undefined4 uVar2;
+		  int iVar3;
+		  int *piVar4;
+		  int iVar5;
+		  int iVar6;
+		  
+		  iVar3 = 0;
+		  if (DAT_ram_00a5a291 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_UI_MonoBehaviourWithStates_Category__get_CurrentState__);
+		    Mono_Security_ASN1__get_Item(&Method_UI_MonoBehaviourWithStates_Category__set_CurrentState__);
+		    DAT_ram_00a5a291 = '\x01';
+		  }
+		  if (*(int *)(param1 + 0x34) == 0) {
+		    iVar3 = *(int *)(param1 + 0x28);
+		    if (*(int *)(iVar3 + 0x28) != 0) {
+		      *(undefined4 *)(iVar3 + 0x28) = 0;
+		      UI_Elements_RightPanel_TitleWithLevel__set_Level(*(undefined4 *)(iVar3 + 0x18),0,0);
+		    }
+		  }
+		  else {
+		    piVar4 = *(int **)(*(int *)(*(int *)(param1 + 0x34) + 0x14) + 0x14);
+		    iVar5 = *piVar4;
+		    uVar1 = (**(code **)((ulonglong)*(uint *)(iVar5 + 0xf0) * 4))
+		                      (piVar4,*(undefined4 *)(iVar5 + 0xf4));
+		    UI_MonoBehaviourWithStates_ByteEnum___remove_CurrentStateChangedEvent
+		              (param1,uVar1,Method_UI_MonoBehaviourWithStates_Category__set_CurrentState__);
+		    iVar5 = *(int *)(param1 + 0x1c);
+		    if (0 < *(int *)(iVar5 + 0xc)) {
+		      do {
+		        piVar4 = *(int **)(iVar5 + iVar3 * 4 + 0x10);
+		        uVar1 = Core_Extensions_Dict_GameActivityDicExt__GetWidgetImageAssetId
+		                          (*(undefined4 *)(*(int *)(*(int *)(param1 + 0x34) + 0x14) + 0x10),0);
+		        iVar6 = *piVar4;
+		        (**(code **)((ulonglong)*(uint *)(iVar6 + 0x2d0) * 4))
+		                  (piVar4,uVar1,*(undefined4 *)(iVar6 + 0x2d4));
+		        iVar3 = iVar3 + 1;
+		      } while (iVar3 < *(int *)(iVar5 + 0xc));
+		    }
+		    System_Collections_Generic_Dictionary_int__object___get_Count
+		              (*(undefined4 *)(param1 + 0x20),
+		               (uint)*(byte *)(*(int *)(*(int *)(param1 + 0x34) + 0x14) + 0x18),0);
+		    uVar2 = *(undefined4 *)(param1 + 0x24);
+		    uVar1 = Core_Extensions_Dict_GameEventExt__GetBigBannerAssetId
+		                      (*(undefined4 *)(*(int *)(*(int *)(param1 + 0x34) + 0x14) + 0x10),0);
+		    Core_Extensions_Dict_PortalDicExt__GetCurrencyIcon60x66(uVar2,uVar1,0);
+		    iVar3 = *(int *)(param1 + 0x28);
+		    iVar5 = *(int *)(*(int *)(param1 + 0x34) + 0x14);
+		    *(undefined4 *)(iVar3 + 0x24) = *(undefined4 *)(*(int *)(iVar5 + 0x14) + 0x18);
+		    if (*(int *)(iVar3 + 0x28) != iVar5) {
+		      *(int *)(iVar3 + 0x28) = iVar5;
+		      UI_Elements_RightPanel_TitleWithLevel__set_Level
+		                (*(undefined4 *)(iVar3 + 0x18),*(undefined4 *)(iVar5 + 0xc),0);
+		      Gameplay_GdEvents_View_BackTimeView__HandleDataChanged(iVar3,iVar5,iVar3);
+		    }
+		    if (*(char *)(param1 + 0x18) == '\x01') {
+		      uVar2 = *(undefined4 *)(param1 + 0x2c);
+		      uVar1 = Gameplay_GdEvents_Model_GdEventData__GetMilestones
+		                        (*(undefined4 *)(*(int *)(param1 + 0x34) + 0x14),iVar3);
+		      UI_Requirements_RequirementsView__GetRowPrefab(uVar2,uVar1,0);
+		      return;
+		    }
+		  }
+		  return;
+		}
+		*/
+
 }

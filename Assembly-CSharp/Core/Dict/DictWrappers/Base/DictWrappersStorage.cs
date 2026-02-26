@@ -98,6 +98,49 @@ namespace Core.Dict.DictWrappers.Base
 		[Address(RVA = "0xAF09", Offset = "0xAF09", VA = "0xAF09")]
 		public DictWrappersStorage(IDictProvider provider)
 		{
+		/* --- GHIDRA: .ctor ---
+		void Core_Dict_DictWrappers_Base_DictWrappersStorage___ctor(int param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a60750 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Core_Dict_DictWrappers_Base_AbstractDictWrapperStorage_MedalDicWrapper__uint__Dispose__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Core_Dict_DictWrappers_Base_AbstractDictWrapperStorage_UserBuildingLevelDicWrapper__UserBuildingLevelDicWrapper_UserBuildingLevelDicWrapperId__Dispose__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Core_Dict_DictWrappers_Base_AbstractDictWrapperStorage_ArtikulDicWrapper__uint__Dispose__
+		              );
+		    DAT_ram_00a60750 = '\x01';
+		  }
+		  if (*(int *)(param1 + 8) != 0) {
+		    Core_Dict_DictWrappers_Base_AbstractDictWrapperStorage_object__uint___DictProviderOnChangedEvent
+		              (*(int *)(param1 + 8),
+		               Method_Core_Dict_DictWrappers_Base_AbstractDictWrapperStorage_ArtikulDicWrapper__uint__Dispose__
+		              );
+		  }
+		  if (*(int *)(param1 + 0xc) != 0) {
+		    Core_Dict_DictWrappers_Base_AbstractDictWrapperStorage_object__uint___DictProviderOnChangedEvent
+		              (*(int *)(param1 + 0xc),
+		               Method_Core_Dict_DictWrappers_Base_AbstractDictWrapperStorage_MedalDicWrapper__uint__Dispose__
+		              );
+		  }
+		  if (*(int *)(param1 + 0x10) != 0) {
+		    Core_Dict_DictWrappers_Base_AbstractDictWrapperStorage_object__object___DictProviderOnChangedEvent
+		              (*(int *)(param1 + 0x10),
+		               Method_Core_Dict_DictWrappers_Base_AbstractDictWrapperStorage_UserBuildingLevelDicWrapper__UserBuildingLevelDicWrapper_UserBuildingLevelDicWrapperId__Dispose__
+		              );
+		  }
+		  *(undefined4 *)(param1 + 0x10) = 0;
+		  *(undefined8 *)(param1 + 8) = 0;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x060062FA RID: 25338 RVA: 0x00002050 File Offset: 0x00000250
@@ -105,6 +148,97 @@ namespace Core.Dict.DictWrappers.Base
 		[Address(RVA = "0xAF0A", Offset = "0xAF0A", VA = "0xAF0A", Slot = "4")]
 		public void Dispose()
 		{
+		/* --- GHIDRA: Dispose ---
+		void Core_Dict_DictWrappers_Base_DictWrappersStorage__Dispose(int param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a60751 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_MVC_AbstractController_DictModel__DictEvents__Dispose__);
+		    DAT_ram_00a60751 = '\x01';
+		  }
+		  MVC_AbstractController_object__object____ctor
+		            (param1,Method_MVC_AbstractController_DictModel__DictEvents__Dispose__);
+		  *(undefined1 *)(param1 + 0x18) = 1;
+		  return;
+		}
+		*/
+
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: set_AprDicStorage ---
+		void Core_Dict_DictWrappers_Base_DictWrappersStorage__set_AprDicStorage
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a6074f == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_Dict_DictWrappers_Storages_AprDicWrapperStorage_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Core_Dict_DictWrappers_Storages_ArtikulDicWrapperStorage_TypeInfo)
+		    ;
+		    Mono_Security_ASN1__get_Item(&Core_Dict_DictWrappers_Storages_MedalsDicWrapperStorage_TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&Core_Dict_DictWrappers_Storages_UserBuildingLevelDicWrapperStorage_TypeInfo);
+		    DAT_ram_00a6074f = '\x01';
+		  }
+		  uVar1 = unnamed_function_1417(Core_Dict_DictWrappers_Storages_ArtikulDicWrapperStorage_TypeInfo);
+		  if (DAT_ram_00a6074c == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Core_Dict_DictWrappers_Base_AbstractDictWrapperStorage_ArtikulDicWrapper__uint___ctor__
+		              );
+		    DAT_ram_00a6074c = '\x01';
+		  }
+		  Core_Dict_DictWrappers_Base_AbstractDictWrapperStorage_object__object___UpdateWrappers
+		            (uVar1,param2,
+		             Method_Core_Dict_DictWrappers_Base_AbstractDictWrapperStorage_ArtikulDicWrapper__uint___ctor__
+		            );
+		  *(undefined4 *)(param1 + 8) = uVar1;
+		  uVar1 = unnamed_function_1417(Core_Dict_DictWrappers_Storages_MedalsDicWrapperStorage_TypeInfo);
+		  if (DAT_ram_00a6074d == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Core_Dict_DictWrappers_Base_AbstractDictWrapperStorage_MedalDicWrapper__uint___ctor__
+		              );
+		    DAT_ram_00a6074d = '\x01';
+		  }
+		  Core_Dict_DictWrappers_Base_AbstractDictWrapperStorage_object__object___UpdateWrappers
+		            (uVar1,param2,
+		             Method_Core_Dict_DictWrappers_Base_AbstractDictWrapperStorage_MedalDicWrapper__uint___ctor__
+		            );
+		  *(undefined4 *)(param1 + 0xc) = uVar1;
+		  uVar1 = unnamed_function_1417
+		                    (Core_Dict_DictWrappers_Storages_UserBuildingLevelDicWrapperStorage_TypeInfo);
+		  if (DAT_ram_00a6074e == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Core_Dict_DictWrappers_Base_AbstractDictWrapperStorage_UserBuildingLevelDicWrapper__UserBuildingLevelDicWrapper_UserBuildingLevelDicWrapperId___ctor__
+		              );
+		    DAT_ram_00a6074e = '\x01';
+		  }
+		  UI_AbstractDataRenderer___Il2CppFullySharedGenericType___set_Data
+		            (uVar1,param2,
+		             Method_Core_Dict_DictWrappers_Base_AbstractDictWrapperStorage_UserBuildingLevelDicWrapper__UserBuildingLevelDicWrapper_UserBuildingLevelDicWrapperId___ctor__
+		            );
+		  *(undefined4 *)(param1 + 0x10) = uVar1;
+		  uVar1 = unnamed_function_1417(Core_Dict_DictWrappers_Storages_AprDicWrapperStorage_TypeInfo);
+		  if (DAT_ram_00a6074b == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Core_Dict_DictWrappers_Base_AbstractDictWrapperStorage_AprDicWrapper__uint___ctor__
+		              );
+		    DAT_ram_00a6074b = '\x01';
+		  }
+		  Core_Dict_DictWrappers_Base_AbstractDictWrapperStorage_object__object___UpdateWrappers
+		            (uVar1,param2,
+		             Method_Core_Dict_DictWrappers_Base_AbstractDictWrapperStorage_AprDicWrapper__uint___ctor__
+		            );
+		  *(undefined4 *)(param1 + 0x14) = uVar1;
+		  return;
+		}
+		*/
+
 }

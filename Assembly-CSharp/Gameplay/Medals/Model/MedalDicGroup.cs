@@ -151,6 +151,47 @@ namespace Gameplay.Medals.Model
 		[Address(RVA = "0x1BF2", Offset = "0x1BF2", VA = "0x1BF2")]
 		public MedalDicGroup()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_Medals_Model_MedalDicGroup___ctor
+		               (int param1,int param2,int param3,int param4,undefined4 param5)
+		
+		{
+		  byte bVar1;
+		  int iVar2;
+		  undefined4 uVar3;
+		  undefined4 local_4;
+		  
+		  bVar1 = 0;
+		  if (DAT_ram_00a57da0 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Core_Dict_DictWrappers_Base_AbstractDictWrapper_MedalDic__uint__get_Data__);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_Dictionary_uint__MedalDicWrapper__Add__);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_SortedList_uint__MedalDicWrapper__Add__);
+		    DAT_ram_00a57da0 = '\x01';
+		  }
+		  Gameplay_Aprs_Model_AprDicGroup___ctor
+		            (*(undefined4 *)(param1 + 8),*(undefined4 *)(*(int *)(param2 + 0x10) + 0x20),param2,
+		             Method_System_Collections_Generic_SortedList_uint__MedalDicWrapper__Add__);
+		  System_Collections_Generic_List_LigatureSubstitutionRecord____ctor
+		            (*(undefined4 *)(param1 + 0xc),*(undefined4 *)(*(int *)(param2 + 0x10) + 0xc),param2,
+		             Method_System_Collections_Generic_Dictionary_uint__MedalDicWrapper__Add__);
+		  iVar2 = *(int *)(param2 + 0x10);
+		  uVar3 = *(undefined4 *)(iVar2 + 0x48);
+		  *(int *)(param1 + 0x1c) = param4;
+		  *(int *)(param1 + 0x14) = param3;
+		  *(undefined4 *)(param1 + 0x10) = uVar3;
+		  if ((*(char *)(param3 + 0x10) != '\0') && (*(char *)(param4 + 0x10) != '\0')) {
+		    local_4 = *(undefined4 *)(iVar2 + 0x10);
+		    uVar3 = UnityEngine_InputForUI_PointerEvent_ButtonsState__Set(&local_4,1,0);
+		    bVar1 = (byte)uVar3 ^ 1;
+		  }
+		  *(byte *)(param1 + 0x18) = bVar1;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x04001469 RID: 5225
@@ -173,4 +214,50 @@ namespace Gameplay.Medals.Model
 		[FieldOffset(Offset = "0x1C")]
 		private MedalTypeDic _medalTypeDic;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_MedalsByRank ---
+		uint Gameplay_Medals_Model_MedalDicGroup__get_MedalsByRank(int param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a57d9f == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_SortedList_uint__MedalDicWrapper__get_Count__);
+		    DAT_ram_00a57d9f = '\x01';
+		  }
+		  return (uint)(1 < *(int *)(*(int *)(param1 + 8) + 0x10));
+		}
+		*/
+
+
+		/* --- GHIDRA: get_CategoryId ---
+		undefined4 Gameplay_Medals_Model_MedalDicGroup__get_CategoryId(int param1,undefined4 param2)
+		
+		{
+		  return *(undefined4 *)(*(int *)(param1 + 0x1c) + 0xc);
+		}
+		*/
+
+
+		/* --- GHIDRA: set_IsVisible ---
+		undefined4
+		Gameplay_Medals_Model_MedalDicGroup__set_IsVisible(int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a57da1 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_Dictionary_uint__MedalDicWrapper__get_Item__);
+		    DAT_ram_00a57da1 = '\x01';
+		  }
+		  uVar1 = System_Collections_Generic_List_object___get_Item
+		                    (*(undefined4 *)(param1 + 0xc),param2,
+		                     Method_System_Collections_Generic_Dictionary_uint__MedalDicWrapper__get_Item__)
+		  ;
+		  return uVar1;
+		}
+		*/
+
 }

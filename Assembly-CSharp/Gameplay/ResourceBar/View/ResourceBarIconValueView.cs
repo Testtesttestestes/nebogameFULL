@@ -92,6 +92,42 @@ namespace Gameplay.ResourceBar.View
 		[Address(RVA = "0x7201", Offset = "0x7201", VA = "0x7201")]
 		public ResourceBarIconValueView()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_ResourceBar_View_ResourceBarIconValueView___ctor
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a58326 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_Resources__TypeInfo);
+		    DAT_ram_00a58326 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x30);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = UnityEngine_UI_Image__set_sprite(param1_00,param2,0);
+		    param2_00 = System_Action_Resources__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_Resources__TypeInfo), iVar2 == 0)) break;
+		    iVar2 = func_ii_4329(param1 + 0x30,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
 		}
 
 		// Token: 0x040011C7 RID: 4551
@@ -122,4 +158,40 @@ namespace Gameplay.ResourceBar.View
 		[FieldOffset(Offset = "0x2C")]
 		private bool _showCloud;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_IconAssetId ---
+		void Gameplay_ResourceBar_View_ResourceBarIconValueView__get_IconAssetId
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  *(undefined4 *)(param1 + 0x28) = param2;
+		  Core_Extensions_Dict_PortalDicExt__GetCurrencyIcon60x66(*(undefined4 *)(param1 + 0x10),param2,0);
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_ShowCloud ---
+		void Gameplay_ResourceBar_View_ResourceBarIconValueView__get_ShowCloud
+		               (int param1,undefined8 *param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  int iVar1;
+		  undefined8 local_10;
+		  undefined8 local_8;
+		  
+		  *(undefined8 *)(param1 + 0x18) = *param2;
+		  *(undefined8 *)(param1 + 0x20) = param2[1];
+		  iVar1 = **(int **)(param1 + 0x14);
+		  local_8 = param2[1];
+		  local_10 = *param2;
+		  (**(code **)((ulonglong)*(uint *)(iVar1 + 0x178) * 4))
+		            (*(int **)(param1 + 0x14),&local_10,*(undefined4 *)(iVar1 + 0x17c));
+		  *(undefined1 *)(param1 + 0x2c) = (undefined1)param3;
+		  return;
+		}
+		*/
+
 }

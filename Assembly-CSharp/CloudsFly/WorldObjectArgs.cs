@@ -13,6 +13,20 @@ namespace CloudsFly
 		[Address(RVA = "0xBDCE", Offset = "0xBDCE", VA = "0xBDCE")]
 		public WorldObjectArgs(Vector3 position, Func<float, float, float> randomRange)
 		{
+		/* --- GHIDRA: .ctor ---
+		undefined4 CloudsFly_WorldObjectArgs___ctor(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  int iVar2;
+		  
+		  iVar2 = *(int *)(param1 + 0x14);
+		  uVar1 = (**(code **)((ulonglong)*(uint *)(iVar2 + 0xc) * 4))
+		                    (*(undefined4 *)(iVar2 + 0x20),*(undefined4 *)(iVar2 + 0x14));
+		  return uVar1;
+		}
+		*/
+
 		}
 
 		// Token: 0x04003CB9 RID: 15545

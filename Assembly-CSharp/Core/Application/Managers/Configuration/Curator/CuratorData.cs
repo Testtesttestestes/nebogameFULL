@@ -77,6 +77,78 @@ namespace Core.Application.Managers.Configuration.Curator
 		[Address(RVA = "0xBA5B", Offset = "0xBA5B", VA = "0xBA5B")]
 		public CuratorData(Uri endpoint)
 		{
+		/* --- GHIDRA: .ctor ---
+		void Core_Application_Managers_Configuration_Curator_CuratorData___ctor
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4,undefined4 param5,
+		               undefined4 param6)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a5a887 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_25649);
+		    DAT_ram_00a5a887 = '\x01';
+		  }
+		  uVar1 = StringLiteral_25649;
+		  *(undefined4 *)(param1 + 0x14) = StringLiteral_25649;
+		  *(undefined4 *)(param1 + 0x10) = uVar1;
+		  *(undefined4 *)(param1 + 0xc) = uVar1;
+		  *(undefined4 *)(param1 + 0x14) = param3;
+		  *(undefined4 *)(param1 + 8) = param2;
+		  *(undefined4 *)(param1 + 0x10) = param5;
+		  *(undefined4 *)(param1 + 0xc) = param4;
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: .ctor ---
+		void Core_Application_Managers_Configuration_Curator_CuratorData___ctor
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4,undefined4 param5,
+		               undefined4 param6)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a5a887 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_25649);
+		    DAT_ram_00a5a887 = '\x01';
+		  }
+		  uVar1 = StringLiteral_25649;
+		  *(undefined4 *)(param1 + 0x14) = StringLiteral_25649;
+		  *(undefined4 *)(param1 + 0x10) = uVar1;
+		  *(undefined4 *)(param1 + 0xc) = uVar1;
+		  *(undefined4 *)(param1 + 0x14) = param3;
+		  *(undefined4 *)(param1 + 8) = param2;
+		  *(undefined4 *)(param1 + 0x10) = param5;
+		  *(undefined4 *)(param1 + 0xc) = param4;
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: .ctor ---
+		void Core_Application_Managers_Configuration_Curator_CuratorData___ctor
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4,undefined4 param5,
+		               undefined4 param6)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a5a887 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_25649);
+		    DAT_ram_00a5a887 = '\x01';
+		  }
+		  uVar1 = StringLiteral_25649;
+		  *(undefined4 *)(param1 + 0x14) = StringLiteral_25649;
+		  *(undefined4 *)(param1 + 0x10) = uVar1;
+		  *(undefined4 *)(param1 + 0xc) = uVar1;
+		  *(undefined4 *)(param1 + 0x14) = param3;
+		  *(undefined4 *)(param1 + 8) = param2;
+		  *(undefined4 *)(param1 + 0x10) = param5;
+		  *(undefined4 *)(param1 + 0xc) = param4;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600700F RID: 28687 RVA: 0x00002050 File Offset: 0x00000250
@@ -98,6 +170,40 @@ namespace Core.Application.Managers.Configuration.Curator
 		[Address(RVA = "0xBA5E", Offset = "0xBA5E", VA = "0xBA5E")]
 		public void SetServer(string v)
 		{
+		/* --- GHIDRA: SetServer ---
+		undefined4
+		Core_Application_Managers_Configuration_Curator_CuratorData__SetServer(int param1,undefined4 param2)
+		
+		{
+		  int param1_00;
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a5a888 == '\0') {
+		    Mono_Security_ASN1__get_Item(&string___TypeInfo);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_1243);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_7308);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_5997);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_5485);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_28690);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_1267);
+		    DAT_ram_00a5a888 = '\x01';
+		  }
+		  param1_00 = Mono_Security_ASN1Convert__ToOid(string___TypeInfo,8);
+		  *(undefined4 *)(param1_00 + 0x10) = StringLiteral_5997;
+		  uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                    (StringLiteral_28690,StringLiteral_7308,*(undefined4 *)(param1 + 8),0);
+		  *(undefined4 *)(param1_00 + 0x14) = uVar1;
+		  *(undefined4 *)(param1_00 + 0x18) = StringLiteral_5485;
+		  *(undefined4 *)(param1_00 + 0x1c) = *(undefined4 *)(param1 + 0xc);
+		  *(undefined4 *)(param1_00 + 0x20) = StringLiteral_1243;
+		  *(undefined4 *)(param1_00 + 0x24) = *(undefined4 *)(param1 + 0x10);
+		  *(undefined4 *)(param1_00 + 0x28) = StringLiteral_1267;
+		  *(undefined4 *)(param1_00 + 0x2c) = *(undefined4 *)(param1 + 0x14);
+		  uVar1 = System_Single__ToString(param1_00,0);
+		  return uVar1;
+		}
+		*/
+
 		}
 
 		// Token: 0x06007012 RID: 28690 RVA: 0x00002052 File Offset: 0x00000252
@@ -113,4 +219,27 @@ namespace Core.Application.Managers.Configuration.Curator
 		[FieldOffset(Offset = "0x8")]
 		public readonly Uri Endpoint;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: set_Server ---
+		void Core_Application_Managers_Configuration_Curator_CuratorData__set_Server
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a5a887 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_25649);
+		    DAT_ram_00a5a887 = '\x01';
+		  }
+		  uVar1 = StringLiteral_25649;
+		  *(undefined4 *)(param1 + 0x14) = StringLiteral_25649;
+		  *(undefined4 *)(param1 + 0x10) = uVar1;
+		  *(undefined4 *)(param1 + 0xc) = uVar1;
+		  *(undefined4 *)(param1 + 8) = param2;
+		  return;
+		}
+		*/
+
 }

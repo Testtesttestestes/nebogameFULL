@@ -23,6 +23,17 @@ namespace CloudsFly
 		[Address(RVA = "0xBDCD", Offset = "0xBDCD", VA = "0xBDCD")]
 		protected WorldObject()
 		{
+		/* --- GHIDRA: .ctor ---
+		void CloudsFly_WorldObject___ctor(int param1,undefined8 *param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  *(undefined4 *)(param1 + 0x10) = *(undefined4 *)(param2 + 1);
+		  *(undefined8 *)(param1 + 8) = *param2;
+		  *(undefined4 *)(param1 + 0x14) = param3;
+		  return;
+		}
+		*/
+
 		}
 	}
 }

@@ -36,6 +36,26 @@ namespace Gameplay.EndlessPaymentOptionsList
 		[Address(RVA = "0x81A9", Offset = "0x81A9", VA = "0x81A9")]
 		public EndlessPaymentOptionsListEvents()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_EndlessPaymentOptionsList_EndlessPaymentOptionsListEvents___ctor
+		               (undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a57621 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_MonoBehaviourWithStates_EndlessPaymentOptionListTitleLayoutView_States___ctor__
+		              );
+		    DAT_ram_00a57621 = '\x01';
+		  }
+		  ScreenAdaptation_Common_AppSize__Update
+		            (param1,
+		             Method_UI_MonoBehaviourWithStates_EndlessPaymentOptionListTitleLayoutView_States___ctor__
+		            );
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x04001AE9 RID: 6889

@@ -18,6 +18,25 @@ namespace Gameplay.WorldAxis.ColossusInfo.View
 		[Address(RVA = "0x646D", Offset = "0x646D", VA = "0x646D")]
 		public void Init(IList<WorldAxisOfficeModel.ColossusClanRating> clanRatings, UserData user)
 		{
+		/* --- GHIDRA: Init ---
+		void Gameplay_WorldAxis_ColossusInfo_View_ColossusRatingTable__Init(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a58bce == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Gameplay_WorldAxis_Office_View_Schedule_ColossusRatingRender_TypeInfo);
+		    DAT_ram_00a58bce = '\x01';
+		  }
+		  uVar1 = unnamed_function_1417
+		                    (Gameplay_WorldAxis_Office_View_Schedule_ColossusRatingRender_TypeInfo);
+		  *(undefined4 *)(param1 + 0x1c) = uVar1;
+		  UnityEngine_RectTransform__GetParentSize(param1,0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06001274 RID: 4724 RVA: 0x00002050 File Offset: 0x00000250

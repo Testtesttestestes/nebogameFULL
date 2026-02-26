@@ -109,6 +109,211 @@ namespace WebGLSupport
 		[Address(RVA = "0x565F", Offset = "0x565F", VA = "0x565F")]
 		public WebGLInputPlugin()
 		{
+		/* --- GHIDRA: .ctor ---
+		undefined4 WebGLSupport_WebGLInputPlugin___ctor(undefined4 param1)
+		
+		{
+		  if (DAT_ram_00a648ad == '\0') {
+		    Mono_Security_ASN1__get_Item(&WebGLSupport_WebGLInput_TypeInfo);
+		    DAT_ram_00a648ad = '\x01';
+		  }
+		  if (*(int *)(WebGLSupport_WebGLInput_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(WebGLSupport_WebGLInput_TypeInfo);
+		  }
+		  return *(undefined4 *)(*(int *)(WebGLSupport_WebGLInput_TypeInfo + 0x5c) + 4);
+		}
+		*/
+
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: WebGLInputCreate ---
+		void WebGLSupport_WebGLInputPlugin__WebGLInputCreate
+		               (undefined4 param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  import::env::WebGLInputEnterSubmit(param1,param2);
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: WebGLInputEnterSubmit ---
+		void WebGLSupport_WebGLInputPlugin__WebGLInputEnterSubmit
+		               (undefined4 param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  undefined4 param2_00;
+		  
+		  param2_00 = unnamed_function_1434(param2);
+		  import::env::WebGLInputTab(param1,param2_00);
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: WebGLInputTab ---
+		void WebGLSupport_WebGLInputPlugin__WebGLInputTab(undefined4 param1,undefined4 param2)
+		
+		{
+		  import::env::WebGLInputFocus(param1);
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: WebGLInputFocus ---
+		void WebGLSupport_WebGLInputPlugin__WebGLInputFocus
+		               (undefined4 param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  undefined4 param2_00;
+		  
+		  param2_00 = unnamed_function_1434(param2);
+		  import::env::WebGLInputOnFocus(param1,param2_00);
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: WebGLInputOnFocus ---
+		void WebGLSupport_WebGLInputPlugin__WebGLInputOnFocus
+		               (undefined4 param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  undefined4 param2_00;
+		  
+		  param2_00 = unnamed_function_1434(param2);
+		  import::env::WebGLInputOnBlur(param1,param2_00);
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: WebGLInputOnBlur ---
+		void WebGLSupport_WebGLInputPlugin__WebGLInputOnBlur
+		               (undefined4 param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  undefined4 param2_00;
+		  
+		  param2_00 = unnamed_function_1434(param2);
+		  import::env::WebGLInputOnValueChange(param1,param2_00);
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: WebGLInputOnValueChange ---
+		void WebGLSupport_WebGLInputPlugin__WebGLInputOnValueChange
+		               (undefined4 param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  undefined4 param2_00;
+		  
+		  param2_00 = unnamed_function_1434(param2);
+		  import::env::WebGLInputOnEditEnd(param1,param2_00);
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: WebGLInputOnEditEnd ---
+		undefined4 WebGLSupport_WebGLInputPlugin__WebGLInputOnEditEnd(undefined4 param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  uVar1 = import::env::WebGLInputSelectionStart(param1);
+		  return uVar1;
+		}
+		*/
+
+
+		/* --- GHIDRA: WebGLInputSelectionStart ---
+		undefined4
+		WebGLSupport_WebGLInputPlugin__WebGLInputSelectionStart(undefined4 param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  uVar1 = import::env::WebGLInputSelectionEnd(param1);
+		  return uVar1;
+		}
+		*/
+
+
+		/* --- GHIDRA: WebGLInputSelectionEnd ---
+		undefined4
+		WebGLSupport_WebGLInputPlugin__WebGLInputSelectionEnd(undefined4 param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  uVar1 = import::env::WebGLInputSelectionDirection(param1);
+		  return uVar1;
+		}
+		*/
+
+
+		/* --- GHIDRA: WebGLInputSelectionDirection ---
+		void WebGLSupport_WebGLInputPlugin__WebGLInputSelectionDirection
+		               (undefined4 param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  import::env::WebGLInputSetSelectionRange(param1,param2,param3);
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: WebGLInputSetSelectionRange ---
+		void WebGLSupport_WebGLInputPlugin__WebGLInputSetSelectionRange
+		               (undefined4 param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  import::env::WebGLInputMaxLength(param1,param2);
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: WebGLInputMaxLength ---
+		void WebGLSupport_WebGLInputPlugin__WebGLInputMaxLength
+		               (undefined4 param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  undefined4 param2_00;
+		  
+		  param2_00 = unnamed_function_1428(param2);
+		  import::env::WebGLInputText(param1,param2_00);
+		  unnamed_function_1427(param2_00);
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: WebGLInputText ---
+		uint WebGLSupport_WebGLInputPlugin__WebGLInputText(undefined4 param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  
+		  iVar1 = import::env::WebGLInputIsFocus(param1);
+		  return (uint)(iVar1 != 0);
+		}
+		*/
+
+
+		/* --- GHIDRA: WebGLInputIsFocus ---
+		void WebGLSupport_WebGLInputPlugin__WebGLInputIsFocus(undefined4 param1,undefined4 param2)
+		
+		{
+		  import::env::WebGLInputDelete(param1);
+		  return;
+		}
+		*/
+
 }

@@ -109,6 +109,73 @@ namespace Gameplay.SmallGames.View
 		[Address(RVA = "0x707D", Offset = "0x707D", VA = "0x707D")]
 		public RewardsStorageWindow()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_SmallGames_View_RewardsStorageWindow___ctor(int param1,int param2,undefined4 param3)
+		
+		{
+		  int iVar1;
+		  undefined4 uVar2;
+		  int *piVar3;
+		  int iVar4;
+		  undefined4 param3_00;
+		  undefined4 param4;
+		  
+		  if (DAT_ram_00a58667 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Windows_ClosableBaseWindow_RewardsStorageWindow_RewardsStorageWindowArgs__OnShow__
+		              );
+		    Mono_Security_ASN1__get_Item(&Core_GameLocalization_TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&Gameplay_SmallGames_Controller_SmallGamesRewardsStorageViewMediator_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&UI_Tabs_TabBarItemData___TypeInfo);
+		    Mono_Security_ASN1__get_Item(&UI_Tabs_TabBarItemData_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_13848);
+		    DAT_ram_00a58667 = '\x01';
+		  }
+		  func_ii_7769(param1,param2,
+		               Method_UI_Windows_ClosableBaseWindow_RewardsStorageWindow_RewardsStorageWindowArgs__OnShow__
+		              );
+		  iVar1 = unnamed_function_1417(UI_Tabs_TabBarItemData_TypeInfo);
+		  if (*(int *)(Core_GameLocalization_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Core_GameLocalization_TypeInfo);
+		  }
+		  uVar2 = Core_Extensions_Dict_CultDicExt__GetTitle(StringLiteral_13848,1,0,1,0,0,0,0);
+		  *(undefined4 *)(iVar1 + 0x10) = uVar2;
+		  uVar2 = *(undefined4 *)(param1 + 0x3c);
+		  piVar3 = (int *)Mono_Security_ASN1Convert__ToOid(UI_Tabs_TabBarItemData___TypeInfo,1);
+		  iVar4 = func_ii_1082(iVar1,*(undefined4 *)(*piVar3 + 0x20));
+		  if (iVar4 == 0) {
+		    uVar2 = func_ii_1083();
+		    func_ii_1050(uVar2,0);
+		    do {
+		      halt_trap();
+		    } while( true );
+		  }
+		  piVar3[4] = iVar1;
+		  UI_Tabs_TabBar__HandleSelected(uVar2,piVar3,0);
+		  Gameplay_GameEvents_Model_GameEventData__get_ContainsArtifactRewards
+		            (*(undefined4 *)(param1 + 0x3c),0,0,0);
+		  iVar1 = **(int **)(param2 + 0x18);
+		  uVar2 = (**(code **)((ulonglong)*(uint *)(iVar1 + 0x100) * 4))
+		                    (*(int **)(param2 + 0x18),*(undefined4 *)(iVar1 + 0x104));
+		  iVar1 = **(int **)(param2 + 0x18);
+		  param3_00 = (**(code **)((ulonglong)*(uint *)(iVar1 + 0x110) * 4))
+		                        (*(int **)(param2 + 0x18),*(undefined4 *)(iVar1 + 0x114));
+		  param4 = *(undefined4 *)(param2 + 0x18);
+		  piVar3 = (int *)unnamed_function_1417
+		                            (
+		                            Gameplay_SmallGames_Controller_SmallGamesRewardsStorageViewMediator_TypeInfo
+		                            );
+		  Gameplay_SmallGames_Controller_SmallGamesEnterPointViewMediator__NextFreeSpinRoutine_d__9__System_Collections_IEnumerator_get_Current
+		            (piVar3,uVar2,param3_00,param4,0);
+		  (**(code **)((ulonglong)*(uint *)(*piVar3 + 0x160) * 4))
+		            (piVar3,param1,*(undefined4 *)(*piVar3 + 0x164));
+		  *(int **)(param1 + 0x58) = piVar3;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06001F17 RID: 7959 RVA: 0x00002050 File Offset: 0x00000250
@@ -116,6 +183,31 @@ namespace Gameplay.SmallGames.View
 		[Address(RVA = "0x707E", Offset = "0x707E", VA = "0x707E", Slot = "22")]
 		protected override void OnShow(RewardsStorageWindow.RewardsStorageWindowArgs args)
 		{
+		/* --- GHIDRA: OnShow ---
+		void Gameplay_SmallGames_View_RewardsStorageWindow__OnShow(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  
+		  if (DAT_ram_00a58668 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Windows_ClosableBaseWindow_RewardsStorageWindow_RewardsStorageWindowArgs__OnClose__
+		              );
+		    DAT_ram_00a58668 = '\x01';
+		  }
+		  UI_Windows_ClosableBaseWindow_object___OnClickBack
+		            (param1,
+		             Method_UI_Windows_ClosableBaseWindow_RewardsStorageWindow_RewardsStorageWindowArgs__OnClose__
+		            );
+		  iVar1 = **(int **)(param1 + 0x58);
+		  (**(code **)((ulonglong)*(uint *)(iVar1 + 0x130) * 4))
+		            (*(int **)(param1 + 0x58),*(undefined4 *)(iVar1 + 0x134));
+		  *(undefined4 *)(param1 + 0x58) = 0;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06001F18 RID: 7960 RVA: 0x00002050 File Offset: 0x00000250
@@ -197,4 +289,27 @@ namespace Gameplay.SmallGames.View
 			public SmallGamesController Controller;
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_BottomAnnotation ---
+		void Gameplay_SmallGames_View_RewardsStorageWindow__get_BottomAnnotation
+		               (undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a58666 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Windows_ClosableBaseWindow_RewardsStorageWindow_RewardsStorageWindowArgs___ctor__
+		              );
+		    DAT_ram_00a58666 = '\x01';
+		  }
+		  UI_MonoBehaviourWithStates_ClientStateChangedDelegate___Il2CppFullySharedGenericStructType___Invoke
+		            (param1,
+		             Method_UI_Windows_ClosableBaseWindow_RewardsStorageWindow_RewardsStorageWindowArgs___ctor__
+		            );
+		  return;
+		}
+		*/
+
 }

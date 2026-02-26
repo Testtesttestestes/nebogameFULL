@@ -164,6 +164,47 @@ namespace Gameplay.Combat.View.VFX
 		[Address(RVA = "0x8741", Offset = "0x8741", VA = "0x8741")]
 		private void Awake()
 		{
+		/* --- GHIDRA: <PlayCor>b__68_0 ---
+		void Gameplay_Combat_View_VFX_StoneDestroyElement___PlayCor_b__68_0(int param1,undefined4 param2)
+		
+		{
+		  undefined4 param1_00;
+		  undefined4 param2_00;
+		  
+		  if (DAT_ram_00a566b7 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_DG_Tweening_TweenSettingsExtensions_SetLink_TweenerCore_Color__Color__ColorOptions____
+		              );
+		    DAT_ram_00a566b7 = '\x01';
+		  }
+		  param1_00 = func_ii_9125(*(undefined4 *)(param1 + 0x1c),0.0,*(float *)(param1 + 0x68) * 0.5,0);
+		  param2_00 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_uint__object___MoveNext
+		                        (*(undefined4 *)(param1 + 0x1c),0);
+		  DG_Tweening_TweenSettingsExtensions__SetDelay_object_
+		            (param1_00,param2_00,
+		             Method_DG_Tweening_TweenSettingsExtensions_SetLink_TweenerCore_Color__Color__ColorOptions____
+		            );
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: Awake ---
+		void Gameplay_Combat_View_VFX_StoneDestroyElement__Awake
+		               (int param1,undefined8 *param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  *(undefined8 *)(param1 + 0x94) = *param2;
+		  *(undefined4 *)(param1 + 0x9c) = *(undefined4 *)(param2 + 1);
+		  *(undefined8 *)(param1 + 0xa0) = 0;
+		  *(undefined1 *)(param1 + 0x8c) = (undefined1)param3;
+		  *(undefined4 *)(param1 + 0x88) = *(undefined4 *)(param1 + 0x60);
+		  *(float *)(param1 + 0x84) =
+		       *(float *)(param1 + 100) + *(float *)(param1 + 0x68) + *(float *)(param1 + 0x70);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06003754 RID: 14164 RVA: 0x00002050 File Offset: 0x00000250
@@ -171,6 +212,74 @@ namespace Gameplay.Combat.View.VFX
 		[Address(RVA = "0x8742", Offset = "0x8742", VA = "0x8742")]
 		public void Init(Vector3 position, bool isMyTurn)
 		{
+		/* --- GHIDRA: Init ---
+		void Gameplay_Combat_View_VFX_StoneDestroyElement__Init(int param1,undefined4 param2)
+		
+		{
+		  uint uVar1;
+		  int iVar2;
+		  uint *puVar3;
+		  undefined4 uVar4;
+		  int *param1_00;
+		  undefined8 local_20;
+		  undefined4 local_18;
+		  undefined8 local_10;
+		  undefined4 local_8;
+		  
+		  if (DAT_ram_00a566ad == '\0') {
+		    Mono_Security_ASN1__get_Item(&UnityEngine_Object_TypeInfo);
+		    DAT_ram_00a566ad = '\x01';
+		  }
+		  Gameplay_Combat_View_VFX_StoneDestroyElement__Play(param1,param1);
+		  uVar4 = *(undefined4 *)(param1 + 0x2c);
+		  if (*(int *)(UnityEngine_Object_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(UnityEngine_Object_TypeInfo);
+		  }
+		  iVar2 = UnityEngine_TextCore_Text_TextElement__get_textAsset(uVar4,0,0);
+		  if (iVar2 != 0) {
+		    local_8 = *(undefined4 *)(param1 + 0x9c);
+		    local_10 = *(undefined8 *)(param1 + 0x94);
+		    UnityEngine_Transform__get_position(*(undefined4 *)(param1 + 0x2c),&local_10,0);
+		  }
+		  uVar4 = *(undefined4 *)(param1 + 0x18);
+		  if (*(int *)(UnityEngine_Object_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(UnityEngine_Object_TypeInfo);
+		  }
+		  iVar2 = UnityEngine_TextCore_Text_TextElement__get_textAsset(uVar4,0,0);
+		  if (iVar2 != 0) {
+		    uVar4 = System_Collections_Generic_SortedDictionary_Enumerator_object__object___get_Current
+		                      (*(undefined4 *)(param1 + 0x18),0);
+		    local_18 = *(undefined4 *)(param1 + 0x9c);
+		    local_20 = *(undefined8 *)(param1 + 0x94);
+		    UnityEngine_Transform__get_position(uVar4,&local_20,0);
+		  }
+		  param1_00 = *(int **)(param1 + 0x20);
+		  if (DAT_ram_00a566b4 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_Animations_ISkeletonGraphicProvider_TypeInfo);
+		    DAT_ram_00a566b4 = '\x01';
+		  }
+		  if (param1_00 != (int *)0x0) {
+		    uVar1 = 0;
+		    iVar2 = *param1_00;
+		    if (*(ushort *)(iVar2 + 0xb6) != 0) {
+		      do {
+		        if (Core_Animations_ISkeletonGraphicProvider_TypeInfo ==
+		            *(int *)(*(int *)(iVar2 + 0x58) + uVar1 * 8)) {
+		          puVar3 = (uint *)(iVar2 + *(int *)(*(int *)(iVar2 + 0x58) + uVar1 * 8 + 4) * 8 + 0xc0);
+		          goto code_r0x80c641e1;
+		        }
+		        uVar1 = uVar1 + 1;
+		      } while (*(ushort *)(iVar2 + 0xb6) != uVar1);
+		    }
+		    puVar3 = (uint *)func_ii_1080(param1_00,Core_Animations_ISkeletonGraphicProvider_TypeInfo,0);
+		code_r0x80c641e1:
+		    uVar4 = (**(code **)((ulonglong)*puVar3 * 4))(param1_00,puVar3[1]);
+		    UnityEngine_Object__op_Implicit(uVar4,1,0);
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06003755 RID: 14165 RVA: 0x00002050 File Offset: 0x00000250
@@ -178,6 +287,21 @@ namespace Gameplay.Combat.View.VFX
 		[Address(RVA = "0x8743", Offset = "0x8743", VA = "0x8743", Slot = "6")]
 		public void Show()
 		{
+		/* --- GHIDRA: Show ---
+		void Gameplay_Combat_View_VFX_StoneDestroyElement__Show(int param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a566af == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_Utils_Cache_ObjectPool_StoneDestroyElement__Release__);
+		    DAT_ram_00a566af = '\x01';
+		  }
+		  func_ii_7070(*(undefined4 *)(param1 + 0xa8),param1,
+		               Method_Utils_Cache_ObjectPool_StoneDestroyElement__Release__);
+		  Gameplay_Combat_View_VFX_StoneDestroyElement__Play(param1,param1);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06003756 RID: 14166 RVA: 0x00002050 File Offset: 0x00000250
@@ -185,6 +309,29 @@ namespace Gameplay.Combat.View.VFX
 		[Address(RVA = "0x8744", Offset = "0x8744", VA = "0x8744", Slot = "7")]
 		public void Hide()
 		{
+		/* --- GHIDRA: Hide ---
+		void Gameplay_Combat_View_VFX_StoneDestroyElement__Hide
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  int param2_00;
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a566b1 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Gameplay_Combat_View_VFX_StoneDestroyElement__PlayCor_d__68_TypeInfo);
+		    DAT_ram_00a566b1 = '\x01';
+		  }
+		  param2_00 = unnamed_function_1417
+		                        (Gameplay_Combat_View_VFX_StoneDestroyElement__PlayCor_d__68_TypeInfo);
+		  *(int *)(param2_00 + 0x10) = param1;
+		  *(undefined4 *)(param2_00 + 8) = 0;
+		  uVar1 = UnityEngine_MonoBehaviour__StartCoroutine(param1,param2_00,0);
+		  *(undefined4 *)(param1 + 0x90) = uVar1;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06003757 RID: 14167 RVA: 0x00002050 File Offset: 0x00000250
@@ -192,6 +339,38 @@ namespace Gameplay.Combat.View.VFX
 		[Address(RVA = "0x8745", Offset = "0x8745", VA = "0x8745", Slot = "8")]
 		public void Play(bool _)
 		{
+		/* --- GHIDRA: Play ---
+		void Gameplay_Combat_View_VFX_StoneDestroyElement__Play(int param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a566af == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_Utils_Cache_ObjectPool_StoneDestroyElement__Release__);
+		    DAT_ram_00a566af = '\x01';
+		  }
+		  func_ii_7070(*(undefined4 *)(param1 + 0xa8),param1,
+		               Method_Utils_Cache_ObjectPool_StoneDestroyElement__Release__);
+		  Gameplay_Combat_View_VFX_StoneDestroyElement__Play(param1,param1);
+		  *(undefined4 *)(param1 + 0xa8) = 0;
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: Play ---
+		void Gameplay_Combat_View_VFX_StoneDestroyElement__Play(int param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a566af == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_Utils_Cache_ObjectPool_StoneDestroyElement__Release__);
+		    DAT_ram_00a566af = '\x01';
+		  }
+		  func_ii_7070(*(undefined4 *)(param1 + 0xa8),param1,
+		               Method_Utils_Cache_ObjectPool_StoneDestroyElement__Release__);
+		  Gameplay_Combat_View_VFX_StoneDestroyElement__Play(param1,param1);
+		  *(undefined4 *)(param1 + 0xa8) = 0;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06003758 RID: 14168 RVA: 0x00002050 File Offset: 0x00000250
@@ -199,6 +378,30 @@ namespace Gameplay.Combat.View.VFX
 		[Address(RVA = "0x8746", Offset = "0x8746", VA = "0x8746", Slot = "12")]
 		public void Dispose()
 		{
+		/* --- GHIDRA: Dispose ---
+		void Gameplay_Combat_View_VFX_StoneDestroyElement__Dispose
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  int param2_00;
+		  
+		  if (DAT_ram_00a566ae == '\0') {
+		    Mono_Security_ASN1__get_Item(&UnityEngine_Object_TypeInfo);
+		    DAT_ram_00a566ae = '\x01';
+		  }
+		  func_ii_7050(*(undefined4 *)(param1 + 0x18),param2,0);
+		  if (*(int *)(UnityEngine_Object_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(UnityEngine_Object_TypeInfo);
+		  }
+		  param2_00 = UnityEngine_TextCore_Text_TextElement__get_textAsset(param3,0,0);
+		  UnityEngine_Object__op_Implicit(*(undefined4 *)(param1 + 0x1c),param2_00,0);
+		  if (param2_00 != 0) {
+		    func_ii_7050(*(undefined4 *)(param1 + 0x1c),param3,0);
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06003759 RID: 14169 RVA: 0x00002050 File Offset: 0x00000250
@@ -206,6 +409,18 @@ namespace Gameplay.Combat.View.VFX
 		[Address(RVA = "0x8747", Offset = "0x8747", VA = "0x8747")]
 		public void SetSkin(Sprite skin, Sprite glow)
 		{
+		/* --- GHIDRA: SetSkin ---
+		void Gameplay_Combat_View_VFX_StoneDestroyElement__SetSkin
+		               (int param1,undefined8 param2,undefined4 param3)
+		
+		{
+		  if (*(longlong *)(param1 + 0xa0) == 0) {
+		    *(undefined8 *)(param1 + 0xa0) = param2;
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600375A RID: 14170 RVA: 0x00002050 File Offset: 0x00000250
@@ -213,6 +428,20 @@ namespace Gameplay.Combat.View.VFX
 		[Address(RVA = "0x8748", Offset = "0x8748", VA = "0x8748")]
 		public void SetCount(long count)
 		{
+		/* --- GHIDRA: SetCount ---
+		void Gameplay_Combat_View_VFX_StoneDestroyElement__SetCount(int param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a566af == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_Utils_Cache_ObjectPool_StoneDestroyElement__Release__);
+		    DAT_ram_00a566af = '\x01';
+		  }
+		  func_ii_7070(*(undefined4 *)(param1 + 0xa8),param1,
+		               Method_Utils_Cache_ObjectPool_StoneDestroyElement__Release__);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600375B RID: 14171 RVA: 0x00002050 File Offset: 0x00000250
@@ -220,6 +449,28 @@ namespace Gameplay.Combat.View.VFX
 		[Address(RVA = "0x8749", Offset = "0x8749", VA = "0x8749", Slot = "17")]
 		public void Release()
 		{
+		/* --- GHIDRA: Release ---
+		void Gameplay_Combat_View_VFX_StoneDestroyElement__Release(int param1,undefined4 param2)
+		
+		{
+		  int param2_00;
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a566b1 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Gameplay_Combat_View_VFX_StoneDestroyElement__PlayCor_d__68_TypeInfo);
+		    DAT_ram_00a566b1 = '\x01';
+		  }
+		  param2_00 = unnamed_function_1417
+		                        (Gameplay_Combat_View_VFX_StoneDestroyElement__PlayCor_d__68_TypeInfo);
+		  *(int *)(param2_00 + 0x10) = param1;
+		  *(undefined4 *)(param2_00 + 8) = 0;
+		  uVar1 = UnityEngine_MonoBehaviour__StartCoroutine(param1,param2_00,0);
+		  *(undefined4 *)(param1 + 0x90) = uVar1;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600375C RID: 14172 RVA: 0x00002050 File Offset: 0x00000250
@@ -234,6 +485,25 @@ namespace Gameplay.Combat.View.VFX
 		[Address(RVA = "0x874B", Offset = "0x874B", VA = "0x874B")]
 		private void ResetAll()
 		{
+		/* --- GHIDRA: ResetAll ---
+		int Gameplay_Combat_View_VFX_StoneDestroyElement__ResetAll(undefined4 param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  
+		  if (DAT_ram_00a566b1 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Gameplay_Combat_View_VFX_StoneDestroyElement__PlayCor_d__68_TypeInfo);
+		    DAT_ram_00a566b1 = '\x01';
+		  }
+		  iVar1 = unnamed_function_1417
+		                    (Gameplay_Combat_View_VFX_StoneDestroyElement__PlayCor_d__68_TypeInfo);
+		  *(undefined4 *)(iVar1 + 0x10) = param1;
+		  *(undefined4 *)(iVar1 + 8) = 0;
+		  return iVar1;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600375E RID: 14174 RVA: 0x00002052 File Offset: 0x00000252
@@ -241,6 +511,75 @@ namespace Gameplay.Combat.View.VFX
 		[Address(RVA = "0x874C", Offset = "0x874C", VA = "0x874C")]
 		private IEnumerator PlayCor()
 		{
+		/* --- GHIDRA: PlayCor ---
+		void Gameplay_Combat_View_VFX_StoneDestroyElement__PlayCor
+		               (int param1,undefined4 *param2,undefined4 *param3,undefined4 param4)
+		
+		{
+		  char cVar1;
+		  bool bVar2;
+		  int iVar3;
+		  undefined4 *puVar4;
+		  int iVar5;
+		  
+		  if (DAT_ram_00a566b2 == '\0') {
+		    Mono_Security_ASN1__get_Item(&UnityEngine_Object_TypeInfo);
+		    DAT_ram_00a566b2 = '\x01';
+		  }
+		  cVar1 = *(char *)(param1 + 0x8c);
+		  if (*(int *)(param1 + 0x10) == 4) {
+		    iVar5 = 0x4c;
+		    if (cVar1 == '\0') {
+		      iVar5 = 0x48;
+		    }
+		    iVar5 = *(int *)(param1 + iVar5);
+		    if (*(int *)(UnityEngine_Object_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(UnityEngine_Object_TypeInfo);
+		    }
+		    bVar2 = true;
+		    iVar3 = UnityEngine_Component__GetComponent_object_(iVar5,0);
+		    if ((iVar3 != 0) && (*(char *)(iVar5 + 0x14) != '\0')) {
+		      bVar2 = *(char *)(iVar5 + 0x1c) != '\0';
+		    }
+		    if (*(char *)(param1 + 0x8c) == '\0') {
+		      iVar5 = 0x40;
+		      if (!bVar2) {
+		        iVar5 = 0x58;
+		      }
+		      *param2 = *(undefined4 *)(param1 + iVar5);
+		      puVar4 = (undefined4 *)(param1 + 0x38);
+		      if (!bVar2) {
+		        puVar4 = (undefined4 *)(param1 + 0x50);
+		      }
+		    }
+		    else {
+		      iVar5 = 0x44;
+		      if (!bVar2) {
+		        iVar5 = 0x5c;
+		      }
+		      *param2 = *(undefined4 *)(param1 + iVar5);
+		      puVar4 = (undefined4 *)(param1 + 0x3c);
+		      if (!bVar2) {
+		        puVar4 = (undefined4 *)(param1 + 0x54);
+		      }
+		    }
+		  }
+		  else {
+		    iVar5 = 0x40;
+		    if (cVar1 == '\0') {
+		      iVar5 = 0x44;
+		    }
+		    *param2 = *(undefined4 *)(param1 + iVar5);
+		    puVar4 = (undefined4 *)(param1 + 0x38);
+		    if (cVar1 == '\0') {
+		      puVar4 = (undefined4 *)(param1 + 0x3c);
+		    }
+		  }
+		  *param3 = *puVar4;
+		  return;
+		}
+		*/
+
 			return null;
 		}
 
@@ -249,6 +588,55 @@ namespace Gameplay.Combat.View.VFX
 		[Address(RVA = "0x874D", Offset = "0x874D", VA = "0x874D")]
 		private void GetTargets(out Transform target, out Transform animationTarget)
 		{
+		/* --- GHIDRA: GetTargets ---
+		void Gameplay_Combat_View_VFX_StoneDestroyElement__GetTargets
+		               (int param1,int param2,float param3,undefined4 param4)
+		
+		{
+		  int iVar1;
+		  undefined4 param2_00;
+		  undefined4 uVar2;
+		  float param3_00;
+		  float param2_01;
+		  
+		  if (DAT_ram_00a566b3 == '\0') {
+		    Mono_Security_ASN1__get_Item(&DG_Tweening_Core_DOSetter_float__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&DG_Tweening_DOTween_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&UnityEngine_Object_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Method_Gameplay_Combat_View_VFX_StoneDestroyElement_SetAlpha__);
+		    Mono_Security_ASN1__get_Item(&Method_DG_Tweening_TweenSettingsExtensions_SetLink_Tweener___);
+		    DAT_ram_00a566b3 = '\x01';
+		  }
+		  uVar2 = *(undefined4 *)(param1 + 0x24);
+		  if (*(int *)(UnityEngine_Object_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(UnityEngine_Object_TypeInfo);
+		  }
+		  iVar1 = func_ii_3812(uVar2,0,0);
+		  if (iVar1 == 0) {
+		    uVar2 = unnamed_function_1417(DG_Tweening_Core_DOSetter_float__TypeInfo);
+		    DG_Tweening_Core_DOSetter_Rect___Invoke
+		              (uVar2,param1,Method_Gameplay_Combat_View_VFX_StoneDestroyElement_SetAlpha__,0);
+		    param3_00 = 1.0;
+		    if (param2 == 0) {
+		      param3_00 = 0.0;
+		    }
+		    param2_01 = 0.0;
+		    if (param2 == 0) {
+		      param2_01 = 1.0;
+		    }
+		    if (*(int *)(DG_Tweening_DOTween_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(DG_Tweening_DOTween_TypeInfo);
+		    }
+		    uVar2 = DG_Tweening_DOTween__ToAlpha(uVar2,param2_01,param3_00,param3,0);
+		    param2_00 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_uint__object___MoveNext
+		                          (*(undefined4 *)(param1 + 0x24),0);
+		    DG_Tweening_TweenSettingsExtensions__SetDelay_object_
+		              (uVar2,param2_00,Method_DG_Tweening_TweenSettingsExtensions_SetLink_Tweener___);
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06003760 RID: 14176 RVA: 0x00002050 File Offset: 0x00000250
@@ -256,6 +644,42 @@ namespace Gameplay.Combat.View.VFX
 		[Address(RVA = "0x874E", Offset = "0x874E", VA = "0x874E")]
 		private void FadeAnimation(bool enable, float duration)
 		{
+		/* --- GHIDRA: FadeAnimation ---
+		void Gameplay_Combat_View_VFX_StoneDestroyElement__FadeAnimation
+		               (undefined4 param1,int *param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  uint uVar1;
+		  uint *puVar2;
+		  undefined4 param1_00;
+		  int iVar3;
+		  
+		  if (DAT_ram_00a566b4 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_Animations_ISkeletonGraphicProvider_TypeInfo);
+		    DAT_ram_00a566b4 = '\x01';
+		  }
+		  if (param2 != (int *)0x0) {
+		    uVar1 = 0;
+		    iVar3 = *param2;
+		    if (*(ushort *)(iVar3 + 0xb6) != 0) {
+		      do {
+		        if (Core_Animations_ISkeletonGraphicProvider_TypeInfo ==
+		            *(int *)(*(int *)(iVar3 + 0x58) + uVar1 * 8)) {
+		          puVar2 = (uint *)(iVar3 + *(int *)(*(int *)(iVar3 + 0x58) + uVar1 * 8 + 4) * 8 + 0xc0);
+		          goto code_r0x80c64295;
+		        }
+		        uVar1 = uVar1 + 1;
+		      } while (*(ushort *)(iVar3 + 0xb6) != uVar1);
+		    }
+		    puVar2 = (uint *)func_ii_1080(param2,Core_Animations_ISkeletonGraphicProvider_TypeInfo,0);
+		code_r0x80c64295:
+		    param1_00 = (**(code **)((ulonglong)*puVar2 * 4))(param2,puVar2[1]);
+		    UnityEngine_Object__op_Implicit(param1_00,param3,0);
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06003761 RID: 14177 RVA: 0x00002050 File Offset: 0x00000250
@@ -263,6 +687,52 @@ namespace Gameplay.Combat.View.VFX
 		[Address(RVA = "0x874F", Offset = "0x874F", VA = "0x874F")]
 		private void SetAnimationEnabled(ISkeletonGraphicProvider uiAnimation, bool enable)
 		{
+		/* --- GHIDRA: SetAnimationEnabled ---
+		void Gameplay_Combat_View_VFX_StoneDestroyElement__SetAnimationEnabled
+		               (int param1,float param2,undefined4 param3)
+		
+		{
+		  int iVar1;
+		  int *piVar2;
+		  undefined4 param1_00;
+		  undefined8 local_30;
+		  undefined8 local_28;
+		  undefined8 local_20;
+		  undefined4 local_18;
+		  undefined8 local_10;
+		  undefined4 local_8;
+		  float4 local_4;
+		  
+		  if (DAT_ram_00a566b5 == '\0') {
+		    Mono_Security_ASN1__get_Item(&UnityEngine_Object_TypeInfo);
+		    DAT_ram_00a566b5 = '\x01';
+		  }
+		  param1_00 = *(undefined4 *)(param1 + 0x24);
+		  if (*(int *)(UnityEngine_Object_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(UnityEngine_Object_TypeInfo);
+		  }
+		  iVar1 = func_ii_3812(param1_00,0,0);
+		  if (iVar1 == 0) {
+		    piVar2 = (int *)DG_Tweening_TweenSettingsExtensions__SetLink_object_
+		                              (*(undefined4 *)(param1 + 0x24),0);
+		    (**(code **)((ulonglong)*(uint *)(*piVar2 + 0x170) * 4))
+		              (&local_10,piVar2,*(undefined4 *)(*piVar2 + 0x174));
+		    local_18 = local_8;
+		    local_20 = local_10;
+		    piVar2 = (int *)DG_Tweening_TweenSettingsExtensions__SetLink_object_
+		                              (*(undefined4 *)(param1 + 0x24),0);
+		    local_8 = local_18;
+		    local_10 = local_20;
+		    local_28 = CONCAT44(param2,local_18);
+		    local_30 = local_20;
+		    local_4 = (float4)param2;
+		    (**(code **)((ulonglong)*(uint *)(*piVar2 + 0x178) * 4))
+		              (piVar2,&local_30,*(undefined4 *)(*piVar2 + 0x17c));
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06003762 RID: 14178 RVA: 0x00002050 File Offset: 0x00000250
@@ -270,6 +740,29 @@ namespace Gameplay.Combat.View.VFX
 		[Address(RVA = "0x8750", Offset = "0x8750", VA = "0x8750")]
 		private void SetAlpha(float value)
 		{
+		/* --- GHIDRA: SetAlpha ---
+		void Gameplay_Combat_View_VFX_StoneDestroyElement__SetAlpha(int param1,undefined4 param2)
+		
+		{
+		  int param2_00;
+		  undefined4 uVar1;
+		  
+		  Gameplay_Combat_View_VFX_StoneDestroyElement__Init(param1,param1);
+		  if (DAT_ram_00a566b1 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Gameplay_Combat_View_VFX_StoneDestroyElement__PlayCor_d__68_TypeInfo);
+		    DAT_ram_00a566b1 = '\x01';
+		  }
+		  param2_00 = unnamed_function_1417
+		                        (Gameplay_Combat_View_VFX_StoneDestroyElement__PlayCor_d__68_TypeInfo);
+		  *(int *)(param2_00 + 0x10) = param1;
+		  *(undefined4 *)(param2_00 + 8) = 0;
+		  uVar1 = UnityEngine_MonoBehaviour__StartCoroutine(param1,param2_00,0);
+		  *(undefined4 *)(param1 + 0x90) = uVar1;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06003763 RID: 14179 RVA: 0x00002050 File Offset: 0x00000250
@@ -277,6 +770,18 @@ namespace Gameplay.Combat.View.VFX
 		[Address(RVA = "0x8751", Offset = "0x8751", VA = "0x8751")]
 		public void TestPlay()
 		{
+		/* --- GHIDRA: TestPlay ---
+		void Gameplay_Combat_View_VFX_StoneDestroyElement__TestPlay(int param1,undefined4 param2)
+		
+		{
+		  *(undefined4 *)(param1 + 0x7c) = 2;
+		  *(undefined8 *)(param1 + 0x74) = 0x300000002;
+		  *(undefined1 *)(param1 + 0x14) = 1;
+		  UnityEngine_RectTransform__GetParentSize(param1,0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06003764 RID: 14180 RVA: 0x00002050 File Offset: 0x00000250
@@ -284,6 +789,45 @@ namespace Gameplay.Combat.View.VFX
 		[Address(RVA = "0x8752", Offset = "0x8752", VA = "0x8752")]
 		public StoneDestroyElement()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_Combat_View_VFX_StoneDestroyElement___ctor(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  undefined4 uVar2;
+		  
+		  if (DAT_ram_00a566b6 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Gameplay_Combat_View_VFX_StoneDestroyElement__PlayCor_b__68_1__);
+		    Mono_Security_ASN1__get_Item(&DG_Tweening_TweenCallback_TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_DG_Tweening_TweenSettingsExtensions_OnComplete_TweenerCore_Color__Color__ColorOptions____
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_DG_Tweening_TweenSettingsExtensions_SetLink_TweenerCore_Color__Color__ColorOptions____
+		              );
+		    DAT_ram_00a566b6 = '\x01';
+		  }
+		  uVar1 = func_ii_9125(*(undefined4 *)(param1 + 0x1c),1.0,*(float *)(param1 + 0x68) * 0.5,0);
+		  uVar2 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_uint__object___MoveNext
+		                    (*(undefined4 *)(param1 + 0x1c),0);
+		  uVar1 = DG_Tweening_TweenSettingsExtensions__SetDelay_object_
+		                    (uVar1,uVar2,
+		                     Method_DG_Tweening_TweenSettingsExtensions_SetLink_TweenerCore_Color__Color__ColorOptions____
+		                    );
+		  uVar2 = unnamed_function_1417(DG_Tweening_TweenCallback_TypeInfo);
+		  DG_Tweening_Color2__op_Multiply
+		            (uVar2,param1,Method_Gameplay_Combat_View_VFX_StoneDestroyElement__PlayCor_b__68_1__,0);
+		  DG_Tweening_TweenSettingsExtensions__From___Il2CppFullySharedGenericType____Il2CppFullySharedGenericType____Il2CppFullySharedGenericStructType_
+		            (uVar1,uVar2,
+		             Method_DG_Tweening_TweenSettingsExtensions_OnComplete_TweenerCore_Color__Color__ColorOptions____
+		            );
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x04001E6A RID: 7786
@@ -480,4 +1024,94 @@ namespace Gameplay.Combat.View.VFX
 		[FieldOffset(Offset = "0xA8")]
 		private ObjectPool<StoneDestroyElement> _pool;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: add_OnCompleteEvent ---
+		void Gameplay_Combat_View_VFX_StoneDestroyElement__add_OnCompleteEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a566ac == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_CombatAnimation_IContent__TypeInfo);
+		    DAT_ram_00a566ac = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x80);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = func_ii_7048(param1_00,param2,0);
+		    param2_00 = System_Action_CombatAnimation_IContent__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_CombatAnimation_IContent__TypeInfo), iVar2 == 0
+		       )) break;
+		    iVar2 = func_ii_4329(param1 + 0x80,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: set_Duration ---
+		float Gameplay_Combat_View_VFX_StoneDestroyElement__set_Duration(int param1,undefined4 param2)
+		
+		{
+		  return *(float *)(param1 + 0x88);
+		}
+		*/
+
+
+		/* --- GHIDRA: get_Delay ---
+		void Gameplay_Combat_View_VFX_StoneDestroyElement__get_Delay
+		               (int param1,float param2,undefined4 param3)
+		
+		{
+		  *(float *)(param1 + 0x88) = param2;
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_IsLeft ---
+		void Gameplay_Combat_View_VFX_StoneDestroyElement__get_IsLeft
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  *(undefined1 *)(param1 + 0x8c) = (undefined1)param2;
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_Pool ---
+		uint Gameplay_Combat_View_VFX_StoneDestroyElement__set_Pool(int param1,undefined4 param2)
+		
+		{
+		  return (uint)(*(int *)(param1 + 0x10) == 4);
+		}
+		*/
+
+
+		/* --- GHIDRA: get_IsSkull ---
+		void Gameplay_Combat_View_VFX_StoneDestroyElement__get_IsSkull(undefined4 param1,undefined4 param2)
+		
+		{
+		  Gameplay_Combat_View_VFX_StoneDestroyElement__Play(param1,param1);
+		  return;
+		}
+		*/
+
 }

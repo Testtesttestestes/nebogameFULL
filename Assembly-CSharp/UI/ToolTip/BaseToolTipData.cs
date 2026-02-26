@@ -64,6 +64,16 @@ namespace UI.ToolTip
 		[Address(RVA = "0x5CF5", Offset = "0x5CF5", VA = "0x5CF5", Slot = "5")]
 		public virtual void Dispose()
 		{
+		/* --- GHIDRA: Dispose ---
+		void UI_ToolTip_BaseToolTipData__Dispose(int param1,undefined4 param2)
+		
+		{
+		  *(undefined4 *)(param1 + 0x10) = 0;
+		  *(undefined4 *)(param1 + 0x2c) = 0;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06000987 RID: 2439
@@ -79,4 +89,25 @@ namespace UI.ToolTip
 		[Il2CppDummyDll.FieldOffset(Offset = "0x8")]
 		public readonly string Id;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: set_MinSize ---
+		void UI_ToolTip_BaseToolTipData__set_MinSize(int param1,int param2,undefined4 param3)
+		
+		{
+		  if (DAT_ram_00a5b8d7 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_12541);
+		    DAT_ram_00a5b8d7 = '\x01';
+		  }
+		  *(undefined8 *)(param1 + 0x14) = 0x7fc000007fc00000;
+		  *(undefined8 *)(param1 + 0xc) = 0x7fc000007fc00000;
+		  if (param2 == 0) {
+		    param2 = StringLiteral_12541;
+		  }
+		  *(int *)(param1 + 8) = param2;
+		  return;
+		}
+		*/
+
 }

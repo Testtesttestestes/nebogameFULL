@@ -18,6 +18,22 @@ namespace Gameplay.Clans.Office.View.ClanResumesTab
 		[Address(RVA = "0x8C8C", Offset = "0x8C8C", VA = "0x8C8C", Slot = "11")]
 		protected override void ApplyArgs()
 		{
+		/* --- GHIDRA: ApplyArgs ---
+		void Gameplay_Clans_Office_View_ClanResumesTab_UserInRatingListElement__ApplyArgs
+		               (undefined4 param1,int param2,undefined4 param3)
+		
+		{
+		  int iVar1;
+		  
+		  iVar1 = *(int *)(param2 + 0x18);
+		  if (iVar1 != 0) {
+		    (**(code **)((ulonglong)*(uint *)(iVar1 + 0xc) * 4))
+		              (*(undefined4 *)(iVar1 + 0x20),param1,*(undefined4 *)(iVar1 + 0x14));
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06003DCE RID: 15822 RVA: 0x00002050 File Offset: 0x00000250
@@ -25,6 +41,26 @@ namespace Gameplay.Clans.Office.View.ClanResumesTab
 		[Address(RVA = "0x8C8D", Offset = "0x8C8D", VA = "0x8C8D", Slot = "10")]
 		protected override void CallElementClickedEvent(UserInRatingListElement.UserInRatingListElementArgs args)
 		{
+		/* --- GHIDRA: CallElementClickedEvent ---
+		void Gameplay_Clans_Office_View_ClanResumesTab_UserInRatingListElement__CallElementClickedEvent
+		               (undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a57f6c == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Elements_GenericList_SelectableListElement_UserInRatingListElement_UserInRatingListElementArgs___ctor__
+		              );
+		    DAT_ram_00a57f6c = '\x01';
+		  }
+		  UI_Elements_GenericList_SelectableListElementArgs___Il2CppFullySharedGenericType____ctor
+		            (param1,
+		             Method_UI_Elements_GenericList_SelectableListElement_UserInRatingListElement_UserInRatingListElementArgs___ctor__
+		            );
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06003DCF RID: 15823 RVA: 0x00002050 File Offset: 0x00000250
@@ -32,6 +68,26 @@ namespace Gameplay.Clans.Office.View.ClanResumesTab
 		[Address(RVA = "0x8C8E", Offset = "0x8C8E", VA = "0x8C8E")]
 		public UserInRatingListElement()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_Clans_Office_View_ClanResumesTab_UserInRatingListElement___ctor
+		               (undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a57f6d == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Elements_GenericList_SelectableListElementArgs_UserInRatingListElement___ctor__
+		              );
+		    DAT_ram_00a57f6d = '\x01';
+		  }
+		  UnityEngine_InputSystem_LowLevel_SelectObservable___Il2CppFullySharedGenericType____Il2CppFullySharedGenericType___Subscribe
+		            (param1,
+		             Method_UI_Elements_GenericList_SelectableListElementArgs_UserInRatingListElement___ctor__
+		            );
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x04002298 RID: 8856

@@ -27,6 +27,37 @@ namespace UI.Windows
 		[Address(RVA = "0x614E", Offset = "0x614E", VA = "0x614E")]
 		public Layer()
 		{
+		/* --- GHIDRA: .ctor ---
+		void UI_Windows_Layer___ctor(int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  int param1_00;
+		  int *param1_01;
+		  int iVar2;
+		  
+		  if (DAT_ram_00a639da == '\0') {
+		    Mono_Security_ASN1__get_Item(&UI_Windows_PopupController_StateChanged_TypeInfo);
+		    DAT_ram_00a639da = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x1c);
+		  while ((param1_01 = (int *)UnityEngine_UI_Image__set_sprite(param1_00,param2,0),
+		         param1_01 == (int *)0x0 || (UI_Windows_PopupController_StateChanged_TypeInfo == *param1_01)
+		         )) {
+		    iVar2 = func_ii_4329(param1 + 0x1c,param1_01,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,UI_Windows_PopupController_StateChanged_TypeInfo);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
 		}
 
 		// Token: 0x04000790 RID: 1936

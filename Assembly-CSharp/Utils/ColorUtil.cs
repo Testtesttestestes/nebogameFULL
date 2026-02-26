@@ -13,6 +13,25 @@ namespace Utils
 		[Address(RVA = "0x56D0", Offset = "0x56D0", VA = "0x56D0")]
 		public static void SetRGB(ref Color32 c, uint value)
 		{
+		/* --- GHIDRA: SetRGB ---
+		void Utils_ColorUtil__SetRGB(int param1,float param2,undefined4 param3)
+		
+		{
+		  undefined4 param1_00;
+		  
+		  if (DAT_ram_00a648de == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_System_Collections_Generic_HashSet_Enum___ctor__);
+		    Mono_Security_ASN1__get_Item(&System_Collections_Generic_HashSet_Enum__TypeInfo);
+		    DAT_ram_00a648de = '\x01';
+		  }
+		  param1_00 = unnamed_function_1417(System_Collections_Generic_HashSet_Enum__TypeInfo);
+		  func_ii_7115(param1_00,Method_System_Collections_Generic_HashSet_Enum___ctor__);
+		  *(undefined4 *)(param1 + 8) = param1_00;
+		  *(float *)(param1 + 0xc) = param2;
+		  return;
+		}
+		*/
+
 		}
 	}
 }

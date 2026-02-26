@@ -14,6 +14,36 @@ namespace Gameplay.Tutorial.Guide.View.Outline
 		[Address(RVA = "0x6C5E", Offset = "0x6C5E", VA = "0x6C5E", Slot = "4")]
 		protected override void HandleSizeChanged(float width, float height)
 		{
+		/* --- GHIDRA: HandleSizeChanged ---
+		void Gameplay_Tutorial_Guide_View_Outline_GuideOutlineCircle__HandleSizeChanged
+		               (int param1,float param2,undefined4 param3)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a58461 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Gameplay_Tutorial_Guide_View_Outline_GuideOutlineCircle_StartAnimationInternal__
+		              );
+		    Mono_Security_ASN1__get_Item(&DG_Tweening_TweenCallback_TypeInfo);
+		    DAT_ram_00a58461 = '\x01';
+		  }
+		  if (*(int *)(param1 + 0x20) != 0) {
+		    func_ii_7891(*(int *)(param1 + 0x20),0,0);
+		    *(undefined4 *)(param1 + 0x20) = 0;
+		  }
+		  uVar1 = unnamed_function_1417(DG_Tweening_TweenCallback_TypeInfo);
+		  DG_Tweening_Color2__op_Multiply
+		            (uVar1,param1,
+		             Method_Gameplay_Tutorial_Guide_View_Outline_GuideOutlineCircle_StartAnimationInternal__
+		             ,0);
+		  uVar1 = DG_Tweening_DOVirtual__EasedValue(param2,uVar1,1,0);
+		  *(undefined4 *)(param1 + 0x20) = uVar1;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06001AD5 RID: 6869 RVA: 0x00002050 File Offset: 0x00000250
@@ -28,6 +58,16 @@ namespace Gameplay.Tutorial.Guide.View.Outline
 		[Address(RVA = "0x6C60", Offset = "0x6C60", VA = "0x6C60")]
 		private void StartAnimationInternal()
 		{
+		/* --- GHIDRA: StartAnimationInternal ---
+		void Gameplay_Tutorial_Guide_View_Outline_GuideOutlineCircle__StartAnimationInternal
+		               (int param1,undefined4 param2)
+		
+		{
+		  UnityEngine_ParticleSystem__Play(*(undefined4 *)(param1 + 0x14),1,0,0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06001AD7 RID: 6871 RVA: 0x00002050 File Offset: 0x00000250

@@ -15,6 +15,40 @@ namespace Gameplay.Rating.View
 		[Address(RVA = "0x7326", Offset = "0x7326", VA = "0x7326", Slot = "11")]
 		protected override void ApplyArgs()
 		{
+		/* --- GHIDRA: ApplyArgs ---
+		void Gameplay_Rating_View_UserRatingListElement__ApplyArgs(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  undefined4 param1_00;
+		  undefined4 *puVar2;
+		  
+		  if (DAT_ram_00a5803a == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Elements_GenericList_GenericListElement_UserInRatingListElement_UserInRatingListElementArgs__get_args__
+		              );
+		    DAT_ram_00a5803a = '\x01';
+		  }
+		  iVar1 = *(int *)(*(int *)(param1 + 0x18) + 0x28);
+		  if ((iVar1 < 1) || (*(int *)(*(int *)(param1 + 0x3c) + 0xc) < iVar1)) {
+		    param1_00 = *(undefined4 *)(param1 + 0x38);
+		    if (*(char *)(*(int *)(param1 + 0x18) + 0x2c) == '\0') {
+		      puVar2 = (undefined4 *)(param1 + 0x40);
+		    }
+		    else {
+		      puVar2 = (undefined4 *)(param1 + 0x44);
+		    }
+		  }
+		  else {
+		    puVar2 = (undefined4 *)(iVar1 * 4 + *(int *)(param1 + 0x3c) + 0xc);
+		    param1_00 = *(undefined4 *)(param1 + 0x38);
+		  }
+		  func_ii_7050(param1_00,*puVar2,0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x060021C8 RID: 8648 RVA: 0x00002050 File Offset: 0x00000250

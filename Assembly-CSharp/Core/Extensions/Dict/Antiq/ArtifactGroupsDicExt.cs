@@ -13,6 +13,25 @@ namespace Core.Extensions.Dict.Antiq
 		[Address(RVA = "0xAC49", Offset = "0xAC49", VA = "0xAC49")]
 		public static string GetImageAssetId(this Antiq.Types.ArtifactGroupsDic dict)
 		{
+		/* --- GHIDRA: GetImageAssetId ---
+		undefined4
+		Core_Extensions_Dict_Antiq_ArtifactGroupsDicExt__GetImageAssetId(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  undefined4 uVar2;
+		  
+		  iVar1 = Core_Extensions_Dict_DictExt__GetApr(*(undefined4 *)(param1 + 0x2c),0xe3,0);
+		  if (iVar1 == 0) {
+		    uVar2 = 0;
+		  }
+		  else {
+		    uVar2 = *(undefined4 *)(iVar1 + 0x10);
+		  }
+		  return uVar2;
+		}
+		*/
+
 			return null;
 		}
 
@@ -21,6 +40,19 @@ namespace Core.Extensions.Dict.Antiq
 		[Address(RVA = "0xAC4A", Offset = "0xAC4A", VA = "0xAC4A")]
 		public static string GetImageThumbnailAssetId(this Antiq.Types.ArtifactGroupsDic dict)
 		{
+		/* --- GHIDRA: GetImageThumbnailAssetId ---
+		undefined4
+		Core_Extensions_Dict_Antiq_ArtifactGroupsDicExt__GetImageThumbnailAssetId
+		          (int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  uVar1 = Core_Extensions_Dict_DictExt__GetAsset(*(undefined4 *)(param1 + 0x30),0xce,0);
+		  return uVar1;
+		}
+		*/
+
 			return null;
 		}
 
@@ -29,6 +61,17 @@ namespace Core.Extensions.Dict.Antiq
 		[Address(RVA = "0xAC4B", Offset = "0xAC4B", VA = "0xAC4B")]
 		public static string GetTitle(this Antiq.Types.ArtifactGroupsDic dict)
 		{
+		/* --- GHIDRA: GetTitle ---
+		undefined4 Core_Extensions_Dict_Antiq_ArtifactGroupsDicExt__GetTitle(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  uVar1 = Core_Extensions_Dict_DictExt__GetAsset(*(undefined4 *)(param1 + 0x30),0xcf,0);
+		  return uVar1;
+		}
+		*/
+
 			return null;
 		}
 
@@ -37,6 +80,18 @@ namespace Core.Extensions.Dict.Antiq
 		[Address(RVA = "0xAC4C", Offset = "0xAC4C", VA = "0xAC4C")]
 		public static string GetDescription(this Antiq.Types.ArtifactGroupsDic dict)
 		{
+		/* --- GHIDRA: GetDescription ---
+		undefined4
+		Core_Extensions_Dict_Antiq_ArtifactGroupsDicExt__GetDescription(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  uVar1 = Core_Extensions_Dict_DictExt__GetAsset(*(undefined4 *)(param1 + 0x18),0xd2,0);
+		  return uVar1;
+		}
+		*/
+
 			return null;
 		}
 	}

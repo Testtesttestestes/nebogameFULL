@@ -17,6 +17,25 @@ namespace Gameplay.Boss.View
 		[Address(RVA = "0x9496", Offset = "0x9496", VA = "0x9496")]
 		public BossMinionWindowArgs()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_Boss_View_BossMinionWindowArgs___ctor(undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a579a0 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_MonoBehaviourWithStates_BossPossibleEmptyWindowStateController_WindowStates___ctor__
+		              );
+		    DAT_ram_00a579a0 = '\x01';
+		  }
+		  ScreenAdaptation_Common_AppSize__Update
+		            (param1,
+		             Method_UI_MonoBehaviourWithStates_BossPossibleEmptyWindowStateController_WindowStates___ctor__
+		            );
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x04002631 RID: 9777

@@ -105,6 +105,84 @@ namespace Utils
 		[Address(RVA = "0x56C1", Offset = "0x56C1", VA = "0x56C1")]
 		public void SetVersion(Core.Version value)
 		{
+		/* --- GHIDRA: SetVersion ---
+		undefined4 Utils_AppBuildInfo__SetVersion(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  int param1_00;
+		  undefined4 uVar2;
+		  int iVar3;
+		  undefined4 uVar4;
+		  uint uVar5;
+		  undefined8 uVar6;
+		  undefined8 local_28;
+		  undefined8 local_20;
+		  undefined8 local_18;
+		  undefined8 local_10;
+		  undefined8 local_8;
+		  
+		  if (DAT_ram_00a648d7 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_List_AppBuildInfo_Element__Add__);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_List_AppBuildInfo_Element__ToArray__);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_List_AppBuildInfo_Element___ctor__);
+		    Mono_Security_ASN1__get_Item(&System_Collections_Generic_List_AppBuildInfo_Element__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_24476);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_17400);
+		    DAT_ram_00a648d7 = '\x01';
+		  }
+		  param1_00 = unnamed_function_1417(System_Collections_Generic_List_AppBuildInfo_Element__TypeInfo);
+		  GAFInternal_Objects_GAFBakedObjectImpl__get_isVisible
+		            (param1_00,Method_System_Collections_Generic_List_AppBuildInfo_Element___ctor__);
+		  local_10 = *(undefined8 *)(param1 + 0x18);
+		  local_18 = *(undefined8 *)(param1 + 0x10);
+		  uVar2 = Core_Version___ctor(&local_18,0);
+		  uVar4 = StringLiteral_17400;
+		  iVar1 = Method_System_Collections_Generic_List_AppBuildInfo_Element__Add__;
+		  *(int *)(param1_00 + 0x10) = *(int *)(param1_00 + 0x10) + 1;
+		  uVar6 = CONCAT44(uVar2,uVar4);
+		  uVar5 = *(uint *)(param1_00 + 0xc);
+		  if (uVar5 < *(uint *)(*(int *)(param1_00 + 8) + 0xc)) {
+		    *(uint *)(param1_00 + 0xc) = uVar5 + 1;
+		    *(undefined8 *)(*(int *)(param1_00 + 8) + uVar5 * 8 + 0x10) = uVar6;
+		  }
+		  else {
+		    local_20 = uVar6;
+		    local_8 = uVar6;
+		    Core_Data_CollectionData__get_CollectionId
+		              (param1_00,&local_20,*(undefined4 *)(*(int *)(*(int *)(iVar1 + 0x10) + 0x60) + 0x38));
+		  }
+		  iVar3 = Newtonsoft_Json_Serialization_JsonSerializerInternalReader__ShouldDeserialize
+		                    (*(undefined4 *)(param1 + 0xc),0);
+		  uVar4 = StringLiteral_24476;
+		  iVar1 = Method_System_Collections_Generic_List_AppBuildInfo_Element__Add__;
+		  if (iVar3 == 0) {
+		    uVar2 = *(undefined4 *)(param1 + 0xc);
+		    *(int *)(param1_00 + 0x10) = *(int *)(param1_00 + 0x10) + 1;
+		    uVar6 = CONCAT44(uVar2,uVar4);
+		    uVar5 = *(uint *)(param1_00 + 0xc);
+		    if (uVar5 < *(uint *)(*(int *)(param1_00 + 8) + 0xc)) {
+		      *(uint *)(param1_00 + 0xc) = uVar5 + 1;
+		      *(undefined8 *)(*(int *)(param1_00 + 8) + uVar5 * 8 + 0x10) = uVar6;
+		    }
+		    else {
+		      local_28 = uVar6;
+		      local_8 = uVar6;
+		      Core_Data_CollectionData__get_CollectionId
+		                (param1_00,&local_28,*(undefined4 *)(*(int *)(*(int *)(iVar1 + 0x10) + 0x60) + 0x38)
+		                );
+		    }
+		  }
+		  uVar4 = UnityEngine_TextCore_Text_FontAsset__UpdateFontFeaturesForNewlyAddedGlyphs
+		                    (param1_00,
+		                     Method_System_Collections_Generic_List_AppBuildInfo_Element__ToArray__);
+		  return uVar4;
+		}
+		*/
+
 		}
 
 		// Token: 0x06000218 RID: 536 RVA: 0x00002052 File Offset: 0x00000252
@@ -112,6 +190,18 @@ namespace Utils
 		[Address(RVA = "0x56C2", Offset = "0x56C2", VA = "0x56C2")]
 		public AppBuildInfo.Element[] GetValues()
 		{
+		/* --- GHIDRA: GetValues ---
+		undefined4 Utils_AppBuildInfo__GetValues(undefined4 param1)
+		
+		{
+		  if (DAT_ram_00a648d8 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_3167);
+		    DAT_ram_00a648d8 = '\x01';
+		  }
+		  return StringLiteral_3167;
+		}
+		*/
+
 			return null;
 		}
 
@@ -120,6 +210,25 @@ namespace Utils
 		[Address(RVA = "0x56C3", Offset = "0x56C3", VA = "0x56C3")]
 		public static string GetDefaultText()
 		{
+		/* --- GHIDRA: GetDefaultText ---
+		undefined4 Utils_AppBuildInfo__GetDefaultText(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  undefined4 param1_00;
+		  
+		  if (DAT_ram_00a648d9 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_System_String_Join_AppBuildInfo_Element___);
+		    DAT_ram_00a648d9 = '\x01';
+		  }
+		  param1_00 = *(undefined4 *)(param1 + 0x20);
+		  uVar1 = Utils_AppBuildInfo__SetVersion(param1,param1);
+		  uVar1 = System_String__Join___Il2CppFullySharedGenericType_
+		                    (param1_00,uVar1,Method_System_String_Join_AppBuildInfo_Element___);
+		  return uVar1;
+		}
+		*/
+
 			return null;
 		}
 
@@ -128,6 +237,20 @@ namespace Utils
 		[Address(RVA = "0x56C4", Offset = "0x56C4", VA = "0x56C4", Slot = "3")]
 		public override string ToString()
 		{
+		/* --- GHIDRA: ToString ---
+		void Utils_AppBuildInfo__ToString(int param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a648da == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_514);
+		    DAT_ram_00a648da = '\x01';
+		  }
+		  *(undefined4 *)(param1 + 0x20) = StringLiteral_514;
+		  UnityEngine_RuntimeInitializeOnLoadMethodAttribute__set_loadType(param1,0);
+		  return;
+		}
+		*/
+
 			return null;
 		}
 

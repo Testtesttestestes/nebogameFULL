@@ -108,6 +108,32 @@ namespace Gameplay.Clans.Buildings.Golem.View
 		[Address(RVA = "0x915B", Offset = "0x915B", VA = "0x915B")]
 		public void SetStatusKey(string localizationKey)
 		{
+		/* --- GHIDRA: SetStatusKey ---
+		void Gameplay_Clans_Buildings_Golem_View_WarStatusView__SetStatusKey
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  undefined4 param1_00;
+		  undefined4 param2_00;
+		  
+		  if (DAT_ram_00a5784f == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UnityEngine_Component_GetComponentInChildren_TextMeshProUGUI___);
+		    Mono_Security_ASN1__get_Item(&Core_GameLocalization_TypeInfo);
+		    DAT_ram_00a5784f = '\x01';
+		  }
+		  param1_00 = UI_Rewards_AbstractRewardsRender__SetRewards
+		                        (*(undefined4 *)(param1 + 0x2c),
+		                         Method_UnityEngine_Component_GetComponentInChildren_TextMeshProUGUI___);
+		  if (*(int *)(Core_GameLocalization_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Core_GameLocalization_TypeInfo);
+		  }
+		  param2_00 = Core_Extensions_Dict_CultDicExt__GetTitle(param2,1,0,1,0,0,0,0);
+		  UnityEngine_Component__GetComponentInChildren_object_(param1_00,param2_00,0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x060042A8 RID: 17064 RVA: 0x00002050 File Offset: 0x00000250
@@ -115,6 +141,28 @@ namespace Gameplay.Clans.Buildings.Golem.View
 		[Address(RVA = "0x915C", Offset = "0x915C", VA = "0x915C")]
 		public void SetActionButtonKey(string localizationKey)
 		{
+		/* --- GHIDRA: SetActionButtonKey ---
+		void Gameplay_Clans_Buildings_Golem_View_WarStatusView__SetActionButtonKey
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  undefined4 uVar2;
+		  undefined4 local_8;
+		  undefined4 local_4;
+		  
+		  uVar2 = *(undefined4 *)(param1 + 0x38);
+		  local_8 = param3;
+		  local_4 = param2;
+		  uVar1 = Protocol_Combat_ProtoPlayerActionEvt___ctor(&local_4,0);
+		  UnityEngine_Component__GetComponentInChildren_object_(uVar2,uVar1,0);
+		  uVar2 = *(undefined4 *)(param1 + 0x3c);
+		  uVar1 = Protocol_Combat_ProtoPlayerActionEvt___ctor(&local_8,0);
+		  UnityEngine_Component__GetComponentInChildren_object_(uVar2,uVar1,0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x060042A9 RID: 17065 RVA: 0x00002050 File Offset: 0x00000250
@@ -122,6 +170,21 @@ namespace Gameplay.Clans.Buildings.Golem.View
 		[Address(RVA = "0x915D", Offset = "0x915D", VA = "0x915D")]
 		public void SetDefendersAndAttackers(uint defenders, uint attackers)
 		{
+		/* --- GHIDRA: SetDefendersAndAttackers ---
+		void Gameplay_Clans_Buildings_Golem_View_WarStatusView__SetDefendersAndAttackers
+		               (undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a57850 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_UI_MonoBehaviourWithStates_WarStatusView_State___ctor__);
+		    DAT_ram_00a57850 = '\x01';
+		  }
+		  ScreenAdaptation_Common_AppSize__Update
+		            (param1,Method_UI_MonoBehaviourWithStates_WarStatusView_State___ctor__);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x060042AA RID: 17066 RVA: 0x00002050 File Offset: 0x00000250
@@ -129,6 +192,19 @@ namespace Gameplay.Clans.Buildings.Golem.View
 		[Address(RVA = "0x915E", Offset = "0x915E", VA = "0x915E")]
 		public WarStatusView()
 		{
+		/* --- GHIDRA: .ctor ---
+		undefined4
+		Gameplay_Clans_Buildings_Golem_View_WarStatusView___ctor(undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a57851 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_12594);
+		    DAT_ram_00a57851 = '\x01';
+		  }
+		  return StringLiteral_12594;
+		}
+		*/
+
 		}
 
 		// Token: 0x040024CA RID: 9418
@@ -212,4 +288,29 @@ namespace Gameplay.Clans.Buildings.Golem.View
 			HIDE_ALL
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_BottomAnnotation ---
+		void Gameplay_Clans_Buildings_Golem_View_WarStatusView__get_BottomAnnotation
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  undefined4 param2_00;
+		  undefined4 param1_00;
+		  
+		  if (DAT_ram_00a5784e == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_GameLocalization_TypeInfo);
+		    DAT_ram_00a5784e = '\x01';
+		  }
+		  param1_00 = *(undefined4 *)(param1 + 0x1c);
+		  if (*(int *)(Core_GameLocalization_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Core_GameLocalization_TypeInfo);
+		  }
+		  param2_00 = Core_Extensions_Dict_CultDicExt__GetTitle(param2,1,0,1,0,0,0,0);
+		  UnityEngine_Component__GetComponentInChildren_object_(param1_00,param2_00,0);
+		  return;
+		}
+		*/
+
 }

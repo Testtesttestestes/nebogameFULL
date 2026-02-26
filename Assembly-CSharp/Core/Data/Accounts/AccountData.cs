@@ -59,6 +59,36 @@ namespace Core.Data.Accounts
 		[Address(RVA = "0xB123", Offset = "0xB123", VA = "0xB123")]
 		public AccountData(AccountInfo accountInfo)
 		{
+		/* --- GHIDRA: .ctor ---
+		void Core_Data_Accounts_AccountData___ctor(int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  int param1_00;
+		  int *param1_01;
+		  int iVar2;
+		  
+		  if (DAT_ram_00a60849 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_TypeInfo);
+		    DAT_ram_00a60849 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 8);
+		  while ((param1_01 = (int *)UnityEngine_UI_Image__set_sprite(param1_00,param2,0),
+		         param1_01 == (int *)0x0 || (System_Action_TypeInfo == *param1_01))) {
+		    iVar2 = func_ii_4329(param1 + 8,param1_01,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,System_Action_TypeInfo);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
 		}
 
 		// Token: 0x0400362C RID: 13868
@@ -71,4 +101,66 @@ namespace Core.Data.Accounts
 		[FieldOffset(Offset = "0xC")]
 		private BackTime _backtime;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_AccountInfo ---
+		void Core_Data_Accounts_AccountData__get_AccountInfo(int param1,int param2,undefined4 param3)
+		
+		{
+		  undefined4 param1_00;
+		  float fVar1;
+		  int param1_01;
+		  undefined8 param1_02;
+		  
+		  if (DAT_ram_00a60848 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Utils_BackTime_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Utils_TimeUtils_TypeInfo);
+		    DAT_ram_00a60848 = '\x01';
+		  }
+		  *(int *)(param1 + 8) = param2;
+		  param1_02 = *(undefined8 *)(param2 + 0x18);
+		  param1_01 = *(int *)(param1 + 0xc);
+		  if (param1_01 == 0) {
+		    if (*(int *)(Utils_TimeUtils_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(Utils_TimeUtils_TypeInfo);
+		    }
+		    fVar1 = func_ii_7331(param1_02,0);
+		    param1_00 = unnamed_function_1417(Utils_BackTime_TypeInfo);
+		    Core_Extensions_Dict_DictExt__BinarySearch_object__uint_(param1_00,fVar1,0);
+		    *(undefined4 *)(param1 + 0xc) = param1_00;
+		    return;
+		  }
+		  if (*(int *)(Utils_TimeUtils_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Utils_TimeUtils_TypeInfo);
+		  }
+		  fVar1 = func_ii_7331(param1_02,0);
+		  Core_Extensions_Dict_DictExt__BinarySearch_object__uint_(param1_01,fVar1,0);
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_BackTime ---
+		uint Core_Data_Accounts_AccountData__get_BackTime(int param1,undefined4 param2)
+		
+		{
+		  float fVar1;
+		  
+		  fVar1 = func_ii_7103(*(undefined4 *)(param1 + 0xc),0);
+		  return (uint)(fVar1 <= 0.0);
+		}
+		*/
+
+
+		/* --- GHIDRA: get_IsExpired ---
+		void Core_Data_Accounts_AccountData__get_IsExpired
+		               (undefined4 param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  Core_Data_Accounts_AccountData__get_AccountInfo(param1,param2,param1);
+		  return;
+		}
+		*/
+
 }

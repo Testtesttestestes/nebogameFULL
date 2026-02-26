@@ -13,6 +13,21 @@ namespace Core.Sorting
 		[Address(RVA = "0xA734", Offset = "0xA734", VA = "0xA734")]
 		private static int CompareLevel(UserData x, UserData y)
 		{
+		/* --- GHIDRA: CompareLevel ---
+		undefined4
+		Core_Sorting_UserDataComparers__CompareLevel(undefined4 param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  undefined4 uVar1;
+		  undefined4 param2_00;
+		  
+		  uVar1 = Google_Protobuf_Collections_RepeatedField_object___GetEnumerator(param1,0);
+		  param2_00 = Google_Protobuf_Collections_RepeatedField_object___GetEnumerator(param2,0);
+		  uVar1 = System_String__CompareTo(uVar1,param2_00,0);
+		  return uVar1;
+		}
+		*/
+
 			return 0;
 		}
 
@@ -21,6 +36,21 @@ namespace Core.Sorting
 		[Address(RVA = "0xA735", Offset = "0xA735", VA = "0xA735")]
 		private static int CompareNick(UserData x, UserData y)
 		{
+		/* --- GHIDRA: CompareNick ---
+		undefined4
+		Core_Sorting_UserDataComparers__CompareNick(undefined4 param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  undefined4 uVar1;
+		  undefined4 local_4;
+		  
+		  local_4 = func_ii_6965(param1,0);
+		  uVar1 = func_ii_6965(param2,0);
+		  uVar1 = System_UInt32__CompareTo(&local_4,uVar1,0);
+		  return uVar1;
+		}
+		*/
+
 			return 0;
 		}
 
@@ -29,6 +59,34 @@ namespace Core.Sorting
 		[Address(RVA = "0xA736", Offset = "0xA736", VA = "0xA736")]
 		private static int CompareCult(UserData x, UserData y)
 		{
+		/* --- GHIDRA: CompareCult ---
+		int Core_Sorting_UserDataComparers__CompareCult
+		              (undefined4 param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  undefined4 param2_00;
+		  int iVar2;
+		  undefined4 local_8;
+		  undefined4 local_4;
+		  
+		  uVar1 = Google_Protobuf_Collections_RepeatedField_object___GetEnumerator(param2,0);
+		  param2_00 = Google_Protobuf_Collections_RepeatedField_object___GetEnumerator(param3,0);
+		  iVar2 = System_String__CompareTo(uVar1,param2_00,0);
+		  if (iVar2 == 0) {
+		    local_8 = Core_Data_UserData__set_LevelDic(param2,0);
+		    uVar1 = Core_Data_UserData__set_LevelDic(param3,0);
+		    iVar2 = System_UInt32__CompareTo(&local_8,uVar1,0);
+		    if (iVar2 == 0) {
+		      local_4 = func_ii_6965(param2,0);
+		      uVar1 = func_ii_6965(param3,0);
+		      iVar2 = System_UInt32__CompareTo(&local_4,uVar1,0);
+		    }
+		  }
+		  return iVar2;
+		}
+		*/
+
 			return 0;
 		}
 

@@ -14,6 +14,20 @@ namespace GAF.Assets
 		[Address(RVA = "0xC260", Offset = "0xC260", VA = "0xC260")]
 		public GAFTexturesResource()
 		{
+		/* --- GHIDRA: .ctor ---
+		undefined4 GAF_Assets_GAFTexturesResource___ctor(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  if (param1 != 0) {
+		    uVar1 = AmplitudeNS_MiniJSON_Json_Parser___ctor(param1,param1);
+		    return uVar1;
+		  }
+		  return 0;
+		}
+		*/
+
 		}
 	}
 }

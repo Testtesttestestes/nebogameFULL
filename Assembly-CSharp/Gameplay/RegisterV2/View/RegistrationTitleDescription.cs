@@ -69,4 +69,18 @@ namespace Gameplay.RegisterV2.View
 		[SerializeField]
 		private DeselectableGenericFilterView _spells;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_Description ---
+		void Gameplay_RegisterV2_View_RegistrationTitleDescription__get_Description
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  UI_Elements_Filters_GenericFilter_GenericFilterView__SelectElement
+		            (*(undefined4 *)(param1 + 0x18),0xffffffff,0);
+		  return;
+		}
+		*/
+
 }

@@ -32,6 +32,16 @@ namespace Gameplay.Horde.Model
 		[Address(RVA = "0x7B75", Offset = "0x7B75", VA = "0x7B75")]
 		public AttackRequestedHordeMonster([NotNull] IMonsterSource source, [NotNull] HordeMonsterData hordMonster)
 		{
+		/* --- GHIDRA: .ctor ---
+		undefined4
+		Gameplay_Horde_Model_AttackRequestedHordeMonster___ctor
+		          (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  return *(undefined4 *)(*(int *)(*(int *)(param1 + 0x10) + 0xc) + 0x24);
+		}
+		*/
+
 		}
 
 		// Token: 0x06002ADB RID: 10971 RVA: 0x00002052 File Offset: 0x00000252
@@ -55,4 +65,18 @@ namespace Gameplay.Horde.Model
 		[FieldOffset(Offset = "0x10")]
 		private HordeMonsterData _hordMonster;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_Monster ---
+		void Gameplay_Horde_Model_AttackRequestedHordeMonster__get_Monster
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  Gameplay_ArenaCombat_Model_ArenaCombatModel_AttackRequestedMonster__get_FromCave(param1,param2,0);
+		  *(undefined4 *)(param1 + 0x10) = param3;
+		  return;
+		}
+		*/
+
 }

@@ -25,6 +25,26 @@ namespace Gameplay.Clans.Office.View.ClanWarsTab.ClanWarsHistoryTab
 		[Address(RVA = "0x8C35", Offset = "0x8C35", VA = "0x8C35", Slot = "10")]
 		protected override void CallElementClickedEvent(ClanWarHistoryListElement.ClanWarHistoryListElementArgs args)
 		{
+		/* --- GHIDRA: CallElementClickedEvent ---
+		void Gameplay_Clans_Office_View_ClanWarsTab_ClanWarsHistoryTab_ClanWarHistoryListElement__CallElementClickedEvent
+		               (undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a57f4a == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Elements_GenericList_SelectableListElement_ClanWarHistoryListElement_ClanWarHistoryListElementArgs___ctor__
+		              );
+		    DAT_ram_00a57f4a = '\x01';
+		  }
+		  UI_Elements_GenericList_SelectableListElementArgs___Il2CppFullySharedGenericType____ctor
+		            (param1,
+		             Method_UI_Elements_GenericList_SelectableListElement_ClanWarHistoryListElement_ClanWarHistoryListElementArgs___ctor__
+		            );
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06003D77 RID: 15735 RVA: 0x00002050 File Offset: 0x00000250
@@ -32,6 +52,26 @@ namespace Gameplay.Clans.Office.View.ClanWarsTab.ClanWarsHistoryTab
 		[Address(RVA = "0x8C36", Offset = "0x8C36", VA = "0x8C36")]
 		public ClanWarHistoryListElement()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_Clans_Office_View_ClanWarsTab_ClanWarsHistoryTab_ClanWarHistoryListElement___ctor
+		               (undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a57f4b == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Elements_GenericList_SelectableListElementArgs_ClanWarHistoryListElement___ctor__
+		              );
+		    DAT_ram_00a57f4b = '\x01';
+		  }
+		  UnityEngine_InputSystem_LowLevel_SelectObservable___Il2CppFullySharedGenericType____Il2CppFullySharedGenericType___Subscribe
+		            (param1,
+		             Method_UI_Elements_GenericList_SelectableListElementArgs_ClanWarHistoryListElement___ctor__
+		            );
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0400224C RID: 8780

@@ -253,6 +253,38 @@ namespace Gameplay.Isles.User.Model
 		[Address(RVA = "0xA059", Offset = "0xA059", VA = "0xA059", Slot = "5")]
 		public override void Dispose()
 		{
+		/* --- GHIDRA: Dispose ---
+		void Gameplay_Isles_User_Model_UserIsleModel__Dispose
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4,undefined4 param5,
+		               undefined4 param6,undefined4 param7)
+		
+		{
+		  undefined4 param1_00;
+		  undefined8 uVar1;
+		  
+		  if (DAT_ram_00a58d84 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_List_UserIsleAccountMarkerData___ctor__);
+		    Mono_Security_ASN1__get_Item
+		              (&System_Collections_Generic_List_UserIsleAccountMarkerData__TypeInfo);
+		    DAT_ram_00a58d84 = '\x01';
+		  }
+		  param1_00 = unnamed_function_1417
+		                        (System_Collections_Generic_List_UserIsleAccountMarkerData__TypeInfo);
+		  GAFInternal_Objects_GAFBakedObjectImpl__get_isVisible
+		            (param1_00,Method_System_Collections_Generic_List_UserIsleAccountMarkerData___ctor__);
+		  *(undefined4 *)(param1 + 0x50) = param1_00;
+		  uVar1 = System_Collections_Generic_LinkedList_Enumerator_object___MoveNext(param2,0);
+		  Unity_Services_Core_Environments_Internal_Environments__get_Current(param1,param2,0);
+		  *(undefined4 *)(param1 + 0x4c) = param4;
+		  *(undefined4 *)(param1 + 0x48) = param3;
+		  *(undefined4 *)(param1 + 0x1c) = param5;
+		  *(undefined8 *)(param1 + 0x10) = uVar1;
+		  *(undefined4 *)(param1 + 0x28) = param6;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06005283 RID: 21123 RVA: 0x00002050 File Offset: 0x00000250
@@ -260,6 +292,45 @@ namespace Gameplay.Isles.User.Model
 		[Address(RVA = "0xA05A", Offset = "0xA05A", VA = "0xA05A")]
 		public UserIsleModel(UserData user, UserData loggedUser, IAccountDataDecorator[] availAccountMarkers, IDictProvider dictionaries, IGame game)
 		{
+		/* --- GHIDRA: .ctor ---
+		double Gameplay_Isles_User_Model_UserIsleModel___ctor(int param1,undefined4 param2)
+		
+		{
+		  uint *puVar1;
+		  undefined4 param1_00;
+		  double dVar2;
+		  int *param1_01;
+		  int iVar3;
+		  uint uVar4;
+		  
+		  if (DAT_ram_00a58d86 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_20789);
+		    DAT_ram_00a58d86 = '\x01';
+		  }
+		  if (DAT_ram_00a58cea == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_Dict_IDictProvider_TypeInfo);
+		    DAT_ram_00a58cea = '\x01';
+		  }
+		  uVar4 = 0;
+		  param1_01 = *(int **)(param1 + 0x1c);
+		  iVar3 = *param1_01;
+		  if (*(ushort *)(iVar3 + 0xb6) != 0) {
+		    do {
+		      if (Core_Dict_IDictProvider_TypeInfo == *(int *)(*(int *)(iVar3 + 0x58) + uVar4 * 8)) {
+		        puVar1 = (uint *)(*(int *)(*(int *)(iVar3 + 0x58) + uVar4 * 8 + 4) * 8 + iVar3 + 0xd0);
+		        goto code_r0x80fa5c86;
+		      }
+		      uVar4 = uVar4 + 1;
+		    } while (*(ushort *)(iVar3 + 0xb6) != uVar4);
+		  }
+		  puVar1 = (uint *)func_ii_1080(param1_01,Core_Dict_IDictProvider_TypeInfo,2);
+		code_r0x80fa5c86:
+		  param1_00 = (**(code **)((ulonglong)*puVar1 * 4))(param1_01,puVar1[1]);
+		  dVar2 = Core_Extensions_Dict_DictExt__GetIntParameter(param1_00,StringLiteral_20789,0);
+		  return dVar2;
+		}
+		*/
+
 		}
 
 		// Token: 0x06005284 RID: 21124 RVA: 0x00002050 File Offset: 0x00000250
@@ -267,6 +338,20 @@ namespace Gameplay.Isles.User.Model
 		[Address(RVA = "0x1C9C", Offset = "0x1C9C", VA = "0x1C9C")]
 		public void SetMonster(MonsterInfo monsterInfo)
 		{
+		/* --- GHIDRA: SetMonster ---
+		int * Gameplay_Isles_User_Model_UserIsleModel__SetMonster(int *param1)
+		
+		{
+		  if (*param1 == 0) {
+		    return param1;
+		  }
+		  System_Data_DataSet__ValidateLocaleConstraint(*param1);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
 		}
 
 		// Token: 0x170010D3 RID: 4307
@@ -292,4 +377,459 @@ namespace Gameplay.Isles.User.Model
 		[FieldOffset(Offset = "0x4C")]
 		public readonly IAccountDataDecorator[] AvailAccountMarkers;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: set_RequestFlags ---
+		undefined8 Gameplay_Isles_User_Model_UserIsleModel__set_RequestFlags(int param1,undefined4 param2)
+		
+		{
+		  undefined8 uVar1;
+		  
+		  uVar1 = System_Collections_Generic_LinkedList_Enumerator_object___MoveNext
+		                    (*(undefined4 *)(param1 + 8),0);
+		  return uVar1;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_OwnerId ---
+		undefined4 Gameplay_Isles_User_Model_UserIsleModel__get_OwnerId(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  undefined4 local_4;
+		  
+		  if (*(int *)(param1 + 0x34) == 0) {
+		    uVar1 = 0;
+		  }
+		  else {
+		    local_4 = *(undefined4 *)(*(int *)(param1 + 0x34) + 0x10);
+		    uVar1 = UnityEngine_InputForUI_PointerEvent_ButtonsState__Set(&local_4,1,0);
+		  }
+		  return uVar1;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_IsLicenceSpent ---
+		void Gameplay_Isles_User_Model_UserIsleModel__get_IsLicenceSpent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  undefined4 local_4;
+		  
+		  local_4 = *(undefined4 *)(*(int *)(param1 + 0x34) + 0x10);
+		  Core_Extensions_TransformExt__SetBottom(&local_4,1,0);
+		  *(undefined4 *)(*(int *)(param1 + 0x34) + 0x10) = local_4;
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_IsLicenceSpent ---
+		undefined4 Gameplay_Isles_User_Model_UserIsleModel__set_IsLicenceSpent(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  undefined4 local_4;
+		  
+		  if (*(int *)(param1 + 0x34) == 0) {
+		    uVar1 = 0;
+		  }
+		  else {
+		    local_4 = *(undefined4 *)(*(int *)(param1 + 0x34) + 0x10);
+		    uVar1 = UnityEngine_InputForUI_PointerEvent_ButtonsState__Set(&local_4,2,0);
+		  }
+		  return uVar1;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_IsDiamondIsle ---
+		void Gameplay_Isles_User_Model_UserIsleModel__get_IsDiamondIsle
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  undefined4 local_4;
+		  
+		  local_4 = *(undefined4 *)(*(int *)(param1 + 0x34) + 0x10);
+		  Core_Extensions_TransformExt__SetBottom(&local_4,2,0);
+		  *(undefined4 *)(*(int *)(param1 + 0x34) + 0x10) = local_4;
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_IsDiamondIsle ---
+		undefined4 Gameplay_Isles_User_Model_UserIsleModel__set_IsDiamondIsle(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  undefined4 uVar2;
+		  undefined4 local_4;
+		  
+		  if (*(int *)(param1 + 0x34) == 0) {
+		    uVar2 = 0;
+		  }
+		  else {
+		    local_4 = *(undefined4 *)(*(int *)(param1 + 0x34) + 0x10);
+		    iVar1 = UnityEngine_InputForUI_PointerEvent_ButtonsState__Set(&local_4,2,0);
+		    if (iVar1 == 0) {
+		      if (*(int *)(param1 + 0x34) == 0) {
+		        uVar2 = 0;
+		      }
+		      else {
+		        uVar2 = *(undefined4 *)(*(int *)(param1 + 0x34) + 0x14);
+		      }
+		    }
+		    else {
+		      uVar2 = 2;
+		    }
+		  }
+		  return uVar2;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_IsleInformation ---
+		void Gameplay_Isles_User_Model_UserIsleModel__get_IsleInformation
+		               (int param1,int param2,undefined4 param3)
+		
+		{
+		  uint uVar1;
+		  uint *puVar2;
+		  undefined4 uVar3;
+		  undefined4 *puVar4;
+		  undefined4 uVar5;
+		  int iVar6;
+		  int *piVar7;
+		  int iVar8;
+		  int *piVar9;
+		  int iVar10;
+		  int local_c;
+		  int **local_8;
+		  int *local_4;
+		  
+		  if (DAT_ram_00a58d83 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_Dictionary_uint__BaseBuildingData___ctor__);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_Dictionary_uint__BaseBuildingData__set_Item__);
+		    Mono_Security_ASN1__get_Item
+		              (&System_Collections_Generic_Dictionary_uint__BaseBuildingData__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&System_IDisposable_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&System_Collections_Generic_IEnumerator_UserBuildingInfo__TypeInfo)
+		    ;
+		    Mono_Security_ASN1__get_Item(&System_Collections_IEnumerator_TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Google_Protobuf_Collections_RepeatedField_UserBuildingInfo__GetEnumerator__);
+		    DAT_ram_00a58d83 = '\x01';
+		  }
+		  local_4 = (int *)0x0;
+		  *(int *)(param1 + 0x34) = param2;
+		  if (param2 == 0) {
+		    return;
+		  }
+		  if (DAT_ram_00a58cea == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_Dict_IDictProvider_TypeInfo);
+		    DAT_ram_00a58cea = '\x01';
+		  }
+		  piVar7 = *(int **)(param1 + 0x1c);
+		  iVar8 = *piVar7;
+		  if (*(ushort *)(iVar8 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (Core_Dict_IDictProvider_TypeInfo == *(int *)(*(int *)(iVar8 + 0x58) + uVar1 * 8)) {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar8 + 0x58) + uVar1 * 8 + 4) * 8 + iVar8 + 0xd0);
+		        goto code_r0x80fa53b8;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar8 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(piVar7,Core_Dict_IDictProvider_TypeInfo,2);
+		code_r0x80fa53b8:
+		  uVar3 = (**(code **)((ulonglong)*puVar2 * 4))(piVar7,puVar2[1]);
+		  uVar3 = Core_Extensions_Dict_DictExt__GetClanCult
+		                    (uVar3,*(undefined4 *)(*(int *)(param1 + 0x34) + 0x28),0);
+		  *(undefined4 *)(param1 + 0x38) = uVar3;
+		  uVar3 = unnamed_function_1417
+		                    (System_Collections_Generic_Dictionary_uint__BaseBuildingData__TypeInfo);
+		  System_Collections_Generic_List_GAFAnimationAssetInternal_KeyFrame____ctor
+		            (uVar3,Method_System_Collections_Generic_Dictionary_uint__BaseBuildingData___ctor__);
+		  *(undefined4 *)(param1 + 0x24) = uVar3;
+		  local_4 = (int *)Google_Protobuf_Collections_RepeatedField_float___Equals
+		                             (*(undefined4 *)(*(int *)(param1 + 0x34) + 0xc),
+		                              Method_Google_Protobuf_Collections_RepeatedField_UserBuildingInfo__GetEnumerator__
+		                             );
+		  local_c = 0;
+		  local_8 = &local_4;
+		  do {
+		    piVar7 = local_4;
+		    iVar8 = *local_4;
+		    if (*(ushort *)(iVar8 + 0xb6) != 0) {
+		      uVar1 = 0;
+		      do {
+		        piVar9 = (int *)(*(int *)(iVar8 + 0x58) + uVar1 * 8);
+		        if (System_Collections_IEnumerator_TypeInfo == *piVar9) {
+		          puVar4 = (undefined4 *)(iVar8 + piVar9[1] * 8 + 0xc0);
+		          goto code_r0x80fa54d6;
+		        }
+		        uVar1 = uVar1 + 1;
+		      } while (*(ushort *)(iVar8 + 0xb6) != uVar1);
+		    }
+		    DAT_ram_009d3e38 = 0;
+		    puVar4 = (undefined4 *)
+		             import::env::invoke_iiii
+		                       (s_Allocator__0___Blocksize__1__mus_ram_00000421 + 0x18,local_4,
+		                        System_Collections_IEnumerator_TypeInfo,0);
+		    if (DAT_ram_009d3e38 == 1) {
+		code_r0x80fa57fe:
+		      DAT_ram_009d3e38 = 0;
+		      uVar3 = import::env::__cxa_find_matching_catch_3(&DAT_ram_0072c9c8);
+		      goto code_r0x80fa5806;
+		    }
+		code_r0x80fa54d6:
+		    DAT_ram_009d3e38 = 0;
+		    iVar8 = import::env::invoke_iii(*puVar4,piVar7,puVar4[1]);
+		    piVar7 = local_4;
+		    if (DAT_ram_009d3e38 == 1) goto code_r0x80fa57fe;
+		    if (iVar8 == 0) {
+		      iVar6 = 5;
+		      iVar8 = 0;
+		      goto code_r0x80fa5853;
+		    }
+		    iVar8 = *local_4;
+		    if (*(ushort *)(iVar8 + 0xb6) != 0) {
+		      uVar1 = 0;
+		      do {
+		        piVar9 = (int *)(*(int *)(iVar8 + 0x58) + uVar1 * 8);
+		        if (System_Collections_Generic_IEnumerator_UserBuildingInfo__TypeInfo == *piVar9) {
+		          puVar4 = (undefined4 *)(iVar8 + piVar9[1] * 8 + 0xc0);
+		          goto code_r0x80fa55b0;
+		        }
+		        uVar1 = uVar1 + 1;
+		      } while (*(ushort *)(iVar8 + 0xb6) != uVar1);
+		    }
+		    DAT_ram_009d3e38 = 0;
+		    puVar4 = (undefined4 *)
+		             import::env::invoke_iiii
+		                       (s_Allocator__0___Blocksize__1__mus_ram_00000421 + 0x18,local_4,
+		                        System_Collections_Generic_IEnumerator_UserBuildingInfo__TypeInfo,0);
+		    if (DAT_ram_009d3e38 == 1) {
+		code_r0x80fa57cc:
+		      DAT_ram_009d3e38 = 0;
+		      uVar3 = import::env::__cxa_find_matching_catch_3(&DAT_ram_0072c9c8);
+		      goto code_r0x80fa5806;
+		    }
+		code_r0x80fa55b0:
+		    DAT_ram_009d3e38 = 0;
+		    uVar3 = import::env::invoke_iii(*puVar4,piVar7,puVar4[1]);
+		    if (DAT_ram_009d3e38 == 1) goto code_r0x80fa57cc;
+		    if (DAT_ram_00a58cea == '\0') {
+		      DAT_ram_009d3e38 = 0;
+		      import::env::invoke_vi(0x7ff,&Core_Dict_IDictProvider_TypeInfo);
+		      if (DAT_ram_009d3e38 != 1) {
+		        DAT_ram_00a58cea = '\x01';
+		        goto code_r0x80fa5632;
+		      }
+		code_r0x80fa57d6:
+		      DAT_ram_009d3e38 = 0;
+		      uVar3 = import::env::__cxa_find_matching_catch_3(&DAT_ram_0072c9c8);
+		      goto code_r0x80fa5806;
+		    }
+		code_r0x80fa5632:
+		    piVar7 = *(int **)(param1 + 0x1c);
+		    iVar8 = *piVar7;
+		    if (*(ushort *)(iVar8 + 0xb6) != 0) {
+		      uVar1 = 0;
+		      do {
+		        piVar9 = (int *)(*(int *)(iVar8 + 0x58) + uVar1 * 8);
+		        if (Core_Dict_IDictProvider_TypeInfo == *piVar9) {
+		          puVar4 = (undefined4 *)(piVar9[1] * 8 + iVar8 + 0xd0);
+		          goto code_r0x80fa56cb;
+		        }
+		        uVar1 = uVar1 + 1;
+		      } while (*(ushort *)(iVar8 + 0xb6) != uVar1);
+		    }
+		    DAT_ram_009d3e38 = 0;
+		    puVar4 = (undefined4 *)
+		             import::env::invoke_iiii
+		                       (s_Allocator__0___Blocksize__1__mus_ram_00000421 + 0x18,piVar7,
+		                        Core_Dict_IDictProvider_TypeInfo,2);
+		    if (DAT_ram_009d3e38 == 1) goto code_r0x80fa57d6;
+		code_r0x80fa56cb:
+		    DAT_ram_009d3e38 = 0;
+		    uVar5 = import::env::invoke_iii(*puVar4,piVar7,puVar4[1]);
+		    if (DAT_ram_009d3e38 == 1) goto code_r0x80fa57d6;
+		    DAT_ram_009d3e38 = 0;
+		    piVar7 = (int *)import::env::invoke_iiii
+		                              (s_struct_Uniforms___color__array<v_ram_00001b87 + 0x27d,uVar3,uVar5,0
+		                              );
+		    iVar8 = DAT_ram_009d3e38;
+		    DAT_ram_009d3e38 = 0;
+		    if (iVar8 == 1) {
+		      uVar3 = import::env::__cxa_find_matching_catch_3(&DAT_ram_0072c9c8);
+		      goto code_r0x80fa5806;
+		    }
+		    uVar5 = *(undefined4 *)(param1 + 0x24);
+		    DAT_ram_009d3e38 = 0;
+		    uVar3 = import::env::invoke_iii
+		                      (*(undefined4 *)(*piVar7 + 0x150),piVar7,*(undefined4 *)(*piVar7 + 0x154));
+		    iVar8 = DAT_ram_009d3e38;
+		    DAT_ram_009d3e38 = 0;
+		    if (iVar8 == 1) {
+		      uVar3 = import::env::__cxa_find_matching_catch_3(&DAT_ram_0072c9c8);
+		      goto code_r0x80fa5806;
+		    }
+		    DAT_ram_009d3e38 = 0;
+		    import::env::invoke_viiii
+		              (s_struct_Uniforms___color__array<v_ram_00000aff + 0x22c,uVar5,uVar3,piVar7,
+		               Method_System_Collections_Generic_Dictionary_uint__BaseBuildingData__set_Item__);
+		    iVar8 = DAT_ram_009d3e38;
+		    DAT_ram_009d3e38 = 0;
+		  } while (iVar8 != 1);
+		  uVar3 = import::env::__cxa_find_matching_catch_3(&DAT_ram_0072c9c8);
+		code_r0x80fa5806:
+		  iVar8 = global_1;
+		  iVar6 = import::env::llvm_eh_typeid_for(&DAT_ram_0072c9c8);
+		  if (iVar8 == iVar6) {
+		    piVar7 = (int *)import::env::__cxa_begin_catch(uVar3);
+		    iVar8 = *piVar7;
+		    iVar6 = 0;
+		    DAT_ram_009d3e38 = 0;
+		    local_c = iVar8;
+		    import::env::invoke_v(0x123);
+		    iVar10 = DAT_ram_009d3e38;
+		    DAT_ram_009d3e38 = 0;
+		    if (iVar10 != 1) {
+		code_r0x80fa5853:
+		      piVar7 = local_4;
+		      DAT_ram_009d3e38 = 0;
+		      if (local_4 != (int *)0x0) {
+		        uVar1 = 0;
+		        iVar10 = *local_4;
+		        if (*(ushort *)(iVar10 + 0xb6) != 0) {
+		          do {
+		            if (System_IDisposable_TypeInfo == *(int *)(*(int *)(iVar10 + 0x58) + uVar1 * 8)) {
+		              puVar2 = (uint *)(iVar10 + *(int *)(*(int *)(iVar10 + 0x58) + uVar1 * 8 + 4) * 8 +
+		                               0xc0);
+		              goto code_r0x80fa58cb;
+		            }
+		            uVar1 = uVar1 + 1;
+		          } while (*(ushort *)(iVar10 + 0xb6) != uVar1);
+		        }
+		        puVar2 = (uint *)func_ii_1080(local_4,System_IDisposable_TypeInfo,0);
+		code_r0x80fa58cb:
+		        (**(code **)((ulonglong)*puVar2 * 4))(piVar7,puVar2[1]);
+		      }
+		      if (iVar8 != 0) {
+		        System_Data_DataSet__ValidateLocaleConstraint(iVar8);
+		        do {
+		          halt_trap();
+		        } while( true );
+		      }
+		      if (iVar6 != 0) {
+		        if (iVar6 == 1) {
+		          return;
+		        }
+		        if (iVar6 == 2) {
+		          return;
+		        }
+		        if (iVar6 == 3) {
+		          return;
+		        }
+		        if (iVar6 == 4) {
+		          return;
+		        }
+		        if (iVar6 != 5) {
+		          return;
+		        }
+		      }
+		      iVar8 = *(int *)(param1 + 0x34);
+		      iVar6 = *(int *)(iVar8 + 0x38);
+		      if (iVar6 != 0) {
+		        if (DAT_ram_00a58cea == '\0') {
+		          Mono_Security_ASN1__get_Item(&Core_Dict_IDictProvider_TypeInfo);
+		          DAT_ram_00a58cea = '\x01';
+		        }
+		        piVar7 = *(int **)(param1 + 0x1c);
+		        iVar8 = *piVar7;
+		        if (*(ushort *)(iVar8 + 0xb6) != 0) {
+		          uVar1 = 0;
+		          do {
+		            if (Core_Dict_IDictProvider_TypeInfo == *(int *)(*(int *)(iVar8 + 0x58) + uVar1 * 8)) {
+		              puVar2 = (uint *)(*(int *)(*(int *)(iVar8 + 0x58) + uVar1 * 8 + 4) * 8 + iVar8 + 0xd0)
+		              ;
+		              goto code_r0x80fa59c2;
+		            }
+		            uVar1 = uVar1 + 1;
+		          } while (*(ushort *)(iVar8 + 0xb6) != uVar1);
+		        }
+		        puVar2 = (uint *)func_ii_1080(piVar7,Core_Dict_IDictProvider_TypeInfo,2);
+		code_r0x80fa59c2:
+		        uVar3 = (**(code **)((ulonglong)*puVar2 * 4))(piVar7,puVar2[1]);
+		        uVar3 = func_ii_7325(iVar6,uVar3,0);
+		        *(undefined4 *)(param1 + 0x3c) = uVar3;
+		        iVar8 = *(int *)(param1 + 0x34);
+		      }
+		      func_ii_7323(param1,*(undefined4 *)(iVar8 + 0x24),iVar8);
+		      return;
+		    }
+		    uVar3 = import::env::__cxa_find_matching_catch_2();
+		  }
+		  DAT_ram_009d3e38 = 0;
+		  import::env::invoke_ii(s_struct_Uniforms___color__array<v_ram_00001b87 + 0x27e,&local_c);
+		  iVar8 = DAT_ram_009d3e38;
+		  DAT_ram_009d3e38 = 0;
+		  if (iVar8 == 1) {
+		    import::env::__cxa_find_matching_catch_3(0);
+		    unnamed_function_937();
+		    do {
+		      halt_trap();
+		    } while( true );
+		  }
+		  import::env::__resumeException(uVar3);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: set_CurrentAccountMarkers ---
+		void Gameplay_Isles_User_Model_UserIsleModel__set_CurrentAccountMarkers
+		               (int param1,undefined4 param2)
+		
+		{
+		  if (*(char *)(param1 + 0x18) == '\0') {
+		    Core_ExternalIncomingScriptCall_CallbackItem___Il2CppFullySharedGenericType____ctor(param1,0);
+		    *(undefined4 *)(param1 + 0x40) = 0;
+		    *(undefined1 *)(param1 + 0x18) = 1;
+		    *(undefined8 *)(param1 + 0x1c) = 0;
+		    *(undefined4 *)(param1 + 0x24) = 0;
+		    *(undefined8 *)(param1 + 0x38) = 0;
+		    if (DAT_ram_00a58d83 == '\0') {
+		      Mono_Security_ASN1__get_Item
+		                (&Method_System_Collections_Generic_Dictionary_uint__BaseBuildingData___ctor__);
+		      Mono_Security_ASN1__get_Item
+		                (&Method_System_Collections_Generic_Dictionary_uint__BaseBuildingData__set_Item__);
+		      Mono_Security_ASN1__get_Item
+		                (&System_Collections_Generic_Dictionary_uint__BaseBuildingData__TypeInfo);
+		      Mono_Security_ASN1__get_Item(&System_IDisposable_TypeInfo);
+		      Mono_Security_ASN1__get_Item
+		                (&System_Collections_Generic_IEnumerator_UserBuildingInfo__TypeInfo);
+		      Mono_Security_ASN1__get_Item(&System_Collections_IEnumerator_TypeInfo);
+		      Mono_Security_ASN1__get_Item
+		                (&Method_Google_Protobuf_Collections_RepeatedField_UserBuildingInfo__GetEnumerator__
+		                );
+		      DAT_ram_00a58d83 = '\x01';
+		    }
+		    *(undefined4 *)(param1 + 0x48) = 0;
+		    *(undefined4 *)(param1 + 0x34) = 0;
+		  }
+		  return;
+		}
+		*/
+
 }

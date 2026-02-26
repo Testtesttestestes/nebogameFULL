@@ -88,6 +88,17 @@ namespace Gameplay.Cave
 		[Address(RVA = "0x9447", Offset = "0x9447", VA = "0x9447", Slot = "5")]
 		public override void Dispose()
 		{
+		/* --- GHIDRA: Dispose ---
+		void Gameplay_Cave_CaveModel__Dispose
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  Unity_Services_Core_Environments_Internal_Environments__get_Current(param1,param2,0);
+		  *(undefined4 *)(param1 + 0x20) = param3;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x060045A6 RID: 17830 RVA: 0x00002050 File Offset: 0x00000250
@@ -197,4 +208,19 @@ namespace Gameplay.Cave
 			public MonsterDic MonsterDic;
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: set_GameAudio ---
+		void Gameplay_Cave_CaveModel__set_GameAudio(int param1,undefined4 param2)
+		
+		{
+		  *(undefined4 *)(param1 + 0x20) = 0;
+		  *(undefined4 *)(param1 + 0x14) = 0;
+		  *(undefined4 *)(param1 + 0xc) = 0;
+		  Core_ExternalIncomingScriptCall_CallbackItem___Il2CppFullySharedGenericType____ctor(param1,0);
+		  return;
+		}
+		*/
+
 }

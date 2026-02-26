@@ -34,6 +34,39 @@ namespace Gameplay.TutorialV2.Controller
 		[Address(RVA = "0x6B18", Offset = "0x6B18", VA = "0x6B18", Slot = "6")]
 		public override void Hide()
 		{
+		/* --- GHIDRA: Hide ---
+		void Gameplay_TutorialV2_Controller_PointerQueue__Hide
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a583c0 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_System_Collections_Generic_Queue_GraphicPointerView_GraphicPointerViewArgs__Dequeue__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_System_Collections_Generic_Queue_GraphicPointerView_GraphicPointerViewArgs__get_Count__
+		              );
+		    DAT_ram_00a583c0 = '\x01';
+		  }
+		  if (*(int *)(*(int *)(param1 + 0xc) + 0x14) != 0) {
+		    uVar1 = func_ii_7387(*(int *)(param1 + 0xc),
+		                         Method_System_Collections_Generic_Queue_GraphicPointerView_GraphicPointerViewArgs__Dequeue__
+		                        );
+		    Gameplay_Tutorial_Guide_View_GraphicPointerView__SetPosition
+		              (*(undefined4 *)(param1 + 8),uVar1,param1);
+		    uVar1 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_uint__object___MoveNext
+		                      (*(undefined4 *)(param1 + 8),0);
+		    Com_TheFallenGames_OSA_CustomAdapters_TableView_Tuple_Basic_BasicTupleValueViewsHolder__UpdateAsText
+		              (uVar1,1,0);
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600197A RID: 6522 RVA: 0x00002050 File Offset: 0x00000250
@@ -41,6 +74,36 @@ namespace Gameplay.TutorialV2.Controller
 		[Address(RVA = "0x6B19", Offset = "0x6B19", VA = "0x6B19", Slot = "5")]
 		protected override void ShowNextInternal(StepActionType actionType)
 		{
+		/* --- GHIDRA: ShowNextInternal ---
+		void Gameplay_TutorialV2_Controller_PointerQueue__ShowNextInternal
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  undefined4 param1_00;
+		  
+		  if (DAT_ram_00a583c1 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_System_Collections_Generic_Queue_IReadOnlyList_ScaleQueue_ScaleQueueArgs____ctor__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&System_Collections_Generic_Queue_IReadOnlyList_ScaleQueue_ScaleQueueArgs___TypeInfo)
+		    ;
+		    DAT_ram_00a583c1 = '\x01';
+		  }
+		  param1_00 = unnamed_function_1417
+		                        (
+		                        System_Collections_Generic_Queue_IReadOnlyList_ScaleQueue_ScaleQueueArgs___TypeInfo
+		                        );
+		  System_Collections_Generic_Queue_JobHandle___get_Count
+		            (param1_00,param2,
+		             Method_System_Collections_Generic_Queue_IReadOnlyList_ScaleQueue_ScaleQueueArgs____ctor__
+		            );
+		  *(undefined4 *)(param1 + 8) = param1_00;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x04000D8B RID: 3467
@@ -53,4 +116,21 @@ namespace Gameplay.TutorialV2.Controller
 		[FieldOffset(Offset = "0xC")]
 		private Queue<GraphicPointerView.GraphicPointerViewArgs> _queue;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_StepActionType ---
+		void Gameplay_TutorialV2_Controller_PointerQueue__get_StepActionType(int param1,undefined4 param2)
+		
+		{
+		  undefined4 param1_00;
+		  
+		  param1_00 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_uint__object___MoveNext
+		                        (*(undefined4 *)(param1 + 8),0);
+		  Com_TheFallenGames_OSA_CustomAdapters_TableView_Tuple_Basic_BasicTupleValueViewsHolder__UpdateAsText
+		            (param1_00,0,0);
+		  return;
+		}
+		*/
+
 }

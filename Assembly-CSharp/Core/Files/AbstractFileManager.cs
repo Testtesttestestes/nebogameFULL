@@ -22,6 +22,44 @@ namespace Core.Files
 		[Address(RVA = "0xA956", Offset = "0xA956", VA = "0xA956", Slot = "6")]
 		public virtual void Load(string baseUri, string path, bool cacheOnDevice, Action<IFileContent> callback)
 		{
+		/* --- GHIDRA: Load ---
+		void Core_Files_AbstractFileManager__Load(undefined4 param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  int param1_00;
+		  
+		  if (DAT_ram_00a5acbc == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_Files_AbstractFileManager__DownloadRoutine_d__10_TypeInfo);
+		    DAT_ram_00a5acbc = '\x01';
+		  }
+		  param1_00 = unnamed_function_1417(Core_Files_AbstractFileManager__DownloadRoutine_d__10_TypeInfo);
+		  *(undefined4 *)(param1_00 + 0x14) = param1;
+		  *(undefined4 *)(param1_00 + 8) = 0;
+		  *(undefined4 *)(param1_00 + 0x10) = param2;
+		  Utils_CoroutineSource__GetMono(param1_00,0);
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: Load ---
+		void Core_Files_AbstractFileManager__Load(undefined4 param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  int param1_00;
+		  
+		  if (DAT_ram_00a5acbc == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_Files_AbstractFileManager__DownloadRoutine_d__10_TypeInfo);
+		    DAT_ram_00a5acbc = '\x01';
+		  }
+		  param1_00 = unnamed_function_1417(Core_Files_AbstractFileManager__DownloadRoutine_d__10_TypeInfo);
+		  *(undefined4 *)(param1_00 + 0x14) = param1;
+		  *(undefined4 *)(param1_00 + 8) = 0;
+		  *(undefined4 *)(param1_00 + 0x10) = param2;
+		  Utils_CoroutineSource__GetMono(param1_00,0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06005CC4 RID: 23748 RVA: 0x00002050 File Offset: 0x00000250
@@ -36,6 +74,22 @@ namespace Core.Files
 		[Address(RVA = "0x22C3", Offset = "0x22C3", VA = "0x22C3")]
 		private bool TryLoad(string baseUri, string path, Action<IFileContent> callback, bool cacheOnDevice, out RemoteFileRequest fileRequest)
 		{
+		/* --- GHIDRA: TryLoad ---
+		undefined4 Core_Files_AbstractFileManager__TryLoad(undefined4 param1,undefined4 param2)
+		
+		{
+		  undefined4 param1_00;
+		  
+		  if (DAT_ram_00a65576 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_IO_FileStream_TypeInfo);
+		    DAT_ram_00a65576 = '\x01';
+		  }
+		  param1_00 = unnamed_function_1417(System_IO_FileStream_TypeInfo);
+		  System_Uri__get_LocalPath(param1_00,param1,3,1,1,0);
+		  return param1_00;
+		}
+		*/
+
 			return default(bool);
 		}
 
@@ -44,6 +98,29 @@ namespace Core.Files
 		[Address(RVA = "0xA958", Offset = "0xA958", VA = "0xA958")]
 		private void Download(RemoteFileRequest fileRequest)
 		{
+		/* --- GHIDRA: Download ---
+		void Core_Files_AbstractFileManager__Download
+		               (undefined4 param1,undefined4 param2,float param3,undefined4 param4)
+		
+		{
+		  int param1_00;
+		  
+		  if (DAT_ram_00a5acbb == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Core_Files_AbstractFileManager__AwaitDownLoadRoutine_d__9_TypeInfo);
+		    DAT_ram_00a5acbb = '\x01';
+		  }
+		  param1_00 = unnamed_function_1417
+		                        (Core_Files_AbstractFileManager__AwaitDownLoadRoutine_d__9_TypeInfo);
+		  *(undefined4 *)(param1_00 + 0x18) = param1;
+		  *(undefined4 *)(param1_00 + 8) = 0;
+		  *(float *)(param1_00 + 0x14) = param3;
+		  *(undefined4 *)(param1_00 + 0x10) = param2;
+		  Utils_CoroutineSource__GetMono(param1_00,0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06005CC7 RID: 23751 RVA: 0x00002050 File Offset: 0x00000250
@@ -51,6 +128,27 @@ namespace Core.Files
 		[Address(RVA = "0xA959", Offset = "0xA959", VA = "0xA959")]
 		private void ScheduleDownload(RemoteFileRequest request, float delaySeconds)
 		{
+		/* --- GHIDRA: ScheduleDownload ---
+		int Core_Files_AbstractFileManager__ScheduleDownload
+		              (undefined4 param1,undefined4 param2,float param3,undefined4 param4)
+		
+		{
+		  int iVar1;
+		  
+		  if (DAT_ram_00a5acbb == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Core_Files_AbstractFileManager__AwaitDownLoadRoutine_d__9_TypeInfo);
+		    DAT_ram_00a5acbb = '\x01';
+		  }
+		  iVar1 = unnamed_function_1417(Core_Files_AbstractFileManager__AwaitDownLoadRoutine_d__9_TypeInfo);
+		  *(undefined4 *)(iVar1 + 0x18) = param1;
+		  *(undefined4 *)(iVar1 + 8) = 0;
+		  *(float *)(iVar1 + 0x14) = param3;
+		  *(undefined4 *)(iVar1 + 0x10) = param2;
+		  return iVar1;
+		}
+		*/
+
 		}
 
 		// Token: 0x06005CC8 RID: 23752 RVA: 0x00002052 File Offset: 0x00000252
@@ -58,6 +156,25 @@ namespace Core.Files
 		[Address(RVA = "0xA95A", Offset = "0xA95A", VA = "0xA95A")]
 		private IEnumerator AwaitDownLoadRoutine(RemoteFileRequest request, float delaySeconds)
 		{
+		/* --- GHIDRA: AwaitDownLoadRoutine ---
+		int Core_Files_AbstractFileManager__AwaitDownLoadRoutine
+		              (undefined4 param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  int iVar1;
+		  
+		  if (DAT_ram_00a5acbc == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_Files_AbstractFileManager__DownloadRoutine_d__10_TypeInfo);
+		    DAT_ram_00a5acbc = '\x01';
+		  }
+		  iVar1 = unnamed_function_1417(Core_Files_AbstractFileManager__DownloadRoutine_d__10_TypeInfo);
+		  *(undefined4 *)(iVar1 + 0x14) = param1;
+		  *(undefined4 *)(iVar1 + 8) = 0;
+		  *(undefined4 *)(iVar1 + 0x10) = param2;
+		  return iVar1;
+		}
+		*/
+
 			return null;
 		}
 
@@ -66,6 +183,27 @@ namespace Core.Files
 		[Address(RVA = "0xA95B", Offset = "0xA95B", VA = "0xA95B")]
 		private IEnumerator DownloadRoutine(RemoteFileRequest request)
 		{
+		/* --- GHIDRA: DownloadRoutine ---
+		int Core_Files_AbstractFileManager__DownloadRoutine
+		              (undefined4 param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  int iVar1;
+		  
+		  if (DAT_ram_00a5acbd == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Core_Files_AbstractFileManager__CompleteSuccessInternal_d__11_TypeInfo);
+		    DAT_ram_00a5acbd = '\x01';
+		  }
+		  iVar1 = unnamed_function_1417
+		                    (Core_Files_AbstractFileManager__CompleteSuccessInternal_d__11_TypeInfo);
+		  *(undefined4 *)(iVar1 + 0x14) = param2;
+		  *(undefined4 *)(iVar1 + 0x10) = param1;
+		  *(undefined4 *)(iVar1 + 8) = 0;
+		  return iVar1;
+		}
+		*/
+
 			return null;
 		}
 
@@ -74,6 +212,29 @@ namespace Core.Files
 		[Address(RVA = "0xA95C", Offset = "0xA95C", VA = "0xA95C")]
 		private IEnumerator CompleteSuccessInternal(RemoteFileRequest request)
 		{
+		/* --- GHIDRA: CompleteSuccessInternal ---
+		void Core_Files_AbstractFileManager__CompleteSuccessInternal
+		               (int param1,int param2,undefined4 param3)
+		
+		{
+		  undefined4 param2_00;
+		  undefined4 param1_00;
+		  
+		  if (DAT_ram_00a5acbe == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_Dictionary_string__RemoteFileRequest__Remove__);
+		    DAT_ram_00a5acbe = '\x01';
+		  }
+		  Core_Files_RemoteFileRequest__RunRequest(param2,param2);
+		  param1_00 = *(undefined4 *)(param1 + 8);
+		  param2_00 = System_Uri__TryCreate(*(undefined4 *)(param2 + 0x10),0x10,2,0);
+		  System_Linq_Enumerable__First_KeyValuePair_object__object__
+		            (param1_00,param2_00,
+		             Method_System_Collections_Generic_Dictionary_string__RemoteFileRequest__Remove__);
+		  return;
+		}
+		*/
+
 			return null;
 		}
 
@@ -82,6 +243,55 @@ namespace Core.Files
 		[Address(RVA = "0xA95D", Offset = "0xA95D", VA = "0xA95D")]
 		private void CompleteFaultInternal(RemoteFileRequest request)
 		{
+		/* --- GHIDRA: CompleteFaultInternal ---
+		void Core_Files_AbstractFileManager__CompleteFaultInternal
+		               (undefined4 param1,int param2,undefined4 param3)
+		
+		{
+		  undefined4 uVar1;
+		  undefined4 uVar2;
+		  double dVar3;
+		  int iVar4;
+		  
+		  iVar4 = *(int *)(param2 + 0x24);
+		  if (iVar4 <= *(int *)(param2 + 0xc)) {
+		    if (DAT_ram_00a5acc4 == '\0') {
+		      Mono_Security_ASN1__get_Item(&System_Math_TypeInfo);
+		      DAT_ram_00a5acc4 = '\x01';
+		      iVar4 = *(int *)(param2 + 0x24);
+		    }
+		    if (*(int *)(System_Math_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(System_Math_TypeInfo);
+		    }
+		    dVar3 = System_Math__Log10((double)(1.0 - (float)iVar4),3.0,0);
+		    if (DAT_ram_00a5acbb == '\0') {
+		      Mono_Security_ASN1__get_Item
+		                (&Core_Files_AbstractFileManager__AwaitDownLoadRoutine_d__9_TypeInfo);
+		      DAT_ram_00a5acbb = '\x01';
+		    }
+		    iVar4 = unnamed_function_1417
+		                      (Core_Files_AbstractFileManager__AwaitDownLoadRoutine_d__9_TypeInfo);
+		    *(undefined4 *)(iVar4 + 0x18) = param1;
+		    *(undefined4 *)(iVar4 + 8) = 0;
+		    *(float *)(iVar4 + 0x14) = (float)(1.0 - dVar3) / 1000.0;
+		    *(int *)(iVar4 + 0x10) = param2;
+		    Utils_CoroutineSource__GetMono(iVar4,0);
+		    return;
+		  }
+		  Core_Files_AbstractFileManager__CompleteSuccessInternal(param1,param2,iVar4);
+		  uVar1 = unnamed_function_2232(&StringLiteral_7831);
+		  uVar1 = func_ii_4419(uVar1,param2,0);
+		  uVar2 = unnamed_function_2232(&System_Exception_TypeInfo);
+		  uVar2 = unnamed_function_1417(uVar2);
+		  System_String__Concat(uVar2,uVar1,0);
+		  uVar1 = unnamed_function_2232(&Method_Core_Files_AbstractFileManager_HandleError__);
+		  func_ii_1050(uVar2,uVar1);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
 		}
 
 		// Token: 0x06005CCC RID: 23756 RVA: 0x00002050 File Offset: 0x00000250

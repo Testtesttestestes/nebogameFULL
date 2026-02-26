@@ -25,6 +25,21 @@ namespace UI.Windows
 		[Address(RVA = "0x616E", Offset = "0x616E", VA = "0x616E")]
 		public NotFoundWindowKey(string windowId)
 		{
+		/* --- GHIDRA: .ctor ---
+		undefined4 UI_Windows_NotFoundWindowKey___ctor(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a639f2 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_11635);
+		    DAT_ram_00a639f2 = '\x01';
+		  }
+		  uVar1 = func_ii_4419(StringLiteral_11635,*(undefined4 *)(param1 + 0x48),0);
+		  return uVar1;
+		}
+		*/
+
 		}
 
 		// Token: 0x040007A2 RID: 1954

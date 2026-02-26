@@ -157,4 +157,56 @@ namespace Gameplay.Assistants.Model
 			}
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: set_Dic ---
+		void Gameplay_Assistants_Model_BaseAssistantModel__set_Dic(int param1,undefined4 param2)
+		
+		{
+		  *(undefined8 *)(param1 + 0xc) = 0;
+		  Core_ExternalIncomingScriptCall_CallbackItem___Il2CppFullySharedGenericType____ctor(param1,0);
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_Status ---
+		uint Gameplay_Assistants_Model_BaseAssistantModel__set_Status(int param1,undefined4 param2)
+		
+		{
+		  return (uint)(*(int *)(*(int *)(param1 + 0x14) + 0xc) == 0);
+		}
+		*/
+
+
+		/* --- GHIDRA: get_IsIdle ---
+		uint Gameplay_Assistants_Model_BaseAssistantModel__get_IsIdle(int param1,undefined4 param2)
+		
+		{
+		  return (uint)(*(int *)(*(int *)(param1 + 0x14) + 0xc) == 1);
+		}
+		*/
+
+
+		/* --- GHIDRA: get_IsActive ---
+		uint Gameplay_Assistants_Model_BaseAssistantModel__get_IsActive(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  
+		  iVar1 = *(int *)(*(int *)(param1 + 0x14) + 0xc);
+		  return (uint)(iVar1 == 2 || iVar1 == 4);
+		}
+		*/
+
+
+		/* --- GHIDRA: get_IsPause ---
+		uint Gameplay_Assistants_Model_BaseAssistantModel__get_IsPause(int param1,undefined4 param2)
+		
+		{
+		  return (uint)(*(int *)(*(int *)(param1 + 0x14) + 0xc) == 5);
+		}
+		*/
+
 }

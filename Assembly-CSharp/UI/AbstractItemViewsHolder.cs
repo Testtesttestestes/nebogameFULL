@@ -18,6 +18,18 @@ namespace UI
 		[Address(RVA = "0x5C2D", Offset = "0x5C2D", VA = "0x5C2D")]
 		protected AbstractItemViewsHolder()
 		{
+		/* --- GHIDRA: .ctor ---
+		undefined4 UI_AbstractItemViewsHolder___ctor(undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a5b892 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_12658);
+		    DAT_ram_00a5b892 = '\x01';
+		  }
+		  return StringLiteral_12658;
+		}
+		*/
+
 		}
 	}
 }

@@ -13,6 +13,17 @@ namespace Core.Extensions.Dict
 		[Address(RVA = "0xAC35", Offset = "0xAC35", VA = "0xAC35")]
 		public static string GetView(this TutorialUIPointerDic dic)
 		{
+		/* --- GHIDRA: GetView ---
+		undefined4 Core_Extensions_Dict_TutorialUIPointerDicExt__GetView(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  uVar1 = Core_Extensions_Dict_DictExt__GetAsset(*(undefined4 *)(param1 + 0x20),0x2a,0);
+		  return uVar1;
+		}
+		*/
+
 			return null;
 		}
 	}

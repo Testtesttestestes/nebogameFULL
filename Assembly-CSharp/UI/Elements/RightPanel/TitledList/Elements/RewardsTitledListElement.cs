@@ -34,6 +34,26 @@ namespace UI.Elements.RightPanel.TitledList.Elements
 		[Address(RVA = "0x6029", Offset = "0x6029", VA = "0x6029", Slot = "6")]
 		protected override void OnInit(RewardsTitledListElementArgs args)
 		{
+		/* --- GHIDRA: OnInit ---
+		void UI_Elements_RightPanel_TitledList_Elements_RewardsTitledListElement__OnInit
+		               (undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a63966 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Elements_RightPanel_TitledList_BaseTitledListElement_RewardsTitledListElementArgs___ctor__
+		              );
+		    DAT_ram_00a63966 = '\x01';
+		  }
+		  UnityEngine_ParticleSystemRenderer__GetMeshes
+		            (param1,
+		             Method_UI_Elements_RightPanel_TitledList_BaseTitledListElement_RewardsTitledListElementArgs___ctor__
+		            );
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06000D47 RID: 3399 RVA: 0x00002050 File Offset: 0x00000250
@@ -49,4 +69,22 @@ namespace UI.Elements.RightPanel.TitledList.Elements
 		[SerializeField]
 		private AbstractRewardsRender _rewardsRender;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_Rewards ---
+		void UI_Elements_RightPanel_TitledList_Elements_RewardsTitledListElement__get_Rewards
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  int iVar1;
+		  
+		  UI_Rewards_AbstractRewardsRender__get_Rewards(*(undefined4 *)(param1 + 0x10),param2,0);
+		  iVar1 = **(int **)(param1 + 0x10);
+		  (**(code **)((ulonglong)*(uint *)(iVar1 + 0xf0) * 4))
+		            (*(int **)(param1 + 0x10),*(undefined4 *)(iVar1 + 0xf4));
+		  return;
+		}
+		*/
+
 }

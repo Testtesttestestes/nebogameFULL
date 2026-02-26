@@ -17,6 +17,15 @@ namespace Gameplay.Auchan.View
 		[Address(RVA = "0x9C57", Offset = "0x9C57", VA = "0x9C57", Slot = "22")]
 		protected override void OnShow(ArtifactInfoPopupWindowArgs args)
 		{
+		/* --- GHIDRA: OnShow ---
+		void Gameplay_Auchan_View_AuchanArtifactInfoPopupWindow__OnShow(undefined4 param1,undefined4 param2)
+		
+		{
+		  Gameplay_Inventory_View_Info_ArtifactInfoPopupWindow__OnClose(param1,0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06004E25 RID: 20005 RVA: 0x00002050 File Offset: 0x00000250

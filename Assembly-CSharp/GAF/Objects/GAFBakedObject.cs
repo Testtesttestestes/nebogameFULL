@@ -16,6 +16,25 @@ namespace GAF.Objects
 		[Address(RVA = "0xC249", Offset = "0xC249", VA = "0xC249")]
 		public void addController()
 		{
+		/* --- GHIDRA: addController ---
+		undefined4 GAF_Objects_GAFBakedObject__addController(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a54ea1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&UnityEngine_Object_TypeInfo);
+		    DAT_ram_00a54ea1 = '\x01';
+		  }
+		  uVar1 = *(undefined4 *)(param1 + 0x10);
+		  if (*(int *)(UnityEngine_Object_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(UnityEngine_Object_TypeInfo);
+		  }
+		  uVar1 = UnityEngine_TextCore_Text_TextElement__get_textAsset(uVar1,0,0);
+		  return uVar1;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600796A RID: 31082 RVA: 0x000165C0 File Offset: 0x000147C0
@@ -23,6 +42,30 @@ namespace GAF.Objects
 		[Address(RVA = "0xC24A", Offset = "0xC24A", VA = "0xC24A")]
 		public bool hasController()
 		{
+		/* --- GHIDRA: hasController ---
+		void GAF_Objects_GAFBakedObject__hasController(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  undefined4 param1_00;
+		  
+		  GAFInternal_Objects_GAFBakedObjectInternal__initialize(param1,0);
+		  if (DAT_ram_00a54ea1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&UnityEngine_Object_TypeInfo);
+		    DAT_ram_00a54ea1 = '\x01';
+		  }
+		  param1_00 = *(undefined4 *)(param1 + 0x10);
+		  if (*(int *)(UnityEngine_Object_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(UnityEngine_Object_TypeInfo);
+		  }
+		  iVar1 = UnityEngine_TextCore_Text_TextElement__get_textAsset(param1_00,0,0);
+		  if (iVar1 != 0) {
+		    *(int *)(*(int *)(param1 + 0x10) + 0x10) = param1;
+		  }
+		  return;
+		}
+		*/
+
 			return default(bool);
 		}
 
@@ -31,6 +74,20 @@ namespace GAF.Objects
 		[Address(RVA = "0x190E", Offset = "0x190E", VA = "0x190E")]
 		public void removeController()
 		{
+		/* --- GHIDRA: removeController ---
+		int * GAF_Objects_GAFBakedObject__removeController(int *param1)
+		
+		{
+		  if (*param1 == 0) {
+		    return param1;
+		  }
+		  System_Data_DataSet__ValidateLocaleConstraint(*param1);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
 		}
 
 		// Token: 0x0600796C RID: 31084 RVA: 0x00002050 File Offset: 0x00000250
@@ -38,6 +95,32 @@ namespace GAF.Objects
 		[Address(RVA = "0xC24B", Offset = "0xC24B", VA = "0xC24B", Slot = "13")]
 		public override void reload()
 		{
+		/* --- GHIDRA: reload ---
+		void GAF_Objects_GAFBakedObject__reload
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  int iVar1;
+		  undefined4 param1_00;
+		  
+		  GAFInternal_Objects_GAFBakedObjectInternal__reload(param1,param2,param3,0);
+		  if (DAT_ram_00a54ea1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&UnityEngine_Object_TypeInfo);
+		    DAT_ram_00a54ea1 = '\x01';
+		  }
+		  param1_00 = *(undefined4 *)(param1 + 0x10);
+		  if (*(int *)(UnityEngine_Object_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(UnityEngine_Object_TypeInfo);
+		  }
+		  iVar1 = UnityEngine_TextCore_Text_TextElement__get_textAsset(param1_00,0,0);
+		  if (iVar1 != 0) {
+		    GAFInternal_Objects_GAFBakedObjectInternal__get_currentMaterial(param1,0);
+		    GAFInternal_Objects_GAFBakedObjectInternal__get_previousState(param1,0);
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600796D RID: 31085 RVA: 0x00002050 File Offset: 0x00000250

@@ -33,6 +33,31 @@ namespace I2.Loc
 		[Address(RVA = "0xBF84", Offset = "0xBF84", VA = "0xBF84")]
 		public LanguageSourceAsset()
 		{
+		/* --- GHIDRA: .ctor ---
+		int * I2_Loc_LanguageSourceAsset___ctor(int param1,undefined4 param2)
+		
+		{
+		  int *piVar1;
+		  int *piVar2;
+		  
+		  piVar1 = (int *)0x0;
+		  if (DAT_ram_00a6047a == '\0') {
+		    Mono_Security_ASN1__get_Item(&UnityEngine_Object_TypeInfo);
+		    DAT_ram_00a6047a = '\x01';
+		  }
+		  piVar2 = *(int **)(param1 + 8);
+		  if (piVar2 != (int *)0x0) {
+		    if (((uint)*(byte *)(UnityEngine_Object_TypeInfo + 0xb8) <= (uint)*(byte *)(*piVar2 + 0xb8)) &&
+		       (piVar1 = piVar2,
+		       *(int *)(*(int *)(*piVar2 + 100) + (uint)*(byte *)(UnityEngine_Object_TypeInfo + 0xb8) * 4 +
+		               -4) != UnityEngine_Object_TypeInfo)) {
+		      piVar1 = (int *)0x0;
+		    }
+		  }
+		  return piVar1;
+		}
+		*/
+
 		}
 
 		// Token: 0x04003DB6 RID: 15798
@@ -40,4 +65,25 @@ namespace I2.Loc
 		[FieldOffset(Offset = "0xC")]
 		public LanguageSourceData mSource;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: set_SourceData ---
+		void I2_Loc_LanguageSourceAsset__set_SourceData(int param1,undefined4 param2)
+		
+		{
+		  undefined4 param1_00;
+		  
+		  if (DAT_ram_00a60479 == '\0') {
+		    Mono_Security_ASN1__get_Item(&I2_Loc_LanguageSourceData_TypeInfo);
+		    DAT_ram_00a60479 = '\x01';
+		  }
+		  param1_00 = unnamed_function_1417(I2_Loc_LanguageSourceData_TypeInfo);
+		  I2_Loc_LanguageSourceData__ValidateFullTerm(param1_00,param1);
+		  *(undefined4 *)(param1 + 0xc) = param1_00;
+		  UnityEngine_RuntimeInitializeOnLoadMethodAttribute__set_loadType(param1,0);
+		  return;
+		}
+		*/
+
 }

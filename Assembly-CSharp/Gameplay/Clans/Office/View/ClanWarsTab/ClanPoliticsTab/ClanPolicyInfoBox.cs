@@ -54,4 +54,20 @@ namespace Gameplay.Clans.Office.View.ClanWarsTab.ClanPoliticsTab
 		[SerializeField]
 		private ClanWarStatusView _warStatusView;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_WarStatusView ---
+		void Gameplay_Clans_Office_View_ClanWarsTab_ClanPoliticsTab_ClanPolicyInfoBox__get_WarStatusView
+		               (int param1,int param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  Gameplay_Clans_Office_View_ClanTitle__get_Text
+		            (*(undefined4 *)(param1 + 0x10),*(undefined4 *)(*(int *)(param2 + 0x1c) + 0x18),0);
+		  Gameplay_Clans_Office_View_ClanLeagueBaseInfoView__Awake
+		            (*(undefined4 *)(param1 + 0x14),param2,param3,0);
+		  return;
+		}
+		*/
+
 }

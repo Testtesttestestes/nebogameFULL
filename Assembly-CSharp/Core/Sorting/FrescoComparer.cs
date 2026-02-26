@@ -22,6 +22,20 @@ namespace Core.Sorting
 		[Address(RVA = "0xA730", Offset = "0xA730", VA = "0xA730")]
 		public FrescoComparer()
 		{
+		/* --- GHIDRA: .ctor ---
+		int Core_Sorting_FrescoComparer___ctor
+		              (undefined4 param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  int iVar1;
+		  int iVar2;
+		  
+		  iVar1 = Core_Sorting_QuestComparer__Compare(param3,param2,param3);
+		  iVar2 = Core_Sorting_QuestComparer__Compare(param3,param3,param3);
+		  return iVar1 - iVar2;
+		}
+		*/
+
 		}
 	}
 }

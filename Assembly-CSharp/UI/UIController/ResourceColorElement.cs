@@ -53,6 +53,21 @@ namespace UI.UIController
 		[Address(RVA = "0x5CC4", Offset = "0x5CC4", VA = "0x5CC4")]
 		public ResourceColorElement()
 		{
+		/* --- GHIDRA: .ctor ---
+		void UI_UIController_ResourceColorElement___ctor(int param1,undefined4 param2)
+		
+		{
+		  undefined4 param1_00;
+		  
+		  func_ii_7891(*(undefined4 *)(param1 + 0x10),0,0);
+		  param1_00 = System_Collections_Generic_SortedDictionary_Enumerator_object__object___get_Current
+		                        (param1,0);
+		  func_ii_8007(param1_00,0,0);
+		  *(undefined4 *)(param1 + 0x10) = 0;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0400036E RID: 878

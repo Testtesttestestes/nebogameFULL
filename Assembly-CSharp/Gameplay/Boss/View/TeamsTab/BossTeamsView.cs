@@ -40,6 +40,25 @@ namespace Gameplay.Boss.View.TeamsTab
 		[Address(RVA = "0x94E4", Offset = "0x94E4", VA = "0x94E4", Slot = "5")]
 		protected override BossTeamsViewMediator CreateMediator()
 		{
+		/* --- GHIDRA: CreateMediator ---
+		void Gameplay_Boss_View_TeamsTab_BossTeamsView__CreateMediator(undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a579c5 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Gameplay_Boss_View_AbstractBossWindowView_BossTeamsView__BossTeamsViewMediator___ctor__
+		              );
+		    DAT_ram_00a579c5 = '\x01';
+		  }
+		  ScreenAdaptation_Common_AppSize__Update
+		            (param1,
+		             Method_Gameplay_Boss_View_AbstractBossWindowView_BossTeamsView__BossTeamsViewMediator___ctor__
+		            );
+		  return;
+		}
+		*/
+
 			return null;
 		}
 
@@ -62,4 +81,30 @@ namespace Gameplay.Boss.View.TeamsTab
 		[SerializeField]
 		private BossPossibleEmptyWindowStateController _stateController;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_ListAdapter ---
+		undefined4 Gameplay_Boss_View_TeamsTab_BossTeamsView__get_ListAdapter(int param1,undefined4 param2)
+		
+		{
+		  undefined4 param1_00;
+		  undefined4 param4;
+		  undefined4 param3;
+		  undefined4 param2_00;
+		  
+		  if (DAT_ram_00a579c4 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Gameplay_Boss_Controller_BossTeamsViewMediator_TypeInfo);
+		    DAT_ram_00a579c4 = '\x01';
+		  }
+		  param4 = *(undefined4 *)(param1 + 0x1c);
+		  param3 = *(undefined4 *)(param1 + 0x18);
+		  param2_00 = *(undefined4 *)(param1 + 0x14);
+		  param1_00 = unnamed_function_1417(Gameplay_Boss_Controller_BossTeamsViewMediator_TypeInfo);
+		  Gameplay_Boss_Controller_BossTeamEditViewMediator___c__DisplayClass17_0___RemoveFromTeam_b__0
+		            (param1_00,param2_00,param3,param4,0);
+		  return param1_00;
+		}
+		*/
+
 }

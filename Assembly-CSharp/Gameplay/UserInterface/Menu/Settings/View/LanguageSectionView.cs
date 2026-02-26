@@ -42,6 +42,21 @@ namespace Gameplay.UserInterface.Menu.Settings.View
 		[Address(RVA = "0x68DA", Offset = "0x68DA", VA = "0x68DA")]
 		public LanguageSectionView()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_UserInterface_Menu_Settings_View_LanguageSectionView___ctor
+		               (undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a59884 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_UnityEngine_Events_UnityEvent_SystemLanguage___ctor__);
+		    DAT_ram_00a59884 = '\x01';
+		  }
+		  Sirenix_Serialization_UnityEventFormatter_object___GetUninitializedObject
+		            (param1,Method_UnityEngine_Events_UnityEvent_SystemLanguage___ctor__);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x04000C47 RID: 3143
@@ -85,4 +100,41 @@ namespace Gameplay.UserInterface.Menu.Settings.View
 			}
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_Language ---
+		void Gameplay_UserInterface_Menu_Settings_View_LanguageSectionView__get_Language
+		               (int param1,int param2,undefined4 param3)
+		
+		{
+		  undefined4 param2_00;
+		  
+		  if (DAT_ram_00a59883 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_UnityEngine_Events_UnityEvent_SystemLanguage__Invoke__);
+		    DAT_ram_00a59883 = '\x01';
+		  }
+		  if (param2 != 0) {
+		    if (*(char *)(*(int *)(param1 + 0x14) + 0xc4) == '\0') {
+		      if (*(char *)(*(int *)(param1 + 0x18) + 0xc4) == '\0') {
+		        param2_00 = 0x2b;
+		      }
+		      else {
+		        param2_00 = 0x1e;
+		      }
+		    }
+		    else {
+		      param2_00 = 10;
+		    }
+		    *(undefined4 *)(param1 + 0x20) = param2_00;
+		    if (*(int *)(param1 + 0x1c) != 0) {
+		      UnityEngine_Events_UnityEvent_Int32Enum___GetDelegate
+		                (*(int *)(param1 + 0x1c),param2_00,
+		                 Method_UnityEngine_Events_UnityEvent_SystemLanguage__Invoke__);
+		    }
+		  }
+		  return;
+		}
+		*/
+
 }

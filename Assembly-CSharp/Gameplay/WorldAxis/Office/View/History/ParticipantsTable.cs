@@ -23,6 +23,16 @@ namespace Gameplay.WorldAxis.Office.View.History
 		[Address(RVA = "0x6448", Offset = "0x6448", VA = "0x6448")]
 		public ParticipantsTable()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_WorldAxis_Office_View_History_ParticipantsTable___ctor
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  UnityEngine_Component__GetComponentInChildren_object_(*(undefined4 *)(param1 + 0x18),param2,0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x040009C1 RID: 2497

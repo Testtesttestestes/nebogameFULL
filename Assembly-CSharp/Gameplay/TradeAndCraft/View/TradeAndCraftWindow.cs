@@ -110,6 +110,26 @@ namespace Gameplay.TradeAndCraft.View
 		[Address(RVA = "0x6D55", Offset = "0x6D55", VA = "0x6D55")]
 		private void OnDestroy()
 		{
+		/* --- GHIDRA: OnDestroy ---
+		void Gameplay_TradeAndCraft_View_TradeAndCraftWindow__OnDestroy
+		               (undefined4 param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  if (DAT_ram_00a584c5 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Windows_ClosableBaseWindow_TradeAndCraftWindow_TradeAndCraftWindowArgs__OnShow__
+		              );
+		    DAT_ram_00a584c5 = '\x01';
+		  }
+		  func_ii_7769(param1,param2,
+		               Method_UI_Windows_ClosableBaseWindow_TradeAndCraftWindow_TradeAndCraftWindowArgs__OnShow__
+		              );
+		  Gameplay_TradeAndCraft_View_TradeAndCraftWindow__OnShow(param1,param1);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06001BD7 RID: 7127 RVA: 0x00002050 File Offset: 0x00000250
@@ -117,6 +137,83 @@ namespace Gameplay.TradeAndCraft.View
 		[Address(RVA = "0x6D56", Offset = "0x6D56", VA = "0x6D56", Slot = "22")]
 		protected override void OnShow(TradeAndCraftWindow.TradeAndCraftWindowArgs args)
 		{
+		/* --- GHIDRA: OnShow ---
+		void Gameplay_TradeAndCraft_View_TradeAndCraftWindow__OnShow(int param1,undefined4 param2)
+		
+		{
+		  uint uVar1;
+		  uint *puVar2;
+		  undefined4 uVar3;
+		  undefined4 uVar4;
+		  int *piVar5;
+		  int iVar6;
+		  undefined4 uVar7;
+		  
+		  if (DAT_ram_00a584c6 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_Gameplay_IGame_TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&Gameplay_TradeAndCraft_Controller_TradeAndCraftController_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Gameplay_TradeAndCraft_Events_TradeAndCraftEvents_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Gameplay_TradeAndCraft_Model_TradeAndCraftModel_TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&Gameplay_TradeAndCraft_Controller_TradeAndCraftViewMediator_TypeInfo);
+		    DAT_ram_00a584c6 = '\x01';
+		  }
+		  if (*(char *)(param1 + 100) == '\0') {
+		    if (DAT_ram_00a6456f == '\0') {
+		      Mono_Security_ASN1__get_Item(&Core_Gameplay_Game_TypeInfo);
+		      DAT_ram_00a6456f = '\x01';
+		    }
+		    piVar5 = (int *)**(undefined4 **)(Core_Gameplay_Game_TypeInfo + 0x5c);
+		    iVar6 = *piVar5;
+		    if (*(ushort *)(iVar6 + 0xb6) != 0) {
+		      uVar1 = 0;
+		      do {
+		        if (Core_Gameplay_IGame_TypeInfo == *(int *)(*(int *)(iVar6 + 0x58) + uVar1 * 8)) {
+		          puVar2 = (uint *)(*(int *)(*(int *)(iVar6 + 0x58) + uVar1 * 8 + 4) * 8 + iVar6 + 0x140);
+		          goto code_r0x80ef85cd;
+		        }
+		        uVar1 = uVar1 + 1;
+		      } while (*(ushort *)(iVar6 + 0xb6) != uVar1);
+		    }
+		    puVar2 = (uint *)func_ii_1080(piVar5,Core_Gameplay_IGame_TypeInfo,0x10);
+		code_r0x80ef85cd:
+		    uVar3 = (**(code **)((ulonglong)*puVar2 * 4))(piVar5,puVar2[1]);
+		    uVar3 = func_ii_7112(uVar3,0);
+		    uVar4 = unnamed_function_1417(Gameplay_TradeAndCraft_Model_TradeAndCraftModel_TypeInfo);
+		    Gameplay_TradeAndCraft_View_TradeOptionsWindow_TradeOptionsWindowArgs___ctor(uVar4,uVar3,uVar3);
+		    *(undefined4 *)(param1 + 0x54) = uVar4;
+		    uVar3 = unnamed_function_1417(Gameplay_TradeAndCraft_Events_TradeAndCraftEvents_TypeInfo);
+		    *(undefined4 *)(param1 + 0x58) = uVar3;
+		    uVar7 = *(undefined4 *)(param1 + 0x54);
+		    uVar4 = unnamed_function_1417
+		                      (Gameplay_TradeAndCraft_Controller_TradeAndCraftController_TypeInfo);
+		    if (DAT_ram_00a584d2 == '\0') {
+		      Mono_Security_ASN1__get_Item
+		                (&Method_MVC_AbstractController_TradeAndCraftModel__TradeAndCraftEvents___ctor__);
+		      DAT_ram_00a584d2 = '\x01';
+		    }
+		    Gameplay_Combat_AbstractCombat_object__object__object__object__object___set_User
+		              (uVar4,uVar7,uVar3,
+		               Method_MVC_AbstractController_TradeAndCraftModel__TradeAndCraftEvents___ctor__);
+		    *(undefined4 *)(param1 + 0x5c) = uVar4;
+		    uVar3 = *(undefined4 *)(param1 + 0x54);
+		    uVar7 = *(undefined4 *)(param1 + 0x58);
+		    piVar5 = (int *)unnamed_function_1417
+		                              (Gameplay_TradeAndCraft_Controller_TradeAndCraftViewMediator_TypeInfo)
+		    ;
+		    Gameplay_TradeAndCraft_Controller_TradeAndCraftController___ctor(piVar5,uVar3,uVar7,uVar4,uVar4)
+		    ;
+		    (**(code **)((ulonglong)*(uint *)(*piVar5 + 0x160) * 4))
+		              (piVar5,param1,*(undefined4 *)(*piVar5 + 0x164));
+		    *(int **)(param1 + 0x60) = piVar5;
+		    MVC_AbstractController__Dispose(*(undefined4 *)(param1 + 0x5c),0);
+		    *(undefined1 *)(param1 + 100) = 1;
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06001BD8 RID: 7128 RVA: 0x00002050 File Offset: 0x00000250
@@ -124,6 +221,32 @@ namespace Gameplay.TradeAndCraft.View
 		[Address(RVA = "0x6D57", Offset = "0x6D57", VA = "0x6D57")]
 		private void SetupMVC()
 		{
+		/* --- GHIDRA: SetupMVC ---
+		void Gameplay_TradeAndCraft_View_TradeAndCraftWindow__SetupMVC(int param1,undefined4 param2)
+		
+		{
+		  undefined8 *puVar1;
+		  int iVar2;
+		  
+		  if (*(char *)(param1 + 100) != '\0') {
+		    puVar1 = (undefined8 *)(param1 + 0x5c);
+		    MVC_AbstractController__Run(*(undefined4 *)puVar1,0);
+		    iVar2 = **(int **)(param1 + 0x54);
+		    (**(code **)((ulonglong)*(uint *)(iVar2 + 0xe8) * 4))
+		              (*(int **)(param1 + 0x54),*(undefined4 *)(iVar2 + 0xec));
+		    iVar2 = **(int **)puVar1;
+		    (**(code **)((ulonglong)*(uint *)(iVar2 + 0xe8) * 4))
+		              (*(int **)puVar1,*(undefined4 *)(iVar2 + 0xec));
+		    iVar2 = **(int **)(param1 + 0x60);
+		    (**(code **)((ulonglong)*(uint *)(iVar2 + 0x130) * 4))
+		              (*(int **)(param1 + 0x60),*(undefined4 *)(iVar2 + 0x134));
+		    *puVar1 = 0;
+		    *(undefined8 *)(param1 + 0x54) = 0;
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06001BD9 RID: 7129 RVA: 0x00002050 File Offset: 0x00000250
@@ -131,6 +254,26 @@ namespace Gameplay.TradeAndCraft.View
 		[Address(RVA = "0x6D58", Offset = "0x6D58", VA = "0x6D58")]
 		private void DestroyMVC()
 		{
+		/* --- GHIDRA: DestroyMVC ---
+		void Gameplay_TradeAndCraft_View_TradeAndCraftWindow__DestroyMVC
+		               (undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a584c7 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Windows_ClosableBaseWindow_TradeAndCraftWindow_TradeAndCraftWindowArgs___ctor__
+		              );
+		    DAT_ram_00a584c7 = '\x01';
+		  }
+		  UI_MonoBehaviourWithStates_ClientStateChangedDelegate___Il2CppFullySharedGenericStructType___Invoke
+		            (param1,
+		             Method_UI_Windows_ClosableBaseWindow_TradeAndCraftWindow_TradeAndCraftWindowArgs___ctor__
+		            );
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06001BDA RID: 7130 RVA: 0x00002050 File Offset: 0x00000250

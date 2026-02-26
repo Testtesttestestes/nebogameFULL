@@ -62,6 +62,18 @@ namespace Gameplay.Fresco.View
 		[Address(RVA = "0x805C", Offset = "0x805C", VA = "0x805C")]
 		public FrescoView()
 		{
+		/* --- GHIDRA: .ctor ---
+		undefined4 Gameplay_Fresco_View_FrescoView___ctor(undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a57576 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_12618);
+		    DAT_ram_00a57576 = '\x01';
+		  }
+		  return StringLiteral_12618;
+		}
+		*/
+
 		}
 
 		// Token: 0x04001A39 RID: 6713
@@ -82,4 +94,26 @@ namespace Gameplay.Fresco.View
 		[SerializeField]
 		private FrescoGroupOSAView _osaView;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_OSAView ---
+		void Gameplay_Fresco_View_FrescoView__get_OSAView(int param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a57575 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Com_TheFallenGames_OSA_Core_OSA_BaseParamsWithPrefab__UserInFrescoGroupViewsHolder__Init__
+		              );
+		    DAT_ram_00a57575 = '\x01';
+		  }
+		  Com_TheFallenGames_OSA_Core_OSA_object__object___GetVirtualAbstractNormalizedScrollPosition
+		            (*(undefined4 *)(param1 + 0x18),
+		             Method_Com_TheFallenGames_OSA_Core_OSA_BaseParamsWithPrefab__UserInFrescoGroupViewsHolder__Init__
+		            );
+		  return;
+		}
+		*/
+
 }

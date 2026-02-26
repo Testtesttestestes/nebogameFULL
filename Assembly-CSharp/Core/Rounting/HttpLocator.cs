@@ -38,6 +38,23 @@ namespace Core.Rounting
 		[Address(RVA = "0xA752", Offset = "0xA752", VA = "0xA752", Slot = "7")]
 		public void Dispose()
 		{
+		/* --- GHIDRA: Dispose ---
+		undefined4 Core_Rounting_HttpLocator__Dispose(undefined4 param1,int *param2,undefined4 param3)
+		
+		{
+		  undefined4 param1_00;
+		  
+		  if (DAT_ram_00a60572 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_19433);
+		    DAT_ram_00a60572 = '\x01';
+		  }
+		  param1_00 = (**(code **)((ulonglong)*(uint *)(*param2 + 0xd8) * 4))
+		                        (param2,*(undefined4 *)(*param2 + 0xdc));
+		  Core_ExternAppMethods__OpenPaymentWindow(param1_00,StringLiteral_19433,0,0);
+		  return 1;
+		}
+		*/
+
 		}
 
 		// Token: 0x06005A4B RID: 23115 RVA: 0x000100F8 File Offset: 0x0000E2F8
@@ -45,6 +62,36 @@ namespace Core.Rounting
 		[Address(RVA = "0xA753", Offset = "0xA753", VA = "0xA753", Slot = "6")]
 		public bool TryExecute(Uri uri)
 		{
+		/* --- GHIDRA: TryExecute ---
+		undefined4 Core_Rounting_HttpLocator__TryExecute(undefined4 param1,undefined4 param2)
+		
+		{
+		  int param2_00;
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a60573 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_14086);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_1253);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_1236);
+		    DAT_ram_00a60573 = '\x01';
+		  }
+		  if (DAT_ram_00a60571 == '\0') {
+		    Mono_Security_ASN1__get_Item(&string___TypeInfo);
+		    Mono_Security_ASN1__get_Item(&System_Uri_TypeInfo);
+		    DAT_ram_00a60571 = '\x01';
+		  }
+		  param2_00 = Mono_Security_ASN1Convert__ToOid(string___TypeInfo,2);
+		  if (*(int *)(System_Uri_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(System_Uri_TypeInfo);
+		  }
+		  *(undefined4 *)(param2_00 + 0x10) = *(undefined4 *)(*(int *)(System_Uri_TypeInfo + 0x5c) + 0xc);
+		  *(undefined4 *)(param2_00 + 0x14) = *(undefined4 *)(*(int *)(System_Uri_TypeInfo + 0x5c) + 0x10);
+		  uVar1 = UnityEngine_Assertions_Assert__IsFalse(StringLiteral_1236,param2_00,0);
+		  uVar1 = System_Int32__ToString(StringLiteral_14086,uVar1,StringLiteral_1253,0,0);
+		  return uVar1;
+		}
+		*/
+
 			return default(bool);
 		}
 

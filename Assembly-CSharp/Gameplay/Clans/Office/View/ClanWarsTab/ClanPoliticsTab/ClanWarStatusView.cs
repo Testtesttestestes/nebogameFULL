@@ -95,6 +95,22 @@ namespace Gameplay.Clans.Office.View.ClanWarsTab.ClanPoliticsTab
 		[Address(RVA = "0x8C72", Offset = "0x8C72", VA = "0x8C72")]
 		public void SetDefendersAndAttackers(uint defenders, uint attackers)
 		{
+		/* --- GHIDRA: SetDefendersAndAttackers ---
+		void Gameplay_Clans_Office_View_ClanWarsTab_ClanPoliticsTab_ClanWarStatusView__SetDefendersAndAttackers
+		               (undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a57f62 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UI_MonoBehaviourWithStates_ClanWarStatusView_State___ctor__);
+		    DAT_ram_00a57f62 = '\x01';
+		  }
+		  ScreenAdaptation_Common_AppSize__Update
+		            (param1,Method_UI_MonoBehaviourWithStates_ClanWarStatusView_State___ctor__);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06003DB4 RID: 15796 RVA: 0x00002050 File Offset: 0x00000250
@@ -102,6 +118,29 @@ namespace Gameplay.Clans.Office.View.ClanWarsTab.ClanPoliticsTab
 		[Address(RVA = "0x8C73", Offset = "0x8C73", VA = "0x8C73")]
 		public ClanWarStatusView()
 		{
+		/* --- GHIDRA: .ctor ---
+		undefined4
+		Gameplay_Clans_Office_View_ClanWarsTab_ClanPoliticsTab_ClanWarStatusView___ctor
+		          (undefined4 param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a57f63 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Gameplay_Clans_Office_View_ClanResumesTab_UserInRatingsViewsHolder_TypeInfo);
+		    DAT_ram_00a57f63 = '\x01';
+		  }
+		  uVar1 = unnamed_function_1417
+		                    (Gameplay_Clans_Office_View_ClanResumesTab_UserInRatingsViewsHolder_TypeInfo);
+		  if (DAT_ram_00a57f66 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_UI_ItemViewsHolder_UserInRatingListElement___ctor__);
+		    DAT_ram_00a57f66 = '\x01';
+		  }
+		  return uVar1;
+		}
+		*/
+
 		}
 
 		// Token: 0x0400227A RID: 8826
@@ -176,4 +215,29 @@ namespace Gameplay.Clans.Office.View.ClanWarsTab.ClanPoliticsTab
 			ACCELERATION_BLOCKED
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_RequirementsView ---
+		void Gameplay_Clans_Office_View_ClanWarsTab_ClanPoliticsTab_ClanWarStatusView__get_RequirementsView
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  undefined4 uVar2;
+		  undefined4 local_8;
+		  undefined4 local_4;
+		  
+		  uVar2 = *(undefined4 *)(param1 + 0x34);
+		  local_8 = param3;
+		  local_4 = param2;
+		  uVar1 = Protocol_Combat_ProtoPlayerActionEvt___ctor(&local_4,0);
+		  UnityEngine_Component__GetComponentInChildren_object_(uVar2,uVar1,0);
+		  uVar2 = *(undefined4 *)(param1 + 0x38);
+		  uVar1 = Protocol_Combat_ProtoPlayerActionEvt___ctor(&local_8,0);
+		  UnityEngine_Component__GetComponentInChildren_object_(uVar2,uVar1,0);
+		  return;
+		}
+		*/
+
 }

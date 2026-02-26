@@ -53,6 +53,20 @@ namespace Gameplay.SmallGames.View.DailyRewards
 		[Address(RVA = "0x70E5", Offset = "0x70E5", VA = "0x70E5")]
 		public DailyRewardsButtonView()
 		{
+		/* --- GHIDRA: .ctor ---
+		undefined4
+		Gameplay_SmallGames_View_DailyRewards_DailyRewardsButtonView___ctor
+		          (undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a58294 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_12665);
+		    DAT_ram_00a58294 = '\x01';
+		  }
+		  return StringLiteral_12665;
+		}
+		*/
+
 		}
 
 		// Token: 0x04001133 RID: 4403
@@ -72,4 +86,71 @@ namespace Gameplay.SmallGames.View.DailyRewards
 		[FieldOffset(Offset = "0x18")]
 		private bool _hasReward;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_HasReward ---
+		void Gameplay_SmallGames_View_DailyRewards_DailyRewardsButtonView__get_HasReward
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  *(char *)(param1 + 0x18) = (char)param2;
+		  Com_TheFallenGames_OSA_CustomAdapters_TableView_Tuple_Basic_BasicTupleValueViewsHolder__UpdateAsText
+		            (*(undefined4 *)(param1 + 0x10),param2,0);
+		  Gameplay_SmallGames_View_DailyRewards_DailyRewardsButtonView__set_HasReward(param1,param1);
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_HasReward ---
+		void Gameplay_SmallGames_View_DailyRewards_DailyRewardsButtonView__set_HasReward
+		               (int param1,undefined4 param2)
+		
+		{
+		  uint uVar1;
+		  uint *puVar2;
+		  undefined4 uVar3;
+		  int *param1_00;
+		  int iVar4;
+		  undefined4 param1_01;
+		  undefined4 *puVar5;
+		  
+		  if (DAT_ram_00a58293 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_Gameplay_IGame_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_10738);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_10737);
+		    DAT_ram_00a58293 = '\x01';
+		  }
+		  if (DAT_ram_00a6456f == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_Gameplay_Game_TypeInfo);
+		    DAT_ram_00a6456f = '\x01';
+		  }
+		  uVar1 = 0;
+		  param1_00 = (int *)**(undefined4 **)(Core_Gameplay_Game_TypeInfo + 0x5c);
+		  iVar4 = *param1_00;
+		  if (*(ushort *)(iVar4 + 0xb6) != 0) {
+		    do {
+		      if (Core_Gameplay_IGame_TypeInfo == *(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8)) {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8 + 4) * 8 + iVar4 + 0x178);
+		        goto code_r0x80ec51c5;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar4 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(param1_00,Core_Gameplay_IGame_TypeInfo,0x17);
+		code_r0x80ec51c5:
+		  uVar3 = (**(code **)((ulonglong)*puVar2 * 4))(param1_00,puVar2[1]);
+		  uVar3 = Newtonsoft_Json_Converters_XmlDocumentTypeWrapper__get_System(uVar3,0);
+		  param1_01 = *(undefined4 *)(param1 + 0x14);
+		  puVar5 = &StringLiteral_10738;
+		  if (*(char *)(param1 + 0x18) == '\0') {
+		    puVar5 = &StringLiteral_10737;
+		  }
+		  uVar3 = Core_Extensions_Dict_DictExt__GetServiceOptionDic(uVar3,*puVar5,0);
+		  AssetContent_GameAnimatedButton__get_AssetId(param1_01,uVar3,0);
+		  return;
+		}
+		*/
+
 }

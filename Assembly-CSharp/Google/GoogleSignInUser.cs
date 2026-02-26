@@ -181,6 +181,19 @@ namespace Google
 		[Address(RVA = "0xC215", Offset = "0xC215", VA = "0xC215")]
 		public GoogleSignInUser()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Google_GoogleSignInUser___ctor(int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  undefined8 local_8;
+		  
+		  local_8 = 0;
+		  System_Text_Formatting_StringView__get_IsEmpty(&local_8,param1,param2,0);
+		  *(undefined8 *)(param1 + 8) = local_8;
+		  return;
+		}
+		*/
+
 		}
 	}
 }

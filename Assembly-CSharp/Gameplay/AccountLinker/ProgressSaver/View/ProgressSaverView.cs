@@ -81,6 +81,20 @@ namespace Gameplay.AccountLinker.ProgressSaver.View
 		[Address(RVA = "0xA50B", Offset = "0xA50B", VA = "0xA50B")]
 		public ProgressSaverView()
 		{
+		/* --- GHIDRA: .ctor ---
+		undefined4
+		Gameplay_AccountLinker_ProgressSaver_View_ProgressSaverView___ctor
+		          (undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a58930 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_12550);
+		    DAT_ram_00a58930 = '\x01';
+		  }
+		  return StringLiteral_12550;
+		}
+		*/
+
 		}
 
 		// Token: 0x04002F75 RID: 12149

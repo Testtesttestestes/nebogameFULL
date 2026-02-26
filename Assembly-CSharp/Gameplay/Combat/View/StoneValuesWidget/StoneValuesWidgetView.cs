@@ -17,6 +17,28 @@ namespace Gameplay.Combat.View.StoneValuesWidget
 		[Address(RVA = "0x87B5", Offset = "0x87B5", VA = "0x87B5")]
 		public void Start()
 		{
+		/* --- GHIDRA: Start ---
+		int Gameplay_Combat_View_StoneValuesWidget_StoneValuesWidgetView__Start
+		              (undefined4 param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  
+		  if (DAT_ram_00a566d9 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Gameplay_Combat_View_StoneValuesWidget_StoneValuesWidgetView__Draw_d__6_TypeInfo);
+		    DAT_ram_00a566d9 = '\x01';
+		  }
+		  iVar1 = unnamed_function_1417
+		                    (
+		                    Gameplay_Combat_View_StoneValuesWidget_StoneValuesWidgetView__Draw_d__6_TypeInfo
+		                    );
+		  *(undefined4 *)(iVar1 + 0x10) = param1;
+		  *(undefined4 *)(iVar1 + 8) = 0;
+		  return iVar1;
+		}
+		*/
+
 		}
 
 		// Token: 0x060037D4 RID: 14292 RVA: 0x00002052 File Offset: 0x00000252

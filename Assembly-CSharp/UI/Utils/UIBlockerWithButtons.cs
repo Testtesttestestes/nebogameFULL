@@ -15,6 +15,21 @@ namespace UI.Utils
 		[Address(RVA = "0x5C90", Offset = "0x5C90", VA = "0x5C90")]
 		private void CheckClickPosition(Vector2 clickPosition)
 		{
+		/* --- GHIDRA: CheckClickPosition ---
+		void UI_Utils_UIBlockerWithButtons__CheckClickPosition
+		               (undefined4 param1,int param2,undefined4 param3)
+		
+		{
+		  undefined8 local_10;
+		  undefined8 local_8;
+		  
+		  local_10 = *(undefined8 *)(param2 + 200);
+		  local_8 = local_10;
+		  UI_Utils_TextLinkHandler___ctor(param1,&local_10,&local_10);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06000912 RID: 2322 RVA: 0x00002050 File Offset: 0x00000250

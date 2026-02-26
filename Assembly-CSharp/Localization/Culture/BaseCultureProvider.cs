@@ -50,6 +50,37 @@ namespace Localization.Culture
 		[Address(RVA = "0x1AEA", Offset = "0x1AEA", VA = "0x1AEA")]
 		public CultureInfo GetCulture()
 		{
+		/* --- GHIDRA: GetCulture ---
+		undefined4 Localization_Culture_BaseCultureProvider__GetCulture(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  undefined4 param1_00;
+		  undefined4 uVar2;
+		  
+		  if (DAT_ram_00a575fd == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_System_Linq_Enumerable_Single_RefAccountInfo___);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Gameplay_FeedbackForm_Model_FeedbackFormModel__GetUid_b__20_0__);
+		    Mono_Security_ASN1__get_Item(&System_Func_RefAccountInfo__bool__TypeInfo);
+		    DAT_ram_00a575fd = '\x01';
+		  }
+		  if (*(int *)(param1 + 8) == 0) {
+		    uVar2 = 0;
+		  }
+		  else {
+		    param1_00 = *(undefined4 *)(*(int *)(param1 + 8) + 0x50);
+		    uVar2 = unnamed_function_1417(System_Func_RefAccountInfo__bool__TypeInfo);
+		    System_Collections_Generic_Dictionary_uint__object___GetEnumerator
+		              (uVar2,param1,Method_Gameplay_FeedbackForm_Model_FeedbackFormModel__GetUid_b__20_0__,0
+		              );
+		    iVar1 = func_ii_6917(param1_00,uVar2,Method_System_Linq_Enumerable_Single_RefAccountInfo___);
+		    uVar2 = *(undefined4 *)(iVar1 + 0x10);
+		  }
+		  return uVar2;
+		}
+		*/
+
 			return null;
 		}
 	}

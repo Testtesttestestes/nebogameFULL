@@ -104,6 +104,32 @@ namespace Gameplay.Inventory.View.Chest
 		[Address(RVA = "0x7982", Offset = "0x7982", VA = "0x7982", Slot = "22")]
 		protected override void OnShow(InventoryChestWindowOptions args)
 		{
+		/* --- GHIDRA: OnShow ---
+		void Gameplay_Inventory_View_Chest_InventoryChestWindow__OnShow
+		               (undefined4 param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  int iVar1;
+		  
+		  if (DAT_ram_00a5a0ed == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_System_Array_IndexOf_ArtikulMenuActionDic_Types_Actions___)
+		    ;
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UI_Windows_BaseWindow_InventoryChestWindowOptions__get_WindowArgs__);
+		    DAT_ram_00a5a0ed = '\x01';
+		  }
+		  iVar1 = func_ii_8093(param1,
+		                       Method_UI_Windows_BaseWindow_InventoryChestWindowOptions__get_WindowArgs__);
+		  iVar1 = System_Array__IndexOf_int_
+		                    (*(undefined4 *)(iVar1 + 0x1c),param2,
+		                     Method_System_Array_IndexOf_ArtikulMenuActionDic_Types_Actions___);
+		  if (-1 < iVar1) {
+		    System_ComponentModel_BindingList___Il2CppFullySharedGenericType___OnAddingNew(param1,2,0);
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06002863 RID: 10339 RVA: 0x00002050 File Offset: 0x00000250
@@ -111,6 +137,53 @@ namespace Gameplay.Inventory.View.Chest
 		[Address(RVA = "0x7983", Offset = "0x7983", VA = "0x7983")]
 		private void ArtifactContextMenuOnActionHandledEvent(ArtikulMenuActionDic.Types.Actions action)
 		{
+		/* --- GHIDRA: ArtifactContextMenuOnActionHandledEvent ---
+		void Gameplay_Inventory_View_Chest_InventoryChestWindow__ArtifactContextMenuOnActionHandledEvent
+		               (int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  undefined4 uVar2;
+		  
+		  if (DAT_ram_00a5a0ee == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_ArtikulMenuActionDic_Types_Actions__TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UI_Windows_BaseWindow_InventoryChestWindowOptions__get_WindowArgs__);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UI_Windows_ClosableBaseWindow_InventoryChestWindowOptions__OnClose__);
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Gameplay_Inventory_View_Chest_InventoryChestWindow_ArtifactContextMenuOnActionHandledEvent__
+		              );
+		    DAT_ram_00a5a0ee = '\x01';
+		  }
+		  iVar1 = func_ii_8093(param1,
+		                       Method_UI_Windows_BaseWindow_InventoryChestWindowOptions__get_WindowArgs__);
+		  if (*(int *)(iVar1 + 0x1c) != 0) {
+		    uVar2 = unnamed_function_1417(System_Action_ArtikulMenuActionDic_Types_Actions__TypeInfo);
+		    System_Action_int___Invoke
+		              (uVar2,param1,
+		               Method_Gameplay_Inventory_View_Chest_InventoryChestWindow_ArtifactContextMenuOnActionHandledEvent__
+		               ,0);
+		    Gameplay_Inventory_View_ContextMenu_ArtifactContextMenu__add_ActionHandledEvent(uVar2,param1);
+		    uVar2 = unnamed_function_1417(System_Action_ArtikulMenuActionDic_Types_Actions__TypeInfo);
+		    System_Action_int___Invoke
+		              (uVar2,param1,
+		               Method_Gameplay_Inventory_View_Chest_InventoryChestWindow_ArtifactContextMenuOnActionHandledEvent__
+		               ,0);
+		    Gameplay_Inventory_View_Info_ArtifactInfoActionButtonsView__add_ActionHandledEvent(uVar2,0);
+		  }
+		  UI_Windows_ClosableBaseWindow_object___OnClickBack
+		            (param1,Method_UI_Windows_ClosableBaseWindow_InventoryChestWindowOptions__OnClose__);
+		  iVar1 = *(int *)(param1 + 0x50);
+		  if (iVar1 != 0) {
+		    (**(code **)((ulonglong)*(uint *)(iVar1 + 0xc) * 4))
+		              (*(undefined4 *)(iVar1 + 0x20),*(undefined4 *)(iVar1 + 0x14));
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06002864 RID: 10340 RVA: 0x00002050 File Offset: 0x00000250
@@ -157,4 +230,113 @@ namespace Gameplay.Inventory.View.Chest
 		[SerializeField]
 		protected ChestSlotsInfoView _chestSlotsInfoView;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_ChestSlotsInfoView ---
+		void Gameplay_Inventory_View_Chest_InventoryChestWindow__get_ChestSlotsInfoView
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  int param1_00;
+		  int *param1_01;
+		  int iVar2;
+		  
+		  if (DAT_ram_00a5a0ea == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_TypeInfo);
+		    DAT_ram_00a5a0ea = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x50);
+		  while ((param1_01 = (int *)UnityEngine_UI_Image__set_sprite(param1_00,param2,0),
+		         param1_01 == (int *)0x0 || (System_Action_TypeInfo == *param1_01))) {
+		    iVar2 = func_ii_4329(param1 + 0x50,param1_01,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,System_Action_TypeInfo);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: add_ChestClosedEvent ---
+		void Gameplay_Inventory_View_Chest_InventoryChestWindow__add_ChestClosedEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  int param1_00;
+		  int *param1_01;
+		  int iVar2;
+		  
+		  if (DAT_ram_00a5a0eb == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_TypeInfo);
+		    DAT_ram_00a5a0eb = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x50);
+		  while ((param1_01 = (int *)func_ii_7048(param1_00,param2,0), param1_01 == (int *)0x0 ||
+		         (System_Action_TypeInfo == *param1_01))) {
+		    iVar2 = func_ii_4329(param1 + 0x50,param1_01,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,System_Action_TypeInfo);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: get_InventoryGridView ---
+		void Gameplay_Inventory_View_Chest_InventoryChestWindow__get_InventoryGridView
+		               (undefined4 param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  int iVar1;
+		  undefined4 uVar2;
+		  
+		  if (DAT_ram_00a5a0ec == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_ArtikulMenuActionDic_Types_Actions__TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UI_Windows_BaseWindow_InventoryChestWindowOptions__get_WindowArgs__);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UI_Windows_ClosableBaseWindow_InventoryChestWindowOptions__OnShow__);
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Gameplay_Inventory_View_Chest_InventoryChestWindow_ArtifactContextMenuOnActionHandledEvent__
+		              );
+		    DAT_ram_00a5a0ec = '\x01';
+		  }
+		  func_ii_7769(param1,param2,
+		               Method_UI_Windows_ClosableBaseWindow_InventoryChestWindowOptions__OnShow__);
+		  iVar1 = func_ii_8093(param1,
+		                       Method_UI_Windows_BaseWindow_InventoryChestWindowOptions__get_WindowArgs__);
+		  if (*(int *)(iVar1 + 0x1c) != 0) {
+		    uVar2 = unnamed_function_1417(System_Action_ArtikulMenuActionDic_Types_Actions__TypeInfo);
+		    System_Action_int___Invoke
+		              (uVar2,param1,
+		               Method_Gameplay_Inventory_View_Chest_InventoryChestWindow_ArtifactContextMenuOnActionHandledEvent__
+		               ,0);
+		    Gameplay_Inventory_View_Info_InfoBox_TitleRowView___ctor(uVar2,param1);
+		    uVar2 = unnamed_function_1417(System_Action_ArtikulMenuActionDic_Types_Actions__TypeInfo);
+		    System_Action_int___Invoke
+		              (uVar2,param1,
+		               Method_Gameplay_Inventory_View_Chest_InventoryChestWindow_ArtifactContextMenuOnActionHandledEvent__
+		               ,0);
+		    Gameplay_Inventory_View_SplitArtifactView___ctor(uVar2,0);
+		  }
+		  return;
+		}
+		*/
+
 }

@@ -11,6 +11,60 @@ public class Amplitude
 	[Address(RVA = "0x54D3", Offset = "0x54D3", VA = "0x54D3")]
 	public static Amplitude getInstance()
 	{
+		/* --- GHIDRA: getInstance ---
+		undefined4 Amplitude__getInstance(undefined4 param1)
+		
+		{
+		  int param2;
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a647df == '\0') {
+		    Mono_Security_ASN1__get_Item(&Amplitude_TypeInfo);
+		    DAT_ram_00a647df = '\x01';
+		  }
+		  if (*(int *)(Amplitude_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Amplitude_TypeInfo);
+		  }
+		  if (DAT_ram_00a647dd == '\0') {
+		    Mono_Security_ASN1__get_Item(&Amplitude_TypeInfo);
+		    DAT_ram_00a647dd = '\x01';
+		  }
+		  param2 = Amplitude_TypeInfo;
+		  if (*(int *)(Amplitude_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Amplitude_TypeInfo);
+		  }
+		  uVar1 = Amplitude__getInstance(0,param2);
+		  return uVar1;
+		}
+		*/
+
+		/* --- GHIDRA: getInstance ---
+		undefined4 Amplitude__getInstance(undefined4 param1)
+		
+		{
+		  int param2;
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a647df == '\0') {
+		    Mono_Security_ASN1__get_Item(&Amplitude_TypeInfo);
+		    DAT_ram_00a647df = '\x01';
+		  }
+		  if (*(int *)(Amplitude_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Amplitude_TypeInfo);
+		  }
+		  if (DAT_ram_00a647dd == '\0') {
+		    Mono_Security_ASN1__get_Item(&Amplitude_TypeInfo);
+		    DAT_ram_00a647dd = '\x01';
+		  }
+		  param2 = Amplitude_TypeInfo;
+		  if (*(int *)(Amplitude_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Amplitude_TypeInfo);
+		  }
+		  uVar1 = Amplitude__getInstance(0,param2);
+		  return uVar1;
+		}
+		*/
+
 		return null;
 	}
 
@@ -40,6 +94,36 @@ public class Amplitude
 	[Address(RVA = "0x4BAE", Offset = "0x4BAE", VA = "0x4BAE")]
 	public Amplitude(string instanceName)
 	{
+		/* --- GHIDRA: .cctor ---
+		void Amplitude___cctor(int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  int param1_00;
+		  int *param1_01;
+		  int iVar2;
+		  
+		  if (DAT_ram_00a64861 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_TypeInfo);
+		    DAT_ram_00a64861 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x10);
+		  while ((param1_01 = (int *)UnityEngine_UI_Image__set_sprite(param1_00,param2,0),
+		         param1_01 == (int *)0x0 || (System_Action_TypeInfo == *param1_01))) {
+		    iVar2 = func_ii_4329(param1 + 0x10,param1_01,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,System_Action_TypeInfo);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
 	}
 
 	// Token: 0x06000009 RID: 9 RVA: 0x00002050 File Offset: 0x00000250
@@ -47,6 +131,443 @@ public class Amplitude
 	[Address(RVA = "0x54D6", Offset = "0x54D6", VA = "0x54D6")]
 	protected void Log(string message)
 	{
+		/* --- GHIDRA: Log<__Il2CppFullySharedGenericType> ---
+		void Amplitude__Log___Il2CppFullySharedGenericType_
+		               (undefined4 param1,undefined4 param2,int param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a632cc == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_Dictionary_string__object__Add__);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_Dictionary_string__object___ctor__);
+		    Mono_Security_ASN1__get_Item(&System_Collections_Generic_Dictionary_string__object__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4051);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_25144);
+		    DAT_ram_00a632cc = '\x01';
+		  }
+		  if (param3 != 0) {
+		    uVar1 = unnamed_function_1417(System_Collections_Generic_Dictionary_string__object__TypeInfo);
+		    System_Collections_Generic_Dictionary_object__StyleComplexSelector_PseudoStateData___set_Item
+		              (uVar1,Method_System_Collections_Generic_Dictionary_string__object___ctor__);
+		    System_Reflection_FieldInfo__get_IsStatic
+		              (uVar1,StringLiteral_25144,param3,
+		               Method_System_Collections_Generic_Dictionary_string__object__Add__);
+		    uVar1 = AmplitudeNS_MiniJSON_Json__Deserialize(uVar1,0);
+		    uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                      (StringLiteral_4051,param2,uVar1,0);
+		    Amplitude__get_Instance(param1,uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: Log<float> ---
+		void Amplitude__Log_float_(undefined4 param1,int param2,int param3,int param4,int param5)
+		
+		{
+		  int *param2_00;
+		  int iVar1;
+		  int iVar2;
+		  undefined4 uVar3;
+		  uint *puVar4;
+		  
+		  if (*(int *)(param5 + 0x1c) == 0) {
+		    Mono_Security_ASN1__get_Item(&object___TypeInfo);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_28643);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_1238);
+		    if (*(int *)(param5 + 0x1c) == 0) {
+		      System_ReadOnlySpan_char___GetPinnableReference(param5);
+		    }
+		  }
+		  param2_00 = (int *)Mono_Security_ASN1Convert__ToOid(object___TypeInfo,4);
+		  if ((param2 != 0) && (iVar1 = func_ii_1082(param2,*(undefined4 *)(*param2_00 + 0x20)), iVar1 == 0)
+		     ) {
+		    uVar3 = func_ii_1083();
+		    func_ii_1050(uVar3,0);
+		    do {
+		      halt_trap();
+		    } while( true );
+		  }
+		  param2_00[4] = param2;
+		  if ((param3 != 0) && (iVar1 = func_ii_1082(param3,*(undefined4 *)(*param2_00 + 0x20)), iVar1 == 0)
+		     ) {
+		    uVar3 = func_ii_1083();
+		    func_ii_1050(uVar3,0);
+		    do {
+		      halt_trap();
+		    } while( true );
+		  }
+		  param2_00[5] = param3;
+		  if ((param4 != 0) && (iVar1 = func_ii_1082(param4,*(undefined4 *)(*param2_00 + 0x20)), iVar1 == 0)
+		     ) {
+		    uVar3 = func_ii_1083();
+		    func_ii_1050(uVar3,0);
+		    do {
+		      halt_trap();
+		    } while( true );
+		  }
+		  param2_00[6] = param4;
+		  puVar4 = *(uint **)(*(int *)(param5 + 0x1c) + 4);
+		  iVar1 = (**(code **)((ulonglong)*puVar4 * 4))(StringLiteral_1238,param4,puVar4);
+		  if ((iVar1 != 0) && (iVar2 = func_ii_1082(iVar1,*(undefined4 *)(*param2_00 + 0x20)), iVar2 == 0))
+		  {
+		    uVar3 = func_ii_1083();
+		    func_ii_1050(uVar3,0);
+		    do {
+		      halt_trap();
+		    } while( true );
+		  }
+		  param2_00[7] = iVar1;
+		  uVar3 = UnityEngine_InputSystem_Utilities_TypeHelpers__GetNiceTypeName
+		                    (StringLiteral_28643,param2_00,0);
+		  Amplitude__get_Instance(param1,uVar3,0);
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: Log<object> ---
+		void Amplitude__Log_object_(undefined4 param1,int param2,int param3,int param4,int param5)
+		
+		{
+		  int *param2_00;
+		  int iVar1;
+		  int iVar2;
+		  undefined4 uVar3;
+		  
+		  if (*(int *)(param5 + 0x1c) == 0) {
+		    Mono_Security_ASN1__get_Item(&object___TypeInfo);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_28643);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_1238);
+		    if (*(int *)(param5 + 0x1c) == 0) {
+		      System_ReadOnlySpan_char___GetPinnableReference(param5);
+		    }
+		  }
+		  param2_00 = (int *)Mono_Security_ASN1Convert__ToOid(object___TypeInfo,4);
+		  if ((param2 != 0) && (iVar1 = func_ii_1082(param2,*(undefined4 *)(*param2_00 + 0x20)), iVar1 == 0)
+		     ) {
+		    uVar3 = func_ii_1083();
+		    func_ii_1050(uVar3,0);
+		    do {
+		      halt_trap();
+		    } while( true );
+		  }
+		  param2_00[4] = param2;
+		  if ((param3 != 0) && (iVar1 = func_ii_1082(param3,*(undefined4 *)(*param2_00 + 0x20)), iVar1 == 0)
+		     ) {
+		    uVar3 = func_ii_1083();
+		    func_ii_1050(uVar3,0);
+		    do {
+		      halt_trap();
+		    } while( true );
+		  }
+		  param2_00[5] = param3;
+		  if ((param4 != 0) && (iVar1 = func_ii_1082(param4,*(undefined4 *)(*param2_00 + 0x20)), iVar1 == 0)
+		     ) {
+		    uVar3 = func_ii_1083();
+		    func_ii_1050(uVar3,0);
+		    do {
+		      halt_trap();
+		    } while( true );
+		  }
+		  param2_00[6] = param4;
+		  iVar1 = System_String__Join_object_
+		                    (StringLiteral_1238,param4,*(undefined4 *)(*(int *)(param5 + 0x1c) + 4));
+		  if ((iVar1 != 0) && (iVar2 = func_ii_1082(iVar1,*(undefined4 *)(*param2_00 + 0x20)), iVar2 == 0))
+		  {
+		    uVar3 = func_ii_1083();
+		    func_ii_1050(uVar3,0);
+		    do {
+		      halt_trap();
+		    } while( true );
+		  }
+		  param2_00[7] = iVar1;
+		  uVar3 = UnityEngine_InputSystem_Utilities_TypeHelpers__GetNiceTypeName
+		                    (StringLiteral_28643,param2_00,0);
+		  Amplitude__get_Instance(param1,uVar3,0);
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: Log<long> ---
+		void Amplitude__Log_long_(undefined4 param1,int param2,int param3,int param4,int param5)
+		
+		{
+		  int *param2_00;
+		  int iVar1;
+		  int iVar2;
+		  undefined4 uVar3;
+		  
+		  if (*(int *)(param5 + 0x1c) == 0) {
+		    Mono_Security_ASN1__get_Item(&object___TypeInfo);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_28643);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_1238);
+		    if (*(int *)(param5 + 0x1c) == 0) {
+		      System_ReadOnlySpan_char___GetPinnableReference(param5);
+		    }
+		  }
+		  param2_00 = (int *)Mono_Security_ASN1Convert__ToOid(object___TypeInfo,4);
+		  if ((param2 != 0) && (iVar1 = func_ii_1082(param2,*(undefined4 *)(*param2_00 + 0x20)), iVar1 == 0)
+		     ) {
+		    uVar3 = func_ii_1083();
+		    func_ii_1050(uVar3,0);
+		    do {
+		      halt_trap();
+		    } while( true );
+		  }
+		  param2_00[4] = param2;
+		  if ((param3 != 0) && (iVar1 = func_ii_1082(param3,*(undefined4 *)(*param2_00 + 0x20)), iVar1 == 0)
+		     ) {
+		    uVar3 = func_ii_1083();
+		    func_ii_1050(uVar3,0);
+		    do {
+		      halt_trap();
+		    } while( true );
+		  }
+		  param2_00[5] = param3;
+		  if ((param4 != 0) && (iVar1 = func_ii_1082(param4,*(undefined4 *)(*param2_00 + 0x20)), iVar1 == 0)
+		     ) {
+		    uVar3 = func_ii_1083();
+		    func_ii_1050(uVar3,0);
+		    do {
+		      halt_trap();
+		    } while( true );
+		  }
+		  param2_00[6] = param4;
+		  iVar1 = System_String__Join_long_
+		                    (StringLiteral_1238,param4,*(undefined4 *)(*(int *)(param5 + 0x1c) + 4));
+		  if ((iVar1 != 0) && (iVar2 = func_ii_1082(iVar1,*(undefined4 *)(*param2_00 + 0x20)), iVar2 == 0))
+		  {
+		    uVar3 = func_ii_1083();
+		    func_ii_1050(uVar3,0);
+		    do {
+		      halt_trap();
+		    } while( true );
+		  }
+		  param2_00[7] = iVar1;
+		  uVar3 = UnityEngine_InputSystem_Utilities_TypeHelpers__GetNiceTypeName
+		                    (StringLiteral_28643,param2_00,0);
+		  Amplitude__get_Instance(param1,uVar3,0);
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: Log<int> ---
+		void Amplitude__Log_int_(undefined4 param1,int param2,int param3,int param4,int param5)
+		
+		{
+		  int *param2_00;
+		  int iVar1;
+		  int iVar2;
+		  undefined4 uVar3;
+		  
+		  if (*(int *)(param5 + 0x1c) == 0) {
+		    Mono_Security_ASN1__get_Item(&object___TypeInfo);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_28643);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_1238);
+		    if (*(int *)(param5 + 0x1c) == 0) {
+		      System_ReadOnlySpan_char___GetPinnableReference(param5);
+		    }
+		  }
+		  param2_00 = (int *)Mono_Security_ASN1Convert__ToOid(object___TypeInfo,4);
+		  if ((param2 != 0) && (iVar1 = func_ii_1082(param2,*(undefined4 *)(*param2_00 + 0x20)), iVar1 == 0)
+		     ) {
+		    uVar3 = func_ii_1083();
+		    func_ii_1050(uVar3,0);
+		    do {
+		      halt_trap();
+		    } while( true );
+		  }
+		  param2_00[4] = param2;
+		  if ((param3 != 0) && (iVar1 = func_ii_1082(param3,*(undefined4 *)(*param2_00 + 0x20)), iVar1 == 0)
+		     ) {
+		    uVar3 = func_ii_1083();
+		    func_ii_1050(uVar3,0);
+		    do {
+		      halt_trap();
+		    } while( true );
+		  }
+		  param2_00[5] = param3;
+		  if ((param4 != 0) && (iVar1 = func_ii_1082(param4,*(undefined4 *)(*param2_00 + 0x20)), iVar1 == 0)
+		     ) {
+		    uVar3 = func_ii_1083();
+		    func_ii_1050(uVar3,0);
+		    do {
+		      halt_trap();
+		    } while( true );
+		  }
+		  param2_00[6] = param4;
+		  iVar1 = System_String__Join_Int32Enum_
+		                    (StringLiteral_1238,param4,*(undefined4 *)(*(int *)(param5 + 0x1c) + 4));
+		  if ((iVar1 != 0) && (iVar2 = func_ii_1082(iVar1,*(undefined4 *)(*param2_00 + 0x20)), iVar2 == 0))
+		  {
+		    uVar3 = func_ii_1083();
+		    func_ii_1050(uVar3,0);
+		    do {
+		      halt_trap();
+		    } while( true );
+		  }
+		  param2_00[7] = iVar1;
+		  uVar3 = UnityEngine_InputSystem_Utilities_TypeHelpers__GetNiceTypeName
+		                    (StringLiteral_28643,param2_00,0);
+		  Amplitude__get_Instance(param1,uVar3,0);
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: Log<double> ---
+		void Amplitude__Log_double_(undefined4 param1,int param2,int param3,int param4,int param5)
+		
+		{
+		  int *param2_00;
+		  int iVar1;
+		  int iVar2;
+		  undefined4 uVar3;
+		  
+		  if (*(int *)(param5 + 0x1c) == 0) {
+		    Mono_Security_ASN1__get_Item(&object___TypeInfo);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_28643);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_1238);
+		    if (*(int *)(param5 + 0x1c) == 0) {
+		      System_ReadOnlySpan_char___GetPinnableReference(param5);
+		    }
+		  }
+		  param2_00 = (int *)Mono_Security_ASN1Convert__ToOid(object___TypeInfo,4);
+		  if ((param2 != 0) && (iVar1 = func_ii_1082(param2,*(undefined4 *)(*param2_00 + 0x20)), iVar1 == 0)
+		     ) {
+		    uVar3 = func_ii_1083();
+		    func_ii_1050(uVar3,0);
+		    do {
+		      halt_trap();
+		    } while( true );
+		  }
+		  param2_00[4] = param2;
+		  if ((param3 != 0) && (iVar1 = func_ii_1082(param3,*(undefined4 *)(*param2_00 + 0x20)), iVar1 == 0)
+		     ) {
+		    uVar3 = func_ii_1083();
+		    func_ii_1050(uVar3,0);
+		    do {
+		      halt_trap();
+		    } while( true );
+		  }
+		  param2_00[5] = param3;
+		  if ((param4 != 0) && (iVar1 = func_ii_1082(param4,*(undefined4 *)(*param2_00 + 0x20)), iVar1 == 0)
+		     ) {
+		    uVar3 = func_ii_1083();
+		    func_ii_1050(uVar3,0);
+		    do {
+		      halt_trap();
+		    } while( true );
+		  }
+		  param2_00[6] = param4;
+		  iVar1 = System_String__Join_HierarchySearchFilter_
+		                    (StringLiteral_1238,param4,*(undefined4 *)(*(int *)(param5 + 0x1c) + 4));
+		  if ((iVar1 != 0) && (iVar2 = func_ii_1082(iVar1,*(undefined4 *)(*param2_00 + 0x20)), iVar2 == 0))
+		  {
+		    uVar3 = func_ii_1083();
+		    func_ii_1050(uVar3,0);
+		    do {
+		      halt_trap();
+		    } while( true );
+		  }
+		  param2_00[7] = iVar1;
+		  uVar3 = UnityEngine_InputSystem_Utilities_TypeHelpers__GetNiceTypeName
+		                    (StringLiteral_28643,param2_00,0);
+		  Amplitude__get_Instance(param1,uVar3,0);
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: Log<bool> ---
+		void Amplitude__Log_bool_(undefined4 param1,int param2,int param3,int param4,int param5)
+		
+		{
+		  int *param2_00;
+		  int iVar1;
+		  int iVar2;
+		  undefined4 uVar3;
+		  
+		  if (*(int *)(param5 + 0x1c) == 0) {
+		    Mono_Security_ASN1__get_Item(&object___TypeInfo);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_28643);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_1238);
+		    if (*(int *)(param5 + 0x1c) == 0) {
+		      System_ReadOnlySpan_char___GetPinnableReference(param5);
+		    }
+		  }
+		  param2_00 = (int *)Mono_Security_ASN1Convert__ToOid(object___TypeInfo,4);
+		  if ((param2 != 0) && (iVar1 = func_ii_1082(param2,*(undefined4 *)(*param2_00 + 0x20)), iVar1 == 0)
+		     ) {
+		    uVar3 = func_ii_1083();
+		    func_ii_1050(uVar3,0);
+		    do {
+		      halt_trap();
+		    } while( true );
+		  }
+		  param2_00[4] = param2;
+		  if ((param3 != 0) && (iVar1 = func_ii_1082(param3,*(undefined4 *)(*param2_00 + 0x20)), iVar1 == 0)
+		     ) {
+		    uVar3 = func_ii_1083();
+		    func_ii_1050(uVar3,0);
+		    do {
+		      halt_trap();
+		    } while( true );
+		  }
+		  param2_00[5] = param3;
+		  if ((param4 != 0) && (iVar1 = func_ii_1082(param4,*(undefined4 *)(*param2_00 + 0x20)), iVar1 == 0)
+		     ) {
+		    uVar3 = func_ii_1083();
+		    func_ii_1050(uVar3,0);
+		    do {
+		      halt_trap();
+		    } while( true );
+		  }
+		  param2_00[6] = param4;
+		  iVar1 = System_String__Join_bool_
+		                    (StringLiteral_1238,param4,*(undefined4 *)(*(int *)(param5 + 0x1c) + 4));
+		  if ((iVar1 != 0) && (iVar2 = func_ii_1082(iVar1,*(undefined4 *)(*param2_00 + 0x20)), iVar2 == 0))
+		  {
+		    uVar3 = func_ii_1083();
+		    func_ii_1050(uVar3,0);
+		    do {
+		      halt_trap();
+		    } while( true );
+		  }
+		  param2_00[7] = iVar1;
+		  uVar3 = UnityEngine_InputSystem_Utilities_TypeHelpers__GetNiceTypeName
+		                    (StringLiteral_28643,param2_00,0);
+		  Amplitude__get_Instance(param1,uVar3,0);
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: Log ---
+		void Amplitude__Log(int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  undefined4 param1_00;
+		  
+		  if (DAT_ram_00a647e2 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4056);
+		    DAT_ram_00a647e2 = '\x01';
+		  }
+		  param1_00 = func_ii_4419(StringLiteral_4056,param2,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(param1_00,0);
+		  }
+		  return;
+		}
+		*/
+
 	}
 
 	// Token: 0x0600000A RID: 10 RVA: 0x00002050 File Offset: 0x00000250
@@ -60,6 +581,62 @@ public class Amplitude
 	[Address(RVA = "0x54D7", Offset = "0x54D7", VA = "0x54D7")]
 	public void init(string apiKey)
 	{
+		/* --- GHIDRA: init ---
+		void Amplitude__init(int param1,int param2,undefined4 param3)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a647e4 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4089);
+		    DAT_ram_00a647e4 = '\x01';
+		  }
+		  if (param2 != 0) {
+		    uVar1 = AmplitudeNS_MiniJSON_Json__Deserialize(param2,0);
+		    uVar1 = func_ii_4419(StringLiteral_4089,uVar1,0);
+		    if (DAT_ram_00a647e1 == '\0') {
+		      Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		      DAT_ram_00a647e1 = '\x01';
+		    }
+		    if (*(char *)(param1 + 8) != '\0') {
+		      if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		        func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		      }
+		      System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		    }
+		  }
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: init ---
+		void Amplitude__init(int param1,int param2,undefined4 param3)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a647e4 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4089);
+		    DAT_ram_00a647e4 = '\x01';
+		  }
+		  if (param2 != 0) {
+		    uVar1 = AmplitudeNS_MiniJSON_Json__Deserialize(param2,0);
+		    uVar1 = func_ii_4419(StringLiteral_4089,uVar1,0);
+		    if (DAT_ram_00a647e1 == '\0') {
+		      Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		      DAT_ram_00a647e1 = '\x01';
+		    }
+		    if (*(char *)(param1 + 8) != '\0') {
+		      if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		        func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		      }
+		      System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		    }
+		  }
+		  return;
+		}
+		*/
+
 	}
 
 	// Token: 0x0600000C RID: 12 RVA: 0x00002050 File Offset: 0x00000250
@@ -74,6 +651,31 @@ public class Amplitude
 	[Address(RVA = "0x54D9", Offset = "0x54D9", VA = "0x54D9")]
 	public void setTrackingOptions(IDictionary<string, bool> trackingOptions)
 	{
+		/* --- GHIDRA: setTrackingOptions ---
+		void Amplitude__setTrackingOptions(int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  undefined4 param1_00;
+		  
+		  if (DAT_ram_00a647e5 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4071);
+		    DAT_ram_00a647e5 = '\x01';
+		  }
+		  param1_00 = func_ii_4419(StringLiteral_4071,param2,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(param1_00,0);
+		  }
+		  return;
+		}
+		*/
+
 	}
 
 	// Token: 0x0600000E RID: 14 RVA: 0x00002050 File Offset: 0x00000250
@@ -81,6 +683,90 @@ public class Amplitude
 	[Address(RVA = "0x54DA", Offset = "0x54DA", VA = "0x54DA")]
 	public void logEvent(string evt)
 	{
+		/* --- GHIDRA: logEvent ---
+		void Amplitude__logEvent(int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  undefined4 uVar1;
+		  undefined1 local_1;
+		  
+		  if (DAT_ram_00a647e8 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4078);
+		    DAT_ram_00a647e8 = '\x01';
+		  }
+		  local_1 = (undefined1)param2;
+		  uVar1 = func_ii_1081(DAT_ram_00a66944,&local_1);
+		  uVar1 = func_ii_4419(StringLiteral_4078,uVar1,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: logEvent ---
+		void Amplitude__logEvent(int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  undefined4 uVar1;
+		  undefined1 local_1;
+		  
+		  if (DAT_ram_00a647e8 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4078);
+		    DAT_ram_00a647e8 = '\x01';
+		  }
+		  local_1 = (undefined1)param2;
+		  uVar1 = func_ii_1081(DAT_ram_00a66944,&local_1);
+		  uVar1 = func_ii_4419(StringLiteral_4078,uVar1,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: logEvent ---
+		void Amplitude__logEvent(int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  undefined4 uVar1;
+		  undefined1 local_1;
+		  
+		  if (DAT_ram_00a647e8 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4078);
+		    DAT_ram_00a647e8 = '\x01';
+		  }
+		  local_1 = (undefined1)param2;
+		  uVar1 = func_ii_1081(DAT_ram_00a66944,&local_1);
+		  uVar1 = func_ii_4419(StringLiteral_4078,uVar1,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
 	}
 
 	// Token: 0x0600000F RID: 15 RVA: 0x00002050 File Offset: 0x00000250
@@ -102,6 +788,31 @@ public class Amplitude
 	[Address(RVA = "0x54DD", Offset = "0x54DD", VA = "0x54DD")]
 	public void setOffline(bool offline)
 	{
+		/* --- GHIDRA: setOffline ---
+		void Amplitude__setOffline(int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  undefined4 param1_00;
+		  
+		  if (DAT_ram_00a647e9 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4085);
+		    DAT_ram_00a647e9 = '\x01';
+		  }
+		  param1_00 = func_ii_4419(StringLiteral_4085,param2,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(param1_00,0);
+		  }
+		  return;
+		}
+		*/
+
 	}
 
 	// Token: 0x06000012 RID: 18 RVA: 0x00002050 File Offset: 0x00000250
@@ -109,6 +820,43 @@ public class Amplitude
 	[Address(RVA = "0x54DE", Offset = "0x54DE", VA = "0x54DE")]
 	public void setUserId(string userId)
 	{
+		/* --- GHIDRA: setUserId ---
+		void Amplitude__setUserId(int param1,int param2,undefined4 param3)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a647ea == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_Dictionary_string__object___ctor__);
+		    Mono_Security_ASN1__get_Item(&System_Collections_Generic_Dictionary_string__object__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4086);
+		    DAT_ram_00a647ea = '\x01';
+		  }
+		  if (param2 == 0) {
+		    uVar1 = unnamed_function_1417(System_Collections_Generic_Dictionary_string__object__TypeInfo);
+		    System_Collections_Generic_Dictionary_object__StyleComplexSelector_PseudoStateData___set_Item
+		              (uVar1,Method_System_Collections_Generic_Dictionary_string__object___ctor__);
+		    uVar1 = AmplitudeNS_MiniJSON_Json__Deserialize(uVar1,0);
+		  }
+		  else {
+		    uVar1 = AmplitudeNS_MiniJSON_Json__Deserialize(param2,0);
+		  }
+		  uVar1 = func_ii_4419(StringLiteral_4086,uVar1,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
 	}
 
 	// Token: 0x06000013 RID: 19 RVA: 0x00002050 File Offset: 0x00000250
@@ -116,6 +864,52 @@ public class Amplitude
 	[Address(RVA = "0x54DF", Offset = "0x54DF", VA = "0x54DF")]
 	public void setUserProperties(IDictionary<string, object> properties)
 	{
+		/* --- GHIDRA: setUserProperties ---
+		void Amplitude__setUserProperties(int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  undefined4 param1_00;
+		  int iVar1;
+		  int iVar2;
+		  
+		  if (DAT_ram_00a647eb == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_System_Array_Empty_object___);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4075);
+		    DAT_ram_00a647eb = '\x01';
+		  }
+		  iVar2 = Method_System_Array_Empty_object___;
+		  iVar1 = *(int *)(Method_System_Array_Empty_object___ + 0x1c);
+		  if (iVar1 == 0) {
+		    System_ReadOnlySpan_char___GetPinnableReference(Method_System_Array_Empty_object___);
+		    iVar1 = *(int *)(iVar2 + 0x1c);
+		  }
+		  iVar1 = *(int *)(iVar1 + 8);
+		  if ((*(byte *)(iVar1 + 0xbd) & 1) == 0) {
+		    iVar1 = func_ii_1079(iVar1);
+		  }
+		  if (*(int *)(iVar1 + 0x74) == 0) {
+		    func_ii_306000(iVar1);
+		  }
+		  iVar2 = *(int *)(*(int *)(iVar2 + 0x1c) + 8);
+		  if ((*(byte *)(iVar2 + 0xbd) & 1) == 0) {
+		    iVar2 = func_ii_1079(iVar2);
+		  }
+		  param1_00 = UnityEngine_InputSystem_Utilities_TypeHelpers__GetNiceTypeName
+		                        (StringLiteral_4075,**(undefined4 **)(iVar2 + 0x5c),0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(param1_00,0);
+		  }
+		  return;
+		}
+		*/
+
 	}
 
 	// Token: 0x06000014 RID: 20 RVA: 0x00002050 File Offset: 0x00000250
@@ -123,6 +917,62 @@ public class Amplitude
 	[Address(RVA = "0x54E0", Offset = "0x54E0", VA = "0x54E0")]
 	public void setGroup(string groupType, string groupName)
 	{
+		/* --- GHIDRA: setGroup ---
+		void Amplitude__setGroup(int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  undefined4 uVar1;
+		  undefined1 local_1;
+		  
+		  if (DAT_ram_00a647ed == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4081);
+		    DAT_ram_00a647ed = '\x01';
+		  }
+		  local_1 = (undefined1)param2;
+		  uVar1 = func_ii_1081(DAT_ram_00a66944,&local_1);
+		  uVar1 = func_ii_4419(StringLiteral_4081,uVar1,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: setGroup ---
+		void Amplitude__setGroup(int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  undefined4 uVar1;
+		  undefined1 local_1;
+		  
+		  if (DAT_ram_00a647ed == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4081);
+		    DAT_ram_00a647ed = '\x01';
+		  }
+		  local_1 = (undefined1)param2;
+		  uVar1 = func_ii_1081(DAT_ram_00a66944,&local_1);
+		  uVar1 = func_ii_4419(StringLiteral_4081,uVar1,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
 	}
 
 	// Token: 0x06000015 RID: 21 RVA: 0x00002050 File Offset: 0x00000250
@@ -137,6 +987,34 @@ public class Amplitude
 	[Address(RVA = "0x54E2", Offset = "0x54E2", VA = "0x54E2")]
 	public void setOptOut(bool enabled)
 	{
+		/* --- GHIDRA: setOptOut ---
+		void Amplitude__setOptOut(int param1,undefined8 param2,undefined4 param3)
+		
+		{
+		  undefined4 uVar1;
+		  undefined8 local_8;
+		  
+		  if (DAT_ram_00a647ee == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4062);
+		    DAT_ram_00a647ee = '\x01';
+		  }
+		  local_8 = param2;
+		  uVar1 = func_ii_1081(DAT_ram_00a66964,&local_8);
+		  uVar1 = func_ii_4419(StringLiteral_4062,uVar1,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
 	}
 
 	// Token: 0x06000017 RID: 23 RVA: 0x00002050 File Offset: 0x00000250
@@ -144,6 +1022,34 @@ public class Amplitude
 	[Address(RVA = "0x54E3", Offset = "0x54E3", VA = "0x54E3")]
 	public void setMinTimeBetweenSessionsMillis(long minTimeBetweenSessionsMillis)
 	{
+		/* --- GHIDRA: setMinTimeBetweenSessionsMillis ---
+		void Amplitude__setMinTimeBetweenSessionsMillis(int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  undefined4 uVar1;
+		  undefined4 local_4;
+		  
+		  if (DAT_ram_00a647ef == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4055);
+		    DAT_ram_00a647ef = '\x01';
+		  }
+		  local_4 = param2;
+		  uVar1 = func_ii_1081(DAT_ram_00a66954,&local_4);
+		  uVar1 = func_ii_4419(StringLiteral_4055,uVar1,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
 	}
 
 	// Token: 0x06000018 RID: 24 RVA: 0x00002050 File Offset: 0x00000250
@@ -151,6 +1057,31 @@ public class Amplitude
 	[Address(RVA = "0x54E4", Offset = "0x54E4", VA = "0x54E4")]
 	public void setEventUploadPeriodSeconds(int eventUploadPeriodSeconds)
 	{
+		/* --- GHIDRA: setEventUploadPeriodSeconds ---
+		void Amplitude__setEventUploadPeriodSeconds(int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  undefined4 param1_00;
+		  
+		  if (DAT_ram_00a647f0 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4074);
+		    DAT_ram_00a647f0 = '\x01';
+		  }
+		  param1_00 = func_ii_4419(StringLiteral_4074,param2,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(param1_00,0);
+		  }
+		  return;
+		}
+		*/
+
 	}
 
 	// Token: 0x06000019 RID: 25 RVA: 0x00002050 File Offset: 0x00000250
@@ -158,6 +1089,31 @@ public class Amplitude
 	[Address(RVA = "0x54E5", Offset = "0x54E5", VA = "0x54E5")]
 	public void setDeviceId(string deviceId)
 	{
+		/* --- GHIDRA: setDeviceId ---
+		void Amplitude__setDeviceId(int param1,undefined4 param2)
+		
+		{
+		  undefined4 param1_00;
+		  
+		  if (DAT_ram_00a647f1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4054);
+		    DAT_ram_00a647f1 = '\x01';
+		  }
+		  param1_00 = StringLiteral_4054;
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(param1_00,0);
+		  }
+		  return;
+		}
+		*/
+
 	}
 
 	// Token: 0x0600001A RID: 26 RVA: 0x00002050 File Offset: 0x00000250
@@ -165,6 +1121,52 @@ public class Amplitude
 	[Address(RVA = "0x54E6", Offset = "0x54E6", VA = "0x54E6")]
 	public void enableCoppaControl()
 	{
+		/* --- GHIDRA: enableCoppaControl ---
+		void Amplitude__enableCoppaControl(int param1,undefined4 param2)
+		
+		{
+		  undefined4 param1_00;
+		  int iVar1;
+		  int iVar2;
+		  
+		  if (DAT_ram_00a647f2 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_System_Array_Empty_object___);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4053);
+		    DAT_ram_00a647f2 = '\x01';
+		  }
+		  iVar2 = Method_System_Array_Empty_object___;
+		  iVar1 = *(int *)(Method_System_Array_Empty_object___ + 0x1c);
+		  if (iVar1 == 0) {
+		    System_ReadOnlySpan_char___GetPinnableReference(Method_System_Array_Empty_object___);
+		    iVar1 = *(int *)(iVar2 + 0x1c);
+		  }
+		  iVar1 = *(int *)(iVar1 + 8);
+		  if ((*(byte *)(iVar1 + 0xbd) & 1) == 0) {
+		    iVar1 = func_ii_1079(iVar1);
+		  }
+		  if (*(int *)(iVar1 + 0x74) == 0) {
+		    func_ii_306000(iVar1);
+		  }
+		  iVar2 = *(int *)(*(int *)(iVar2 + 0x1c) + 8);
+		  if ((*(byte *)(iVar2 + 0xbd) & 1) == 0) {
+		    iVar2 = func_ii_1079(iVar2);
+		  }
+		  param1_00 = UnityEngine_InputSystem_Utilities_TypeHelpers__GetNiceTypeName
+		                        (StringLiteral_4053,**(undefined4 **)(iVar2 + 0x5c),0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(param1_00,0);
+		  }
+		  return;
+		}
+		*/
+
 	}
 
 	// Token: 0x0600001B RID: 27 RVA: 0x00002050 File Offset: 0x00000250
@@ -172,6 +1174,52 @@ public class Amplitude
 	[Address(RVA = "0x54E7", Offset = "0x54E7", VA = "0x54E7")]
 	public void disableCoppaControl()
 	{
+		/* --- GHIDRA: disableCoppaControl ---
+		void Amplitude__disableCoppaControl(int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  undefined4 param1_00;
+		  int iVar1;
+		  int iVar2;
+		  
+		  if (DAT_ram_00a647f3 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_System_Array_Empty_object___);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4082);
+		    DAT_ram_00a647f3 = '\x01';
+		  }
+		  iVar2 = Method_System_Array_Empty_object___;
+		  iVar1 = *(int *)(Method_System_Array_Empty_object___ + 0x1c);
+		  if (iVar1 == 0) {
+		    System_ReadOnlySpan_char___GetPinnableReference(Method_System_Array_Empty_object___);
+		    iVar1 = *(int *)(iVar2 + 0x1c);
+		  }
+		  iVar1 = *(int *)(iVar1 + 8);
+		  if ((*(byte *)(iVar1 + 0xbd) & 1) == 0) {
+		    iVar1 = func_ii_1079(iVar1);
+		  }
+		  if (*(int *)(iVar1 + 0x74) == 0) {
+		    func_ii_306000(iVar1);
+		  }
+		  iVar2 = *(int *)(*(int *)(iVar2 + 0x1c) + 8);
+		  if ((*(byte *)(iVar2 + 0xbd) & 1) == 0) {
+		    iVar2 = func_ii_1079(iVar2);
+		  }
+		  param1_00 = UnityEngine_InputSystem_Utilities_TypeHelpers__GetNiceTypeName
+		                        (StringLiteral_4082,**(undefined4 **)(iVar2 + 0x5c),0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(param1_00,0);
+		  }
+		  return;
+		}
+		*/
+
 	}
 
 	// Token: 0x0600001C RID: 28 RVA: 0x00002050 File Offset: 0x00000250
@@ -179,6 +1227,52 @@ public class Amplitude
 	[Address(RVA = "0x54E8", Offset = "0x54E8", VA = "0x54E8")]
 	public void setServerUrl(string serverUrl)
 	{
+		/* --- GHIDRA: setServerUrl ---
+		void Amplitude__setServerUrl(int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  undefined4 param1_00;
+		  int iVar1;
+		  int iVar2;
+		  
+		  if (DAT_ram_00a647f4 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_System_Array_Empty_object___);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4084);
+		    DAT_ram_00a647f4 = '\x01';
+		  }
+		  iVar2 = Method_System_Array_Empty_object___;
+		  iVar1 = *(int *)(Method_System_Array_Empty_object___ + 0x1c);
+		  if (iVar1 == 0) {
+		    System_ReadOnlySpan_char___GetPinnableReference(Method_System_Array_Empty_object___);
+		    iVar1 = *(int *)(iVar2 + 0x1c);
+		  }
+		  iVar1 = *(int *)(iVar1 + 8);
+		  if ((*(byte *)(iVar1 + 0xbd) & 1) == 0) {
+		    iVar1 = func_ii_1079(iVar1);
+		  }
+		  if (*(int *)(iVar1 + 0x74) == 0) {
+		    func_ii_306000(iVar1);
+		  }
+		  iVar2 = *(int *)(*(int *)(iVar2 + 0x1c) + 8);
+		  if ((*(byte *)(iVar2 + 0xbd) & 1) == 0) {
+		    iVar2 = func_ii_1079(iVar2);
+		  }
+		  param1_00 = UnityEngine_InputSystem_Utilities_TypeHelpers__GetNiceTypeName
+		                        (StringLiteral_4084,**(undefined4 **)(iVar2 + 0x5c),0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(param1_00,0);
+		  }
+		  return;
+		}
+		*/
+
 	}
 
 	// Token: 0x0600001D RID: 29 RVA: 0x00002050 File Offset: 0x00000250
@@ -186,6 +1280,61 @@ public class Amplitude
 	[Address(RVA = "0x54E9", Offset = "0x54E9", VA = "0x54E9")]
 	public void setUseDynamicConfig(bool useDynamicConfig)
 	{
+		/* --- GHIDRA: setUseDynamicConfig ---
+		void Amplitude__setUseDynamicConfig
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  undefined4 param1_00;
+		  int iVar1;
+		  int iVar2;
+		  undefined4 local_c;
+		  undefined4 local_8;
+		  undefined4 local_4;
+		  
+		  if (DAT_ram_00a647f5 == '\0') {
+		    Mono_Security_ASN1__get_Item(&AmplitudeServerZone_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Method_System_Array_Empty_object___);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4083);
+		    DAT_ram_00a647f5 = '\x01';
+		  }
+		  iVar2 = Method_System_Array_Empty_object___;
+		  iVar1 = *(int *)(Method_System_Array_Empty_object___ + 0x1c);
+		  if (iVar1 == 0) {
+		    System_ReadOnlySpan_char___GetPinnableReference(Method_System_Array_Empty_object___);
+		    iVar1 = *(int *)(iVar2 + 0x1c);
+		  }
+		  iVar1 = *(int *)(iVar1 + 8);
+		  if ((*(byte *)(iVar1 + 0xbd) & 1) == 0) {
+		    iVar1 = func_ii_1079(iVar1);
+		  }
+		  if (*(int *)(iVar1 + 0x74) == 0) {
+		    func_ii_306000(iVar1);
+		  }
+		  iVar2 = *(int *)(*(int *)(iVar2 + 0x1c) + 8);
+		  if ((*(byte *)(iVar2 + 0xbd) & 1) == 0) {
+		    iVar2 = func_ii_1079(iVar2);
+		  }
+		  param1_00 = UnityEngine_InputSystem_Utilities_TypeHelpers__GetNiceTypeName
+		                        (StringLiteral_4083,**(undefined4 **)(iVar2 + 0x5c),0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(param1_00,0);
+		  }
+		  local_8 = 0xffffffff;
+		  local_c = AmplitudeServerZone_TypeInfo;
+		  local_4 = param2;
+		  Spine_SkeletonJson__GetFloat(&local_c,0);
+		  return;
+		}
+		*/
+
 	}
 
 	// Token: 0x0600001E RID: 30 RVA: 0x00002050 File Offset: 0x00000250
@@ -193,6 +1342,15 @@ public class Amplitude
 	[Address(RVA = "0x54EA", Offset = "0x54EA", VA = "0x54EA")]
 	public void setServerZone(AmplitudeServerZone serverZone, bool updateServerUrl = true)
 	{
+		/* --- GHIDRA: setServerZone ---
+		void Amplitude__setServerZone(undefined4 param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  Amplitude__setUserId(param1,param2,param2);
+		  return;
+		}
+		*/
+
 	}
 
 	// Token: 0x0600001F RID: 31 RVA: 0x00002050 File Offset: 0x00000250
@@ -201,6 +1359,34 @@ public class Amplitude
 	[Obsolete("Please call setUserProperties instead", false)]
 	public void setGlobalUserProperties(IDictionary<string, object> properties)
 	{
+		/* --- GHIDRA: setGlobalUserProperties ---
+		void Amplitude__setGlobalUserProperties(int param1,double param2,undefined4 param3)
+		
+		{
+		  undefined4 uVar1;
+		  float8 local_8;
+		  
+		  if (DAT_ram_00a647f6 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4058);
+		    DAT_ram_00a647f6 = '\x01';
+		  }
+		  local_8 = (float8)param2;
+		  uVar1 = func_ii_1081(DAT_ram_00a66970,&local_8);
+		  uVar1 = func_ii_4419(StringLiteral_4058,uVar1,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
 	}
 
 	// Token: 0x06000020 RID: 32 RVA: 0x00002050 File Offset: 0x00000250
@@ -208,6 +1394,394 @@ public class Amplitude
 	[Address(RVA = "0x54EC", Offset = "0x54EC", VA = "0x54EC")]
 	public void logRevenue(double amount)
 	{
+		/* --- GHIDRA: logRevenue ---
+		void Amplitude__logRevenue
+		               (int param1,int param2,undefined4 param3,double param4,undefined4 param5,
+		               undefined4 param6,int param7,int param8,undefined4 param9)
+		
+		{
+		  undefined4 uVar1;
+		  int param1_00;
+		  int *param2_00;
+		  int iVar2;
+		  int iVar3;
+		  float8 local_10;
+		  undefined4 local_4;
+		  
+		  if (DAT_ram_00a647f9 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_Dictionary_string__object___ctor__);
+		    Mono_Security_ASN1__get_Item(&System_Collections_Generic_Dictionary_string__object__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&object___TypeInfo);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4061);
+		    DAT_ram_00a647f9 = '\x01';
+		  }
+		  if (param8 == 0) {
+		    uVar1 = unnamed_function_1417(System_Collections_Generic_Dictionary_string__object__TypeInfo);
+		    System_Collections_Generic_Dictionary_object__StyleComplexSelector_PseudoStateData___set_Item
+		              (uVar1,Method_System_Collections_Generic_Dictionary_string__object___ctor__);
+		    param1_00 = AmplitudeNS_MiniJSON_Json__Deserialize(uVar1,0);
+		  }
+		  else {
+		    param1_00 = AmplitudeNS_MiniJSON_Json__Deserialize(param8,0);
+		  }
+		  param2_00 = (int *)Mono_Security_ASN1Convert__ToOid(object___TypeInfo,5);
+		  if ((param2 != 0) && (iVar2 = func_ii_1082(param2,*(undefined4 *)(*param2_00 + 0x20)), iVar2 == 0)
+		     ) {
+		    uVar1 = func_ii_1083();
+		    func_ii_1050(uVar1,0);
+		    do {
+		      halt_trap();
+		    } while( true );
+		  }
+		  param2_00[4] = param2;
+		  local_4 = param3;
+		  iVar2 = func_ii_1081(DAT_ram_00a66954,&local_4);
+		  if ((iVar2 != 0) && (iVar3 = func_ii_1082(iVar2,*(undefined4 *)(*param2_00 + 0x20)), iVar3 == 0))
+		  {
+		    uVar1 = func_ii_1083();
+		    func_ii_1050(uVar1,0);
+		    do {
+		      halt_trap();
+		    } while( true );
+		  }
+		  param2_00[5] = iVar2;
+		  local_10 = (float8)param4;
+		  iVar2 = func_ii_1081(DAT_ram_00a66970,&local_10);
+		  if ((iVar2 != 0) && (iVar3 = func_ii_1082(iVar2,*(undefined4 *)(*param2_00 + 0x20)), iVar3 == 0))
+		  {
+		    uVar1 = func_ii_1083();
+		    func_ii_1050(uVar1,0);
+		    do {
+		      halt_trap();
+		    } while( true );
+		  }
+		  param2_00[6] = iVar2;
+		  if ((param7 != 0) && (iVar2 = func_ii_1082(param7,*(undefined4 *)(*param2_00 + 0x20)), iVar2 == 0)
+		     ) {
+		    uVar1 = func_ii_1083();
+		    func_ii_1050(uVar1,0);
+		    do {
+		      halt_trap();
+		    } while( true );
+		  }
+		  param2_00[7] = param7;
+		  if ((param1_00 != 0) &&
+		     (iVar2 = func_ii_1082(param1_00,*(undefined4 *)(*param2_00 + 0x20)), iVar2 == 0)) {
+		    uVar1 = func_ii_1083();
+		    func_ii_1050(uVar1,0);
+		    do {
+		      halt_trap();
+		    } while( true );
+		  }
+		  param2_00[8] = param1_00;
+		  uVar1 = UnityEngine_InputSystem_Utilities_TypeHelpers__GetNiceTypeName
+		                    (StringLiteral_4061,param2_00,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: logRevenue ---
+		void Amplitude__logRevenue
+		               (int param1,int param2,undefined4 param3,double param4,undefined4 param5,
+		               undefined4 param6,int param7,int param8,undefined4 param9)
+		
+		{
+		  undefined4 uVar1;
+		  int param1_00;
+		  int *param2_00;
+		  int iVar2;
+		  int iVar3;
+		  float8 local_10;
+		  undefined4 local_4;
+		  
+		  if (DAT_ram_00a647f9 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_Dictionary_string__object___ctor__);
+		    Mono_Security_ASN1__get_Item(&System_Collections_Generic_Dictionary_string__object__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&object___TypeInfo);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4061);
+		    DAT_ram_00a647f9 = '\x01';
+		  }
+		  if (param8 == 0) {
+		    uVar1 = unnamed_function_1417(System_Collections_Generic_Dictionary_string__object__TypeInfo);
+		    System_Collections_Generic_Dictionary_object__StyleComplexSelector_PseudoStateData___set_Item
+		              (uVar1,Method_System_Collections_Generic_Dictionary_string__object___ctor__);
+		    param1_00 = AmplitudeNS_MiniJSON_Json__Deserialize(uVar1,0);
+		  }
+		  else {
+		    param1_00 = AmplitudeNS_MiniJSON_Json__Deserialize(param8,0);
+		  }
+		  param2_00 = (int *)Mono_Security_ASN1Convert__ToOid(object___TypeInfo,5);
+		  if ((param2 != 0) && (iVar2 = func_ii_1082(param2,*(undefined4 *)(*param2_00 + 0x20)), iVar2 == 0)
+		     ) {
+		    uVar1 = func_ii_1083();
+		    func_ii_1050(uVar1,0);
+		    do {
+		      halt_trap();
+		    } while( true );
+		  }
+		  param2_00[4] = param2;
+		  local_4 = param3;
+		  iVar2 = func_ii_1081(DAT_ram_00a66954,&local_4);
+		  if ((iVar2 != 0) && (iVar3 = func_ii_1082(iVar2,*(undefined4 *)(*param2_00 + 0x20)), iVar3 == 0))
+		  {
+		    uVar1 = func_ii_1083();
+		    func_ii_1050(uVar1,0);
+		    do {
+		      halt_trap();
+		    } while( true );
+		  }
+		  param2_00[5] = iVar2;
+		  local_10 = (float8)param4;
+		  iVar2 = func_ii_1081(DAT_ram_00a66970,&local_10);
+		  if ((iVar2 != 0) && (iVar3 = func_ii_1082(iVar2,*(undefined4 *)(*param2_00 + 0x20)), iVar3 == 0))
+		  {
+		    uVar1 = func_ii_1083();
+		    func_ii_1050(uVar1,0);
+		    do {
+		      halt_trap();
+		    } while( true );
+		  }
+		  param2_00[6] = iVar2;
+		  if ((param7 != 0) && (iVar2 = func_ii_1082(param7,*(undefined4 *)(*param2_00 + 0x20)), iVar2 == 0)
+		     ) {
+		    uVar1 = func_ii_1083();
+		    func_ii_1050(uVar1,0);
+		    do {
+		      halt_trap();
+		    } while( true );
+		  }
+		  param2_00[7] = param7;
+		  if ((param1_00 != 0) &&
+		     (iVar2 = func_ii_1082(param1_00,*(undefined4 *)(*param2_00 + 0x20)), iVar2 == 0)) {
+		    uVar1 = func_ii_1083();
+		    func_ii_1050(uVar1,0);
+		    do {
+		      halt_trap();
+		    } while( true );
+		  }
+		  param2_00[8] = param1_00;
+		  uVar1 = UnityEngine_InputSystem_Utilities_TypeHelpers__GetNiceTypeName
+		                    (StringLiteral_4061,param2_00,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: logRevenue ---
+		void Amplitude__logRevenue
+		               (int param1,int param2,undefined4 param3,double param4,undefined4 param5,
+		               undefined4 param6,int param7,int param8,undefined4 param9)
+		
+		{
+		  undefined4 uVar1;
+		  int param1_00;
+		  int *param2_00;
+		  int iVar2;
+		  int iVar3;
+		  float8 local_10;
+		  undefined4 local_4;
+		  
+		  if (DAT_ram_00a647f9 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_Dictionary_string__object___ctor__);
+		    Mono_Security_ASN1__get_Item(&System_Collections_Generic_Dictionary_string__object__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&object___TypeInfo);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4061);
+		    DAT_ram_00a647f9 = '\x01';
+		  }
+		  if (param8 == 0) {
+		    uVar1 = unnamed_function_1417(System_Collections_Generic_Dictionary_string__object__TypeInfo);
+		    System_Collections_Generic_Dictionary_object__StyleComplexSelector_PseudoStateData___set_Item
+		              (uVar1,Method_System_Collections_Generic_Dictionary_string__object___ctor__);
+		    param1_00 = AmplitudeNS_MiniJSON_Json__Deserialize(uVar1,0);
+		  }
+		  else {
+		    param1_00 = AmplitudeNS_MiniJSON_Json__Deserialize(param8,0);
+		  }
+		  param2_00 = (int *)Mono_Security_ASN1Convert__ToOid(object___TypeInfo,5);
+		  if ((param2 != 0) && (iVar2 = func_ii_1082(param2,*(undefined4 *)(*param2_00 + 0x20)), iVar2 == 0)
+		     ) {
+		    uVar1 = func_ii_1083();
+		    func_ii_1050(uVar1,0);
+		    do {
+		      halt_trap();
+		    } while( true );
+		  }
+		  param2_00[4] = param2;
+		  local_4 = param3;
+		  iVar2 = func_ii_1081(DAT_ram_00a66954,&local_4);
+		  if ((iVar2 != 0) && (iVar3 = func_ii_1082(iVar2,*(undefined4 *)(*param2_00 + 0x20)), iVar3 == 0))
+		  {
+		    uVar1 = func_ii_1083();
+		    func_ii_1050(uVar1,0);
+		    do {
+		      halt_trap();
+		    } while( true );
+		  }
+		  param2_00[5] = iVar2;
+		  local_10 = (float8)param4;
+		  iVar2 = func_ii_1081(DAT_ram_00a66970,&local_10);
+		  if ((iVar2 != 0) && (iVar3 = func_ii_1082(iVar2,*(undefined4 *)(*param2_00 + 0x20)), iVar3 == 0))
+		  {
+		    uVar1 = func_ii_1083();
+		    func_ii_1050(uVar1,0);
+		    do {
+		      halt_trap();
+		    } while( true );
+		  }
+		  param2_00[6] = iVar2;
+		  if ((param7 != 0) && (iVar2 = func_ii_1082(param7,*(undefined4 *)(*param2_00 + 0x20)), iVar2 == 0)
+		     ) {
+		    uVar1 = func_ii_1083();
+		    func_ii_1050(uVar1,0);
+		    do {
+		      halt_trap();
+		    } while( true );
+		  }
+		  param2_00[7] = param7;
+		  if ((param1_00 != 0) &&
+		     (iVar2 = func_ii_1082(param1_00,*(undefined4 *)(*param2_00 + 0x20)), iVar2 == 0)) {
+		    uVar1 = func_ii_1083();
+		    func_ii_1050(uVar1,0);
+		    do {
+		      halt_trap();
+		    } while( true );
+		  }
+		  param2_00[8] = param1_00;
+		  uVar1 = UnityEngine_InputSystem_Utilities_TypeHelpers__GetNiceTypeName
+		                    (StringLiteral_4061,param2_00,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: logRevenue ---
+		void Amplitude__logRevenue
+		               (int param1,int param2,undefined4 param3,double param4,undefined4 param5,
+		               undefined4 param6,int param7,int param8,undefined4 param9)
+		
+		{
+		  undefined4 uVar1;
+		  int param1_00;
+		  int *param2_00;
+		  int iVar2;
+		  int iVar3;
+		  float8 local_10;
+		  undefined4 local_4;
+		  
+		  if (DAT_ram_00a647f9 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_Dictionary_string__object___ctor__);
+		    Mono_Security_ASN1__get_Item(&System_Collections_Generic_Dictionary_string__object__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&object___TypeInfo);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4061);
+		    DAT_ram_00a647f9 = '\x01';
+		  }
+		  if (param8 == 0) {
+		    uVar1 = unnamed_function_1417(System_Collections_Generic_Dictionary_string__object__TypeInfo);
+		    System_Collections_Generic_Dictionary_object__StyleComplexSelector_PseudoStateData___set_Item
+		              (uVar1,Method_System_Collections_Generic_Dictionary_string__object___ctor__);
+		    param1_00 = AmplitudeNS_MiniJSON_Json__Deserialize(uVar1,0);
+		  }
+		  else {
+		    param1_00 = AmplitudeNS_MiniJSON_Json__Deserialize(param8,0);
+		  }
+		  param2_00 = (int *)Mono_Security_ASN1Convert__ToOid(object___TypeInfo,5);
+		  if ((param2 != 0) && (iVar2 = func_ii_1082(param2,*(undefined4 *)(*param2_00 + 0x20)), iVar2 == 0)
+		     ) {
+		    uVar1 = func_ii_1083();
+		    func_ii_1050(uVar1,0);
+		    do {
+		      halt_trap();
+		    } while( true );
+		  }
+		  param2_00[4] = param2;
+		  local_4 = param3;
+		  iVar2 = func_ii_1081(DAT_ram_00a66954,&local_4);
+		  if ((iVar2 != 0) && (iVar3 = func_ii_1082(iVar2,*(undefined4 *)(*param2_00 + 0x20)), iVar3 == 0))
+		  {
+		    uVar1 = func_ii_1083();
+		    func_ii_1050(uVar1,0);
+		    do {
+		      halt_trap();
+		    } while( true );
+		  }
+		  param2_00[5] = iVar2;
+		  local_10 = (float8)param4;
+		  iVar2 = func_ii_1081(DAT_ram_00a66970,&local_10);
+		  if ((iVar2 != 0) && (iVar3 = func_ii_1082(iVar2,*(undefined4 *)(*param2_00 + 0x20)), iVar3 == 0))
+		  {
+		    uVar1 = func_ii_1083();
+		    func_ii_1050(uVar1,0);
+		    do {
+		      halt_trap();
+		    } while( true );
+		  }
+		  param2_00[6] = iVar2;
+		  if ((param7 != 0) && (iVar2 = func_ii_1082(param7,*(undefined4 *)(*param2_00 + 0x20)), iVar2 == 0)
+		     ) {
+		    uVar1 = func_ii_1083();
+		    func_ii_1050(uVar1,0);
+		    do {
+		      halt_trap();
+		    } while( true );
+		  }
+		  param2_00[7] = param7;
+		  if ((param1_00 != 0) &&
+		     (iVar2 = func_ii_1082(param1_00,*(undefined4 *)(*param2_00 + 0x20)), iVar2 == 0)) {
+		    uVar1 = func_ii_1083();
+		    func_ii_1050(uVar1,0);
+		    do {
+		      halt_trap();
+		    } while( true );
+		  }
+		  param2_00[8] = param1_00;
+		  uVar1 = UnityEngine_InputSystem_Utilities_TypeHelpers__GetNiceTypeName
+		                    (StringLiteral_4061,param2_00,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
 	}
 
 	// Token: 0x06000021 RID: 33 RVA: 0x00002050 File Offset: 0x00000250
@@ -258,6 +1832,34 @@ public class Amplitude
 	[Address(RVA = "0x54F3", Offset = "0x54F3", VA = "0x54F3")]
 	public void useAppSetIdForDeviceId()
 	{
+		/* --- GHIDRA: useAppSetIdForDeviceId ---
+		void Amplitude__useAppSetIdForDeviceId(int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  undefined4 uVar1;
+		  undefined1 local_1;
+		  
+		  if (DAT_ram_00a647fa == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4090);
+		    DAT_ram_00a647fa = '\x01';
+		  }
+		  local_1 = (undefined1)param2;
+		  uVar1 = func_ii_1081(DAT_ram_00a66944,&local_1);
+		  uVar1 = func_ii_4419(StringLiteral_4090,uVar1,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
 	}
 
 	// Token: 0x06000028 RID: 40 RVA: 0x00002050 File Offset: 0x00000250
@@ -280,6 +1882,52 @@ public class Amplitude
 	[Address(RVA = "0x54F6", Offset = "0x54F6", VA = "0x54F6")]
 	public void uploadEvents()
 	{
+		/* --- GHIDRA: uploadEvents ---
+		void Amplitude__uploadEvents(int param1,undefined4 param2)
+		
+		{
+		  undefined4 param1_00;
+		  int iVar1;
+		  int iVar2;
+		  
+		  if (DAT_ram_00a647fb == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_System_Array_Empty_object___);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4052);
+		    DAT_ram_00a647fb = '\x01';
+		  }
+		  iVar2 = Method_System_Array_Empty_object___;
+		  iVar1 = *(int *)(Method_System_Array_Empty_object___ + 0x1c);
+		  if (iVar1 == 0) {
+		    System_ReadOnlySpan_char___GetPinnableReference(Method_System_Array_Empty_object___);
+		    iVar1 = *(int *)(iVar2 + 0x1c);
+		  }
+		  iVar1 = *(int *)(iVar1 + 8);
+		  if ((*(byte *)(iVar1 + 0xbd) & 1) == 0) {
+		    iVar1 = func_ii_1079(iVar1);
+		  }
+		  if (*(int *)(iVar1 + 0x74) == 0) {
+		    func_ii_306000(iVar1);
+		  }
+		  iVar2 = *(int *)(*(int *)(iVar2 + 0x1c) + 8);
+		  if ((*(byte *)(iVar2 + 0xbd) & 1) == 0) {
+		    iVar2 = func_ii_1079(iVar2);
+		  }
+		  param1_00 = UnityEngine_InputSystem_Utilities_TypeHelpers__GetNiceTypeName
+		                        (StringLiteral_4052,**(undefined4 **)(iVar2 + 0x5c),0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(param1_00,0);
+		  }
+		  return;
+		}
+		*/
+
 	}
 
 	// Token: 0x0600002B RID: 43 RVA: 0x00002050 File Offset: 0x00000250
@@ -287,6 +1935,31 @@ public class Amplitude
 	[Address(RVA = "0x54F7", Offset = "0x54F7", VA = "0x54F7")]
 	public void clearUserProperties()
 	{
+		/* --- GHIDRA: clearUserProperties ---
+		void Amplitude__clearUserProperties(int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  undefined4 param1_00;
+		  
+		  if (DAT_ram_00a647fc == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4091);
+		    DAT_ram_00a647fc = '\x01';
+		  }
+		  param1_00 = func_ii_4419(StringLiteral_4091,param2,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(param1_00,0);
+		  }
+		  return;
+		}
+		*/
+
 	}
 
 	// Token: 0x0600002C RID: 44 RVA: 0x00002050 File Offset: 0x00000250
@@ -294,6 +1967,35 @@ public class Amplitude
 	[Address(RVA = "0x54F8", Offset = "0x54F8", VA = "0x54F8")]
 	public void unsetUserProperty(string property)
 	{
+		/* --- GHIDRA: unsetUserProperty ---
+		void Amplitude__unsetUserProperty(int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  undefined1 local_1;
+		  
+		  if (DAT_ram_00a647fd == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4080);
+		    DAT_ram_00a647fd = '\x01';
+		  }
+		  local_1 = (undefined1)param3;
+		  uVar1 = func_ii_1081(DAT_ram_00a66944,&local_1);
+		  uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                    (StringLiteral_4080,param2,uVar1,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
 	}
 
 	// Token: 0x0600002D RID: 45 RVA: 0x00002050 File Offset: 0x00000250
@@ -301,6 +2003,429 @@ public class Amplitude
 	[Address(RVA = "0x54F9", Offset = "0x54F9", VA = "0x54F9")]
 	public void setOnceUserProperty(string property, bool value)
 	{
+		/* --- GHIDRA: setOnceUserProperty ---
+		void Amplitude__setOnceUserProperty
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  undefined1 local_1;
+		  
+		  if (DAT_ram_00a6480a == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4088);
+		    DAT_ram_00a6480a = '\x01';
+		  }
+		  local_1 = (undefined1)param3;
+		  uVar1 = func_ii_1081(DAT_ram_00a66944,&local_1);
+		  uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                    (StringLiteral_4088,param2,uVar1,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: setOnceUserProperty ---
+		void Amplitude__setOnceUserProperty
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  undefined1 local_1;
+		  
+		  if (DAT_ram_00a6480a == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4088);
+		    DAT_ram_00a6480a = '\x01';
+		  }
+		  local_1 = (undefined1)param3;
+		  uVar1 = func_ii_1081(DAT_ram_00a66944,&local_1);
+		  uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                    (StringLiteral_4088,param2,uVar1,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: setOnceUserProperty ---
+		void Amplitude__setOnceUserProperty
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  undefined1 local_1;
+		  
+		  if (DAT_ram_00a6480a == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4088);
+		    DAT_ram_00a6480a = '\x01';
+		  }
+		  local_1 = (undefined1)param3;
+		  uVar1 = func_ii_1081(DAT_ram_00a66944,&local_1);
+		  uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                    (StringLiteral_4088,param2,uVar1,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: setOnceUserProperty ---
+		void Amplitude__setOnceUserProperty
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  undefined1 local_1;
+		  
+		  if (DAT_ram_00a6480a == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4088);
+		    DAT_ram_00a6480a = '\x01';
+		  }
+		  local_1 = (undefined1)param3;
+		  uVar1 = func_ii_1081(DAT_ram_00a66944,&local_1);
+		  uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                    (StringLiteral_4088,param2,uVar1,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: setOnceUserProperty ---
+		void Amplitude__setOnceUserProperty
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  undefined1 local_1;
+		  
+		  if (DAT_ram_00a6480a == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4088);
+		    DAT_ram_00a6480a = '\x01';
+		  }
+		  local_1 = (undefined1)param3;
+		  uVar1 = func_ii_1081(DAT_ram_00a66944,&local_1);
+		  uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                    (StringLiteral_4088,param2,uVar1,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: setOnceUserProperty ---
+		void Amplitude__setOnceUserProperty
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  undefined1 local_1;
+		  
+		  if (DAT_ram_00a6480a == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4088);
+		    DAT_ram_00a6480a = '\x01';
+		  }
+		  local_1 = (undefined1)param3;
+		  uVar1 = func_ii_1081(DAT_ram_00a66944,&local_1);
+		  uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                    (StringLiteral_4088,param2,uVar1,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: setOnceUserProperty<__Il2CppFullySharedGenericType> ---
+		void Amplitude__setOnceUserProperty___Il2CppFullySharedGenericType_
+		               (undefined4 param1,undefined4 param2,int param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a632d2 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_Dictionary_string__object__Add__);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_Dictionary_string__object___ctor__);
+		    Mono_Security_ASN1__get_Item(&System_Collections_Generic_Dictionary_string__object__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_25144);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4088);
+		    DAT_ram_00a632d2 = '\x01';
+		  }
+		  if (param3 != 0) {
+		    uVar1 = unnamed_function_1417(System_Collections_Generic_Dictionary_string__object__TypeInfo);
+		    System_Collections_Generic_Dictionary_object__StyleComplexSelector_PseudoStateData___set_Item
+		              (uVar1,Method_System_Collections_Generic_Dictionary_string__object___ctor__);
+		    System_Reflection_FieldInfo__get_IsStatic
+		              (uVar1,StringLiteral_25144,param3,
+		               Method_System_Collections_Generic_Dictionary_string__object__Add__);
+		    uVar1 = AmplitudeNS_MiniJSON_Json__Deserialize(uVar1,0);
+		    uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                      (StringLiteral_4088,param2,uVar1,0);
+		    Amplitude__get_Instance(param1,uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: setOnceUserProperty ---
+		void Amplitude__setOnceUserProperty
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  undefined1 local_1;
+		  
+		  if (DAT_ram_00a6480a == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4088);
+		    DAT_ram_00a6480a = '\x01';
+		  }
+		  local_1 = (undefined1)param3;
+		  uVar1 = func_ii_1081(DAT_ram_00a66944,&local_1);
+		  uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                    (StringLiteral_4088,param2,uVar1,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: setOnceUserProperty ---
+		void Amplitude__setOnceUserProperty
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  undefined1 local_1;
+		  
+		  if (DAT_ram_00a6480a == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4088);
+		    DAT_ram_00a6480a = '\x01';
+		  }
+		  local_1 = (undefined1)param3;
+		  uVar1 = func_ii_1081(DAT_ram_00a66944,&local_1);
+		  uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                    (StringLiteral_4088,param2,uVar1,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: setOnceUserProperty ---
+		void Amplitude__setOnceUserProperty
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  undefined1 local_1;
+		  
+		  if (DAT_ram_00a6480a == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4088);
+		    DAT_ram_00a6480a = '\x01';
+		  }
+		  local_1 = (undefined1)param3;
+		  uVar1 = func_ii_1081(DAT_ram_00a66944,&local_1);
+		  uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                    (StringLiteral_4088,param2,uVar1,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: setOnceUserProperty ---
+		void Amplitude__setOnceUserProperty
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  undefined1 local_1;
+		  
+		  if (DAT_ram_00a6480a == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4088);
+		    DAT_ram_00a6480a = '\x01';
+		  }
+		  local_1 = (undefined1)param3;
+		  uVar1 = func_ii_1081(DAT_ram_00a66944,&local_1);
+		  uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                    (StringLiteral_4088,param2,uVar1,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: setOnceUserProperty ---
+		void Amplitude__setOnceUserProperty
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  undefined1 local_1;
+		  
+		  if (DAT_ram_00a6480a == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4088);
+		    DAT_ram_00a6480a = '\x01';
+		  }
+		  local_1 = (undefined1)param3;
+		  uVar1 = func_ii_1081(DAT_ram_00a66944,&local_1);
+		  uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                    (StringLiteral_4088,param2,uVar1,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: setOnceUserProperty ---
+		void Amplitude__setOnceUserProperty
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  undefined1 local_1;
+		  
+		  if (DAT_ram_00a6480a == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4088);
+		    DAT_ram_00a6480a = '\x01';
+		  }
+		  local_1 = (undefined1)param3;
+		  uVar1 = func_ii_1081(DAT_ram_00a66944,&local_1);
+		  uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                    (StringLiteral_4088,param2,uVar1,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: setOnceUserProperty ---
+		void Amplitude__setOnceUserProperty
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  undefined1 local_1;
+		  
+		  if (DAT_ram_00a6480a == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4088);
+		    DAT_ram_00a6480a = '\x01';
+		  }
+		  local_1 = (undefined1)param3;
+		  uVar1 = func_ii_1081(DAT_ram_00a66944,&local_1);
+		  uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                    (StringLiteral_4088,param2,uVar1,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
 	}
 
 	// Token: 0x0600002E RID: 46 RVA: 0x00002050 File Offset: 0x00000250
@@ -398,6 +2523,459 @@ public class Amplitude
 	[Address(RVA = "0x5506", Offset = "0x5506", VA = "0x5506")]
 	public void setUserProperty(string property, bool value)
 	{
+		/* --- GHIDRA: setUserProperty ---
+		void Amplitude__setUserProperty(int param1,undefined4 param2,double param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  float8 local_8;
+		  
+		  if (DAT_ram_00a64817 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4049);
+		    DAT_ram_00a64817 = '\x01';
+		  }
+		  local_8 = (float8)param3;
+		  uVar1 = func_ii_1081(DAT_ram_00a66970,&local_8);
+		  uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                    (StringLiteral_4049,param2,uVar1,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: setUserProperty ---
+		void Amplitude__setUserProperty(int param1,undefined4 param2,double param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  float8 local_8;
+		  
+		  if (DAT_ram_00a64817 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4049);
+		    DAT_ram_00a64817 = '\x01';
+		  }
+		  local_8 = (float8)param3;
+		  uVar1 = func_ii_1081(DAT_ram_00a66970,&local_8);
+		  uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                    (StringLiteral_4049,param2,uVar1,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: setUserProperty ---
+		void Amplitude__setUserProperty(int param1,undefined4 param2,double param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  float8 local_8;
+		  
+		  if (DAT_ram_00a64817 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4049);
+		    DAT_ram_00a64817 = '\x01';
+		  }
+		  local_8 = (float8)param3;
+		  uVar1 = func_ii_1081(DAT_ram_00a66970,&local_8);
+		  uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                    (StringLiteral_4049,param2,uVar1,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: setUserProperty ---
+		void Amplitude__setUserProperty(int param1,undefined4 param2,double param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  float8 local_8;
+		  
+		  if (DAT_ram_00a64817 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4049);
+		    DAT_ram_00a64817 = '\x01';
+		  }
+		  local_8 = (float8)param3;
+		  uVar1 = func_ii_1081(DAT_ram_00a66970,&local_8);
+		  uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                    (StringLiteral_4049,param2,uVar1,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: setUserProperty ---
+		void Amplitude__setUserProperty(int param1,undefined4 param2,double param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  float8 local_8;
+		  
+		  if (DAT_ram_00a64817 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4049);
+		    DAT_ram_00a64817 = '\x01';
+		  }
+		  local_8 = (float8)param3;
+		  uVar1 = func_ii_1081(DAT_ram_00a66970,&local_8);
+		  uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                    (StringLiteral_4049,param2,uVar1,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: setUserProperty ---
+		void Amplitude__setUserProperty(int param1,undefined4 param2,double param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  float8 local_8;
+		  
+		  if (DAT_ram_00a64817 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4049);
+		    DAT_ram_00a64817 = '\x01';
+		  }
+		  local_8 = (float8)param3;
+		  uVar1 = func_ii_1081(DAT_ram_00a66970,&local_8);
+		  uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                    (StringLiteral_4049,param2,uVar1,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: setUserProperty<__Il2CppFullySharedGenericType> ---
+		int Amplitude__setUserProperty___Il2CppFullySharedGenericType_(int param1,int param2)
+		
+		{
+		  int iVar1;
+		  int *param3;
+		  int iVar2;
+		  undefined4 *puVar3;
+		  undefined4 uVar4;
+		  
+		  puVar3 = *(undefined4 **)(param2 + 0x1c);
+		  if (puVar3 == (undefined4 *)0x0) {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_Dictionary_Type__AbstractAnalyticsListener__Add__)
+		    ;
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_System_Collections_Generic_Dictionary_Type__AbstractAnalyticsListener__ContainsKey__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_System_Collections_Generic_Dictionary_Type__AbstractAnalyticsListener__get_Item__
+		              );
+		    puVar3 = *(undefined4 **)(param2 + 0x1c);
+		    if (puVar3 == (undefined4 *)0x0) {
+		      System_ReadOnlySpan_char___GetPinnableReference(param2);
+		      puVar3 = *(undefined4 **)(param2 + 0x1c);
+		    }
+		  }
+		  uVar4 = *puVar3;
+		  if (*(int *)(DAT_ram_00a669a0 + 0x74) == 0) {
+		    func_ii_306000(DAT_ram_00a669a0);
+		  }
+		  uVar4 = func_ii_2734(uVar4,0);
+		  iVar1 = System_Xml_Schema_SchemaInfo__get_Notations
+		                    (*(undefined4 *)(param1 + 0x14),uVar4,
+		                     Method_System_Collections_Generic_Dictionary_Type__AbstractAnalyticsListener__ContainsKey__
+		                    );
+		  if (iVar1 == 0) {
+		    param3 = (int *)System_Delegate__Combine(*(undefined4 *)(*(int *)(param2 + 0x1c) + 4));
+		    iVar1 = System_Uri___ctor(0);
+		    (**(code **)((ulonglong)*(uint *)(*param3 + 0xf8) * 4))
+		              (param3,*(undefined4 *)(*(int *)(iVar1 + 0x38) + 0x10),*(undefined4 *)(*param3 + 0xfc)
+		              );
+		    (**(code **)((ulonglong)*(uint *)(*param3 + 0x110) * 4))
+		              (param3,*(undefined4 *)(*param3 + 0x114));
+		    System_Reflection_FieldInfo__get_IsStatic
+		              (*(undefined4 *)(param1 + 0x14),uVar4,param3,
+		               Method_System_Collections_Generic_Dictionary_Type__AbstractAnalyticsListener__Add__);
+		  }
+		  else {
+		    param3 = (int *)System_Data_DataRelationCollection__Add
+		                              (*(undefined4 *)(param1 + 0x14),uVar4,
+		                               Method_System_Collections_Generic_Dictionary_Type__AbstractAnalyticsListener__get_Item__
+		                              );
+		  }
+		  iVar1 = *(int *)(*(int *)(param2 + 0x1c) + 8);
+		  if ((*(byte *)(iVar1 + 0xbd) & 1) == 0) {
+		    iVar1 = func_ii_1079(iVar1);
+		  }
+		  if (param3 == (int *)0x0) {
+		    iVar2 = 0;
+		  }
+		  else {
+		    iVar2 = func_ii_1082(param3,iVar1);
+		    if (iVar2 == 0) {
+		      System_Activator__CreateInstance(param3,iVar1);
+		      do {
+		        halt_trap();
+		      } while( true );
+		    }
+		  }
+		  return iVar2;
+		}
+		*/
+
+		/* --- GHIDRA: setUserProperty ---
+		void Amplitude__setUserProperty(int param1,undefined4 param2,double param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  float8 local_8;
+		  
+		  if (DAT_ram_00a64817 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4049);
+		    DAT_ram_00a64817 = '\x01';
+		  }
+		  local_8 = (float8)param3;
+		  uVar1 = func_ii_1081(DAT_ram_00a66970,&local_8);
+		  uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                    (StringLiteral_4049,param2,uVar1,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: setUserProperty ---
+		void Amplitude__setUserProperty(int param1,undefined4 param2,double param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  float8 local_8;
+		  
+		  if (DAT_ram_00a64817 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4049);
+		    DAT_ram_00a64817 = '\x01';
+		  }
+		  local_8 = (float8)param3;
+		  uVar1 = func_ii_1081(DAT_ram_00a66970,&local_8);
+		  uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                    (StringLiteral_4049,param2,uVar1,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: setUserProperty ---
+		void Amplitude__setUserProperty(int param1,undefined4 param2,double param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  float8 local_8;
+		  
+		  if (DAT_ram_00a64817 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4049);
+		    DAT_ram_00a64817 = '\x01';
+		  }
+		  local_8 = (float8)param3;
+		  uVar1 = func_ii_1081(DAT_ram_00a66970,&local_8);
+		  uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                    (StringLiteral_4049,param2,uVar1,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: setUserProperty ---
+		void Amplitude__setUserProperty(int param1,undefined4 param2,double param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  float8 local_8;
+		  
+		  if (DAT_ram_00a64817 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4049);
+		    DAT_ram_00a64817 = '\x01';
+		  }
+		  local_8 = (float8)param3;
+		  uVar1 = func_ii_1081(DAT_ram_00a66970,&local_8);
+		  uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                    (StringLiteral_4049,param2,uVar1,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: setUserProperty ---
+		void Amplitude__setUserProperty(int param1,undefined4 param2,double param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  float8 local_8;
+		  
+		  if (DAT_ram_00a64817 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4049);
+		    DAT_ram_00a64817 = '\x01';
+		  }
+		  local_8 = (float8)param3;
+		  uVar1 = func_ii_1081(DAT_ram_00a66970,&local_8);
+		  uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                    (StringLiteral_4049,param2,uVar1,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: setUserProperty ---
+		void Amplitude__setUserProperty(int param1,undefined4 param2,double param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  float8 local_8;
+		  
+		  if (DAT_ram_00a64817 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4049);
+		    DAT_ram_00a64817 = '\x01';
+		  }
+		  local_8 = (float8)param3;
+		  uVar1 = func_ii_1081(DAT_ram_00a66970,&local_8);
+		  uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                    (StringLiteral_4049,param2,uVar1,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: setUserProperty ---
+		void Amplitude__setUserProperty(int param1,undefined4 param2,double param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  float8 local_8;
+		  
+		  if (DAT_ram_00a64817 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4049);
+		    DAT_ram_00a64817 = '\x01';
+		  }
+		  local_8 = (float8)param3;
+		  uVar1 = func_ii_1081(DAT_ram_00a66970,&local_8);
+		  uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                    (StringLiteral_4049,param2,uVar1,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
 	}
 
 	// Token: 0x0600003C RID: 60 RVA: 0x00002050 File Offset: 0x00000250
@@ -495,6 +3073,180 @@ public class Amplitude
 	[Address(RVA = "0x5513", Offset = "0x5513", VA = "0x5513")]
 	public void addUserProperty(string property, double value)
 	{
+		/* --- GHIDRA: addUserProperty ---
+		void Amplitude__addUserProperty(int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  undefined1 local_1;
+		  
+		  if (DAT_ram_00a6481d == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4051);
+		    DAT_ram_00a6481d = '\x01';
+		  }
+		  local_1 = (undefined1)param3;
+		  uVar1 = func_ii_1081(DAT_ram_00a66944,&local_1);
+		  uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                    (StringLiteral_4051,param2,uVar1,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: addUserProperty ---
+		void Amplitude__addUserProperty(int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  undefined1 local_1;
+		  
+		  if (DAT_ram_00a6481d == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4051);
+		    DAT_ram_00a6481d = '\x01';
+		  }
+		  local_1 = (undefined1)param3;
+		  uVar1 = func_ii_1081(DAT_ram_00a66944,&local_1);
+		  uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                    (StringLiteral_4051,param2,uVar1,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: addUserProperty ---
+		void Amplitude__addUserProperty(int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  undefined1 local_1;
+		  
+		  if (DAT_ram_00a6481d == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4051);
+		    DAT_ram_00a6481d = '\x01';
+		  }
+		  local_1 = (undefined1)param3;
+		  uVar1 = func_ii_1081(DAT_ram_00a66944,&local_1);
+		  uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                    (StringLiteral_4051,param2,uVar1,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: addUserProperty ---
+		void Amplitude__addUserProperty(int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  undefined1 local_1;
+		  
+		  if (DAT_ram_00a6481d == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4051);
+		    DAT_ram_00a6481d = '\x01';
+		  }
+		  local_1 = (undefined1)param3;
+		  uVar1 = func_ii_1081(DAT_ram_00a66944,&local_1);
+		  uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                    (StringLiteral_4051,param2,uVar1,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: addUserProperty ---
+		void Amplitude__addUserProperty(int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  undefined1 local_1;
+		  
+		  if (DAT_ram_00a6481d == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4051);
+		    DAT_ram_00a6481d = '\x01';
+		  }
+		  local_1 = (undefined1)param3;
+		  uVar1 = func_ii_1081(DAT_ram_00a66944,&local_1);
+		  uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                    (StringLiteral_4051,param2,uVar1,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: addUserProperty ---
+		void Amplitude__addUserProperty(int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  undefined1 local_1;
+		  
+		  if (DAT_ram_00a6481d == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4051);
+		    DAT_ram_00a6481d = '\x01';
+		  }
+		  local_1 = (undefined1)param3;
+		  uVar1 = func_ii_1081(DAT_ram_00a66944,&local_1);
+		  uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                    (StringLiteral_4051,param2,uVar1,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
 	}
 
 	// Token: 0x0600004A RID: 74 RVA: 0x00002050 File Offset: 0x00000250
@@ -537,6 +3289,416 @@ public class Amplitude
 	[Address(RVA = "0x5519", Offset = "0x5519", VA = "0x5519")]
 	public void appendUserProperty(string property, bool value)
 	{
+		/* --- GHIDRA: appendUserProperty ---
+		void Amplitude__appendUserProperty(int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  undefined1 local_1;
+		  
+		  if (DAT_ram_00a6482a == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4068);
+		    DAT_ram_00a6482a = '\x01';
+		  }
+		  local_1 = (undefined1)param3;
+		  uVar1 = func_ii_1081(DAT_ram_00a66944,&local_1);
+		  uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                    (StringLiteral_4068,param2,uVar1,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: appendUserProperty ---
+		void Amplitude__appendUserProperty(int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  undefined1 local_1;
+		  
+		  if (DAT_ram_00a6482a == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4068);
+		    DAT_ram_00a6482a = '\x01';
+		  }
+		  local_1 = (undefined1)param3;
+		  uVar1 = func_ii_1081(DAT_ram_00a66944,&local_1);
+		  uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                    (StringLiteral_4068,param2,uVar1,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: appendUserProperty ---
+		void Amplitude__appendUserProperty(int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  undefined1 local_1;
+		  
+		  if (DAT_ram_00a6482a == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4068);
+		    DAT_ram_00a6482a = '\x01';
+		  }
+		  local_1 = (undefined1)param3;
+		  uVar1 = func_ii_1081(DAT_ram_00a66944,&local_1);
+		  uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                    (StringLiteral_4068,param2,uVar1,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: appendUserProperty ---
+		void Amplitude__appendUserProperty(int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  undefined1 local_1;
+		  
+		  if (DAT_ram_00a6482a == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4068);
+		    DAT_ram_00a6482a = '\x01';
+		  }
+		  local_1 = (undefined1)param3;
+		  uVar1 = func_ii_1081(DAT_ram_00a66944,&local_1);
+		  uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                    (StringLiteral_4068,param2,uVar1,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: appendUserProperty ---
+		void Amplitude__appendUserProperty(int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  undefined1 local_1;
+		  
+		  if (DAT_ram_00a6482a == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4068);
+		    DAT_ram_00a6482a = '\x01';
+		  }
+		  local_1 = (undefined1)param3;
+		  uVar1 = func_ii_1081(DAT_ram_00a66944,&local_1);
+		  uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                    (StringLiteral_4068,param2,uVar1,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: appendUserProperty ---
+		void Amplitude__appendUserProperty(int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  undefined1 local_1;
+		  
+		  if (DAT_ram_00a6482a == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4068);
+		    DAT_ram_00a6482a = '\x01';
+		  }
+		  local_1 = (undefined1)param3;
+		  uVar1 = func_ii_1081(DAT_ram_00a66944,&local_1);
+		  uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                    (StringLiteral_4068,param2,uVar1,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: appendUserProperty<__Il2CppFullySharedGenericType> ---
+		void Amplitude__appendUserProperty___Il2CppFullySharedGenericType_
+		               (undefined4 param1,undefined4 param2,int param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a632cd == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_Dictionary_string__object__Add__);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_Dictionary_string__object___ctor__);
+		    Mono_Security_ASN1__get_Item(&System_Collections_Generic_Dictionary_string__object__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_25144);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4064);
+		    DAT_ram_00a632cd = '\x01';
+		  }
+		  if (param3 != 0) {
+		    uVar1 = unnamed_function_1417(System_Collections_Generic_Dictionary_string__object__TypeInfo);
+		    System_Collections_Generic_Dictionary_object__StyleComplexSelector_PseudoStateData___set_Item
+		              (uVar1,Method_System_Collections_Generic_Dictionary_string__object___ctor__);
+		    System_Reflection_FieldInfo__get_IsStatic
+		              (uVar1,StringLiteral_25144,param3,
+		               Method_System_Collections_Generic_Dictionary_string__object__Add__);
+		    uVar1 = AmplitudeNS_MiniJSON_Json__Deserialize(uVar1,0);
+		    uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                      (StringLiteral_4064,param2,uVar1,0);
+		    Amplitude__get_Instance(param1,uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: appendUserProperty ---
+		void Amplitude__appendUserProperty(int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  undefined1 local_1;
+		  
+		  if (DAT_ram_00a6482a == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4068);
+		    DAT_ram_00a6482a = '\x01';
+		  }
+		  local_1 = (undefined1)param3;
+		  uVar1 = func_ii_1081(DAT_ram_00a66944,&local_1);
+		  uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                    (StringLiteral_4068,param2,uVar1,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: appendUserProperty ---
+		void Amplitude__appendUserProperty(int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  undefined1 local_1;
+		  
+		  if (DAT_ram_00a6482a == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4068);
+		    DAT_ram_00a6482a = '\x01';
+		  }
+		  local_1 = (undefined1)param3;
+		  uVar1 = func_ii_1081(DAT_ram_00a66944,&local_1);
+		  uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                    (StringLiteral_4068,param2,uVar1,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: appendUserProperty ---
+		void Amplitude__appendUserProperty(int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  undefined1 local_1;
+		  
+		  if (DAT_ram_00a6482a == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4068);
+		    DAT_ram_00a6482a = '\x01';
+		  }
+		  local_1 = (undefined1)param3;
+		  uVar1 = func_ii_1081(DAT_ram_00a66944,&local_1);
+		  uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                    (StringLiteral_4068,param2,uVar1,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: appendUserProperty ---
+		void Amplitude__appendUserProperty(int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  undefined1 local_1;
+		  
+		  if (DAT_ram_00a6482a == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4068);
+		    DAT_ram_00a6482a = '\x01';
+		  }
+		  local_1 = (undefined1)param3;
+		  uVar1 = func_ii_1081(DAT_ram_00a66944,&local_1);
+		  uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                    (StringLiteral_4068,param2,uVar1,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: appendUserProperty ---
+		void Amplitude__appendUserProperty(int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  undefined1 local_1;
+		  
+		  if (DAT_ram_00a6482a == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4068);
+		    DAT_ram_00a6482a = '\x01';
+		  }
+		  local_1 = (undefined1)param3;
+		  uVar1 = func_ii_1081(DAT_ram_00a66944,&local_1);
+		  uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                    (StringLiteral_4068,param2,uVar1,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: appendUserProperty ---
+		void Amplitude__appendUserProperty(int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  undefined1 local_1;
+		  
+		  if (DAT_ram_00a6482a == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4068);
+		    DAT_ram_00a6482a = '\x01';
+		  }
+		  local_1 = (undefined1)param3;
+		  uVar1 = func_ii_1081(DAT_ram_00a66944,&local_1);
+		  uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                    (StringLiteral_4068,param2,uVar1,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: appendUserProperty ---
+		void Amplitude__appendUserProperty(int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  undefined1 local_1;
+		  
+		  if (DAT_ram_00a6482a == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4068);
+		    DAT_ram_00a6482a = '\x01';
+		  }
+		  local_1 = (undefined1)param3;
+		  uVar1 = func_ii_1081(DAT_ram_00a66944,&local_1);
+		  uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                    (StringLiteral_4068,param2,uVar1,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
 	}
 
 	// Token: 0x06000050 RID: 80 RVA: 0x00002050 File Offset: 0x00000250
@@ -634,6 +3796,429 @@ public class Amplitude
 	[Address(RVA = "0x5526", Offset = "0x5526", VA = "0x5526")]
 	public void prependUserProperty(string property, bool value)
 	{
+		/* --- GHIDRA: prependUserProperty ---
+		void Amplitude__prependUserProperty
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  undefined1 local_1;
+		  
+		  if (DAT_ram_00a64837 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4066);
+		    DAT_ram_00a64837 = '\x01';
+		  }
+		  local_1 = (undefined1)param3;
+		  uVar1 = func_ii_1081(DAT_ram_00a66944,&local_1);
+		  uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                    (StringLiteral_4066,param2,uVar1,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: prependUserProperty ---
+		void Amplitude__prependUserProperty
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  undefined1 local_1;
+		  
+		  if (DAT_ram_00a64837 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4066);
+		    DAT_ram_00a64837 = '\x01';
+		  }
+		  local_1 = (undefined1)param3;
+		  uVar1 = func_ii_1081(DAT_ram_00a66944,&local_1);
+		  uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                    (StringLiteral_4066,param2,uVar1,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: prependUserProperty ---
+		void Amplitude__prependUserProperty
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  undefined1 local_1;
+		  
+		  if (DAT_ram_00a64837 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4066);
+		    DAT_ram_00a64837 = '\x01';
+		  }
+		  local_1 = (undefined1)param3;
+		  uVar1 = func_ii_1081(DAT_ram_00a66944,&local_1);
+		  uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                    (StringLiteral_4066,param2,uVar1,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: prependUserProperty ---
+		void Amplitude__prependUserProperty
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  undefined1 local_1;
+		  
+		  if (DAT_ram_00a64837 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4066);
+		    DAT_ram_00a64837 = '\x01';
+		  }
+		  local_1 = (undefined1)param3;
+		  uVar1 = func_ii_1081(DAT_ram_00a66944,&local_1);
+		  uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                    (StringLiteral_4066,param2,uVar1,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: prependUserProperty ---
+		void Amplitude__prependUserProperty
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  undefined1 local_1;
+		  
+		  if (DAT_ram_00a64837 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4066);
+		    DAT_ram_00a64837 = '\x01';
+		  }
+		  local_1 = (undefined1)param3;
+		  uVar1 = func_ii_1081(DAT_ram_00a66944,&local_1);
+		  uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                    (StringLiteral_4066,param2,uVar1,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: prependUserProperty ---
+		void Amplitude__prependUserProperty
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  undefined1 local_1;
+		  
+		  if (DAT_ram_00a64837 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4066);
+		    DAT_ram_00a64837 = '\x01';
+		  }
+		  local_1 = (undefined1)param3;
+		  uVar1 = func_ii_1081(DAT_ram_00a66944,&local_1);
+		  uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                    (StringLiteral_4066,param2,uVar1,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: prependUserProperty<__Il2CppFullySharedGenericType> ---
+		void Amplitude__prependUserProperty___Il2CppFullySharedGenericType_
+		               (undefined4 param1,undefined4 param2,int param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a632d0 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_Dictionary_string__object__Add__);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_Dictionary_string__object___ctor__);
+		    Mono_Security_ASN1__get_Item(&System_Collections_Generic_Dictionary_string__object__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_25144);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4070);
+		    DAT_ram_00a632d0 = '\x01';
+		  }
+		  if (param3 != 0) {
+		    uVar1 = unnamed_function_1417(System_Collections_Generic_Dictionary_string__object__TypeInfo);
+		    System_Collections_Generic_Dictionary_object__StyleComplexSelector_PseudoStateData___set_Item
+		              (uVar1,Method_System_Collections_Generic_Dictionary_string__object___ctor__);
+		    System_Reflection_FieldInfo__get_IsStatic
+		              (uVar1,StringLiteral_25144,param3,
+		               Method_System_Collections_Generic_Dictionary_string__object__Add__);
+		    uVar1 = AmplitudeNS_MiniJSON_Json__Deserialize(uVar1,0);
+		    uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                      (StringLiteral_4070,param2,uVar1,0);
+		    Amplitude__get_Instance(param1,uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: prependUserProperty ---
+		void Amplitude__prependUserProperty
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  undefined1 local_1;
+		  
+		  if (DAT_ram_00a64837 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4066);
+		    DAT_ram_00a64837 = '\x01';
+		  }
+		  local_1 = (undefined1)param3;
+		  uVar1 = func_ii_1081(DAT_ram_00a66944,&local_1);
+		  uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                    (StringLiteral_4066,param2,uVar1,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: prependUserProperty ---
+		void Amplitude__prependUserProperty
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  undefined1 local_1;
+		  
+		  if (DAT_ram_00a64837 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4066);
+		    DAT_ram_00a64837 = '\x01';
+		  }
+		  local_1 = (undefined1)param3;
+		  uVar1 = func_ii_1081(DAT_ram_00a66944,&local_1);
+		  uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                    (StringLiteral_4066,param2,uVar1,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: prependUserProperty ---
+		void Amplitude__prependUserProperty
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  undefined1 local_1;
+		  
+		  if (DAT_ram_00a64837 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4066);
+		    DAT_ram_00a64837 = '\x01';
+		  }
+		  local_1 = (undefined1)param3;
+		  uVar1 = func_ii_1081(DAT_ram_00a66944,&local_1);
+		  uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                    (StringLiteral_4066,param2,uVar1,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: prependUserProperty ---
+		void Amplitude__prependUserProperty
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  undefined1 local_1;
+		  
+		  if (DAT_ram_00a64837 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4066);
+		    DAT_ram_00a64837 = '\x01';
+		  }
+		  local_1 = (undefined1)param3;
+		  uVar1 = func_ii_1081(DAT_ram_00a66944,&local_1);
+		  uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                    (StringLiteral_4066,param2,uVar1,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: prependUserProperty ---
+		void Amplitude__prependUserProperty
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  undefined1 local_1;
+		  
+		  if (DAT_ram_00a64837 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4066);
+		    DAT_ram_00a64837 = '\x01';
+		  }
+		  local_1 = (undefined1)param3;
+		  uVar1 = func_ii_1081(DAT_ram_00a66944,&local_1);
+		  uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                    (StringLiteral_4066,param2,uVar1,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: prependUserProperty ---
+		void Amplitude__prependUserProperty
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  undefined1 local_1;
+		  
+		  if (DAT_ram_00a64837 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4066);
+		    DAT_ram_00a64837 = '\x01';
+		  }
+		  local_1 = (undefined1)param3;
+		  uVar1 = func_ii_1081(DAT_ram_00a66944,&local_1);
+		  uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                    (StringLiteral_4066,param2,uVar1,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: prependUserProperty ---
+		void Amplitude__prependUserProperty
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  undefined1 local_1;
+		  
+		  if (DAT_ram_00a64837 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4066);
+		    DAT_ram_00a64837 = '\x01';
+		  }
+		  local_1 = (undefined1)param3;
+		  uVar1 = func_ii_1081(DAT_ram_00a66944,&local_1);
+		  uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                    (StringLiteral_4066,param2,uVar1,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
 	}
 
 	// Token: 0x0600005E RID: 94 RVA: 0x00002050 File Offset: 0x00000250
@@ -731,6 +4316,429 @@ public class Amplitude
 	[Address(RVA = "0x5533", Offset = "0x5533", VA = "0x5533")]
 	public void preInsertUserProperty(string property, bool value)
 	{
+		/* --- GHIDRA: preInsertUserProperty ---
+		void Amplitude__preInsertUserProperty
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  undefined1 local_1;
+		  
+		  if (DAT_ram_00a64844 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4064);
+		    DAT_ram_00a64844 = '\x01';
+		  }
+		  local_1 = (undefined1)param3;
+		  uVar1 = func_ii_1081(DAT_ram_00a66944,&local_1);
+		  uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                    (StringLiteral_4064,param2,uVar1,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: preInsertUserProperty ---
+		void Amplitude__preInsertUserProperty
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  undefined1 local_1;
+		  
+		  if (DAT_ram_00a64844 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4064);
+		    DAT_ram_00a64844 = '\x01';
+		  }
+		  local_1 = (undefined1)param3;
+		  uVar1 = func_ii_1081(DAT_ram_00a66944,&local_1);
+		  uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                    (StringLiteral_4064,param2,uVar1,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: preInsertUserProperty ---
+		void Amplitude__preInsertUserProperty
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  undefined1 local_1;
+		  
+		  if (DAT_ram_00a64844 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4064);
+		    DAT_ram_00a64844 = '\x01';
+		  }
+		  local_1 = (undefined1)param3;
+		  uVar1 = func_ii_1081(DAT_ram_00a66944,&local_1);
+		  uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                    (StringLiteral_4064,param2,uVar1,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: preInsertUserProperty ---
+		void Amplitude__preInsertUserProperty
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  undefined1 local_1;
+		  
+		  if (DAT_ram_00a64844 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4064);
+		    DAT_ram_00a64844 = '\x01';
+		  }
+		  local_1 = (undefined1)param3;
+		  uVar1 = func_ii_1081(DAT_ram_00a66944,&local_1);
+		  uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                    (StringLiteral_4064,param2,uVar1,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: preInsertUserProperty ---
+		void Amplitude__preInsertUserProperty
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  undefined1 local_1;
+		  
+		  if (DAT_ram_00a64844 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4064);
+		    DAT_ram_00a64844 = '\x01';
+		  }
+		  local_1 = (undefined1)param3;
+		  uVar1 = func_ii_1081(DAT_ram_00a66944,&local_1);
+		  uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                    (StringLiteral_4064,param2,uVar1,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: preInsertUserProperty ---
+		void Amplitude__preInsertUserProperty
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  undefined1 local_1;
+		  
+		  if (DAT_ram_00a64844 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4064);
+		    DAT_ram_00a64844 = '\x01';
+		  }
+		  local_1 = (undefined1)param3;
+		  uVar1 = func_ii_1081(DAT_ram_00a66944,&local_1);
+		  uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                    (StringLiteral_4064,param2,uVar1,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: preInsertUserProperty<__Il2CppFullySharedGenericType> ---
+		void Amplitude__preInsertUserProperty___Il2CppFullySharedGenericType_
+		               (undefined4 param1,undefined4 param2,int param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a632cf == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_Dictionary_string__object__Add__);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_Dictionary_string__object___ctor__);
+		    Mono_Security_ASN1__get_Item(&System_Collections_Generic_Dictionary_string__object__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_25144);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4068);
+		    DAT_ram_00a632cf = '\x01';
+		  }
+		  if (param3 != 0) {
+		    uVar1 = unnamed_function_1417(System_Collections_Generic_Dictionary_string__object__TypeInfo);
+		    System_Collections_Generic_Dictionary_object__StyleComplexSelector_PseudoStateData___set_Item
+		              (uVar1,Method_System_Collections_Generic_Dictionary_string__object___ctor__);
+		    System_Reflection_FieldInfo__get_IsStatic
+		              (uVar1,StringLiteral_25144,param3,
+		               Method_System_Collections_Generic_Dictionary_string__object__Add__);
+		    uVar1 = AmplitudeNS_MiniJSON_Json__Deserialize(uVar1,0);
+		    uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                      (StringLiteral_4068,param2,uVar1,0);
+		    Amplitude__get_Instance(param1,uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: preInsertUserProperty ---
+		void Amplitude__preInsertUserProperty
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  undefined1 local_1;
+		  
+		  if (DAT_ram_00a64844 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4064);
+		    DAT_ram_00a64844 = '\x01';
+		  }
+		  local_1 = (undefined1)param3;
+		  uVar1 = func_ii_1081(DAT_ram_00a66944,&local_1);
+		  uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                    (StringLiteral_4064,param2,uVar1,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: preInsertUserProperty ---
+		void Amplitude__preInsertUserProperty
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  undefined1 local_1;
+		  
+		  if (DAT_ram_00a64844 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4064);
+		    DAT_ram_00a64844 = '\x01';
+		  }
+		  local_1 = (undefined1)param3;
+		  uVar1 = func_ii_1081(DAT_ram_00a66944,&local_1);
+		  uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                    (StringLiteral_4064,param2,uVar1,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: preInsertUserProperty ---
+		void Amplitude__preInsertUserProperty
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  undefined1 local_1;
+		  
+		  if (DAT_ram_00a64844 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4064);
+		    DAT_ram_00a64844 = '\x01';
+		  }
+		  local_1 = (undefined1)param3;
+		  uVar1 = func_ii_1081(DAT_ram_00a66944,&local_1);
+		  uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                    (StringLiteral_4064,param2,uVar1,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: preInsertUserProperty ---
+		void Amplitude__preInsertUserProperty
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  undefined1 local_1;
+		  
+		  if (DAT_ram_00a64844 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4064);
+		    DAT_ram_00a64844 = '\x01';
+		  }
+		  local_1 = (undefined1)param3;
+		  uVar1 = func_ii_1081(DAT_ram_00a66944,&local_1);
+		  uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                    (StringLiteral_4064,param2,uVar1,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: preInsertUserProperty ---
+		void Amplitude__preInsertUserProperty
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  undefined1 local_1;
+		  
+		  if (DAT_ram_00a64844 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4064);
+		    DAT_ram_00a64844 = '\x01';
+		  }
+		  local_1 = (undefined1)param3;
+		  uVar1 = func_ii_1081(DAT_ram_00a66944,&local_1);
+		  uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                    (StringLiteral_4064,param2,uVar1,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: preInsertUserProperty ---
+		void Amplitude__preInsertUserProperty
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  undefined1 local_1;
+		  
+		  if (DAT_ram_00a64844 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4064);
+		    DAT_ram_00a64844 = '\x01';
+		  }
+		  local_1 = (undefined1)param3;
+		  uVar1 = func_ii_1081(DAT_ram_00a66944,&local_1);
+		  uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                    (StringLiteral_4064,param2,uVar1,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: preInsertUserProperty ---
+		void Amplitude__preInsertUserProperty
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  undefined1 local_1;
+		  
+		  if (DAT_ram_00a64844 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4064);
+		    DAT_ram_00a64844 = '\x01';
+		  }
+		  local_1 = (undefined1)param3;
+		  uVar1 = func_ii_1081(DAT_ram_00a66944,&local_1);
+		  uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                    (StringLiteral_4064,param2,uVar1,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
 	}
 
 	// Token: 0x0600006C RID: 108 RVA: 0x00002050 File Offset: 0x00000250
@@ -828,6 +4836,429 @@ public class Amplitude
 	[Address(RVA = "0x5540", Offset = "0x5540", VA = "0x5540")]
 	public void postInsertUserProperty(string property, bool value)
 	{
+		/* --- GHIDRA: postInsertUserProperty ---
+		void Amplitude__postInsertUserProperty
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  undefined1 local_1;
+		  
+		  if (DAT_ram_00a64851 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4070);
+		    DAT_ram_00a64851 = '\x01';
+		  }
+		  local_1 = (undefined1)param3;
+		  uVar1 = func_ii_1081(DAT_ram_00a66944,&local_1);
+		  uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                    (StringLiteral_4070,param2,uVar1,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: postInsertUserProperty ---
+		void Amplitude__postInsertUserProperty
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  undefined1 local_1;
+		  
+		  if (DAT_ram_00a64851 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4070);
+		    DAT_ram_00a64851 = '\x01';
+		  }
+		  local_1 = (undefined1)param3;
+		  uVar1 = func_ii_1081(DAT_ram_00a66944,&local_1);
+		  uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                    (StringLiteral_4070,param2,uVar1,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: postInsertUserProperty ---
+		void Amplitude__postInsertUserProperty
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  undefined1 local_1;
+		  
+		  if (DAT_ram_00a64851 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4070);
+		    DAT_ram_00a64851 = '\x01';
+		  }
+		  local_1 = (undefined1)param3;
+		  uVar1 = func_ii_1081(DAT_ram_00a66944,&local_1);
+		  uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                    (StringLiteral_4070,param2,uVar1,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: postInsertUserProperty ---
+		void Amplitude__postInsertUserProperty
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  undefined1 local_1;
+		  
+		  if (DAT_ram_00a64851 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4070);
+		    DAT_ram_00a64851 = '\x01';
+		  }
+		  local_1 = (undefined1)param3;
+		  uVar1 = func_ii_1081(DAT_ram_00a66944,&local_1);
+		  uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                    (StringLiteral_4070,param2,uVar1,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: postInsertUserProperty ---
+		void Amplitude__postInsertUserProperty
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  undefined1 local_1;
+		  
+		  if (DAT_ram_00a64851 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4070);
+		    DAT_ram_00a64851 = '\x01';
+		  }
+		  local_1 = (undefined1)param3;
+		  uVar1 = func_ii_1081(DAT_ram_00a66944,&local_1);
+		  uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                    (StringLiteral_4070,param2,uVar1,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: postInsertUserProperty ---
+		void Amplitude__postInsertUserProperty
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  undefined1 local_1;
+		  
+		  if (DAT_ram_00a64851 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4070);
+		    DAT_ram_00a64851 = '\x01';
+		  }
+		  local_1 = (undefined1)param3;
+		  uVar1 = func_ii_1081(DAT_ram_00a66944,&local_1);
+		  uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                    (StringLiteral_4070,param2,uVar1,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: postInsertUserProperty<__Il2CppFullySharedGenericType> ---
+		void Amplitude__postInsertUserProperty___Il2CppFullySharedGenericType_
+		               (undefined4 param1,undefined4 param2,int param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a632ce == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_Dictionary_string__object__Add__);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_Dictionary_string__object___ctor__);
+		    Mono_Security_ASN1__get_Item(&System_Collections_Generic_Dictionary_string__object__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_25144);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4066);
+		    DAT_ram_00a632ce = '\x01';
+		  }
+		  if (param3 != 0) {
+		    uVar1 = unnamed_function_1417(System_Collections_Generic_Dictionary_string__object__TypeInfo);
+		    System_Collections_Generic_Dictionary_object__StyleComplexSelector_PseudoStateData___set_Item
+		              (uVar1,Method_System_Collections_Generic_Dictionary_string__object___ctor__);
+		    System_Reflection_FieldInfo__get_IsStatic
+		              (uVar1,StringLiteral_25144,param3,
+		               Method_System_Collections_Generic_Dictionary_string__object__Add__);
+		    uVar1 = AmplitudeNS_MiniJSON_Json__Deserialize(uVar1,0);
+		    uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                      (StringLiteral_4066,param2,uVar1,0);
+		    Amplitude__get_Instance(param1,uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: postInsertUserProperty ---
+		void Amplitude__postInsertUserProperty
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  undefined1 local_1;
+		  
+		  if (DAT_ram_00a64851 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4070);
+		    DAT_ram_00a64851 = '\x01';
+		  }
+		  local_1 = (undefined1)param3;
+		  uVar1 = func_ii_1081(DAT_ram_00a66944,&local_1);
+		  uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                    (StringLiteral_4070,param2,uVar1,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: postInsertUserProperty ---
+		void Amplitude__postInsertUserProperty
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  undefined1 local_1;
+		  
+		  if (DAT_ram_00a64851 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4070);
+		    DAT_ram_00a64851 = '\x01';
+		  }
+		  local_1 = (undefined1)param3;
+		  uVar1 = func_ii_1081(DAT_ram_00a66944,&local_1);
+		  uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                    (StringLiteral_4070,param2,uVar1,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: postInsertUserProperty ---
+		void Amplitude__postInsertUserProperty
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  undefined1 local_1;
+		  
+		  if (DAT_ram_00a64851 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4070);
+		    DAT_ram_00a64851 = '\x01';
+		  }
+		  local_1 = (undefined1)param3;
+		  uVar1 = func_ii_1081(DAT_ram_00a66944,&local_1);
+		  uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                    (StringLiteral_4070,param2,uVar1,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: postInsertUserProperty ---
+		void Amplitude__postInsertUserProperty
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  undefined1 local_1;
+		  
+		  if (DAT_ram_00a64851 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4070);
+		    DAT_ram_00a64851 = '\x01';
+		  }
+		  local_1 = (undefined1)param3;
+		  uVar1 = func_ii_1081(DAT_ram_00a66944,&local_1);
+		  uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                    (StringLiteral_4070,param2,uVar1,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: postInsertUserProperty ---
+		void Amplitude__postInsertUserProperty
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  undefined1 local_1;
+		  
+		  if (DAT_ram_00a64851 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4070);
+		    DAT_ram_00a64851 = '\x01';
+		  }
+		  local_1 = (undefined1)param3;
+		  uVar1 = func_ii_1081(DAT_ram_00a66944,&local_1);
+		  uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                    (StringLiteral_4070,param2,uVar1,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: postInsertUserProperty ---
+		void Amplitude__postInsertUserProperty
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  undefined1 local_1;
+		  
+		  if (DAT_ram_00a64851 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4070);
+		    DAT_ram_00a64851 = '\x01';
+		  }
+		  local_1 = (undefined1)param3;
+		  uVar1 = func_ii_1081(DAT_ram_00a66944,&local_1);
+		  uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                    (StringLiteral_4070,param2,uVar1,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: postInsertUserProperty ---
+		void Amplitude__postInsertUserProperty
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  undefined1 local_1;
+		  
+		  if (DAT_ram_00a64851 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4070);
+		    DAT_ram_00a64851 = '\x01';
+		  }
+		  local_1 = (undefined1)param3;
+		  uVar1 = func_ii_1081(DAT_ram_00a66944,&local_1);
+		  uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                    (StringLiteral_4070,param2,uVar1,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
 	}
 
 	// Token: 0x0600007A RID: 122 RVA: 0x00002050 File Offset: 0x00000250
@@ -925,6 +5356,234 @@ public class Amplitude
 	[Address(RVA = "0x554D", Offset = "0x554D", VA = "0x554D")]
 	public void removeUserProperty(string property, bool value)
 	{
+		/* --- GHIDRA: removeUserProperty ---
+		void Amplitude__removeUserProperty
+		               (undefined4 param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  if (DAT_ram_00a6485d == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_Amplitude_Log_string___);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4069);
+		    DAT_ram_00a6485d = '\x01';
+		  }
+		  Amplitude__Log_long_(param1,StringLiteral_4069,param2,param3,Method_Amplitude_Log_string___);
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: removeUserProperty ---
+		void Amplitude__removeUserProperty
+		               (undefined4 param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  if (DAT_ram_00a6485d == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_Amplitude_Log_string___);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4069);
+		    DAT_ram_00a6485d = '\x01';
+		  }
+		  Amplitude__Log_long_(param1,StringLiteral_4069,param2,param3,Method_Amplitude_Log_string___);
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: removeUserProperty ---
+		void Amplitude__removeUserProperty
+		               (undefined4 param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  if (DAT_ram_00a6485d == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_Amplitude_Log_string___);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4069);
+		    DAT_ram_00a6485d = '\x01';
+		  }
+		  Amplitude__Log_long_(param1,StringLiteral_4069,param2,param3,Method_Amplitude_Log_string___);
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: removeUserProperty ---
+		void Amplitude__removeUserProperty
+		               (undefined4 param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  if (DAT_ram_00a6485d == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_Amplitude_Log_string___);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4069);
+		    DAT_ram_00a6485d = '\x01';
+		  }
+		  Amplitude__Log_long_(param1,StringLiteral_4069,param2,param3,Method_Amplitude_Log_string___);
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: removeUserProperty ---
+		void Amplitude__removeUserProperty
+		               (undefined4 param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  if (DAT_ram_00a6485d == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_Amplitude_Log_string___);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4069);
+		    DAT_ram_00a6485d = '\x01';
+		  }
+		  Amplitude__Log_long_(param1,StringLiteral_4069,param2,param3,Method_Amplitude_Log_string___);
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: removeUserProperty ---
+		void Amplitude__removeUserProperty
+		               (undefined4 param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  if (DAT_ram_00a6485d == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_Amplitude_Log_string___);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4069);
+		    DAT_ram_00a6485d = '\x01';
+		  }
+		  Amplitude__Log_long_(param1,StringLiteral_4069,param2,param3,Method_Amplitude_Log_string___);
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: removeUserProperty<__Il2CppFullySharedGenericType> ---
+		void Amplitude__removeUserProperty___Il2CppFullySharedGenericType_
+		               (undefined4 param1,undefined4 param2,int param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a632d1 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_Dictionary_string__object__Add__);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_Dictionary_string__object___ctor__);
+		    Mono_Security_ASN1__get_Item(&System_Collections_Generic_Dictionary_string__object__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_25144);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4080);
+		    DAT_ram_00a632d1 = '\x01';
+		  }
+		  if (param3 != 0) {
+		    uVar1 = unnamed_function_1417(System_Collections_Generic_Dictionary_string__object__TypeInfo);
+		    System_Collections_Generic_Dictionary_object__StyleComplexSelector_PseudoStateData___set_Item
+		              (uVar1,Method_System_Collections_Generic_Dictionary_string__object___ctor__);
+		    System_Reflection_FieldInfo__get_IsStatic
+		              (uVar1,StringLiteral_25144,param3,
+		               Method_System_Collections_Generic_Dictionary_string__object__Add__);
+		    uVar1 = AmplitudeNS_MiniJSON_Json__Deserialize(uVar1,0);
+		    uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                      (StringLiteral_4080,param2,uVar1,0);
+		    Amplitude__get_Instance(param1,uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: removeUserProperty ---
+		void Amplitude__removeUserProperty
+		               (undefined4 param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  if (DAT_ram_00a6485d == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_Amplitude_Log_string___);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4069);
+		    DAT_ram_00a6485d = '\x01';
+		  }
+		  Amplitude__Log_long_(param1,StringLiteral_4069,param2,param3,Method_Amplitude_Log_string___);
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: removeUserProperty ---
+		void Amplitude__removeUserProperty
+		               (undefined4 param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  if (DAT_ram_00a6485d == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_Amplitude_Log_string___);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4069);
+		    DAT_ram_00a6485d = '\x01';
+		  }
+		  Amplitude__Log_long_(param1,StringLiteral_4069,param2,param3,Method_Amplitude_Log_string___);
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: removeUserProperty ---
+		void Amplitude__removeUserProperty
+		               (undefined4 param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  if (DAT_ram_00a6485d == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_Amplitude_Log_string___);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4069);
+		    DAT_ram_00a6485d = '\x01';
+		  }
+		  Amplitude__Log_long_(param1,StringLiteral_4069,param2,param3,Method_Amplitude_Log_string___);
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: removeUserProperty ---
+		void Amplitude__removeUserProperty
+		               (undefined4 param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  if (DAT_ram_00a6485d == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_Amplitude_Log_string___);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4069);
+		    DAT_ram_00a6485d = '\x01';
+		  }
+		  Amplitude__Log_long_(param1,StringLiteral_4069,param2,param3,Method_Amplitude_Log_string___);
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: removeUserProperty ---
+		void Amplitude__removeUserProperty
+		               (undefined4 param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  if (DAT_ram_00a6485d == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_Amplitude_Log_string___);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4069);
+		    DAT_ram_00a6485d = '\x01';
+		  }
+		  Amplitude__Log_long_(param1,StringLiteral_4069,param2,param3,Method_Amplitude_Log_string___);
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: removeUserProperty ---
+		void Amplitude__removeUserProperty
+		               (undefined4 param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  if (DAT_ram_00a6485d == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_Amplitude_Log_string___);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4069);
+		    DAT_ram_00a6485d = '\x01';
+		  }
+		  Amplitude__Log_long_(param1,StringLiteral_4069,param2,param3,Method_Amplitude_Log_string___);
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: removeUserProperty ---
+		void Amplitude__removeUserProperty
+		               (undefined4 param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  if (DAT_ram_00a6485d == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_Amplitude_Log_string___);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4069);
+		    DAT_ram_00a6485d = '\x01';
+		  }
+		  Amplitude__Log_long_(param1,StringLiteral_4069,param2,param3,Method_Amplitude_Log_string___);
+		  return;
+		}
+		*/
+
 	}
 
 	// Token: 0x06000088 RID: 136 RVA: 0x00002050 File Offset: 0x00000250
@@ -1022,6 +5681,31 @@ public class Amplitude
 	[Address(RVA = "0x555A", Offset = "0x555A", VA = "0x555A")]
 	private void setLibraryName(string libraryName)
 	{
+		/* --- GHIDRA: setLibraryName ---
+		void Amplitude__setLibraryName(int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  undefined4 param1_00;
+		  
+		  if (DAT_ram_00a6485f == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4077);
+		    DAT_ram_00a6485f = '\x01';
+		  }
+		  param1_00 = func_ii_4419(StringLiteral_4077,param2,0);
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(param1_00,0);
+		  }
+		  return;
+		}
+		*/
+
 	}
 
 	// Token: 0x06000096 RID: 150 RVA: 0x00002050 File Offset: 0x00000250
@@ -1043,6 +5727,27 @@ public class Amplitude
 	[Address(RVA = "0x555D", Offset = "0x555D", VA = "0x555D")]
 	public void endSession()
 	{
+		/* --- GHIDRA: endSession ---
+		void Amplitude__endSession(undefined4 param1)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a64860 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Amplitude_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&object_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_1965);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_19803);
+		    DAT_ram_00a64860 = '\x01';
+		  }
+		  **(undefined4 **)(Amplitude_TypeInfo + 0x5c) = StringLiteral_19803;
+		  *(undefined4 *)(*(int *)(Amplitude_TypeInfo + 0x5c) + 4) = StringLiteral_1965;
+		  uVar1 = unnamed_function_1417(object_TypeInfo);
+		  *(undefined4 *)(*(int *)(Amplitude_TypeInfo + 0x5c) + 0xc) = uVar1;
+		  return;
+		}
+		*/
+
 	}
 
 	// Token: 0x04000003 RID: 3
@@ -1074,4 +5779,25 @@ public class Amplitude
 	[Token(Token = "0x4000008")]
 	[FieldOffset(Offset = "0xC")]
 	private string instanceName;
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_Instance ---
+		void Amplitude__get_Instance(int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  if (DAT_ram_00a647e1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    DAT_ram_00a647e1 = '\x01';
+		  }
+		  if (*(char *)(param1 + 8) != '\0') {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    System_Collections_Generic_Dictionary_uint__object___get_Count(param2,0);
+		  }
+		  return;
+		}
+		*/
+
 }

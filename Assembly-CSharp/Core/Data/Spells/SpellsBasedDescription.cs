@@ -14,6 +14,21 @@ namespace Core.Data.Spells
 		[Address(RVA = "0xB0B9", Offset = "0xB0B9", VA = "0xB0B9")]
 		public SpellsBasedDescription(string sourceText, SpellData[] spells, [Optional] Skills userSkills)
 		{
+		/* --- GHIDRA: .ctor ---
+		undefined4 Core_Data_Spells_SpellsBasedDescription___ctor(undefined4 param1)
+		
+		{
+		  if (DAT_ram_00a60812 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_Data_Skills_EffectSkillsMapping_TypeInfo);
+		    DAT_ram_00a60812 = '\x01';
+		  }
+		  if (*(int *)(Core_Data_Skills_EffectSkillsMapping_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Core_Data_Skills_EffectSkillsMapping_TypeInfo);
+		  }
+		  return **(undefined4 **)(Core_Data_Skills_EffectSkillsMapping_TypeInfo + 0x5c);
+		}
+		*/
+
 		}
 	}
 }

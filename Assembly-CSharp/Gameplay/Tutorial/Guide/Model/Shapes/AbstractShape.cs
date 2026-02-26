@@ -119,6 +119,27 @@ namespace Gameplay.Tutorial.Guide.Model.Shapes
 		[Address(RVA = "0x6CDF", Offset = "0x6CDF", VA = "0x6CDF")]
 		protected AbstractShape()
 		{
+		/* --- GHIDRA: .ctor ---
+		int Gameplay_Tutorial_Guide_Model_Shapes_AbstractShape___ctor(int *param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  float fVar2;
+		  float4 local_8;
+		  
+		  if (DAT_ram_00a58491 == '\0') {
+		    Mono_Security_ASN1__get_Item(&float___TypeInfo);
+		    DAT_ram_00a58491 = '\x01';
+		  }
+		  (**(code **)((ulonglong)*(uint *)(*param1 + 0xf0) * 4))
+		            (&local_8,param1,*(undefined4 *)(*param1 + 0xf4));
+		  fVar2 = (float)param1[7];
+		  iVar1 = Mono_Security_ASN1Convert__ToOid(float___TypeInfo,1);
+		  *(float *)(iVar1 + 0x10) = fVar2 + (float)local_8 * 0.5;
+		  return iVar1;
+		}
+		*/
+
 		}
 	}
 }

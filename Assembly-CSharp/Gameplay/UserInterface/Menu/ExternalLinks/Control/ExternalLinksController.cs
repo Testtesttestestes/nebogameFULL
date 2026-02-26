@@ -15,6 +15,27 @@ namespace Gameplay.UserInterface.Menu.ExternalLinks.Control
 		[Address(RVA = "0x690C", Offset = "0x690C", VA = "0x690C")]
 		public ExternalLinksController(ExternalLinksModel model, ExternalLinksEvents events)
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_UserInterface_Menu_ExternalLinks_Control_ExternalLinksController___ctor
+		               (undefined4 param1,undefined4 param2,undefined4 param3,undefined4 param4,
+		               undefined4 param5)
+		
+		{
+		  if (DAT_ram_00a5989c == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_MVC_AbstractViewMediator_ExternalLinksModel__ExternalLinksEvents__ExternalLinksController__ExternalLinksView___ctor__
+		              );
+		    DAT_ram_00a5989c = '\x01';
+		  }
+		  Gameplay_Combat_TeamCombat_View_AbstractTeamCombatView_object___get_HideInstantElements
+		            (param1,param2,param3,param4,
+		             Method_MVC_AbstractViewMediator_ExternalLinksModel__ExternalLinksEvents__ExternalLinksController__ExternalLinksView___ctor__
+		            );
+		  return;
+		}
+		*/
+
 		}
 	}
 }

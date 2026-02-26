@@ -322,6 +322,88 @@ namespace Gameplay.Combat.Model
 		[Address(RVA = "0x8A4B", Offset = "0x8A4B", VA = "0x8A4B")]
 		public CombatSpellData()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_Combat_Model_CombatSpellData___ctor(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  undefined4 uVar2;
+		  undefined4 param1_00;
+		  
+		  if (DAT_ram_00a57e52 == '\0') {
+		    Mono_Security_ASN1__get_Item(&long___TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Method_System_Collections_Generic_List_long___ctor__);
+		    Mono_Security_ASN1__get_Item(&System_Collections_Generic_List_long__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Protocol_Dic_SpellDic_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Protocol_Dic_SpellLevelDic_TypeInfo);
+		    DAT_ram_00a57e52 = '\x01';
+		  }
+		  uVar1 = unnamed_function_1417(Protocol_Dic_SpellDic_TypeInfo);
+		  Protocol_Dic_SpellDic__pb__Google_Protobuf_IMessage_get_Descriptor(uVar1,0);
+		  uVar2 = unnamed_function_1417(Protocol_Dic_SpellLevelDic_TypeInfo);
+		  Protocol_Dic_SpellLevelDic__pb__Google_Protobuf_IMessage_get_Descriptor(uVar2,0);
+		  if (DAT_ram_00a57e51 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_System_Collections_Generic_List_ModifierData___ctor__);
+		    Mono_Security_ASN1__get_Item(&System_Collections_Generic_List_ModifierData__TypeInfo);
+		    DAT_ram_00a57e51 = '\x01';
+		  }
+		  *(undefined4 *)(param1 + 0x3c) = 0x7fffffff;
+		  param1_00 = unnamed_function_1417(System_Collections_Generic_List_ModifierData__TypeInfo);
+		  GAFInternal_Objects_GAFBakedObjectImpl__get_isVisible
+		            (param1_00,Method_System_Collections_Generic_List_ModifierData___ctor__);
+		  *(undefined4 *)(param1 + 0x44) = param1_00;
+		  Core_Data_Spells_SpellData___ctor(param1,uVar1,uVar2,0);
+		  uVar1 = Mono_Security_ASN1Convert__ToOid(long___TypeInfo,10);
+		  uVar2 = unnamed_function_1417(System_Collections_Generic_List_long__TypeInfo);
+		  System_Collections_Generic_List_long____ctor
+		            (uVar2,uVar1,Method_System_Collections_Generic_List_long___ctor__);
+		  uVar1 = Core_Data_Skills_Skills__AddMods(uVar2,0);
+		  *(undefined4 *)(param1 + 0x18) = uVar1;
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_Combat_Model_CombatSpellData___ctor(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  undefined4 uVar2;
+		  undefined4 param1_00;
+		  
+		  if (DAT_ram_00a57e52 == '\0') {
+		    Mono_Security_ASN1__get_Item(&long___TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Method_System_Collections_Generic_List_long___ctor__);
+		    Mono_Security_ASN1__get_Item(&System_Collections_Generic_List_long__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Protocol_Dic_SpellDic_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Protocol_Dic_SpellLevelDic_TypeInfo);
+		    DAT_ram_00a57e52 = '\x01';
+		  }
+		  uVar1 = unnamed_function_1417(Protocol_Dic_SpellDic_TypeInfo);
+		  Protocol_Dic_SpellDic__pb__Google_Protobuf_IMessage_get_Descriptor(uVar1,0);
+		  uVar2 = unnamed_function_1417(Protocol_Dic_SpellLevelDic_TypeInfo);
+		  Protocol_Dic_SpellLevelDic__pb__Google_Protobuf_IMessage_get_Descriptor(uVar2,0);
+		  if (DAT_ram_00a57e51 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_System_Collections_Generic_List_ModifierData___ctor__);
+		    Mono_Security_ASN1__get_Item(&System_Collections_Generic_List_ModifierData__TypeInfo);
+		    DAT_ram_00a57e51 = '\x01';
+		  }
+		  *(undefined4 *)(param1 + 0x3c) = 0x7fffffff;
+		  param1_00 = unnamed_function_1417(System_Collections_Generic_List_ModifierData__TypeInfo);
+		  GAFInternal_Objects_GAFBakedObjectImpl__get_isVisible
+		            (param1_00,Method_System_Collections_Generic_List_ModifierData___ctor__);
+		  *(undefined4 *)(param1 + 0x44) = param1_00;
+		  Core_Data_Spells_SpellData___ctor(param1,uVar1,uVar2,0);
+		  uVar1 = Mono_Security_ASN1Convert__ToOid(long___TypeInfo,10);
+		  uVar2 = unnamed_function_1417(System_Collections_Generic_List_long__TypeInfo);
+		  System_Collections_Generic_List_long____ctor
+		            (uVar2,uVar1,Method_System_Collections_Generic_List_long___ctor__);
+		  uVar1 = Core_Data_Skills_Skills__AddMods(uVar2,0);
+		  *(undefined4 *)(param1 + 0x18) = uVar1;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06003AD7 RID: 15063 RVA: 0x00002050 File Offset: 0x00000250
@@ -361,4 +443,345 @@ namespace Gameplay.Combat.Model
 		[FieldOffset(Offset = "0x42")]
 		public bool StrodeFlag;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_Artifact ---
+		void Gameplay_Combat_Model_CombatSpellData__get_Artifact(int param1,int *param2,undefined4 param3)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  *(int **)(param1 + 0x2c) = param2;
+		  if (param2 != (int *)0x0) {
+		    uVar1 = (**(code **)((ulonglong)*(uint *)(*param2 + 0xf8) * 4))
+		                      (param2,*(undefined4 *)(*param2 + 0xfc));
+		    *(undefined4 *)(param1 + 0x3c) = uVar1;
+		  }
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_Cooldown ---
+		void Gameplay_Combat_Model_CombatSpellData__get_Cooldown(int param1,int param2,undefined4 param3)
+		
+		{
+		  int iVar1;
+		  
+		  iVar1 = *(int *)(param1 + 0x30);
+		  *(int *)(param1 + 0x30) = param2;
+		  *(bool *)(param1 + 0x41) = param2 == 0 && iVar1 != 0;
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_Balance ---
+		void Gameplay_Combat_Model_CombatSpellData__get_Balance
+		               (undefined4 param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  undefined4 uVar1;
+		  undefined4 param2_00;
+		  
+		  uVar1 = unnamed_function_2232(&System_NotImplementedException_TypeInfo);
+		  uVar1 = unnamed_function_1417(uVar1);
+		  UnityEngine_InputSystem_InputActionRebindingExtensions__ApplyBindingOverride(uVar1,0);
+		  param2_00 = unnamed_function_2232(&Method_Gameplay_Combat_Model_CombatSpellData_set_Balance__);
+		  func_ii_1050(uVar1,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: set_Balance ---
+		uint Gameplay_Combat_Model_CombatSpellData__set_Balance(int param1,undefined4 param2)
+		
+		{
+		  return (*(byte *)(*(int *)(param1 + 0xc) + 0x14) & 0x20) >> 5;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_IsUnblockable ---
+		uint Gameplay_Combat_Model_CombatSpellData__get_IsUnblockable(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  
+		  iVar1 = *(int *)(param1 + 0x34);
+		  if (DAT_ram_00a57e3e == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_Dictionary_int__Skill__get_Item__);
+		    DAT_ram_00a57e3e = '\x01';
+		  }
+		  iVar1 = System_Collections_Generic_Dictionary_int__Int32Enum___get_Count
+		                    (*(undefined4 *)(iVar1 + 0x58),0xc,
+		                     Method_System_Collections_Generic_Dictionary_int__Skill__get_Item__);
+		  if (*(longlong *)(iVar1 + 0x10) < 1) {
+		    iVar1 = *(int *)(param1 + 0x34);
+		    if (DAT_ram_00a57e3f == '\0') {
+		      Mono_Security_ASN1__get_Item
+		                (&Method_System_Collections_Generic_Dictionary_int__Skill__get_Item__);
+		      DAT_ram_00a57e3f = '\x01';
+		    }
+		    iVar1 = System_Collections_Generic_Dictionary_int__Int32Enum___get_Count
+		                      (*(undefined4 *)(iVar1 + 0x58),0xd,
+		                       Method_System_Collections_Generic_Dictionary_int__Skill__get_Item__);
+		    if (*(longlong *)(iVar1 + 0x10) < 1) {
+		      return 0;
+		    }
+		  }
+		  return (uint)((*(byte *)(*(int *)(param1 + 0xc) + 0x14) & 0x20) == 0);
+		}
+		*/
+
+
+		/* --- GHIDRA: set_Selected ---
+		uint Gameplay_Combat_Model_CombatSpellData__set_Selected(int param1,undefined4 param2)
+		
+		{
+		  return (uint)((*(byte *)(*(int *)(param1 + 0xc) + 0x14) & 0x10) == 0);
+		}
+		*/
+
+
+		/* --- GHIDRA: get_Visible ---
+		uint Gameplay_Combat_Model_CombatSpellData__get_Visible(int param1,undefined4 param2)
+		
+		{
+		  return (uint)((*(uint *)(*(int *)(param1 + 0xc) + 0x1c) & 0xfffffffe) == 2);
+		}
+		*/
+
+
+		/* --- GHIDRA: get_Selectable ---
+		uint Gameplay_Combat_Model_CombatSpellData__get_Selectable(int param1,undefined4 param2)
+		
+		{
+		  return (uint)(*(int *)(*(int *)(param1 + 0xc) + 0x1c) == 1);
+		}
+		*/
+
+
+		/* --- GHIDRA: get_IsForceEffect ---
+		undefined4 Gameplay_Combat_Model_CombatSpellData__get_IsForceEffect(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  undefined4 local_4;
+		  
+		  local_4 = *(undefined4 *)(*(int *)(param1 + 0xc) + 0x14);
+		  uVar1 = UnityEngine_InputForUI_PointerEvent_ButtonsState__Set(&local_4,0x80,0);
+		  return uVar1;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_IsFriendlyTarget ---
+		uint Gameplay_Combat_Model_CombatSpellData__get_IsFriendlyTarget(int param1,undefined4 param2)
+		
+		{
+		  return (uint)(*(int *)(*(int *)(param1 + 0xc) + 0x1c) == 3);
+		}
+		*/
+
+
+		/* --- GHIDRA: get_IsUserBehaviorType ---
+		uint Gameplay_Combat_Model_CombatSpellData__get_IsUserBehaviorType(int param1,undefined4 param2)
+		
+		{
+		  return (uint)(*(int *)(*(int *)(param1 + 0xc) + 0x1c) == 2);
+		}
+		*/
+
+
+		/* --- GHIDRA: get_IsFieldBehaviorType ---
+		uint Gameplay_Combat_Model_CombatSpellData__get_IsFieldBehaviorType(int param1,undefined4 param2)
+		
+		{
+		  uint uVar1;
+		  undefined4 param2_00;
+		  uint uVar2;
+		  longlong lVar3;
+		  int iVar4;
+		  uint uVar5;
+		  longlong lVar6;
+		  
+		  uVar2 = 0;
+		  iVar4 = *(int *)(*(int *)(*(int *)(param1 + 0x34) + 0x14) + 0x78);
+		  if (iVar4 != 0) {
+		    param2_00 = func_ii_10810(param1,0);
+		    uVar2 = Core_Extensions_Dict_ResourceSetExt__IsZero(iVar4,param2_00,0);
+		  }
+		  uVar5 = 1;
+		  uVar1 = 1;
+		  lVar3 = Core_Data_Spells_SpellData__get_Level(param1,0);
+		  if (lVar3 != 0) {
+		    iVar4 = *(int *)(param1 + 0x34);
+		    if (DAT_ram_00a57e44 == '\0') {
+		      Mono_Security_ASN1__get_Item
+		                (&Method_System_Collections_Generic_Dictionary_int__Skill__get_Item__);
+		      DAT_ram_00a57e44 = '\x01';
+		    }
+		    iVar4 = System_Collections_Generic_Dictionary_int__Int32Enum___get_Count
+		                      (*(undefined4 *)(iVar4 + 0x58),4,
+		                       Method_System_Collections_Generic_Dictionary_int__Skill__get_Item__);
+		    lVar6 = *(longlong *)(iVar4 + 0x10);
+		    lVar3 = Core_Data_Spells_SpellData__get_Level(param1,0);
+		    uVar1 = (uint)(lVar3 <= lVar6);
+		  }
+		  lVar3 = Core_Data_Spells_SpellData__get_ManaPriceOfUse(param1,0);
+		  if (lVar3 != 0) {
+		    iVar4 = *(int *)(param1 + 0x34);
+		    if (DAT_ram_00a57e4a == '\0') {
+		      Mono_Security_ASN1__get_Item
+		                (&Method_System_Collections_Generic_Dictionary_int__Skill__get_Item__);
+		      DAT_ram_00a57e4a = '\x01';
+		    }
+		    iVar4 = System_Collections_Generic_Dictionary_int__Int32Enum___get_Count
+		                      (*(undefined4 *)(iVar4 + 0x58),0x10,
+		                       Method_System_Collections_Generic_Dictionary_int__Skill__get_Item__);
+		    lVar6 = *(longlong *)(iVar4 + 0x10);
+		    lVar3 = Core_Data_Spells_SpellData__get_ManaPriceOfUse(param1,0);
+		    uVar5 = (uint)(lVar3 <= lVar6);
+		  }
+		  if ((uVar5 & uVar2 & uVar1) == 0) {
+		    return 0;
+		  }
+		  if (*(int *)(param1 + 0x30) != 0) {
+		    return 0;
+		  }
+		  iVar4 = *(int *)(param1 + 0x34);
+		  if (DAT_ram_00a57e3e == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_Dictionary_int__Skill__get_Item__);
+		    DAT_ram_00a57e3e = '\x01';
+		  }
+		  iVar4 = System_Collections_Generic_Dictionary_int__Int32Enum___get_Count
+		                    (*(undefined4 *)(iVar4 + 0x58),0xc,
+		                     Method_System_Collections_Generic_Dictionary_int__Skill__get_Item__);
+		  if (*(longlong *)(iVar4 + 0x10) < 1) {
+		    iVar4 = *(int *)(param1 + 0x34);
+		    if (DAT_ram_00a57e3f == '\0') {
+		      Mono_Security_ASN1__get_Item
+		                (&Method_System_Collections_Generic_Dictionary_int__Skill__get_Item__);
+		      DAT_ram_00a57e3f = '\x01';
+		    }
+		    iVar4 = System_Collections_Generic_Dictionary_int__Int32Enum___get_Count
+		                      (*(undefined4 *)(iVar4 + 0x58),0xd,
+		                       Method_System_Collections_Generic_Dictionary_int__Skill__get_Item__);
+		    if (*(longlong *)(iVar4 + 0x10) < 1) goto code_r0x80e6d016;
+		  }
+		  if ((*(uint *)(*(int *)(param1 + 0xc) + 0x14) & 0x20) == 0) {
+		    return 0;
+		  }
+		code_r0x80e6d016:
+		  if (0 < *(int *)(param1 + 0x3c)) {
+		    return (uint)(*(char *)(param1 + 0x20) != '\0');
+		  }
+		  return 0;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_Enabled ---
+		undefined4 Gameplay_Combat_Model_CombatSpellData__get_Enabled(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a57e4e == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Core_Dict_DictWrappers_Base_AbstractDictWrapper_ArtikulDic__uint__get_Data__)
+		    ;
+		    DAT_ram_00a57e4e = '\x01';
+		  }
+		  if (*(int *)(param1 + 0x2c) == 0) {
+		    uVar1 = Core_Extensions_Dict_SpellDicExt__GetAnimationOnAvatarCanvasAssetId
+		                      (*(undefined4 *)(param1 + 0xc),0);
+		    return uVar1;
+		  }
+		  uVar1 = Core_Extensions_Dict_DictExt__GetArtikul
+		                    (*(undefined4 *)(*(int *)(*(int *)(param1 + 0x2c) + 8) + 0x10),0);
+		  return uVar1;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_Title ---
+		int Gameplay_Combat_Model_CombatSpellData__get_Title(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  int *param3;
+		  int iVar2;
+		  undefined4 param4;
+		  
+		  if (DAT_ram_00a57e4f == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_Data_Spells_CombatSpellDescription_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Core_Data_Spells_SpellData___TypeInfo);
+		    DAT_ram_00a57e4f = '\x01';
+		  }
+		  iVar2 = *(int *)(param1 + 0x28);
+		  if (iVar2 == 0) {
+		    uVar1 = Core_Extensions_Dict_SpellDicExt__GetTitle(*(undefined4 *)(param1 + 0xc),0);
+		    param3 = (int *)Mono_Security_ASN1Convert__ToOid(Core_Data_Spells_SpellData___TypeInfo,1);
+		    iVar2 = func_ii_1082(param1,*(undefined4 *)(*param3 + 0x20));
+		    if (iVar2 == 0) {
+		      uVar1 = func_ii_1083();
+		      func_ii_1050(uVar1,0);
+		      do {
+		        halt_trap();
+		      } while( true );
+		    }
+		    param3[4] = param1;
+		    param4 = *(undefined4 *)(*(int *)(param1 + 0x34) + 0x58);
+		    iVar2 = unnamed_function_1417(Core_Data_Spells_CombatSpellDescription_TypeInfo);
+		    Core_Data_Spells_AbstractSpellsBasedDescription__GetText(iVar2,uVar1,param3,param4,0);
+		    *(int *)(param1 + 0x28) = iVar2;
+		  }
+		  return iVar2;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_ModificatorsFromActiveArtifacts ---
+		undefined4
+		Gameplay_Combat_Model_CombatSpellData__get_ModificatorsFromActiveArtifacts
+		          (int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  uVar1 = Core_Extensions_Dict_SpellDicExt__GetIcon94x94AssetId(*(undefined4 *)(param1 + 0xc),0);
+		  return uVar1;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_AnimationAssetId ---
+		void Gameplay_Combat_Model_CombatSpellData__get_AnimationAssetId(int param1,undefined4 param2)
+		
+		{
+		  undefined4 param1_00;
+		  
+		  if (DAT_ram_00a57e50 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_System_Collections_Generic_List_ModifierData___ctor__);
+		    Mono_Security_ASN1__get_Item(&System_Collections_Generic_List_ModifierData__TypeInfo);
+		    DAT_ram_00a57e50 = '\x01';
+		  }
+		  *(undefined4 *)(param1 + 0x3c) = 0x7fffffff;
+		  param1_00 = unnamed_function_1417(System_Collections_Generic_List_ModifierData__TypeInfo);
+		  GAFInternal_Objects_GAFBakedObjectImpl__get_isVisible
+		            (param1_00,Method_System_Collections_Generic_List_ModifierData___ctor__);
+		  *(undefined4 *)(param1 + 0x44) = param1_00;
+		  Core_Data_Spells_SpellData__get_Description(param1,0);
+		  return;
+		}
+		*/
+
 }

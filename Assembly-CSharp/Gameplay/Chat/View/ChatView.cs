@@ -154,6 +154,187 @@ namespace Gameplay.Chat.View
 		[Address(RVA = "0x921C", Offset = "0x921C", VA = "0x921C")]
 		private void OnDestroy()
 		{
+		/* --- GHIDRA: OnDestroy ---
+		void Gameplay_Chat_View_ChatView__OnDestroy(int param1,undefined4 param2)
+		
+		{
+		  bool bVar1;
+		  int iVar2;
+		  uint uVar3;
+		  uint *puVar4;
+		  undefined4 uVar5;
+		  undefined4 uVar6;
+		  int param1_00;
+		  int *piVar7;
+		  int iVar8;
+		  undefined4 param4;
+		  int iVar9;
+		  
+		  if (DAT_ram_00a57adf == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Sorting_AbstractSortControlView_ChatVisitorData__add_ComparerChangedEvent__
+		              );
+		    Mono_Security_ASN1__get_Item(&System_Action_bool__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&System_Action_ChatSmileDic__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&System_Action_IGameDataComparer_ChatVisitorData___TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Gameplay_Chat_Control_ChatViewMediator_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Method_Gameplay_Chat_View_ChatView_HandleMessageInputSubmit__);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Gameplay_Chat_View_ChatView_HandleMessageTextInputStatusChangedEvent__);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Gameplay_Chat_View_ChatView_HandleSendMessageButtonClickEvent__);
+		    Mono_Security_ASN1__get_Item(&Method_Gameplay_Chat_View_ChatView_HandleSmilesButtonClickEvent__)
+		    ;
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Gameplay_Chat_View_ChatView_HandleSmilesViewItemSelectedEvent__);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Gameplay_Chat_View_ChatView_HandleVisitorsSearchFieldOnValueChanged__);
+		    Mono_Security_ASN1__get_Item(&Method_Gameplay_Chat_View_ChatView_HandleVisitorsSortTriggered__);
+		    Mono_Security_ASN1__get_Item(&System_EventHandler_PointerEventData__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Core_Gameplay_IGame_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&UnityEngine_Events_UnityAction_string__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&UnityEngine_Events_UnityAction_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Method_UnityEngine_Events_UnityEvent_string__AddListener__);
+		    DAT_ram_00a57adf = '\x01';
+		  }
+		  if (DAT_ram_00a6456f == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_Gameplay_Game_TypeInfo);
+		    DAT_ram_00a6456f = '\x01';
+		  }
+		  uVar3 = 0;
+		  piVar7 = (int *)**(undefined4 **)(Core_Gameplay_Game_TypeInfo + 0x5c);
+		  iVar8 = *piVar7;
+		  if (*(ushort *)(iVar8 + 0xb6) != 0) {
+		    do {
+		      if (Core_Gameplay_IGame_TypeInfo == *(int *)(*(int *)(iVar8 + 0x58) + uVar3 * 8)) {
+		        puVar4 = (uint *)(*(int *)(*(int *)(iVar8 + 0x58) + uVar3 * 8 + 4) * 8 + iVar8 + 0x1d8);
+		        goto code_r0x80e1ff7f;
+		      }
+		      uVar3 = uVar3 + 1;
+		    } while (*(ushort *)(iVar8 + 0xb6) != uVar3);
+		  }
+		  puVar4 = (uint *)func_ii_1080(piVar7,Core_Gameplay_IGame_TypeInfo,0x23);
+		code_r0x80e1ff7f:
+		  iVar8 = (**(code **)((ulonglong)*puVar4 * 4))(piVar7,puVar4[1]);
+		  iVar9 = **(int **)(iVar8 + 0x10);
+		  uVar5 = (**(code **)((ulonglong)*(uint *)(iVar9 + 0x100) * 4))
+		                    (*(int **)(iVar8 + 0x10),*(undefined4 *)(iVar9 + 0x104));
+		  if (DAT_ram_00a6456f == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_Gameplay_Game_TypeInfo);
+		    DAT_ram_00a6456f = '\x01';
+		  }
+		  piVar7 = (int *)**(undefined4 **)(Core_Gameplay_Game_TypeInfo + 0x5c);
+		  iVar8 = *piVar7;
+		  if (*(ushort *)(iVar8 + 0xb6) != 0) {
+		    uVar3 = 0;
+		    do {
+		      if (Core_Gameplay_IGame_TypeInfo == *(int *)(*(int *)(iVar8 + 0x58) + uVar3 * 8)) {
+		        puVar4 = (uint *)(*(int *)(*(int *)(iVar8 + 0x58) + uVar3 * 8 + 4) * 8 + iVar8 + 0x1d8);
+		        goto code_r0x80e20044;
+		      }
+		      uVar3 = uVar3 + 1;
+		    } while (*(ushort *)(iVar8 + 0xb6) != uVar3);
+		  }
+		  puVar4 = (uint *)func_ii_1080(piVar7,Core_Gameplay_IGame_TypeInfo,0x23);
+		code_r0x80e20044:
+		  iVar8 = (**(code **)((ulonglong)*puVar4 * 4))(piVar7,puVar4[1]);
+		  iVar9 = **(int **)(iVar8 + 0x10);
+		  uVar6 = (**(code **)((ulonglong)*(uint *)(iVar9 + 0x110) * 4))
+		                    (*(int **)(iVar8 + 0x10),*(undefined4 *)(iVar9 + 0x114));
+		  if (DAT_ram_00a6456f == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_Gameplay_Game_TypeInfo);
+		    DAT_ram_00a6456f = '\x01';
+		  }
+		  piVar7 = (int *)**(undefined4 **)(Core_Gameplay_Game_TypeInfo + 0x5c);
+		  iVar8 = *piVar7;
+		  if (*(ushort *)(iVar8 + 0xb6) != 0) {
+		    uVar3 = 0;
+		    do {
+		      if (Core_Gameplay_IGame_TypeInfo == *(int *)(*(int *)(iVar8 + 0x58) + uVar3 * 8)) {
+		        puVar4 = (uint *)(*(int *)(*(int *)(iVar8 + 0x58) + uVar3 * 8 + 4) * 8 + iVar8 + 0x1d8);
+		        goto code_r0x80e20109;
+		      }
+		      uVar3 = uVar3 + 1;
+		    } while (*(ushort *)(iVar8 + 0xb6) != uVar3);
+		  }
+		  puVar4 = (uint *)func_ii_1080(piVar7,Core_Gameplay_IGame_TypeInfo,0x23);
+		code_r0x80e20109:
+		  iVar8 = (**(code **)((ulonglong)*puVar4 * 4))(piVar7,puVar4[1]);
+		  param4 = *(undefined4 *)(iVar8 + 0x10);
+		  piVar7 = (int *)unnamed_function_1417(Gameplay_Chat_Control_ChatViewMediator_TypeInfo);
+		  Gameplay_Chat_Control_ChatMiniViewMediator__TryCloseChat(piVar7,uVar5,uVar6,param4,0);
+		  *(int **)(param1 + 0x80) = piVar7;
+		  (**(code **)((ulonglong)*(uint *)(*piVar7 + 0x160) * 4))
+		            (piVar7,param1,*(undefined4 *)(*piVar7 + 0x164));
+		  uVar6 = *(undefined4 *)(*(int *)(param1 + 0x20) + 0xb4);
+		  uVar5 = unnamed_function_1417(UnityEngine_Events_UnityAction_TypeInfo);
+		  Utils_ObjectUtils__IsNotNull
+		            (uVar5,param1,Method_Gameplay_Chat_View_ChatView_HandleSendMessageButtonClickEvent__,0);
+		  Gameplay_Boss_View_CaptainTab_BossInfoView__add_AttackButtonClickEvent(uVar6,uVar5,0);
+		  uVar6 = *(undefined4 *)(*(int *)(*(int *)(param1 + 0x34) + 0x10) + 0x11c);
+		  uVar5 = unnamed_function_1417(UnityEngine_Events_UnityAction_string__TypeInfo);
+		  func_ii_7054(uVar5,param1,Method_Gameplay_Chat_View_ChatView_HandleMessageInputSubmit__,0);
+		  UnityEngine_Events_UnityEvent_InputAction_CallbackContext____ctor
+		            (uVar6,uVar5,Method_UnityEngine_Events_UnityEvent_string__AddListener__);
+		  uVar6 = *(undefined4 *)(param1 + 0x34);
+		  uVar5 = unnamed_function_1417(System_Action_bool__TypeInfo);
+		  System_Action_AsyncGPUReadbackRequest___Invoke
+		            (uVar5,param1,
+		             Method_Gameplay_Chat_View_ChatView_HandleMessageTextInputStatusChangedEvent__,0);
+		  Gameplay_UserInfo_View_NickVariantItemRow___ctor(uVar6,uVar5,0);
+		  Gameplay_UserInfo_View_PatternTextInput__get_Status(*(undefined4 *)(param1 + 0x34),1,0);
+		  piVar7 = *(int **)(*(int *)(param1 + 0x34) + 0x10);
+		  iVar8 = *piVar7;
+		  (**(code **)((ulonglong)*(uint *)(iVar8 + 0x1f0) * 4))(piVar7,*(undefined4 *)(iVar8 + 500));
+		  TMPro_TMP_InputField__Validate(*(undefined4 *)(*(int *)(param1 + 0x34) + 0x10),0);
+		  uVar6 = *(undefined4 *)(param1 + 0x40);
+		  uVar5 = unnamed_function_1417(System_Action_IGameDataComparer_ChatVisitorData___TypeInfo);
+		  UnityEngine_UIElements_VisualElement__get_layout
+		            (uVar5,param1,Method_Gameplay_Chat_View_ChatView_HandleVisitorsSortTriggered__,0);
+		  UI_Sorting_AbstractSortControlView___Il2CppFullySharedGenericType___SwitcherValueChangedHandler
+		            (uVar6,uVar5,
+		             Method_UI_Sorting_AbstractSortControlView_ChatVisitorData__add_ComparerChangedEvent__);
+		  uVar6 = *(undefined4 *)(*(int *)(param1 + 0x38) + 0x130);
+		  uVar5 = unnamed_function_1417(UnityEngine_Events_UnityAction_string__TypeInfo);
+		  func_ii_7054(uVar5,param1,
+		               Method_Gameplay_Chat_View_ChatView_HandleVisitorsSearchFieldOnValueChanged__,0);
+		  UnityEngine_Events_UnityEvent_InputAction_CallbackContext____ctor
+		            (uVar6,uVar5,Method_UnityEngine_Events_UnityEvent_string__AddListener__);
+		  uVar6 = *(undefined4 *)(param1 + 0x28);
+		  uVar5 = unnamed_function_1417(System_EventHandler_PointerEventData__TypeInfo);
+		  UnityEngine_Object__Instantiate_object_
+		            (uVar5,param1,Method_Gameplay_Chat_View_ChatView_HandleSmilesButtonClickEvent__,0);
+		  UI_RawImageWithGrayscale___ctor(uVar6,uVar5,0);
+		  iVar8 = *(int *)(param1 + 0x48);
+		  uVar5 = unnamed_function_1417(System_Action_ChatSmileDic__TypeInfo);
+		  UnityEngine_UIElements_VisualElement__get_layout
+		            (uVar5,param1,Method_Gameplay_Chat_View_ChatView_HandleSmilesViewItemSelectedEvent__,0);
+		  if (DAT_ram_00a57afe == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_ChatSmileDic__TypeInfo);
+		    DAT_ram_00a57afe = '\x01';
+		  }
+		  iVar9 = *(int *)(iVar8 + 0x34);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_00 = UnityEngine_UI_Image__set_sprite(iVar9,uVar5,0);
+		    uVar6 = System_Action_ChatSmileDic__TypeInfo;
+		    if ((param1_00 != 0) &&
+		       (iVar2 = func_ii_1082(param1_00,System_Action_ChatSmileDic__TypeInfo), iVar2 == 0)) break;
+		    iVar2 = func_ii_4329(iVar8 + 0x34,iVar2,iVar9);
+		    bVar1 = iVar2 == iVar9;
+		    iVar9 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_00,uVar6);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
 		}
 
 		// Token: 0x06004369 RID: 17257 RVA: 0x00002050 File Offset: 0x00000250
@@ -161,6 +342,21 @@ namespace Gameplay.Chat.View
 		[Address(RVA = "0x921D", Offset = "0x921D", VA = "0x921D")]
 		private void Start()
 		{
+		/* --- GHIDRA: Start ---
+		void Gameplay_Chat_View_ChatView__Start(int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  int iVar1;
+		  
+		  iVar1 = *(int *)(param1 + 0x84);
+		  if (iVar1 != 0) {
+		    (**(code **)((ulonglong)*(uint *)(iVar1 + 0xc) * 4))
+		              (*(undefined4 *)(iVar1 + 0x20),*(undefined4 *)(iVar1 + 0x14));
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600436A RID: 17258 RVA: 0x00002050 File Offset: 0x00000250
@@ -168,6 +364,54 @@ namespace Gameplay.Chat.View
 		[Address(RVA = "0x921E", Offset = "0x921E", VA = "0x921E")]
 		private void HandleMessageInputSubmit(string text)
 		{
+		/* --- GHIDRA: HandleMessageInputSubmit ---
+		void Gameplay_Chat_View_ChatView__HandleMessageInputSubmit
+		               (int param1,int *param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a57ae0 == '\0') {
+		    Mono_Security_ASN1__get_Item(&UI_SelectedButton_TypeInfo);
+		    DAT_ram_00a57ae0 = '\x01';
+		  }
+		  if (param2 != (int *)0x0) {
+		    if (((uint)*(byte *)(UI_SelectedButton_TypeInfo + 0xb8) <= (uint)*(byte *)(*param2 + 0xb8)) &&
+		       (*(int *)(*(int *)(*param2 + 100) + (uint)*(byte *)(UI_SelectedButton_TypeInfo + 0xb8) * 4 +
+		                -4) == UI_SelectedButton_TypeInfo)) {
+		      if ((char)param2[8] != '\0') {
+		        if (DAT_ram_00a57ae7 == '\0') {
+		          Mono_Security_ASN1__get_Item
+		                    (&Method_UI_MonoBehaviourWithStates_SmilesViewStates__set_CurrentState__);
+		          DAT_ram_00a57ae7 = '\x01';
+		        }
+		        UI_SelectedButton__get_Selected(*(undefined4 *)(param1 + 0x28),1,0);
+		        uVar1 = *(undefined4 *)(param1 + 0x48);
+		        UI_MonoBehaviourWithStates_ByteEnum___remove_CurrentStateChangedEvent
+		                  (uVar1,0xff,Method_UI_MonoBehaviourWithStates_SmilesViewStates__set_CurrentState__
+		                  );
+		        UI_MonoBehaviourWithStates_ByteEnum___remove_CurrentStateChangedEvent
+		                  (uVar1,0xff,Method_UI_MonoBehaviourWithStates_SmilesViewStates__set_CurrentState__
+		                  );
+		        return;
+		      }
+		      if (DAT_ram_00a57ae8 == '\0') {
+		        Mono_Security_ASN1__get_Item
+		                  (&Method_UI_MonoBehaviourWithStates_SmilesViewStates__set_CurrentState__);
+		        DAT_ram_00a57ae8 = '\x01';
+		      }
+		      UI_SelectedButton__get_Selected(*(undefined4 *)(param1 + 0x28),0,0);
+		      uVar1 = *(undefined4 *)(param1 + 0x48);
+		      UI_MonoBehaviourWithStates_ByteEnum___remove_CurrentStateChangedEvent
+		                (uVar1,0,Method_UI_MonoBehaviourWithStates_SmilesViewStates__set_CurrentState__);
+		      UI_MonoBehaviourWithStates_ByteEnum___remove_CurrentStateChangedEvent
+		                (uVar1,0,Method_UI_MonoBehaviourWithStates_SmilesViewStates__set_CurrentState__);
+		    }
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600436B RID: 17259 RVA: 0x00002050 File Offset: 0x00000250
@@ -175,6 +419,55 @@ namespace Gameplay.Chat.View
 		[Address(RVA = "0x921F", Offset = "0x921F", VA = "0x921F")]
 		private void HandleSmilesButtonClickEvent(object sender, PointerEventData e)
 		{
+		/* --- GHIDRA: HandleSmilesButtonClickEvent ---
+		void Gameplay_Chat_View_ChatView__HandleSmilesButtonClickEvent
+		               (int param1,int param2,undefined4 param3)
+		
+		{
+		  int iVar1;
+		  int param3_00;
+		  undefined4 uVar2;
+		  undefined4 uVar3;
+		  int *piVar4;
+		  
+		  if (DAT_ram_00a57ae1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Gameplay_Chat_Model_Data_Message_Format_ChatMsgPresenter_TypeInfo)
+		    ;
+		    Mono_Security_ASN1__get_Item(&Method_System_Linq_Enumerable_First_string___);
+		    Mono_Security_ASN1__get_Item(&System_Math_TypeInfo);
+		    DAT_ram_00a57ae1 = '\x01';
+		  }
+		  uVar2 = *(undefined4 *)(param2 + 0x10);
+		  if (*(int *)(Gameplay_Chat_Model_Data_Message_Format_ChatMsgPresenter_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Gameplay_Chat_Model_Data_Message_Format_ChatMsgPresenter_TypeInfo);
+		  }
+		  uVar2 = System_UriBuilder___ctor
+		                    (uVar2,**(undefined4 **)
+		                             (Gameplay_Chat_Model_Data_Message_Format_ChatMsgPresenter_TypeInfo +
+		                             0x5c),0,0);
+		  iVar1 = System_Linq_Enumerable__Count_object_(uVar2,Method_System_Linq_Enumerable_First_string___)
+		  ;
+		  uVar2 = TMPro_TMP_InputField__set_selectionAnchorPosition
+		                    (*(undefined4 *)(*(int *)(param1 + 0x34) + 0x10),0);
+		  if (*(int *)(System_Math_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(System_Math_TypeInfo);
+		  }
+		  param3_00 = UnityEngine_Mathf__Max(uVar2,0,0);
+		  uVar3 = *(undefined4 *)(*(int *)(*(int *)(param1 + 0x34) + 0x10) + 0x160);
+		  uVar2 = System_Data_DataSet__ReadXmlSchema(uVar3,0,param3_00,0);
+		  uVar3 = System_String__get_Chars(uVar3,param3_00,0);
+		  uVar2 = UnityEngine_AndroidJavaObject__FromJavaArray_Nullable_int__(uVar2,iVar1,uVar3,0);
+		  TMPro_TMP_InputField__get_text(*(undefined4 *)(*(int *)(param1 + 0x34) + 0x10),uVar2,0);
+		  TMPro_TMP_InputField__get_caretPosition
+		            (*(undefined4 *)(*(int *)(param1 + 0x34) + 0x10),param3_00 + *(int *)(iVar1 + 8),0);
+		  piVar4 = *(int **)(*(int *)(param1 + 0x34) + 0x10);
+		  iVar1 = *piVar4;
+		  (**(code **)((ulonglong)*(uint *)(iVar1 + 0x1f0) * 4))(piVar4,*(undefined4 *)(iVar1 + 500));
+		  TMPro_TMP_InputField__Validate(*(undefined4 *)(*(int *)(param1 + 0x34) + 0x10),0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600436C RID: 17260 RVA: 0x00002050 File Offset: 0x00000250
@@ -189,6 +482,33 @@ namespace Gameplay.Chat.View
 		[Address(RVA = "0x9221", Offset = "0x9221", VA = "0x9221")]
 		private void HandleVisitorsSearchFieldOnValueChanged(string value)
 		{
+		/* --- GHIDRA: HandleVisitorsSearchFieldOnValueChanged ---
+		void Gameplay_Chat_View_ChatView__HandleVisitorsSearchFieldOnValueChanged
+		               (int param1,undefined4 param2)
+		
+		{
+		  undefined4 param2_00;
+		  int *piVar1;
+		  
+		  piVar1 = *(int **)(param1 + 0x3c);
+		  param2_00 = Gameplay_Chat_View_ChatView__HandleCurrentVisitorsSortComparerChanged
+		                        (param1,*(undefined4 *)(param1 + 0x88),param1);
+		  if (DAT_ram_00a57ad9 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Com_TheFallenGames_OSA_DataHelpers_SimpleDataHelper_ChatVisitorData__ResetItems__
+		              );
+		    DAT_ram_00a57ad9 = '\x01';
+		  }
+		  (**(code **)((ulonglong)*(uint *)(*piVar1 + 0x2e8) * 4))(piVar1,*(undefined4 *)(*piVar1 + 0x2ec));
+		  Com_TheFallenGames_OSA_DataHelpers_SimpleDataHelper_object___RemoveOneFromStart
+		            (piVar1[0x28],param2_00,0,
+		             Method_Com_TheFallenGames_OSA_DataHelpers_SimpleDataHelper_ChatVisitorData__ResetItems__
+		            );
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600436E RID: 17262 RVA: 0x00002050 File Offset: 0x00000250
@@ -196,6 +516,316 @@ namespace Gameplay.Chat.View
 		[Address(RVA = "0x9222", Offset = "0x9222", VA = "0x9222")]
 		private void HandleCurrentVisitorsSortComparerChanged()
 		{
+		/* --- GHIDRA: HandleCurrentVisitorsSortComparerChanged ---
+		undefined4
+		Gameplay_Chat_View_ChatView__HandleCurrentVisitorsSortComparerChanged
+		          (int param1,int *param2,undefined4 param3)
+		
+		{
+		  uint uVar1;
+		  int iVar2;
+		  undefined4 uVar3;
+		  int iVar4;
+		  uint *puVar5;
+		  undefined4 *puVar6;
+		  int iVar7;
+		  int *piVar8;
+		  undefined4 uVar9;
+		  int *piVar10;
+		  int iVar11;
+		  int local_c;
+		  int **local_8;
+		  int *local_4;
+		  
+		  if (DAT_ram_00a57ae2 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UI_Sorting_AbstractSortControlView_ChatVisitorData__get_SelectedFilter__);
+		    Mono_Security_ASN1__get_Item(&Method_System_Linq_Enumerable_Count_ChatVisitorData___);
+		    Mono_Security_ASN1__get_Item(&Method_System_Linq_Enumerable_ToList_ChatVisitorData___);
+		    Mono_Security_ASN1__get_Item(&Method_System_Linq_Enumerable_Where_ChatVisitorData___);
+		    Mono_Security_ASN1__get_Item(&System_Func_ChatVisitorData__ChatVisitorData__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&System_Func_ChatVisitorData__bool__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&System_IDisposable_TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Core_Extensions_IEnumerableExt_SortGameData_ChatVisitorData__ChatVisitorData___
+		              );
+		    Mono_Security_ASN1__get_Item(&System_Collections_Generic_IEnumerable_ChatVisitorData__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&System_Collections_Generic_IEnumerator_ChatVisitorData__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&System_Collections_IEnumerator_TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_List_ChatVisitorData__AddRange__);
+		    Mono_Security_ASN1__get_Item(&Method_System_Collections_Generic_List_ChatVisitorData__Add__);
+		    Mono_Security_ASN1__get_Item(&Method_System_Collections_Generic_List_ChatVisitorData__ToArray__)
+		    ;
+		    Mono_Security_ASN1__get_Item(&Method_System_Collections_Generic_List_ChatVisitorData___ctor__);
+		    Mono_Security_ASN1__get_Item(&System_Collections_Generic_List_ChatVisitorData__TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Gameplay_Chat_View_ChatView___c__PrepareVisitorForDisplay_b__45_1__);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Gameplay_Chat_View_ChatView___c__PrepareVisitorForDisplay_b__45_2__);
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Gameplay_Chat_View_ChatView___c__DisplayClass45_0__PrepareVisitorForDisplay_b__0__
+		              );
+		    Mono_Security_ASN1__get_Item(&Gameplay_Chat_View_ChatView___c__DisplayClass45_0_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Gameplay_Chat_View_ChatView___c_TypeInfo);
+		    DAT_ram_00a57ae2 = '\x01';
+		  }
+		  local_4 = (int *)0x0;
+		  iVar2 = unnamed_function_1417(Gameplay_Chat_View_ChatView___c__DisplayClass45_0_TypeInfo);
+		  uVar3 = System_Convert__FromBase64String(*(undefined4 *)(*(int *)(param1 + 0x38) + 0x160),0);
+		  iVar4 = func_ii_7775(uVar3,0);
+		  *(int *)(iVar2 + 8) = iVar4;
+		  if (1 < *(int *)(iVar4 + 8)) {
+		    uVar3 = unnamed_function_1417(System_Func_ChatVisitorData__bool__TypeInfo);
+		    System_Collections_Generic_Dictionary_uint__object___GetEnumerator
+		              (uVar3,iVar2,
+		               Method_Gameplay_Chat_View_ChatView___c__DisplayClass45_0__PrepareVisitorForDisplay_b__0__
+		               ,0);
+		    param2 = (int *)System_Linq_Enumerable__Where_PlayerLoopSystem_
+		                              (param2,uVar3,Method_System_Linq_Enumerable_Where_ChatVisitorData___);
+		  }
+		  uVar1 = 0;
+		  uVar3 = func_ii_6330(param2,Method_System_Linq_Enumerable_Count_ChatVisitorData___);
+		  iVar2 = unnamed_function_1417(System_Collections_Generic_List_ChatVisitorData__TypeInfo);
+		  Unity_Services_Core_Internal_UnityServicesInternal___c__DisplayClass33_0___InitializeServicesAsync_g__FailServicesInitialization_2
+		            (iVar2,uVar3,Method_System_Collections_Generic_List_ChatVisitorData___ctor__);
+		  uVar3 = func_ii_6330(param2,Method_System_Linq_Enumerable_Count_ChatVisitorData___);
+		  iVar4 = unnamed_function_1417(System_Collections_Generic_List_ChatVisitorData__TypeInfo);
+		  Unity_Services_Core_Internal_UnityServicesInternal___c__DisplayClass33_0___InitializeServicesAsync_g__FailServicesInitialization_2
+		            (iVar4,uVar3,Method_System_Collections_Generic_List_ChatVisitorData___ctor__);
+		  iVar11 = *param2;
+		  if (*(ushort *)(iVar11 + 0xb6) != 0) {
+		    do {
+		      if (System_Collections_Generic_IEnumerable_ChatVisitorData__TypeInfo ==
+		          *(int *)(*(int *)(iVar11 + 0x58) + uVar1 * 8)) {
+		        puVar5 = (uint *)(iVar11 + *(int *)(*(int *)(iVar11 + 0x58) + uVar1 * 8 + 4) * 8 + 0xc0);
+		        goto code_r0x80e20969;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar11 + 0xb6) != uVar1);
+		  }
+		  puVar5 = (uint *)func_ii_1080(param2,
+		                                System_Collections_Generic_IEnumerable_ChatVisitorData__TypeInfo,0);
+		code_r0x80e20969:
+		  local_4 = (int *)(**(code **)((ulonglong)*puVar5 * 4))(param2,puVar5[1]);
+		  local_c = 0;
+		  local_8 = &local_4;
+		code_r0x80e2098e:
+		  do {
+		    piVar8 = local_4;
+		    iVar11 = *local_4;
+		    if (*(ushort *)(iVar11 + 0xb6) != 0) {
+		      uVar1 = 0;
+		      do {
+		        piVar10 = (int *)(*(int *)(iVar11 + 0x58) + uVar1 * 8);
+		        if (System_Collections_IEnumerator_TypeInfo == *piVar10) {
+		          puVar6 = (undefined4 *)(iVar11 + piVar10[1] * 8 + 0xc0);
+		          goto code_r0x80e20a36;
+		        }
+		        uVar1 = uVar1 + 1;
+		      } while (*(ushort *)(iVar11 + 0xb6) != uVar1);
+		    }
+		    DAT_ram_009d3e38 = 0;
+		    puVar6 = (undefined4 *)
+		             import::env::invoke_iiii
+		                       (s_Allocator__0___Blocksize__1__mus_ram_00000421 + 0x18,local_4,
+		                        System_Collections_IEnumerator_TypeInfo,0);
+		    if (DAT_ram_009d3e38 == 1) {
+		code_r0x80e20a7e:
+		      DAT_ram_009d3e38 = 0;
+		      uVar3 = import::env::__cxa_find_matching_catch_3(&DAT_ram_0072c9c8);
+		      goto code_r0x80e20c83;
+		    }
+		code_r0x80e20a36:
+		    DAT_ram_009d3e38 = 0;
+		    iVar11 = import::env::invoke_iii(*puVar6,piVar8,puVar6[1]);
+		    piVar8 = local_4;
+		    if (DAT_ram_009d3e38 == 1) goto code_r0x80e20a7e;
+		    if (iVar11 == 0) {
+		      iVar11 = 6;
+		      goto code_r0x80e20cd0;
+		    }
+		    iVar11 = *local_4;
+		    if (*(ushort *)(iVar11 + 0xb6) != 0) {
+		      uVar1 = 0;
+		      do {
+		        piVar10 = (int *)(*(int *)(iVar11 + 0x58) + uVar1 * 8);
+		        if (System_Collections_Generic_IEnumerator_ChatVisitorData__TypeInfo == *piVar10) {
+		          puVar6 = (undefined4 *)(iVar11 + piVar10[1] * 8 + 0xc0);
+		          goto code_r0x80e20b23;
+		        }
+		        uVar1 = uVar1 + 1;
+		      } while (*(ushort *)(iVar11 + 0xb6) != uVar1);
+		    }
+		    DAT_ram_009d3e38 = 0;
+		    puVar6 = (undefined4 *)
+		             import::env::invoke_iiii
+		                       (s_Allocator__0___Blocksize__1__mus_ram_00000421 + 0x18,local_4,
+		                        System_Collections_Generic_IEnumerator_ChatVisitorData__TypeInfo,0);
+		    if (DAT_ram_009d3e38 == 1) {
+		code_r0x80e20c7b:
+		      DAT_ram_009d3e38 = 0;
+		      uVar3 = import::env::__cxa_find_matching_catch_3(&DAT_ram_0072c9c8);
+		      goto code_r0x80e20c83;
+		    }
+		code_r0x80e20b23:
+		    DAT_ram_009d3e38 = 0;
+		    iVar7 = import::env::invoke_iii(*puVar6,piVar8,puVar6[1]);
+		    iVar11 = Method_System_Collections_Generic_List_ChatVisitorData__Add__;
+		    if (DAT_ram_009d3e38 == 1) goto code_r0x80e20c7b;
+		    if ((*(byte *)(*(int *)(iVar7 + 0x14) + 0x14) & 2) == 0) {
+		      *(int *)(iVar4 + 0x10) = *(int *)(iVar4 + 0x10) + 1;
+		      uVar1 = *(uint *)(iVar4 + 0xc);
+		      if (uVar1 < *(uint *)(*(int *)(iVar4 + 8) + 0xc)) {
+		        *(uint *)(iVar4 + 0xc) = uVar1 + 1;
+		        iVar11 = *(int *)(iVar4 + 8) + uVar1 * 4;
+		code_r0x80e20f22:
+		        *(int *)(iVar11 + 0x10) = iVar7;
+		      }
+		      else {
+		        DAT_ram_009d3e38 = 0;
+		        import::env::invoke_viii
+		                  (s_struct_Uniforms___color__array<v_ram_00000aff + 0x6e,iVar4,iVar7,
+		                   *(undefined4 *)(*(int *)(*(int *)(iVar11 + 0x10) + 0x60) + 0x38));
+		        iVar11 = DAT_ram_009d3e38;
+		        DAT_ram_009d3e38 = 0;
+		        if (iVar11 == 1) {
+		          uVar3 = import::env::__cxa_find_matching_catch_3(&DAT_ram_0072c9c8);
+		          goto code_r0x80e20c83;
+		        }
+		      }
+		      goto code_r0x80e2098e;
+		    }
+		    *(int *)(iVar2 + 0x10) = *(int *)(iVar2 + 0x10) + 1;
+		    uVar1 = *(uint *)(iVar2 + 0xc);
+		    if (uVar1 < *(uint *)(*(int *)(iVar2 + 8) + 0xc)) {
+		      *(uint *)(iVar2 + 0xc) = uVar1 + 1;
+		      iVar11 = *(int *)(iVar2 + 8) + uVar1 * 4;
+		      goto code_r0x80e20f22;
+		    }
+		    DAT_ram_009d3e38 = 0;
+		    import::env::invoke_viii
+		              (s_struct_Uniforms___color__array<v_ram_00000aff + 0x6e,iVar2,iVar7,
+		               *(undefined4 *)(*(int *)(*(int *)(iVar11 + 0x10) + 0x60) + 0x38));
+		    iVar11 = DAT_ram_009d3e38;
+		    DAT_ram_009d3e38 = 0;
+		  } while (iVar11 != 1);
+		  uVar3 = import::env::__cxa_find_matching_catch_3(&DAT_ram_0072c9c8);
+		code_r0x80e20c83:
+		  iVar11 = global_1;
+		  iVar7 = import::env::llvm_eh_typeid_for(&DAT_ram_0072c9c8);
+		  if (iVar11 == iVar7) {
+		    piVar8 = (int *)import::env::__cxa_begin_catch(uVar3);
+		    local_c = *piVar8;
+		    iVar11 = 0;
+		    DAT_ram_009d3e38 = 0;
+		    import::env::invoke_v(0x123);
+		    iVar7 = DAT_ram_009d3e38;
+		    DAT_ram_009d3e38 = 0;
+		    if (iVar7 != 1) {
+		code_r0x80e20cd0:
+		      DAT_ram_009d3e38 = 0;
+		      piVar8 = *local_8;
+		      if (piVar8 != (int *)0x0) {
+		        uVar1 = 0;
+		        iVar7 = *piVar8;
+		        if (*(ushort *)(iVar7 + 0xb6) != 0) {
+		          do {
+		            if (System_IDisposable_TypeInfo == *(int *)(*(int *)(iVar7 + 0x58) + uVar1 * 8)) {
+		              puVar5 = (uint *)(iVar7 + *(int *)(*(int *)(iVar7 + 0x58) + uVar1 * 8 + 4) * 8 + 0xc0)
+		              ;
+		              goto code_r0x80e20d4b;
+		            }
+		            uVar1 = uVar1 + 1;
+		          } while (*(ushort *)(iVar7 + 0xb6) != uVar1);
+		        }
+		        puVar5 = (uint *)func_ii_1080(piVar8,System_IDisposable_TypeInfo,0);
+		code_r0x80e20d4b:
+		        (**(code **)((ulonglong)*puVar5 * 4))(piVar8,puVar5[1]);
+		      }
+		      if (local_c == 0) {
+		        if ((iVar11 == 0) ||
+		           ((((uVar3 = 0, iVar11 != 1 && (iVar11 != 2)) && (iVar11 != 3)) &&
+		            (((iVar11 != 4 && (iVar11 != 5)) && (iVar11 == 6)))))) {
+		          if (*(int *)(Gameplay_Chat_View_ChatView___c_TypeInfo + 0x74) == 0) {
+		            func_ii_306000(Gameplay_Chat_View_ChatView___c_TypeInfo);
+		          }
+		          puVar6 = *(undefined4 **)(Gameplay_Chat_View_ChatView___c_TypeInfo + 0x5c);
+		          iVar11 = puVar6[1];
+		          if (iVar11 == 0) {
+		            if (*(int *)(Gameplay_Chat_View_ChatView___c_TypeInfo + 0x74) == 0) {
+		              func_ii_306000(Gameplay_Chat_View_ChatView___c_TypeInfo);
+		              puVar6 = *(undefined4 **)(Gameplay_Chat_View_ChatView___c_TypeInfo + 0x5c);
+		            }
+		            uVar3 = *puVar6;
+		            iVar11 = unnamed_function_1417(System_Func_ChatVisitorData__ChatVisitorData__TypeInfo);
+		            System_Linq_Enumerable__Where_object_
+		                      (iVar11,uVar3,
+		                       Method_Gameplay_Chat_View_ChatView___c__PrepareVisitorForDisplay_b__45_1__,0)
+		            ;
+		            *(int *)(*(int *)(Gameplay_Chat_View_ChatView___c_TypeInfo + 0x5c) + 4) = iVar11;
+		          }
+		          uVar3 = func_ii_7521(iVar2,iVar11,*(undefined4 *)(*(int *)(param1 + 0x40) + 0x28),
+		                               Method_Core_Extensions_IEnumerableExt_SortGameData_ChatVisitorData__ChatVisitorData___
+		                              );
+		          uVar3 = System_Linq_Enumerable__Select_object__object_
+		                            (uVar3,Method_System_Linq_Enumerable_ToList_ChatVisitorData___);
+		          if (*(int *)(Gameplay_Chat_View_ChatView___c_TypeInfo + 0x74) == 0) {
+		            func_ii_306000(Gameplay_Chat_View_ChatView___c_TypeInfo);
+		          }
+		          puVar6 = *(undefined4 **)(Gameplay_Chat_View_ChatView___c_TypeInfo + 0x5c);
+		          iVar2 = puVar6[2];
+		          if (iVar2 == 0) {
+		            if (*(int *)(Gameplay_Chat_View_ChatView___c_TypeInfo + 0x74) == 0) {
+		              func_ii_306000(Gameplay_Chat_View_ChatView___c_TypeInfo);
+		              puVar6 = *(undefined4 **)(Gameplay_Chat_View_ChatView___c_TypeInfo + 0x5c);
+		            }
+		            uVar9 = *puVar6;
+		            iVar2 = unnamed_function_1417(System_Func_ChatVisitorData__ChatVisitorData__TypeInfo);
+		            System_Linq_Enumerable__Where_object_
+		                      (iVar2,uVar9,
+		                       Method_Gameplay_Chat_View_ChatView___c__PrepareVisitorForDisplay_b__45_2__,0)
+		            ;
+		            *(int *)(*(int *)(Gameplay_Chat_View_ChatView___c_TypeInfo + 0x5c) + 8) = iVar2;
+		          }
+		          uVar9 = func_ii_7521(iVar4,iVar2,*(undefined4 *)(*(int *)(param1 + 0x40) + 0x28),
+		                               Method_Core_Extensions_IEnumerableExt_SortGameData_ChatVisitorData__ChatVisitorData___
+		                              );
+		          func_ii_6335(uVar3,uVar9,
+		                       Method_System_Collections_Generic_List_ChatVisitorData__AddRange__);
+		          uVar3 = UnityEngine_TextCore_Text_FontAsset__UpdateFontFeaturesForNewlyAddedGlyphs
+		                            (uVar3,Method_System_Collections_Generic_List_ChatVisitorData__ToArray__
+		                            );
+		        }
+		        return uVar3;
+		      }
+		      System_Data_DataSet__ValidateLocaleConstraint(local_c);
+		      do {
+		        halt_trap();
+		      } while( true );
+		    }
+		    uVar3 = import::env::__cxa_find_matching_catch_2();
+		  }
+		  DAT_ram_009d3e38 = 0;
+		  import::env::invoke_ii(s_struct_Uniforms___color__array<v_ram_00001b87 + 0x1f,&local_c);
+		  iVar2 = DAT_ram_009d3e38;
+		  DAT_ram_009d3e38 = 0;
+		  if (iVar2 == 1) {
+		    import::env::__cxa_find_matching_catch_3(0);
+		    unnamed_function_937();
+		    do {
+		      halt_trap();
+		    } while( true );
+		  }
+		  import::env::__resumeException(uVar3);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
 		}
 
 		// Token: 0x0600436F RID: 17263 RVA: 0x00002052 File Offset: 0x00000252
@@ -211,6 +841,21 @@ namespace Gameplay.Chat.View
 		[Address(RVA = "0x9224", Offset = "0x9224", VA = "0x9224")]
 		private void HandleVisitorsSortTriggered(IGameDataComparer<ChatVisitorData> comparer)
 		{
+		/* --- GHIDRA: HandleVisitorsSortTriggered ---
+		void Gameplay_Chat_View_ChatView__HandleVisitorsSortTriggered(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  
+		  iVar1 = *(int *)(param1 + 0x84);
+		  if (iVar1 != 0) {
+		    (**(code **)((ulonglong)*(uint *)(iVar1 + 0xc) * 4))
+		              (*(undefined4 *)(iVar1 + 0x20),*(undefined4 *)(iVar1 + 0x14));
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06004371 RID: 17265 RVA: 0x00002050 File Offset: 0x00000250
@@ -218,6 +863,56 @@ namespace Gameplay.Chat.View
 		[Address(RVA = "0x9225", Offset = "0x9225", VA = "0x9225")]
 		private void HandleSendMessageButtonClickEvent()
 		{
+		/* --- GHIDRA: HandleSendMessageButtonClickEvent ---
+		void Gameplay_Chat_View_ChatView__HandleSendMessageButtonClickEvent
+		               (int param1,int param2,undefined4 param3)
+		
+		{
+		  undefined4 uVar1;
+		  undefined8 local_40;
+		  undefined8 local_38;
+		  undefined8 local_30;
+		  undefined8 local_28;
+		  undefined8 local_20;
+		  undefined8 local_18;
+		  undefined8 local_10;
+		  undefined8 local_8;
+		  
+		  if (DAT_ram_00a57ae3 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_UnityEngine_Component_GetComponent_Image___);
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_DG_Tweening_TweenSettingsExtensions_SetDelay_TweenerCore_Color__Color__ColorOptions____
+		              );
+		    DAT_ram_00a57ae3 = '\x01';
+		  }
+		  if (param2 == 0) {
+		    uVar1 = func_ii_5677(*(undefined4 *)(*(int *)(param1 + 0x34) + 0x10),
+		                         Method_UnityEngine_Component_GetComponent_Image___);
+		    local_8 = 0x3f80000000000000;
+		    local_28 = 0x3f80000000000000;
+		    local_10 = 0x3f800000;
+		    local_30 = 0x3f800000;
+		    DG_Tweening_DOTweenModuleSprite___c__DisplayClass3_0___DOBlendableColor_b__1
+		              (uVar1,&local_30,0.0,0);
+		    uVar1 = func_ii_5677(*(undefined4 *)(*(int *)(param1 + 0x34) + 0x10),
+		                         Method_UnityEngine_Component_GetComponent_Image___);
+		    local_18 = 0x3f8000003f800000;
+		    local_38 = 0x3f8000003f800000;
+		    local_20 = 0x3f8000003f800000;
+		    local_40 = 0x3f8000003f800000;
+		    uVar1 = DG_Tweening_DOTweenModuleSprite___c__DisplayClass3_0___DOBlendableColor_b__1
+		                      (uVar1,&local_40,0.5,0);
+		    DG_Tweening_DOTweenModuleUI__DOFade
+		              (uVar1,0.5,
+		               Method_DG_Tweening_TweenSettingsExtensions_SetDelay_TweenerCore_Color__Color__ColorOptions____
+		              );
+		    Gameplay_UserInfo_View_PatternTextInput__get_Status(*(undefined4 *)(param1 + 0x34),1,0);
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06004372 RID: 17266 RVA: 0x00002050 File Offset: 0x00000250
@@ -225,6 +920,24 @@ namespace Gameplay.Chat.View
 		[Address(RVA = "0x9226", Offset = "0x9226", VA = "0x9226")]
 		private void HandleMessageTextInputStatusChangedEvent(bool status)
 		{
+		/* --- GHIDRA: HandleMessageTextInputStatusChangedEvent ---
+		int Gameplay_Chat_View_ChatView__HandleMessageTextInputStatusChangedEvent
+		              (undefined4 param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  
+		  if (DAT_ram_00a57ae4 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Gameplay_Chat_View_ChatView__ScrollTpSpike_d__49_TypeInfo);
+		    DAT_ram_00a57ae4 = '\x01';
+		  }
+		  iVar1 = unnamed_function_1417(Gameplay_Chat_View_ChatView__ScrollTpSpike_d__49_TypeInfo);
+		  *(undefined4 *)(iVar1 + 0x10) = param1;
+		  *(undefined4 *)(iVar1 + 8) = 0;
+		  return iVar1;
+		}
+		*/
+
 		}
 
 		// Token: 0x06004373 RID: 17267 RVA: 0x00002052 File Offset: 0x00000252
@@ -232,6 +945,52 @@ namespace Gameplay.Chat.View
 		[Address(RVA = "0x9227", Offset = "0x9227", VA = "0x9227")]
 		private IEnumerator ScrollTpSpike()
 		{
+		/* --- GHIDRA: ScrollTpSpike ---
+		void Gameplay_Chat_View_ChatView__ScrollTpSpike
+		               (int param1,undefined4 param2,int param3,undefined4 param4)
+		
+		{
+		  undefined4 param1_00;
+		  undefined8 *puVar1;
+		  undefined8 local_38;
+		  undefined8 local_30;
+		  undefined8 local_28;
+		  undefined8 local_20;
+		  undefined8 local_18;
+		  undefined8 local_10;
+		  undefined8 local_8;
+		  
+		  if (DAT_ram_00a57ae5 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_UnityEngine_Component_GetComponent_RectTransform___);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UI_MonoBehaviourWithStates_ChatViewStates__HandleCurrentStateChanged__);
+		    DAT_ram_00a57ae5 = '\x01';
+		  }
+		  UI_MonoBehaviourWithStates_ByteEnum____ctor
+		            (param1,param2,param3,
+		             Method_UI_MonoBehaviourWithStates_ChatViewStates__HandleCurrentStateChanged__);
+		  param1_00 = func_ii_5677(*(undefined4 *)(param1 + 0x44),
+		                           Method_UnityEngine_Component_GetComponent_RectTransform___);
+		  if (param3 == 2) {
+		    local_30 = *(undefined8 *)(param1 + 0x70);
+		    local_8 = local_30;
+		    UnityEngine_RectTransform__get_sizeDelta(param1_00,&local_30,0);
+		    local_10 = *(undefined8 *)(param1 + 100);
+		    puVar1 = &local_10;
+		  }
+		  else {
+		    local_28 = *(undefined8 *)(param1 + 0x58);
+		    local_18 = local_28;
+		    UnityEngine_RectTransform__get_sizeDelta(param1_00,&local_28,0);
+		    local_20 = *(undefined8 *)(param1 + 0x4c);
+		    puVar1 = &local_20;
+		  }
+		  local_38 = *puVar1;
+		  UnityEngine_RectTransform__get_anchoredPosition(param1_00,&local_38,0);
+		  return;
+		}
+		*/
+
 			return null;
 		}
 
@@ -240,6 +999,34 @@ namespace Gameplay.Chat.View
 		[Address(RVA = "0x9228", Offset = "0x9228", VA = "0x9228", Slot = "4")]
 		protected override void HandleCurrentStateChanged(ChatViewStates fromState, ChatViewStates toState)
 		{
+		/* --- GHIDRA: HandleCurrentStateChanged ---
+		void Gameplay_Chat_View_ChatView__HandleCurrentStateChanged
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  undefined4 param2_00;
+		  int *piVar1;
+		  
+		  *(undefined4 *)(param1 + 0x88) = param2;
+		  piVar1 = *(int **)(param1 + 0x3c);
+		  param2_00 = Gameplay_Chat_View_ChatView__HandleCurrentVisitorsSortComparerChanged
+		                        (param1,param2,param1);
+		  if (DAT_ram_00a57ad9 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Com_TheFallenGames_OSA_DataHelpers_SimpleDataHelper_ChatVisitorData__ResetItems__
+		              );
+		    DAT_ram_00a57ad9 = '\x01';
+		  }
+		  (**(code **)((ulonglong)*(uint *)(*piVar1 + 0x2e8) * 4))(piVar1,*(undefined4 *)(*piVar1 + 0x2ec));
+		  Com_TheFallenGames_OSA_DataHelpers_SimpleDataHelper_object___RemoveOneFromStart
+		            (piVar1[0x28],param2_00,0,
+		             Method_Com_TheFallenGames_OSA_DataHelpers_SimpleDataHelper_ChatVisitorData__ResetItems__
+		            );
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06004375 RID: 17269 RVA: 0x00002050 File Offset: 0x00000250
@@ -247,6 +1034,32 @@ namespace Gameplay.Chat.View
 		[Address(RVA = "0x9229", Offset = "0x9229", VA = "0x9229")]
 		public void SetVisitors(List<ChatVisitorData> visitors)
 		{
+		/* --- GHIDRA: SetVisitors ---
+		void Gameplay_Chat_View_ChatView__SetVisitors(int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  undefined4 param2_00;
+		  int *piVar1;
+		  
+		  piVar1 = *(int **)(param1 + 0x3c);
+		  param2_00 = Gameplay_Chat_View_ChatView__HandleCurrentVisitorsSortComparerChanged
+		                        (param1,*(undefined4 *)(param1 + 0x88),param1);
+		  if (DAT_ram_00a57ad9 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Com_TheFallenGames_OSA_DataHelpers_SimpleDataHelper_ChatVisitorData__ResetItems__
+		              );
+		    DAT_ram_00a57ad9 = '\x01';
+		  }
+		  (**(code **)((ulonglong)*(uint *)(*piVar1 + 0x2e8) * 4))(piVar1,*(undefined4 *)(*piVar1 + 0x2ec));
+		  Com_TheFallenGames_OSA_DataHelpers_SimpleDataHelper_object___RemoveOneFromStart
+		            (piVar1[0x28],param2_00,0,
+		             Method_Com_TheFallenGames_OSA_DataHelpers_SimpleDataHelper_ChatVisitorData__ResetItems__
+		            );
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06004376 RID: 17270 RVA: 0x00002050 File Offset: 0x00000250
@@ -254,6 +1067,54 @@ namespace Gameplay.Chat.View
 		[Address(RVA = "0x922A", Offset = "0x922A", VA = "0x922A")]
 		public void AddVisitor(ChatVisitorData visitor)
 		{
+		/* --- GHIDRA: AddVisitor ---
+		void Gameplay_Chat_View_ChatView__AddVisitor(int param1,int param2,undefined4 param3)
+		
+		{
+		  int param2_00;
+		  int iVar1;
+		  int iVar2;
+		  
+		  param2_00 = 0;
+		  if (DAT_ram_00a57ae6 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Com_TheFallenGames_OSA_DataHelpers_SimpleDataHelper_ChatVisitorData__RemoveItems__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Com_TheFallenGames_OSA_DataHelpers_SimpleDataHelper_ChatVisitorData__get_Count__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Com_TheFallenGames_OSA_DataHelpers_SimpleDataHelper_ChatVisitorData__get_Item__
+		              );
+		    DAT_ram_00a57ae6 = '\x01';
+		  }
+		  iVar1 = UnityEngine_AndroidJavaObject___GetRawObject
+		                    (*(undefined4 *)(*(int *)(param1 + 0x3c) + 0xa0),
+		                     Method_Com_TheFallenGames_OSA_DataHelpers_SimpleDataHelper_ChatVisitorData__get_Count__
+		                    );
+		  if (0 < iVar1) {
+		    do {
+		      iVar2 = Com_TheFallenGames_OSA_DataHelpers_SimpleDataHelper_object___System_Collections_IEnumerable_GetEnumerator
+		                        (*(undefined4 *)(*(int *)(param1 + 0x3c) + 0xa0),param2_00,
+		                         Method_Com_TheFallenGames_OSA_DataHelpers_SimpleDataHelper_ChatVisitorData__get_Item__
+		                        );
+		      if (iVar2 == param2) {
+		        Com_TheFallenGames_OSA_DataHelpers_SimpleDataHelper_object___NotifyListChangedExternally
+		                  (*(undefined4 *)(*(int *)(param1 + 0x3c) + 0xa0),param2_00,1,0,
+		                   Method_Com_TheFallenGames_OSA_DataHelpers_SimpleDataHelper_ChatVisitorData__RemoveItems__
+		                  );
+		        return;
+		      }
+		      param2_00 = param2_00 + 1;
+		    } while (param2_00 != iVar1);
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06004377 RID: 17271 RVA: 0x00002050 File Offset: 0x00000250
@@ -261,6 +1122,27 @@ namespace Gameplay.Chat.View
 		[Address(RVA = "0x922B", Offset = "0x922B", VA = "0x922B")]
 		public void RemoveVisitor(ChatVisitorData visitor)
 		{
+		/* --- GHIDRA: RemoveVisitor ---
+		void Gameplay_Chat_View_ChatView__RemoveVisitor(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  
+		  iVar1 = func_ii_12174(*(undefined4 *)(param1 + 0x44),0);
+		  if (iVar1 != 0) {
+		    if (DAT_ram_00a57ae4 == '\0') {
+		      Mono_Security_ASN1__get_Item(&Gameplay_Chat_View_ChatView__ScrollTpSpike_d__49_TypeInfo);
+		      DAT_ram_00a57ae4 = '\x01';
+		    }
+		    iVar1 = unnamed_function_1417(Gameplay_Chat_View_ChatView__ScrollTpSpike_d__49_TypeInfo);
+		    *(int *)(iVar1 + 0x10) = param1;
+		    *(undefined4 *)(iVar1 + 8) = 0;
+		    Utils_CoroutineSource__GetMono(iVar1,0);
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06004378 RID: 17272 RVA: 0x00002050 File Offset: 0x00000250
@@ -268,6 +1150,30 @@ namespace Gameplay.Chat.View
 		[Address(RVA = "0x922C", Offset = "0x922C", VA = "0x922C")]
 		public void ScrollMessagesDown()
 		{
+		/* --- GHIDRA: ScrollMessagesDown ---
+		void Gameplay_Chat_View_ChatView__ScrollMessagesDown(int param1,int param2,undefined4 param3)
+		
+		{
+		  undefined4 uVar1;
+		  int iVar2;
+		  
+		  uVar1 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_uint__object___MoveNext
+		                    (*(undefined4 *)(param1 + 0x34),0);
+		  Com_TheFallenGames_OSA_CustomAdapters_TableView_Tuple_Basic_BasicTupleValueViewsHolder__UpdateAsText
+		            (uVar1,(uint)(param2 == 0),0);
+		  uVar1 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_uint__object___MoveNext
+		                    (*(undefined4 *)(param1 + 0x7c),0);
+		  Com_TheFallenGames_OSA_CustomAdapters_TableView_Tuple_Basic_BasicTupleValueViewsHolder__UpdateAsText
+		            (uVar1,(uint)(param2 != 0),0);
+		  iVar2 = *(int *)(param1 + 0x7c);
+		  if ((*(int *)(iVar2 + 0x18) != param2) && (*(int *)(iVar2 + 0x18) = param2, param2 != 0)) {
+		    UI_Elements_RightPanel_TitleWithLevel__set_Level
+		              (*(undefined4 *)(iVar2 + 0x10),*(undefined4 *)(param2 + 0x10),0);
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06004379 RID: 17273 RVA: 0x00002050 File Offset: 0x00000250
@@ -275,6 +1181,21 @@ namespace Gameplay.Chat.View
 		[Address(RVA = "0x922D", Offset = "0x922D", VA = "0x922D")]
 		public void SetBan(ChatBanData banData)
 		{
+		/* --- GHIDRA: SetBan ---
+		void Gameplay_Chat_View_ChatView__SetBan(int param1,undefined4 param2)
+		
+		{
+		  int *piVar1;
+		  int iVar2;
+		  
+		  piVar1 = *(int **)(*(int *)(param1 + 0x34) + 0x10);
+		  iVar2 = *piVar1;
+		  (**(code **)((ulonglong)*(uint *)(iVar2 + 0x1f0) * 4))(piVar1,*(undefined4 *)(iVar2 + 500));
+		  TMPro_TMP_InputField__Validate(*(undefined4 *)(*(int *)(param1 + 0x34) + 0x10),0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600437A RID: 17274 RVA: 0x00002050 File Offset: 0x00000250
@@ -282,6 +1203,27 @@ namespace Gameplay.Chat.View
 		[Address(RVA = "0x922E", Offset = "0x922E", VA = "0x922E")]
 		public void SetFocusOnTextInputField()
 		{
+		/* --- GHIDRA: SetFocusOnTextInputField ---
+		void Gameplay_Chat_View_ChatView__SetFocusOnTextInputField(int param1,undefined4 param2)
+		
+		{
+		  undefined4 param1_00;
+		  
+		  if (DAT_ram_00a57ae7 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UI_MonoBehaviourWithStates_SmilesViewStates__set_CurrentState__);
+		    DAT_ram_00a57ae7 = '\x01';
+		  }
+		  UI_SelectedButton__get_Selected(*(undefined4 *)(param1 + 0x28),1,0);
+		  param1_00 = *(undefined4 *)(param1 + 0x48);
+		  UI_MonoBehaviourWithStates_ByteEnum___remove_CurrentStateChangedEvent
+		            (param1_00,0xff,Method_UI_MonoBehaviourWithStates_SmilesViewStates__set_CurrentState__);
+		  UI_MonoBehaviourWithStates_ByteEnum___remove_CurrentStateChangedEvent
+		            (param1_00,0xff,Method_UI_MonoBehaviourWithStates_SmilesViewStates__set_CurrentState__);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600437B RID: 17275 RVA: 0x00002050 File Offset: 0x00000250
@@ -289,6 +1231,27 @@ namespace Gameplay.Chat.View
 		[Address(RVA = "0x922F", Offset = "0x922F", VA = "0x922F")]
 		public void ShowSmilePanel()
 		{
+		/* --- GHIDRA: ShowSmilePanel ---
+		void Gameplay_Chat_View_ChatView__ShowSmilePanel(int param1,undefined4 param2)
+		
+		{
+		  undefined4 param1_00;
+		  
+		  if (DAT_ram_00a57ae8 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UI_MonoBehaviourWithStates_SmilesViewStates__set_CurrentState__);
+		    DAT_ram_00a57ae8 = '\x01';
+		  }
+		  UI_SelectedButton__get_Selected(*(undefined4 *)(param1 + 0x28),0,0);
+		  param1_00 = *(undefined4 *)(param1 + 0x48);
+		  UI_MonoBehaviourWithStates_ByteEnum___remove_CurrentStateChangedEvent
+		            (param1_00,0,Method_UI_MonoBehaviourWithStates_SmilesViewStates__set_CurrentState__);
+		  UI_MonoBehaviourWithStates_ByteEnum___remove_CurrentStateChangedEvent
+		            (param1_00,0,Method_UI_MonoBehaviourWithStates_SmilesViewStates__set_CurrentState__);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600437C RID: 17276 RVA: 0x00002050 File Offset: 0x00000250
@@ -296,6 +1259,20 @@ namespace Gameplay.Chat.View
 		[Address(RVA = "0x9230", Offset = "0x9230", VA = "0x9230")]
 		public void CloseSmilePanel()
 		{
+		/* --- GHIDRA: CloseSmilePanel ---
+		void Gameplay_Chat_View_ChatView__CloseSmilePanel(undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a57ae9 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_UI_MonoBehaviourWithStates_ChatViewStates___ctor__);
+		    DAT_ram_00a57ae9 = '\x01';
+		  }
+		  ScreenAdaptation_Common_AppSize__Update
+		            (param1,Method_UI_MonoBehaviourWithStates_ChatViewStates___ctor__);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600437D RID: 17277 RVA: 0x00002050 File Offset: 0x00000250
@@ -303,6 +1280,22 @@ namespace Gameplay.Chat.View
 		[Address(RVA = "0x9231", Offset = "0x9231", VA = "0x9231")]
 		public ChatView()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_Chat_View_ChatView___ctor(undefined4 param1)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a57aea == '\0') {
+		    Mono_Security_ASN1__get_Item(&Gameplay_Chat_View_ChatView___c_TypeInfo);
+		    DAT_ram_00a57aea = '\x01';
+		  }
+		  uVar1 = unnamed_function_1417(Gameplay_Chat_View_ChatView___c_TypeInfo);
+		  **(undefined4 **)(Gameplay_Chat_View_ChatView___c_TypeInfo + 0x5c) = uVar1;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0400251D RID: 9501
@@ -422,4 +1415,177 @@ namespace Gameplay.Chat.View
 		[FieldOffset(Offset = "0x88")]
 		private IList<ChatVisitorData> _visitors;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_SmilesView ---
+		void Gameplay_Chat_View_ChatView__get_SmilesView(int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  int param1_00;
+		  int *param1_01;
+		  int iVar2;
+		  
+		  if (DAT_ram_00a57adc == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_TypeInfo);
+		    DAT_ram_00a57adc = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x84);
+		  while ((param1_01 = (int *)UnityEngine_UI_Image__set_sprite(param1_00,param2,0),
+		         param1_01 == (int *)0x0 || (System_Action_TypeInfo == *param1_01))) {
+		    iVar2 = func_ii_4329(param1 + 0x84,param1_01,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,System_Action_TypeInfo);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: add_SendMessageEvent ---
+		void Gameplay_Chat_View_ChatView__add_SendMessageEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  int param1_00;
+		  int *param1_01;
+		  int iVar2;
+		  
+		  if (DAT_ram_00a57add == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_TypeInfo);
+		    DAT_ram_00a57add = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x84);
+		  while ((param1_01 = (int *)func_ii_7048(param1_00,param2,0), param1_01 == (int *)0x0 ||
+		         (System_Action_TypeInfo == *param1_01))) {
+		    iVar2 = func_ii_4329(param1 + 0x84,param1_01,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,System_Action_TypeInfo);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: remove_SendMessageEvent ---
+		void Gameplay_Chat_View_ChatView__remove_SendMessageEvent(int param1,undefined4 param2)
+		
+		{
+		  bool bVar1;
+		  int param1_00;
+		  int iVar2;
+		  undefined4 uVar3;
+		  int param1_01;
+		  undefined4 uVar4;
+		  int iVar5;
+		  
+		  if (DAT_ram_00a57ade == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Sorting_AbstractSortControlView_ChatVisitorData__remove_ComparerChangedEvent__
+		              );
+		    Mono_Security_ASN1__get_Item(&System_Action_bool__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&System_Action_ChatSmileDic__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&System_Action_IGameDataComparer_ChatVisitorData___TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Method_Gameplay_Chat_View_ChatView_HandleMessageInputSubmit__);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Gameplay_Chat_View_ChatView_HandleMessageTextInputStatusChangedEvent__);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Gameplay_Chat_View_ChatView_HandleSendMessageButtonClickEvent__);
+		    Mono_Security_ASN1__get_Item(&Method_Gameplay_Chat_View_ChatView_HandleSmilesButtonClickEvent__)
+		    ;
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Gameplay_Chat_View_ChatView_HandleSmilesViewItemSelectedEvent__);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Gameplay_Chat_View_ChatView_HandleVisitorsSearchFieldOnValueChanged__);
+		    Mono_Security_ASN1__get_Item(&Method_Gameplay_Chat_View_ChatView_HandleVisitorsSortTriggered__);
+		    Mono_Security_ASN1__get_Item(&System_EventHandler_PointerEventData__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&UnityEngine_Events_UnityAction_string__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&UnityEngine_Events_UnityAction_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Method_UnityEngine_Events_UnityEvent_string__RemoveListener__);
+		    DAT_ram_00a57ade = '\x01';
+		  }
+		  uVar4 = *(undefined4 *)(*(int *)(*(int *)(param1 + 0x34) + 0x10) + 0x11c);
+		  uVar3 = unnamed_function_1417(UnityEngine_Events_UnityAction_string__TypeInfo);
+		  func_ii_7054(uVar3,param1,Method_Gameplay_Chat_View_ChatView_HandleMessageInputSubmit__,0);
+		  UnityEngine_Events_UnityEvent_InputAction_CallbackContext___Invoke
+		            (uVar4,uVar3,Method_UnityEngine_Events_UnityEvent_string__RemoveListener__);
+		  uVar4 = *(undefined4 *)(*(int *)(param1 + 0x38) + 0x130);
+		  uVar3 = unnamed_function_1417(UnityEngine_Events_UnityAction_string__TypeInfo);
+		  func_ii_7054(uVar3,param1,
+		               Method_Gameplay_Chat_View_ChatView_HandleVisitorsSearchFieldOnValueChanged__,0);
+		  UnityEngine_Events_UnityEvent_InputAction_CallbackContext___Invoke
+		            (uVar4,uVar3,Method_UnityEngine_Events_UnityEvent_string__RemoveListener__);
+		  uVar4 = *(undefined4 *)(*(int *)(param1 + 0x20) + 0xb4);
+		  uVar3 = unnamed_function_1417(UnityEngine_Events_UnityAction_TypeInfo);
+		  Utils_ObjectUtils__IsNotNull
+		            (uVar3,param1,Method_Gameplay_Chat_View_ChatView_HandleSendMessageButtonClickEvent__,0);
+		  UnityEngine_Events_UnityAction___ctor(uVar4,uVar3,0);
+		  uVar4 = *(undefined4 *)(param1 + 0x34);
+		  uVar3 = unnamed_function_1417(System_Action_bool__TypeInfo);
+		  System_Action_AsyncGPUReadbackRequest___Invoke
+		            (uVar3,param1,
+		             Method_Gameplay_Chat_View_ChatView_HandleMessageTextInputStatusChangedEvent__,0);
+		  Gameplay_UserInfo_View_PatternTextInput__add_OnStatusChanged(uVar4,uVar3,0);
+		  uVar4 = *(undefined4 *)(param1 + 0x40);
+		  uVar3 = unnamed_function_1417(System_Action_IGameDataComparer_ChatVisitorData___TypeInfo);
+		  UnityEngine_UIElements_VisualElement__get_layout
+		            (uVar3,param1,Method_Gameplay_Chat_View_ChatView_HandleVisitorsSortTriggered__,0);
+		  UI_Sorting_AbstractSortControlView___Il2CppFullySharedGenericType___get_SelectedFilter
+		            (uVar4,uVar3,
+		             Method_UI_Sorting_AbstractSortControlView_ChatVisitorData__remove_ComparerChangedEvent__
+		            );
+		  uVar4 = *(undefined4 *)(param1 + 0x28);
+		  uVar3 = unnamed_function_1417(System_EventHandler_PointerEventData__TypeInfo);
+		  UnityEngine_Object__Instantiate_object_
+		            (uVar3,param1,Method_Gameplay_Chat_View_ChatView_HandleSmilesButtonClickEvent__,0);
+		  UI_SelectedButton__add_ClickEvent(uVar4,uVar3,0);
+		  iVar5 = *(int *)(param1 + 0x48);
+		  uVar3 = unnamed_function_1417(System_Action_ChatSmileDic__TypeInfo);
+		  UnityEngine_UIElements_VisualElement__get_layout
+		            (uVar3,param1,Method_Gameplay_Chat_View_ChatView_HandleSmilesViewItemSelectedEvent__,0);
+		  if (DAT_ram_00a57aff == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_ChatSmileDic__TypeInfo);
+		    DAT_ram_00a57aff = '\x01';
+		  }
+		  param1_00 = *(int *)(iVar5 + 0x34);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = func_ii_7048(param1_00,uVar3,0);
+		    uVar4 = System_Action_ChatSmileDic__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_ChatSmileDic__TypeInfo), iVar2 == 0)) break;
+		    iVar2 = func_ii_4329(iVar5 + 0x34,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      iVar5 = **(int **)(param1 + 0x80);
+		      (**(code **)((ulonglong)*(uint *)(iVar5 + 0x130) * 4))
+		                (*(int **)(param1 + 0x80),*(undefined4 *)(iVar5 + 0x134));
+		      *(undefined4 *)(param1 + 0x88) = 0;
+		      *(undefined4 *)(param1 + 0x80) = 0;
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,uVar4);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
 }

@@ -14,6 +14,68 @@ namespace UI.Elements.Buildings
 		[Address(RVA = "0x60E3", Offset = "0x60E3", VA = "0x60E3")]
 		public SpellListArgs()
 		{
+		/* --- GHIDRA: .ctor ---
+		void UI_Elements_Buildings_SpellListArgs___ctor(int param1,int param2,undefined4 param3)
+		
+		{
+		  undefined4 uVar1;
+		  int iVar2;
+		  undefined8 local_20;
+		  undefined4 local_18;
+		  undefined8 local_10;
+		  undefined4 local_8;
+		  
+		  if (*(int *)(param1 + 0x2c) != 0) {
+		    func_ii_7891(*(int *)(param1 + 0x2c),0,0);
+		  }
+		  iVar2 = 0x14;
+		  if (param2 == 0) {
+		    iVar2 = 0x20;
+		  }
+		  local_8 = *(undefined4 *)((undefined8 *)(param1 + iVar2) + 1);
+		  local_10 = *(undefined8 *)(param1 + iVar2);
+		  uVar1 = System_Collections_Generic_SortedDictionary_Enumerator_object__object___get_Current
+		                    (param1,0);
+		  local_18 = local_8;
+		  local_20 = local_10;
+		  uVar1 = DG_Tweening_ShortcutExtensions__DORotateQuaternion
+		                    (uVar1,&local_20,*(float *)(param1 + 0x10),0,0);
+		  *(undefined4 *)(param1 + 0x2c) = uVar1;
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: .ctor ---
+		void UI_Elements_Buildings_SpellListArgs___ctor(int param1,int param2,undefined4 param3)
+		
+		{
+		  undefined4 uVar1;
+		  int iVar2;
+		  undefined8 local_20;
+		  undefined4 local_18;
+		  undefined8 local_10;
+		  undefined4 local_8;
+		  
+		  if (*(int *)(param1 + 0x2c) != 0) {
+		    func_ii_7891(*(int *)(param1 + 0x2c),0,0);
+		  }
+		  iVar2 = 0x14;
+		  if (param2 == 0) {
+		    iVar2 = 0x20;
+		  }
+		  local_8 = *(undefined4 *)((undefined8 *)(param1 + iVar2) + 1);
+		  local_10 = *(undefined8 *)(param1 + iVar2);
+		  uVar1 = System_Collections_Generic_SortedDictionary_Enumerator_object__object___get_Current
+		                    (param1,0);
+		  local_18 = local_8;
+		  local_20 = local_10;
+		  uVar1 = DG_Tweening_ShortcutExtensions__DORotateQuaternion
+		                    (uVar1,&local_20,*(float *)(param1 + 0x10),0,0);
+		  *(undefined4 *)(param1 + 0x2c) = uVar1;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06000E5D RID: 3677 RVA: 0x00002050 File Offset: 0x00000250

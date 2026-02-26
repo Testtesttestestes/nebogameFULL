@@ -174,4 +174,225 @@ namespace Core.Data
 		[FieldOffset(Offset = "0x8")]
 		private ProtoSkillsChangedEvt _rawData;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_RawData ---
+		void Core_Data_UserSkillsData__get_RawData(int param1,int param2,undefined4 param3)
+		
+		{
+		  int iVar1;
+		  
+		  iVar1 = *(int *)(param1 + 8);
+		  if (iVar1 == 0) {
+		    *(int *)(param1 + 8) = param2;
+		    Core_Data_UserSkillsData__set_BonusRelativeSkills(param1,param1);
+		    return;
+		  }
+		  if (*(int *)(param2 + 0xc) != 0) {
+		    *(int *)(iVar1 + 0xc) = *(int *)(param2 + 0xc);
+		  }
+		  if (*(int *)(param2 + 0x10) != 0) {
+		    *(int *)(iVar1 + 0x10) = *(int *)(param2 + 0x10);
+		  }
+		  if (*(int *)(param2 + 0x14) != 0) {
+		    *(int *)(iVar1 + 0x14) = *(int *)(param2 + 0x14);
+		  }
+		  Core_Data_UserSkillsData__set_BonusRelativeSkills(param1,param1);
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_BonusRelativeSkills ---
+		void Core_Data_UserSkillsData__set_BonusRelativeSkills(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  int iVar2;
+		  int *piVar3;
+		  int iVar4;
+		  undefined4 uVar5;
+		  undefined4 uVar6;
+		  undefined1 auStack_20 [8];
+		  int local_18;
+		  undefined8 *local_14;
+		  undefined8 local_10;
+		  undefined8 local_8;
+		  
+		  if (DAT_ram_00a60804 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_Dictionary_int__SkillData__get_Values__);
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_int__SkillData__Dispose__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_int__SkillData__MoveNext__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_int__SkillData__get_Current__
+		              );
+		    Mono_Security_ASN1__get_Item(&Core_Data_Skills_SkillCollection_TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_System_Collections_Generic_Dictionary_ValueCollection_int__SkillData__GetEnumerator__
+		              );
+		    Mono_Security_ASN1__get_Item(&StringLiteral_17370);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_17371);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_17372);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_17369);
+		    DAT_ram_00a60804 = '\x01';
+		  }
+		  local_8 = 0;
+		  local_10 = 0;
+		  iVar4 = *(int *)(param1 + 8);
+		  if (iVar4 == 0) {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    func_ii_7109(StringLiteral_17370,0);
+		  }
+		  else if (*(int *)(iVar4 + 0x14) == 0) {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    func_ii_7109(StringLiteral_17372,0);
+		  }
+		  else if (*(int *)(iVar4 + 0xc) == 0) {
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    func_ii_7109(StringLiteral_17369,0);
+		  }
+		  else {
+		    if (*(int *)(iVar4 + 0x10) != 0) {
+		      uVar5 = *(undefined4 *)(*(int *)(iVar4 + 0xc) + 0xc);
+		      uVar1 = unnamed_function_1417(Core_Data_Skills_SkillCollection_TypeInfo);
+		      Core_Extensions_Dict_DictExt__GetModifier(uVar1,uVar5,auStack_20);
+		      uVar6 = *(undefined4 *)(*(int *)(*(int *)(param1 + 8) + 0xc) + 0x10);
+		      uVar5 = unnamed_function_1417(Core_Data_Skills_SkillCollection_TypeInfo);
+		      Core_Extensions_Dict_DictExt__GetModifier(uVar5,uVar6,auStack_20);
+		      uVar1 = Core_Data_Skills_SkillCollection___ctor(uVar1,uVar5,auStack_20);
+		      *(undefined4 *)(param1 + 0xc) = uVar1;
+		      uVar5 = *(undefined4 *)(*(int *)(*(int *)(param1 + 8) + 0x14) + 0xc);
+		      uVar1 = unnamed_function_1417(Core_Data_Skills_SkillCollection_TypeInfo);
+		      Core_Extensions_Dict_DictExt__GetModifier(uVar1,uVar5,auStack_20);
+		      uVar6 = *(undefined4 *)(*(int *)(*(int *)(param1 + 8) + 0x14) + 0x10);
+		      uVar5 = unnamed_function_1417(Core_Data_Skills_SkillCollection_TypeInfo);
+		      Core_Extensions_Dict_DictExt__GetModifier(uVar5,uVar6,auStack_20);
+		      uVar1 = Core_Data_Skills_SkillCollection___ctor(uVar1,uVar5,auStack_20);
+		      *(undefined4 *)(param1 + 0x14) = uVar1;
+		      uVar5 = *(undefined4 *)(*(int *)(*(int *)(param1 + 8) + 0x10) + 0xc);
+		      uVar1 = unnamed_function_1417(Core_Data_Skills_SkillCollection_TypeInfo);
+		      Core_Extensions_Dict_DictExt__GetModifier(uVar1,uVar5,auStack_20);
+		      uVar6 = *(undefined4 *)(*(int *)(*(int *)(param1 + 8) + 0x10) + 0x10);
+		      uVar5 = unnamed_function_1417(Core_Data_Skills_SkillCollection_TypeInfo);
+		      Core_Extensions_Dict_DictExt__GetModifier(uVar5,uVar6,auStack_20);
+		      uVar1 = Core_Data_Skills_SkillCollection___ctor(uVar1,uVar5,auStack_20);
+		      *(undefined4 *)(param1 + 0x10) = uVar1;
+		      uVar1 = Core_Data_Skills_SkillCollection__HasAnyRelative
+		                        (*(undefined4 *)(param1 + 0xc),auStack_20);
+		      uVar5 = Core_Data_Skills_SkillCollection__HasAnyRelative
+		                        (*(undefined4 *)(param1 + 0x14),auStack_20);
+		      uVar1 = Core_Data_Skills_SkillCollection___ctor(uVar1,uVar5,auStack_20);
+		      uVar5 = Core_Data_Skills_SkillCollection__HasAnyRelative
+		                        (*(undefined4 *)(param1 + 0x10),auStack_20);
+		      uVar1 = Core_Data_Skills_SkillCollection___ctor(uVar1,uVar5,auStack_20);
+		      *(undefined4 *)(param1 + 0x20) = uVar1;
+		      uVar1 = Core_Data_Skills_SkillCollection___ctor(*(undefined4 *)(param1 + 0xc),auStack_20);
+		      uVar5 = Core_Data_Skills_SkillCollection___ctor(*(undefined4 *)(param1 + 0x10),auStack_20);
+		      uVar1 = Core_Data_Skills_SkillCollection___ctor(uVar1,uVar5,auStack_20);
+		      uVar5 = Core_Data_Skills_SkillCollection___ctor(*(undefined4 *)(param1 + 0x14),auStack_20);
+		      uVar1 = Core_Data_Skills_SkillCollection___ctor(uVar1,uVar5,auStack_20);
+		      uVar1 = Core_Data_Skills_SkillCollection__op_Subtraction
+		                        (uVar1,*(undefined4 *)(param1 + 0x20),auStack_20);
+		      uVar1 = Core_Data_Skills_SkillCollection__MultiplyThisAbsoluteByRelative
+		                        (uVar1,0.01,auStack_20);
+		      *(undefined4 *)(param1 + 0x1c) = uVar1;
+		      uVar1 = Core_Data_Skills_SkillCollection___ctor(*(undefined4 *)(param1 + 0xc),auStack_20);
+		      uVar5 = Core_Data_Skills_SkillCollection___ctor(*(undefined4 *)(param1 + 0x10),auStack_20);
+		      uVar1 = Core_Data_Skills_SkillCollection___ctor(uVar1,uVar5,auStack_20);
+		      uVar5 = Core_Data_Skills_SkillCollection___ctor(*(undefined4 *)(param1 + 0x14),auStack_20);
+		      uVar1 = Core_Data_Skills_SkillCollection___ctor(uVar1,uVar5,auStack_20);
+		      uVar1 = Core_Data_Skills_SkillCollection___ctor
+		                        (uVar1,*(undefined4 *)(param1 + 0x1c),auStack_20);
+		      *(undefined4 *)(param1 + 0x18) = uVar1;
+		      uVar1 = System_Collections_Generic_Dictionary_int__object___TryAdd
+		                        (uVar1,
+		                         Method_System_Collections_Generic_Dictionary_int__SkillData__get_Values__);
+		      System_Collections_Generic_Dictionary_Int32Enum__object___get_Values
+		                (&local_10,uVar1,
+		                 Method_System_Collections_Generic_Dictionary_ValueCollection_int__SkillData__GetEnumerator__
+		                );
+		      local_18 = 0;
+		      local_14 = &local_10;
+		      while( true ) {
+		        DAT_ram_009d3e38 = 0;
+		        iVar2 = import::env::invoke_iii
+		                          (s_struct_Uniforms___color__array<v_ram_00000aff + 0x152,&local_10,
+		                           Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_int__SkillData__MoveNext__
+		                          );
+		        iVar4 = DAT_ram_009d3e38;
+		        DAT_ram_009d3e38 = 0;
+		        if (iVar4 == 1) break;
+		        if (iVar2 == 0) {
+		          DAT_ram_009d3e38 = 0;
+		          return;
+		        }
+		        if (*(longlong *)(local_8._4_4_ + 0x10) < 0) {
+		          *(undefined8 *)(local_8._4_4_ + 0x10) = 0;
+		        }
+		      }
+		      uVar1 = import::env::__cxa_find_matching_catch_3(&DAT_ram_0072c9c8);
+		      iVar4 = global_1;
+		      iVar2 = import::env::llvm_eh_typeid_for(&DAT_ram_0072c9c8);
+		      if (iVar4 == iVar2) {
+		        piVar3 = (int *)import::env::__cxa_begin_catch(uVar1);
+		        iVar2 = *piVar3;
+		        DAT_ram_009d3e38 = 0;
+		        local_18 = iVar2;
+		        import::env::invoke_v(0x123);
+		        iVar4 = DAT_ram_009d3e38;
+		        DAT_ram_009d3e38 = 0;
+		        if (iVar4 != 1) {
+		          if (iVar2 == 0) {
+		            DAT_ram_009d3e38 = 0;
+		            return;
+		          }
+		          System_Data_DataSet__ValidateLocaleConstraint(iVar2);
+		          do {
+		            halt_trap();
+		          } while( true );
+		        }
+		        uVar1 = import::env::__cxa_find_matching_catch_2();
+		      }
+		      DAT_ram_009d3e38 = 0;
+		      import::env::invoke_ii(s___Scripting__UnityEngine__Render_ram_000036af + 0x40,&local_18);
+		      iVar4 = DAT_ram_009d3e38;
+		      DAT_ram_009d3e38 = 0;
+		      if (iVar4 == 1) {
+		        import::env::__cxa_find_matching_catch_3(0);
+		        unnamed_function_937();
+		        do {
+		          halt_trap();
+		        } while( true );
+		      }
+		      import::env::__resumeException(uVar1);
+		      do {
+		        halt_trap();
+		      } while( true );
+		    }
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    func_ii_7109(StringLiteral_17371,0);
+		  }
+		  return;
+		}
+		*/
+
 }

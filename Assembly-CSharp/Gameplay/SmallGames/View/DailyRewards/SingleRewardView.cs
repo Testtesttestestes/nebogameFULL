@@ -18,6 +18,22 @@ namespace Gameplay.SmallGames.View.DailyRewards
 		[Address(RVA = "0x7113", Offset = "0x7113", VA = "0x7113", Slot = "5")]
 		public virtual void Init(ProtoRegisterVisitAns.Types.DailyRewards data, string title, SingleRewardView.State state)
 		{
+		/* --- GHIDRA: Init ---
+		void Gameplay_SmallGames_View_DailyRewards_SingleRewardView__Init
+		               (undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a582a8 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_UI_MonoBehaviourWithStates_SingleRewardView_State___ctor__)
+		    ;
+		    DAT_ram_00a582a8 = '\x01';
+		  }
+		  ScreenAdaptation_Common_AppSize__Update
+		            (param1,Method_UI_MonoBehaviourWithStates_SingleRewardView_State___ctor__);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06001FAF RID: 8111 RVA: 0x00002050 File Offset: 0x00000250

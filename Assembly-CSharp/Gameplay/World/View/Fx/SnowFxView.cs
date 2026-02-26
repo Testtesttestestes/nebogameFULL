@@ -13,6 +13,20 @@ namespace Gameplay.World.View.Fx
 		[Address(RVA = "0x65AC", Offset = "0x65AC", VA = "0x65AC")]
 		private void Awake()
 		{
+		/* --- GHIDRA: Awake ---
+		undefined4 Gameplay_World_View_Fx_SnowFxView__Awake(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  
+		  iVar1 = 0x14;
+		  if (*(char *)(param1 + 0x20) == '\0') {
+		    iVar1 = 0x10;
+		  }
+		  return *(undefined4 *)(param1 + iVar1);
+		}
+		*/
+
 		}
 
 		// Token: 0x17000312 RID: 786
@@ -33,6 +47,23 @@ namespace Gameplay.World.View.Fx
 		[Address(RVA = "0x65AE", Offset = "0x65AE", VA = "0x65AE")]
 		public void Show(bool windy)
 		{
+		/* --- GHIDRA: Show ---
+		void Gameplay_World_View_Fx_SnowFxView__Show(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  undefined4 local_4;
+		  
+		  iVar1 = 0x14;
+		  if (*(char *)(param1 + 0x20) == '\0') {
+		    iVar1 = 0x10;
+		  }
+		  local_4 = *(undefined4 *)(param1 + iVar1);
+		  UnityEngine_ParticleSystem_EmissionModule___ctor(&local_4,0,0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x060013C0 RID: 5056 RVA: 0x00002050 File Offset: 0x00000250
@@ -40,6 +71,49 @@ namespace Gameplay.World.View.Fx
 		[Address(RVA = "0x65AF", Offset = "0x65AF", VA = "0x65AF")]
 		public void Hide()
 		{
+		/* --- GHIDRA: Hide ---
+		void Gameplay_World_View_Fx_SnowFxView__Hide(int param1,float *param2,undefined4 param3)
+		
+		{
+		  int iVar1;
+		  undefined8 local_68;
+		  undefined8 local_60;
+		  undefined8 local_58;
+		  undefined8 local_50;
+		  undefined8 local_48;
+		  undefined8 local_40;
+		  undefined8 local_34;
+		  undefined8 local_2c;
+		  undefined8 local_24;
+		  undefined8 local_1c;
+		  undefined8 local_14;
+		  undefined8 local_c;
+		  undefined4 local_4;
+		  
+		  iVar1 = 0x14;
+		  if (*(char *)(param1 + 0x20) == '\0') {
+		    iVar1 = 0x10;
+		  }
+		  local_4 = *(undefined4 *)(param1 + iVar1);
+		  iVar1 = 0x1c;
+		  if (*(char *)(param1 + 0x20) == '\0') {
+		    iVar1 = 0x18;
+		  }
+		  UnityEngine_ParticleSystem_MinMaxCurve__get_curve
+		            (&local_1c,*(float *)(param1 + iVar1) + *param2 * -0.25,0);
+		  local_40 = local_c;
+		  local_48 = local_14;
+		  local_50 = local_1c;
+		  UnityEngine_ParticleSystem_VelocityOverLifetimeModule__get_x(&local_4,&local_50,0);
+		  UnityEngine_ParticleSystem_MinMaxCurve__get_curve(&local_34,param2[2] / 10.0,0);
+		  local_58 = local_24;
+		  local_60 = local_2c;
+		  local_68 = local_34;
+		  UnityEngine_ParticleSystem_VelocityOverLifetimeModule__set_xBlittable(&local_4,&local_68,0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x060013C1 RID: 5057 RVA: 0x00002050 File Offset: 0x00000250
@@ -83,4 +157,26 @@ namespace Gameplay.World.View.Fx
 		[FieldOffset(Offset = "0x20")]
 		private bool _isWindyNow;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_CurrentParticles ---
+		void Gameplay_World_View_Fx_SnowFxView__get_CurrentParticles
+		               (int param1,int param2,undefined4 param3)
+		
+		{
+		  int iVar1;
+		  undefined4 local_4;
+		  
+		  *(char *)(param1 + 0x20) = (char)param2;
+		  iVar1 = 0x14;
+		  if (param2 == 0) {
+		    iVar1 = 0x10;
+		  }
+		  local_4 = *(undefined4 *)(param1 + iVar1);
+		  UnityEngine_ParticleSystem_EmissionModule___ctor(&local_4,1,0);
+		  return;
+		}
+		*/
+
 }

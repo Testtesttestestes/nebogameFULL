@@ -13,6 +13,27 @@ namespace Core.Data.InfoRows
 		[Address(RVA = "0xB0F1", Offset = "0xB0F1", VA = "0xB0F1")]
 		public BackTimeRow(BackTime backTime)
 		{
+		/* --- GHIDRA: .ctor ---
+		void Core_Data_InfoRows_BackTimeRow___ctor(int param1,undefined4 param2)
+		
+		{
+		  undefined8 local_28;
+		  undefined8 local_20;
+		  undefined8 local_14;
+		  undefined8 local_c;
+		  undefined4 local_4;
+		  
+		  local_c = 0x3f8000003f800000;
+		  local_20 = 0x3f8000003f800000;
+		  local_14 = 0x3f8000003f800000;
+		  local_28 = 0x3f8000003f800000;
+		  UnityEngine_Color32___ctor(&local_4,&local_28,0);
+		  *(undefined4 *)(param1 + 0x10) = local_4;
+		  *(undefined4 *)(param1 + 8) = 3;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x04003609 RID: 13833

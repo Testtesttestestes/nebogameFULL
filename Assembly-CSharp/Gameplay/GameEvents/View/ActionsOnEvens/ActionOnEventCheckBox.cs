@@ -14,6 +14,35 @@ namespace Gameplay.GameEvents.View.ActionsOnEvens
 		[Address(RVA = "0x7E7D", Offset = "0x7E7D", VA = "0x7E7D")]
 		private void OnDestroy()
 		{
+		/* --- GHIDRA: OnDestroy ---
+		void Gameplay_GameEvents_View_ActionsOnEvens_ActionOnEventCheckBox__OnDestroy
+		               (int param1,undefined4 param2)
+		
+		{
+		  undefined4 param1_00;
+		  undefined4 param1_01;
+		  
+		  if (DAT_ram_00a574b4 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Gameplay_GameEvents_View_ActionsOnEvens_ActionOnEventCheckBox_HandleOnValueChanged__
+		              );
+		    Mono_Security_ASN1__get_Item(&UnityEngine_Events_UnityAction_bool__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Method_UnityEngine_Events_UnityEvent_bool__AddListener__);
+		    DAT_ram_00a574b4 = '\x01';
+		  }
+		  param1_01 = *(undefined4 *)(*(int *)(param1 + 0x18) + 0xc0);
+		  param1_00 = unnamed_function_1417(UnityEngine_Events_UnityAction_bool__TypeInfo);
+		  UnityEngine_UI_Toggle__set_group
+		            (param1_00,param1,
+		             Method_Gameplay_GameEvents_View_ActionsOnEvens_ActionOnEventCheckBox_HandleOnValueChanged__
+		             ,0);
+		  UnityEngine_Events_UnityEvent_InputAction_CallbackContext____ctor
+		            (param1_01,param1_00,Method_UnityEngine_Events_UnityEvent_bool__AddListener__);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06002E00 RID: 11776 RVA: 0x00002050 File Offset: 0x00000250
@@ -21,6 +50,16 @@ namespace Gameplay.GameEvents.View.ActionsOnEvens
 		[Address(RVA = "0x7E7E", Offset = "0x7E7E", VA = "0x7E7E")]
 		private void Awake()
 		{
+		/* --- GHIDRA: Awake ---
+		void Gameplay_GameEvents_View_ActionsOnEvens_ActionOnEventCheckBox__Awake
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  *(undefined1 *)(*(int *)(param1 + 0x14) + 0x18) = (undefined1)param2;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06002E01 RID: 11777 RVA: 0x00002050 File Offset: 0x00000250
@@ -28,6 +67,22 @@ namespace Gameplay.GameEvents.View.ActionsOnEvens
 		[Address(RVA = "0x7E7F", Offset = "0x7E7F", VA = "0x7E7F")]
 		private void HandleOnValueChanged(bool selected)
 		{
+		/* --- GHIDRA: HandleOnValueChanged ---
+		void Gameplay_GameEvents_View_ActionsOnEvens_ActionOnEventCheckBox__HandleOnValueChanged
+		               (int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  
+		  iVar1 = **(int **)(param1 + 0x10);
+		  (**(code **)((ulonglong)*(uint *)(iVar1 + 0x2d0) * 4))
+		            (*(int **)(param1 + 0x10),*(undefined4 *)(*(int *)(param1 + 0x14) + 0x14),
+		             *(undefined4 *)(iVar1 + 0x2d4));
+		  func_ii_7603(*(undefined4 *)(param1 + 0x18),(uint)*(byte *)(*(int *)(param1 + 0x14) + 0x18),0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06002E02 RID: 11778 RVA: 0x00002050 File Offset: 0x00000250

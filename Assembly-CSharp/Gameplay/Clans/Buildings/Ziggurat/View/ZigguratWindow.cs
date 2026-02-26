@@ -138,6 +138,31 @@ namespace Gameplay.Clans.Buildings.Ziggurat.View
 		[Address(RVA = "0x90AD", Offset = "0x90AD", VA = "0x90AD", Slot = "22")]
 		protected override void OnShow(ZigguratWindow.ZigguratWindowArgs args)
 		{
+		/* --- GHIDRA: OnShow ---
+		void Gameplay_Clans_Buildings_Ziggurat_View_ZigguratWindow__OnShow(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  
+		  if (DAT_ram_00a577ef == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Windows_Buildings_BaseBuildingWindow_ZigguratWindow_ZigguratWindowArgs__ClanIsle__OnClose__
+		              );
+		    DAT_ram_00a577ef = '\x01';
+		  }
+		  UI_Windows_Buildings_BaseBuildingWindow_object____Il2CppFullySharedGenericType____ctor
+		            (param1,
+		             Method_UI_Windows_Buildings_BaseBuildingWindow_ZigguratWindow_ZigguratWindowArgs__ClanIsle__OnClose__
+		            );
+		  iVar1 = **(int **)(param1 + 0x60);
+		  (**(code **)((ulonglong)*(uint *)(iVar1 + 0x130) * 4))
+		            (*(int **)(param1 + 0x60),*(undefined4 *)(iVar1 + 0x134));
+		  *(undefined4 *)(param1 + 0x60) = 0;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x060041FA RID: 16890 RVA: 0x00002050 File Offset: 0x00000250
@@ -145,6 +170,26 @@ namespace Gameplay.Clans.Buildings.Ziggurat.View
 		[Address(RVA = "0x90AE", Offset = "0x90AE", VA = "0x90AE", Slot = "19")]
 		protected override void OnClose()
 		{
+		/* --- GHIDRA: OnClose ---
+		void Gameplay_Clans_Buildings_Ziggurat_View_ZigguratWindow__OnClose
+		               (undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a577f0 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Windows_Buildings_BaseClanBuildingWindow_ZigguratWindow_ZigguratWindowArgs___ctor__
+		              );
+		    DAT_ram_00a577f0 = '\x01';
+		  }
+		  UI_Windows_Buildings_BaseBuildingWindow_object____Il2CppFullySharedGenericType___OnShow
+		            (param1,
+		             Method_UI_Windows_Buildings_BaseClanBuildingWindow_ZigguratWindow_ZigguratWindowArgs___ctor__
+		            );
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x060041FB RID: 16891 RVA: 0x00002050 File Offset: 0x00000250
@@ -223,4 +268,69 @@ namespace Gameplay.Clans.Buildings.Ziggurat.View
 			}
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_TitledListBroken ---
+		void Gameplay_Clans_Buildings_Ziggurat_View_ZigguratWindow__get_TitledListBroken
+		               (int param1,int param2,undefined4 param3)
+		
+		{
+		  int *param1_00;
+		  undefined4 param4;
+		  undefined4 param3_00;
+		  undefined4 param2_00;
+		  int iVar1;
+		  
+		  if (DAT_ram_00a577ee == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Gameplay_Isles_Base_AbstractIsle_ClanIsleEvents__ClanIsleModel__ClanIsleController__ClanBuildingTypes__get_Controller__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Gameplay_Isles_Base_AbstractIsle_ClanIsleEvents__ClanIsleModel__ClanIsleController__ClanBuildingTypes__get_Events__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Gameplay_Isles_Base_AbstractIsle_ClanIsleEvents__ClanIsleModel__ClanIsleController__ClanBuildingTypes__get_Model__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Windows_Buildings_BaseBuildingWindow_ZigguratWindow_ZigguratWindowArgs__ClanIsle__OnShow__
+		              );
+		    Mono_Security_ASN1__get_Item(&Gameplay_Clans_Ziggurat_Controller_ZigguratViewMediator_TypeInfo);
+		    DAT_ram_00a577ee = '\x01';
+		  }
+		  UI_Windows_Buildings_BaseBuildingWindow_object__object___OnClose
+		            (param1,param2,
+		             Method_UI_Windows_Buildings_BaseBuildingWindow_ZigguratWindow_ZigguratWindowArgs__ClanIsle__OnShow__
+		            );
+		  iVar1 = **(int **)(param1 + 0x40);
+		  (**(code **)((ulonglong)*(uint *)(iVar1 + 0xe0) * 4))
+		            (*(int **)(param1 + 0x40),*(undefined4 *)(param2 + 0x18),*(undefined4 *)(iVar1 + 0xe4));
+		  iVar1 = *(int *)(param2 + 0x18);
+		  param4 = *(undefined4 *)(iVar1 + 0x14);
+		  param3_00 = *(undefined4 *)(iVar1 + 0xc);
+		  param2_00 = *(undefined4 *)(iVar1 + 0x10);
+		  param1_00 = (int *)unnamed_function_1417
+		                               (Gameplay_Clans_Ziggurat_Controller_ZigguratViewMediator_TypeInfo);
+		  if (DAT_ram_00a577de == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_MVC_AbstractViewMediator_ClanIsleModel__ClanIsleEvents__ClanIsleController__ZigguratWindow___ctor__
+		              );
+		    DAT_ram_00a577de = '\x01';
+		  }
+		  Gameplay_Combat_TeamCombat_View_AbstractTeamCombatView_object___get_HideInstantElements
+		            (param1_00,param2_00,param3_00,param4,
+		             Method_MVC_AbstractViewMediator_ClanIsleModel__ClanIsleEvents__ClanIsleController__ZigguratWindow___ctor__
+		            );
+		  (**(code **)((ulonglong)*(uint *)(*param1_00 + 0x160) * 4))
+		            (param1_00,param1,*(undefined4 *)(*param1_00 + 0x164));
+		  *(int **)(param1 + 0x60) = param1_00;
+		  return;
+		}
+		*/
+
 }

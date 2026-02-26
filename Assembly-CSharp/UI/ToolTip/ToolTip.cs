@@ -81,6 +81,18 @@ namespace UI.ToolTip
 		[Address(RVA = "0x5CE3", Offset = "0x5CE3", VA = "0x5CE3")]
 		private void OnDisable()
 		{
+		/* --- GHIDRA: OnDisable ---
+		void UI_ToolTip_ToolTip__OnDisable(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  
+		  iVar1 = System_Uri___ctor(0);
+		  *(undefined4 *)(param1 + 0x10) = *(undefined4 *)(*(int *)(iVar1 + 0x18) + 0x40);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06000975 RID: 2421 RVA: 0x00002050 File Offset: 0x00000250
@@ -102,6 +114,39 @@ namespace UI.ToolTip
 		[Address(RVA = "0x5CE6", Offset = "0x5CE6", VA = "0x5CE6")]
 		private void HandleStartLongTapEvent(LongTap sender)
 		{
+		/* --- GHIDRA: HandleStartLongTapEvent ---
+		void UI_ToolTip_ToolTip__HandleStartLongTapEvent(int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  uint uVar1;
+		  uint *puVar2;
+		  int *param1_00;
+		  int iVar3;
+		  
+		  if (DAT_ram_00a5b8d5 == '\0') {
+		    Mono_Security_ASN1__get_Item(&UI_ToolTip_Controller_IToolTipController_TypeInfo);
+		    DAT_ram_00a5b8d5 = '\x01';
+		  }
+		  param1_00 = *(int **)(param1 + 0x10);
+		  iVar3 = *param1_00;
+		  if (*(ushort *)(iVar3 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (UI_ToolTip_Controller_IToolTipController_TypeInfo ==
+		          *(int *)(*(int *)(iVar3 + 0x58) + uVar1 * 8)) {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar3 + 0x58) + uVar1 * 8 + 4) * 8 + iVar3 + 0xd8);
+		        goto code_r0x8138f619;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar3 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(param1_00,UI_ToolTip_Controller_IToolTipController_TypeInfo,3);
+		code_r0x8138f619:
+		  (**(code **)((ulonglong)*puVar2 * 4))(param1_00,param1,puVar2[1]);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06000978 RID: 2424 RVA: 0x00002050 File Offset: 0x00000250
@@ -109,6 +154,39 @@ namespace UI.ToolTip
 		[Address(RVA = "0x5CE7", Offset = "0x5CE7", VA = "0x5CE7")]
 		private void HandleCancelLongTapEvent(LongTap sender)
 		{
+		/* --- GHIDRA: HandleCancelLongTapEvent ---
+		void UI_ToolTip_ToolTip__HandleCancelLongTapEvent(int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  uint uVar1;
+		  uint *puVar2;
+		  int *param1_00;
+		  int iVar3;
+		  
+		  if (DAT_ram_00a5b8d4 == '\0') {
+		    Mono_Security_ASN1__get_Item(&UI_ToolTip_Controller_IToolTipController_TypeInfo);
+		    DAT_ram_00a5b8d4 = '\x01';
+		  }
+		  param1_00 = *(int **)(param1 + 0x10);
+		  iVar3 = *param1_00;
+		  if (*(ushort *)(iVar3 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (UI_ToolTip_Controller_IToolTipController_TypeInfo ==
+		          *(int *)(*(int *)(iVar3 + 0x58) + uVar1 * 8)) {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar3 + 0x58) + uVar1 * 8 + 4) * 8 + iVar3 + 0xd0);
+		        goto code_r0x8138f4c7;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar3 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(param1_00,UI_ToolTip_Controller_IToolTipController_TypeInfo,2);
+		code_r0x8138f4c7:
+		  (**(code **)((ulonglong)*puVar2 * 4))(param1_00,param1,puVar2[1]);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06000979 RID: 2425 RVA: 0x00002050 File Offset: 0x00000250
@@ -116,6 +194,39 @@ namespace UI.ToolTip
 		[Address(RVA = "0x5CE8", Offset = "0x5CE8", VA = "0x5CE8")]
 		private void HandleLongTapEvent(LongTap sender)
 		{
+		/* --- GHIDRA: HandleLongTapEvent ---
+		void UI_ToolTip_ToolTip__HandleLongTapEvent(int param1,undefined4 param2)
+		
+		{
+		  uint uVar1;
+		  uint *puVar2;
+		  int *param1_00;
+		  int iVar3;
+		  
+		  if (DAT_ram_00a5b8d4 == '\0') {
+		    Mono_Security_ASN1__get_Item(&UI_ToolTip_Controller_IToolTipController_TypeInfo);
+		    DAT_ram_00a5b8d4 = '\x01';
+		  }
+		  param1_00 = *(int **)(param1 + 0x10);
+		  iVar3 = *param1_00;
+		  if (*(ushort *)(iVar3 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (UI_ToolTip_Controller_IToolTipController_TypeInfo ==
+		          *(int *)(*(int *)(iVar3 + 0x58) + uVar1 * 8)) {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar3 + 0x58) + uVar1 * 8 + 4) * 8 + iVar3 + 0xd0);
+		        goto code_r0x8138f570;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar3 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(param1_00,UI_ToolTip_Controller_IToolTipController_TypeInfo,2);
+		code_r0x8138f570:
+		  (**(code **)((ulonglong)*puVar2 * 4))(param1_00,param1,puVar2[1]);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600097A RID: 2426 RVA: 0x00002050 File Offset: 0x00000250
@@ -123,6 +234,39 @@ namespace UI.ToolTip
 		[Address(RVA = "0x5CE9", Offset = "0x5CE9", VA = "0x5CE9")]
 		private void HandleShow()
 		{
+		/* --- GHIDRA: HandleShow ---
+		void UI_ToolTip_ToolTip__HandleShow(int param1,undefined4 param2)
+		
+		{
+		  uint uVar1;
+		  uint *puVar2;
+		  int *param1_00;
+		  int iVar3;
+		  
+		  if (DAT_ram_00a5b8d5 == '\0') {
+		    Mono_Security_ASN1__get_Item(&UI_ToolTip_Controller_IToolTipController_TypeInfo);
+		    DAT_ram_00a5b8d5 = '\x01';
+		  }
+		  param1_00 = *(int **)(param1 + 0x10);
+		  iVar3 = *param1_00;
+		  if (*(ushort *)(iVar3 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (UI_ToolTip_Controller_IToolTipController_TypeInfo ==
+		          *(int *)(*(int *)(iVar3 + 0x58) + uVar1 * 8)) {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar3 + 0x58) + uVar1 * 8 + 4) * 8 + iVar3 + 0xd8);
+		        goto code_r0x8138f6c2;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar3 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(param1_00,UI_ToolTip_Controller_IToolTipController_TypeInfo,3);
+		code_r0x8138f6c2:
+		  (**(code **)((ulonglong)*puVar2 * 4))(param1_00,param1,puVar2[1]);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600097B RID: 2427 RVA: 0x00002050 File Offset: 0x00000250
@@ -130,6 +274,41 @@ namespace UI.ToolTip
 		[Address(RVA = "0x5CEA", Offset = "0x5CEA", VA = "0x5CEA")]
 		private void HandleHide()
 		{
+		/* --- GHIDRA: HandleHide ---
+		undefined4 UI_ToolTip_ToolTip__HandleHide(undefined4 param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  undefined4 uVar2;
+		  undefined4 uVar3;
+		  undefined4 local_4;
+		  
+		  if (DAT_ram_00a5b8d6 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UnityEngine_Component_TryGetComponent_IToolTipDataProvider___);
+		    DAT_ram_00a5b8d6 = '\x01';
+		  }
+		  local_4 = 0;
+		  iVar1 = UnityEngine_UIElements_GroupBoxUtility__UnregisterGroupBoxOption_object_
+		                    (param1,&local_4,
+		                     Method_UnityEngine_Component_TryGetComponent_IToolTipDataProvider___);
+		  if (iVar1 != 0) {
+		    return local_4;
+		  }
+		  uVar2 = GAFInternal_Assets_GAFAnimationAssetInternal__collectExternalData(param1,0);
+		  uVar3 = unnamed_function_2232(&StringLiteral_9183);
+		  uVar2 = Mono_Security_X509_X509Crl_X509CrlEntry___ctor(uVar3,uVar2,0);
+		  uVar3 = unnamed_function_2232(&System_Exception_TypeInfo);
+		  uVar3 = unnamed_function_1417(uVar3);
+		  System_String__Concat(uVar3,uVar2,0);
+		  uVar2 = unnamed_function_2232(&Method_UI_ToolTip_ToolTip_get_ToolTipDataProvider__);
+		  func_ii_1050(uVar3,uVar2);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
 		}
 
 		// Token: 0x17000140 RID: 320
@@ -150,6 +329,17 @@ namespace UI.ToolTip
 		[Address(RVA = "0x5CEC", Offset = "0x5CEC", VA = "0x5CEC", Slot = "5")]
 		public void GetStartPosition(out Vector3 position)
 		{
+		/* --- GHIDRA: GetStartPosition ---
+		undefined4 UI_ToolTip_ToolTip__GetStartPosition(undefined4 param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  uVar1 = UnityEngine_Awaitable___c____cctor_b__76_1(param1,0);
+		  return uVar1;
+		}
+		*/
+
 		}
 
 		// Token: 0x17000141 RID: 321
@@ -183,4 +373,79 @@ namespace UI.ToolTip
 		[FieldOffset(Offset = "0x14")]
 		private LongTap _longTap;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: set_ToolTipController ---
+		undefined4 UI_ToolTip_ToolTip__set_ToolTipController(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a5b8d3 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_UnityEngine_Component_GetComponent_LongTap___);
+		    DAT_ram_00a5b8d3 = '\x01';
+		  }
+		  if (*(int *)(param1 + 0x14) != 0) {
+		    return *(undefined4 *)(param1 + 0x14);
+		  }
+		  uVar1 = func_ii_5677(param1,Method_UnityEngine_Component_GetComponent_LongTap___);
+		  *(undefined4 *)(param1 + 0x14) = uVar1;
+		  return uVar1;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_ToolTipDataProvider ---
+		void UI_ToolTip_ToolTip__get_ToolTipDataProvider(int param1,undefined4 *param2,undefined4 param3)
+		
+		{
+		  int iVar1;
+		  undefined8 uVar2;
+		  
+		  if (DAT_ram_00a5b8d3 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_UnityEngine_Component_GetComponent_LongTap___);
+		    DAT_ram_00a5b8d3 = '\x01';
+		  }
+		  if (*(int *)(param1 + 0x14) == 0) {
+		    iVar1 = func_ii_5677(param1,Method_UnityEngine_Component_GetComponent_LongTap___);
+		    *(int *)(param1 + 0x14) = iVar1;
+		  }
+		  else {
+		    iVar1 = *(int *)(param1 + 0x14);
+		  }
+		  uVar2 = *(undefined8 *)(iVar1 + 0x28);
+		  param2[2] = 0;
+		  *param2 = (int)uVar2;
+		  param2[1] = (int)((ulonglong)uVar2 >> 0x20);
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_enabled ---
+		void UI_ToolTip_ToolTip__get_enabled(int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  undefined4 param1_00;
+		  undefined4 param2_00;
+		  
+		  UnityEngine_Object__op_Implicit(param1,param2,0);
+		  if (DAT_ram_00a5b8d3 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_UnityEngine_Component_GetComponent_LongTap___);
+		    DAT_ram_00a5b8d3 = '\x01';
+		  }
+		  if (*(int *)(param1 + 0x14) == 0) {
+		    param1_00 = func_ii_5677(param1,Method_UnityEngine_Component_GetComponent_LongTap___);
+		    *(undefined4 *)(param1 + 0x14) = param1_00;
+		  }
+		  else {
+		    param1_00 = *(undefined4 *)(param1 + 0x14);
+		  }
+		  param2_00 = UnityEngine_Awaitable___c____cctor_b__76_1(param1,0);
+		  UnityEngine_Object__op_Implicit(param1_00,param2_00,0);
+		  return;
+		}
+		*/
+
 }

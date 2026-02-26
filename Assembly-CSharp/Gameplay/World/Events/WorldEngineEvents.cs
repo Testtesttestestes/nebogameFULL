@@ -13,6 +13,27 @@ namespace Gameplay.World.Events
 		[Address(RVA = "0x6660", Offset = "0x6660", VA = "0x6660")]
 		public WorldEngineEvents()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_World_Events_WorldEngineEvents___ctor
+		               (undefined4 param1,undefined4 param2,undefined4 param3,undefined4 param4,
+		               undefined4 param5)
+		
+		{
+		  if (DAT_ram_00a58ca3 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_MVC_AbstractViewMediator_WorldModel__WorldControllerEvents__WorldController__WorldView___ctor__
+		              );
+		    DAT_ram_00a58ca3 = '\x01';
+		  }
+		  Gameplay_Combat_TeamCombat_View_AbstractTeamCombatView_object___get_HideInstantElements
+		            (param1,param2,param3,param4,
+		             Method_MVC_AbstractViewMediator_WorldModel__WorldControllerEvents__WorldController__WorldView___ctor__
+		            );
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x04000AFE RID: 2814

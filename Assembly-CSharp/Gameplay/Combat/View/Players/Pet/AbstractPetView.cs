@@ -94,6 +94,68 @@ namespace Gameplay.Combat.View.Players.Pet
 		[Address(RVA = "0x8848", Offset = "0x8848", VA = "0x8848", Slot = "11")]
 		public void UpdateHealth(float delay)
 		{
+		/* --- GHIDRA: <UpdateHealth>b__16_0 ---
+		int Gameplay_Combat_View_Players_Pet_AbstractPetView___UpdateHealth_b__16_0
+		              (int param1,undefined4 param2)
+		
+		{
+		  int *piVar1;
+		  uint uVar2;
+		  int iVar3;
+		  uint *puVar4;
+		  undefined4 uVar5;
+		  undefined4 uVar6;
+		  int iVar7;
+		  int *local_4;
+		  
+		  if (DAT_ram_00a5670f == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_UnityEngine_Component_TryGetComponent_IPetView___);
+		    Mono_Security_ASN1__get_Item(&Gameplay_Combat_View_Players_Pet_IPetView_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Method_UI_ToolTip_ToolTipData_PetData___ctor__);
+		    Mono_Security_ASN1__get_Item(&Method_UI_ToolTip_ToolTipData_PetData__set_Data__);
+		    Mono_Security_ASN1__get_Item(&UI_ToolTip_ToolTipData_PetData__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_12539);
+		    DAT_ram_00a5670f = '\x01';
+		  }
+		  local_4 = (int *)0x0;
+		  iVar3 = UnityEngine_UIElements_GroupBoxUtility__UnregisterGroupBoxOption_object_
+		                    (*(undefined4 *)(param1 + 0x10),&local_4,
+		                     Method_UnityEngine_Component_TryGetComponent_IPetView___);
+		  if (iVar3 == 0) {
+		    uVar5 = unnamed_function_2232(&System_Exception_TypeInfo);
+		    uVar5 = unnamed_function_1417(uVar5);
+		    uVar6 = unnamed_function_2232(&StringLiteral_12370);
+		    System_String__Concat(uVar5,uVar6,0);
+		    uVar6 = unnamed_function_2232(&Method_Gameplay_Combat_View_Players_Pet_PetAvatar_GetData__);
+		    func_ii_1050(uVar5,uVar6);
+		    do {
+		      halt_trap();
+		    } while( true );
+		  }
+		  uVar2 = 0;
+		  iVar3 = unnamed_function_1417(UI_ToolTip_ToolTipData_PetData__TypeInfo);
+		  System_Buffers_TlsOverPerCoreLockedStacksArrayPool___Il2CppFullySharedGenericType___get_Id
+		            (iVar3,StringLiteral_12539,Method_UI_ToolTip_ToolTipData_PetData___ctor__);
+		  piVar1 = local_4;
+		  iVar7 = *local_4;
+		  if (*(ushort *)(iVar7 + 0xb6) != 0) {
+		    do {
+		      if (Gameplay_Combat_View_Players_Pet_IPetView_TypeInfo ==
+		          *(int *)(*(int *)(iVar7 + 0x58) + uVar2 * 8)) {
+		        puVar4 = (uint *)(*(int *)(*(int *)(iVar7 + 0x58) + uVar2 * 8 + 4) * 8 + iVar7 + 0xe0);
+		        goto code_r0x80c6d386;
+		      }
+		      uVar2 = uVar2 + 1;
+		    } while (*(ushort *)(iVar7 + 0xb6) != uVar2);
+		  }
+		  puVar4 = (uint *)func_ii_1080(local_4,Gameplay_Combat_View_Players_Pet_IPetView_TypeInfo,4);
+		code_r0x80c6d386:
+		  uVar5 = (**(code **)((ulonglong)*puVar4 * 4))(piVar1,puVar4[1]);
+		  *(undefined4 *)(iVar3 + 0x1c) = uVar5;
+		  return iVar3;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600389F RID: 14495 RVA: 0x00002050 File Offset: 0x00000250
@@ -138,6 +200,16 @@ namespace Gameplay.Combat.View.Players.Pet
 		[Address(RVA = "0x884C", Offset = "0x884C", VA = "0x884C")]
 		protected AbstractPetView()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_Combat_View_Players_Pet_AbstractPetView___ctor(int *param1,undefined4 param2)
+		
+		{
+		  (**(code **)((ulonglong)*(uint *)(*param1 + 0x138) * 4))
+		            (param1,param1[6],param1[4],*(undefined4 *)(*param1 + 0x13c));
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x04001F4B RID: 8011
@@ -155,4 +227,84 @@ namespace Gameplay.Combat.View.Players.Pet
 		[FieldOffset(Offset = "0x1C")]
 		protected bool _isDead;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_Visible ---
+		void Gameplay_Combat_View_Players_Pet_AbstractPetView__get_Visible
+		               (int *param1,uint param2,undefined4 param3)
+		
+		{
+		  if (param2 != *(byte *)(param1 + 5)) {
+		    *(char *)(param1 + 5) = (char)param2;
+		    (**(code **)((ulonglong)*(uint *)(*param1 + 0x128) * 4))(param1,*(undefined4 *)(*param1 + 300));
+		  }
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_Data ---
+		void Gameplay_Combat_View_Players_Pet_AbstractPetView__get_Data
+		               (int *param1,int param2,undefined4 param3)
+		
+		{
+		  if (param2 != param1[6]) {
+		    param1[6] = param2;
+		    (**(code **)((ulonglong)*(uint *)(*param1 + 0x120) * 4))
+		              (param1,*(undefined4 *)(*param1 + 0x124));
+		  }
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_IsDead ---
+		void Gameplay_Combat_View_Players_Pet_AbstractPetView__get_IsDead
+		               (int *param1,uint param2,undefined4 param3)
+		
+		{
+		  if (param2 != *(byte *)(param1 + 7)) {
+		    *(char *)(param1 + 7) = (char)param2;
+		    (**(code **)((ulonglong)*(uint *)(*param1 + 0x130) * 4))
+		              (param1,*(undefined4 *)(*param1 + 0x134));
+		  }
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_IsDead ---
+		void Gameplay_Combat_View_Players_Pet_AbstractPetView__set_IsDead
+		               (int *param1,float param2,undefined4 param3)
+		
+		{
+		  undefined4 uVar1;
+		  undefined4 param2_00;
+		  
+		  if (DAT_ram_00a5670e == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Gameplay_Combat_View_Players_Pet_AbstractPetView__UpdateHealth_b__16_0__);
+		    Mono_Security_ASN1__get_Item(&DG_Tweening_TweenCallback_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Method_DG_Tweening_TweenSettingsExtensions_SetLink_Tween___);
+		    DAT_ram_00a5670e = '\x01';
+		  }
+		  if (param2 <= 0.0) {
+		    (**(code **)((ulonglong)*(uint *)(*param1 + 0x138) * 4))
+		              (param1,param1[6],param1[4],*(undefined4 *)(*param1 + 0x13c));
+		    return;
+		  }
+		  uVar1 = unnamed_function_1417(DG_Tweening_TweenCallback_TypeInfo);
+		  DG_Tweening_Color2__op_Multiply
+		            (uVar1,param1,
+		             Method_Gameplay_Combat_View_Players_Pet_AbstractPetView__UpdateHealth_b__16_0__,0);
+		  uVar1 = DG_Tweening_DOVirtual__EasedValue(param2,uVar1,1,0);
+		  param2_00 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_uint__object___MoveNext
+		                        (param1,0);
+		  DG_Tweening_TweenSettingsExtensions__SetDelay_object_
+		            (uVar1,param2_00,Method_DG_Tweening_TweenSettingsExtensions_SetLink_Tween___);
+		  return;
+		}
+		*/
+
 }

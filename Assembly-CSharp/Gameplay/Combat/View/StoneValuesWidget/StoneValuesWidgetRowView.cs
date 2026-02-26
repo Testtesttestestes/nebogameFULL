@@ -54,6 +54,29 @@ namespace Gameplay.Combat.View.StoneValuesWidget
 		[Address(RVA = "0x87B4", Offset = "0x87B4", VA = "0x87B4")]
 		public StoneValuesWidgetRowView()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_Combat_View_StoneValuesWidget_StoneValuesWidgetRowView___ctor
+		               (undefined4 param1,undefined4 param2)
+		
+		{
+		  int param2_00;
+		  
+		  if (DAT_ram_00a566d9 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Gameplay_Combat_View_StoneValuesWidget_StoneValuesWidgetView__Draw_d__6_TypeInfo);
+		    DAT_ram_00a566d9 = '\x01';
+		  }
+		  param2_00 = unnamed_function_1417
+		                        (
+		                        Gameplay_Combat_View_StoneValuesWidget_StoneValuesWidgetView__Draw_d__6_TypeInfo
+		                        );
+		  *(undefined4 *)(param2_00 + 0x10) = param1;
+		  *(undefined4 *)(param2_00 + 8) = 0;
+		  UnityEngine_MonoBehaviour__StartCoroutine(param1,param2_00,0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x04001ED9 RID: 7897

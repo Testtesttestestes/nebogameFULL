@@ -64,6 +64,31 @@ namespace Gameplay.Collections.View
 		[Address(RVA = "0x8AD4", Offset = "0x8AD4", VA = "0x8AD4")]
 		public CollectionView()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_Collections_View_CollectionView___ctor(int param1,undefined4 param2)
+		
+		{
+		  undefined4 param1_00;
+		  undefined4 param1_01;
+		  
+		  if (DAT_ram_00a57e8e == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Gameplay_Collections_View_CollectionViewClickable_ButtonClickedEventHandler__
+		              );
+		    Mono_Security_ASN1__get_Item(&UnityEngine_Events_UnityAction_TypeInfo);
+		    DAT_ram_00a57e8e = '\x01';
+		  }
+		  param1_01 = *(undefined4 *)(*(int *)(param1 + 0x24) + 0xb4);
+		  param1_00 = unnamed_function_1417(UnityEngine_Events_UnityAction_TypeInfo);
+		  Utils_ObjectUtils__IsNotNull
+		            (param1_00,param1,
+		             Method_Gameplay_Collections_View_CollectionViewClickable_ButtonClickedEventHandler__,0)
+		  ;
+		  Gameplay_Boss_View_CaptainTab_BossInfoView__add_AttackButtonClickEvent(param1_01,param1_00,0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0400211D RID: 8477
@@ -90,4 +115,100 @@ namespace Gameplay.Collections.View
 		[SerializeField]
 		protected CollectionIconView _collectionIcon;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: set_IgnoreAchieved ---
+		void Gameplay_Collections_View_CollectionView__set_IgnoreAchieved
+		               (int param1,int param2,undefined4 param3,undefined4 param4,undefined4 param5)
+		
+		{
+		  uint uVar1;
+		  undefined4 uVar2;
+		  uint *puVar3;
+		  undefined4 uVar4;
+		  int iVar5;
+		  int *param1_00;
+		  int iVar6;
+		  float param2_00;
+		  undefined4 local_4;
+		  
+		  if (DAT_ram_00a57e8d == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_AssetContent_Loaders_AbstractGameGraphicLoader_RawImage__Texture2D__set_AssetId__
+		              );
+		    Mono_Security_ASN1__get_Item(&Core_Gameplay_IGame_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&UnityEngine_Object_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Utils_StringUtils_TypeInfo);
+		    DAT_ram_00a57e8d = '\x01';
+		  }
+		  local_4 = 0;
+		  *(int *)(param1 + 0x20) = param2;
+		  uVar4 = *(undefined4 *)(param1 + 0x10);
+		  uVar2 = System_Xml_XsdCachingReader__get_Name(param2,0);
+		  uVar2 = Core_Extensions_Dict_CollectionRankInfoDicExt__GetAvatarRibbonAssetId(uVar2,0);
+		  UnityEngine_Component__GetComponentInChildren_object_(uVar4,uVar2,0);
+		  uVar2 = *(undefined4 *)(param1 + 0x14);
+		  if (*(int *)(Utils_StringUtils_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Utils_StringUtils_TypeInfo);
+		  }
+		  uVar4 = Utils_SetAsFirstSibling___ctor(param4,0);
+		  UnityEngine_Component__GetComponentInChildren_object_(uVar2,uVar4,0);
+		  iVar5 = *(int *)(param1 + 0x1c);
+		  if (DAT_ram_00a6456f == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_Gameplay_Game_TypeInfo);
+		    DAT_ram_00a6456f = '\x01';
+		  }
+		  param1_00 = (int *)**(undefined4 **)(Core_Gameplay_Game_TypeInfo + 0x5c);
+		  iVar6 = *param1_00;
+		  if (*(ushort *)(iVar6 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (Core_Gameplay_IGame_TypeInfo == *(int *)(*(int *)(iVar6 + 0x58) + uVar1 * 8)) {
+		        puVar3 = (uint *)(*(int *)(*(int *)(iVar6 + 0x58) + uVar1 * 8 + 4) * 8 + iVar6 + 0x178);
+		        goto code_r0x80e7017b;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar6 + 0xb6) != uVar1);
+		  }
+		  puVar3 = (uint *)func_ii_1080(param1_00,Core_Gameplay_IGame_TypeInfo,0x17);
+		code_r0x80e7017b:
+		  uVar2 = (**(code **)((ulonglong)*puVar3 * 4))(param1_00,puVar3[1]);
+		  *(undefined4 *)(iVar5 + 0x24) = param3;
+		  *(undefined4 *)(iVar5 + 0x20) = uVar2;
+		  if ((*(char *)(iVar5 + 0x31) == '\0') && (*(char *)(iVar5 + 0x30) == '\0')) {
+		    param2_00 = 1.0;
+		  }
+		  else {
+		    param2_00 = 0.0;
+		  }
+		  AssetContent_GameAssetViewRawImage__TryGetCurrentContent
+		            (*(undefined4 *)(iVar5 + 0x1c),param2_00,0);
+		  Core_Data_MedalData__IsMedalAchieved(*(undefined4 *)(iVar5 + 0x18),param2_00,0);
+		  Core_Data_MedalData__IsMedalAchieved(*(undefined4 *)(iVar5 + 0x10),param2_00,0);
+		  uVar2 = *(undefined4 *)(param1 + 0x20);
+		  iVar5 = *(int *)(param1 + 0x1c);
+		  *(undefined4 *)(iVar5 + 0x2c) = param4;
+		  *(undefined4 *)(iVar5 + 0x28) = uVar2;
+		  Gameplay_Collections_View_CollectionIconView__get_Rank(iVar5,iVar5);
+		  uVar2 = *(undefined4 *)(param1 + 0x18);
+		  if (*(int *)(UnityEngine_Object_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(UnityEngine_Object_TypeInfo);
+		  }
+		  iVar5 = UnityEngine_TextCore_Text_TextElement__get_textAsset(uVar2,0,0);
+		  if ((iVar5 != 0) &&
+		     (iVar5 = Gameplay_Collections_Model_CollectionDicGroup__GetCollectionRanksDic
+		                        (*(undefined4 *)(param2 + 0x18),param4,&local_4,uVar2), iVar5 != 0)) {
+		    uVar4 = *(undefined4 *)(param1 + 0x18);
+		    uVar2 = Core_Extensions_Dict_CollectionRankInfoDicExt__GetQuadBackgroundAssetId(local_4,0);
+		    Core_Extensions_Dict_CultDicExt__GetIcon64AssetId
+		              (uVar4,uVar2,
+		               Method_AssetContent_Loaders_AbstractGameGraphicLoader_RawImage__Texture2D__set_AssetId__
+		              );
+		  }
+		  return;
+		}
+		*/
+
 }

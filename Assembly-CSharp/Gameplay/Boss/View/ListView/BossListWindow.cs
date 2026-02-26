@@ -190,6 +190,29 @@ namespace Gameplay.Boss.View.ListView
 		[Address(RVA = "0x9598", Offset = "0x9598", VA = "0x9598", Slot = "22")]
 		protected override void OnShow(BossListWindowArgs args)
 		{
+		/* --- GHIDRA: OnShow ---
+		void Gameplay_Boss_View_ListView_BossListWindow__OnShow(int param1,undefined4 param2)
+		
+		{
+		  int *piVar1;
+		  
+		  if (DAT_ram_00a57a10 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UI_Windows_ClosableBaseWindow_BossListWindowArgs__OnClose__);
+		    DAT_ram_00a57a10 = '\x01';
+		  }
+		  UI_Windows_ClosableBaseWindow_object___OnClickBack
+		            (param1,Method_UI_Windows_ClosableBaseWindow_BossListWindowArgs__OnClose__);
+		  piVar1 = *(int **)(param1 + 0x6c);
+		  if (piVar1 != (int *)0x0) {
+		    (**(code **)((ulonglong)*(uint *)(*piVar1 + 0x130) * 4))
+		              (piVar1,*(undefined4 *)(*piVar1 + 0x134));
+		  }
+		  *(undefined4 *)(param1 + 0x6c) = 0;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06004703 RID: 18179 RVA: 0x00002050 File Offset: 0x00000250
@@ -197,6 +220,20 @@ namespace Gameplay.Boss.View.ListView
 		[Address(RVA = "0x9599", Offset = "0x9599", VA = "0x9599", Slot = "19")]
 		protected override void OnClose()
 		{
+		/* --- GHIDRA: OnClose ---
+		void Gameplay_Boss_View_ListView_BossListWindow__OnClose(undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a57a11 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_UI_Windows_ClosableBaseWindow_BossListWindowArgs___ctor__);
+		    DAT_ram_00a57a11 = '\x01';
+		  }
+		  UI_MonoBehaviourWithStates_ClientStateChangedDelegate___Il2CppFullySharedGenericStructType___Invoke
+		            (param1,Method_UI_Windows_ClosableBaseWindow_BossListWindowArgs___ctor__);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06004704 RID: 18180 RVA: 0x00002050 File Offset: 0x00000250
@@ -287,4 +324,58 @@ namespace Gameplay.Boss.View.ListView
 		[FieldOffset(Offset = "0x6C")]
 		private BossListWindowMediator _mediator;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_Wiki ---
+		void Gameplay_Boss_View_ListView_BossListWindow__get_Wiki
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  int iVar1;
+		  
+		  iVar1 = **(int **)(param1 + 0x50);
+		  (**(code **)((ulonglong)*(uint *)(iVar1 + 0x2d0) * 4))
+		            (*(int **)(param1 + 0x50),param2,*(undefined4 *)(iVar1 + 0x2d4));
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_Avatar ---
+		void Gameplay_Boss_View_ListView_BossListWindow__get_Avatar
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  int iVar1;
+		  int *param1_00;
+		  undefined4 param2_00;
+		  undefined4 param3_00;
+		  undefined4 param4;
+		  
+		  if (DAT_ram_00a57a0f == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_UI_Windows_BaseWindow_BossListWindowArgs__get_WindowArgs__)
+		    ;
+		    Mono_Security_ASN1__get_Item(&Gameplay_Boss_Controller_BossListWindowMediator_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Method_UI_Windows_ClosableBaseWindow_BossListWindowArgs__OnShow__)
+		    ;
+		    DAT_ram_00a57a0f = '\x01';
+		  }
+		  func_ii_7769(param1,param2,Method_UI_Windows_ClosableBaseWindow_BossListWindowArgs__OnShow__);
+		  iVar1 = func_ii_8093(param1,Method_UI_Windows_BaseWindow_BossListWindowArgs__get_WindowArgs__);
+		  param2_00 = *(undefined4 *)(iVar1 + 0x20);
+		  iVar1 = func_ii_8093(param1,Method_UI_Windows_BaseWindow_BossListWindowArgs__get_WindowArgs__);
+		  param3_00 = *(undefined4 *)(iVar1 + 0x1c);
+		  iVar1 = func_ii_8093(param1,Method_UI_Windows_BaseWindow_BossListWindowArgs__get_WindowArgs__);
+		  param4 = *(undefined4 *)(iVar1 + 0x18);
+		  param1_00 = (int *)unnamed_function_1417(Gameplay_Boss_Controller_BossListWindowMediator_TypeInfo)
+		  ;
+		  Gameplay_Boss_Controller_BossListWindowMediator__Dispose(param1_00,param2_00,param3_00,param4,0);
+		  *(int **)(param1 + 0x6c) = param1_00;
+		  (**(code **)((ulonglong)*(uint *)(*param1_00 + 0x160) * 4))
+		            (param1_00,param1,*(undefined4 *)(*param1_00 + 0x164));
+		  return;
+		}
+		*/
+
 }

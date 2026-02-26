@@ -81,6 +81,50 @@ namespace Gameplay.WorldAxis.ColossusInfo.Model
 		[Address(RVA = "0x649E", Offset = "0x649E", VA = "0x649E")]
 		public void PopulateOptions(ProtoGetTreasuryOptionsAns msg)
 		{
+		/* --- GHIDRA: PopulateOptions ---
+		int Gameplay_WorldAxis_ColossusInfo_Model_ColossusTreasuryModel__PopulateOptions
+		              (int param1,int param2,undefined4 param3)
+		
+		{
+		  int param1_00;
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a58be2 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Gameplay_WorldAxis_ColossusInfo_View_TreasuryOptionListElement_TreasuryOptionListElementArgs_TypeInfo
+		              );
+		    DAT_ram_00a58be2 = '\x01';
+		  }
+		  param1_00 = unnamed_function_1417
+		                        (
+		                        Gameplay_WorldAxis_ColossusInfo_View_TreasuryOptionListElement_TreasuryOptionListElementArgs_TypeInfo
+		                        );
+		  if (DAT_ram_00a58bd6 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Elements_GenericList_SelectableListElementArgs_TreasuryOptionListElement___ctor__
+		              );
+		    DAT_ram_00a58bd6 = '\x01';
+		  }
+		  UnityEngine_InputSystem_LowLevel_SelectObservable___Il2CppFullySharedGenericType____Il2CppFullySharedGenericType___Subscribe
+		            (param1_00,
+		             Method_UI_Elements_GenericList_SelectableListElementArgs_TreasuryOptionListElement___ctor__
+		            );
+		  uVar1 = Core_Data_ArtifactData__IsGuideTarget
+		                    (*(undefined4 *)(param2 + 0x10),*(undefined4 *)(param1 + 8),
+		                     *(undefined4 *)(*(int *)(param1 + 0xc) + 0xc),0);
+		  *(undefined4 *)(param1_00 + 0x20) = uVar1;
+		  *(undefined4 *)(param1_00 + 0x24) = *(undefined4 *)(param2 + 0x18);
+		  *(undefined4 *)(param1_00 + 0x1c) = *(undefined4 *)(param2 + 0x14);
+		  HuaweiMobileServices_Ads_InstallReferrer_InstallReferrerStateCallbackListener_InstallReferrerStateCallbackListenerInterfaceWrapper___ctor
+		            (param1_00,0);
+		  *(undefined4 *)(param1_00 + 0x28) = *(undefined4 *)(param1 + 0x10);
+		  *(undefined4 *)(param1_00 + 0x2c) = *(undefined4 *)(param2 + 0xc);
+		  return param1_00;
+		}
+		*/
+
 		}
 
 		// Token: 0x060012A5 RID: 4773 RVA: 0x00002052 File Offset: 0x00000252
@@ -96,4 +140,96 @@ namespace Gameplay.WorldAxis.ColossusInfo.Model
 		[FieldOffset(Offset = "0xC")]
 		public readonly ColossusInfoModel ColossusInfoModel;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_DictProvider ---
+		void Gameplay_WorldAxis_ColossusInfo_Model_ColossusTreasuryModel__get_DictProvider
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  uint uVar1;
+		  uint *puVar2;
+		  int *param1_00;
+		  int iVar3;
+		  
+		  if (DAT_ram_00a58be0 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_Gameplay_IGame_TypeInfo);
+		    DAT_ram_00a58be0 = '\x01';
+		  }
+		  Unity_Services_Core_Environments_Internal_Environments__get_Current(param1,param2,0);
+		  *(undefined4 *)(param1 + 0xc) = param3;
+		  if (DAT_ram_00a6456f == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_Gameplay_Game_TypeInfo);
+		    DAT_ram_00a6456f = '\x01';
+		  }
+		  uVar1 = 0;
+		  param1_00 = (int *)**(undefined4 **)(Core_Gameplay_Game_TypeInfo + 0x5c);
+		  iVar3 = *param1_00;
+		  if (*(ushort *)(iVar3 + 0xb6) != 0) {
+		    do {
+		      if (Core_Gameplay_IGame_TypeInfo == *(int *)(*(int *)(iVar3 + 0x58) + uVar1 * 8)) {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar3 + 0x58) + uVar1 * 8 + 4) * 8 + iVar3 + 0x230);
+		        goto code_r0x80f866f5;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar3 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(param1_00,Core_Gameplay_IGame_TypeInfo,0x2e);
+		code_r0x80f866f5:
+		  iVar3 = (**(code **)((ulonglong)*puVar2 * 4))(param1_00,puVar2[1]);
+		  *(undefined4 *)(param1 + 0x10) = *(undefined4 *)(*(int *)(iVar3 + 0x10) + 0x18);
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_Options ---
+		void Gameplay_WorldAxis_ColossusInfo_Model_ColossusTreasuryModel__set_Options
+		               (int param1,int param2,undefined4 param3)
+		
+		{
+		  undefined4 uVar1;
+		  undefined4 param1_00;
+		  
+		  if (DAT_ram_00a58be1 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Gameplay_WorldAxis_ColossusInfo_Model_ColossusTreasuryModel_CreateOptionArgs__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_System_Linq_Enumerable_Select_ProtoGetTreasuryOptionsAns_Types_TreasuryOption__TreasuryOptionListElement_TreasuryOptionListElementArgs___
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_System_Linq_Enumerable_ToArray_TreasuryOptionListElement_TreasuryOptionListElementArgs___
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               System_Func_ProtoGetTreasuryOptionsAns_Types_TreasuryOption__TreasuryOptionListElement_TreasuryOptionListElementArgs__TypeInfo
+		              );
+		    DAT_ram_00a58be1 = '\x01';
+		  }
+		  param1_00 = *(undefined4 *)(param2 + 0xc);
+		  uVar1 = unnamed_function_1417
+		                    (
+		                    System_Func_ProtoGetTreasuryOptionsAns_Types_TreasuryOption__TreasuryOptionListElement_TreasuryOptionListElementArgs__TypeInfo
+		                    );
+		  System_Linq_Enumerable__Where_object_
+		            (uVar1,param1,
+		             Method_Gameplay_WorldAxis_ColossusInfo_Model_ColossusTreasuryModel_CreateOptionArgs__,0
+		            );
+		  uVar1 = System_Linq_Enumerable__ReverseIterator___Il2CppFullySharedGenericType_
+		                    (param1_00,uVar1,
+		                     Method_System_Linq_Enumerable_Select_ProtoGetTreasuryOptionsAns_Types_TreasuryOption__TreasuryOptionListElement_TreasuryOptionListElementArgs___
+		                    );
+		  uVar1 = func_ii_6295(uVar1,
+		                       Method_System_Linq_Enumerable_ToArray_TreasuryOptionListElement_TreasuryOptionListElementArgs___
+		                      );
+		  *(undefined4 *)(param1 + 0x14) = uVar1;
+		  return;
+		}
+		*/
+
 }

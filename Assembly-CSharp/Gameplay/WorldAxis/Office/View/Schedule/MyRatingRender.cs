@@ -19,6 +19,24 @@ namespace Gameplay.WorldAxis.Office.View.Schedule
 		[Address(RVA = "0x63CA", Offset = "0x63CA", VA = "0x63CA")]
 		public void Render(IList<WorldAxisOfficeModel.ColossusClanRating> clanRatings, UserData user)
 		{
+		/* --- GHIDRA: Render ---
+		void Gameplay_WorldAxis_Office_View_Schedule_MyRatingRender__Render(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a58b96 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Gameplay_WorldAxis_Office_View_Schedule_ColossusRatingRender_TypeInfo);
+		    DAT_ram_00a58b96 = '\x01';
+		  }
+		  uVar1 = unnamed_function_1417
+		                    (Gameplay_WorldAxis_Office_View_Schedule_ColossusRatingRender_TypeInfo);
+		  *(undefined4 *)(param1 + 0x10) = uVar1;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x060011CE RID: 4558 RVA: 0x00002050 File Offset: 0x00000250

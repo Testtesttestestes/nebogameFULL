@@ -13,6 +13,20 @@ namespace Gameplay.Boss.View
 		[Address(RVA = "0x9497", Offset = "0x9497", VA = "0x9497")]
 		public BossPossibleEmptyWindowStateController()
 		{
+		/* --- GHIDRA: .ctor ---
+		undefined4
+		Gameplay_Boss_View_BossPossibleEmptyWindowStateController___ctor
+		          (undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a579a1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_12581);
+		    DAT_ram_00a579a1 = '\x01';
+		  }
+		  return StringLiteral_12581;
+		}
+		*/
+
 		}
 
 		// Token: 0x02000B4A RID: 2890

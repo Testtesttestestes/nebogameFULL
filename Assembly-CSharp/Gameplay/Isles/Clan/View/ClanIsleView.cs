@@ -30,6 +30,22 @@ namespace Gameplay.Isles.Clan.View
 		[Address(RVA = "0x9EB3", Offset = "0x9EB3", VA = "0x9EB3")]
 		public void Init(ClanIsle isle)
 		{
+		/* --- GHIDRA: Init ---
+		void Gameplay_Isles_Clan_View_ClanIsleView__Init(int param1,undefined4 param2)
+		
+		{
+		  int *piVar1;
+		  
+		  piVar1 = *(int **)(param1 + 0x3c);
+		  if (piVar1 != (int *)0x0) {
+		    (**(code **)((ulonglong)*(uint *)(*piVar1 + 0x130) * 4))
+		              (piVar1,*(undefined4 *)(*piVar1 + 0x134));
+		  }
+		  *(undefined4 *)(param1 + 0x3c) = 0;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x060050A5 RID: 20645 RVA: 0x00002050 File Offset: 0x00000250
@@ -37,6 +53,31 @@ namespace Gameplay.Isles.Clan.View
 		[Address(RVA = "0x9EB4", Offset = "0x9EB4", VA = "0x9EB4")]
 		public void Deinit()
 		{
+		/* --- GHIDRA: Deinit ---
+		int Gameplay_Isles_Clan_View_ClanIsleView__Deinit(int param1,undefined4 param2)
+		
+		{
+		  int param1_00;
+		  
+		  if (DAT_ram_00a58cb0 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_MVC_AbstractViewMediator_ClanIsleModel__BaseIsleEvents__ClanIsleController__ClanIsleView__get_Model__
+		              );
+		    Mono_Security_ASN1__get_Item(&Method_UI_ToolTip_ToolTipData_ClanData___ctor__);
+		    Mono_Security_ASN1__get_Item(&Method_UI_ToolTip_ToolTipData_ClanData__set_Data__);
+		    Mono_Security_ASN1__get_Item(&UI_ToolTip_ToolTipData_ClanData__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_12530);
+		    DAT_ram_00a58cb0 = '\x01';
+		  }
+		  param1_00 = unnamed_function_1417(UI_ToolTip_ToolTipData_ClanData__TypeInfo);
+		  System_Buffers_TlsOverPerCoreLockedStacksArrayPool___Il2CppFullySharedGenericType___get_Id
+		            (param1_00,StringLiteral_12530,Method_UI_ToolTip_ToolTipData_ClanData___ctor__);
+		  *(undefined4 *)(param1_00 + 0x1c) = *(undefined4 *)(*(int *)(*(int *)(param1 + 0x3c) + 8) + 0x30);
+		  return param1_00;
+		}
+		*/
+
 		}
 
 		// Token: 0x060050A6 RID: 20646 RVA: 0x00002052 File Offset: 0x00000252
@@ -65,4 +106,56 @@ namespace Gameplay.Isles.Clan.View
 		[FieldOffset(Offset = "0x3C")]
 		private ClanIsleViewMediator _mediator;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_ColossusView ---
+		void Gameplay_Isles_Clan_View_ClanIsleView__get_ColossusView
+		               (int param1,int param2,undefined4 param3)
+		
+		{
+		  int *param1_00;
+		  undefined4 param4;
+		  undefined4 param3_00;
+		  undefined4 param2_00;
+		  
+		  if (DAT_ram_00a58caf == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Gameplay_Isles_Base_AbstractIsle_ClanIsleEvents__ClanIsleModel__ClanIsleController__ClanBuildingTypes__get_Controller__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Gameplay_Isles_Base_AbstractIsle_ClanIsleEvents__ClanIsleModel__ClanIsleController__ClanBuildingTypes__get_Events__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Gameplay_Isles_Base_AbstractIsle_ClanIsleEvents__ClanIsleModel__ClanIsleController__ClanBuildingTypes__get_Model__
+		              );
+		    Mono_Security_ASN1__get_Item(&Gameplay_Isles_Clan_Controller_ClanIsleViewMediator_TypeInfo);
+		    DAT_ram_00a58caf = '\x01';
+		  }
+		  param4 = *(undefined4 *)(param2 + 0x14);
+		  param3_00 = *(undefined4 *)(param2 + 0xc);
+		  param2_00 = *(undefined4 *)(param2 + 0x10);
+		  param1_00 = (int *)unnamed_function_1417
+		                               (Gameplay_Isles_Clan_Controller_ClanIsleViewMediator_TypeInfo);
+		  if (DAT_ram_00a58cd4 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Gameplay_Isles_Base_Controller_BaseIsleViewMediator_ClanIsleController__ClanIsleView__ClanIsleModel__ClanIsleEvents___ctor__
+		              );
+		    DAT_ram_00a58cd4 = '\x01';
+		  }
+		  MVC_AbstractController_object__object___set_Model
+		            (param1_00,param2_00,param3_00,param4,
+		             Method_Gameplay_Isles_Base_Controller_BaseIsleViewMediator_ClanIsleController__ClanIsleView__ClanIsleModel__ClanIsleEvents___ctor__
+		            );
+		  *(int **)(param1 + 0x3c) = param1_00;
+		  (**(code **)((ulonglong)*(uint *)(*param1_00 + 0x160) * 4))
+		            (param1_00,param1,*(undefined4 *)(*param1_00 + 0x164));
+		  return;
+		}
+		*/
+
 }

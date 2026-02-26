@@ -26,6 +26,36 @@ namespace Gameplay.Clans.Combat.Model
 		[Address(RVA = "0x9027", Offset = "0x9027", VA = "0x9027")]
 		public ClanCombatSpellData()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_Clans_Combat_Model_ClanCombatSpellData___ctor
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4,undefined4 param5,
+		               undefined4 param6,undefined4 param7,undefined4 param8)
+		
+		{
+		  undefined8 param3_00;
+		  
+		  param3_00 = Core_Data_UserData__get_UserId(param5,0);
+		  Gameplay_Combat_Model_GameFieldGamesData___ctor(param1,param3,param3_00,param6,2,param7,0);
+		  *(undefined4 *)(param1 + 0x2c) = param5;
+		  *(undefined4 *)(param1 + 0x28) = param4;
+		  *(undefined4 *)(param1 + 0x24) = param2;
+		  return;
+		}
+		*/
+
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_AnimationAssetId ---
+		void Gameplay_Clans_Combat_Model_ClanCombatSpellData__get_AnimationAssetId
+		               (undefined4 param1,undefined4 param2)
+		
+		{
+		  Gameplay_Combat_Model_CombatSpellData__get_AnimationAssetId(param1,0);
+		  return;
+		}
+		*/
+
 }

@@ -14,6 +14,25 @@ namespace Gameplay.World.View
 		[Address(RVA = "0x6571", Offset = "0x6571", VA = "0x6571")]
 		public CallbackIslandEngineAction(IIsleWorldObjectEngine engine, Action callback)
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_World_View_CallbackIslandEngineAction___ctor(int param1,int param2,undefined4 param3)
+		
+		{
+		  int iVar1;
+		  
+		  iVar1 = *(int *)(param1 + 0xc);
+		  if (iVar1 != 0) {
+		    (**(code **)((ulonglong)*(uint *)(iVar1 + 0xc) * 4))
+		              (*(undefined4 *)(iVar1 + 0x20),*(undefined4 *)(iVar1 + 0x14));
+		  }
+		  if (param2 != 0) {
+		    (**(code **)((ulonglong)*(uint *)(param2 + 0xc) * 4))
+		              (*(undefined4 *)(param2 + 0x20),param1,*(undefined4 *)(param2 + 0x14));
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06001382 RID: 4994 RVA: 0x00002050 File Offset: 0x00000250

@@ -12,6 +12,23 @@ namespace I2.Loc.SimpleJSON
 		[Address(RVA = "0xC1F3", Offset = "0xC1F3", VA = "0xC1F3")]
 		public static JSONNode Parse(string aJSON)
 		{
+		/* --- GHIDRA: Parse ---
+		void I2_Loc_SimpleJSON_JSON__Parse(undefined4 param1)
+		
+		{
+		  if (DAT_ram_00a54e8a == '\0') {
+		    Mono_Security_ASN1__get_Item(&UnityEngine_Debug_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_16180);
+		    DAT_ram_00a54e8a = '\x01';
+		  }
+		  if (*(int *)(UnityEngine_Debug_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(UnityEngine_Debug_TypeInfo);
+		  }
+		  Unity_Collections_NativeArray_ContactPairHeader___AsReadOnly(StringLiteral_16180,0);
+		  return;
+		}
+		*/
+
 			return null;
 		}
 	}

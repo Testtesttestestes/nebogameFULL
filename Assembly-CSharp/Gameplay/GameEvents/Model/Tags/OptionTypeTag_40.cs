@@ -36,4 +36,41 @@ namespace Gameplay.GameEvents.Model.Tags
 		{
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_OptionType ---
+		int Gameplay_GameEvents_Model_Tags_OptionTypeTag_40__get_OptionType
+		              (int *param1,undefined4 param2,undefined4 param3,undefined4 *param4,undefined4 param5,
+		              undefined4 param6)
+		
+		{
+		  undefined4 uVar1;
+		  int iVar2;
+		  
+		  if (DAT_ram_00a574cb == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_11610);
+		    DAT_ram_00a574cb = '\x01';
+		  }
+		  if (DAT_ram_00a574ca == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Google_Protobuf_Collections_RepeatedField_string__Contains__);
+		    DAT_ram_00a574ca = '\x01';
+		  }
+		  uVar1 = (**(code **)((ulonglong)*(uint *)(*param1 + 0xf0) * 4))
+		                    (param1,*(undefined4 *)(*param1 + 0xf4));
+		  iVar2 = Google_Protobuf_Collections_RepeatedField_object___Clear
+		                    (uVar1,param2,
+		                     Method_Google_Protobuf_Collections_RepeatedField_string__Contains__);
+		  if (iVar2 == 0) {
+		    uVar1 = 0;
+		  }
+		  else {
+		    uVar1 = Mono_Security_X509_X509Crl_X509CrlEntry___ctor(StringLiteral_11610,param2,0);
+		  }
+		  *param4 = uVar1;
+		  return iVar2;
+		}
+		*/
+
 }

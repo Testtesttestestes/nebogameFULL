@@ -84,4 +84,21 @@ namespace Gameplay.Gifts.View
 			}
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_Annotation ---
+		void Gameplay_Gifts_View_GiftInfoWindow__get_Annotation(undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a5a21c == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_UI_Windows_ClosableBaseWindow_BaseWindowArgs___ctor__);
+		    DAT_ram_00a5a21c = '\x01';
+		  }
+		  UI_MonoBehaviourWithStates_ClientStateChangedDelegate___Il2CppFullySharedGenericStructType___Invoke
+		            (param1,Method_UI_Windows_ClosableBaseWindow_BaseWindowArgs___ctor__);
+		  return;
+		}
+		*/
+
 }

@@ -48,6 +48,26 @@ namespace Gameplay.RegisterV2.View.CultSelector
 		[Address(RVA = "0x72B5", Offset = "0x72B5", VA = "0x72B5", Slot = "4")]
 		protected override void OnInit(CultListElementArgs args)
 		{
+		/* --- GHIDRA: OnInit ---
+		void Gameplay_RegisterV2_View_CultSelector_CultListElement__OnInit
+		               (undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a5837f == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Elements_GenericList_SelectedGenericListElement_CultListElementArgs___ctor__
+		              );
+		    DAT_ram_00a5837f = '\x01';
+		  }
+		  UI_Elements_GenericList_SelectedGenericListArgs_object____ctor
+		            (param1,
+		             Method_UI_Elements_GenericList_SelectedGenericListElement_CultListElementArgs___ctor__)
+		  ;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06002154 RID: 8532 RVA: 0x00002050 File Offset: 0x00000250
@@ -69,4 +89,63 @@ namespace Gameplay.RegisterV2.View.CultSelector
 		[SerializeField]
 		private Image _selectedImage;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_CultImage ---
+		uint Gameplay_RegisterV2_View_CultSelector_CultListElement__get_CultImage
+		               (int param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a5837d == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Elements_GenericList_SelectedGenericListElement_CultListElementArgs__get_Selected__
+		              );
+		    DAT_ram_00a5837d = '\x01';
+		  }
+		  return (uint)*(byte *)(param1 + 0x1d);
+		}
+		*/
+
+
+		/* --- GHIDRA: get_Selected ---
+		void Gameplay_RegisterV2_View_CultSelector_CultListElement__get_Selected
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  undefined4 param1_00;
+		  
+		  if (DAT_ram_00a5837e == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Elements_GenericList_SelectedGenericListElement_CultListElementArgs__set_Selected__
+		              );
+		    DAT_ram_00a5837e = '\x01';
+		  }
+		  *(char *)(param1 + 0x1d) = (char)param2;
+		  param1_00 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_uint__object___MoveNext
+		                        (*(undefined4 *)(param1 + 0x24),0);
+		  Com_TheFallenGames_OSA_CustomAdapters_TableView_Tuple_Basic_BasicTupleValueViewsHolder__UpdateAsText
+		            (param1_00,param2,0);
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_Selected ---
+		void Gameplay_RegisterV2_View_CultSelector_CultListElement__set_Selected
+		               (int param1,int param2,undefined4 param3)
+		
+		{
+		  undefined4 param2_00;
+		  undefined4 param1_00;
+		  
+		  param1_00 = *(undefined4 *)(param1 + 0x20);
+		  param2_00 = Core_Extensions_Dict_CultDicExt__GetIcon128AssetId(*(undefined4 *)(param2 + 0xc),0);
+		  Core_Extensions_Dict_PortalDicExt__GetCurrencyIcon60x66(param1_00,param2_00,0);
+		  return;
+		}
+		*/
+
 }

@@ -16,6 +16,24 @@ namespace Gameplay.Boss.View.WorldView
 		[Address(RVA = "0x94B7", Offset = "0x94B7", VA = "0x94B7")]
 		public void Init(BossCreateRequestData data)
 		{
+		/* --- GHIDRA: Init ---
+		void Gameplay_Boss_View_WorldView_IsleBossCreateRequestView__Init(int param1,undefined4 param2)
+		
+		{
+		  undefined4 param1_00;
+		  
+		  if (DAT_ram_00a579b1 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_UnityEngine_Component_GetComponent_Renderer___);
+		    DAT_ram_00a579b1 = '\x01';
+		  }
+		  param1_00 = func_ii_5677(*(undefined4 *)(param1 + 0x24),
+		                           Method_UnityEngine_Component_GetComponent_Renderer___);
+		  AssetContent_Loaders_GameSpriteRendererLoader__get_SpriteRenderer
+		            (param1_00,*(undefined4 *)(param1 + 0x14),0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600461F RID: 17951 RVA: 0x00002050 File Offset: 0x00000250
@@ -23,6 +41,24 @@ namespace Gameplay.Boss.View.WorldView
 		[Address(RVA = "0x94B8", Offset = "0x94B8", VA = "0x94B8", Slot = "8")]
 		protected override void ApplySortingOrder()
 		{
+		/* --- GHIDRA: ApplySortingOrder ---
+		void Gameplay_Boss_View_WorldView_IsleBossCreateRequestView__ApplySortingOrder
+		               (int param1,undefined4 param2)
+		
+		{
+		  undefined4 param1_00;
+		  
+		  if (DAT_ram_00a579b2 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_UnityEngine_Component_GetComponent_Renderer___);
+		    DAT_ram_00a579b2 = '\x01';
+		  }
+		  param1_00 = func_ii_5677(*(undefined4 *)(param1 + 0x24),
+		                           Method_UnityEngine_Component_GetComponent_Renderer___);
+		  func_ii_7677(param1_00,*(undefined4 *)(param1 + 0x18),0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06004620 RID: 17952 RVA: 0x00002050 File Offset: 0x00000250

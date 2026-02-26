@@ -25,6 +25,26 @@ namespace Gameplay.WorldAxis.ClanEquipment.View
 		[Address(RVA = "0x652F", Offset = "0x652F", VA = "0x652F", Slot = "10")]
 		protected override void CallElementClickedEvent(ClanMemberDollsListElement.ClanMemberDollsListElementArgs args)
 		{
+		/* --- GHIDRA: CallElementClickedEvent ---
+		void Gameplay_WorldAxis_ClanEquipment_View_ClanMemberDollsListElement__CallElementClickedEvent
+		               (undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a58c30 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Elements_GenericList_SelectableListElement_ClanMemberDollsListElement_ClanMemberDollsListElementArgs___ctor__
+		              );
+		    DAT_ram_00a58c30 = '\x01';
+		  }
+		  UI_Elements_GenericList_SelectableListElementArgs___Il2CppFullySharedGenericType____ctor
+		            (param1,
+		             Method_UI_Elements_GenericList_SelectableListElement_ClanMemberDollsListElement_ClanMemberDollsListElementArgs___ctor__
+		            );
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600133F RID: 4927 RVA: 0x00002050 File Offset: 0x00000250
@@ -32,6 +52,79 @@ namespace Gameplay.WorldAxis.ClanEquipment.View
 		[Address(RVA = "0x6530", Offset = "0x6530", VA = "0x6530")]
 		public ClanMemberDollsListElement()
 		{
+		/* --- GHIDRA: .ctor ---
+		undefined4
+		Gameplay_WorldAxis_ClanEquipment_View_ClanMemberDollsListElement___ctor
+		          (int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  undefined4 *puVar2;
+		  int param1_00;
+		  undefined4 param2_00;
+		  
+		  if (DAT_ram_00a58c31 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_System_Collections_Generic_Dictionary_ulong__ClanEquipmentModel_DollArtifacts__get_Values__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Linq_Enumerable_Sum_ClanEquipmentModel_DollArtifacts___);
+		    Mono_Security_ASN1__get_Item(&System_Func_ClanEquipmentModel_DollArtifacts__int__TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Gameplay_WorldAxis_ClanEquipment_View_ClanMemberDollsListElement_ClanMemberDollsListElementArgs___c__get_ItemsCount_b__2_0__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Gameplay_WorldAxis_ClanEquipment_View_ClanMemberDollsListElement_ClanMemberDollsListElementArgs___c_TypeInfo
+		              );
+		    DAT_ram_00a58c31 = '\x01';
+		  }
+		  uVar1 = System_Collections_Generic_Dictionary_int__object___TryAdd
+		                    (*(undefined4 *)(*(int *)(param1 + 0x1c) + 0xc),
+		                     Method_System_Collections_Generic_Dictionary_ulong__ClanEquipmentModel_DollArtifacts__get_Values__
+		                    );
+		  if (*(int *)(
+		              Gameplay_WorldAxis_ClanEquipment_View_ClanMemberDollsListElement_ClanMemberDollsListElementArgs___c_TypeInfo
+		              + 0x74) == 0) {
+		    func_ii_306000(
+		                  Gameplay_WorldAxis_ClanEquipment_View_ClanMemberDollsListElement_ClanMemberDollsListElementArgs___c_TypeInfo
+		                  );
+		  }
+		  puVar2 = *(undefined4 **)
+		            (
+		            Gameplay_WorldAxis_ClanEquipment_View_ClanMemberDollsListElement_ClanMemberDollsListElementArgs___c_TypeInfo
+		            + 0x5c);
+		  param1_00 = puVar2[1];
+		  if (param1_00 == 0) {
+		    if (*(int *)(
+		                Gameplay_WorldAxis_ClanEquipment_View_ClanMemberDollsListElement_ClanMemberDollsListElementArgs___c_TypeInfo
+		                + 0x74) == 0) {
+		      func_ii_306000(
+		                    Gameplay_WorldAxis_ClanEquipment_View_ClanMemberDollsListElement_ClanMemberDollsListElementArgs___c_TypeInfo
+		                    );
+		      puVar2 = *(undefined4 **)
+		                (
+		                Gameplay_WorldAxis_ClanEquipment_View_ClanMemberDollsListElement_ClanMemberDollsListElementArgs___c_TypeInfo
+		                + 0x5c);
+		    }
+		    param2_00 = *puVar2;
+		    param1_00 = unnamed_function_1417(System_Func_ClanEquipmentModel_DollArtifacts__int__TypeInfo);
+		    func_ii_7937(param1_00,param2_00,
+		                 Method_Gameplay_WorldAxis_ClanEquipment_View_ClanMemberDollsListElement_ClanMemberDollsListElementArgs___c__get_ItemsCount_b__2_0__
+		                 ,0);
+		    *(int *)(*(int *)(
+		                     Gameplay_WorldAxis_ClanEquipment_View_ClanMemberDollsListElement_ClanMemberDollsListElementArgs___c_TypeInfo
+		                     + 0x5c) + 4) = param1_00;
+		  }
+		  uVar1 = System_Linq_Enumerable__Sum_object_
+		                    (uVar1,param1_00,
+		                     Method_System_Linq_Enumerable_Sum_ClanEquipmentModel_DollArtifacts___);
+		  return uVar1;
+		}
+		*/
+
 		}
 
 		// Token: 0x04000A4D RID: 2637

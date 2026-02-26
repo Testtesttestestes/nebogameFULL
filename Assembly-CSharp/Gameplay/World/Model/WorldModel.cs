@@ -48,6 +48,34 @@ namespace Gameplay.World.Model
 		[Address(RVA = "0x661A", Offset = "0x661A", VA = "0x661A")]
 		public WorldModel(IGame game, IDictProvider dictProvider, IUserSettings userSettings, UserData user)
 		{
+		/* --- GHIDRA: .ctor ---
+		uint Gameplay_World_Model_WorldModel___ctor(int param1,undefined4 param2)
+		
+		{
+		  longlong lVar1;
+		  uint uVar2;
+		  longlong lVar3;
+		  
+		  if (DAT_ram_00a58c8c == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Gameplay_Isles_Base_AbstractIsle_UserIsleEvents__UserIsleModel__UserIsleController__UserBuildingTypes__get_Id__
+		              );
+		    DAT_ram_00a58c8c = '\x01';
+		  }
+		  if (*(int *)(param1 + 0x24) == 0) {
+		    uVar2 = 0;
+		  }
+		  else {
+		    lVar3 = *(longlong *)(*(int *)(param1 + 0x24) + 0x18);
+		    lVar1 = System_Collections_Generic_LinkedList_Enumerator_object___MoveNext
+		                      (*(undefined4 *)(param1 + 8),0);
+		    uVar2 = (uint)(lVar3 == lVar1);
+		  }
+		  return uVar2;
+		}
+		*/
+
 		}
 
 		// Token: 0x17000351 RID: 849
@@ -295,6 +323,24 @@ namespace Gameplay.World.Model
 		[CanBeNull]
 		public UserIsle GetUserIsle(ulong userId)
 		{
+		/* --- GHIDRA: GetUserIsle ---
+		undefined4
+		Gameplay_World_Model_WorldModel__GetUserIsle(int param1,undefined8 param2,undefined4 param3)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a58c91 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_Gameplay_World_Model_IsleHeap_ClanIsle__GetIsle__);
+		    DAT_ram_00a58c91 = '\x01';
+		  }
+		  uVar1 = Gameplay_World_Model_IsleHeap_object___Dispose
+		                    (*(undefined4 *)(param1 + 0x34),param2,
+		                     Method_Gameplay_World_Model_IsleHeap_ClanIsle__GetIsle__);
+		  return uVar1;
+		}
+		*/
+
 			return null;
 		}
 
@@ -304,6 +350,60 @@ namespace Gameplay.World.Model
 		[CanBeNull]
 		public ClanIsle GetClanIsle(ulong clanId)
 		{
+		/* --- GHIDRA: GetClanIsle ---
+		int Gameplay_World_Model_WorldModel__GetClanIsle
+		              (int param1,int param2,longlong param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  int iVar2;
+		  int local_4;
+		  
+		  if (DAT_ram_00a58c92 == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Protocol_Consts_LocationTypes_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_17959);
+		    DAT_ram_00a58c92 = '\x01';
+		  }
+		  if (param2 == 1) {
+		    if (DAT_ram_00a58c90 == '\0') {
+		      Mono_Security_ASN1__get_Item
+		                (&
+		                 Method_Gameplay_Isles_Base_AbstractIsle_UserIsleEvents__UserIsleModel__UserIsleController__UserBuildingTypes__get_Id__
+		                );
+		      Mono_Security_ASN1__get_Item(&Method_Gameplay_World_Model_IsleHeap_UserIsle__GetIsle__);
+		      DAT_ram_00a58c90 = '\x01';
+		    }
+		    iVar2 = *(int *)(param1 + 0x20);
+		    if ((iVar2 == 0) || (*(longlong *)(iVar2 + 0x18) != param3)) {
+		      iVar2 = Gameplay_World_Model_IsleHeap_object___Dispose
+		                        (*(undefined4 *)(param1 + 0x30),param3,
+		                         Method_Gameplay_World_Model_IsleHeap_UserIsle__GetIsle__);
+		    }
+		  }
+		  else if (param2 == 2) {
+		    if (DAT_ram_00a58c91 == '\0') {
+		      Mono_Security_ASN1__get_Item(&Method_Gameplay_World_Model_IsleHeap_ClanIsle__GetIsle__);
+		      DAT_ram_00a58c91 = '\x01';
+		    }
+		    iVar2 = Gameplay_World_Model_IsleHeap_object___Dispose
+		                      (*(undefined4 *)(param1 + 0x34),param3,
+		                       Method_Gameplay_World_Model_IsleHeap_ClanIsle__GetIsle__);
+		  }
+		  else {
+		    iVar2 = 0;
+		    local_4 = param2;
+		    uVar1 = func_ii_1081(Protocol_Consts_LocationTypes_TypeInfo,&local_4);
+		    uVar1 = func_ii_4419(StringLiteral_17959,uVar1,0);
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    func_ii_7830(uVar1,0);
+		  }
+		  return iVar2;
+		}
+		*/
+
 			return null;
 		}
 
@@ -313,6 +413,20 @@ namespace Gameplay.World.Model
 		[CanBeNull]
 		public IIsle GetIsleByTypeAndId(LocationTypes type, ulong id)
 		{
+		/* --- GHIDRA: GetIsleByTypeAndId ---
+		int Gameplay_World_Model_WorldModel__GetIsleByTypeAndId(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  
+		  iVar1 = *(int *)(param1 + 0x24);
+		  if (iVar1 == 0) {
+		    iVar1 = *(int *)(param1 + 0x28);
+		  }
+		  return iVar1;
+		}
+		*/
+
 			return null;
 		}
 
@@ -322,6 +436,57 @@ namespace Gameplay.World.Model
 		[CanBeNull]
 		public IIsle GetCurrentIsle()
 		{
+		/* --- GHIDRA: GetCurrentIsle ---
+		longlong Gameplay_World_Model_WorldModel__GetCurrentIsle(int param1,undefined4 param2)
+		
+		{
+		  uint *puVar1;
+		  undefined4 uVar2;
+		  int *piVar3;
+		  int iVar4;
+		  longlong lVar5;
+		  uint uVar6;
+		  int local_8;
+		  int local_4;
+		  
+		  lVar5 = 0;
+		  if (DAT_ram_00a58c93 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_Dict_IDictProvider_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_22853);
+		    DAT_ram_00a58c93 = '\x01';
+		  }
+		  local_4 = 0;
+		  local_8 = 0;
+		  piVar3 = *(int **)(param1 + 0x10);
+		  iVar4 = *piVar3;
+		  if (*(ushort *)(iVar4 + 0xb6) != 0) {
+		    uVar6 = 0;
+		    do {
+		      if (Core_Dict_IDictProvider_TypeInfo == *(int *)(*(int *)(iVar4 + 0x58) + uVar6 * 8)) {
+		        puVar1 = (uint *)(*(int *)(*(int *)(iVar4 + 0x58) + uVar6 * 8 + 4) * 8 + iVar4 + 0xd0);
+		        goto code_r0x80f946db;
+		      }
+		      uVar6 = uVar6 + 1;
+		    } while (*(ushort *)(iVar4 + 0xb6) != uVar6);
+		  }
+		  puVar1 = (uint *)func_ii_1080(piVar3,Core_Dict_IDictProvider_TypeInfo,2);
+		code_r0x80f946db:
+		  uVar2 = (**(code **)((ulonglong)*puVar1 * 4))(piVar3,puVar1[1]);
+		  uVar2 = Core_Extensions_Dict_DictExt__GetUserBuildingLevelDic(uVar2,StringLiteral_22853,0);
+		  iVar4 = Gameplay_Antiq_Model_AntiqModel__SetArtifacts
+		                    (7,*(undefined4 *)(param1 + 0x10),*(undefined4 *)(param1 + 8),&local_4,0);
+		  if ((iVar4 != 0) && (0 < *(longlong *)(local_4 + 0x10))) {
+		    piVar3 = (int *)Core_Gameplay_Managers_UserManager__get_User(*(undefined4 *)(param1 + 8),0);
+		    iVar4 = (**(code **)((ulonglong)*(uint *)(*piVar3 + 0x100) * 4))
+		                      (piVar3,uVar2,&local_8,*(undefined4 *)(*piVar3 + 0x104));
+		    if (iVar4 != 0) {
+		      lVar5 = *(longlong *)(local_4 + 0x10) - *(longlong *)(local_8 + 0x10);
+		    }
+		  }
+		  return lVar5;
+		}
+		*/
+
 			return null;
 		}
 
@@ -330,6 +495,17 @@ namespace Gameplay.World.Model
 		[Address(RVA = "0x6634", Offset = "0x6634", VA = "0x6634")]
 		public long GetLeftOverCountOfIsleAnimationWhitOutCoolDown()
 		{
+		/* --- GHIDRA: GetLeftOverCountOfIsleAnimationWhitOutCoolDown ---
+		void Gameplay_World_Model_WorldModel__GetLeftOverCountOfIsleAnimationWhitOutCoolDown
+		               (int param1,undefined8 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  *(undefined1 *)(param1 + 0x10) = (undefined1)param3;
+		  *(undefined8 *)(param1 + 8) = param2;
+		  return;
+		}
+		*/
+
 			return 0L;
 		}
 
@@ -507,4 +683,167 @@ namespace Gameplay.World.Model
 			}
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: set_LastSuccessIsleAnimationRequest ---
+		void Gameplay_World_Model_WorldModel__set_LastSuccessIsleAnimationRequest
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4,undefined4 param5,
+		               undefined4 param6)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a58c8b == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_Gameplay_World_Model_IsleHeap_UserIsle___ctor__);
+		    Mono_Security_ASN1__get_Item(&Method_Gameplay_World_Model_IsleHeap_ClanIsle___ctor__);
+		    Mono_Security_ASN1__get_Item(&Gameplay_World_Model_IsleHeap_ClanIsle__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Gameplay_World_Model_IsleHeap_UserIsle__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Utils_Timers_TimerTracker_TypeInfo);
+		    DAT_ram_00a58c8b = '\x01';
+		  }
+		  uVar1 = unnamed_function_1417(Utils_Timers_TimerTracker_TypeInfo);
+		  Utils_Timers_TimerTracker__remove_TimerExpiredEvent(uVar1,0);
+		  *(undefined4 *)(param1 + 0x3c) = uVar1;
+		  Unity_Services_Core_Environments_Internal_Environments__get_Current(param1,param5,0);
+		  *(undefined4 *)(param1 + 0x14) = param4;
+		  *(undefined4 *)(param1 + 0x10) = param3;
+		  *(undefined4 *)(param1 + 0xc) = param2;
+		  uVar1 = unnamed_function_1417(Gameplay_World_Model_IsleHeap_UserIsle__TypeInfo);
+		  UnityEngine_UIElements_UQuery_IsOfType_object___Predicate
+		            (uVar1,Method_Gameplay_World_Model_IsleHeap_UserIsle___ctor__);
+		  *(undefined4 *)(param1 + 0x30) = uVar1;
+		  uVar1 = unnamed_function_1417(Gameplay_World_Model_IsleHeap_ClanIsle__TypeInfo);
+		  UnityEngine_UIElements_UQuery_IsOfType_object___Predicate
+		            (uVar1,Method_Gameplay_World_Model_IsleHeap_ClanIsle___ctor__);
+		  *(undefined4 *)(param1 + 0x34) = uVar1;
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_CurrentLocationType ---
+		undefined8 Gameplay_World_Model_WorldModel__set_CurrentLocationType(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  undefined4 uVar2;
+		  int iVar3;
+		  
+		  if (DAT_ram_00a58c8d == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Gameplay_Isles_Base_AbstractIsle_ClanIsleEvents__ClanIsleModel__ClanIsleController__ClanBuildingTypes__get_Id__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Gameplay_Isles_Base_AbstractIsle_AxisIsleEvents__AxisIsleModel__AxisIsleController__AxisIsle_EmptyEnum__get_Id__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Gameplay_Isles_Base_AbstractIsle_UserIsleEvents__UserIsleModel__UserIsleController__UserBuildingTypes__get_Id__
+		              );
+		    DAT_ram_00a58c8d = '\x01';
+		  }
+		  iVar3 = *(int *)(param1 + 0x24);
+		  if (((iVar3 == 0) && (iVar3 = *(int *)(param1 + 0x28), iVar3 == 0)) &&
+		     (iVar3 = *(int *)(param1 + 0x2c), iVar3 == 0)) {
+		    uVar1 = unnamed_function_2232(&System_Exception_TypeInfo);
+		    uVar1 = unnamed_function_1417(uVar1);
+		    uVar2 = unnamed_function_2232(&StringLiteral_17862);
+		    System_String__Concat(uVar1,uVar2,0);
+		    uVar2 = unnamed_function_2232(&Method_Gameplay_World_Model_WorldModel_GetCurrentLocationId__);
+		    func_ii_1050(uVar1,uVar2);
+		    do {
+		      halt_trap();
+		    } while( true );
+		  }
+		  return *(undefined8 *)(iVar3 + 0x18);
+		}
+		*/
+
+
+		/* --- GHIDRA: set_ClanIsleHeap ---
+		double Gameplay_World_Model_WorldModel__set_ClanIsleHeap(int param1,undefined4 param2)
+		
+		{
+		  uint *puVar1;
+		  undefined4 uVar2;
+		  double dVar3;
+		  int *param1_00;
+		  int iVar4;
+		  uint uVar5;
+		  
+		  if (DAT_ram_00a58c8f == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_Gameplay_IGame_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_20789);
+		    DAT_ram_00a58c8f = '\x01';
+		  }
+		  param1_00 = *(int **)(param1 + 0xc);
+		  iVar4 = *param1_00;
+		  if (*(ushort *)(iVar4 + 0xb6) != 0) {
+		    uVar5 = 0;
+		    do {
+		      if (Core_Gameplay_IGame_TypeInfo == *(int *)(*(int *)(iVar4 + 0x58) + uVar5 * 8)) {
+		        puVar1 = (uint *)(*(int *)(*(int *)(iVar4 + 0x58) + uVar5 * 8 + 4) * 8 + iVar4 + 0x178);
+		        goto code_r0x80f9442f;
+		      }
+		      uVar5 = uVar5 + 1;
+		    } while (*(ushort *)(iVar4 + 0xb6) != uVar5);
+		  }
+		  puVar1 = (uint *)func_ii_1080(param1_00,Core_Gameplay_IGame_TypeInfo,0x17);
+		code_r0x80f9442f:
+		  uVar2 = (**(code **)((ulonglong)*puVar1 * 4))(param1_00,puVar1[1]);
+		  uVar2 = Newtonsoft_Json_Converters_XmlDocumentTypeWrapper__get_System(uVar2,0);
+		  dVar3 = Core_Extensions_Dict_DictExt__GetIntParameter(uVar2,StringLiteral_20789,0);
+		  return dVar3;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_CacheTtl ---
+		void Gameplay_World_Model_WorldModel__get_CacheTtl
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4,undefined4 param5,
+		               undefined4 param6)
+		
+		{
+		  if (DAT_ram_00a58d10 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Gameplay_Isles_Base_AbstractIsle_UserIsleEvents__UserIsleModel__UserIsleController__UserBuildingTypes__get_Controller__
+		              );
+		    DAT_ram_00a58d10 = '\x01';
+		  }
+		  Gameplay_Isles_User_UserIsle__ToString(param1,param2,param3,param5,param1);
+		  Gameplay_World_Model_ClanData__Create(*(undefined4 *)(param1 + 0x14),param4,0);
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_IsMovingOnWorldLevel ---
+		int Gameplay_World_Model_WorldModel__set_IsMovingOnWorldLevel
+		              (int param1,longlong param2,undefined4 param3)
+		
+		{
+		  int iVar1;
+		  
+		  if (DAT_ram_00a58c90 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Gameplay_Isles_Base_AbstractIsle_UserIsleEvents__UserIsleModel__UserIsleController__UserBuildingTypes__get_Id__
+		              );
+		    Mono_Security_ASN1__get_Item(&Method_Gameplay_World_Model_IsleHeap_UserIsle__GetIsle__);
+		    DAT_ram_00a58c90 = '\x01';
+		  }
+		  iVar1 = *(int *)(param1 + 0x20);
+		  if ((iVar1 == 0) || (*(longlong *)(iVar1 + 0x18) != param2)) {
+		    iVar1 = Gameplay_World_Model_IsleHeap_object___Dispose
+		                      (*(undefined4 *)(param1 + 0x30),param2,
+		                       Method_Gameplay_World_Model_IsleHeap_UserIsle__GetIsle__);
+		  }
+		  return iVar1;
+		}
+		*/
+
 }

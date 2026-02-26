@@ -94,6 +94,26 @@ namespace Gameplay.Clans.Office.View.ClanWarsTab.ClanWarsHistoryTab
 		[Address(RVA = "0x8C47", Offset = "0x8C47", VA = "0x8C47")]
 		public void Add(IList<ClanWarHistoryListElement.ClanWarHistoryListElementArgs> items)
 		{
+		/* --- GHIDRA: Add ---
+		void Gameplay_Clans_Office_View_ClanWarsTab_ClanWarsHistoryTab_ClanWarsHistoryView__Add
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  if (DAT_ram_00a57f52 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_OSAGenericBase_ClanWarsHistoryViewsHolder__ClanWarHistoryListElement_ClanWarHistoryListElementArgs__RemoveItems__
+		              );
+		    DAT_ram_00a57f52 = '\x01';
+		  }
+		  UI_OSAGenericBase_object__object___OnInitialized
+		            (*(undefined4 *)(param1 + 0x1c),param2,param3,
+		             Method_UI_OSAGenericBase_ClanWarsHistoryViewsHolder__ClanWarHistoryListElement_ClanWarHistoryListElementArgs__RemoveItems__
+		            );
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06003D89 RID: 15753 RVA: 0x00002050 File Offset: 0x00000250
@@ -101,6 +121,26 @@ namespace Gameplay.Clans.Office.View.ClanWarsTab.ClanWarsHistoryTab
 		[Address(RVA = "0x8C48", Offset = "0x8C48", VA = "0x8C48")]
 		public void Remove(int count, bool fromEnd)
 		{
+		/* --- GHIDRA: Remove ---
+		void Gameplay_Clans_Office_View_ClanWarsTab_ClanWarsHistoryTab_ClanWarsHistoryView__Remove
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  if (DAT_ram_00a57f53 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_OSADynamicBase_ClanWarsHistoryViewsHolder__ClanWarHistoryListElement_ClanWarHistoryListElementArgs__ActivateRequestBounds__
+		              );
+		    DAT_ram_00a57f53 = '\x01';
+		  }
+		  UI_OSADynamicBase_object__object____ctor
+		            (*(undefined4 *)(param1 + 0x1c),param2,0,
+		             Method_UI_OSADynamicBase_ClanWarsHistoryViewsHolder__ClanWarHistoryListElement_ClanWarHistoryListElementArgs__ActivateRequestBounds__
+		            );
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06003D8A RID: 15754 RVA: 0x00002050 File Offset: 0x00000250
@@ -108,6 +148,22 @@ namespace Gameplay.Clans.Office.View.ClanWarsTab.ClanWarsHistoryTab
 		[Address(RVA = "0x8C49", Offset = "0x8C49", VA = "0x8C49")]
 		public void ActivateUpperBound(bool activate)
 		{
+		/* --- GHIDRA: ActivateUpperBound ---
+		void Gameplay_Clans_Office_View_ClanWarsTab_ClanWarsHistoryTab_ClanWarsHistoryView__ActivateUpperBound
+		               (undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a57f54 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UI_MonoBehaviourWithStates_ClanWarsHistoryView_HistoryState___ctor__);
+		    DAT_ram_00a57f54 = '\x01';
+		  }
+		  ScreenAdaptation_Common_AppSize__Update
+		            (param1,Method_UI_MonoBehaviourWithStates_ClanWarsHistoryView_HistoryState___ctor__);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06003D8B RID: 15755 RVA: 0x00002050 File Offset: 0x00000250
@@ -156,4 +212,72 @@ namespace Gameplay.Clans.Office.View.ClanWarsTab.ClanWarsHistoryTab
 			NO_HISTORY
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_MembersButton ---
+		undefined4
+		Gameplay_Clans_Office_View_ClanWarsTab_ClanWarsHistoryTab_ClanWarsHistoryView__get_MembersButton
+		          (int param1,undefined4 param2)
+		
+		{
+		  return *(undefined4 *)(*(int *)(param1 + 0x20) + 0x2c);
+		}
+		*/
+
+
+		/* --- GHIDRA: set_MoreItemsAfterNeededEvent ---
+		void Gameplay_Clans_Office_View_ClanWarsTab_ClanWarsHistoryTab_ClanWarsHistoryView__set_MoreItemsAfterNeededEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  int param2_00;
+		  undefined4 param1_00;
+		  int *piVar1;
+		  int iVar2;
+		  
+		  if (DAT_ram_00a57f51 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Com_TheFallenGames_OSA_Core_OSA_BaseParamsWithPrefab__ClanWarsHistoryViewsHolder__get_IsInitialized__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Gameplay_Clans_Office_View_ClanWarsTab_ClanWarsHistoryTab_ClanWarsHistoryView___c__DisplayClass16_0__Init_b__0__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Gameplay_Clans_Office_View_ClanWarsTab_ClanWarsHistoryTab_ClanWarsHistoryView___c__DisplayClass16_0_TypeInfo
+		              );
+		    DAT_ram_00a57f51 = '\x01';
+		  }
+		  param2_00 = unnamed_function_1417
+		                        (
+		                        Gameplay_Clans_Office_View_ClanWarsTab_ClanWarsHistoryTab_ClanWarsHistoryView___c__DisplayClass16_0_TypeInfo
+		                        );
+		  *(undefined4 *)(param2_00 + 0xc) = param2;
+		  *(int *)(param2_00 + 8) = param1;
+		  iVar2 = **(int **)(param1 + 0x1c);
+		  (**(code **)((ulonglong)*(uint *)(iVar2 + 0x3b8) * 4))
+		            (*(int **)(param1 + 0x1c),*(undefined4 *)(iVar2 + 0x3bc));
+		  piVar1 = *(int **)(param1 + 0x1c);
+		  if ((char)piVar1[0x14] != '\0') {
+		    (**(code **)((ulonglong)
+		                 *(uint *)(s_Allocator__0___MaxBlockCount__1__ram_00000478 + *piVar1 + 0x10) * 4))
+		              (piVar1,*(undefined4 *)(param2_00 + 0xc),
+		               *(undefined4 *)(s_Allocator__0___MaxBlockCount__1__ram_00000478 + *piVar1 + 0x14));
+		    return;
+		  }
+		  param1_00 = unnamed_function_1417(System_Action_TypeInfo);
+		  UnityEngine_Events_UnityEvent__AddListener
+		            (param1_00,param2_00,
+		             Method_Gameplay_Clans_Office_View_ClanWarsTab_ClanWarsHistoryTab_ClanWarsHistoryView___c__DisplayClass16_0__Init_b__0__
+		             ,0);
+		  (**(code **)((ulonglong)*(uint *)(*piVar1 + 0x298) * 4))
+		            (piVar1,param1_00,*(undefined4 *)(*piVar1 + 0x29c));
+		  return;
+		}
+		*/
+
 }

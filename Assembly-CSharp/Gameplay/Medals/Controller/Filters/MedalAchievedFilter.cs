@@ -46,4 +46,19 @@ namespace Gameplay.Medals.Controller.Filters
 		{
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: set_FilterInfo ---
+		uint Gameplay_Medals_Controller_Filters_MedalAchievedFilter__set_FilterInfo
+		               (int param1,int param2,undefined4 param3)
+		
+		{
+		  if (*(char *)(*(int *)(param1 + 8) + 0x10) != '\0') {
+		    return (uint)(*(int *)(param2 + 0x10) != 0);
+		  }
+		  return 1;
+		}
+		*/
+
 }

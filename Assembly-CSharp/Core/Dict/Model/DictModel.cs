@@ -105,6 +105,21 @@ namespace Core.Dict.Model
 		[Address(RVA = "0xAEEB", Offset = "0xAEEB", VA = "0xAEEB", Slot = "5")]
 		public override void Dispose()
 		{
+		/* --- GHIDRA: Dispose ---
+		void Core_Dict_Model_DictModel__Dispose
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4,undefined4 param5,
+		               undefined4 param6,undefined4 param7)
+		
+		{
+		  Unity_Services_Core_Environments_Internal_Environments__get_Current(param1,param6,0);
+		  *(undefined4 *)(param1 + 0x1c) = param5;
+		  *(undefined4 *)(param1 + 0x10) = param4;
+		  *(undefined4 *)(param1 + 0xc) = param3;
+		  *(undefined4 *)(param1 + 0x20) = param2;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x060062CC RID: 25292 RVA: 0x00002050 File Offset: 0x00000250
@@ -112,6 +127,17 @@ namespace Core.Dict.Model
 		[Address(RVA = "0xAEEC", Offset = "0xAEEC", VA = "0xAEEC")]
 		public DictModel(IFileManager fileManager, IAuthDataProvider authDataProvider, IPlatformConfigurationProvider configurationProvider, FileDownloadLogger fileDownloadLogger, UserData user)
 		{
+		/* --- GHIDRA: .ctor ---
+		void Core_Dict_Model_DictModel___ctor
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  *(undefined4 *)(param1 + 0x18) = param3;
+		  *(undefined4 *)(param1 + 0x14) = param2;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x060062CD RID: 25293 RVA: 0x00002050 File Offset: 0x00000250
@@ -165,4 +191,129 @@ namespace Core.Dict.Model
 		[FieldOffset(Offset = "0x20")]
 		public readonly IFileManager FileManager;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: set_AssetsHash ---
+		void Core_Dict_Model_DictModel__set_AssetsHash(int param1,undefined4 param2)
+		
+		{
+		  *(undefined8 *)(param1 + 0xc) = 0;
+		  *(undefined8 *)(param1 + 0x14) = 0;
+		  Core_ExternalIncomingScriptCall_CallbackItem___Il2CppFullySharedGenericType____ctor(param1,0);
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_DownloadPath ---
+		void Core_Dict_Model_DictModel__get_DownloadPath(int *param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  uint uVar1;
+		  int iVar2;
+		  uint *puVar3;
+		  undefined4 uVar4;
+		  int iVar5;
+		  int *param1_00;
+		  int *param1_01;
+		  undefined4 uVar6;
+		  undefined4 uVar7;
+		  undefined4 uVar8;
+		  
+		  if (DAT_ram_00a60755 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_IFileContent__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Method_Core_Dict_Controller_BaseDictController_ParseResultDic__);
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Core_Files_IFileManager_TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&Core_Gameplay_Managers_Configuration_IPlatformConfigurationProvider_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_6532);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_243);
+		    DAT_ram_00a60755 = '\x01';
+		  }
+		  iVar2 = (**(code **)((ulonglong)*(uint *)(*param1 + 0x100) * 4))
+		                    (param1,*(undefined4 *)(*param1 + 0x104));
+		  iVar5 = *(int *)(iVar2 + 0x24);
+		  iVar2 = (**(code **)((ulonglong)*(uint *)(*param1 + 0x100) * 4))
+		                    (param1,*(undefined4 *)(*param1 + 0x104));
+		  if (iVar5 != 0) {
+		    uVar4 = System_Int32__ToString
+		                      (StringLiteral_6532,param2,StringLiteral_243,*(undefined4 *)(iVar2 + 0x24),0);
+		    if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		    }
+		    func_ii_7830(uVar4,0);
+		    return;
+		  }
+		  *(undefined4 *)(iVar2 + 0x24) = param2;
+		  iVar2 = (**(code **)((ulonglong)*(uint *)(*param1 + 0x100) * 4))
+		                    (param1,*(undefined4 *)(*param1 + 0x104));
+		  param1_00 = *(int **)(iVar2 + 0x20);
+		  uVar1 = 0;
+		  iVar2 = System_Uri___ctor(0);
+		  param1_01 = *(int **)(*(int *)(iVar2 + 0x48) + 0x10);
+		  iVar2 = *param1_01;
+		  if (*(ushort *)(iVar2 + 0xb6) != 0) {
+		    do {
+		      if (Core_Gameplay_Managers_Configuration_IPlatformConfigurationProvider_TypeInfo ==
+		          *(int *)(*(int *)(iVar2 + 0x58) + uVar1 * 8)) {
+		        puVar3 = (uint *)(iVar2 + *(int *)(*(int *)(iVar2 + 0x58) + uVar1 * 8 + 4) * 8 + 0xc0);
+		        goto code_r0x81cd9f1d;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar2 + 0xb6) != uVar1);
+		  }
+		  puVar3 = (uint *)func_ii_1080(param1_01,
+		                                Core_Gameplay_Managers_Configuration_IPlatformConfigurationProvider_TypeInfo
+		                                ,0);
+		code_r0x81cd9f1d:
+		  iVar2 = (**(code **)((ulonglong)*puVar3 * 4))(param1_01,puVar3[1]);
+		  uVar6 = *(undefined4 *)(iVar2 + 0x14);
+		  iVar2 = (**(code **)((ulonglong)*(uint *)(*param1 + 0x100) * 4))
+		                    (param1,*(undefined4 *)(*param1 + 0x104));
+		  uVar7 = *(undefined4 *)(iVar2 + 0x24);
+		  uVar1 = 0;
+		  uVar4 = unnamed_function_1417(System_Action_IFileContent__TypeInfo);
+		  UnityEngine_UIElements_VisualElement__get_layout
+		            (uVar4,param1,Method_Core_Dict_Controller_BaseDictController_ParseResultDic__,0);
+		  iVar2 = (**(code **)((ulonglong)*(uint *)(*param1 + 0x100) * 4))
+		                    (param1,*(undefined4 *)(*param1 + 0x104));
+		  uVar8 = *(undefined4 *)(iVar2 + 0x1c);
+		  iVar2 = *param1_00;
+		  if (*(ushort *)(iVar2 + 0xb6) != 0) {
+		    do {
+		      if (Core_Files_IFileManager_TypeInfo == *(int *)(*(int *)(iVar2 + 0x58) + uVar1 * 8)) {
+		        puVar3 = (uint *)(*(int *)(*(int *)(iVar2 + 0x58) + uVar1 * 8 + 4) * 8 + iVar2 + 200);
+		        goto code_r0x81cd9fff;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar2 + 0xb6) != uVar1);
+		  }
+		  puVar3 = (uint *)func_ii_1080(param1_00,Core_Files_IFileManager_TypeInfo,1);
+		code_r0x81cd9fff:
+		  (**(code **)((ulonglong)*puVar3 * 4))(param1_00,uVar6,uVar7,1,uVar4,uVar8,puVar3[1]);
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_CurrentDownloadPath ---
+		undefined4
+		Core_Dict_Model_DictModel__set_CurrentDownloadPath(int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a60743 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Core_Dict_DictWrappers_Base_AbstractDictWrapper_AprDic__uint__get_Id__);
+		    DAT_ram_00a60743 = '\x01';
+		  }
+		  uVar1 = Core_Extensions_Dict_DictExt__GetArtikulTypeFiltersByFilterType
+		                    (param2,*(undefined4 *)(param1 + 0xc),0);
+		  return uVar1;
+		}
+		*/
+
 }

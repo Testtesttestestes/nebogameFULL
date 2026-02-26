@@ -83,4 +83,28 @@ namespace Gameplay.Clans.Office.View.ClanMembersTab
 		[SerializeField]
 		private Button _rightButton;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_RightButton ---
+		void Gameplay_Clans_Office_View_ClanMembersTab_ClanMemberView__get_RightButton
+		               (int param1,int param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  undefined4 param2_00;
+		  undefined4 param1_00;
+		  int iVar1;
+		  
+		  param1_00 = *(undefined4 *)(param1 + 0x10);
+		  param2_00 = Google_Protobuf_Collections_RepeatedField_object___GetEnumerator(param2,0);
+		  UnityEngine_Component__GetComponentInChildren_object_(param1_00,param2_00,0);
+		  iVar1 = **(int **)(param1 + 0x14);
+		  (**(code **)((ulonglong)*(uint *)(iVar1 + 0x138) * 4))
+		            (*(int **)(param1 + 0x14),*(undefined4 *)(param2 + 0x38),*(undefined4 *)(iVar1 + 0x13c))
+		  ;
+		  Gameplay_Clans_Office_View_ClansButtonView___ctor(*(undefined4 *)(param1 + 0x18),param2,param3,0);
+		  return;
+		}
+		*/
+
 }

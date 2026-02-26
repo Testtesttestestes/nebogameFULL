@@ -43,6 +43,33 @@ namespace Gameplay.Boss.View.Rewarding
 		[Address(RVA = "0x953A", Offset = "0x953A", VA = "0x953A", Slot = "18")]
 		protected override void OnShow(BaseWindowArgs args)
 		{
+		/* --- GHIDRA: OnShow ---
+		void Gameplay_Boss_View_Rewarding_BossRewardingWindow__OnShow(int param1,undefined4 param2)
+		
+		{
+		  int *piVar1;
+		  
+		  if (DAT_ram_00a579e4 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Windows_ClosableBaseWindow_BossRewardingWindow_BossRewardingWindowArgs__OnClose__
+		              );
+		    DAT_ram_00a579e4 = '\x01';
+		  }
+		  UI_Windows_ClosableBaseWindow_object___OnClickBack
+		            (param1,
+		             Method_UI_Windows_ClosableBaseWindow_BossRewardingWindow_BossRewardingWindowArgs__OnClose__
+		            );
+		  piVar1 = *(int **)(param1 + 0x40);
+		  if (piVar1 != (int *)0x0) {
+		    (**(code **)((ulonglong)*(uint *)(*piVar1 + 0x130) * 4))
+		              (piVar1,*(undefined4 *)(*piVar1 + 0x134));
+		  }
+		  *(undefined4 *)(param1 + 0x40) = 0;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x060046A5 RID: 18085 RVA: 0x00002050 File Offset: 0x00000250
@@ -50,6 +77,25 @@ namespace Gameplay.Boss.View.Rewarding
 		[Address(RVA = "0x953B", Offset = "0x953B", VA = "0x953B", Slot = "19")]
 		protected override void OnClose()
 		{
+		/* --- GHIDRA: OnClose ---
+		void Gameplay_Boss_View_Rewarding_BossRewardingWindow__OnClose(undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a579e5 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Windows_ClosableBaseWindow_BossRewardingWindow_BossRewardingWindowArgs___ctor__
+		              );
+		    DAT_ram_00a579e5 = '\x01';
+		  }
+		  UI_MonoBehaviourWithStates_ClientStateChangedDelegate___Il2CppFullySharedGenericStructType___Invoke
+		            (param1,
+		             Method_UI_Windows_ClosableBaseWindow_BossRewardingWindow_BossRewardingWindowArgs___ctor__
+		            );
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x060046A6 RID: 18086 RVA: 0x00002050 File Offset: 0x00000250
@@ -101,4 +147,54 @@ namespace Gameplay.Boss.View.Rewarding
 			public int SelectedIndex;
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_RewardingView ---
+		void Gameplay_Boss_View_Rewarding_BossRewardingWindow__get_RewardingView
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  int iVar1;
+		  int *param1_00;
+		  undefined4 param2_00;
+		  undefined4 param3_00;
+		  undefined4 param4;
+		  
+		  if (DAT_ram_00a579e3 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UI_Windows_BaseWindow_BossRewardingWindow_BossRewardingWindowArgs__OnShow__);
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Windows_BaseWindow_BossRewardingWindow_BossRewardingWindowArgs__get_WindowArgs__
+		              );
+		    Mono_Security_ASN1__get_Item(&Gameplay_Boss_Controller_BossRewardingWindowMediator_TypeInfo);
+		    DAT_ram_00a579e3 = '\x01';
+		  }
+		  UI_Windows_BaseWindow_object____ctor
+		            (param1,param2,
+		             Method_UI_Windows_BaseWindow_BossRewardingWindow_BossRewardingWindowArgs__OnShow__);
+		  iVar1 = func_ii_8093(param1,
+		                       Method_UI_Windows_BaseWindow_BossRewardingWindow_BossRewardingWindowArgs__get_WindowArgs__
+		                      );
+		  param2_00 = *(undefined4 *)(*(int *)(iVar1 + 0x18) + 8);
+		  iVar1 = func_ii_8093(param1,
+		                       Method_UI_Windows_BaseWindow_BossRewardingWindow_BossRewardingWindowArgs__get_WindowArgs__
+		                      );
+		  param3_00 = *(undefined4 *)(*(int *)(iVar1 + 0x18) + 0x10);
+		  iVar1 = func_ii_8093(param1,
+		                       Method_UI_Windows_BaseWindow_BossRewardingWindow_BossRewardingWindowArgs__get_WindowArgs__
+		                      );
+		  param4 = *(undefined4 *)(*(int *)(iVar1 + 0x18) + 0xc);
+		  param1_00 = (int *)unnamed_function_1417
+		                               (Gameplay_Boss_Controller_BossRewardingWindowMediator_TypeInfo);
+		  Gameplay_Boss_Controller_BossRewardingWindowMediator__get_CurrentTeamId
+		            (param1_00,param2_00,param3_00,param4,0);
+		  *(int **)(param1 + 0x40) = param1_00;
+		  (**(code **)((ulonglong)*(uint *)(*param1_00 + 0x160) * 4))
+		            (param1_00,param1,*(undefined4 *)(*param1_00 + 0x164));
+		  return;
+		}
+		*/
+
 }

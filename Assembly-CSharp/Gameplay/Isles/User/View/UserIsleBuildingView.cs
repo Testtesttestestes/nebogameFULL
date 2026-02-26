@@ -28,6 +28,26 @@ namespace Gameplay.Isles.User.View
 		[Address(RVA = "0x9FF5", Offset = "0x9FF5", VA = "0x9FF5")]
 		public UserIsleBuildingView()
 		{
+		/* --- GHIDRA: .ctor ---
+		int Gameplay_Isles_User_View_UserIsleBuildingView___ctor(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  
+		  if (DAT_ram_00a58d6c == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_UnityEngine_Component_GetComponent_IGuideTarget___);
+		    DAT_ram_00a58d6c = '\x01';
+		  }
+		  iVar1 = *(int *)(param1 + 0x48);
+		  if (iVar1 == 0) {
+		    iVar1 = func_ii_5677(*(undefined4 *)(param1 + 0x28),
+		                         Method_UnityEngine_Component_GetComponent_IGuideTarget___);
+		  }
+		  *(int *)(param1 + 0x48) = iVar1;
+		  return iVar1;
+		}
+		*/
+
 		}
 
 		// Token: 0x04002CA7 RID: 11431

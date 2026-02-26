@@ -143,6 +143,18 @@ namespace Gameplay.FeedbackForm.View
 		[Address(RVA = "0x8135", Offset = "0x8135", VA = "0x8135")]
 		public FeedbackFormView()
 		{
+		/* --- GHIDRA: .ctor ---
+		undefined4 Gameplay_FeedbackForm_View_FeedbackFormView___ctor(undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a575ea == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_12616);
+		    DAT_ram_00a575ea = '\x01';
+		  }
+		  return StringLiteral_12616;
+		}
+		*/
+
 		}
 
 		// Token: 0x04001A96 RID: 6806
@@ -186,4 +198,115 @@ namespace Gameplay.FeedbackForm.View
 		[FieldOffset(Offset = "0x2C")]
 		public Themes Theme;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: add_CloseFormRequestEvent ---
+		void Gameplay_FeedbackForm_View_FeedbackFormView__add_CloseFormRequestEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a575e8 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Func_FeedbackFormWindow__UniTask_bool___TypeInfo);
+		    DAT_ram_00a575e8 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x28);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = func_ii_7048(param1_00,param2,0);
+		    param2_00 = System_Func_FeedbackFormWindow__UniTask_bool___TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Func_FeedbackFormWindow__UniTask_bool___TypeInfo),
+		       iVar2 == 0)) break;
+		    iVar2 = func_ii_4329(param1 + 0x28,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: remove_CloseFormRequestEvent ---
+		void Gameplay_FeedbackForm_View_FeedbackFormView__remove_CloseFormRequestEvent
+		               (undefined8 *param1,int param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  int iVar1;
+		  undefined8 local_10;
+		  undefined8 local_8;
+		  
+		  if (DAT_ram_00a575e9 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_System_Nullable_UniTask_bool____ctor__);
+		    DAT_ram_00a575e9 = '\x01';
+		  }
+		  iVar1 = *(int *)(param2 + 0x28);
+		  if (iVar1 == 0) {
+		    *param1 = 0;
+		    *(undefined4 *)(param1 + 1) = 0;
+		  }
+		  else {
+		    (**(code **)((ulonglong)*(uint *)(iVar1 + 0xc) * 4))
+		              (&local_8,*(undefined4 *)(iVar1 + 0x20),param3,*(undefined4 *)(iVar1 + 0x14));
+		    *(undefined4 *)(param1 + 1) = 0;
+		    *param1 = 0;
+		    local_10 = local_8;
+		    System_Nullable_DefaultEventSystem_FocusBasedEventSequenceContext___get_Value
+		              (param1,&local_10,Method_System_Nullable_UniTask_bool____ctor__);
+		  }
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_MessageField ---
+		undefined4
+		Gameplay_FeedbackForm_View_FeedbackFormView__get_MessageField(int param1,undefined4 param2)
+		
+		{
+		  return *(undefined4 *)(*(int *)(param1 + 0x10) + 0x160);
+		}
+		*/
+
+
+		/* --- GHIDRA: get_FormFields ---
+		undefined4 Gameplay_FeedbackForm_View_FeedbackFormView__get_FormFields(int param1,undefined4 param2)
+		
+		{
+		  return *(undefined4 *)(*(int *)(param1 + 0x14) + 0x160);
+		}
+		*/
+
+
+		/* --- GHIDRA: get_Email ---
+		void Gameplay_FeedbackForm_View_FeedbackFormView__get_Email
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  TMPro_TMP_InputField__get_text(*(undefined4 *)(param1 + 0x14),param2,0);
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_Email ---
+		undefined4 Gameplay_FeedbackForm_View_FeedbackFormView__set_Email(int param1,undefined4 param2)
+		
+		{
+		  return *(undefined4 *)(*(int *)(param1 + 0x18) + 0x160);
+		}
+		*/
+
 }

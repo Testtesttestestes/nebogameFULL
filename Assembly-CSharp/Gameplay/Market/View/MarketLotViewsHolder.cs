@@ -46,4 +46,36 @@ namespace Gameplay.Market.View
 		[FieldOffset(Offset = "0x14")]
 		private MarketLotListElement _listElement;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_MarketLotData ---
+		void Gameplay_Market_View_MarketLotViewsHolder__get_MarketLotData
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  Gameplay_Market_View_MarketLotListElement__get_Data(*(undefined4 *)(param1 + 0x14),param2,param1);
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_MarketLotData ---
+		void Gameplay_Market_View_MarketLotViewsHolder__set_MarketLotData(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a59fe3 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_UnityEngine_Component_GetComponent_MarketLotListElement___)
+		    ;
+		    DAT_ram_00a59fe3 = '\x01';
+		  }
+		  uVar1 = func_ii_5677(*(undefined4 *)(param1 + 8),
+		                       Method_UnityEngine_Component_GetComponent_MarketLotListElement___);
+		  *(undefined4 *)(param1 + 0x14) = uVar1;
+		  return;
+		}
+		*/
+
 }

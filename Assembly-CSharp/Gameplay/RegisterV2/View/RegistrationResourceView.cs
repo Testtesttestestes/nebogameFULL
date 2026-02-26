@@ -59,6 +59,23 @@ namespace Gameplay.RegisterV2.View
 		[Address(RVA = "0x725F", Offset = "0x725F", VA = "0x725F")]
 		public RegistrationResourceView()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_RegisterV2_View_RegistrationResourceView___ctor
+		               (undefined4 param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  undefined4 param1_00;
+		  uint uVar1;
+		  
+		  param1_00 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_uint__object___MoveNext
+		                        (param1,0);
+		  uVar1 = func_ii_12174(param1,0);
+		  Com_TheFallenGames_OSA_CustomAdapters_TableView_Tuple_Basic_BasicTupleValueViewsHolder__UpdateAsText
+		            (param1_00,uVar1 ^ 1,0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x040011FF RID: 4607
@@ -78,4 +95,40 @@ namespace Gameplay.RegisterV2.View
 		[FieldOffset(Offset = "0x18")]
 		private string _iconAssetId;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_IconAssetId ---
+		void Gameplay_RegisterV2_View_RegistrationResourceView__get_IconAssetId
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  *(undefined4 *)(param1 + 0x18) = param2;
+		  Core_Extensions_Dict_PortalDicExt__GetCurrencyIcon60x66(*(undefined4 *)(param1 + 0x10),param2,0);
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_IconAssetId ---
+		void Gameplay_RegisterV2_View_RegistrationResourceView__set_IconAssetId
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  undefined4 param1_00;
+		  int iVar1;
+		  
+		  iVar1 = **(int **)(param1 + 0x14);
+		  param1_00 = (**(code **)((ulonglong)*(uint *)(iVar1 + 0x2c8) * 4))
+		                        (*(int **)(param1 + 0x14),*(undefined4 *)(iVar1 + 0x2cc));
+		  iVar1 = System_Collections_CollectionBase___ctor(param1_00,param2,0);
+		  if (iVar1 == 0) {
+		    iVar1 = **(int **)(param1 + 0x14);
+		    (**(code **)((ulonglong)*(uint *)(iVar1 + 0x2d0) * 4))
+		              (*(int **)(param1 + 0x14),param2,*(undefined4 *)(iVar1 + 0x2d4));
+		  }
+		  return;
+		}
+		*/
+
 }

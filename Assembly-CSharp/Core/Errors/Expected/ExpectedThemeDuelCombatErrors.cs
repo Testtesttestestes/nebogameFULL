@@ -20,6 +20,64 @@ namespace Core.Errors.Expected
 		[Address(RVA = "0xAEA8", Offset = "0xAEA8", VA = "0xAEA8")]
 		public ExpectedThemeDuelCombatErrors()
 		{
+		/* --- GHIDRA: .ctor ---
+		undefined4
+		Core_Errors_Expected_ExpectedThemeDuelCombatErrors___ctor
+		          (undefined4 param1,int param2,undefined4 param3)
+		
+		{
+		  undefined4 uVar1;
+		  undefined4 uVar2;
+		  
+		  if (DAT_ram_00a5a396 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_GameLocalization_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_15138);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_15137);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_15153);
+		    DAT_ram_00a5a396 = '\x01';
+		  }
+		  if (param2 < -0x6d) {
+		    if (param2 == -1000) {
+		      return 1;
+		    }
+		    if (param2 == -0x6e) {
+		      uVar1 = System_Uri___ctor(0);
+		      uVar1 = System_Globalization_TimeSpanFormat_FormatLiterals__get_DayHourSep(uVar1,0);
+		      if (*(int *)(Core_GameLocalization_TypeInfo + 0x74) == 0) {
+		        func_ii_306000(Core_GameLocalization_TypeInfo);
+		      }
+		      uVar2 = Core_Extensions_Dict_CultDicExt__GetTitle(StringLiteral_15153,1,0,1,0,0,0,0);
+		      Core_Application_App__get_ToastController(uVar1,6,uVar2,0);
+		      return 1;
+		    }
+		  }
+		  else {
+		    if (param2 == -7) {
+		      uVar1 = System_Uri___ctor(0);
+		      uVar1 = System_Globalization_TimeSpanFormat_FormatLiterals__get_DayHourSep(uVar1,0);
+		      if (*(int *)(Core_GameLocalization_TypeInfo + 0x74) == 0) {
+		        func_ii_306000(Core_GameLocalization_TypeInfo);
+		      }
+		      uVar2 = Core_Extensions_Dict_CultDicExt__GetTitle(StringLiteral_15137,1,0,1,0,0,0,0);
+		      Core_Application_App__get_ToastController(uVar1,6,uVar2,0);
+		      return 1;
+		    }
+		    if ((((param2 != -6) && (param2 != -5)) && (param2 != -4)) && ((param2 != -3 && (param2 == -2)))
+		       ) {
+		      uVar1 = System_Uri___ctor(0);
+		      uVar1 = System_Globalization_TimeSpanFormat_FormatLiterals__get_DayHourSep(uVar1,0);
+		      if (*(int *)(Core_GameLocalization_TypeInfo + 0x74) == 0) {
+		        func_ii_306000(Core_GameLocalization_TypeInfo);
+		      }
+		      uVar2 = Core_Extensions_Dict_CultDicExt__GetTitle(StringLiteral_15138,1,0,1,0,0,0,0);
+		      Core_Application_App__get_ToastController(uVar1,6,uVar2,0);
+		      return 1;
+		    }
+		  }
+		  return 0;
+		}
+		*/
+
 		}
 	}
 }

@@ -30,6 +30,36 @@ namespace Gameplay.Aprs.Discounts
 		[Address(RVA = "0xA1E9", Offset = "0xA1E9", VA = "0xA1E9")]
 		public AprDiscountArgs(DiscountTargets discountTarget, MedalDicWrapper medal)
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_Aprs_Discounts_AprDiscountArgs___ctor(int param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a59445 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Core_Cache_AbstractCache_MedalDicWrapper__IDiscountArgs__Dispose__);
+		    DAT_ram_00a59445 = '\x01';
+		  }
+		  *(undefined4 *)(param1 + 0x20) = 0;
+		  Core_Cache_AbstractCache_ulong__object___Complete
+		            (param1,Method_Core_Cache_AbstractCache_MedalDicWrapper__IDiscountArgs__Dispose__);
+		  return;
+		}
+		*/
+
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_Medal ---
+		void Gameplay_Aprs_Discounts_AprDiscountArgs__get_Medal
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  Unity_Services_Core_Environments_Internal_Environments__get_Current(param1,param2,0);
+		  *(undefined4 *)(param1 + 0x14) = param3;
+		  return;
+		}
+		*/
+
 }

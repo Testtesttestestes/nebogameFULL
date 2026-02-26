@@ -25,6 +25,18 @@ namespace Gameplay.Market.View
 		[Address(RVA = "0x7741", Offset = "0x7741", VA = "0x7741")]
 		public MarketLotPriceView()
 		{
+		/* --- GHIDRA: .ctor ---
+		undefined4 Gameplay_Market_View_MarketLotPriceView___ctor(undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a59fef == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_12649);
+		    DAT_ram_00a59fef = '\x01';
+		  }
+		  return StringLiteral_12649;
+		}
+		*/
+
 		}
 
 		// Token: 0x040014BF RID: 5311

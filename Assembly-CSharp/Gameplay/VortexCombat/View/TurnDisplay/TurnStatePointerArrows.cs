@@ -21,6 +21,30 @@ namespace Gameplay.VortexCombat.View.TurnDisplay
 		[Address(RVA = "0x678B", Offset = "0x678B", VA = "0x678B", Slot = "13")]
 		protected virtual void HandleTurnStateChanged()
 		{
+		/* --- GHIDRA: HandleTurnStateChanged ---
+		int Gameplay_VortexCombat_View_TurnDisplay_TurnStatePointerArrows__HandleTurnStateChanged
+		              (undefined4 param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  
+		  if (DAT_ram_00a58210 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Gameplay_VortexCombat_View_TurnDisplay_TurnStatePointerArrows__HandleBackTimeCoroutine_d__9_TypeInfo
+		              );
+		    DAT_ram_00a58210 = '\x01';
+		  }
+		  iVar1 = unnamed_function_1417
+		                    (
+		                    Gameplay_VortexCombat_View_TurnDisplay_TurnStatePointerArrows__HandleBackTimeCoroutine_d__9_TypeInfo
+		                    );
+		  *(undefined4 *)(iVar1 + 0x10) = param1;
+		  *(undefined4 *)(iVar1 + 8) = 0;
+		  return iVar1;
+		}
+		*/
+
 		}
 
 		// Token: 0x060015CA RID: 5578 RVA: 0x00002052 File Offset: 0x00000252
@@ -28,6 +52,91 @@ namespace Gameplay.VortexCombat.View.TurnDisplay
 		[Address(RVA = "0x678C", Offset = "0x678C", VA = "0x678C")]
 		private IEnumerator HandleBackTimeCoroutine()
 		{
+		/* --- GHIDRA: HandleBackTimeCoroutine ---
+		void Gameplay_VortexCombat_View_TurnDisplay_TurnStatePointerArrows__HandleBackTimeCoroutine
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  double dVar1;
+		  float fVar3;
+		  undefined4 uVar4;
+		  double dVar5;
+		  int *piVar6;
+		  double param1_00;
+		  int iVar7;
+		  ulonglong uVar8;
+		  float8 local_8;
+		  undefined4 uVar2;
+		  
+		  if (DAT_ram_00a58211 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Utils_TimeUtils_TypeInfo);
+		    DAT_ram_00a58211 = '\x01';
+		  }
+		  fVar3 = func_ii_7103(param2,0);
+		  if (DAT_ram_00a6445d == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Math_TypeInfo);
+		    DAT_ram_00a6445d = '\x01';
+		  }
+		  if (*(int *)(System_Math_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(System_Math_TypeInfo);
+		  }
+		  param1_00 = (double)fVar3;
+		  dVar1 = param1_00;
+		  dVar5 = unnamed_function_4206(param1_00,&local_8);
+		  uVar2 = (undefined4)((ulonglong)dVar1 >> 0x20);
+		  dVar1 = (double)local_8;
+		  if (0.0 <= fVar3) {
+		    if (dVar5 == 0.5) {
+		      if (ABS((double)local_8) < 9.223372036854776e+18) {
+		        uVar8 = (ulonglong)(double)local_8;
+		      }
+		      else {
+		        uVar8 = 0;
+		      }
+		      if ((uVar8 & 1) != 0) {
+		        dVar1 = (double)local_8 + 1.0;
+		      }
+		    }
+		    else {
+		      dVar1 = FLOOR(param1_00 + 0.5);
+		    }
+		  }
+		  else if (dVar5 == -0.5) {
+		    if (ABS((double)local_8) < 9.223372036854776e+18) {
+		      uVar8 = (ulonglong)(double)local_8;
+		    }
+		    else {
+		      uVar8 = 0;
+		    }
+		    if ((uVar8 & 1) != 0) {
+		      dVar1 = (double)local_8 + -1.0;
+		    }
+		  }
+		  else {
+		    dVar1 = CEIL(param1_00 + -0.5);
+		  }
+		  if (*(int *)(Utils_TimeUtils_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Utils_TimeUtils_TypeInfo);
+		  }
+		  if (ABS(dVar1) < 2147483648.0) {
+		    iVar7 = (int)dVar1;
+		  }
+		  else {
+		    iVar7 = -0x80000000;
+		  }
+		  uVar4 = Utils_TimeUtils__SecToMs(iVar7,0);
+		  piVar6 = *(int **)(*(int *)(param1 + 0x10) + 8);
+		  iVar7 = *piVar6;
+		  (**(code **)((ulonglong)*(uint *)(iVar7 + 0x2d0) * 4))
+		            (CONCAT44(uVar2,piVar6),uVar4,*(undefined4 *)(iVar7 + 0x2d4));
+		  piVar6 = *(int **)(*(int *)(param1 + 0x14) + 8);
+		  iVar7 = *piVar6;
+		  (**(code **)((ulonglong)*(uint *)(iVar7 + 0x2d0) * 4))
+		            (piVar6,uVar4,*(undefined4 *)(iVar7 + 0x2d4));
+		  return;
+		}
+		*/
+
 			return null;
 		}
 
@@ -36,6 +145,25 @@ namespace Gameplay.VortexCombat.View.TurnDisplay
 		[Address(RVA = "0x678D", Offset = "0x678D", VA = "0x678D")]
 		private void DisplayBackTime(BackTime backTime)
 		{
+		/* --- GHIDRA: DisplayBackTime ---
+		void Gameplay_VortexCombat_View_TurnDisplay_TurnStatePointerArrows__DisplayBackTime
+		               (int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  
+		  iVar1 = *(int *)(param1 + 0x10);
+		  func_ii_9125(*(undefined4 *)(iVar1 + 0x10),0.0,0.0,0);
+		  Core_Animations_GameSpineUiAnimation__get_SkeletonGraphic(*(undefined4 *)(iVar1 + 0xc),0.0,0.0,0);
+		  Core_Animations_GameSpineUiAnimation__get_SkeletonGraphic(*(undefined4 *)(iVar1 + 8),0.0,0.0,0);
+		  iVar1 = *(int *)(param1 + 0x14);
+		  func_ii_9125(*(undefined4 *)(iVar1 + 0x10),0.0,0.0,0);
+		  Core_Animations_GameSpineUiAnimation__get_SkeletonGraphic(*(undefined4 *)(iVar1 + 0xc),0.0,0.0,0);
+		  Core_Animations_GameSpineUiAnimation__get_SkeletonGraphic(*(undefined4 *)(iVar1 + 8),0.0,0.0,0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x060015CC RID: 5580 RVA: 0x00002050 File Offset: 0x00000250
@@ -43,6 +171,37 @@ namespace Gameplay.VortexCombat.View.TurnDisplay
 		[Address(RVA = "0x678E", Offset = "0x678E", VA = "0x678E")]
 		private void Awake()
 		{
+		/* --- GHIDRA: Awake ---
+		void Gameplay_VortexCombat_View_TurnDisplay_TurnStatePointerArrows__Awake
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  int param1_00;
+		  int *param1_01;
+		  int iVar2;
+		  
+		  if (DAT_ram_00a58212 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_TypeInfo);
+		    DAT_ram_00a58212 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x28);
+		  while ((param1_01 = (int *)UnityEngine_UI_Image__set_sprite(param1_00,param2,0),
+		         param1_01 == (int *)0x0 || (System_Action_TypeInfo == *param1_01))) {
+		    iVar2 = func_ii_4329(param1 + 0x28,param1_01,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,System_Action_TypeInfo);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
 		}
 
 		// Token: 0x14000110 RID: 272
@@ -130,6 +289,19 @@ namespace Gameplay.VortexCombat.View.TurnDisplay
 		[Address(RVA = "0x6797", Offset = "0x6797", VA = "0x6797", Slot = "11")]
 		public void SetTurnState(TurnStates state, float timeout)
 		{
+		/* --- GHIDRA: SetTurnState ---
+		void Gameplay_VortexCombat_View_TurnDisplay_TurnStatePointerArrows__SetTurnState
+		               (int param1,undefined4 param2)
+		
+		{
+		  if (*(int *)(param1 + 0x24) != 0) {
+		    func_ii_20511(param1,*(int *)(param1 + 0x24),0);
+		  }
+		  *(undefined4 *)(param1 + 0x24) = 0;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x060015D6 RID: 5590 RVA: 0x00002050 File Offset: 0x00000250
@@ -137,6 +309,17 @@ namespace Gameplay.VortexCombat.View.TurnDisplay
 		[Address(RVA = "0x6798", Offset = "0x6798", VA = "0x6798", Slot = "12")]
 		public void Stop()
 		{
+		/* --- GHIDRA: Stop ---
+		void Gameplay_VortexCombat_View_TurnDisplay_TurnStatePointerArrows__Stop
+		               (int param1,undefined4 param2)
+		
+		{
+		  *(undefined4 *)(param1 + 0x18) = 0x40a00000;
+		  UnityEngine_RectTransform__GetParentSize(param1,0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x060015D7 RID: 5591 RVA: 0x00002050 File Offset: 0x00000250
@@ -282,4 +465,157 @@ namespace Gameplay.VortexCombat.View.TurnDisplay
 			private bool _visible;
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: add_TimeOutEvent ---
+		void Gameplay_VortexCombat_View_TurnDisplay_TurnStatePointerArrows__add_TimeOutEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  int param1_00;
+		  int *param1_01;
+		  int iVar2;
+		  
+		  if (DAT_ram_00a58213 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_TypeInfo);
+		    DAT_ram_00a58213 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x28);
+		  while ((param1_01 = (int *)func_ii_7048(param1_00,param2,0), param1_01 == (int *)0x0 ||
+		         (System_Action_TypeInfo == *param1_01))) {
+		    iVar2 = func_ii_4329(param1 + 0x28,param1_01,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,System_Action_TypeInfo);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: remove_TimeOutEvent ---
+		void Gameplay_VortexCombat_View_TurnDisplay_TurnStatePointerArrows__remove_TimeOutEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  int param1_00;
+		  int *param1_01;
+		  int iVar2;
+		  
+		  if (DAT_ram_00a58214 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_TypeInfo);
+		    DAT_ram_00a58214 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x2c);
+		  while ((param1_01 = (int *)UnityEngine_UI_Image__set_sprite(param1_00,param2,0),
+		         param1_01 == (int *)0x0 || (System_Action_TypeInfo == *param1_01))) {
+		    iVar2 = func_ii_4329(param1 + 0x2c,param1_01,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,System_Action_TypeInfo);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: add_TurnStateChangedEvent ---
+		void Gameplay_VortexCombat_View_TurnDisplay_TurnStatePointerArrows__add_TurnStateChangedEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  int param1_00;
+		  int *param1_01;
+		  int iVar2;
+		  
+		  if (DAT_ram_00a58215 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_TypeInfo);
+		    DAT_ram_00a58215 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x2c);
+		  while ((param1_01 = (int *)func_ii_7048(param1_00,param2,0), param1_01 == (int *)0x0 ||
+		         (System_Action_TypeInfo == *param1_01))) {
+		    iVar2 = func_ii_4329(param1 + 0x2c,param1_01,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,System_Action_TypeInfo);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: get_TurnState ---
+		void Gameplay_VortexCombat_View_TurnDisplay_TurnStatePointerArrows__get_TurnState
+		               (int *param1,int param2,undefined4 param3)
+		
+		{
+		  if (param2 != param1[8]) {
+		    param1[8] = param2;
+		    (**(code **)((ulonglong)*(uint *)(*param1 + 0x128) * 4))(param1,*(undefined4 *)(*param1 + 300));
+		  }
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_GameAudio ---
+		void Gameplay_VortexCombat_View_TurnDisplay_TurnStatePointerArrows__set_GameAudio
+		               (int *param1,int param2,float param3,undefined4 param4)
+		
+		{
+		  int iVar1;
+		  
+		  if (DAT_ram_00a58216 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Utils_BackTime_TypeInfo);
+		    DAT_ram_00a58216 = '\x01';
+		  }
+		  if (param2 != param1[8]) {
+		    param1[8] = param2;
+		    (**(code **)((ulonglong)*(uint *)(*param1 + 0x128) * 4))(param1,*(undefined4 *)(*param1 + 300));
+		  }
+		  iVar1 = unnamed_function_1417(Utils_BackTime_TypeInfo);
+		  Core_Extensions_Dict_DictExt__BinarySearch_object__uint_(iVar1,param3,0);
+		  param1[7] = iVar1;
+		  if (param1[9] == 0) {
+		    param1[9] = 0;
+		    if (DAT_ram_00a58210 == '\0') {
+		      Mono_Security_ASN1__get_Item
+		                (&
+		                 Gameplay_VortexCombat_View_TurnDisplay_TurnStatePointerArrows__HandleBackTimeCoroutine_d__9_TypeInfo
+		                );
+		      DAT_ram_00a58210 = '\x01';
+		    }
+		    iVar1 = unnamed_function_1417
+		                      (
+		                      Gameplay_VortexCombat_View_TurnDisplay_TurnStatePointerArrows__HandleBackTimeCoroutine_d__9_TypeInfo
+		                      );
+		    *(int **)(iVar1 + 0x10) = param1;
+		    *(undefined4 *)(iVar1 + 8) = 0;
+		    iVar1 = UnityEngine_MonoBehaviour__StartCoroutine(param1,iVar1,0);
+		    param1[9] = iVar1;
+		  }
+		  return;
+		}
+		*/
+
 }

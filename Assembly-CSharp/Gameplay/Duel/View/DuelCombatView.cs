@@ -20,6 +20,20 @@ namespace Gameplay.Duel.View
 		[Address(RVA = "0x828E", Offset = "0x828E", VA = "0x828E")]
 		public DuelCombatView()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_Duel_View_DuelCombatView___ctor(undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a57bcb == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_UI_MonoBehaviourWithStates_DuelStates_State___ctor__);
+		    DAT_ram_00a57bcb = '\x01';
+		  }
+		  ScreenAdaptation_Common_AppSize__Update
+		            (param1,Method_UI_MonoBehaviourWithStates_DuelStates_State___ctor__);
+		  return;
+		}
+		*/
+
 		}
 	}
 }

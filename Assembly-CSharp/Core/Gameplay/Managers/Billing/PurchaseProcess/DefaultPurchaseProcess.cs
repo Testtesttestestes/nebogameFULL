@@ -14,6 +14,20 @@ namespace Core.Gameplay.Managers.Billing.PurchaseProcess
 		[Address(RVA = "0xB80E", Offset = "0xB80E", VA = "0xB80E")]
 		public DefaultPurchaseProcess(AbstractBillingController controller)
 		{
+		/* --- GHIDRA: .ctor ---
+		void Core_Gameplay_Managers_Billing_PurchaseProcess_DefaultPurchaseProcess___ctor
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  int iVar1;
+		  
+		  iVar1 = **(int **)(param1 + 8);
+		  (**(code **)((ulonglong)*(uint *)(iVar1 + 0x128) * 4))
+		            (*(int **)(param1 + 8),param2,*(undefined4 *)(iVar1 + 300));
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06006D26 RID: 27942 RVA: 0x00002050 File Offset: 0x00000250

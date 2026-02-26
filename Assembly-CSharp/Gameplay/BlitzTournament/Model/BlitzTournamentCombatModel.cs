@@ -73,4 +73,146 @@ namespace Gameplay.BlitzTournament.Model
 			}
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_WinnerId ---
+		void Gameplay_BlitzTournament_Model_BlitzTournamentCombatModel__get_WinnerId
+		               (int param1,undefined8 param2,undefined4 param3)
+		
+		{
+		  *(undefined8 *)(param1 + 0x68) = param2;
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_WinnerId ---
+		longlong Gameplay_BlitzTournament_Model_BlitzTournamentCombatModel__set_WinnerId
+		                   (int *param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  longlong lVar2;
+		  int iVar3;
+		  undefined4 uVar4;
+		  int *piVar5;
+		  longlong lVar6;
+		  int local_30;
+		  undefined8 *local_2c;
+		  undefined8 local_28;
+		  undefined8 local_20;
+		  longlong local_18;
+		  undefined8 local_10;
+		  undefined8 local_8;
+		  
+		  if (DAT_ram_00a608ae == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_Dictionary_ulong__CombatPlayer__GetEnumerator__);
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_System_Collections_Generic_Dictionary_Enumerator_ulong__CombatPlayer__Dispose__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_System_Collections_Generic_Dictionary_Enumerator_ulong__CombatPlayer__MoveNext__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_System_Collections_Generic_Dictionary_Enumerator_ulong__CombatPlayer__get_Current__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_KeyValuePair_ulong__CombatPlayer__get_Key__);
+		    DAT_ram_00a608ae = '\x01';
+		  }
+		  local_8 = 0;
+		  local_10 = 0;
+		  local_18 = 0;
+		  local_20 = 0;
+		  local_28 = 0;
+		  System_Collections_Generic_Dictionary_ulong__ulong___FindEntry
+		            (&local_28,param1[7],
+		             Method_System_Collections_Generic_Dictionary_ulong__CombatPlayer__GetEnumerator__);
+		  local_30 = 0;
+		  local_2c = &local_28;
+		  do {
+		    DAT_ram_009d3e38 = 0;
+		    iVar3 = import::env::invoke_iii
+		                      (s_struct_Uniforms___color__array<v_ram_000017c8 + 0x2d5,&local_28,
+		                       Method_System_Collections_Generic_Dictionary_Enumerator_ulong__CombatPlayer__MoveNext__
+		                      );
+		    lVar2 = local_18;
+		    iVar1 = DAT_ram_009d3e38;
+		    DAT_ram_009d3e38 = 0;
+		    if (iVar1 == 1) {
+		      uVar4 = import::env::__cxa_find_matching_catch_3(&DAT_ram_0072c9c8);
+		code_r0x81cf3d7d:
+		      iVar1 = global_1;
+		      iVar3 = import::env::llvm_eh_typeid_for(&DAT_ram_0072c9c8);
+		      if (iVar1 == iVar3) {
+		        piVar5 = (int *)import::env::__cxa_begin_catch(uVar4);
+		        iVar3 = *piVar5;
+		        DAT_ram_009d3e38 = 0;
+		        local_30 = iVar3;
+		        import::env::invoke_v(0x123);
+		        iVar1 = DAT_ram_009d3e38;
+		        DAT_ram_009d3e38 = 0;
+		        if (iVar1 != 1) {
+		          if (iVar3 == 0) {
+		            DAT_ram_009d3e38 = 0;
+		            return 0;
+		          }
+		          System_Data_DataSet__ValidateLocaleConstraint(iVar3);
+		          do {
+		            halt_trap();
+		          } while( true );
+		        }
+		        uVar4 = import::env::__cxa_find_matching_catch_2();
+		      }
+		      DAT_ram_009d3e38 = 0;
+		      import::env::invoke_ii(s___Scripting__UnityEngine__Playab_ram_000036f4 + 0xb,&local_30);
+		      iVar1 = DAT_ram_009d3e38;
+		      DAT_ram_009d3e38 = 0;
+		      if (iVar1 != 1) {
+		        import::env::__resumeException(uVar4);
+		        do {
+		          halt_trap();
+		        } while( true );
+		      }
+		      import::env::__cxa_find_matching_catch_3(0);
+		      unnamed_function_937();
+		      do {
+		        halt_trap();
+		      } while( true );
+		    }
+		    if (iVar3 == 0) {
+		      DAT_ram_009d3e38 = 0;
+		      return 0;
+		    }
+		    DAT_ram_009d3e38 = 0;
+		    uVar4 = import::env::invoke_iii
+		                      (*(undefined4 *)(*param1 + 0x100),param1,*(undefined4 *)(*param1 + 0x104));
+		    iVar1 = DAT_ram_009d3e38;
+		    DAT_ram_009d3e38 = 0;
+		    if (iVar1 == 1) {
+		      uVar4 = import::env::__cxa_find_matching_catch_3(&DAT_ram_0072c9c8);
+		      goto code_r0x81cf3d7d;
+		    }
+		    DAT_ram_009d3e38 = 0;
+		    lVar6 = unnamed_function_184054(s_struct_Uniforms___color__array<v_ram_000017c8 + 0x357,uVar4,0)
+		    ;
+		    iVar1 = DAT_ram_009d3e38;
+		    DAT_ram_009d3e38 = 0;
+		    if (iVar1 == 1) {
+		      uVar4 = import::env::__cxa_find_matching_catch_3(&DAT_ram_0072c9c8);
+		      goto code_r0x81cf3d7d;
+		    }
+		    if (lVar2 != lVar6) {
+		      DAT_ram_009d3e38 = 0;
+		      return lVar2;
+		    }
+		  } while( true );
+		}
+		*/
+
 }

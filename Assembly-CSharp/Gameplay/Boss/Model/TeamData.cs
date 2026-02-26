@@ -596,4 +596,408 @@ namespace Gameplay.Boss.Model
 			private TeamInfo.Types.CaptainInfo _rawCaptainInfo;
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: set_Captain ---
+		uint Gameplay_Boss_Model_TeamData__set_Captain(int param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a57890 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_List_TeamData_TeamAssistantData__get_Count__);
+		    DAT_ram_00a57890 = '\x01';
+		  }
+		  return (uint)(*(int *)(*(int *)(param1 + 0x14) + 0xc) < 5);
+		}
+		*/
+
+
+		/* --- GHIDRA: get_HasEmptySlots ---
+		void Gameplay_Boss_Model_TeamData__get_HasEmptySlots(int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  int param1_00;
+		  int *param1_01;
+		  int iVar2;
+		  
+		  if (DAT_ram_00a57891 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_TypeInfo);
+		    DAT_ram_00a57891 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x1c);
+		  while ((param1_01 = (int *)UnityEngine_UI_Image__set_sprite(param1_00,param2,0),
+		         param1_01 == (int *)0x0 || (System_Action_TypeInfo == *param1_01))) {
+		    iVar2 = func_ii_4329(param1 + 0x1c,param1_01,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,System_Action_TypeInfo);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: add_CaptainRatingChangedEvent ---
+		void Gameplay_Boss_Model_TeamData__add_CaptainRatingChangedEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  int param1_00;
+		  int *param1_01;
+		  int iVar2;
+		  
+		  if (DAT_ram_00a57892 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_TypeInfo);
+		    DAT_ram_00a57892 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x1c);
+		  while ((param1_01 = (int *)func_ii_7048(param1_00,param2,0), param1_01 == (int *)0x0 ||
+		         (System_Action_TypeInfo == *param1_01))) {
+		    iVar2 = func_ii_4329(param1 + 0x1c,param1_01,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,System_Action_TypeInfo);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: get_CaptainRating ---
+		void Gameplay_Boss_Model_TeamData__get_CaptainRating(int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  int iVar1;
+		  
+		  *(undefined4 *)(param1 + 0x20) = param2;
+		  iVar1 = *(int *)(param1 + 0x1c);
+		  if (iVar1 != 0) {
+		    (**(code **)((ulonglong)*(uint *)(iVar1 + 0xc) * 4))
+		              (*(undefined4 *)(iVar1 + 0x20),*(undefined4 *)(iVar1 + 0x14));
+		  }
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_IsMyTeam ---
+		undefined8 Gameplay_Boss_Model_TeamData__set_IsMyTeam(int param1,undefined4 param2)
+		
+		{
+		  return *(undefined8 *)(*(int *)(param1 + 0x34) + 0x20);
+		}
+		*/
+
+
+		/* --- GHIDRA: get_TeamId ---
+		undefined8 Gameplay_Boss_Model_TeamData__get_TeamId(int param1,undefined4 param2)
+		
+		{
+		  if (*(int *)(param1 + 0x20) != 0) {
+		    return *(undefined8 *)(*(int *)(param1 + 0x20) + 0x20);
+		  }
+		  return 0;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_MyRatingPlace ---
+		void Gameplay_Boss_Model_TeamData__get_MyRatingPlace
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4,undefined4 param5)
+		
+		{
+		  undefined4 uVar1;
+		  longlong lVar2;
+		  longlong lVar3;
+		  int iVar4;
+		  
+		  if (DAT_ram_00a57894 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_List_TeamData_TeamAssistantData___ctor__);
+		    Mono_Security_ASN1__get_Item
+		              (&System_Collections_Generic_List_TeamData_TeamAssistantData__TypeInfo);
+		    DAT_ram_00a57894 = '\x01';
+		  }
+		  uVar1 = unnamed_function_1417
+		                    (System_Collections_Generic_List_TeamData_TeamAssistantData__TypeInfo);
+		  GAFInternal_Objects_GAFBakedObjectImpl__get_isVisible
+		            (uVar1,Method_System_Collections_Generic_List_TeamData_TeamAssistantData___ctor__);
+		  *(undefined4 *)(param1 + 0x14) = uVar1;
+		  *(undefined4 *)(param1 + 8) = param3;
+		  Gameplay_Boss_Model_TeamData__get_RawTeamInfo(param1,param2,param1);
+		  iVar4 = **(int **)(param1 + 0x18);
+		  uVar1 = (**(code **)((ulonglong)*(uint *)(iVar4 + 0xe0) * 4))
+		                    (*(int **)(param1 + 0x18),*(undefined4 *)(iVar4 + 0xe4));
+		  lVar2 = System_Collections_Generic_LinkedList_Enumerator_object___MoveNext(uVar1,0);
+		  lVar3 = System_Collections_Generic_LinkedList_Enumerator_object___MoveNext(param4,0);
+		  *(bool *)(param1 + 0x30) = lVar2 == lVar3;
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_RawTeamInfo ---
+		/* WARNING: Removing unreachable block (ram,0x80ded559) */
+		
+		void Gameplay_Boss_Model_TeamData__get_RawTeamInfo(int param1,int param2,undefined4 param3)
+		
+		{
+		  undefined4 in_register_20000004;
+		  int iVar1;
+		  undefined4 *puVar2;
+		  int *piVar3;
+		  uint *puVar4;
+		  float param2_00;
+		  undefined4 uVar5;
+		  int iVar6;
+		  undefined4 uVar7;
+		  int param2_01;
+		  undefined8 uVar8;
+		  undefined8 uVar9;
+		  int *piVar10;
+		  uint uVar11;
+		  int local_c;
+		  int **local_8;
+		  int *local_4;
+		  
+		  if (DAT_ram_00a57895 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Utils_BackTime_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&System_IDisposable_TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&System_Collections_Generic_IEnumerator_TeamInfo_Types_MercenaryInfo__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&System_Collections_IEnumerator_TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_List_TeamData_TeamAssistantData__Add__);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_List_TeamData_TeamAssistantData__Clear__);
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Google_Protobuf_Collections_RepeatedField_TeamInfo_Types_MercenaryInfo__GetEnumerator__
+		              );
+		    Mono_Security_ASN1__get_Item(&Core_Data_Skills_Skill_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Gameplay_Boss_Model_TeamData_TeamAssistantData_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Gameplay_Boss_Model_TeamData_TeamCaptainData_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Utils_TimeUtils_TypeInfo);
+		    DAT_ram_00a57895 = '\x01';
+		  }
+		  *(int *)(param1 + 0x34) = param2;
+		  uVar5 = *(undefined4 *)(param2 + 0x18);
+		  uVar8 = *(undefined8 *)(param2 + 0x10);
+		  uVar9 = *(undefined8 *)(param2 + 0x20);
+		  iVar1 = unnamed_function_1417(Gameplay_Boss_Model_TeamData_TeamCaptainData_TypeInfo);
+		  *(undefined8 *)(iVar1 + 0x10) = uVar9;
+		  *(undefined8 *)(iVar1 + 8) = uVar8;
+		  Gameplay_Boss_Model_TeamData_TeamCaptainData__get_RawCaptainInfo(iVar1,uVar5,iVar1);
+		  *(int *)(param1 + 0x18) = iVar1;
+		  iVar1 = *(int *)(param1 + 0x14);
+		  iVar6 = *(int *)(iVar1 + 0xc);
+		  *(undefined4 *)(iVar1 + 0xc) = 0;
+		  *(int *)(iVar1 + 0x10) = *(int *)(iVar1 + 0x10) + 1;
+		  if (0 < iVar6) {
+		    func_ii_2064(*(undefined4 *)(iVar1 + 8),0,iVar6,0);
+		  }
+		  iVar1 = unnamed_function_1417(Core_Data_Skills_Skill_TypeInfo);
+		  *(int *)(param1 + 0x10) = iVar1;
+		  uVar5 = *(undefined4 *)(*(int *)(param1 + 8) + 0x24);
+		  *(undefined8 *)(iVar1 + 0x10) = 0;
+		  *(undefined4 *)(iVar1 + 8) = uVar5;
+		  local_4 = (int *)Google_Protobuf_Collections_RepeatedField_float___Equals
+		                             (*(undefined4 *)(*(int *)(param1 + 0x34) + 0x28),
+		                              Method_Google_Protobuf_Collections_RepeatedField_TeamInfo_Types_MercenaryInfo__GetEnumerator__
+		                             );
+		  local_c = 0;
+		  local_8 = &local_4;
+		code_r0x80ded32c:
+		  piVar3 = local_4;
+		  iVar1 = *local_4;
+		  if (*(ushort *)(iVar1 + 0xb6) != 0) {
+		    uVar11 = 0;
+		    do {
+		      piVar10 = (int *)(*(int *)(iVar1 + 0x58) + uVar11 * 8);
+		      if (System_Collections_IEnumerator_TypeInfo == *piVar10) {
+		        puVar2 = (undefined4 *)(iVar1 + piVar10[1] * 8 + 0xc0);
+		        goto code_r0x80ded3c4;
+		      }
+		      uVar11 = uVar11 + 1;
+		    } while (*(ushort *)(iVar1 + 0xb6) != uVar11);
+		  }
+		  DAT_ram_009d3e38 = 0;
+		  puVar2 = (undefined4 *)
+		           import::env::invoke_iiii
+		                     (s_Allocator__0___Blocksize__1__mus_ram_00000421 + 0x18,local_4,
+		                      System_Collections_IEnumerator_TypeInfo,0);
+		  if (DAT_ram_009d3e38 == 1) {
+		code_r0x80ded408:
+		    DAT_ram_009d3e38 = 0;
+		    uVar5 = import::env::__cxa_find_matching_catch_3(&DAT_ram_0072c9c8);
+		    goto code_r0x80ded6a5;
+		  }
+		code_r0x80ded3c4:
+		  DAT_ram_009d3e38 = 0;
+		  iVar1 = import::env::invoke_iii(*puVar2,piVar3,puVar2[1]);
+		  piVar3 = local_4;
+		  if (DAT_ram_009d3e38 == 1) goto code_r0x80ded408;
+		  if (iVar1 == 0) goto code_r0x80ded6ee;
+		  iVar1 = *local_4;
+		  if (*(ushort *)(iVar1 + 0xb6) != 0) {
+		    uVar11 = 0;
+		    do {
+		      piVar10 = (int *)(*(int *)(iVar1 + 0x58) + uVar11 * 8);
+		      if (System_Collections_Generic_IEnumerator_TeamInfo_Types_MercenaryInfo__TypeInfo == *piVar10)
+		      {
+		        puVar2 = (undefined4 *)(iVar1 + piVar10[1] * 8 + 0xc0);
+		        goto code_r0x80ded4ad;
+		      }
+		      uVar11 = uVar11 + 1;
+		    } while (*(ushort *)(iVar1 + 0xb6) != uVar11);
+		  }
+		  DAT_ram_009d3e38 = 0;
+		  puVar2 = (undefined4 *)
+		           import::env::invoke_iiii
+		                     (s_Allocator__0___Blocksize__1__mus_ram_00000421 + 0x18,local_4,
+		                      System_Collections_Generic_IEnumerator_TeamInfo_Types_MercenaryInfo__TypeInfo,
+		                      0);
+		  if (DAT_ram_009d3e38 == 1) {
+		code_r0x80ded67f:
+		    DAT_ram_009d3e38 = 0;
+		    uVar5 = import::env::__cxa_find_matching_catch_3(&DAT_ram_0072c9c8);
+		    goto code_r0x80ded6a5;
+		  }
+		code_r0x80ded4ad:
+		  DAT_ram_009d3e38 = 0;
+		  uVar5 = import::env::invoke_iii(*puVar2,piVar3,puVar2[1]);
+		  if (DAT_ram_009d3e38 == 1) goto code_r0x80ded67f;
+		  uVar8 = *(undefined8 *)(param2 + 0x10);
+		  uVar7 = *(undefined4 *)(param1 + 8);
+		  uVar9 = *(undefined8 *)(*(int *)(param1 + 0x34) + 0x20);
+		  DAT_ram_009d3e38 = 0;
+		  iVar1 = import::env::invoke_ii
+		                    (s_var<private>_posTex__array<vec4<_ram_00000655 + 0x199,
+		                     Gameplay_Boss_Model_TeamData_TeamAssistantData_TypeInfo);
+		  if (DAT_ram_009d3e38 == 1) {
+		code_r0x80ded689:
+		    DAT_ram_009d3e38 = 0;
+		    uVar5 = import::env::__cxa_find_matching_catch_3(&DAT_ram_0072c9c8);
+		    goto code_r0x80ded6a5;
+		  }
+		  *(undefined4 *)(iVar1 + 0x18) = uVar7;
+		  *(undefined8 *)(iVar1 + 0x10) = uVar9;
+		  *(undefined8 *)(iVar1 + 8) = uVar8;
+		  DAT_ram_009d3e38 = 0;
+		  import::env::invoke_viii
+		            (s_struct_Uniforms___color__array<v_ram_000017c8 + 0x368,iVar1,uVar5,iVar1);
+		  iVar6 = Method_System_Collections_Generic_List_TeamData_TeamAssistantData__Add__;
+		  if (DAT_ram_009d3e38 == 1) goto code_r0x80ded689;
+		  param2_01 = *(int *)(param1 + 0x14);
+		  *(int *)(param2_01 + 0x10) = *(int *)(param2_01 + 0x10) + 1;
+		  uVar11 = *(uint *)(param2_01 + 0xc);
+		  if (uVar11 < *(uint *)(*(int *)(param2_01 + 8) + 0xc)) {
+		    *(uint *)(param2_01 + 0xc) = uVar11 + 1;
+		    *(int *)(*(int *)(param2_01 + 8) + uVar11 * 4 + 0x10) = iVar1;
+		  }
+		  else {
+		    DAT_ram_009d3e38 = 0;
+		    import::env::invoke_viii
+		              (s_struct_Uniforms___color__array<v_ram_00000aff + 0x6e,param2_01,iVar1,
+		               *(undefined4 *)(*(int *)(*(int *)(iVar6 + 0x10) + 0x60) + 0x38));
+		    iVar6 = DAT_ram_009d3e38;
+		    DAT_ram_009d3e38 = 0;
+		    if (iVar6 == 1) goto code_r0x80ded693;
+		  }
+		  if (*(int *)(iVar1 + 0x24) != 0) {
+		    DAT_ram_009d3e38 = 0;
+		    uVar5 = import::env::invoke_iiii
+		                      (s_struct_Uniforms___color__array<v_ram_000017c8 + 0x369,
+		                       *(undefined4 *)(param1 + 0x10),*(int *)(iVar1 + 0x24),0);
+		    iVar1 = DAT_ram_009d3e38;
+		    DAT_ram_009d3e38 = 0;
+		    if (iVar1 == 1) {
+		      uVar5 = import::env::__cxa_find_matching_catch_3(&DAT_ram_0072c9c8);
+		      goto code_r0x80ded6a5;
+		    }
+		    *(undefined4 *)(param1 + 0x10) = uVar5;
+		  }
+		  goto code_r0x80ded32c;
+		code_r0x80ded693:
+		  uVar5 = import::env::__cxa_find_matching_catch_3(&DAT_ram_0072c9c8);
+		code_r0x80ded6a5:
+		  iVar1 = global_1;
+		  iVar6 = import::env::llvm_eh_typeid_for(&DAT_ram_0072c9c8);
+		  if (iVar1 == iVar6) {
+		    piVar3 = (int *)import::env::__cxa_begin_catch(uVar5);
+		    local_c = *piVar3;
+		    DAT_ram_009d3e38 = 0;
+		    import::env::invoke_v(0x123);
+		    iVar1 = DAT_ram_009d3e38;
+		    DAT_ram_009d3e38 = 0;
+		    if (iVar1 != 1) {
+		code_r0x80ded6ee:
+		      DAT_ram_009d3e38 = 0;
+		      piVar3 = *local_8;
+		      if (piVar3 != (int *)0x0) {
+		        uVar11 = 0;
+		        iVar1 = *piVar3;
+		        if (*(ushort *)(iVar1 + 0xb6) != 0) {
+		          do {
+		            if (System_IDisposable_TypeInfo == *(int *)(*(int *)(iVar1 + 0x58) + uVar11 * 8)) {
+		              puVar4 = (uint *)(iVar1 + *(int *)(*(int *)(iVar1 + 0x58) + uVar11 * 8 + 4) * 8 + 0xc0
+		                               );
+		              goto code_r0x80ded769;
+		            }
+		            uVar11 = uVar11 + 1;
+		          } while (*(ushort *)(iVar1 + 0xb6) != uVar11);
+		        }
+		        puVar4 = (uint *)func_ii_1080(piVar3,System_IDisposable_TypeInfo,0);
+		code_r0x80ded769:
+		        (**(code **)((ulonglong)*puVar4 * 4))(CONCAT44(in_register_20000004,piVar3),puVar4[1]);
+		      }
+		      if (local_c != 0) {
+		        System_Data_DataSet__ValidateLocaleConstraint(local_c);
+		        do {
+		          halt_trap();
+		        } while( true );
+		      }
+		      uVar8 = *(undefined8 *)(*(int *)(param1 + 0x34) + 0x30);
+		      if (*(int *)(Utils_TimeUtils_TypeInfo + 0x74) == 0) {
+		        func_ii_306000(Utils_TimeUtils_TypeInfo);
+		      }
+		      param2_00 = func_ii_7331(uVar8,0);
+		      uVar5 = unnamed_function_1417(Utils_BackTime_TypeInfo);
+		      Core_Extensions_Dict_DictExt__BinarySearch_object__uint_(uVar5,param2_00,0);
+		      *(undefined4 *)(param1 + 0xc) = uVar5;
+		      return;
+		    }
+		    uVar5 = import::env::__cxa_find_matching_catch_2();
+		  }
+		  DAT_ram_009d3e38 = 0;
+		  import::env::invoke_ii(s_struct_Uniforms___color__array<v_ram_000017c8 + 0x36a,&local_c);
+		  iVar1 = DAT_ram_009d3e38;
+		  DAT_ram_009d3e38 = 0;
+		  if (iVar1 != 1) {
+		    import::env::__resumeException(uVar5);
+		    do {
+		      halt_trap();
+		    } while( true );
+		  }
+		  import::env::__cxa_find_matching_catch_3(0);
+		  unnamed_function_937();
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
 }

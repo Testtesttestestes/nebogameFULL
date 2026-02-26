@@ -20,6 +20,25 @@ namespace Core.Errors.Expected
 		[Address(RVA = "0xAE56", Offset = "0xAE56", VA = "0xAE56")]
 		public ExpectedEndlessOptionsBillingErrors()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Core_Errors_Expected_ExpectedEndlessOptionsBillingErrors___ctor(undefined4 param1)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a5a36f == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Core_Errors_Expected_ExpectedEndlessOptionsBillingErrors___c_TypeInfo);
+		    DAT_ram_00a5a36f = '\x01';
+		  }
+		  uVar1 = unnamed_function_1417
+		                    (Core_Errors_Expected_ExpectedEndlessOptionsBillingErrors___c_TypeInfo);
+		  **(undefined4 **)(Core_Errors_Expected_ExpectedEndlessOptionsBillingErrors___c_TypeInfo + 0x5c) =
+		       uVar1;
+		  return;
+		}
+		*/
+
 		}
 	}
 }

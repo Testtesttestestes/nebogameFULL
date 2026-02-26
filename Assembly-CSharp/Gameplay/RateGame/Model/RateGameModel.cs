@@ -92,6 +92,62 @@ namespace Gameplay.RateGame.Model
 		[Address(RVA = "0x7421", Offset = "0x7421", VA = "0x7421", Slot = "5")]
 		public override void Dispose()
 		{
+		/* --- GHIDRA: Dispose ---
+		void Gameplay_RateGame_Model_RateGameModel__Dispose
+		               (int param1,int *param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  uint uVar1;
+		  uint *puVar2;
+		  undefined4 uVar3;
+		  int iVar4;
+		  
+		  if (DAT_ram_00a580c9 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_Gameplay_IGame_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_27307);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_27308);
+		    DAT_ram_00a580c9 = '\x01';
+		  }
+		  Unity_Services_Core_Environments_Internal_Environments__get_Current(param1,param3,0);
+		  *(int **)(param1 + 0x14) = param2;
+		  iVar4 = *param2;
+		  if (*(ushort *)(iVar4 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (Core_Gameplay_IGame_TypeInfo == *(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8)) {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8 + 4) * 8 + iVar4 + 0x178);
+		        goto code_r0x80e9f584;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar4 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(param2,Core_Gameplay_IGame_TypeInfo,0x17);
+		code_r0x80e9f584:
+		  uVar1 = 0;
+		  uVar3 = (**(code **)((ulonglong)*puVar2 * 4))(param2,puVar2[1]);
+		  uVar3 = Newtonsoft_Json_Converters_XmlDocumentTypeWrapper__get_System(uVar3,0);
+		  uVar3 = Core_Extensions_Dict_DictExt__GetUserBuildingLevelDic(uVar3,StringLiteral_27308,0);
+		  *(undefined4 *)(param1 + 0xc) = uVar3;
+		  iVar4 = *param2;
+		  if (*(ushort *)(iVar4 + 0xb6) != 0) {
+		    do {
+		      if (Core_Gameplay_IGame_TypeInfo == *(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8)) {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8 + 4) * 8 + iVar4 + 0x178);
+		        goto code_r0x80e9f61f;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar4 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(param2,Core_Gameplay_IGame_TypeInfo,0x17);
+		code_r0x80e9f61f:
+		  uVar3 = (**(code **)((ulonglong)*puVar2 * 4))(param2,puVar2[1]);
+		  uVar3 = Newtonsoft_Json_Converters_XmlDocumentTypeWrapper__get_System(uVar3,0);
+		  uVar3 = Core_Extensions_Dict_DictExt__GetUserBuildingLevelDic(uVar3,StringLiteral_27307,0);
+		  *(undefined4 *)(param1 + 0x10) = uVar3;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x060022CB RID: 8907 RVA: 0x00002050 File Offset: 0x00000250
@@ -101,4 +157,17 @@ namespace Gameplay.RateGame.Model
 		{
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: set_Game ---
+		void Gameplay_RateGame_Model_RateGameModel__set_Game(int param1,undefined4 param2)
+		
+		{
+		  *(undefined4 *)(param1 + 0x14) = 0;
+		  Core_ExternalIncomingScriptCall_CallbackItem___Il2CppFullySharedGenericType____ctor(param1,0);
+		  return;
+		}
+		*/
+
 }

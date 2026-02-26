@@ -13,6 +13,31 @@ namespace Gameplay.GdEvents.View.EventsList
 		[Address(RVA = "0x7CAF", Offset = "0x7CAF", VA = "0x7CAF")]
 		public CellModel()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Com_TheFallenGames_OSA_Demos_GridWithCategories_CellModel___ctor(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a541b8 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_UnityEngine_Component_GetComponent_Image___);
+		    Mono_Security_ASN1__get_Item(&Method_UnityEngine_Component_GetComponent_Text___);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_16239);
+		    DAT_ram_00a541b8 = '\x01';
+		  }
+		  Com_TheFallenGames_OSA_CustomAdapters_GridView_CellViewsHolder__InitWithExistingRootPrefab
+		            (param1,0);
+		  uVar1 = UnityEngine_Transform__FindRelativeTransformWithPath
+		                    (*(undefined4 *)(param1 + 0x10),StringLiteral_16239,0);
+		  uVar1 = func_ii_5677(uVar1,Method_UnityEngine_Component_GetComponent_Text___);
+		  *(undefined4 *)(param1 + 0x18) = uVar1;
+		  uVar1 = func_ii_5677(*(undefined4 *)(param1 + 0x10),
+		                       Method_UnityEngine_Component_GetComponent_Image___);
+		  *(undefined4 *)(param1 + 0x1c) = uVar1;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0400182B RID: 6187

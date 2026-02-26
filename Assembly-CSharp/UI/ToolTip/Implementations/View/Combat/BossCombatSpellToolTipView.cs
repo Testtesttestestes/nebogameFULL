@@ -15,6 +15,26 @@ namespace UI.ToolTip.Implementations.View.Combat
 		[Address(RVA = "0x5D3F", Offset = "0x5D3F", VA = "0x5D3F", Slot = "11")]
 		protected override void HandleModifiers()
 		{
+		/* --- GHIDRA: HandleModifiers ---
+		void UI_ToolTip_Implementations_View_Combat_BossCombatSpellToolTipView__HandleModifiers
+		               (undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a59981 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_ToolTip_Implementations_View_Combat_AbstractCombatSpellToolTipView_BossCombatSpellData___ctor__
+		              );
+		    DAT_ram_00a59981 = '\x01';
+		  }
+		  Gameplay_Combat_View_Spells_AbstractCombatSpellButton_object___set_Selected
+		            (param1,
+		             Method_UI_ToolTip_Implementations_View_Combat_AbstractCombatSpellToolTipView_BossCombatSpellData___ctor__
+		            );
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x060009E0 RID: 2528 RVA: 0x00002050 File Offset: 0x00000250

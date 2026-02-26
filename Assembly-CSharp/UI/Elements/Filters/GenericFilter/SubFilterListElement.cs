@@ -77,6 +77,32 @@ namespace UI.Elements.Filters.GenericFilter
 		[Address(RVA = "0x60AD", Offset = "0x60AD", VA = "0x60AD")]
 		private void Awake()
 		{
+		/* --- GHIDRA: Awake ---
+		void UI_Elements_Filters_GenericFilter_SubFilterListElement__Awake(int param1,undefined4 param2)
+		
+		{
+		  undefined4 param1_00;
+		  undefined4 param1_01;
+		  
+		  if (DAT_ram_00a6399f == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Elements_Filters_GenericFilter_SubFilterListElement_ButtonClickedEventHandler__
+		              );
+		    Mono_Security_ASN1__get_Item(&UnityEngine_Events_UnityAction_TypeInfo);
+		    DAT_ram_00a6399f = '\x01';
+		  }
+		  param1_01 = *(undefined4 *)(*(int *)(param1 + 0x1c) + 0xb4);
+		  param1_00 = unnamed_function_1417(UnityEngine_Events_UnityAction_TypeInfo);
+		  Utils_ObjectUtils__IsNotNull
+		            (param1_00,param1,
+		             Method_UI_Elements_Filters_GenericFilter_SubFilterListElement_ButtonClickedEventHandler__
+		             ,0);
+		  UnityEngine_Events_UnityAction___ctor(param1_01,param1_00,0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06000E1B RID: 3611 RVA: 0x00002050 File Offset: 0x00000250
@@ -151,4 +177,125 @@ namespace UI.Elements.Filters.GenericFilter
 			public object Data;
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: set_Data ---
+		void UI_Elements_Filters_GenericFilter_SubFilterListElement__set_Data
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a6399c == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_SubFilterListElement__TypeInfo);
+		    DAT_ram_00a6399c = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x24);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = UnityEngine_UI_Image__set_sprite(param1_00,param2,0);
+		    param2_00 = System_Action_SubFilterListElement__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_SubFilterListElement__TypeInfo), iVar2 == 0))
+		    break;
+		    iVar2 = func_ii_4329(param1 + 0x24,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: add_ClickedEvent ---
+		void UI_Elements_Filters_GenericFilter_SubFilterListElement__add_ClickedEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a6399d == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_SubFilterListElement__TypeInfo);
+		    DAT_ram_00a6399d = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x24);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = func_ii_7048(param1_00,param2,0);
+		    param2_00 = System_Action_SubFilterListElement__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_SubFilterListElement__TypeInfo), iVar2 == 0))
+		    break;
+		    iVar2 = func_ii_4329(param1 + 0x24,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: remove_ClickedEvent ---
+		void UI_Elements_Filters_GenericFilter_SubFilterListElement__remove_ClickedEvent
+		               (int param1,int param2,undefined4 param3)
+		
+		{
+		  Core_Extensions_Dict_PortalDicExt__GetCurrencyIcon60x66
+		            (*(undefined4 *)(param1 + 0x10),*(undefined4 *)(param2 + 8),0);
+		  UnityEngine_Component__GetComponentInChildren_object_
+		            (*(undefined4 *)(param1 + 0x18),*(undefined4 *)(param2 + 0xc),0);
+		  *(undefined4 *)(param1 + 0x20) = *(undefined4 *)(param2 + 0x10);
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_Selected ---
+		void UI_Elements_Filters_GenericFilter_SubFilterListElement__set_Selected
+		               (int param1,undefined4 param2)
+		
+		{
+		  undefined4 param1_00;
+		  undefined4 param1_01;
+		  
+		  if (DAT_ram_00a6399e == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Elements_Filters_GenericFilter_SubFilterListElement_ButtonClickedEventHandler__
+		              );
+		    Mono_Security_ASN1__get_Item(&UnityEngine_Events_UnityAction_TypeInfo);
+		    DAT_ram_00a6399e = '\x01';
+		  }
+		  param1_01 = *(undefined4 *)(*(int *)(param1 + 0x1c) + 0xb4);
+		  param1_00 = unnamed_function_1417(UnityEngine_Events_UnityAction_TypeInfo);
+		  Utils_ObjectUtils__IsNotNull
+		            (param1_00,param1,
+		             Method_UI_Elements_Filters_GenericFilter_SubFilterListElement_ButtonClickedEventHandler__
+		             ,0);
+		  Gameplay_Boss_View_CaptainTab_BossInfoView__add_AttackButtonClickEvent(param1_01,param1_00,0);
+		  return;
+		}
+		*/
+
 }

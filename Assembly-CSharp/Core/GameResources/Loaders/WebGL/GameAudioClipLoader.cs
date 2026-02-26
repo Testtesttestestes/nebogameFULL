@@ -12,6 +12,16 @@ namespace Core.GameResources.Loaders.WebGL
 		[Address(RVA = "0xA94B", Offset = "0xA94B", VA = "0xA94B")]
 		public GameAudioClipLoader()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Core_GameResources_Loaders_Android_GameAudioClipLoader___ctor
+		               (undefined4 param1,undefined4 param2)
+		
+		{
+		  Core_GameResources_AbstractGameSpriteAtlasLoader__ReleaseAssetBundle(param1,0);
+		  return;
+		}
+		*/
+
 		}
 	}
 }

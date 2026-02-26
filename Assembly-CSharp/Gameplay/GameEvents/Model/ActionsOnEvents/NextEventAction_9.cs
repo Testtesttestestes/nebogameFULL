@@ -35,4 +35,18 @@ namespace Gameplay.GameEvents.Model.ActionsOnEvents
 		{
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_SortOrder ---
+		void Gameplay_GameEvents_Model_ActionsOnEvents_NextEventAction_9__get_SortOrder
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  Gameplay_GameEvents_Control_GameEventsController__HandleEventActions
+		            (param2,*(undefined4 *)(param1 + 0x10),param1);
+		  return;
+		}
+		*/
+
 }

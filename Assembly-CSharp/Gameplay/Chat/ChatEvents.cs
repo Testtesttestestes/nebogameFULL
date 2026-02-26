@@ -16,6 +16,33 @@ namespace Gameplay.Chat
 		[Address(RVA = "0x91F3", Offset = "0x91F3", VA = "0x91F3")]
 		public ChatEvents()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_Chat_ChatEvents___ctor(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  int *piVar2;
+		  int iVar3;
+		  
+		  if (DAT_ram_00a57acc == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_GameLocalization_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_4176);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_2003);
+		    DAT_ram_00a57acc = '\x01';
+		  }
+		  piVar2 = *(int **)(param1 + 0x14);
+		  if (*(int *)(Core_GameLocalization_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Core_GameLocalization_TypeInfo);
+		  }
+		  uVar1 = func_ii_7508(StringLiteral_4176,1,0,1,0,0,0,0);
+		  uVar1 = Mono_Security_X509_X509Crl_X509CrlEntry___ctor(uVar1,StringLiteral_2003,0);
+		  iVar3 = *piVar2;
+		  (**(code **)((ulonglong)*(uint *)(iVar3 + 0x2d0) * 4))
+		            (piVar2,uVar1,*(undefined4 *)(iVar3 + 0x2d4));
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x04002500 RID: 9472

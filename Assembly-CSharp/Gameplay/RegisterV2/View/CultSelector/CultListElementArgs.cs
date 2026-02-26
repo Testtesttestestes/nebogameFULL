@@ -14,6 +14,26 @@ namespace Gameplay.RegisterV2.View.CultSelector
 		[Address(RVA = "0x72B7", Offset = "0x72B7", VA = "0x72B7")]
 		public CultListElementArgs(CultDic cultDic)
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_RegisterV2_View_CultSelector_CultListElementArgs___ctor
+		               (undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a58380 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Elements_GenericList_SelectorGenericList_CultSelectorListArgs__CultListElement__CultListElementArgs___ctor__
+		              );
+		    DAT_ram_00a58380 = '\x01';
+		  }
+		  UI_Elements_GenericList_SelectedGenericListElement_object___set_Selected
+		            (param1,
+		             Method_UI_Elements_GenericList_SelectorGenericList_CultSelectorListArgs__CultListElement__CultListElementArgs___ctor__
+		            );
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x04001235 RID: 4661

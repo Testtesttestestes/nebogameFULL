@@ -55,6 +55,16 @@ namespace Core.Data.InfoRows
 		[Address(RVA = "0xB0F0", Offset = "0xB0F0", VA = "0xB0F0")]
 		public CommonRow()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Core_Data_InfoRows_CommonRow___ctor(int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  *(undefined4 *)(param1 + 0x10) = param2;
+		  *(undefined4 *)(param1 + 8) = 2;
+		  return;
+		}
+		*/
+
 		}
 	}
 }

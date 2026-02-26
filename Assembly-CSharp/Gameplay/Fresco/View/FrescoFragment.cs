@@ -97,6 +97,27 @@ namespace Gameplay.Fresco.View
 		[Address(RVA = "0x804A", Offset = "0x804A", VA = "0x804A")]
 		private void Start()
 		{
+		/* --- GHIDRA: Start ---
+		void Gameplay_Fresco_View_FrescoFragment__Start(int param1,undefined4 param2)
+		
+		{
+		  undefined4 param1_00;
+		  undefined4 param1_01;
+		  
+		  if (DAT_ram_00a57571 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_PointerEventData__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Method_Gameplay_Fresco_View_FrescoFragment_OnClickEventHandler__);
+		    DAT_ram_00a57571 = '\x01';
+		  }
+		  param1_01 = *(undefined4 *)(param1 + 0x18);
+		  param1_00 = unnamed_function_1417(System_Action_PointerEventData__TypeInfo);
+		  UnityEngine_UIElements_VisualElement__get_layout
+		            (param1_00,param1,Method_Gameplay_Fresco_View_FrescoFragment_OnClickEventHandler__,0);
+		  Com_TheFallenGames_OSA_DataHelpers_SimpleDataHelper_object___get_Count(param1_01,param1_00,0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06002FE5 RID: 12261 RVA: 0x00002050 File Offset: 0x00000250
@@ -104,6 +125,50 @@ namespace Gameplay.Fresco.View
 		[Address(RVA = "0x804B", Offset = "0x804B", VA = "0x804B")]
 		private void OnDestroy()
 		{
+		/* --- GHIDRA: OnDestroy ---
+		void Gameplay_Fresco_View_FrescoFragment__OnDestroy
+		               (int param1,int param2,int param3,undefined4 param4,undefined4 param5)
+		
+		{
+		  undefined4 uVar1;
+		  int iVar2;
+		  uint uVar3;
+		  int param1_00;
+		  undefined4 param1_01;
+		  float param2_00;
+		  
+		  iVar2 = 0;
+		  if (param2 != 0) {
+		    iVar2 = *(int *)(param2 + 0x10);
+		  }
+		  if (DAT_ram_00a57573 == '\0') {
+		    Mono_Security_ASN1__get_Item(&UnityEngine_Object_TypeInfo);
+		    DAT_ram_00a57573 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x14);
+		  param1_01 = *(undefined4 *)(param1_00 + 0x80);
+		  uVar1 = 0;
+		  if (*(int *)(UnityEngine_Object_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(UnityEngine_Object_TypeInfo);
+		  }
+		  uVar3 = UnityEngine_Component__GetComponent_object_(param1_01,0);
+		  UnityEngine_Object__op_Implicit(param1_00,uVar3 & iVar2 != 0,0);
+		  UnityEngine_Object__op_Implicit(*(undefined4 *)(param1 + 0x10),(uint)(iVar2 == 0),0);
+		  param2_00 = 1.0;
+		  if (iVar2 != 1) {
+		    param2_00 = 0.0;
+		  }
+		  Core_Data_MedalData__IsMedalAchieved(*(undefined4 *)(param1 + 0x14),param2_00,0);
+		  *(int *)(param1 + 0x24) = iVar2;
+		  if (param3 != 0) {
+		    uVar1 = *(undefined4 *)(param3 + 0xc);
+		  }
+		  *(undefined4 *)(param1 + 0x1c) = param4;
+		  *(undefined4 *)(param1 + 0x28) = uVar1;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06002FE6 RID: 12262 RVA: 0x00002050 File Offset: 0x00000250
@@ -111,6 +176,20 @@ namespace Gameplay.Fresco.View
 		[Address(RVA = "0x804C", Offset = "0x804C", VA = "0x804C")]
 		public void Init(FrescoCell cell, Protocol.Dic.Fresco.Types.Cell dicCell, [Optional] Action<FrescoFragment> onClick)
 		{
+		/* --- GHIDRA: Init ---
+		void Gameplay_Fresco_View_FrescoFragment__Init(int param1,undefined8 *param2,undefined4 param3)
+		
+		{
+		  undefined8 local_10;
+		  undefined8 local_8;
+		  
+		  local_8 = param2[1];
+		  local_10 = *param2;
+		  UnityEngine_UI_RawImage__get_uvRect(*(undefined4 *)(param1 + 0x14),&local_10,0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06002FE7 RID: 12263 RVA: 0x00002050 File Offset: 0x00000250
@@ -118,6 +197,21 @@ namespace Gameplay.Fresco.View
 		[Address(RVA = "0x804D", Offset = "0x804D", VA = "0x804D")]
 		public void SetUvRect(Rect uvRect)
 		{
+		/* --- GHIDRA: SetUvRect ---
+		void Gameplay_Fresco_View_FrescoFragment__SetUvRect(int param1,int param2,undefined4 param3)
+		
+		{
+		  float param2_00;
+		  
+		  param2_00 = 1.0;
+		  if (param2 == 0) {
+		    param2_00 = 0.0;
+		  }
+		  Core_Data_MedalData__IsMedalAchieved(*(undefined4 *)(param1 + 0x14),param2_00,0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06002FE8 RID: 12264 RVA: 0x00002050 File Offset: 0x00000250
@@ -125,6 +219,37 @@ namespace Gameplay.Fresco.View
 		[Address(RVA = "0x804E", Offset = "0x804E", VA = "0x804E")]
 		public void SetGrayscale(bool grayscale)
 		{
+		/* --- GHIDRA: SetGrayscale ---
+		void Gameplay_Fresco_View_FrescoFragment__SetGrayscale
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  int iVar1;
+		  undefined4 param1_00;
+		  uint param2_00;
+		  
+		  if (DAT_ram_00a57572 == '\0') {
+		    Mono_Security_ASN1__get_Item(&UnityEngine_Object_TypeInfo);
+		    DAT_ram_00a57572 = '\x01';
+		  }
+		  Com_TheFallenGames_OSA_CustomAdapters_TableView_Tuple_Basic_BasicTupleValueViewsHolder__ActivatePanelOnlyFor
+		            (*(undefined4 *)(param1 + 0x14),param2,0);
+		  param1_00 = *(undefined4 *)(param1 + 0x14);
+		  if (*(int *)(UnityEngine_Object_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(UnityEngine_Object_TypeInfo);
+		  }
+		  iVar1 = UnityEngine_Component__GetComponent_object_(param2,0);
+		  if (iVar1 == 0) {
+		    param2_00 = 0;
+		  }
+		  else {
+		    param2_00 = (uint)(*(int *)(param1 + 0x24) != 0);
+		  }
+		  UnityEngine_Object__op_Implicit(param1_00,param2_00,0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06002FE9 RID: 12265 RVA: 0x00002050 File Offset: 0x00000250
@@ -132,6 +257,30 @@ namespace Gameplay.Fresco.View
 		[Address(RVA = "0x804F", Offset = "0x804F", VA = "0x804F")]
 		public void SetTexture(Texture texture)
 		{
+		/* --- GHIDRA: SetTexture ---
+		void Gameplay_Fresco_View_FrescoFragment__SetTexture(int param1,uint param2,undefined4 param3)
+		
+		{
+		  uint uVar1;
+		  int param1_00;
+		  undefined4 param1_01;
+		  
+		  if (DAT_ram_00a57573 == '\0') {
+		    Mono_Security_ASN1__get_Item(&UnityEngine_Object_TypeInfo);
+		    DAT_ram_00a57573 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x14);
+		  param1_01 = *(undefined4 *)(param1_00 + 0x80);
+		  if (*(int *)(UnityEngine_Object_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(UnityEngine_Object_TypeInfo);
+		  }
+		  uVar1 = UnityEngine_Component__GetComponent_object_(param1_01,0);
+		  UnityEngine_Object__op_Implicit(param1_00,uVar1 & param2,0);
+		  UnityEngine_Object__op_Implicit(*(undefined4 *)(param1 + 0x10),param2 ^ 1,0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06002FEA RID: 12266 RVA: 0x00002050 File Offset: 0x00000250
@@ -139,6 +288,31 @@ namespace Gameplay.Fresco.View
 		[Address(RVA = "0x8050", Offset = "0x8050", VA = "0x8050")]
 		public void SwitchState(bool enable)
 		{
+		/* --- GHIDRA: SwitchState ---
+		void Gameplay_Fresco_View_FrescoFragment__SwitchState
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  undefined4 param1_00;
+		  undefined4 param2_00;
+		  
+		  if (DAT_ram_00a57574 == '\0') {
+		    Mono_Security_ASN1__get_Item(&UnityEngine_Object_TypeInfo);
+		    DAT_ram_00a57574 = '\x01';
+		  }
+		  func_ii_7050(*(undefined4 *)(param1 + 0x10),param2,0);
+		  param1_00 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_uint__object___MoveNext
+		                        (*(undefined4 *)(param1 + 0x10),0);
+		  if (*(int *)(UnityEngine_Object_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(UnityEngine_Object_TypeInfo);
+		  }
+		  param2_00 = UnityEngine_Component__GetComponent_object_(param2,0);
+		  Com_TheFallenGames_OSA_CustomAdapters_TableView_Tuple_Basic_BasicTupleValueViewsHolder__UpdateAsText
+		            (param1_00,param2_00,0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06002FEB RID: 12267 RVA: 0x00002050 File Offset: 0x00000250
@@ -192,4 +366,29 @@ namespace Gameplay.Fresco.View
 		[Il2CppDummyDll.FieldOffset(Offset = "0x1C")]
 		private Action<FrescoFragment> _onClick;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: set_Index ---
+		void Gameplay_Fresco_View_FrescoFragment__set_Index(int param1,undefined4 param2)
+		
+		{
+		  undefined4 param1_00;
+		  undefined4 param1_01;
+		  
+		  if (DAT_ram_00a57570 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_PointerEventData__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Method_Gameplay_Fresco_View_FrescoFragment_OnClickEventHandler__);
+		    DAT_ram_00a57570 = '\x01';
+		  }
+		  *(undefined1 *)(param1 + 0x20) = 0;
+		  param1_01 = *(undefined4 *)(param1 + 0x18);
+		  param1_00 = unnamed_function_1417(System_Action_PointerEventData__TypeInfo);
+		  UnityEngine_UIElements_VisualElement__get_layout
+		            (param1_00,param1,Method_Gameplay_Fresco_View_FrescoFragment_OnClickEventHandler__,0);
+		  Gameplay_Chat_View_Smiles_SmileItemView__HandleSmileDicChanged(param1_01,param1_00,0);
+		  return;
+		}
+		*/
+
 }

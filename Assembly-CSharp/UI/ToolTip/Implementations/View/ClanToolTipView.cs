@@ -17,6 +17,20 @@ namespace UI.ToolTip.Implementations.View
 		[Address(RVA = "0x5D0D", Offset = "0x5D0D", VA = "0x5D0D", Slot = "5")]
 		protected override void HandleDataChanged()
 		{
+		/* --- GHIDRA: HandleDataChanged ---
+		void UI_ToolTip_Implementations_View_ClanToolTipView__HandleDataChanged
+		               (undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a5b8e3 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_UI_ToolTip_BaseToolTip_ClanData___ctor__);
+		    DAT_ram_00a5b8e3 = '\x01';
+		  }
+		  ScreenAdaptation_Common_AppSize__Update(param1,Method_UI_ToolTip_BaseToolTip_ClanData___ctor__);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x060009A6 RID: 2470 RVA: 0x00002050 File Offset: 0x00000250
@@ -24,6 +38,43 @@ namespace UI.ToolTip.Implementations.View
 		[Address(RVA = "0x5D0E", Offset = "0x5D0E", VA = "0x5D0E")]
 		public ClanToolTipView()
 		{
+		/* --- GHIDRA: .ctor ---
+		void UI_ToolTip_Implementations_View_ClanToolTipView___ctor(int param1,undefined4 param2)
+		
+		{
+		  int *piVar1;
+		  int iVar2;
+		  undefined4 param1_00;
+		  undefined4 uVar3;
+		  
+		  if (DAT_ram_00a5b8e4 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UI_ToolTip_BaseToolTip_CollectionToolTipVO__HandleDataChanged__);
+		    Mono_Security_ASN1__get_Item(&Method_UI_ToolTip_BaseToolTip_CollectionToolTipVO__get_Data__);
+		    Mono_Security_ASN1__get_Item(&Core_Extensions_Dict_RewardInfoExt_TypeInfo);
+		    DAT_ram_00a5b8e4 = '\x01';
+		  }
+		  iVar2 = *(int *)(param1 + 0x14);
+		  if (iVar2 != 0) {
+		    Gameplay_Collections_View_CollectionView__set_IgnoreAchieved
+		              (*(undefined4 *)(param1 + 0x18),*(undefined4 *)(iVar2 + 8),
+		               *(undefined4 *)(iVar2 + 0xc),*(undefined4 *)(iVar2 + 0x10),0);
+		    param1_00 = *(undefined4 *)(param1 + 0x1c);
+		    iVar2 = Gameplay_Collections_Model_CollectionDicGroup___ctor
+		                      (*(undefined4 *)(*(int *)(*(int *)(param1 + 0x14) + 8) + 0x18),
+		                       *(undefined4 *)(*(int *)(param1 + 0x14) + 0x10),0);
+		    uVar3 = *(undefined4 *)(iVar2 + 0x28);
+		    if (*(int *)(Core_Extensions_Dict_RewardInfoExt_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(Core_Extensions_Dict_RewardInfoExt_TypeInfo);
+		    }
+		    uVar3 = Core_Extensions_Dict_RewardInfoExt__GetGroupIndex(uVar3,0);
+		    piVar1 = (int *)func_ii_7307(param1_00,uVar3,0);
+		    (**(code **)((ulonglong)*(uint *)(*piVar1 + 0xf0) * 4))(piVar1,*(undefined4 *)(*piVar1 + 0xf4));
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x040003A3 RID: 931

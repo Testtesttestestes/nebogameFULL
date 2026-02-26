@@ -154,6 +154,21 @@ namespace Gameplay.Clans.Office.View.ClassTab
 		[Address(RVA = "0x8C23", Offset = "0x8C23", VA = "0x8C23")]
 		public void UpdateDollInfo(DollsInfoDic doll)
 		{
+		/* --- GHIDRA: UpdateDollInfo ---
+		void Gameplay_Clans_Office_View_ClassTab_ClassView__UpdateDollInfo
+		               (undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a57f40 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_UI_MonoBehaviourWithStates_ClassView_Tab___ctor__);
+		    DAT_ram_00a57f40 = '\x01';
+		  }
+		  ScreenAdaptation_Common_AppSize__Update
+		            (param1,Method_UI_MonoBehaviourWithStates_ClassView_Tab___ctor__);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06003D64 RID: 15716 RVA: 0x00002050 File Offset: 0x00000250
@@ -256,4 +271,28 @@ namespace Gameplay.Clans.Office.View.ClassTab
 			EQUIPMENT
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_InfoButton ---
+		void Gameplay_Clans_Office_View_ClassTab_ClassView__get_InfoButton
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  undefined4 uVar1;
+		  undefined4 uVar2;
+		  
+		  uVar2 = *(undefined4 *)(param1 + 0x28);
+		  uVar1 = Core_Extensions_Dict_DiscountsDicExt__GetDiscountDescription(param2,0);
+		  UnityEngine_Component__GetComponentInChildren_object_(uVar2,uVar1,0);
+		  uVar2 = *(undefined4 *)(param1 + 0x30);
+		  uVar1 = Core_Extensions_Dict_DollInfoDicExt__GetTitle(param2,0);
+		  UnityEngine_Component__GetComponentInChildren_object_(uVar2,uVar1,0);
+		  uVar2 = *(undefined4 *)(param1 + 0x34);
+		  uVar1 = Core_Extensions_Dict_DollInfoDicExt__GetDescription(param2,0);
+		  UnityEngine_Component__GetComponentInChildren_object_(uVar2,uVar1,0);
+		  return;
+		}
+		*/
+
 }

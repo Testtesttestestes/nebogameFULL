@@ -25,6 +25,18 @@ namespace Animations
 		[Address(RVA = "0xBE3C", Offset = "0xBE3C", VA = "0xBE3C")]
 		public SlotsWheelAnimationDiamond()
 		{
+		/* --- GHIDRA: .ctor ---
+		undefined4 Animations_SlotsWheelAnimationDiamond___ctor(undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a596b7 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_23011);
+		    DAT_ram_00a596b7 = '\x01';
+		  }
+		  return StringLiteral_23011;
+		}
+		*/
+
 		}
 	}
 }

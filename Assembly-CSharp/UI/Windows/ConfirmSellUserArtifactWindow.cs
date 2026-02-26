@@ -30,6 +30,198 @@ namespace UI.Windows
 		[Address(RVA = "0x618E", Offset = "0x618E", VA = "0x618E", Slot = "28")]
 		protected override void HandleContent()
 		{
+		/* --- GHIDRA: HandleContent ---
+		undefined4
+		UI_Windows_ConfirmSellUserArtifactWindow__HandleContent
+		          (undefined4 param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  int param2_00;
+		  int iVar1;
+		  int iVar2;
+		  int iVar3;
+		  undefined4 *puVar4;
+		  undefined4 uVar5;
+		  uint uVar6;
+		  
+		  if (DAT_ram_00a63a07 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               UI_Windows_BaseDialogWindow_BaseDialogWindowArgs_DialogWindowButton_ButtonInvoker_ButtonCallbackDelegate_ConfirmSellUserArtifactWindow_SellUserArtifactWindowArgs__ArtifactData____TypeInfo
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               UI_Windows_BaseDialogWindow_BaseDialogWindowArgs_DialogWindowButton_ButtonInvoker_ButtonCallbackDelegate_ConfirmSellUserArtifactWindow_SellUserArtifactWindowArgs__TypeInfo
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Windows_BaseDialogWindow_BaseDialogWindowArgs_DialogWindowButton_ButtonInvoker_ConfirmSellUserArtifactWindow_SellUserArtifactWindowArgs__ArtifactData_____ctor__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               UI_Windows_BaseDialogWindow_BaseDialogWindowArgs_DialogWindowButton_ButtonInvoker_ConfirmSellUserArtifactWindow_SellUserArtifactWindowArgs__ArtifactData____TypeInfo
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Windows_BaseDialogWindow_BaseDialogWindowArgs_DialogWindowButton_ButtonInvoker_ConfirmSellUserArtifactWindow_SellUserArtifactWindowArgs___ctor__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Windows_BaseDialogWindow_BaseDialogWindowArgs_DialogWindowButton_ButtonInvoker_ConfirmSellUserArtifactWindow_SellUserArtifactWindowArgs__set_Callback__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               UI_Windows_BaseDialogWindow_BaseDialogWindowArgs_DialogWindowButton_ButtonInvoker_ConfirmSellUserArtifactWindow_SellUserArtifactWindowArgs__TypeInfo
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Windows_BaseDialogWindow_BaseDialogWindowArgs_DialogWindowButton_ConfirmSellUserArtifactWindow_SellUserArtifactWindowArgs___ctor__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               UI_Windows_BaseDialogWindow_BaseDialogWindowArgs_DialogWindowButton_ConfirmSellUserArtifactWindow_SellUserArtifactWindowArgs__TypeInfo
+		              );
+		    Mono_Security_ASN1__get_Item(&Core_GameLocalization_TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_System_Collections_Generic_List_BaseDialogWindow_BaseDialogWindowArgs_DialogWindowButton_ConfirmSellUserArtifactWindow_SellUserArtifactWindowArgs___Add__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UI_Windows_PopupController_Show_ConfirmSellUserArtifactWindow___);
+		    Mono_Security_ASN1__get_Item
+		              (&UI_Windows_ConfirmSellUserArtifactWindow_SellUserArtifactWindowArgs_TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UI_Windows_ConfirmSellUserArtifactWindow___c__DisplayClass6_0__Show_b__0__);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UI_Windows_ConfirmSellUserArtifactWindow___c__DisplayClass6_0__Show_b__1__);
+		    Mono_Security_ASN1__get_Item
+		              (&UI_Windows_ConfirmSellUserArtifactWindow___c__DisplayClass6_0_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_8384);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_12636);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_13766);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_7824);
+		    DAT_ram_00a63a07 = '\x01';
+		  }
+		  param2_00 = unnamed_function_1417
+		                        (UI_Windows_ConfirmSellUserArtifactWindow___c__DisplayClass6_0_TypeInfo);
+		  *(undefined4 *)(param2_00 + 0xc) = param2;
+		  iVar1 = unnamed_function_1417
+		                    (UI_Windows_ConfirmSellUserArtifactWindow_SellUserArtifactWindowArgs_TypeInfo);
+		  if (DAT_ram_00a63a09 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Windows_BaseDialogWindow_BaseDialogWindowArgs_ConfirmSellUserArtifactWindow_SellUserArtifactWindowArgs___ctor__
+		              );
+		    DAT_ram_00a63a09 = '\x01';
+		  }
+		  *(undefined4 *)(iVar1 + 0x34) = 6;
+		  UnityEngine_UIElements_BaseCompositeField___Il2CppFullySharedGenericType__object____Il2CppFullySharedGenericType___UpdateMixedValueContent
+		            (iVar1,
+		             Method_UI_Windows_BaseDialogWindow_BaseDialogWindowArgs_ConfirmSellUserArtifactWindow_SellUserArtifactWindowArgs___ctor__
+		            );
+		  *(undefined4 *)(iVar1 + 0x30) = param1;
+		  *(undefined4 *)(iVar1 + 0x2c) = param3;
+		  UI_Windows_ConfirmSellUserArtifactWindow_SellUserArtifactWindowArgs___ctor(iVar1,iVar1);
+		  *(int *)(param2_00 + 8) = iVar1;
+		  if (*(char *)(iVar1 + 0x3d) != '\0') {
+		    iVar2 = *(int *)(iVar1 + 0x24);
+		    iVar1 = unnamed_function_1417
+		                      (
+		                      UI_Windows_BaseDialogWindow_BaseDialogWindowArgs_DialogWindowButton_ConfirmSellUserArtifactWindow_SellUserArtifactWindowArgs__TypeInfo
+		                      );
+		    UI_Windows_DialogWindow_DialogWindowArgs___ctor
+		              (iVar1,
+		               Method_UI_Windows_BaseDialogWindow_BaseDialogWindowArgs_DialogWindowButton_ConfirmSellUserArtifactWindow_SellUserArtifactWindowArgs___ctor__
+		              );
+		    if (*(int *)(Core_GameLocalization_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(Core_GameLocalization_TypeInfo);
+		    }
+		    uVar5 = func_ii_7508(StringLiteral_7824,1,0,1,0,0,0,0);
+		    *(undefined4 *)(iVar1 + 8) = uVar5;
+		    iVar3 = unnamed_function_1417
+		                      (
+		                      UI_Windows_BaseDialogWindow_BaseDialogWindowArgs_DialogWindowButton_ButtonInvoker_ConfirmSellUserArtifactWindow_SellUserArtifactWindowArgs__TypeInfo
+		                      );
+		    uVar5 = unnamed_function_1417
+		                      (
+		                      UI_Windows_BaseDialogWindow_BaseDialogWindowArgs_DialogWindowButton_ButtonInvoker_ButtonCallbackDelegate_ConfirmSellUserArtifactWindow_SellUserArtifactWindowArgs__TypeInfo
+		                      );
+		    UI_Windows_BaseDialogWindow_BaseDialogWindowArgs_DialogWindowButton_ButtonInvoker_object____ctor
+		              (uVar5,param2_00,
+		               Method_UI_Windows_ConfirmSellUserArtifactWindow___c__DisplayClass6_0__Show_b__0__,0);
+		    *(undefined4 *)(iVar3 + 8) = uVar5;
+		    *(int *)(iVar1 + 0x14) = iVar3;
+		    iVar3 = 
+		    Method_System_Collections_Generic_List_BaseDialogWindow_BaseDialogWindowArgs_DialogWindowButton_ConfirmSellUserArtifactWindow_SellUserArtifactWindowArgs___Add__
+		    ;
+		    *(int *)(iVar2 + 0x10) = *(int *)(iVar2 + 0x10) + 1;
+		    uVar6 = *(uint *)(iVar2 + 0xc);
+		    if (uVar6 < *(uint *)(*(int *)(iVar2 + 8) + 0xc)) {
+		      *(uint *)(iVar2 + 0xc) = uVar6 + 1;
+		      *(int *)(*(int *)(iVar2 + 8) + uVar6 * 4 + 0x10) = iVar1;
+		    }
+		    else {
+		      System_Linq_Expressions_Interpreter_LeaveExceptionHandlerInstruction__Create
+		                (iVar2,iVar1,*(undefined4 *)(*(int *)(*(int *)(iVar3 + 0x10) + 0x60) + 0x38));
+		    }
+		  }
+		  iVar3 = *(int *)(*(int *)(param2_00 + 8) + 0x24);
+		  iVar1 = unnamed_function_1417
+		                    (
+		                    UI_Windows_BaseDialogWindow_BaseDialogWindowArgs_DialogWindowButton_ConfirmSellUserArtifactWindow_SellUserArtifactWindowArgs__TypeInfo
+		                    );
+		  UI_Windows_DialogWindow_DialogWindowArgs___ctor
+		            (iVar1,
+		             Method_UI_Windows_BaseDialogWindow_BaseDialogWindowArgs_DialogWindowButton_ConfirmSellUserArtifactWindow_SellUserArtifactWindowArgs___ctor__
+		            );
+		  puVar4 = &StringLiteral_8384;
+		  iVar2 = Core_Extensions_Dict_ResourceSetExt__GetDelta
+		                    (*(undefined4 *)(*(int *)(param2_00 + 8) + 0x40),0);
+		  if (iVar2 == 0) {
+		    puVar4 = &StringLiteral_13766;
+		  }
+		  uVar5 = *puVar4;
+		  if (*(int *)(Core_GameLocalization_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Core_GameLocalization_TypeInfo);
+		  }
+		  uVar5 = func_ii_7508(uVar5,1,0,1,0,0,0,0);
+		  *(undefined4 *)(iVar1 + 8) = uVar5;
+		  iVar2 = unnamed_function_1417
+		                    (
+		                    UI_Windows_BaseDialogWindow_BaseDialogWindowArgs_DialogWindowButton_ButtonInvoker_ConfirmSellUserArtifactWindow_SellUserArtifactWindowArgs__ArtifactData____TypeInfo
+		                    );
+		  *(undefined4 *)(iVar2 + 0xc) = param3;
+		  uVar5 = unnamed_function_1417
+		                    (
+		                    UI_Windows_BaseDialogWindow_BaseDialogWindowArgs_DialogWindowButton_ButtonInvoker_ButtonCallbackDelegate_ConfirmSellUserArtifactWindow_SellUserArtifactWindowArgs__ArtifactData____TypeInfo
+		                    );
+		  UI_Windows_BaseDialogWindow_BaseDialogWindowArgs_DialogWindowButton_ButtonInvoker_ButtonCallbackDelegate_object__Int32Enum___Invoke
+		            (uVar5,param2_00,
+		             Method_UI_Windows_ConfirmSellUserArtifactWindow___c__DisplayClass6_0__Show_b__1__,0);
+		  *(undefined4 *)(iVar2 + 0x10) = uVar5;
+		  *(int *)(iVar1 + 0x14) = iVar2;
+		  iVar2 = 
+		  Method_System_Collections_Generic_List_BaseDialogWindow_BaseDialogWindowArgs_DialogWindowButton_ConfirmSellUserArtifactWindow_SellUserArtifactWindowArgs___Add__
+		  ;
+		  *(int *)(iVar3 + 0x10) = *(int *)(iVar3 + 0x10) + 1;
+		  uVar6 = *(uint *)(iVar3 + 0xc);
+		  if (uVar6 < *(uint *)(*(int *)(iVar3 + 8) + 0xc)) {
+		    *(uint *)(iVar3 + 0xc) = uVar6 + 1;
+		    *(int *)(*(int *)(iVar3 + 8) + uVar6 * 4 + 0x10) = iVar1;
+		  }
+		  else {
+		    System_Linq_Expressions_Interpreter_LeaveExceptionHandlerInstruction__Create
+		              (iVar3,iVar1,*(undefined4 *)(*(int *)(*(int *)(iVar2 + 0x10) + 0x60) + 0x38));
+		  }
+		  uVar5 = System_Uri___ctor(0);
+		  uVar5 = System_Globalization_TimeSpanFormat_FormatLiterals__get_Start(uVar5,0);
+		  uVar5 = Gameplay_Antiq_View_GroupReviewWindow_WindowArgs___ctor
+		                    (uVar5,StringLiteral_12636,*(undefined4 *)(param2_00 + 8),
+		                     Method_UI_Windows_PopupController_Show_ConfirmSellUserArtifactWindow___);
+		  return uVar5;
+		}
+		*/
+
 		}
 
 		// Token: 0x06000F64 RID: 3940 RVA: 0x00002052 File Offset: 0x00000252
@@ -37,6 +229,25 @@ namespace UI.Windows
 		[Address(RVA = "0x618F", Offset = "0x618F", VA = "0x618F")]
 		public static ConfirmSellUserArtifactWindow Show(UserData user, Action<ArtifactData[]> resultCallback, params ArtifactData[] artifacts)
 		{
+		/* --- GHIDRA: Show ---
+		void UI_Windows_ConfirmSellUserArtifactWindow__Show(undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a63a08 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Windows_BaseDialogWindow_ConfirmSellUserArtifactWindow_SellUserArtifactWindowArgs___ctor__
+		              );
+		    DAT_ram_00a63a08 = '\x01';
+		  }
+		  UI_Windows_BaseDialogWindow_BaseDialogWindowArgs_object____ctor
+		            (param1,
+		             Method_UI_Windows_BaseDialogWindow_ConfirmSellUserArtifactWindow_SellUserArtifactWindowArgs___ctor__
+		            );
+		  return;
+		}
+		*/
+
 			return null;
 		}
 
@@ -45,6 +256,30 @@ namespace UI.Windows
 		[Address(RVA = "0x6190", Offset = "0x6190", VA = "0x6190")]
 		public ConfirmSellUserArtifactWindow()
 		{
+		/* --- GHIDRA: .ctor ---
+		void UI_Windows_ConfirmSellUserArtifactWindow___ctor
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  if (DAT_ram_00a63a09 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Windows_BaseDialogWindow_BaseDialogWindowArgs_ConfirmSellUserArtifactWindow_SellUserArtifactWindowArgs___ctor__
+		              );
+		    DAT_ram_00a63a09 = '\x01';
+		  }
+		  *(undefined4 *)(param1 + 0x34) = 6;
+		  UnityEngine_UIElements_BaseCompositeField___Il2CppFullySharedGenericType__object____Il2CppFullySharedGenericType___UpdateMixedValueContent
+		            (param1,
+		             Method_UI_Windows_BaseDialogWindow_BaseDialogWindowArgs_ConfirmSellUserArtifactWindow_SellUserArtifactWindowArgs___ctor__
+		            );
+		  *(undefined4 *)(param1 + 0x30) = param3;
+		  *(undefined4 *)(param1 + 0x2c) = param2;
+		  UI_Windows_ConfirmSellUserArtifactWindow_SellUserArtifactWindowArgs___ctor(param1,param1);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x040007D3 RID: 2003
@@ -226,4 +461,98 @@ namespace UI.Windows
 			public UserData User;
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_WindowId ---
+		void UI_Windows_ConfirmSellUserArtifactWindow__get_WindowId(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  int iVar2;
+		  int *param1_00;
+		  int iVar3;
+		  undefined4 uVar4;
+		  undefined4 param2_00;
+		  undefined4 param1_01;
+		  undefined8 local_18;
+		  undefined4 local_10;
+		  int local_c;
+		  int local_8;
+		  undefined4 local_4;
+		  
+		  if (DAT_ram_00a63a06 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Protocol_Dic_ArtikulMenuActionDic_Types_Actions___TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Windows_BaseDialogWindow_ConfirmSellUserArtifactWindow_SellUserArtifactWindowArgs__HandleContent__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Windows_BaseDialogWindow_ConfirmSellUserArtifactWindow_SellUserArtifactWindowArgs__get_Content__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Windows_BaseWindow_ConfirmSellUserArtifactWindow_SellUserArtifactWindowArgs__get_WindowArgs__
+		              );
+		    Mono_Security_ASN1__get_Item(&Method_UnityEngine_Object_Instantiate_ArtifactView___);
+		    Mono_Security_ASN1__get_Item(&UnityEngine_Object_TypeInfo);
+		    DAT_ram_00a63a06 = '\x01';
+		  }
+		  UI_Windows_BaseDialogWindow_object___HandleButtons
+		            (param1,
+		             Method_UI_Windows_BaseDialogWindow_ConfirmSellUserArtifactWindow_SellUserArtifactWindowArgs__HandleContent__
+		            );
+		  iVar1 = func_ii_8093(param1,
+		                       Method_UI_Windows_BaseWindow_ConfirmSellUserArtifactWindow_SellUserArtifactWindowArgs__get_WindowArgs__
+		                      );
+		  iVar3 = *(int *)(iVar1 + 0x2c);
+		  iVar1 = func_ii_8093(param1,
+		                       Method_UI_Windows_BaseWindow_ConfirmSellUserArtifactWindow_SellUserArtifactWindowArgs__get_WindowArgs__
+		                      );
+		  if (*(int *)(iVar3 + 0xc) <= *(int *)(iVar1 + 0x34)) {
+		    iVar1 = func_ii_8093(param1,
+		                         Method_UI_Windows_BaseWindow_ConfirmSellUserArtifactWindow_SellUserArtifactWindowArgs__get_WindowArgs__
+		                        );
+		    iVar1 = *(int *)(iVar1 + 0x2c);
+		    iVar3 = func_ii_8093(param1,
+		                         Method_UI_Windows_BaseWindow_ConfirmSellUserArtifactWindow_SellUserArtifactWindowArgs__get_WindowArgs__
+		                        );
+		    iVar1 = *(int *)(iVar1 + 0xc);
+		    if (*(int *)(iVar3 + 0x34) <= iVar1) {
+		      iVar1 = *(int *)(iVar3 + 0x34);
+		    }
+		    if (0 < iVar1) {
+		      iVar3 = 0;
+		      do {
+		        iVar2 = func_ii_8093(param1,
+		                             Method_UI_Windows_BaseWindow_ConfirmSellUserArtifactWindow_SellUserArtifactWindowArgs__get_WindowArgs__
+		                            );
+		        uVar4 = *(undefined4 *)(*(int *)(iVar2 + 0x2c) + iVar3 * 4 + 0x10);
+		        param2_00 = *(undefined4 *)(param1 + 0x40);
+		        param1_01 = *(undefined4 *)(param1 + 0x50);
+		        if (*(int *)(UnityEngine_Object_TypeInfo + 0x74) == 0) {
+		          func_ii_306000(UnityEngine_Object_TypeInfo);
+		        }
+		        param1_00 = (int *)func_ii_6805(param1_01,param2_00,
+		                                        Method_UnityEngine_Object_Instantiate_ArtifactView___);
+		        (**(code **)((ulonglong)*(uint *)(*param1_00 + 0x138) * 4))
+		                  (param1_00,uVar4,*(undefined4 *)(*param1_00 + 0x13c));
+		        iVar2 = param1_00[0x14];
+		        local_8 = Mono_Security_ASN1Convert__ToOid
+		                            (Protocol_Dic_ArtikulMenuActionDic_Types_Actions___TypeInfo,1);
+		        *(undefined4 *)(local_8 + 0x10) = 5;
+		        local_4 = 0;
+		        local_10 = 0;
+		        local_18 = CONCAT44(local_8,iVar2);
+		        local_c = iVar2;
+		        func_ii_7564(param1_00,&local_18,0);
+		        iVar3 = iVar3 + 1;
+		      } while (iVar3 != iVar1);
+		    }
+		  }
+		  return;
+		}
+		*/
+
 }

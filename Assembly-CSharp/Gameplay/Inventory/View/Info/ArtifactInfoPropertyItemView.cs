@@ -114,4 +114,57 @@ namespace Gameplay.Inventory.View.Info
 		[SerializeField]
 		private Vector2 _valueLabelSizeWithIcon;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: set_Title ---
+		void Gameplay_Inventory_View_Info_ArtifactInfoPropertyItemView__set_Title
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  int iVar1;
+		  
+		  iVar1 = **(int **)(param1 + 0x18);
+		  (**(code **)((ulonglong)*(uint *)(iVar1 + 0x2d0) * 4))
+		            (*(int **)(param1 + 0x18),param2,*(undefined4 *)(iVar1 + 0x2d4));
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_Value ---
+		void Gameplay_Inventory_View_Info_ArtifactInfoPropertyItemView__set_Value
+		               (int param1,int param2,undefined4 param3)
+		
+		{
+		  undefined4 param1_00;
+		  int iVar1;
+		  undefined8 local_10;
+		  undefined8 local_8;
+		  
+		  if (DAT_ram_00a5a0c3 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_AssetContent_Loaders_AbstractGameGraphicLoader_RawImage__Texture2D__set_AssetId__
+		              );
+		    Mono_Security_ASN1__get_Item(&Method_UnityEngine_Component_GetComponent_RectTransform___);
+		    DAT_ram_00a5a0c3 = '\x01';
+		  }
+		  Core_Extensions_Dict_CultDicExt__GetIcon64AssetId
+		            (*(undefined4 *)(param1 + 0x1c),param2,
+		             Method_AssetContent_Loaders_AbstractGameGraphicLoader_RawImage__Texture2D__set_AssetId__
+		            );
+		  param1_00 = func_ii_5677(*(undefined4 *)(param1 + 0x18),
+		                           Method_UnityEngine_Component_GetComponent_RectTransform___);
+		  iVar1 = 0x30;
+		  if (param2 == 0) {
+		    iVar1 = 0x28;
+		  }
+		  local_10 = *(undefined8 *)(param1 + iVar1);
+		  local_8 = local_10;
+		  UnityEngine_RectTransform__get_sizeDelta(param1_00,&local_10,0);
+		  return;
+		}
+		*/
+
 }

@@ -12,6 +12,26 @@ namespace Gameplay.SpecialOffers.Events
 		[Address(RVA = "0x702E", Offset = "0x702E", VA = "0x702E")]
 		public SpecialOffersEvents()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_SpecialOffers_Events_SpecialOffersEvents___ctor
+		               (undefined4 param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  if (DAT_ram_00a5863b == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Gameplay_SpecialOffers_Controller_OptionsOfferControllerBase_OptionsOfferModel__OptionsOfferEvents___ctor__
+		              );
+		    DAT_ram_00a5863b = '\x01';
+		  }
+		  UI_Windows_Buildings_BaseIsleBuildingWindowArgs___Il2CppFullySharedGenericType____ctor
+		            (param1,param2,param3,
+		             Method_Gameplay_SpecialOffers_Controller_OptionsOfferControllerBase_OptionsOfferModel__OptionsOfferEvents___ctor__
+		            );
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x040010B0 RID: 4272

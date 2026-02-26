@@ -89,4 +89,63 @@ namespace Gameplay.DailyQuests.View
 		[SerializeField]
 		private CounterBacklight _counter;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_TabBar ---
+		void Gameplay_DailyQuests_View_DailyQuestsView__get_TabBar
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  int param2_00;
+		  undefined4 uVar1;
+		  int *piVar2;
+		  int iVar3;
+		  
+		  if (DAT_ram_00a57c34 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Com_TheFallenGames_OSA_Core_OSA_BaseParamsWithPrefab__DailyQuestsViewsHolder__get_IsInitialized__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Gameplay_DailyQuests_View_DailyQuestsView___c__DisplayClass10_0__Init_b__0__)
+		    ;
+		    Mono_Security_ASN1__get_Item
+		              (&Gameplay_DailyQuests_View_DailyQuestsView___c__DisplayClass10_0_TypeInfo);
+		    DAT_ram_00a57c34 = '\x01';
+		  }
+		  param2_00 = unnamed_function_1417
+		                        (Gameplay_DailyQuests_View_DailyQuestsView___c__DisplayClass10_0_TypeInfo);
+		  *(undefined4 *)(param2_00 + 0xc) = param2;
+		  *(int *)(param2_00 + 8) = param1;
+		  iVar3 = **(int **)(param1 + 0x14);
+		  (**(code **)((ulonglong)*(uint *)(iVar3 + 0x3b8) * 4))
+		            (*(int **)(param1 + 0x14),*(undefined4 *)(iVar3 + 0x3bc));
+		  piVar2 = *(int **)(param1 + 0x14);
+		  if ((char)piVar2[0x14] != '\0') {
+		    uVar1 = *(undefined4 *)(param2_00 + 0xc);
+		    if (DAT_ram_00a57c1d == '\0') {
+		      Mono_Security_ASN1__get_Item
+		                (&
+		                 Method_Com_TheFallenGames_OSA_DataHelpers_SimpleDataHelper_DailyQuestsListElementArgs__ResetItems__
+		                );
+		      DAT_ram_00a57c1d = '\x01';
+		    }
+		    Com_TheFallenGames_OSA_DataHelpers_SimpleDataHelper_object___RemoveOneFromStart
+		              (piVar2[0x28],uVar1,0,
+		               Method_Com_TheFallenGames_OSA_DataHelpers_SimpleDataHelper_DailyQuestsListElementArgs__ResetItems__
+		              );
+		    return;
+		  }
+		  uVar1 = unnamed_function_1417(System_Action_TypeInfo);
+		  UnityEngine_Events_UnityEvent__AddListener
+		            (uVar1,param2_00,
+		             Method_Gameplay_DailyQuests_View_DailyQuestsView___c__DisplayClass10_0__Init_b__0__,0);
+		  (**(code **)((ulonglong)*(uint *)(*piVar2 + 0x298) * 4))
+		            (piVar2,uVar1,*(undefined4 *)(*piVar2 + 0x29c));
+		  return;
+		}
+		*/
+
 }

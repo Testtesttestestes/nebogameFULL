@@ -38,6 +38,42 @@ namespace Gameplay.GameEvents.Model.Tags
 		[Address(RVA = "0x7EEE", Offset = "0x7EEE", VA = "0x7EEE")]
 		public EventURLBannerTag_43()
 		{
+		/* --- GHIDRA: .ctor ---
+		double Gameplay_GameEvents_Model_Tags_EventURLBannerTag_43___ctor(int *param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  int iVar2;
+		  
+		  iVar2 = param1[5];
+		  iVar1 = (**(code **)((ulonglong)*(uint *)(*param1 + 0xe8) * 4))
+		                    (param1,*(undefined4 *)(*param1 + 0xec));
+		  return *(double *)(iVar2 + iVar1 * 8 + 8) / 100.0;
+		}
+		*/
+
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_SmallBannerIndex ---
+		int Gameplay_GameEvents_Model_Tags_EventURLBannerTag_43__get_SmallBannerIndex
+		              (int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  double dVar2;
+		  
+		  dVar2 = *(double *)(*(int *)(param1 + 0x14) + 0x18);
+		  if (ABS(dVar2) < 2147483648.0) {
+		    iVar1 = (int)dVar2;
+		  }
+		  else {
+		    iVar1 = -0x80000000;
+		  }
+		  return iVar1 + -1;
+		}
+		*/
+
 }

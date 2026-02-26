@@ -37,4 +37,23 @@ namespace I2.Loc
 			}
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: set_Filter ---
+		void I2_Loc_TermsPopup__set_Filter(undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a54dfd == '\0') {
+		    Mono_Security_ASN1__get_Item(&I2_Loc_LocalizationManager_TypeInfo);
+		    DAT_ram_00a54dfd = '\x01';
+		  }
+		  if (*(int *)(I2_Loc_LocalizationManager_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(I2_Loc_LocalizationManager_TypeInfo);
+		  }
+		  I2_Loc_LocalizationManager__CreateCultureForCode(1,0);
+		  return;
+		}
+		*/
+
 }

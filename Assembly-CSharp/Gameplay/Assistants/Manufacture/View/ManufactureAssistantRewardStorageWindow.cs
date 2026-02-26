@@ -97,6 +97,32 @@ namespace Gameplay.Assistants.Manufacture.View
 		[Address(RVA = "0x9D12", Offset = "0x9D12", VA = "0x9D12", Slot = "22")]
 		protected override void OnShow(ManufactureAssistantRewardStorageWindow.ManufactureAssistantRewardStorageWindowArgs args)
 		{
+		/* --- GHIDRA: OnShow ---
+		void Gameplay_Assistants_Manufacture_View_ManufactureAssistantRewardStorageWindow__OnShow
+		               (int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  
+		  if (DAT_ram_00a5897d == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Windows_ClosableBaseWindow_ManufactureAssistantRewardStorageWindow_ManufactureAssistantRewardStorageWindowArgs__OnClose__
+		              );
+		    DAT_ram_00a5897d = '\x01';
+		  }
+		  UI_Windows_ClosableBaseWindow_object___OnClickBack
+		            (param1,
+		             Method_UI_Windows_ClosableBaseWindow_ManufactureAssistantRewardStorageWindow_ManufactureAssistantRewardStorageWindowArgs__OnClose__
+		            );
+		  iVar1 = **(int **)(param1 + 0x54);
+		  (**(code **)((ulonglong)*(uint *)(iVar1 + 0x130) * 4))
+		            (*(int **)(param1 + 0x54),*(undefined4 *)(iVar1 + 0x134));
+		  *(undefined4 *)(param1 + 0x54) = 0;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06004EEB RID: 20203 RVA: 0x00002050 File Offset: 0x00000250
@@ -104,6 +130,47 @@ namespace Gameplay.Assistants.Manufacture.View
 		[Address(RVA = "0x9D13", Offset = "0x9D13", VA = "0x9D13", Slot = "19")]
 		protected override void OnClose()
 		{
+		/* --- GHIDRA: OnClose ---
+		void Gameplay_Assistants_Manufacture_View_ManufactureAssistantRewardStorageWindow__OnClose
+		               (int param1,undefined4 param2)
+		
+		{
+		  int param1_00;
+		  undefined4 uVar1;
+		  int *param2_00;
+		  int iVar2;
+		  
+		  if (DAT_ram_00a5897e == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_GameLocalization_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&UI_Tabs_TabBarItemData___TypeInfo);
+		    Mono_Security_ASN1__get_Item(&UI_Tabs_TabBarItemData_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_2698);
+		    DAT_ram_00a5897e = '\x01';
+		  }
+		  param1_00 = unnamed_function_1417(UI_Tabs_TabBarItemData_TypeInfo);
+		  if (*(int *)(Core_GameLocalization_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Core_GameLocalization_TypeInfo);
+		  }
+		  uVar1 = func_ii_7508(StringLiteral_2698,1,0,1,0,0,0,0);
+		  *(undefined4 *)(param1_00 + 0x10) = uVar1;
+		  uVar1 = *(undefined4 *)(param1 + 0x3c);
+		  param2_00 = (int *)Mono_Security_ASN1Convert__ToOid(UI_Tabs_TabBarItemData___TypeInfo,1);
+		  iVar2 = func_ii_1082(param1_00,*(undefined4 *)(*param2_00 + 0x20));
+		  if (iVar2 == 0) {
+		    uVar1 = func_ii_1083();
+		    func_ii_1050(uVar1,0);
+		    do {
+		      halt_trap();
+		    } while( true );
+		  }
+		  param2_00[4] = param1_00;
+		  UI_Tabs_TabBar__HandleSelected(uVar1,param2_00,0);
+		  Gameplay_GameEvents_Model_GameEventData__get_ContainsArtifactRewards
+		            (*(undefined4 *)(param1 + 0x3c),0,0,0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06004EEC RID: 20204 RVA: 0x00002050 File Offset: 0x00000250
@@ -111,6 +178,67 @@ namespace Gameplay.Assistants.Manufacture.View
 		[Address(RVA = "0x9D14", Offset = "0x9D14", VA = "0x9D14", Slot = "30")]
 		protected virtual void CreateTabs()
 		{
+		/* --- GHIDRA: CreateTabs ---
+		void Gameplay_Assistants_Manufacture_View_ManufactureAssistantRewardStorageWindow__CreateTabs
+		               (int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  undefined4 param2_00;
+		  undefined4 param3;
+		  int *param1_00;
+		  undefined4 param4;
+		  int iVar2;
+		  
+		  if (DAT_ram_00a5897f == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Windows_BaseWindow_ManufactureAssistantRewardStorageWindow_ManufactureAssistantRewardStorageWindowArgs__get_WindowArgs__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Gameplay_Assistants_Manufacture_Control_ManufactureAssistRewardsStorageViewMediator_TypeInfo
+		              );
+		    DAT_ram_00a5897f = '\x01';
+		  }
+		  iVar1 = func_ii_8093(param1,
+		                       Method_UI_Windows_BaseWindow_ManufactureAssistantRewardStorageWindow_ManufactureAssistantRewardStorageWindowArgs__get_WindowArgs__
+		                      );
+		  iVar2 = **(int **)(iVar1 + 0x18);
+		  param2_00 = (**(code **)((ulonglong)*(uint *)(iVar2 + 0x100) * 4))
+		                        (*(int **)(iVar1 + 0x18),*(undefined4 *)(iVar2 + 0x104));
+		  iVar1 = func_ii_8093(param1,
+		                       Method_UI_Windows_BaseWindow_ManufactureAssistantRewardStorageWindow_ManufactureAssistantRewardStorageWindowArgs__get_WindowArgs__
+		                      );
+		  iVar2 = **(int **)(iVar1 + 0x18);
+		  param3 = (**(code **)((ulonglong)*(uint *)(iVar2 + 0x110) * 4))
+		                     (*(int **)(iVar1 + 0x18),*(undefined4 *)(iVar2 + 0x114));
+		  iVar1 = func_ii_8093(param1,
+		                       Method_UI_Windows_BaseWindow_ManufactureAssistantRewardStorageWindow_ManufactureAssistantRewardStorageWindowArgs__get_WindowArgs__
+		                      );
+		  param4 = *(undefined4 *)(iVar1 + 0x18);
+		  param1_00 = (int *)unnamed_function_1417
+		                               (
+		                               Gameplay_Assistants_Manufacture_Control_ManufactureAssistRewardsStorageViewMediator_TypeInfo
+		                               );
+		  if (DAT_ram_00a5899c == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_MVC_AbstractViewMediator_ManufactureAssistModel__ManufactureAssistantEvents__ManufactureAssistController__ManufactureAssistantRewardStorageWindow___ctor__
+		              );
+		    DAT_ram_00a5899c = '\x01';
+		  }
+		  Gameplay_Combat_TeamCombat_View_AbstractTeamCombatView_object___get_HideInstantElements
+		            (param1_00,param2_00,param3,param4,
+		             Method_MVC_AbstractViewMediator_ManufactureAssistModel__ManufactureAssistantEvents__ManufactureAssistController__ManufactureAssistantRewardStorageWindow___ctor__
+		            );
+		  *(int **)(param1 + 0x54) = param1_00;
+		  (**(code **)((ulonglong)*(uint *)(*param1_00 + 0x160) * 4))
+		            (param1_00,param1,*(undefined4 *)(*param1_00 + 0x164));
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06004EED RID: 20205 RVA: 0x00002050 File Offset: 0x00000250
@@ -118,6 +246,26 @@ namespace Gameplay.Assistants.Manufacture.View
 		[Address(RVA = "0x9D15", Offset = "0x9D15", VA = "0x9D15", Slot = "31")]
 		protected virtual void CreateViewMediator()
 		{
+		/* --- GHIDRA: CreateViewMediator ---
+		void Gameplay_Assistants_Manufacture_View_ManufactureAssistantRewardStorageWindow__CreateViewMediator
+		               (undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a58980 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Windows_ClosableBaseWindow_ManufactureAssistantRewardStorageWindow_ManufactureAssistantRewardStorageWindowArgs___ctor__
+		              );
+		    DAT_ram_00a58980 = '\x01';
+		  }
+		  UI_MonoBehaviourWithStates_ClientStateChangedDelegate___Il2CppFullySharedGenericStructType___Invoke
+		            (param1,
+		             Method_UI_Windows_ClosableBaseWindow_ManufactureAssistantRewardStorageWindow_ManufactureAssistantRewardStorageWindowArgs___ctor__
+		            );
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06004EEE RID: 20206 RVA: 0x00002050 File Offset: 0x00000250
@@ -205,4 +353,28 @@ namespace Gameplay.Assistants.Manufacture.View
 			}
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_ScrollView ---
+		void Gameplay_Assistants_Manufacture_View_ManufactureAssistantRewardStorageWindow__get_ScrollView
+		               (int *param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  if (DAT_ram_00a5897c == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Windows_ClosableBaseWindow_ManufactureAssistantRewardStorageWindow_ManufactureAssistantRewardStorageWindowArgs__OnShow__
+		              );
+		    DAT_ram_00a5897c = '\x01';
+		  }
+		  func_ii_7769(param1,param2,
+		               Method_UI_Windows_ClosableBaseWindow_ManufactureAssistantRewardStorageWindow_ManufactureAssistantRewardStorageWindowArgs__OnShow__
+		              );
+		  (**(code **)((ulonglong)*(uint *)(*param1 + 0x1b0) * 4))(param1,*(undefined4 *)(*param1 + 0x1b4));
+		  (**(code **)((ulonglong)*(uint *)(*param1 + 0x1b8) * 4))(param1,*(undefined4 *)(*param1 + 0x1bc));
+		  return;
+		}
+		*/
+
 }

@@ -14,6 +14,20 @@ namespace UI.ToolTip.Implementations.VO.Monster
 		[Address(RVA = "0x5D5C", Offset = "0x5D5C", VA = "0x5D5C")]
 		protected AbstractMonsterToolTipVO(IDictProvider dictProvider, UserData loggedUser, MonsterData monster)
 		{
+		/* --- GHIDRA: .ctor ---
+		void UI_ToolTip_Implementations_VO_Monster_AbstractMonsterToolTipVO___ctor
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4,undefined4 param5,
+		               undefined4 param6)
+		
+		{
+		  *(undefined4 *)(param1 + 0x14) = param5;
+		  *(undefined4 *)(param1 + 0x10) = param2;
+		  *(undefined4 *)(param1 + 0xc) = param3;
+		  *(undefined4 *)(param1 + 8) = param4;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x060009FD RID: 2557

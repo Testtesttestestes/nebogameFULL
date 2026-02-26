@@ -56,6 +56,24 @@ namespace Gameplay.ArtifactComparer.Model
 		[Address(RVA = "0x9E77", Offset = "0x9E77", VA = "0x9E77")]
 		public ComparedSkillData(int id)
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_ArtifactComparer_Model_ComparedSkillData___ctor(undefined4 param1,undefined4 param2)
+		
+		{
+		  System_Collections_Generic_List_object____ctor(param1,0);
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_ArtifactComparer_Model_ComparedSkillData___ctor(undefined4 param1,undefined4 param2)
+		
+		{
+		  System_Collections_Generic_List_object____ctor(param1,0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06005067 RID: 20583 RVA: 0x00002050 File Offset: 0x00000250

@@ -127,6 +127,39 @@ namespace Gameplay.WorldAxis.Office.View
 		[Address(RVA = "0x63C0", Offset = "0x63C0", VA = "0x63C0", Slot = "22")]
 		protected override void OnShow(WorldAxisOfficeWindow.WorldAxisOfficeWindowArgs args)
 		{
+		/* --- GHIDRA: OnShow ---
+		void Gameplay_WorldAxis_Office_View_WorldAxisOfficeWindow__OnShow(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  
+		  if (DAT_ram_00a58b8f == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Windows_ClosableBaseWindow_WorldAxisOfficeWindow_WorldAxisOfficeWindowArgs__OnClose__
+		              );
+		    DAT_ram_00a58b8f = '\x01';
+		  }
+		  UI_Windows_ClosableBaseWindow_object___OnClickBack
+		            (param1,
+		             Method_UI_Windows_ClosableBaseWindow_WorldAxisOfficeWindow_WorldAxisOfficeWindowArgs__OnClose__
+		            );
+		  MVC_AbstractController__Run(*(undefined4 *)(param1 + 0x60),0);
+		  iVar1 = **(int **)(param1 + 100);
+		  (**(code **)((ulonglong)*(uint *)(iVar1 + 0x130) * 4))
+		            (*(int **)(param1 + 100),*(undefined4 *)(iVar1 + 0x134));
+		  iVar1 = **(int **)(param1 + 0x60);
+		  (**(code **)((ulonglong)*(uint *)(iVar1 + 0xe8) * 4))
+		            (*(int **)(param1 + 0x60),*(undefined4 *)(iVar1 + 0xec));
+		  iVar1 = **(int **)(param1 + 0x58);
+		  (**(code **)((ulonglong)*(uint *)(iVar1 + 0xe8) * 4))
+		            (*(int **)(param1 + 0x58),*(undefined4 *)(iVar1 + 0xec));
+		  *(undefined8 *)(param1 + 0x60) = 0;
+		  *(undefined4 *)(param1 + 0x58) = 0;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x060011C4 RID: 4548 RVA: 0x00002050 File Offset: 0x00000250
@@ -134,6 +167,120 @@ namespace Gameplay.WorldAxis.Office.View
 		[Address(RVA = "0x63C1", Offset = "0x63C1", VA = "0x63C1", Slot = "19")]
 		protected override void OnClose()
 		{
+		/* --- GHIDRA: OnClose ---
+		void Gameplay_WorldAxis_Office_View_WorldAxisOfficeWindow__OnClose(int param1,undefined4 param2)
+		
+		{
+		  uint uVar1;
+		  uint *puVar2;
+		  undefined4 uVar3;
+		  undefined4 uVar4;
+		  int *piVar5;
+		  int iVar6;
+		  int iVar7;
+		  undefined4 uVar8;
+		  undefined4 param4;
+		  
+		  if (DAT_ram_00a58b90 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_Gameplay_IGame_TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&Gameplay_WorldAxis_Office_Controller_WorldAxisOfficeController_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Gameplay_WorldAxis_Office_Events_WorldAxisOfficeEvents_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Gameplay_WorldAxis_Office_Model_WorldAxisOfficeModel_TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&Gameplay_WorldAxis_Office_Controller_WorldAxisOfficeViewMediator_TypeInfo);
+		    DAT_ram_00a58b90 = '\x01';
+		  }
+		  if (DAT_ram_00a6456f == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_Gameplay_Game_TypeInfo);
+		    DAT_ram_00a6456f = '\x01';
+		  }
+		  uVar1 = 0;
+		  piVar5 = (int *)**(undefined4 **)(Core_Gameplay_Game_TypeInfo + 0x5c);
+		  iVar6 = *piVar5;
+		  if (*(ushort *)(iVar6 + 0xb6) != 0) {
+		    do {
+		      if (Core_Gameplay_IGame_TypeInfo == *(int *)(*(int *)(iVar6 + 0x58) + uVar1 * 8)) {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar6 + 0x58) + uVar1 * 8 + 4) * 8 + iVar6 + 600);
+		        goto code_r0x80f7ef0c;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar6 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(piVar5,Core_Gameplay_IGame_TypeInfo,0x33);
+		code_r0x80f7ef0c:
+		  iVar6 = (**(code **)((ulonglong)*puVar2 * 4))(piVar5,puVar2[1]);
+		  if (DAT_ram_00a6456f == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_Gameplay_Game_TypeInfo);
+		    DAT_ram_00a6456f = '\x01';
+		  }
+		  piVar5 = (int *)**(undefined4 **)(Core_Gameplay_Game_TypeInfo + 0x5c);
+		  iVar7 = *piVar5;
+		  if (*(ushort *)(iVar7 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (Core_Gameplay_IGame_TypeInfo == *(int *)(*(int *)(iVar7 + 0x58) + uVar1 * 8)) {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar7 + 0x58) + uVar1 * 8 + 4) * 8 + iVar7 + 0x140);
+		        goto code_r0x80f7efb8;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar7 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(piVar5,Core_Gameplay_IGame_TypeInfo,0x10);
+		code_r0x80f7efb8:
+		  uVar3 = (**(code **)((ulonglong)*puVar2 * 4))(piVar5,puVar2[1]);
+		  uVar3 = func_ii_7112(uVar3,0);
+		  uVar8 = *(undefined4 *)(iVar6 + 0x14);
+		  uVar4 = unnamed_function_1417(Gameplay_WorldAxis_Office_Model_WorldAxisOfficeModel_TypeInfo);
+		  Gameplay_WorldAxis_Office_Model_WorldAxisOfficeModel__get_Dict(uVar4,uVar3,uVar8,0);
+		  *(undefined4 *)(param1 + 0x58) = uVar4;
+		  uVar3 = *(undefined4 *)(iVar6 + 0x18);
+		  if (DAT_ram_00a6456f == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_Gameplay_Game_TypeInfo);
+		    DAT_ram_00a6456f = '\x01';
+		  }
+		  piVar5 = (int *)**(undefined4 **)(Core_Gameplay_Game_TypeInfo + 0x5c);
+		  iVar7 = *piVar5;
+		  if (*(ushort *)(iVar7 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (Core_Gameplay_IGame_TypeInfo == *(int *)(*(int *)(iVar7 + 0x58) + uVar1 * 8)) {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar7 + 0x58) + uVar1 * 8 + 4) * 8 + iVar7 + 0x230);
+		        goto code_r0x80f7f096;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar7 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(piVar5,Core_Gameplay_IGame_TypeInfo,0x2e);
+		code_r0x80f7f096:
+		  iVar7 = (**(code **)((ulonglong)*puVar2 * 4))(piVar5,puVar2[1]);
+		  uVar8 = *(undefined4 *)(iVar7 + 0x14);
+		  uVar4 = unnamed_function_1417(Gameplay_WorldAxis_Office_Events_WorldAxisOfficeEvents_TypeInfo);
+		  Core_Dict_Model_DictModel___ctor(uVar4,uVar3,uVar8,0);
+		  *(undefined4 *)(param1 + 0x5c) = uVar4;
+		  uVar8 = *(undefined4 *)(param1 + 0x58);
+		  param4 = *(undefined4 *)(iVar6 + 0x1c);
+		  uVar3 = unnamed_function_1417
+		                    (Gameplay_WorldAxis_Office_Controller_WorldAxisOfficeController_TypeInfo);
+		  Gameplay_WorldAxis_Office_Controller_UserRatingsViewMediator___UpdateList_b__12_1
+		            (uVar3,uVar8,uVar4,param4,0);
+		  *(undefined4 *)(param1 + 0x60) = uVar3;
+		  uVar4 = *(undefined4 *)(param1 + 0x58);
+		  uVar8 = *(undefined4 *)(param1 + 0x5c);
+		  piVar5 = (int *)unnamed_function_1417
+		                            (
+		                            Gameplay_WorldAxis_Office_Controller_WorldAxisOfficeViewMediator_TypeInfo
+		                            );
+		  Gameplay_WorldAxis_Office_Controller_WorldAxisOfficeController___c___RepopulateSchedule_b__8_0
+		            (piVar5,uVar4,uVar8,uVar3,0);
+		  (**(code **)((ulonglong)*(uint *)(*piVar5 + 0x160) * 4))
+		            (piVar5,param1,*(undefined4 *)(*piVar5 + 0x164));
+		  *(int **)(param1 + 100) = piVar5;
+		  MVC_AbstractController__Dispose(*(undefined4 *)(param1 + 0x60),0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x060011C5 RID: 4549 RVA: 0x00002050 File Offset: 0x00000250
@@ -148,6 +295,26 @@ namespace Gameplay.WorldAxis.Office.View
 		[Address(RVA = "0x63C3", Offset = "0x63C3", VA = "0x63C3")]
 		private void DestroyMVC()
 		{
+		/* --- GHIDRA: DestroyMVC ---
+		void Gameplay_WorldAxis_Office_View_WorldAxisOfficeWindow__DestroyMVC
+		               (undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a58b91 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Windows_ClosableBaseWindow_WorldAxisOfficeWindow_WorldAxisOfficeWindowArgs___ctor__
+		              );
+		    DAT_ram_00a58b91 = '\x01';
+		  }
+		  UI_MonoBehaviourWithStates_ClientStateChangedDelegate___Il2CppFullySharedGenericStructType___Invoke
+		            (param1,
+		             Method_UI_Windows_ClosableBaseWindow_WorldAxisOfficeWindow_WorldAxisOfficeWindowArgs___ctor__
+		            );
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x060011C7 RID: 4551 RVA: 0x00002050 File Offset: 0x00000250
@@ -264,4 +431,27 @@ namespace Gameplay.WorldAxis.Office.View
 			public WorldAxisOfficeWindow.Tab TabToOpen;
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_RewardsTab ---
+		void Gameplay_WorldAxis_Office_View_WorldAxisOfficeWindow__get_RewardsTab
+		               (undefined4 param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  if (DAT_ram_00a58b8e == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Windows_ClosableBaseWindow_WorldAxisOfficeWindow_WorldAxisOfficeWindowArgs__OnShow__
+		              );
+		    DAT_ram_00a58b8e = '\x01';
+		  }
+		  func_ii_7769(param1,param2,
+		               Method_UI_Windows_ClosableBaseWindow_WorldAxisOfficeWindow_WorldAxisOfficeWindowArgs__OnShow__
+		              );
+		  Gameplay_WorldAxis_Office_View_WorldAxisOfficeWindow__OnClose(param1,param1);
+		  return;
+		}
+		*/
+
 }

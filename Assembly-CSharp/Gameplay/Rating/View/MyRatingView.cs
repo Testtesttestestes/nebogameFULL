@@ -42,6 +42,28 @@ namespace Gameplay.Rating.View
 		[Address(RVA = "0x7307", Offset = "0x7307", VA = "0x7307")]
 		public MyRatingView()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_Rating_View_MyRatingView___ctor(int param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a58031 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Elements_GenericList_GenericListElement_UserInRatingListElement_UserInRatingListElementArgs__get_args__
+		              );
+		    Mono_Security_ASN1__get_Item(&StringLiteral_1902);
+		    DAT_ram_00a58031 = '\x01';
+		  }
+		  Gameplay_Clans_Office_View_ClanResumesTab_ClanResumesView___c__DisplayClass31_0___Remove_b__0
+		            (param1,0);
+		  if (*(int *)(*(int *)(param1 + 0x18) + 0x28) - 0x65U < 0xffffff9c) {
+		    UnityEngine_Component__GetComponentInChildren_object_
+		              (*(undefined4 *)(param1 + 0x30),StringLiteral_1902,0);
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x04001269 RID: 4713
@@ -77,4 +99,21 @@ namespace Gameplay.Rating.View
 			HIDE_ALL
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_MyClan ---
+		void Gameplay_Rating_View_MyRatingView__get_MyClan(undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a58030 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_UI_MonoBehaviourWithStates_MyRatingView_State___ctor__);
+		    DAT_ram_00a58030 = '\x01';
+		  }
+		  ScreenAdaptation_Common_AppSize__Update
+		            (param1,Method_UI_MonoBehaviourWithStates_MyRatingView_State___ctor__);
+		  return;
+		}
+		*/
+
 }

@@ -28,6 +28,58 @@ namespace ServicesNamespace
 		[Address(RVA = "0x58F2", Offset = "0x58F2", VA = "0x58F2")]
 		public OpToken<IMessage, object> GetUserCollections(ulong userId)
 		{
+		/* --- GHIDRA: GetUserCollections ---
+		int * ServicesNamespace_CollectionsService__GetUserCollections
+		                (int *param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  int *piVar1;
+		  int iVar2;
+		  undefined4 uVar3;
+		  undefined4 local_c;
+		  undefined8 local_8;
+		  
+		  if (DAT_ram_00a6294b == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_SrvCommand__IMessage__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Protocol_Collections_CollectionsCommands_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Protocol_Collections_ProtoImproveUserCollectionCmd_TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Core_Net_SrvCommand_SetCallback_ProtoImproveUserCollectionAns___);
+		    Mono_Security_ASN1__get_Item(&Core_Net_SrvCommand_TypeInfo);
+		    DAT_ram_00a6294b = '\x01';
+		  }
+		  if (*(int *)(Core_Net_SrvCommand_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Core_Net_SrvCommand_TypeInfo);
+		  }
+		  piVar1 = (int *)Core_Net_AbstractService__PushCommand
+		                            (param1,*(undefined4 *)
+		                                     (*(int *)(Core_Net_SrvCommand_TypeInfo + 0x5c) + 4),0);
+		  if (piVar1[2] == 0) {
+		    (**(code **)((ulonglong)*(uint *)(*piVar1 + 0x110) * 4))
+		              (piVar1,*(undefined4 *)(*piVar1 + 0x114));
+		    iVar2 = unnamed_function_1417(Protocol_Collections_ProtoImproveUserCollectionCmd_TypeInfo);
+		    *(undefined4 *)(iVar2 + 0xc) = param2;
+		    uVar3 = (**(code **)((ulonglong)*(uint *)(*param1 + 0xe0) * 4))
+		                      (param1,*(undefined4 *)(*param1 + 0xe4));
+		    if (*(int *)(Core_Net_SrvCommand_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(Core_Net_SrvCommand_TypeInfo);
+		    }
+		    iVar2 = Core_Net_SrvCommand___ctor(uVar3,2,iVar2,0);
+		    local_8 = 0x2ffffffff;
+		    local_c = Protocol_Collections_CollectionsCommands_TypeInfo;
+		    uVar3 = Spine_SkeletonJson__GetFloat(&local_c,0);
+		    *(undefined4 *)(iVar2 + 0x14) = uVar3;
+		    uVar3 = unnamed_function_1417(System_Action_SrvCommand__IMessage__TypeInfo);
+		    System_Runtime_CompilerServices_AsyncVoidMethodBuilder__AwaitUnsafeOnCompleted_UniTask_Awaiter_bool___BossCaptainViewMediator__SetupView_d__8_
+		              (uVar3,param1,*(undefined4 *)(*param1 + 0xec),0);
+		    Core_Data_Spells_SpellData__Create_object_
+		              (iVar2,uVar3,Method_Core_Net_SrvCommand_SetCallback_ProtoImproveUserCollectionAns___);
+		    Core_Net_AbstractService__LogCommandAnswer(param1,iVar2,0);
+		  }
+		  return piVar1;
+		}
+		*/
+
 			return null;
 		}
 
@@ -36,6 +88,58 @@ namespace ServicesNamespace
 		[Address(RVA = "0x58F3", Offset = "0x58F3", VA = "0x58F3")]
 		public OpToken<IMessage, object> ImproveUserCollection(uint collectionId)
 		{
+		/* --- GHIDRA: ImproveUserCollection ---
+		int * ServicesNamespace_CollectionsService__ImproveUserCollection
+		                (int *param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  int *piVar1;
+		  int iVar2;
+		  undefined4 uVar3;
+		  undefined4 local_c;
+		  undefined8 local_8;
+		  
+		  if (DAT_ram_00a6294c == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_SrvCommand__IMessage__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Protocol_Collections_CollectionsCommands_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Protocol_Collections_ProtoBuyUserCollectionCmd_TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Core_Net_SrvCommand_SetCallback_ProtoBuyUserCollectionAns___);
+		    Mono_Security_ASN1__get_Item(&Core_Net_SrvCommand_TypeInfo);
+		    DAT_ram_00a6294c = '\x01';
+		  }
+		  if (*(int *)(Core_Net_SrvCommand_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Core_Net_SrvCommand_TypeInfo);
+		  }
+		  piVar1 = (int *)Core_Net_AbstractService__PushCommand
+		                            (param1,*(undefined4 *)
+		                                     (*(int *)(Core_Net_SrvCommand_TypeInfo + 0x5c) + 4),0);
+		  if (piVar1[2] == 0) {
+		    (**(code **)((ulonglong)*(uint *)(*piVar1 + 0x110) * 4))
+		              (piVar1,*(undefined4 *)(*piVar1 + 0x114));
+		    iVar2 = unnamed_function_1417(Protocol_Collections_ProtoBuyUserCollectionCmd_TypeInfo);
+		    *(undefined4 *)(iVar2 + 0xc) = param2;
+		    uVar3 = (**(code **)((ulonglong)*(uint *)(*param1 + 0xe0) * 4))
+		                      (param1,*(undefined4 *)(*param1 + 0xe4));
+		    if (*(int *)(Core_Net_SrvCommand_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(Core_Net_SrvCommand_TypeInfo);
+		    }
+		    iVar2 = Core_Net_SrvCommand___ctor(uVar3,3,iVar2,0);
+		    local_8 = 0x3ffffffff;
+		    local_c = Protocol_Collections_CollectionsCommands_TypeInfo;
+		    uVar3 = Spine_SkeletonJson__GetFloat(&local_c,0);
+		    *(undefined4 *)(iVar2 + 0x14) = uVar3;
+		    uVar3 = unnamed_function_1417(System_Action_SrvCommand__IMessage__TypeInfo);
+		    System_Runtime_CompilerServices_AsyncVoidMethodBuilder__AwaitUnsafeOnCompleted_UniTask_Awaiter_bool___BossCaptainViewMediator__SetupView_d__8_
+		              (uVar3,param1,*(undefined4 *)(*param1 + 0xec),0);
+		    Core_Data_Spells_SpellData__Create_object_
+		              (iVar2,uVar3,Method_Core_Net_SrvCommand_SetCallback_ProtoBuyUserCollectionAns___);
+		    Core_Net_AbstractService__LogCommandAnswer(param1,iVar2,0);
+		  }
+		  return piVar1;
+		}
+		*/
+
 			return null;
 		}
 
@@ -54,4 +158,59 @@ namespace ServicesNamespace
 		{
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_ServiceId ---
+		int * ServicesNamespace_CollectionsService__get_ServiceId
+		                (int *param1,undefined8 param2,undefined4 param3)
+		
+		{
+		  int *piVar1;
+		  int iVar2;
+		  undefined4 uVar3;
+		  undefined4 local_c;
+		  undefined8 local_8;
+		  
+		  if (DAT_ram_00a6294a == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_SrvCommand__IMessage__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Protocol_Collections_CollectionsCommands_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Protocol_Collections_ProtoGetUserCollectionsCmd_TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Core_Net_SrvCommand_SetCallback_ProtoGetUserCollectionsAns___);
+		    Mono_Security_ASN1__get_Item(&Core_Net_SrvCommand_TypeInfo);
+		    DAT_ram_00a6294a = '\x01';
+		  }
+		  if (*(int *)(Core_Net_SrvCommand_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Core_Net_SrvCommand_TypeInfo);
+		  }
+		  piVar1 = (int *)Core_Net_AbstractService__PushCommand
+		                            (param1,*(undefined4 *)
+		                                     (*(int *)(Core_Net_SrvCommand_TypeInfo + 0x5c) + 4),0);
+		  if (piVar1[2] == 0) {
+		    (**(code **)((ulonglong)*(uint *)(*piVar1 + 0x110) * 4))
+		              (piVar1,*(undefined4 *)(*piVar1 + 0x114));
+		    iVar2 = unnamed_function_1417(Protocol_Collections_ProtoGetUserCollectionsCmd_TypeInfo);
+		    *(undefined8 *)(iVar2 + 0x10) = param2;
+		    uVar3 = (**(code **)((ulonglong)*(uint *)(*param1 + 0xe0) * 4))
+		                      (param1,*(undefined4 *)(*param1 + 0xe4));
+		    if (*(int *)(Core_Net_SrvCommand_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(Core_Net_SrvCommand_TypeInfo);
+		    }
+		    iVar2 = Core_Net_SrvCommand___ctor(uVar3,1,iVar2,0);
+		    local_8 = 0x1ffffffff;
+		    local_c = Protocol_Collections_CollectionsCommands_TypeInfo;
+		    uVar3 = Spine_SkeletonJson__GetFloat(&local_c,0);
+		    *(undefined4 *)(iVar2 + 0x14) = uVar3;
+		    uVar3 = unnamed_function_1417(System_Action_SrvCommand__IMessage__TypeInfo);
+		    System_Runtime_CompilerServices_AsyncVoidMethodBuilder__AwaitUnsafeOnCompleted_UniTask_Awaiter_bool___BossCaptainViewMediator__SetupView_d__8_
+		              (uVar3,param1,*(undefined4 *)(*param1 + 0xec),0);
+		    Core_Data_Spells_SpellData__Create_object_
+		              (iVar2,uVar3,Method_Core_Net_SrvCommand_SetCallback_ProtoGetUserCollectionsAns___);
+		    Core_Net_AbstractService__LogCommandAnswer(param1,iVar2,0);
+		  }
+		  return piVar1;
+		}
+		*/
+
 }

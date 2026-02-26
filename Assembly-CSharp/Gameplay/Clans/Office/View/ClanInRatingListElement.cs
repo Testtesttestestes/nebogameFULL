@@ -29,6 +29,25 @@ namespace Gameplay.Clans.Office.View
 		[Address(RVA = "0x8BB4", Offset = "0x8BB4", VA = "0x8BB4")]
 		public ClanInRatingListElement()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_Clans_Office_View_ClanInRatingListElement___ctor(undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a57f0e == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Gameplay_Clans_Office_View_ClanListElementArgs_ClanInRating__ClanInRatingListElement___ctor__
+		              );
+		    DAT_ram_00a57f0e = '\x01';
+		  }
+		  Gameplay_Clans_Office_View_ClanListElementArgs___Il2CppFullySharedGenericType____ctor
+		            (param1,
+		             Method_Gameplay_Clans_Office_View_ClanListElementArgs_ClanInRating__ClanInRatingListElement___ctor__
+		            );
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x040021D1 RID: 8657

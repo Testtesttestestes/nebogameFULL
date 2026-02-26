@@ -15,6 +15,21 @@ namespace Gameplay.GdEvents.View.EventView
 		[Address(RVA = "0x7CDB", Offset = "0x7CDB", VA = "0x7CDB")]
 		public void Init(GdEventsController controller)
 		{
+		/* --- GHIDRA: Init ---
+		void Gameplay_GdEvents_View_EventView_ContentContainerView__Init
+		               (undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a5a2b8 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_UI_MonoBehaviourWithStates_EventViewState___ctor__);
+		    DAT_ram_00a5a2b8 = '\x01';
+		  }
+		  ScreenAdaptation_Common_AppSize__Update
+		            (param1,Method_UI_MonoBehaviourWithStates_EventViewState___ctor__);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06002C4D RID: 11341 RVA: 0x00002050 File Offset: 0x00000250

@@ -26,6 +26,36 @@ namespace Gameplay.Accounts.View.Banners
 		[Address(RVA = "0xA3D5", Offset = "0xA3D5", VA = "0xA3D5")]
 		public BattleAccountBannerView()
 		{
+		/* --- GHIDRA: .ctor ---
+		undefined4
+		Gameplay_Accounts_View_Banners_BattleAccountBannerView___ctor
+		          (undefined4 param1,float param2,undefined4 param3)
+		
+		{
+		  undefined4 uVar1;
+		  undefined4 param3_00;
+		  
+		  if (DAT_ram_00a588a2 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_GameLocalization_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Utils_TimeUtils_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_118);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_2480);
+		    DAT_ram_00a588a2 = '\x01';
+		  }
+		  if (*(int *)(Core_GameLocalization_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Core_GameLocalization_TypeInfo);
+		  }
+		  uVar1 = func_ii_7508(StringLiteral_2480,1,0,1,0,0,0,0);
+		  if (*(int *)(Utils_TimeUtils_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Utils_TimeUtils_TypeInfo);
+		  }
+		  param3_00 = Utils_TimeUtils__DateFormat((double)param2,0);
+		  uVar1 = UnityEngine_AndroidJavaObject__FromJavaArray_Nullable_int__
+		                    (uVar1,StringLiteral_118,param3_00,0);
+		  return uVar1;
+		}
+		*/
+
 		}
 	}
 }

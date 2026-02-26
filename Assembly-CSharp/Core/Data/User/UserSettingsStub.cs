@@ -27,6 +27,24 @@ namespace Core.Data.User
 		[Address(RVA = "0xB08A", Offset = "0xB08A", VA = "0xB08A", Slot = "5")]
 		public void CommitSettings()
 		{
+		/* --- GHIDRA: CommitSettings ---
+		void Core_Data_User_UserSettingsStub__CommitSettings(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  
+		  if (DAT_ram_00a60805 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_Data_User_TutorialUserSettings_TypeInfo);
+		    DAT_ram_00a60805 = '\x01';
+		  }
+		  iVar1 = unnamed_function_1417(Core_Data_User_TutorialUserSettings_TypeInfo);
+		  *(undefined **)(iVar1 + 8) = &DAT_ram_01010101;
+		  *(undefined1 *)(iVar1 + 0xc) = 1;
+		  *(int *)(param1 + 8) = iVar1;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x060064A2 RID: 25762 RVA: 0x00002050 File Offset: 0x00000250

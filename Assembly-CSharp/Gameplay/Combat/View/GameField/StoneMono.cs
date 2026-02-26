@@ -157,6 +157,71 @@ namespace Gameplay.Combat.View.GameField
 		[Address(RVA = "0x88E5", Offset = "0x88E5", VA = "0x88E5")]
 		private void OnDestroy()
 		{
+		/* --- GHIDRA: OnDestroy ---
+		void Gameplay_Combat_View_GameField_StoneMono__OnDestroy(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  undefined8 local_60;
+		  undefined8 local_58;
+		  undefined8 local_50;
+		  undefined4 local_48;
+		  undefined8 local_40;
+		  undefined8 local_38;
+		  undefined8 local_30;
+		  undefined8 local_28;
+		  undefined8 local_20;
+		  undefined4 local_18;
+		  undefined4 local_14;
+		  undefined8 local_10;
+		  undefined4 local_8;
+		  
+		  if (DAT_ram_00a56750 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_DG_Tweening_TweenSettingsExtensions_SetDelay_TweenerCore_Color__Color__ColorOptions____
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_DG_Tweening_TweenSettingsExtensions_SetEase_TweenerCore_Color__Color__ColorOptions____
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_DG_Tweening_TweenSettingsExtensions_SetLink_TweenerCore_Color__Color__ColorOptions____
+		              );
+		    DAT_ram_00a56750 = '\x01';
+		  }
+		  UnityEngine_SpriteRenderer__set_size(&local_10,*(undefined4 *)(param1 + 0x30),0);
+		  local_18 = local_8;
+		  local_20 = local_10;
+		  local_14 = 0x3f800000;
+		  local_38 = CONCAT44(0x3f800000,local_8);
+		  local_40 = local_10;
+		  UnityEngine_SpriteRenderer__get_color(*(undefined4 *)(param1 + 0x30),&local_40,0);
+		  uVar1 = System_Collections_Generic_SortedDictionary_Enumerator_object__object___get_Current
+		                    (param1,0);
+		  if (DAT_ram_00a6501f == '\0') {
+		    Mono_Security_ASN1__get_Item(&UnityEngine_Vector3_TypeInfo);
+		    DAT_ram_00a6501f = '\x01';
+		  }
+		  local_48 = *(undefined4 *)(*(int *)(UnityEngine_Vector3_TypeInfo + 0x5c) + 0x14);
+		  local_50 = *(undefined8 *)(*(int *)(UnityEngine_Vector3_TypeInfo + 0x5c) + 0xc);
+		  Com_TheFallenGames_OSA_Core_OSA_object__object___SetNormalizedPosition(uVar1,&local_50,0);
+		  uVar1 = System_Collections_Generic_SortedDictionary_Enumerator_object__object___get_Current
+		                    (param1,0);
+		  if (DAT_ram_00a65d4a == '\0') {
+		    Mono_Security_ASN1__get_Item(&UnityEngine_Quaternion_TypeInfo);
+		    DAT_ram_00a65d4a = '\x01';
+		  }
+		  local_60 = **(undefined8 **)(UnityEngine_Quaternion_TypeInfo + 0x5c);
+		  local_58 = (*(undefined8 **)(UnityEngine_Quaternion_TypeInfo + 0x5c))[1];
+		  local_30 = local_60;
+		  local_28 = local_58;
+		  UnityEngine_Transform__get_localRotation(uVar1,&local_60,0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06003954 RID: 14676 RVA: 0x00002050 File Offset: 0x00000250
@@ -190,6 +255,71 @@ namespace Gameplay.Combat.View.GameField
 		[Address(RVA = "0x88E9", Offset = "0x88E9", VA = "0x88E9")]
 		private void HandleStoneTypeChanged()
 		{
+		/* --- GHIDRA: HandleStoneTypeChanged ---
+		void Gameplay_Combat_View_GameField_StoneMono__HandleStoneTypeChanged
+		               (int param1,undefined8 *param2,float param3,undefined4 param4)
+		
+		{
+		  float fVar1;
+		  undefined4 uVar2;
+		  int iVar3;
+		  float fVar4;
+		  float fVar5;
+		  undefined8 uVar6;
+		  float fVar7;
+		  undefined8 local_38;
+		  float local_30;
+		  undefined8 local_28;
+		  undefined4 local_20;
+		  undefined8 local_18;
+		  float4 local_10;
+		  float local_c;
+		  float local_8;
+		  undefined4 local_4;
+		  
+		  if (DAT_ram_00a5674d == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_DG_Tweening_TweenSettingsExtensions_SetDelay_Tweener___);
+		    DAT_ram_00a5674d = '\x01';
+		  }
+		  uVar6 = *param2;
+		  fVar4 = (float)((ulonglong)uVar6 >> 0x20);
+		  fVar1 = (float)uVar6;
+		  if (DAT_ram_00a65d40 == '\0') {
+		    Mono_Security_ASN1__get_Item(&UnityEngine_Vector2_TypeInfo);
+		    DAT_ram_00a65d40 = '\x01';
+		  }
+		  fVar5 = fVar1 - (float)**(undefined8 **)(UnityEngine_Vector2_TypeInfo + 0x5c);
+		  fVar7 = fVar4 - (float)((ulonglong)**(undefined8 **)(UnityEngine_Vector2_TypeInfo + 0x5c) >> 0x20)
+		  ;
+		  if (9.9999994e-11 <= fVar5 * fVar5 + fVar7 * fVar7) {
+		    uVar2 = System_Collections_Generic_SortedDictionary_Enumerator_object__object___get_Current
+		                      (*(undefined4 *)(param1 + 0x30),0);
+		    local_4 = 0;
+		    local_20 = 0;
+		    local_28 = uVar6;
+		    local_c = fVar1;
+		    local_8 = fVar4;
+		    uVar2 = DG_Tweening_ShortcutExtensions__LookAt(uVar2,&local_28,0.6,5,0.75,0,0);
+		    DG_Tweening_DOTweenModuleUI__DOFade
+		              (uVar2,param3,Method_DG_Tweening_TweenSettingsExtensions_SetDelay_Tweener___);
+		    iVar3 = UnityEngine_Random__Range(0,2,0);
+		    uVar2 = System_Collections_Generic_SortedDictionary_Enumerator_object__object___get_Current
+		                      (*(undefined4 *)(param1 + 0x30),0);
+		    local_30 = (fVar1 + fVar4) * 0.5;
+		    if (iVar3 < 1) {
+		      local_30 = -local_30;
+		    }
+		    local_18 = 0;
+		    local_38 = 0;
+		    local_10 = (float4)local_30;
+		    uVar2 = DG_Tweening_ShortcutExtensions__DOPunchScale(uVar2,&local_38,0.3,0,1.0,0);
+		    DG_Tweening_DOTweenModuleUI__DOFade
+		              (uVar2,param3,Method_DG_Tweening_TweenSettingsExtensions_SetDelay_Tweener___);
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06003958 RID: 14680 RVA: 0x00002050 File Offset: 0x00000250
@@ -197,6 +327,88 @@ namespace Gameplay.Combat.View.GameField
 		[Address(RVA = "0x88EA", Offset = "0x88EA", VA = "0x88EA")]
 		private void Impact(Vector2 impact, float delay)
 		{
+		/* --- GHIDRA: Impact ---
+		void Gameplay_Combat_View_GameField_StoneMono__Impact
+		               (int param1,float param2,float param3,undefined4 param4,undefined4 param5)
+		
+		{
+		  int param2_00;
+		  undefined4 uVar1;
+		  undefined4 param2_01;
+		  
+		  if (DAT_ram_00a5674f == '\0') {
+		    Mono_Security_ASN1__get_Item(&DG_Tweening_TweenCallback_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Method_DG_Tweening_TweenSettingsExtensions_SetLink_Tween___);
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Gameplay_Combat_View_GameField_StoneMono___c__DisplayClass42_0__ShowDestroyAnimation_b__0__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&Gameplay_Combat_View_GameField_StoneMono___c__DisplayClass42_0_TypeInfo);
+		    DAT_ram_00a5674f = '\x01';
+		  }
+		  param2_00 = unnamed_function_1417
+		                        (Gameplay_Combat_View_GameField_StoneMono___c__DisplayClass42_0_TypeInfo);
+		  *(float *)(param2_00 + 0x10) = param2;
+		  *(undefined4 *)(param2_00 + 0xc) = param4;
+		  *(int *)(param2_00 + 8) = param1;
+		  if (*(char *)(param1 + 0x35) == '\0') {
+		    uVar1 = unnamed_function_1417(DG_Tweening_TweenCallback_TypeInfo);
+		    DG_Tweening_Color2__op_Multiply
+		              (uVar1,param2_00,
+		               Method_Gameplay_Combat_View_GameField_StoneMono___c__DisplayClass42_0__ShowDestroyAnimation_b__0__
+		               ,0);
+		    uVar1 = DG_Tweening_DOVirtual__EasedValue(param3,uVar1,1,0);
+		    param2_01 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_uint__object___MoveNext
+		                          (param1,0);
+		    DG_Tweening_TweenSettingsExtensions__SetDelay_object_
+		              (uVar1,param2_01,Method_DG_Tweening_TweenSettingsExtensions_SetLink_Tween___);
+		  }
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: Impact ---
+		void Gameplay_Combat_View_GameField_StoneMono__Impact
+		               (int param1,float param2,float param3,undefined4 param4,undefined4 param5)
+		
+		{
+		  int param2_00;
+		  undefined4 uVar1;
+		  undefined4 param2_01;
+		  
+		  if (DAT_ram_00a5674f == '\0') {
+		    Mono_Security_ASN1__get_Item(&DG_Tweening_TweenCallback_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Method_DG_Tweening_TweenSettingsExtensions_SetLink_Tween___);
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Gameplay_Combat_View_GameField_StoneMono___c__DisplayClass42_0__ShowDestroyAnimation_b__0__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&Gameplay_Combat_View_GameField_StoneMono___c__DisplayClass42_0_TypeInfo);
+		    DAT_ram_00a5674f = '\x01';
+		  }
+		  param2_00 = unnamed_function_1417
+		                        (Gameplay_Combat_View_GameField_StoneMono___c__DisplayClass42_0_TypeInfo);
+		  *(float *)(param2_00 + 0x10) = param2;
+		  *(undefined4 *)(param2_00 + 0xc) = param4;
+		  *(int *)(param2_00 + 8) = param1;
+		  if (*(char *)(param1 + 0x35) == '\0') {
+		    uVar1 = unnamed_function_1417(DG_Tweening_TweenCallback_TypeInfo);
+		    DG_Tweening_Color2__op_Multiply
+		              (uVar1,param2_00,
+		               Method_Gameplay_Combat_View_GameField_StoneMono___c__DisplayClass42_0__ShowDestroyAnimation_b__0__
+		               ,0);
+		    uVar1 = DG_Tweening_DOVirtual__EasedValue(param3,uVar1,1,0);
+		    param2_01 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_uint__object___MoveNext
+		                          (param1,0);
+		    DG_Tweening_TweenSettingsExtensions__SetDelay_object_
+		              (uVar1,param2_01,Method_DG_Tweening_TweenSettingsExtensions_SetLink_Tween___);
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06003959 RID: 14681 RVA: 0x00002050 File Offset: 0x00000250
@@ -211,6 +423,71 @@ namespace Gameplay.Combat.View.GameField
 		[Address(RVA = "0x88EC", Offset = "0x88EC", VA = "0x88EC")]
 		public void ShowDestroyAnimation(float duration, float delay, IStoneParticles stoneParticles)
 		{
+		/* --- GHIDRA: ShowDestroyAnimation ---
+		void Gameplay_Combat_View_GameField_StoneMono__ShowDestroyAnimation
+		               (int param1,float param2,float param3,float param4,undefined4 param5)
+		
+		{
+		  undefined4 uVar1;
+		  undefined4 param2_00;
+		  undefined8 local_40;
+		  undefined8 local_38;
+		  undefined8 local_30;
+		  undefined4 local_28;
+		  float4 local_24;
+		  undefined8 local_20;
+		  undefined4 local_18;
+		  undefined8 local_10;
+		  undefined4 local_8;
+		  
+		  if (DAT_ram_00a56750 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_DG_Tweening_TweenSettingsExtensions_SetDelay_TweenerCore_Color__Color__ColorOptions____
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_DG_Tweening_TweenSettingsExtensions_SetEase_TweenerCore_Color__Color__ColorOptions____
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_DG_Tweening_TweenSettingsExtensions_SetLink_TweenerCore_Color__Color__ColorOptions____
+		              );
+		    DAT_ram_00a56750 = '\x01';
+		  }
+		  if (param3 <= 0.0) {
+		    UnityEngine_SpriteRenderer__set_size(&local_20,*(undefined4 *)(param1 + 0x30),0);
+		    local_8 = local_18;
+		    local_10 = local_20;
+		    local_28 = local_18;
+		    local_38 = CONCAT44(param2,local_18);
+		    local_30 = local_20;
+		    local_40 = local_20;
+		    local_24 = (float4)param2;
+		    UnityEngine_SpriteRenderer__get_color(*(undefined4 *)(param1 + 0x30),&local_40,0);
+		  }
+		  else {
+		    uVar1 = DG_Tweening_DOTweenModuleSprite__DOColor
+		                      (*(undefined4 *)(param1 + 0x30),param2,param3 * 0.5,0);
+		    uVar1 = DG_Tweening_DOTweenModuleUI__DOFade
+		                      (uVar1,param4,
+		                       Method_DG_Tweening_TweenSettingsExtensions_SetDelay_TweenerCore_Color__Color__ColorOptions____
+		                      );
+		    uVar1 = DG_Tweening_ShortcutExtensions__DOScale
+		                      (uVar1,6,
+		                       Method_DG_Tweening_TweenSettingsExtensions_SetEase_TweenerCore_Color__Color__ColorOptions____
+		                      );
+		    param2_00 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_uint__object___MoveNext
+		                          (param1,0);
+		    DG_Tweening_TweenSettingsExtensions__SetDelay_object_
+		              (uVar1,param2_00,
+		               Method_DG_Tweening_TweenSettingsExtensions_SetLink_TweenerCore_Color__Color__ColorOptions____
+		              );
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600395B RID: 14683 RVA: 0x00002050 File Offset: 0x00000250
@@ -218,6 +495,21 @@ namespace Gameplay.Combat.View.GameField
 		[Address(RVA = "0x88ED", Offset = "0x88ED", VA = "0x88ED")]
 		public void DoFade(float endValue, float duration, float delay = 0f)
 		{
+		/* --- GHIDRA: DoFade ---
+		void Gameplay_Combat_View_GameField_StoneMono__DoFade(int param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a56751 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_Utils_Cache_ObjectPool_StoneMono__Release__);
+		    DAT_ram_00a56751 = '\x01';
+		  }
+		  if (*(int *)(param1 + 0x4c) != 0) {
+		    func_ii_7070(*(int *)(param1 + 0x4c),param1,Method_Utils_Cache_ObjectPool_StoneMono__Release__);
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600395C RID: 14684 RVA: 0x00002050 File Offset: 0x00000250
@@ -225,6 +517,43 @@ namespace Gameplay.Combat.View.GameField
 		[Address(RVA = "0x88EE", Offset = "0x88EE", VA = "0x88EE", Slot = "12")]
 		public void Release()
 		{
+		/* --- GHIDRA: Release ---
+		undefined4
+		Gameplay_Combat_View_GameField_StoneMono__Release
+		          (int param1,int param2,int param3,undefined4 param4)
+		
+		{
+		  undefined4 uVar1;
+		  undefined4 param3_00;
+		  undefined4 local_8;
+		  int local_4;
+		  
+		  if (DAT_ram_00a56752 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_14673);
+		    DAT_ram_00a56752 = '\x01';
+		  }
+		  if ((param2 == *(int *)(param1 + 0x54)) && (*(int *)(param1 + 0x50) == param3)) {
+		    uVar1 = 0;
+		  }
+		  else {
+		    *(int *)(param1 + 0x54) = param2;
+		    *(int *)(param1 + 0x50) = param3;
+		    *(undefined4 *)(param1 + 0x48) = 0;
+		    *(float *)(param1 + 0x44) = (float)(param3 * 0x58);
+		    *(float *)(param1 + 0x40) = (float)(param2 * 0x58);
+		    local_4 = param2;
+		    uVar1 = func_ii_1081(DAT_ram_00a66954,&local_4);
+		    local_8 = *(undefined4 *)(param1 + 0x50);
+		    param3_00 = func_ii_1081(DAT_ram_00a66954,&local_8);
+		    uVar1 = System_Collections_Generic_Dictionary_int__object___ContainsKey
+		                      (StringLiteral_14673,uVar1,param3_00,0);
+		    UnityEngine_Texture2D___ctor(param1,uVar1,0);
+		    uVar1 = 1;
+		  }
+		  return uVar1;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600395D RID: 14685 RVA: 0x0000B6B8 File Offset: 0x000098B8
@@ -232,6 +561,35 @@ namespace Gameplay.Combat.View.GameField
 		[Address(RVA = "0x88EF", Offset = "0x88EF", VA = "0x88EF")]
 		public bool SetPos(int col, int row)
 		{
+		/* --- GHIDRA: SetPos ---
+		void Gameplay_Combat_View_GameField_StoneMono__SetPos(int param1,float param2,undefined4 param3)
+		
+		{
+		  undefined4 *puVar1;
+		  
+		  if (DAT_ram_00a56753 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_Animations_GameSpineAnimationBindings_TypeInfo);
+		    DAT_ram_00a56753 = '\x01';
+		  }
+		  if (*(float *)(param1 + 0x38) != param2) {
+		    *(float *)(param1 + 0x38) = param2;
+		    if (param2 == 0.0) {
+		      puVar1 = (undefined4 *)
+		               (*(int *)(Core_Animations_GameSpineAnimationBindings_TypeInfo + 0x5c) + 0xc);
+		    }
+		    else {
+		      if (param2 != 1.0) {
+		        return;
+		      }
+		      puVar1 = (undefined4 *)
+		               (*(int *)(Core_Animations_GameSpineAnimationBindings_TypeInfo + 0x5c) + 0x10);
+		    }
+		    UnityEngine_Renderer__get_sharedMaterial(*(undefined4 *)(param1 + 0x30),*puVar1,0);
+		  }
+		  return;
+		}
+		*/
+
 			return default(bool);
 		}
 
@@ -240,6 +598,16 @@ namespace Gameplay.Combat.View.GameField
 		[Address(RVA = "0x88F0", Offset = "0x88F0", VA = "0x88F0", Slot = "13")]
 		public void SetGrayscale(float value)
 		{
+		/* --- GHIDRA: SetGrayscale ---
+		void Gameplay_Combat_View_GameField_StoneMono__SetGrayscale(int param1,undefined4 param2)
+		
+		{
+		  *(undefined8 *)(param1 + 0x50) = 0xffffffffffffffff;
+		  ScreenAdaptation_Common_AppSize__Update(param1,0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600395F RID: 14687 RVA: 0x00002050 File Offset: 0x00000250
@@ -419,4 +787,158 @@ namespace Gameplay.Combat.View.GameField
 			private SpriteAtlas _atlas;
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: set_Skin ---
+		void Gameplay_Combat_View_GameField_StoneMono__set_Skin
+		               (undefined8 *param1,int param2,undefined4 param3)
+		
+		{
+		  *param1 = *(undefined8 *)(param2 + 0x40);
+		  *(undefined4 *)(param1 + 1) = *(undefined4 *)(param2 + 0x48);
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_IdlePosition ---
+		void Gameplay_Combat_View_GameField_StoneMono__get_IdlePosition
+		               (int param1,undefined8 *param2,undefined4 param3)
+		
+		{
+		  *(undefined8 *)(param1 + 0x40) = *param2;
+		  *(undefined4 *)(param1 + 0x48) = *(undefined4 *)(param2 + 1);
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_Selected ---
+		void Gameplay_Combat_View_GameField_StoneMono__get_Selected
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  undefined4 uVar1;
+		  undefined8 local_18;
+		  float4 local_10;
+		  float4 local_c;
+		  float4 local_8;
+		  float4 local_4;
+		  
+		  if (*(char *)(param1 + 0x35) == '\0') {
+		    *(undefined1 *)(param1 + 0x34) = (undefined1)param2;
+		    uVar1 = System_Collections_Generic_SortedDictionary_Enumerator_object__object___get_Current
+		                      (param1,0);
+		    local_10 = 1.1;
+		    if (*(char *)(param1 + 0x34) == '\0') {
+		      local_10 = 1.0;
+		    }
+		    local_18 = CONCAT44(local_10,local_10);
+		    local_c = local_10;
+		    local_8 = local_10;
+		    local_4 = local_10;
+		    Com_TheFallenGames_OSA_Core_OSA_object__object___SetNormalizedPosition(uVar1,&local_18,0);
+		    uVar1 = 10;
+		    if (*(char *)(param1 + 0x34) == '\0') {
+		      uVar1 = 0;
+		    }
+		    AssetContent_Loaders_GameSpriteRendererLoader__get_SpriteRenderer
+		              (*(undefined4 *)(param1 + 0x30),uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_Selected ---
+		void Gameplay_Combat_View_GameField_StoneMono__set_Selected(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  *(undefined4 *)(param1 + 0x4c) = 0;
+		  *(undefined1 *)(param1 + 0x35) = 1;
+		  func_ii_8007(*(undefined4 *)(param1 + 0x30),0,0);
+		  uVar1 = System_Collections_Generic_SortedDictionary_Enumerator_object__object___get_Current
+		                    (*(undefined4 *)(param1 + 0x30),0);
+		  func_ii_8007(uVar1,0,0);
+		  uVar1 = System_Collections_Generic_SortedDictionary_Enumerator_object__object___get_Current
+		                    (param1,0);
+		  func_ii_8007(uVar1,0,0);
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_StoneType ---
+		void Gameplay_Combat_View_GameField_StoneMono__get_StoneType
+		               (int param1,int param2,undefined4 param3)
+		
+		{
+		  undefined4 uVar1;
+		  int iVar2;
+		  undefined4 param1_00;
+		  undefined4 local_10;
+		  undefined4 local_c;
+		  undefined4 local_8;
+		  int local_4;
+		  
+		  if ((*(char *)(param1 + 0x35) == '\0') && (*(int *)(param1 + 0x58) != param2)) {
+		    *(int *)(param1 + 0x58) = param2;
+		    local_10 = 0;
+		    param1_00 = *(undefined4 *)(param1 + 0x3c);
+		    if (DAT_ram_00a56758 == '\0') {
+		      Mono_Security_ASN1__get_Item(&Protocol_Combat_StonesTypes_TypeInfo);
+		      DAT_ram_00a56758 = '\x01';
+		    }
+		    local_8 = 0xffffffff;
+		    local_c = Protocol_Combat_StonesTypes_TypeInfo;
+		    local_4 = param2;
+		    uVar1 = Spine_SkeletonJson__GetFloat(&local_c,0);
+		    uVar1 = func_ii_7775(uVar1,0);
+		    iVar2 = Gameplay_Combat_View_GameField_StoneMono_StoneSkinProvider__SetAtlas
+		                      (param1_00,uVar1,&local_10,&local_10);
+		    if (iVar2 != 0) {
+		      Core_Extensions_SpriteAtlasExt__TryGetSprite(*(undefined4 *)(param1 + 0x30),local_10,0);
+		    }
+		  }
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_StoneType ---
+		void Gameplay_Combat_View_GameField_StoneMono__set_StoneType(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  undefined4 uVar2;
+		  undefined4 param1_00;
+		  undefined4 local_10;
+		  undefined4 local_c;
+		  undefined4 local_8;
+		  undefined4 local_4;
+		  
+		  local_10 = 0;
+		  uVar2 = *(undefined4 *)(param1 + 0x58);
+		  param1_00 = *(undefined4 *)(param1 + 0x3c);
+		  if (DAT_ram_00a56758 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Protocol_Combat_StonesTypes_TypeInfo);
+		    DAT_ram_00a56758 = '\x01';
+		  }
+		  local_8 = 0xffffffff;
+		  local_c = Protocol_Combat_StonesTypes_TypeInfo;
+		  local_4 = uVar2;
+		  uVar2 = Spine_SkeletonJson__GetFloat(&local_c,0);
+		  uVar2 = func_ii_7775(uVar2,0);
+		  iVar1 = Gameplay_Combat_View_GameField_StoneMono_StoneSkinProvider__SetAtlas
+		                    (param1_00,uVar2,&local_10,&local_10);
+		  if (iVar1 != 0) {
+		    Core_Extensions_SpriteAtlasExt__TryGetSprite(*(undefined4 *)(param1 + 0x30),local_10,0);
+		  }
+		  return;
+		}
+		*/
+
 }

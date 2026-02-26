@@ -13,6 +13,28 @@ namespace Gameplay.Portals.Events
 		[Address(RVA = "0x7553", Offset = "0x7553", VA = "0x7553")]
 		public PortalsEvents()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_Portals_Events_PortalsEvents___ctor
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4,undefined4 param5,
+		               undefined4 param6)
+		
+		{
+		  if (DAT_ram_00a5813a == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_MVC_AbstractViewMediator_PortalsModel__PortalsEvents__PortalsController__PortalsEntryPointView___ctor__
+		              );
+		    DAT_ram_00a5813a = '\x01';
+		  }
+		  Gameplay_Combat_TeamCombat_View_AbstractTeamCombatView_object___get_HideInstantElements
+		            (param1,param2,param3,param4,
+		             Method_MVC_AbstractViewMediator_PortalsModel__PortalsEvents__PortalsController__PortalsEntryPointView___ctor__
+		            );
+		  *(undefined4 *)(param1 + 0x18) = param5;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x040013DE RID: 5086

@@ -46,4 +46,48 @@ namespace Gameplay.Aprs.Controller.Filters
 		{
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: set_FilterInfo ---
+		undefined4
+		Gameplay_Aprs_Controller_Filters_AprSkillFilter__set_FilterInfo
+		          (int param1,int param2,undefined4 param3)
+		
+		{
+		  int *param1_00;
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a59479 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Core_Dict_DictWrappers_Base_AbstractDictWrapper_MedalDic__uint__get_Data__);
+		    Mono_Security_ASN1__get_Item(&System_Collections_Generic_List_int__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Gameplay_Medals_Model_MedalUtils_TypeInfo);
+		    DAT_ram_00a59479 = '\x01';
+		  }
+		  if (*(char *)(*(int *)(param1 + 8) + 0x10) != '\0') {
+		    param1_00 = *(int **)(*(int *)(param1 + 8) + 0xc);
+		    if (param1_00 != (int *)0x0) {
+		      if (((uint)*(byte *)(*param1_00 + 0xb8) <
+		           (uint)*(byte *)(System_Collections_Generic_List_int__TypeInfo + 0xb8)) ||
+		         (*(int *)(*(int *)(*param1_00 + 100) +
+		                   (uint)*(byte *)(System_Collections_Generic_List_int__TypeInfo + 0xb8) * 4 + -4)
+		          != System_Collections_Generic_List_int__TypeInfo)) {
+		        System_Activator__CreateInstance(param1_00,System_Collections_Generic_List_int__TypeInfo);
+		        do {
+		          halt_trap();
+		        } while( true );
+		      }
+		    }
+		    uVar1 = *(undefined4 *)(*(int *)(param2 + 0x14) + 0x10);
+		    if (*(int *)(Gameplay_Medals_Model_MedalUtils_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(Gameplay_Medals_Model_MedalUtils_TypeInfo);
+		    }
+		    uVar1 = func_ii_7213(uVar1,param1_00,0);
+		    return uVar1;
+		  }
+		  return 1;
+		}
+		*/
+
 }

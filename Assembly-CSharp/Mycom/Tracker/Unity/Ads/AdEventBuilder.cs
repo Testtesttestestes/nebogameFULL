@@ -12,6 +12,25 @@ namespace Mycom.Tracker.Unity.Ads
 		[Address(RVA = "0xBEF2", Offset = "0xBEF2", VA = "0xBEF2")]
 		public static AdEventBuilder NewClickBuilder(AdNetworkEnum network)
 		{
+		/* --- GHIDRA: NewClickBuilder ---
+		int Mycom_Tracker_Unity_Ads_AdEventBuilder__NewClickBuilder(undefined4 param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  
+		  if (DAT_ram_00a59710 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Mycom_Tracker_Unity_Ads_AdEventBuilder_TypeInfo);
+		    DAT_ram_00a59710 = '\x01';
+		  }
+		  iVar1 = unnamed_function_1417(Mycom_Tracker_Unity_Ads_AdEventBuilder_TypeInfo);
+		  *(undefined4 *)(iVar1 + 0x18) = 0;
+		  *(undefined8 *)(iVar1 + 0x10) = 0x7ff8000000000000;
+		  *(undefined4 *)(iVar1 + 0xc) = param1;
+		  *(undefined4 *)(iVar1 + 8) = 0x12;
+		  return iVar1;
+		}
+		*/
+
 			return null;
 		}
 
@@ -20,6 +39,26 @@ namespace Mycom.Tracker.Unity.Ads
 		[Address(RVA = "0xBEF3", Offset = "0xBEF3", VA = "0xBEF3")]
 		public static AdEventBuilder NewImpressionBuilder(AdNetworkEnum network)
 		{
+		/* --- GHIDRA: NewImpressionBuilder ---
+		int Mycom_Tracker_Unity_Ads_AdEventBuilder__NewImpressionBuilder
+		              (undefined4 param1,double param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  int iVar1;
+		  
+		  if (DAT_ram_00a59711 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Mycom_Tracker_Unity_Ads_AdEventBuilder_TypeInfo);
+		    DAT_ram_00a59711 = '\x01';
+		  }
+		  iVar1 = unnamed_function_1417(Mycom_Tracker_Unity_Ads_AdEventBuilder_TypeInfo);
+		  *(undefined4 *)(iVar1 + 0x18) = param3;
+		  *(double *)(iVar1 + 0x10) = param2;
+		  *(undefined4 *)(iVar1 + 0xc) = param1;
+		  *(undefined4 *)(iVar1 + 8) = 0x13;
+		  return iVar1;
+		}
+		*/
+
 			return null;
 		}
 
@@ -28,6 +67,20 @@ namespace Mycom.Tracker.Unity.Ads
 		[Address(RVA = "0xBEF4", Offset = "0xBEF4", VA = "0xBEF4")]
 		public static AdEventBuilder NewRevenueBuilder(AdNetworkEnum network, double revenue, string currency)
 		{
+		/* --- GHIDRA: NewRevenueBuilder ---
+		void Mycom_Tracker_Unity_Ads_AdEventBuilder__NewRevenueBuilder
+		               (int param1,undefined4 param2,undefined4 param3,double param4,undefined4 param5,
+		               undefined4 param6)
+		
+		{
+		  *(undefined4 *)(param1 + 0x18) = param5;
+		  *(double *)(param1 + 0x10) = param4;
+		  *(undefined4 *)(param1 + 0xc) = param3;
+		  *(undefined4 *)(param1 + 8) = param2;
+		  return;
+		}
+		*/
+
 			return null;
 		}
 
@@ -67,6 +120,36 @@ namespace Mycom.Tracker.Unity.Ads
 		[Address(RVA = "0xBEF9", Offset = "0xBEF9", VA = "0xBEF9")]
 		public AdEventBuilder WithAdFormat(string adFormat)
 		{
+		/* --- GHIDRA: WithAdFormat ---
+		int Mycom_Tracker_Unity_Ads_AdEventBuilder__WithAdFormat(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  undefined4 uVar2;
+		  undefined8 uVar3;
+		  undefined8 uVar4;
+		  undefined8 uVar5;
+		  undefined8 uVar6;
+		  
+		  if (DAT_ram_00a59712 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Mycom_Tracker_Unity_Ads_AdEvent_TypeInfo);
+		    DAT_ram_00a59712 = '\x01';
+		  }
+		  uVar3 = *(undefined8 *)(param1 + 8);
+		  uVar4 = *(undefined8 *)(param1 + 0x10);
+		  uVar5 = *(undefined8 *)(param1 + 0x18);
+		  uVar6 = *(undefined8 *)(param1 + 0x20);
+		  uVar2 = *(undefined4 *)(param1 + 0x28);
+		  iVar1 = unnamed_function_1417(Mycom_Tracker_Unity_Ads_AdEvent_TypeInfo);
+		  *(undefined4 *)(iVar1 + 0x28) = uVar2;
+		  *(undefined8 *)(iVar1 + 0x20) = uVar6;
+		  *(undefined8 *)(iVar1 + 0x18) = uVar5;
+		  *(undefined8 *)(iVar1 + 0x10) = uVar4;
+		  *(undefined8 *)(iVar1 + 8) = uVar3;
+		  return iVar1;
+		}
+		*/
+
 			return null;
 		}
 
@@ -75,6 +158,29 @@ namespace Mycom.Tracker.Unity.Ads
 		[Address(RVA = "0xBEFA", Offset = "0xBEFA", VA = "0xBEFA")]
 		public AdEvent Build()
 		{
+		/* --- GHIDRA: Build ---
+		void Mycom_Tracker_Unity_Ads_AdEventBuilder__Build(undefined4 param1)
+		
+		{
+		  int iVar1;
+		  
+		  if (DAT_ram_00a59713 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Mycom_Tracker_Unity_Ads_AdFormat_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_26467);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_25525);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_24648);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_20465);
+		    DAT_ram_00a59713 = '\x01';
+		  }
+		  **(undefined4 **)(Mycom_Tracker_Unity_Ads_AdFormat_TypeInfo + 0x5c) = StringLiteral_20465;
+		  iVar1 = *(int *)(Mycom_Tracker_Unity_Ads_AdFormat_TypeInfo + 0x5c);
+		  *(undefined4 *)(iVar1 + 4) = StringLiteral_24648;
+		  *(undefined4 *)(iVar1 + 8) = StringLiteral_25525;
+		  *(undefined4 *)(iVar1 + 0xc) = StringLiteral_26467;
+		  return;
+		}
+		*/
+
 			return null;
 		}
 

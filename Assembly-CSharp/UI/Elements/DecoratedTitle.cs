@@ -17,6 +17,25 @@ namespace UI.Elements
 		[Address(RVA = "0x5FCB", Offset = "0x5FCB", VA = "0x5FCB")]
 		private IEnumerator Rebuild()
 		{
+		/* --- GHIDRA: Rebuild ---
+		void UI_Elements_DecoratedTitle__Rebuild(int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  int param2_00;
+		  
+		  UnityEngine_Component__GetComponentInChildren_object_(*(undefined4 *)(param1 + 0x18),param2,0);
+		  if (DAT_ram_00a6394b == '\0') {
+		    Mono_Security_ASN1__get_Item(&UI_Elements_DecoratedTitle__Rebuild_d__5_TypeInfo);
+		    DAT_ram_00a6394b = '\x01';
+		  }
+		  param2_00 = unnamed_function_1417(UI_Elements_DecoratedTitle__Rebuild_d__5_TypeInfo);
+		  *(int *)(param2_00 + 0x10) = param1;
+		  *(undefined4 *)(param2_00 + 8) = 0;
+		  UnityEngine_MonoBehaviour__StartCoroutine(param1,param2_00,0);
+		  return;
+		}
+		*/
+
 			return null;
 		}
 
@@ -39,6 +58,28 @@ namespace UI.Elements
 		[Address(RVA = "0x5FCE", Offset = "0x5FCE", VA = "0x5FCE", Slot = "10")]
 		protected override void OnRectTransformDimensionsChange()
 		{
+		/* --- GHIDRA: OnRectTransformDimensionsChange ---
+		void UI_Elements_DecoratedTitle__OnRectTransformDimensionsChange(int *param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  
+		  iVar1 = (**(code **)((ulonglong)*(uint *)(*param1 + 0x108) * 4))
+		                    (param1,*(undefined4 *)(*param1 + 0x10c));
+		  if (iVar1 != 0) {
+		    if (DAT_ram_00a6394b == '\0') {
+		      Mono_Security_ASN1__get_Item(&UI_Elements_DecoratedTitle__Rebuild_d__5_TypeInfo);
+		      DAT_ram_00a6394b = '\x01';
+		    }
+		    iVar1 = unnamed_function_1417(UI_Elements_DecoratedTitle__Rebuild_d__5_TypeInfo);
+		    *(int **)(iVar1 + 0x10) = param1;
+		    *(undefined4 *)(iVar1 + 8) = 0;
+		    UnityEngine_MonoBehaviour__StartCoroutine(param1,iVar1,0);
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06000CCE RID: 3278 RVA: 0x00002050 File Offset: 0x00000250

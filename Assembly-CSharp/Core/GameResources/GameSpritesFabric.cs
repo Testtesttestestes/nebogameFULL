@@ -13,6 +13,25 @@ namespace Core.GameResources
 		[Address(RVA = "0xA912", Offset = "0xA912", VA = "0xA912")]
 		public GameSpritesFabric()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Core_GameResources_GameSpritesFabric___ctor(undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a6065e == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Core_GameResources_BaseGameResourcesFabric_GameSpriteAtlasLoader__GameResourcesManager_SpriteAtlasReadyDelegate___ctor__
+		              );
+		    DAT_ram_00a6065e = '\x01';
+		  }
+		  Sirenix_Serialization_BaseFormatter___Il2CppFullySharedGenericType___get_SerializedType
+		            (param1,
+		             Method_Core_GameResources_BaseGameResourcesFabric_GameSpriteAtlasLoader__GameResourcesManager_SpriteAtlasReadyDelegate___ctor__
+		            );
+		  return;
+		}
+		*/
+
 		}
 	}
 }

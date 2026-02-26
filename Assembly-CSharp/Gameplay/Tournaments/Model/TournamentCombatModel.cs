@@ -50,6 +50,36 @@ namespace Gameplay.Tournaments.Model
 		[Address(RVA = "0x6E05", Offset = "0x6E05", VA = "0x6E05")]
 		public TournamentCombatModel(CombatDependencies dependencies, BackTime awaitBackTime, UserData loggedUser, UserData user)
 		{
+		/* --- GHIDRA: .ctor ---
+		undefined4 Gameplay_Tournaments_Model_TournamentCombatModel___ctor(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  uVar1 = Newtonsoft_Json_Converters_XmlDocumentTypeWrapper__get_System
+		                    (*(undefined4 *)(param1 + 0x10),0);
+		  return uVar1;
+		}
+		*/
+
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: set_ViewedUserId ---
+		uint Gameplay_Tournaments_Model_TournamentCombatModel__set_ViewedUserId
+		               (int param1,undefined4 param2)
+		
+		{
+		  longlong lVar1;
+		  longlong lVar2;
+		  
+		  lVar2 = *(longlong *)(param1 + 0x60);
+		  lVar1 = System_Collections_Generic_LinkedList_Enumerator_object___MoveNext
+		                    (*(undefined4 *)(param1 + 8),0);
+		  return (uint)(lVar2 == lVar1);
+		}
+		*/
+
 }

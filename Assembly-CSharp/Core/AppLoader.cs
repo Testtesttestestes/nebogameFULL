@@ -91,6 +91,29 @@ namespace Core
 		[Address(RVA = "0xA702", Offset = "0xA702", VA = "0xA702")]
 		private void Awake()
 		{
+		/* --- GHIDRA: Awake ---
+		void Core_AppLoader__Awake(undefined4 param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  undefined4 param1_00;
+		  
+		  if (DAT_ram_00a63c48 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_IApp__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Method_Core_AppLoader_InstanceOnInitCompleteEvent__);
+		    DAT_ram_00a63c48 = '\x01';
+		  }
+		  uVar1 = System_Uri___ctor(0);
+		  param1_00 = unnamed_function_1417(System_Action_IApp__TypeInfo);
+		  UnityEngine_UIElements_VisualElement__get_layout
+		            (param1_00,param1,Method_Core_AppLoader_InstanceOnInitCompleteEvent__,0);
+		  Core_Application_App__remove_AppQuitEvent(uVar1,param1_00,0);
+		  uVar1 = System_Uri___ctor(0);
+		  Core_Application_App__SetAuth(uVar1,param1,0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x060059DB RID: 23003 RVA: 0x00002050 File Offset: 0x00000250
@@ -98,6 +121,59 @@ namespace Core
 		[Address(RVA = "0xA703", Offset = "0xA703", VA = "0xA703")]
 		private void Start()
 		{
+		/* --- GHIDRA: Start ---
+		void Core_AppLoader__Start(undefined4 param1,int *param2,undefined4 param3)
+		
+		{
+		  uint uVar1;
+		  undefined4 uVar2;
+		  uint *puVar3;
+		  int iVar4;
+		  
+		  if (DAT_ram_00a63c49 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_IApp__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Method_Core_AppLoader_InstanceOnInitCompleteEvent__);
+		    Mono_Security_ASN1__get_Item(&Core_Gameplay_Auth_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Core_Application_IApp_TypeInfo);
+		    DAT_ram_00a63c49 = '\x01';
+		  }
+		  uVar2 = unnamed_function_1417(System_Action_IApp__TypeInfo);
+		  UnityEngine_UIElements_VisualElement__get_layout
+		            (uVar2,param1,Method_Core_AppLoader_InstanceOnInitCompleteEvent__,0);
+		  iVar4 = *param2;
+		  if (*(ushort *)(iVar4 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (Core_Application_IApp_TypeInfo == *(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8)) {
+		        puVar3 = (uint *)(*(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8 + 4) * 8 + iVar4 + 200);
+		        goto code_r0x82372afa;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar4 + 0xb6) != uVar1);
+		  }
+		  puVar3 = (uint *)func_ii_1080(param2,Core_Application_IApp_TypeInfo,1);
+		code_r0x82372afa:
+		  (**(code **)((ulonglong)*puVar3 * 4))(param2,uVar2,puVar3[1]);
+		  uVar1 = 0;
+		  uVar2 = unnamed_function_1417(Core_Gameplay_Auth_TypeInfo);
+		  Core_Gameplay_Auth__Dispose(uVar2,param2,0);
+		  iVar4 = *param2;
+		  if (*(ushort *)(iVar4 + 0xb6) != 0) {
+		    do {
+		      if (Core_Application_IApp_TypeInfo == *(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8)) {
+		        puVar3 = (uint *)(*(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8 + 4) * 8 + iVar4 + 400);
+		        goto code_r0x82372b8d;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar4 + 0xb6) != uVar1);
+		  }
+		  puVar3 = (uint *)func_ii_1080(param2,Core_Application_IApp_TypeInfo,0x1a);
+		code_r0x82372b8d:
+		  (**(code **)((ulonglong)*puVar3 * 4))(param2,uVar2,puVar3[1]);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x060059DC RID: 23004 RVA: 0x00002050 File Offset: 0x00000250
@@ -126,6 +202,96 @@ namespace Core
 		[Address(RVA = "0xA707", Offset = "0xA707", VA = "0xA707")]
 		public AppLoader()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Core_AppLoader___ctor(int *param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  int iVar2;
+		  int param1_00;
+		  undefined4 param1_01;
+		  undefined4 local_c;
+		  undefined8 local_8;
+		  
+		  if (DAT_ram_00a6054d == '\0') {
+		    Mono_Security_ASN1__get_Item(&OKG_Logs_Debug_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Core_GameLocalization_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&I2_Loc_LocalizationManager_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&string___TypeInfo);
+		    Mono_Security_ASN1__get_Item(&UnityEngine_SystemLanguage_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_8434);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_24729);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_8433);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_1238);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_16536);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_5996);
+		    DAT_ram_00a6054d = '\x01';
+		  }
+		  if (*(int *)(Core_GameLocalization_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Core_GameLocalization_TypeInfo);
+		  }
+		  if (DAT_ram_00a6054e == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_GameLocalization_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Method_System_Collections_Generic_List_string__IndexOf__);
+		    DAT_ram_00a6054e = '\x01';
+		  }
+		  if (*(int *)(Core_GameLocalization_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Core_GameLocalization_TypeInfo);
+		  }
+		  param1_01 = **(undefined4 **)(Core_GameLocalization_TypeInfo + 0x5c);
+		  uVar1 = (**(code **)((ulonglong)*(uint *)(*param1 + 0x118) * 4))
+		                    (param1,*(undefined4 *)(*param1 + 0x11c));
+		  iVar2 = UnityEngine_UIElements_RadioButtonGroup__GetAllRadioButtons
+		                    (param1_01,uVar1,Method_System_Collections_Generic_List_string__IndexOf__);
+		  param1_00 = Mono_Security_ASN1Convert__ToOid(string___TypeInfo,6);
+		  *(undefined4 *)(param1_00 + 0x10) = StringLiteral_8433;
+		  uVar1 = func_ii_4419(StringLiteral_5996,param1,0);
+		  *(undefined4 *)(param1_00 + 0x14) = uVar1;
+		  *(undefined4 *)(param1_00 + 0x18) = StringLiteral_16536;
+		  uVar1 = (**(code **)((ulonglong)*(uint *)(*param1 + 0x118) * 4))
+		                    (param1,*(undefined4 *)(*param1 + 0x11c));
+		  *(undefined4 *)(param1_00 + 0x1c) = uVar1;
+		  *(undefined4 *)(param1_00 + 0x20) = StringLiteral_1238;
+		  local_c = CONCAT31(local_c._1_3_,-1 < iVar2);
+		  uVar1 = func_ii_1081(DAT_ram_00a66944,&local_c);
+		  uVar1 = func_ii_4419(StringLiteral_24729,uVar1,0);
+		  *(undefined4 *)(param1_00 + 0x24) = uVar1;
+		  uVar1 = System_Single__ToString(param1_00,0);
+		  if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		  }
+		  System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  if (iVar2 < 0) {
+		    local_8 = 0xaffffffff;
+		    local_c = UnityEngine_SystemLanguage_TypeInfo;
+		    uVar1 = Spine_SkeletonJson__GetFloat(&local_c,0);
+		    if (*(int *)(I2_Loc_LocalizationManager_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(I2_Loc_LocalizationManager_TypeInfo);
+		    }
+		    I2_Loc_LocalizationManager__get_CurrentLanguage(uVar1,0);
+		  }
+		  else {
+		    local_8 = 0x1effffffff;
+		    local_c = UnityEngine_SystemLanguage_TypeInfo;
+		    uVar1 = Spine_SkeletonJson__GetFloat(&local_c,0);
+		    if (*(int *)(I2_Loc_LocalizationManager_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(I2_Loc_LocalizationManager_TypeInfo);
+		    }
+		    I2_Loc_LocalizationManager__get_CurrentLanguage(uVar1,0);
+		  }
+		  if (*(int *)(I2_Loc_LocalizationManager_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(I2_Loc_LocalizationManager_TypeInfo);
+		  }
+		  uVar1 = I2_Loc_LocalizationManager__GetWebServiceURL(0);
+		  uVar1 = Mono_Security_X509_X509Crl_X509CrlEntry___ctor(StringLiteral_8434,uVar1,0);
+		  if (*(int *)(OKG_Logs_Debug_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(OKG_Logs_Debug_TypeInfo);
+		  }
+		  System_Collections_Generic_Dictionary_uint__object___get_Count(uVar1,0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x04003097 RID: 12439
@@ -134,4 +300,162 @@ namespace Core
 		[SerializeField]
 		private AppCanvas appCanvas;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_AppCanvas ---
+		void Core_AppLoader__get_AppCanvas(int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  int param1_00;
+		  int *param1_01;
+		  int iVar2;
+		  
+		  if (DAT_ram_00a63c43 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_TypeInfo);
+		    DAT_ram_00a63c43 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x14);
+		  while ((param1_01 = (int *)UnityEngine_UI_Image__set_sprite(param1_00,param2,0),
+		         param1_01 == (int *)0x0 || (System_Action_TypeInfo == *param1_01))) {
+		    iVar2 = func_ii_4329(param1 + 0x14,param1_01,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,System_Action_TypeInfo);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: add_OnApplicationQuitEvent ---
+		void Core_AppLoader__add_OnApplicationQuitEvent(int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  int param1_00;
+		  int *param1_01;
+		  int iVar2;
+		  
+		  if (DAT_ram_00a63c44 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_TypeInfo);
+		    DAT_ram_00a63c44 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x14);
+		  while ((param1_01 = (int *)func_ii_7048(param1_00,param2,0), param1_01 == (int *)0x0 ||
+		         (System_Action_TypeInfo == *param1_01))) {
+		    iVar2 = func_ii_4329(param1 + 0x14,param1_01,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,System_Action_TypeInfo);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: remove_OnApplicationQuitEvent ---
+		void Core_AppLoader__remove_OnApplicationQuitEvent(int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a63c45 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_bool__TypeInfo);
+		    DAT_ram_00a63c45 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x18);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = UnityEngine_UI_Image__set_sprite(param1_00,param2,0);
+		    param2_00 = System_Action_bool__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_bool__TypeInfo), iVar2 == 0)) break;
+		    iVar2 = func_ii_4329(param1 + 0x18,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: add_OnApplicationFocusEvent ---
+		void Core_AppLoader__add_OnApplicationFocusEvent(int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a63c46 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_bool__TypeInfo);
+		    DAT_ram_00a63c46 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x18);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = func_ii_7048(param1_00,param2,0);
+		    param2_00 = System_Action_bool__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_bool__TypeInfo), iVar2 == 0)) break;
+		    iVar2 = func_ii_4329(param1 + 0x18,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: set_Preloader ---
+		void Core_AppLoader__set_Preloader(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a63c47 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_UnityEngine_Object_FindObjectOfType_Preloader___);
+		    Mono_Security_ASN1__get_Item(&UnityEngine_Object_TypeInfo);
+		    DAT_ram_00a63c47 = '\x01';
+		  }
+		  if (*(int *)(UnityEngine_Object_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(UnityEngine_Object_TypeInfo);
+		  }
+		  uVar1 = UnityEngine_Object__FindFirstObjectByType_object_
+		                    (Method_UnityEngine_Object_FindObjectOfType_Preloader___);
+		  *(undefined4 *)(param1 + 0x1c) = uVar1;
+		  return;
+		}
+		*/
+
 }

@@ -14,6 +14,26 @@ namespace Core.Dict.DictWrappers.Storages
 		[Address(RVA = "0xAEFF", Offset = "0xAEFF", VA = "0xAEFF")]
 		public MedalsDicWrapperStorage(IDictProvider dictProvider)
 		{
+		/* --- GHIDRA: .ctor ---
+		void Core_Dict_DictWrappers_Storages_MedalsDicWrapperStorage___ctor
+		               (undefined4 param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  if (DAT_ram_00a6074e == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Core_Dict_DictWrappers_Base_AbstractDictWrapperStorage_UserBuildingLevelDicWrapper__UserBuildingLevelDicWrapper_UserBuildingLevelDicWrapperId___ctor__
+		              );
+		    DAT_ram_00a6074e = '\x01';
+		  }
+		  UI_AbstractDataRenderer___Il2CppFullySharedGenericType___set_Data
+		            (param1,param2,
+		             Method_Core_Dict_DictWrappers_Base_AbstractDictWrapperStorage_UserBuildingLevelDicWrapper__UserBuildingLevelDicWrapper_UserBuildingLevelDicWrapperId___ctor__
+		            );
+		  return;
+		}
+		*/
+
 		}
 	}
 }

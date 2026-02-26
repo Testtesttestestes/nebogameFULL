@@ -14,6 +14,70 @@ namespace Core.Gameplay.Managers.Requirements.ListFillBehaviors
 		[Address(RVA = "0xB621", Offset = "0xB621", VA = "0xB621", Slot = "4")]
 		public void Add(IList<IInformationRow> collection, IInformationProvider provider)
 		{
+		/* --- GHIDRA: Add ---
+		void Core_Gameplay_Managers_Requirements_ListFillBehaviors_ListFillBehaviorWhitOutSeparation__Add
+		               (undefined4 param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  if (DAT_ram_00a5a647 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Sirenix_Utilities_LinqExtensions_AddRange_IInformationRow___);
+		    DAT_ram_00a5a647 = '\x01';
+		  }
+		  Core_Extensions_Dict_ArtikulTypeFilterDicExt__GetTitle
+		            (param2,param3,Method_Sirenix_Utilities_LinqExtensions_AddRange_IInformationRow___);
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: Add ---
+		void Core_Gameplay_Managers_Requirements_ListFillBehaviors_ListFillBehaviorWhitOutSeparation__Add
+		               (undefined4 param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  if (DAT_ram_00a5a647 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Sirenix_Utilities_LinqExtensions_AddRange_IInformationRow___);
+		    DAT_ram_00a5a647 = '\x01';
+		  }
+		  Core_Extensions_Dict_ArtikulTypeFilterDicExt__GetTitle
+		            (param2,param3,Method_Sirenix_Utilities_LinqExtensions_AddRange_IInformationRow___);
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: Add ---
+		void Core_Gameplay_Managers_Requirements_ListFillBehaviors_ListFillBehaviorWhitOutSeparation__Add
+		               (undefined4 param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  if (DAT_ram_00a5a647 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Sirenix_Utilities_LinqExtensions_AddRange_IInformationRow___);
+		    DAT_ram_00a5a647 = '\x01';
+		  }
+		  Core_Extensions_Dict_ArtikulTypeFilterDicExt__GetTitle
+		            (param2,param3,Method_Sirenix_Utilities_LinqExtensions_AddRange_IInformationRow___);
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: Add ---
+		void Core_Gameplay_Managers_Requirements_ListFillBehaviors_ListFillBehaviorWhitOutSeparation__Add
+		               (undefined4 param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  if (DAT_ram_00a5a647 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Sirenix_Utilities_LinqExtensions_AddRange_IInformationRow___);
+		    DAT_ram_00a5a647 = '\x01';
+		  }
+		  Core_Extensions_Dict_ArtikulTypeFilterDicExt__GetTitle
+		            (param2,param3,Method_Sirenix_Utilities_LinqExtensions_AddRange_IInformationRow___);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06006B1F RID: 27423 RVA: 0x00002050 File Offset: 0x00000250

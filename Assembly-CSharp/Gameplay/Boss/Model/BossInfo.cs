@@ -762,4 +762,921 @@ namespace Gameplay.Boss.Model
 			}
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_LicenceCountMax ---
+		uint Gameplay_Boss_Model_BossInfo__get_LicenceCountMax(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  uint uVar2;
+		  
+		  if (DAT_ram_00a5786e == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Google_Protobuf_Collections_RepeatedField_RewardInfo__get_Count__);
+		    DAT_ram_00a5786e = '\x01';
+		  }
+		  iVar1 = *(int *)(*(int *)(param1 + 0xc) + 0x38);
+		  if (iVar1 == 0) {
+		    uVar2 = 0;
+		  }
+		  else {
+		    uVar2 = (uint)(0 < *(int *)(iVar1 + 0xc));
+		  }
+		  return uVar2;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_HasLossReward ---
+		undefined8 Gameplay_Boss_Model_BossInfo__get_HasLossReward(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  undefined8 uVar2;
+		  undefined8 local_10;
+		  undefined8 local_8;
+		  
+		  if (DAT_ram_00a5786f == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_System_Nullable_ulong___ctor__);
+		    Mono_Security_ASN1__get_Item(&Method_System_Nullable_ulong__get_HasValue__);
+		    Mono_Security_ASN1__get_Item(&Method_System_Nullable_ulong__get_Value__);
+		    Mono_Security_ASN1__get_Item(&Method_Google_Protobuf_Collections_RepeatedField_int__get_Item__);
+		    DAT_ram_00a5786f = '\x01';
+		  }
+		  if (*(char *)(param1 + 0x30) == '\0') {
+		    iVar1 = Google_Protobuf_Collections_RepeatedField_Int32Enum___get_IsReadOnly
+		                      (*(undefined4 *)(*(int *)(param1 + 0xc) + 0x1c),1,
+		                       Method_Google_Protobuf_Collections_RepeatedField_int__get_Item__);
+		    local_8 = 0;
+		    local_10 = 0;
+		    Core_Log_Files_FileDownloadLogger__LogDownload
+		              (&local_10,(longlong)iVar1,Method_System_Nullable_ulong___ctor__);
+		    *(undefined8 *)(param1 + 0x38) = local_8;
+		    *(undefined8 *)(param1 + 0x30) = local_10;
+		  }
+		  uVar2 = System_Nullable_TimeSpan___get_HasValue
+		                    ((undefined8 *)(param1 + 0x30),Method_System_Nullable_ulong__get_Value__);
+		  return uVar2;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_CultSpells ---
+		void Gameplay_Boss_Model_BossInfo__set_CultSpells
+		               (int param1,undefined4 param2,undefined4 param3,int *param4,undefined4 param5)
+		
+		{
+		  undefined4 in_register_20000004;
+		  undefined8 uVar1;
+		  undefined4 uVar3;
+		  double dVar2;
+		  uint *puVar4;
+		  undefined4 uVar5;
+		  undefined4 *puVar6;
+		  int *piVar7;
+		  double dVar8;
+		  int iVar9;
+		  int iVar10;
+		  int iVar11;
+		  undefined4 uVar12;
+		  double dVar13;
+		  int *piVar14;
+		  uint uVar15;
+		  ulonglong uVar16;
+		  int *local_14;
+		  int *local_10;
+		  int *local_c;
+		  float8 local_8;
+		  
+		  if (DAT_ram_00a57870 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Gameplay_Boss_Model_BossInfo_BossAttackOption_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Gameplay_Boss_Model_BossInfo_BossCultSpellData_TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Linq_Enumerable_OrderBy_BossInfo_BossRewardRangeData__uint___);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Linq_Enumerable_ToList_BossInfo_BossRewardRangeData___);
+		    Mono_Security_ASN1__get_Item(&System_Func_BossInfo_BossRewardRangeData__uint__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Core_Dict_IDictProvider_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&System_IDisposable_TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&System_Collections_Generic_IEnumerator_BossTypeDic_Types_RewardPlace__TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&System_Collections_Generic_IEnumerator_BossTypeDic_Types_AttackOption__TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&System_Collections_Generic_IEnumerator_BossTypeDic_Types_CultSpell__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&System_Collections_IEnumerator_TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_List_BossInfo_BossRewardRangeData__Add__);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_List_BossInfo_BossCultSpellData__Add__);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_List_BossInfo_BossAttackOption__Add__);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_List_BossInfo_BossRewardRangeData___ctor__);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_List_BossInfo_BossCultSpellData___ctor__);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_List_BossInfo_BossAttackOption___ctor__);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_List_BossInfo_BossRewardRangeData__get_Count__);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_List_BossInfo_BossRewardRangeData__get_Item__);
+		    Mono_Security_ASN1__get_Item
+		              (&System_Collections_Generic_List_BossInfo_BossCultSpellData__TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&System_Collections_Generic_List_BossInfo_BossAttackOption__TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&System_Collections_Generic_List_BossInfo_BossRewardRangeData__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&System_Math_TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Google_Protobuf_Collections_RepeatedField_BossTypeDic_Types_RewardPlace__GetEnumerator__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Google_Protobuf_Collections_RepeatedField_BossTypeDic_Types_CultSpell__GetEnumerator__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Google_Protobuf_Collections_RepeatedField_BossTypeDic_Types_AttackOption__GetEnumerator__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Google_Protobuf_Collections_RepeatedField_double__get_Count__);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Google_Protobuf_Collections_RepeatedField_RewardInfo__get_Count__);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Google_Protobuf_Collections_RepeatedField_double__get_Item__);
+		    Mono_Security_ASN1__get_Item(&Core_Data_Skills_SkillCollection_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Method_Gameplay_Boss_Model_BossInfo___c___ctor_b__58_0__);
+		    Mono_Security_ASN1__get_Item(&Gameplay_Boss_Model_BossInfo___c_TypeInfo);
+		    DAT_ram_00a57870 = '\x01';
+		  }
+		  local_c = (int *)0x0;
+		  local_10 = (int *)0x0;
+		  local_14 = (int *)0x0;
+		  iVar9 = *param4;
+		  if (*(ushort *)(iVar9 + 0xb6) != 0) {
+		    uVar15 = 0;
+		    do {
+		      if (Core_Dict_IDictProvider_TypeInfo == *(int *)(*(int *)(iVar9 + 0x58) + uVar15 * 8)) {
+		        puVar4 = (uint *)(*(int *)(*(int *)(iVar9 + 0x58) + uVar15 * 8 + 4) * 8 + iVar9 + 0xd0);
+		        goto code_r0x80dea5fb;
+		      }
+		      uVar15 = uVar15 + 1;
+		    } while (*(ushort *)(iVar9 + 0xb6) != uVar15);
+		  }
+		  puVar4 = (uint *)func_ii_1080(param4,Core_Dict_IDictProvider_TypeInfo,2);
+		code_r0x80dea5fb:
+		  uVar15 = 0;
+		  uVar1 = CONCAT44(in_register_20000004,param4);
+		  uVar5 = (**(code **)((ulonglong)*puVar4 * 4))(uVar1,puVar4[1]);
+		  uVar3 = (undefined4)((ulonglong)uVar1 >> 0x20);
+		  uVar5 = Core_Extensions_Dict_DictExt__GetStoneDic(uVar5,param2,0);
+		  *(undefined4 *)(param1 + 0xc) = uVar5;
+		  iVar9 = *param4;
+		  if (*(ushort *)(iVar9 + 0xb6) != 0) {
+		    do {
+		      if (Core_Dict_IDictProvider_TypeInfo == *(int *)(*(int *)(iVar9 + 0x58) + uVar15 * 8)) {
+		        puVar4 = (uint *)(*(int *)(*(int *)(iVar9 + 0x58) + uVar15 * 8 + 4) * 8 + iVar9 + 0xd0);
+		        goto code_r0x80dea686;
+		      }
+		      uVar15 = uVar15 + 1;
+		    } while (*(ushort *)(iVar9 + 0xb6) != uVar15);
+		  }
+		  puVar4 = (uint *)func_ii_1080(param4,Core_Dict_IDictProvider_TypeInfo,2);
+		code_r0x80dea686:
+		  uVar15 = 0;
+		  uVar1 = CONCAT44(uVar3,param4);
+		  uVar5 = (**(code **)((ulonglong)*puVar4 * 4))(uVar1,puVar4[1]);
+		  uVar3 = (undefined4)((ulonglong)uVar1 >> 0x20);
+		  uVar5 = Core_Extensions_Dict_DictExt__GetBattleAccountCoeffsDic
+		                    (uVar5,*(undefined4 *)(*(int *)(param1 + 0xc) + 0x10),0);
+		  *(undefined4 *)(param1 + 0x14) = uVar5;
+		  iVar9 = *param4;
+		  if (*(ushort *)(iVar9 + 0xb6) != 0) {
+		    do {
+		      if (Core_Dict_IDictProvider_TypeInfo == *(int *)(*(int *)(iVar9 + 0x58) + uVar15 * 8)) {
+		        puVar4 = (uint *)(*(int *)(*(int *)(iVar9 + 0x58) + uVar15 * 8 + 4) * 8 + iVar9 + 0xd0);
+		        goto code_r0x80dea717;
+		      }
+		      uVar15 = uVar15 + 1;
+		    } while (*(ushort *)(iVar9 + 0xb6) != uVar15);
+		  }
+		  puVar4 = (uint *)func_ii_1080(param4,Core_Dict_IDictProvider_TypeInfo,2);
+		code_r0x80dea717:
+		  uVar15 = 0;
+		  uVar1 = CONCAT44(uVar3,param4);
+		  uVar5 = (**(code **)((ulonglong)*puVar4 * 4))(uVar1,puVar4[1]);
+		  uVar3 = (undefined4)((ulonglong)uVar1 >> 0x20);
+		  uVar5 = Core_Extensions_Dict_DictExt__GetArtikulTypeFiltersByFilterType
+		                    (uVar5,*(undefined4 *)(*(int *)(param1 + 0x14) + 0x10),0);
+		  *(undefined4 *)(param1 + 8) = uVar5;
+		  iVar9 = *param4;
+		  if (*(ushort *)(iVar9 + 0xb6) != 0) {
+		    do {
+		      if (Core_Dict_IDictProvider_TypeInfo == *(int *)(*(int *)(iVar9 + 0x58) + uVar15 * 8)) {
+		        puVar4 = (uint *)(*(int *)(*(int *)(iVar9 + 0x58) + uVar15 * 8 + 4) * 8 + iVar9 + 0xd0);
+		        goto code_r0x80dea7a8;
+		      }
+		      uVar15 = uVar15 + 1;
+		    } while (*(ushort *)(iVar9 + 0xb6) != uVar15);
+		  }
+		  puVar4 = (uint *)func_ii_1080(param4,Core_Dict_IDictProvider_TypeInfo,2);
+		code_r0x80dea7a8:
+		  iVar9 = 0;
+		  uVar1 = CONCAT44(uVar3,param4);
+		  uVar5 = (**(code **)((ulonglong)*puVar4 * 4))(uVar1,puVar4[1]);
+		  uVar3 = (undefined4)((ulonglong)uVar1 >> 0x20);
+		  uVar5 = func_ii_7023(uVar5,param3,0);
+		  *(undefined4 *)(param1 + 0x10) = uVar5;
+		  iVar10 = *(int *)(param1 + 0xc);
+		  iVar11 = *(int *)(iVar10 + 0x28);
+		  if (0 < *(int *)(iVar11 + 0xc)) {
+		    do {
+		      dVar13 = func_ii_7527(iVar11,iVar9,
+		                            Method_Google_Protobuf_Collections_RepeatedField_double__get_Item__);
+		      if (0.0 < dVar13) {
+		        *(int *)(param1 + 0x24) = iVar9;
+		        if (*(int *)(System_Math_TypeInfo + 0x74) == 0) {
+		          func_ii_306000(System_Math_TypeInfo);
+		        }
+		        dVar13 = dVar13 * 100.0;
+		        dVar2 = dVar13;
+		        dVar8 = unnamed_function_4206(dVar13,&local_8);
+		        uVar3 = (undefined4)((ulonglong)dVar2 >> 0x20);
+		        if (0.0 <= dVar13) {
+		          if (dVar8 == 0.5) {
+		            dVar13 = (double)CONCAT44(local_8._4_4_,local_8._0_4_);
+		            if (ABS(dVar13) < 9.223372036854776e+18) {
+		              uVar16 = (ulonglong)dVar13;
+		            }
+		            else {
+		              uVar16 = 0;
+		            }
+		            if ((uVar16 & 1) != 0) {
+		              dVar13 = dVar13 + 1.0;
+		            }
+		          }
+		          else {
+		            dVar13 = FLOOR(dVar13 + 0.5);
+		          }
+		        }
+		        else if (dVar8 == -0.5) {
+		          dVar13 = (double)CONCAT44(local_8._4_4_,local_8._0_4_);
+		          if (ABS(dVar13) < 9.223372036854776e+18) {
+		            uVar16 = (ulonglong)dVar13;
+		          }
+		          else {
+		            uVar16 = 0;
+		          }
+		          if ((uVar16 & 1) != 0) {
+		            dVar13 = dVar13 + -1.0;
+		          }
+		        }
+		        else {
+		          dVar13 = CEIL(dVar13 + -0.5);
+		        }
+		        if (ABS(dVar13) < 2147483648.0) {
+		          iVar9 = (int)dVar13;
+		        }
+		        else {
+		          iVar9 = -0x80000000;
+		        }
+		        *(int *)(param1 + 0x20) = iVar9;
+		        iVar10 = *(int *)(param1 + 0xc);
+		        break;
+		      }
+		      iVar9 = iVar9 + 1;
+		      iVar10 = *(int *)(param1 + 0xc);
+		      iVar11 = *(int *)(iVar10 + 0x28);
+		    } while (iVar9 < *(int *)(iVar11 + 0xc));
+		  }
+		  if (*(int *)(iVar10 + 0x2c) != 0) {
+		    dVar13 = *(double *)(*(int *)(iVar10 + 0x2c) + 0x10);
+		    if (*(int *)(System_Math_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(System_Math_TypeInfo);
+		    }
+		    dVar13 = dVar13 * 100.0;
+		    dVar2 = dVar13;
+		    dVar8 = unnamed_function_4206(dVar13,&local_8);
+		    uVar3 = (undefined4)((ulonglong)dVar2 >> 0x20);
+		    if (0.0 <= dVar13) {
+		      if (dVar8 == 0.5) {
+		        dVar13 = (double)CONCAT44(local_8._4_4_,local_8._0_4_);
+		        if (ABS(dVar13) < 9.223372036854776e+18) {
+		          uVar16 = (ulonglong)dVar13;
+		        }
+		        else {
+		          uVar16 = 0;
+		        }
+		        if ((uVar16 & 1) != 0) {
+		          dVar13 = dVar13 + 1.0;
+		        }
+		      }
+		      else {
+		        dVar13 = FLOOR(dVar13 + 0.5);
+		      }
+		    }
+		    else if (dVar8 == -0.5) {
+		      dVar13 = (double)CONCAT44(local_8._4_4_,local_8._0_4_);
+		      if (ABS(dVar13) < 9.223372036854776e+18) {
+		        uVar16 = (ulonglong)dVar13;
+		      }
+		      else {
+		        uVar16 = 0;
+		      }
+		      if ((uVar16 & 1) != 0) {
+		        dVar13 = dVar13 + -1.0;
+		      }
+		    }
+		    else {
+		      dVar13 = CEIL(dVar13 + -0.5);
+		    }
+		    if (ABS(dVar13) < 2147483648.0) {
+		      iVar9 = (int)dVar13;
+		    }
+		    else {
+		      iVar9 = -0x80000000;
+		    }
+		    *(int *)(param1 + 0x1c) = iVar9;
+		    uVar15 = 0;
+		    iVar9 = *param4;
+		    if (*(ushort *)(iVar9 + 0xb6) != 0) {
+		      do {
+		        if (Core_Dict_IDictProvider_TypeInfo == *(int *)(*(int *)(iVar9 + 0x58) + uVar15 * 8)) {
+		          puVar4 = (uint *)(*(int *)(*(int *)(iVar9 + 0x58) + uVar15 * 8 + 4) * 8 + iVar9 + 0xd0);
+		          goto code_r0x80deaaed;
+		        }
+		        uVar15 = uVar15 + 1;
+		      } while (*(ushort *)(iVar9 + 0xb6) != uVar15);
+		    }
+		    puVar4 = (uint *)func_ii_1080(param4,Core_Dict_IDictProvider_TypeInfo,2);
+		code_r0x80deaaed:
+		    uVar1 = CONCAT44(uVar3,param4);
+		    uVar5 = (**(code **)((ulonglong)*puVar4 * 4))(uVar1,puVar4[1]);
+		    uVar3 = (undefined4)((ulonglong)uVar1 >> 0x20);
+		    uVar5 = Core_Extensions_Dict_DictExt__GetAllArtikulTypeMetaFilterByType
+		                      (uVar5,*(undefined4 *)(*(int *)(*(int *)(param1 + 0xc) + 0x2c) + 0xc),0);
+		    *(undefined4 *)(param1 + 0x18) = uVar5;
+		  }
+		  uVar5 = unnamed_function_1417(System_Collections_Generic_List_BossInfo_BossAttackOption__TypeInfo)
+		  ;
+		  GAFInternal_Objects_GAFBakedObjectImpl__get_isVisible
+		            (uVar5,Method_System_Collections_Generic_List_BossInfo_BossAttackOption___ctor__);
+		  *(undefined4 *)(param1 + 0x28) = uVar5;
+		  local_c = (int *)Google_Protobuf_Collections_RepeatedField_float___Equals
+		                             (*(undefined4 *)(*(int *)(param1 + 0xc) + 0x20),
+		                              Method_Google_Protobuf_Collections_RepeatedField_BossTypeDic_Types_AttackOption__GetEnumerator__
+		                             );
+		  local_8._0_4_ = 0;
+		  local_8._4_4_ = &local_c;
+		code_r0x80deab7c:
+		  do {
+		    piVar7 = local_c;
+		    iVar9 = *local_c;
+		    if (*(ushort *)(iVar9 + 0xb6) != 0) {
+		      uVar15 = 0;
+		      do {
+		        piVar14 = (int *)(*(int *)(iVar9 + 0x58) + uVar15 * 8);
+		        if (System_Collections_IEnumerator_TypeInfo == *piVar14) {
+		          puVar6 = (undefined4 *)(iVar9 + piVar14[1] * 8 + 0xc0);
+		          goto code_r0x80deac10;
+		        }
+		        uVar15 = uVar15 + 1;
+		      } while (*(ushort *)(iVar9 + 0xb6) != uVar15);
+		    }
+		    DAT_ram_009d3e38 = 0;
+		    puVar6 = (undefined4 *)
+		             import::env::invoke_iiii
+		                       (s_Allocator__0___Blocksize__1__mus_ram_00000421 + 0x18,local_c,
+		                        System_Collections_IEnumerator_TypeInfo,0);
+		    if (DAT_ram_009d3e38 == 1) {
+		code_r0x80deae3d:
+		      DAT_ram_009d3e38 = 0;
+		      uVar5 = import::env::__cxa_find_matching_catch_3(&DAT_ram_0072c9c8);
+		      goto code_r0x80deae45;
+		    }
+		code_r0x80deac10:
+		    DAT_ram_009d3e38 = 0;
+		    iVar9 = import::env::invoke_iii(*puVar6,piVar7,puVar6[1]);
+		    piVar7 = local_c;
+		    if (DAT_ram_009d3e38 == 1) goto code_r0x80deae3d;
+		    if (iVar9 == 0) {
+		      iVar9 = 9;
+		      goto code_r0x80deae92;
+		    }
+		    iVar9 = *local_c;
+		    if (*(ushort *)(iVar9 + 0xb6) != 0) {
+		      uVar15 = 0;
+		      do {
+		        piVar14 = (int *)(*(int *)(iVar9 + 0x58) + uVar15 * 8);
+		        if (System_Collections_Generic_IEnumerator_BossTypeDic_Types_AttackOption__TypeInfo ==
+		            *piVar14) {
+		          puVar6 = (undefined4 *)(iVar9 + piVar14[1] * 8 + 0xc0);
+		          goto code_r0x80deacea;
+		        }
+		        uVar15 = uVar15 + 1;
+		      } while (*(ushort *)(iVar9 + 0xb6) != uVar15);
+		    }
+		    DAT_ram_009d3e38 = 0;
+		    puVar6 = (undefined4 *)
+		             import::env::invoke_iiii
+		                       (s_Allocator__0___Blocksize__1__mus_ram_00000421 + 0x18,local_c,
+		                        System_Collections_Generic_IEnumerator_BossTypeDic_Types_AttackOption__TypeInfo
+		                        ,0);
+		    if (DAT_ram_009d3e38 == 1) {
+		code_r0x80deae29:
+		      DAT_ram_009d3e38 = 0;
+		      uVar5 = import::env::__cxa_find_matching_catch_3(&DAT_ram_0072c9c8);
+		      goto code_r0x80deae45;
+		    }
+		code_r0x80deacea:
+		    DAT_ram_009d3e38 = 0;
+		    uVar5 = import::env::invoke_iii(*puVar6,piVar7,puVar6[1]);
+		    if (DAT_ram_009d3e38 == 1) goto code_r0x80deae29;
+		    iVar9 = *(int *)(param1 + 0x28);
+		    DAT_ram_009d3e38 = 0;
+		    uVar12 = import::env::invoke_ii
+		                       (s_var<private>_posTex__array<vec4<_ram_00000655 + 0x199,
+		                        Gameplay_Boss_Model_BossInfo_BossAttackOption_TypeInfo);
+		    if (DAT_ram_009d3e38 == 1) break;
+		    DAT_ram_009d3e38 = 0;
+		    import::env::invoke_viii
+		              (s_struct_Uniforms___color__array<v_ram_000017c8 + 0x35e,uVar12,uVar5,iVar9);
+		    iVar11 = Method_System_Collections_Generic_List_BossInfo_BossAttackOption__Add__;
+		    if (DAT_ram_009d3e38 == 1) break;
+		    *(int *)(iVar9 + 0x10) = *(int *)(iVar9 + 0x10) + 1;
+		    uVar15 = *(uint *)(iVar9 + 0xc);
+		    if (uVar15 < *(uint *)(*(int *)(iVar9 + 8) + 0xc)) {
+		      *(uint *)(iVar9 + 0xc) = uVar15 + 1;
+		      *(undefined4 *)(*(int *)(iVar9 + 8) + uVar15 * 4 + 0x10) = uVar12;
+		      goto code_r0x80deab7c;
+		    }
+		    DAT_ram_009d3e38 = 0;
+		    import::env::invoke_viii
+		              (s_struct_Uniforms___color__array<v_ram_00000aff + 0x6e,iVar9,uVar12,
+		               *(undefined4 *)(*(int *)(*(int *)(iVar11 + 0x10) + 0x60) + 0x38));
+		  } while (DAT_ram_009d3e38 != 1);
+		  DAT_ram_009d3e38 = 0;
+		  uVar5 = import::env::__cxa_find_matching_catch_3(&DAT_ram_0072c9c8);
+		code_r0x80deae45:
+		  iVar9 = global_1;
+		  iVar11 = import::env::llvm_eh_typeid_for(&DAT_ram_0072c9c8);
+		  if (iVar9 == iVar11) {
+		    piVar7 = (int *)import::env::__cxa_begin_catch(uVar5);
+		    local_8._0_4_ = *piVar7;
+		    iVar9 = 0;
+		    DAT_ram_009d3e38 = 0;
+		    import::env::invoke_v(0x123);
+		    iVar11 = DAT_ram_009d3e38;
+		    DAT_ram_009d3e38 = 0;
+		    if (iVar11 != 1) {
+		code_r0x80deae92:
+		      DAT_ram_009d3e38 = 0;
+		      piVar7 = *local_8._4_4_;
+		      if (piVar7 != (int *)0x0) {
+		        uVar15 = 0;
+		        iVar11 = *piVar7;
+		        if (*(ushort *)(iVar11 + 0xb6) != 0) {
+		          do {
+		            if (System_IDisposable_TypeInfo == *(int *)(*(int *)(iVar11 + 0x58) + uVar15 * 8)) {
+		              puVar4 = (uint *)(iVar11 + *(int *)(*(int *)(iVar11 + 0x58) + uVar15 * 8 + 4) * 8 +
+		                               0xc0);
+		              goto code_r0x80deaf0d;
+		            }
+		            uVar15 = uVar15 + 1;
+		          } while (*(ushort *)(iVar11 + 0xb6) != uVar15);
+		        }
+		        puVar4 = (uint *)func_ii_1080(piVar7,System_IDisposable_TypeInfo,0);
+		code_r0x80deaf0d:
+		        uVar1 = CONCAT44(uVar3,piVar7);
+		        (**(code **)((ulonglong)*puVar4 * 4))(uVar1,puVar4[1]);
+		        uVar3 = (undefined4)((ulonglong)uVar1 >> 0x20);
+		      }
+		      if (local_8._0_4_ != 0) {
+		        System_Data_DataSet__ValidateLocaleConstraint(local_8._0_4_);
+		        do {
+		          halt_trap();
+		        } while( true );
+		      }
+		      if (iVar9 != 0) {
+		        if (iVar9 == 1) {
+		          return;
+		        }
+		        if (iVar9 == 2) {
+		          return;
+		        }
+		        if (iVar9 == 3) {
+		          return;
+		        }
+		        if (iVar9 == 4) {
+		          return;
+		        }
+		        if (iVar9 == 5) {
+		          return;
+		        }
+		        if (iVar9 == 6) {
+		          return;
+		        }
+		        if (iVar9 == 7) {
+		          return;
+		        }
+		        if (iVar9 == 8) {
+		          return;
+		        }
+		        if (iVar9 != 9) {
+		          return;
+		        }
+		      }
+		      uVar12 = *(undefined4 *)(*(int *)(param1 + 0xc) + 0x1c);
+		      uVar5 = unnamed_function_1417(Core_Data_Skills_SkillCollection_TypeInfo);
+		      Core_Data_Skills_SkillCollection___ctor(uVar5,uVar12,0);
+		      uVar5 = Gameplay_UserInfo_Model_UserInfoModel__get_ExperienceProgress(uVar5,0);
+		      *(undefined4 *)(param1 + 0x40) = uVar5;
+		      iVar9 = unnamed_function_1417
+		                        (System_Collections_Generic_List_BossInfo_BossRewardRangeData__TypeInfo);
+		      GAFInternal_Objects_GAFBakedObjectImpl__get_isVisible
+		                (iVar9,Method_System_Collections_Generic_List_BossInfo_BossRewardRangeData___ctor__)
+		      ;
+		      local_10 = (int *)Google_Protobuf_Collections_RepeatedField_float___Equals
+		                                  (*(undefined4 *)(*(int *)(param1 + 0xc) + 0x24),
+		                                   Method_Google_Protobuf_Collections_RepeatedField_BossTypeDic_Types_RewardPlace__GetEnumerator__
+		                                  );
+		      local_8._0_4_ = 0;
+		      local_8._4_4_ = &local_10;
+		code_r0x80deaff5:
+		      do {
+		        piVar7 = local_10;
+		        iVar11 = *local_10;
+		        if (*(ushort *)(iVar11 + 0xb6) != 0) {
+		          uVar15 = 0;
+		          do {
+		            piVar14 = (int *)(*(int *)(iVar11 + 0x58) + uVar15 * 8);
+		            if (System_Collections_IEnumerator_TypeInfo == *piVar14) {
+		              puVar6 = (undefined4 *)(iVar11 + piVar14[1] * 8 + 0xc0);
+		              goto code_r0x80deb089;
+		            }
+		            uVar15 = uVar15 + 1;
+		          } while (*(ushort *)(iVar11 + 0xb6) != uVar15);
+		        }
+		        DAT_ram_009d3e38 = 0;
+		        puVar6 = (undefined4 *)
+		                 import::env::invoke_iiii
+		                           (s_Allocator__0___Blocksize__1__mus_ram_00000421 + 0x18,local_10,
+		                            System_Collections_IEnumerator_TypeInfo,0);
+		        if (DAT_ram_009d3e38 == 1) {
+		code_r0x80deb27b:
+		          DAT_ram_009d3e38 = 0;
+		          uVar5 = import::env::__cxa_find_matching_catch_3(&DAT_ram_0072c9c8);
+		          goto code_r0x80deb283;
+		        }
+		code_r0x80deb089:
+		        DAT_ram_009d3e38 = 0;
+		        iVar11 = import::env::invoke_iii(*puVar6,piVar7,puVar6[1]);
+		        piVar7 = local_10;
+		        if (DAT_ram_009d3e38 == 1) goto code_r0x80deb27b;
+		        if (iVar11 == 0) {
+		          iVar11 = 0xc;
+		          goto code_r0x80deb2d0;
+		        }
+		        iVar11 = *local_10;
+		        if (*(ushort *)(iVar11 + 0xb6) != 0) {
+		          uVar15 = 0;
+		          do {
+		            piVar14 = (int *)(*(int *)(iVar11 + 0x58) + uVar15 * 8);
+		            if (System_Collections_Generic_IEnumerator_BossTypeDic_Types_RewardPlace__TypeInfo ==
+		                *piVar14) {
+		              puVar6 = (undefined4 *)(iVar11 + piVar14[1] * 8 + 0xc0);
+		              goto code_r0x80deb163;
+		            }
+		            uVar15 = uVar15 + 1;
+		          } while (*(ushort *)(iVar11 + 0xb6) != uVar15);
+		        }
+		        DAT_ram_009d3e38 = 0;
+		        puVar6 = (undefined4 *)
+		                 import::env::invoke_iiii
+		                           (s_Allocator__0___Blocksize__1__mus_ram_00000421 + 0x18,local_10,
+		                            System_Collections_Generic_IEnumerator_BossTypeDic_Types_RewardPlace__TypeInfo
+		                            ,0);
+		        if (DAT_ram_009d3e38 == 1) {
+		code_r0x80deb267:
+		          DAT_ram_009d3e38 = 0;
+		          uVar5 = import::env::__cxa_find_matching_catch_3(&DAT_ram_0072c9c8);
+		          goto code_r0x80deb283;
+		        }
+		code_r0x80deb163:
+		        DAT_ram_009d3e38 = 0;
+		        uVar5 = import::env::invoke_iii(*puVar6,piVar7,puVar6[1]);
+		        iVar11 = DAT_ram_009d3e38;
+		        if (DAT_ram_009d3e38 == 1) goto code_r0x80deb267;
+		        DAT_ram_009d3e38 = 0;
+		        uVar5 = import::env::invoke_iii
+		                          (s_struct_Uniforms___color__array<v_ram_000017c8 + 0x360,uVar5,iVar11);
+		        iVar11 = Method_System_Collections_Generic_List_BossInfo_BossRewardRangeData__Add__;
+		        if (DAT_ram_009d3e38 == 1) break;
+		        *(int *)(iVar9 + 0x10) = *(int *)(iVar9 + 0x10) + 1;
+		        uVar15 = *(uint *)(iVar9 + 0xc);
+		        if (uVar15 < *(uint *)(*(int *)(iVar9 + 8) + 0xc)) {
+		          *(uint *)(iVar9 + 0xc) = uVar15 + 1;
+		          *(undefined4 *)(*(int *)(iVar9 + 8) + uVar15 * 4 + 0x10) = uVar5;
+		          goto code_r0x80deaff5;
+		        }
+		        DAT_ram_009d3e38 = 0;
+		        import::env::invoke_viii
+		                  (s_struct_Uniforms___color__array<v_ram_00000aff + 0x6e,iVar9,uVar5,
+		                   *(undefined4 *)(*(int *)(*(int *)(iVar11 + 0x10) + 0x60) + 0x38));
+		      } while (DAT_ram_009d3e38 != 1);
+		      DAT_ram_009d3e38 = 0;
+		      uVar5 = import::env::__cxa_find_matching_catch_3(&DAT_ram_0072c9c8);
+		code_r0x80deb283:
+		      iVar11 = global_1;
+		      iVar10 = import::env::llvm_eh_typeid_for(&DAT_ram_0072c9c8);
+		      if (iVar11 == iVar10) {
+		        piVar7 = (int *)import::env::__cxa_begin_catch(uVar5);
+		        local_8._0_4_ = *piVar7;
+		        iVar11 = 0;
+		        DAT_ram_009d3e38 = 0;
+		        import::env::invoke_v(0x123);
+		        iVar10 = DAT_ram_009d3e38;
+		        DAT_ram_009d3e38 = 0;
+		        if (iVar10 != 1) {
+		code_r0x80deb2d0:
+		          DAT_ram_009d3e38 = 0;
+		          piVar7 = *local_8._4_4_;
+		          if (piVar7 != (int *)0x0) {
+		            uVar15 = 0;
+		            iVar10 = *piVar7;
+		            if (*(ushort *)(iVar10 + 0xb6) != 0) {
+		              do {
+		                if (System_IDisposable_TypeInfo == *(int *)(*(int *)(iVar10 + 0x58) + uVar15 * 8)) {
+		                  puVar4 = (uint *)(iVar10 + *(int *)(*(int *)(iVar10 + 0x58) + uVar15 * 8 + 4) * 8
+		                                   + 0xc0);
+		                  goto code_r0x80deb34b;
+		                }
+		                uVar15 = uVar15 + 1;
+		              } while (*(ushort *)(iVar10 + 0xb6) != uVar15);
+		            }
+		            puVar4 = (uint *)func_ii_1080(piVar7,System_IDisposable_TypeInfo,0);
+		code_r0x80deb34b:
+		            uVar1 = CONCAT44(uVar3,piVar7);
+		            (**(code **)((ulonglong)*puVar4 * 4))(uVar1,puVar4[1]);
+		            uVar3 = (undefined4)((ulonglong)uVar1 >> 0x20);
+		          }
+		          if (local_8._0_4_ != 0) {
+		            System_Data_DataSet__ValidateLocaleConstraint(local_8._0_4_);
+		            do {
+		              halt_trap();
+		            } while( true );
+		          }
+		          if ((iVar11 != 0) &&
+		             (((((iVar11 == 1 || (iVar11 == 2)) || (iVar11 == 3)) ||
+		               ((((iVar11 == 4 || (iVar11 == 5)) ||
+		                 ((iVar11 == 6 || ((iVar11 == 7 || (iVar11 == 8)))))) || (iVar11 == 9)))) ||
+		              (((iVar11 == 10 || (iVar11 == 0xb)) || (iVar11 != 0xc)))))) {
+		            return;
+		          }
+		          if (*(int *)(Gameplay_Boss_Model_BossInfo___c_TypeInfo + 0x74) == 0) {
+		            func_ii_306000(Gameplay_Boss_Model_BossInfo___c_TypeInfo);
+		          }
+		          puVar6 = *(undefined4 **)(Gameplay_Boss_Model_BossInfo___c_TypeInfo + 0x5c);
+		          iVar11 = puVar6[1];
+		          if (iVar11 == 0) {
+		            if (*(int *)(Gameplay_Boss_Model_BossInfo___c_TypeInfo + 0x74) == 0) {
+		              func_ii_306000(Gameplay_Boss_Model_BossInfo___c_TypeInfo);
+		              puVar6 = *(undefined4 **)(Gameplay_Boss_Model_BossInfo___c_TypeInfo + 0x5c);
+		            }
+		            uVar5 = *puVar6;
+		            iVar11 = unnamed_function_1417(System_Func_BossInfo_BossRewardRangeData__uint__TypeInfo)
+		            ;
+		            System_Collections_Generic_Dictionary_KeyCollection_uint__object___GetEnumerator
+		                      (iVar11,uVar5,Method_Gameplay_Boss_Model_BossInfo___c___ctor_b__58_0__,0);
+		            *(int *)(*(int *)(Gameplay_Boss_Model_BossInfo___c_TypeInfo + 0x5c) + 4) = iVar11;
+		          }
+		          uVar5 = System_Linq_Enumerable__Min___Il2CppFullySharedGenericType____Il2CppFullySharedGenericType_
+		                            (iVar9,iVar11,
+		                             Method_System_Linq_Enumerable_OrderBy_BossInfo_BossRewardRangeData__uint___
+		                            );
+		          iVar9 = System_Linq_Enumerable__Select_object__object_
+		                            (uVar5,
+		                             Method_System_Linq_Enumerable_ToList_BossInfo_BossRewardRangeData___);
+		          *(int *)(param1 + 0x44) = iVar9;
+		          iVar11 = *(int *)(*(int *)(param1 + 0xc) + 0x34);
+		          if (0 < *(int *)(iVar11 + 0xc)) {
+		            uVar5 = Gameplay_Boss_Model_BossInfo_BossRewardRangeData__set_Label(iVar11,iVar9);
+		            iVar11 = Method_System_Collections_Generic_List_BossInfo_BossRewardRangeData__Add__;
+		            *(int *)(iVar9 + 0x10) = *(int *)(iVar9 + 0x10) + 1;
+		            uVar15 = *(uint *)(iVar9 + 0xc);
+		            if (uVar15 < *(uint *)(*(int *)(iVar9 + 8) + 0xc)) {
+		              *(uint *)(iVar9 + 0xc) = uVar15 + 1;
+		              *(undefined4 *)(*(int *)(iVar9 + 8) + uVar15 * 4 + 0x10) = uVar5;
+		            }
+		            else {
+		              System_Linq_Expressions_Interpreter_LeaveExceptionHandlerInstruction__Create
+		                        (iVar9,uVar5,
+		                         *(undefined4 *)(*(int *)(*(int *)(iVar11 + 0x10) + 0x60) + 0x38));
+		            }
+		          }
+		          iVar9 = *(int *)(*(int *)(param1 + 0xc) + 0x38);
+		          if (0 < *(int *)(iVar9 + 0xc)) {
+		            iVar11 = *(int *)(param1 + 0x44);
+		            uVar5 = Gameplay_Boss_Model_BossInfo_BossRewardRangeData__CreateWinReward(iVar9,iVar11);
+		            iVar9 = Method_System_Collections_Generic_List_BossInfo_BossRewardRangeData__Add__;
+		            *(int *)(iVar11 + 0x10) = *(int *)(iVar11 + 0x10) + 1;
+		            uVar15 = *(uint *)(iVar11 + 0xc);
+		            if (uVar15 < *(uint *)(*(int *)(iVar11 + 8) + 0xc)) {
+		              *(uint *)(iVar11 + 0xc) = uVar15 + 1;
+		              *(undefined4 *)(*(int *)(iVar11 + 8) + uVar15 * 4 + 0x10) = uVar5;
+		            }
+		            else {
+		              System_Linq_Expressions_Interpreter_LeaveExceptionHandlerInstruction__Create
+		                        (iVar11,uVar5,
+		                         *(undefined4 *)(*(int *)(*(int *)(iVar9 + 0x10) + 0x60) + 0x38));
+		            }
+		          }
+		          iVar9 = *(int *)(param1 + 0x44);
+		          if (0 < *(int *)(iVar9 + 0xc)) {
+		            iVar11 = 0;
+		            do {
+		              iVar9 = System_Linq_Enumerable__ToList_object_
+		                                (iVar9,iVar11,
+		                                 Method_System_Collections_Generic_List_BossInfo_BossRewardRangeData__get_Item__
+		                                );
+		              *(int *)(iVar9 + 0xc) = iVar11;
+		              iVar11 = iVar11 + 1;
+		              iVar9 = *(int *)(param1 + 0x44);
+		            } while (iVar11 < *(int *)(iVar9 + 0xc));
+		          }
+		          uVar5 = unnamed_function_1417
+		                            (System_Collections_Generic_List_BossInfo_BossCultSpellData__TypeInfo);
+		          GAFInternal_Objects_GAFBakedObjectImpl__get_isVisible
+		                    (uVar5,
+		                     Method_System_Collections_Generic_List_BossInfo_BossCultSpellData___ctor__);
+		          *(undefined4 *)(param1 + 0x48) = uVar5;
+		          local_14 = (int *)Google_Protobuf_Collections_RepeatedField_float___Equals
+		                                      (*(undefined4 *)(*(int *)(param1 + 0xc) + 0x30),
+		                                       Method_Google_Protobuf_Collections_RepeatedField_BossTypeDic_Types_CultSpell__GetEnumerator__
+		                                      );
+		          local_8._0_4_ = 0;
+		          local_8._4_4_ = &local_14;
+		code_r0x80deb5d3:
+		          do {
+		            piVar7 = local_14;
+		            iVar9 = *local_14;
+		            if (*(ushort *)(iVar9 + 0xb6) != 0) {
+		              uVar15 = 0;
+		              do {
+		                piVar14 = (int *)(*(int *)(iVar9 + 0x58) + uVar15 * 8);
+		                if (System_Collections_IEnumerator_TypeInfo == *piVar14) {
+		                  puVar6 = (undefined4 *)(iVar9 + piVar14[1] * 8 + 0xc0);
+		                  goto code_r0x80deb667;
+		                }
+		                uVar15 = uVar15 + 1;
+		              } while (*(ushort *)(iVar9 + 0xb6) != uVar15);
+		            }
+		            DAT_ram_009d3e38 = 0;
+		            puVar6 = (undefined4 *)
+		                     import::env::invoke_iiii
+		                               (s_Allocator__0___Blocksize__1__mus_ram_00000421 + 0x18,local_14,
+		                                System_Collections_IEnumerator_TypeInfo,0);
+		            if (DAT_ram_009d3e38 == 1) {
+		code_r0x80deb890:
+		              DAT_ram_009d3e38 = 0;
+		              uVar5 = import::env::__cxa_find_matching_catch_3(&DAT_ram_0072c9c8);
+		              goto code_r0x80deb898;
+		            }
+		code_r0x80deb667:
+		            DAT_ram_009d3e38 = 0;
+		            iVar9 = import::env::invoke_iii(*puVar6,piVar7,puVar6[1]);
+		            piVar7 = local_14;
+		            if (DAT_ram_009d3e38 == 1) goto code_r0x80deb890;
+		            if (iVar9 == 0) goto code_r0x80deb8e1;
+		            iVar9 = *local_14;
+		            if (*(ushort *)(iVar9 + 0xb6) != 0) {
+		              uVar15 = 0;
+		              do {
+		                piVar14 = (int *)(*(int *)(iVar9 + 0x58) + uVar15 * 8);
+		                if (System_Collections_Generic_IEnumerator_BossTypeDic_Types_CultSpell__TypeInfo ==
+		                    *piVar14) {
+		                  puVar6 = (undefined4 *)(iVar9 + piVar14[1] * 8 + 0xc0);
+		                  goto code_r0x80deb744;
+		                }
+		                uVar15 = uVar15 + 1;
+		              } while (*(ushort *)(iVar9 + 0xb6) != uVar15);
+		            }
+		            DAT_ram_009d3e38 = 0;
+		            puVar6 = (undefined4 *)
+		                     import::env::invoke_iiii
+		                               (s_Allocator__0___Blocksize__1__mus_ram_00000421 + 0x18,local_14,
+		                                System_Collections_Generic_IEnumerator_BossTypeDic_Types_CultSpell__TypeInfo
+		                                ,0);
+		            if (DAT_ram_009d3e38 == 1) {
+		code_r0x80deb87c:
+		              DAT_ram_009d3e38 = 0;
+		              uVar5 = import::env::__cxa_find_matching_catch_3(&DAT_ram_0072c9c8);
+		              goto code_r0x80deb898;
+		            }
+		code_r0x80deb744:
+		            DAT_ram_009d3e38 = 0;
+		            uVar5 = import::env::invoke_iii(*puVar6,piVar7,puVar6[1]);
+		            if (DAT_ram_009d3e38 == 1) goto code_r0x80deb87c;
+		            iVar9 = *(int *)(param1 + 0x48);
+		            DAT_ram_009d3e38 = 0;
+		            uVar12 = import::env::invoke_ii
+		                               (s_var<private>_posTex__array<vec4<_ram_00000655 + 0x199,
+		                                Gameplay_Boss_Model_BossInfo_BossCultSpellData_TypeInfo);
+		            if (DAT_ram_009d3e38 == 1) break;
+		            DAT_ram_009d3e38 = 0;
+		            import::env::invoke_viii
+		                      (s_struct_Uniforms___color__array<v_ram_000017c8 + 0x362,uVar12,uVar5,iVar9);
+		            iVar11 = Method_System_Collections_Generic_List_BossInfo_BossCultSpellData__Add__;
+		            if (DAT_ram_009d3e38 == 1) break;
+		            *(int *)(iVar9 + 0x10) = *(int *)(iVar9 + 0x10) + 1;
+		            uVar15 = *(uint *)(iVar9 + 0xc);
+		            if (uVar15 < *(uint *)(*(int *)(iVar9 + 8) + 0xc)) {
+		              *(uint *)(iVar9 + 0xc) = uVar15 + 1;
+		              *(undefined4 *)(*(int *)(iVar9 + 8) + uVar15 * 4 + 0x10) = uVar12;
+		              goto code_r0x80deb5d3;
+		            }
+		            DAT_ram_009d3e38 = 0;
+		            import::env::invoke_viii
+		                      (s_struct_Uniforms___color__array<v_ram_00000aff + 0x6e,iVar9,uVar12,
+		                       *(undefined4 *)(*(int *)(*(int *)(iVar11 + 0x10) + 0x60) + 0x38));
+		          } while (DAT_ram_009d3e38 != 1);
+		          DAT_ram_009d3e38 = 0;
+		          uVar5 = import::env::__cxa_find_matching_catch_3(&DAT_ram_0072c9c8);
+		code_r0x80deb898:
+		          iVar9 = global_1;
+		          iVar11 = import::env::llvm_eh_typeid_for(&DAT_ram_0072c9c8);
+		          if (iVar9 == iVar11) {
+		            piVar7 = (int *)import::env::__cxa_begin_catch(uVar5);
+		            local_8._0_4_ = *piVar7;
+		            DAT_ram_009d3e38 = 0;
+		            import::env::invoke_v(0x123);
+		            iVar9 = DAT_ram_009d3e38;
+		            DAT_ram_009d3e38 = 0;
+		            if (iVar9 != 1) {
+		code_r0x80deb8e1:
+		              DAT_ram_009d3e38 = 0;
+		              piVar7 = *local_8._4_4_;
+		              if (piVar7 != (int *)0x0) {
+		                uVar15 = 0;
+		                iVar9 = *piVar7;
+		                if (*(ushort *)(iVar9 + 0xb6) != 0) {
+		                  do {
+		                    if (System_IDisposable_TypeInfo == *(int *)(*(int *)(iVar9 + 0x58) + uVar15 * 8)
+		                       ) {
+		                      puVar4 = (uint *)(iVar9 + *(int *)(*(int *)(iVar9 + 0x58) + uVar15 * 8 + 4) *
+		                                                8 + 0xc0);
+		                      goto code_r0x80deb95c;
+		                    }
+		                    uVar15 = uVar15 + 1;
+		                  } while (*(ushort *)(iVar9 + 0xb6) != uVar15);
+		                }
+		                puVar4 = (uint *)func_ii_1080(piVar7,System_IDisposable_TypeInfo,0);
+		code_r0x80deb95c:
+		                (**(code **)((ulonglong)*puVar4 * 4))(CONCAT44(uVar3,piVar7),puVar4[1]);
+		              }
+		              if (local_8._0_4_ == 0) {
+		                return;
+		              }
+		              System_Data_DataSet__ValidateLocaleConstraint(local_8._0_4_);
+		              do {
+		                halt_trap();
+		              } while( true );
+		            }
+		            uVar5 = import::env::__cxa_find_matching_catch_2();
+		          }
+		          DAT_ram_009d3e38 = 0;
+		          import::env::invoke_ii(s_struct_Uniforms___color__array<v_ram_000017c8 + 0x363,&local_8);
+		          goto joined_r0x80deb9b0;
+		        }
+		        uVar5 = import::env::__cxa_find_matching_catch_2();
+		      }
+		      DAT_ram_009d3e38 = 0;
+		      import::env::invoke_ii(s_struct_Uniforms___color__array<v_ram_000017c8 + 0x361,&local_8);
+		      goto joined_r0x80deb9b0;
+		    }
+		    uVar5 = import::env::__cxa_find_matching_catch_2();
+		  }
+		  DAT_ram_009d3e38 = 0;
+		  import::env::invoke_ii(s_struct_Uniforms___color__array<v_ram_000017c8 + 0x35f,&local_8);
+		joined_r0x80deb9b0:
+		  if (DAT_ram_009d3e38 == 1) {
+		    DAT_ram_009d3e38 = 0;
+		    import::env::__cxa_find_matching_catch_3(0);
+		    unnamed_function_937();
+		    do {
+		      halt_trap();
+		    } while( true );
+		  }
+		  DAT_ram_009d3e38 = 0;
+		  import::env::__resumeException(uVar5);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
 }

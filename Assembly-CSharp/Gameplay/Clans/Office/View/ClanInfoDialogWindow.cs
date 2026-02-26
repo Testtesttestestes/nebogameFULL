@@ -29,6 +29,25 @@ namespace Gameplay.Clans.Office.View
 		[Address(RVA = "0x8B84", Offset = "0x8B84", VA = "0x8B84", Slot = "22")]
 		protected override void OnShow(ClanInfoDialogWindow.ClanInfoDialogWindowArgs args)
 		{
+		/* --- GHIDRA: OnShow ---
+		void Gameplay_Clans_Office_View_ClanInfoDialogWindow__OnShow(undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a57ef5 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Windows_BaseDialogWindow_ClanInfoDialogWindow_ClanInfoDialogWindowArgs___ctor__
+		              );
+		    DAT_ram_00a57ef5 = '\x01';
+		  }
+		  UI_Windows_BaseDialogWindow_BaseDialogWindowArgs_object____ctor
+		            (param1,
+		             Method_UI_Windows_BaseDialogWindow_ClanInfoDialogWindow_ClanInfoDialogWindowArgs___ctor__
+		            );
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06003CC2 RID: 15554 RVA: 0x00002050 File Offset: 0x00000250
@@ -36,6 +55,25 @@ namespace Gameplay.Clans.Office.View
 		[Address(RVA = "0x8B85", Offset = "0x8B85", VA = "0x8B85")]
 		public ClanInfoDialogWindow()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_Clans_Office_View_ClanInfoDialogWindow___ctor(undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a57ef6 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Windows_BaseDialogWindow_BaseDialogWindowArgs_ClanInfoDialogWindow_ClanInfoDialogWindowArgs___ctor__
+		              );
+		    DAT_ram_00a57ef6 = '\x01';
+		  }
+		  UnityEngine_UIElements_BaseCompositeField___Il2CppFullySharedGenericType__object____Il2CppFullySharedGenericType___UpdateMixedValueContent
+		            (param1,
+		             Method_UI_Windows_BaseDialogWindow_BaseDialogWindowArgs_ClanInfoDialogWindow_ClanInfoDialogWindowArgs___ctor__
+		            );
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0400218F RID: 8591
@@ -65,4 +103,31 @@ namespace Gameplay.Clans.Office.View
 			public ClanData ClanData;
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_WindowId ---
+		void Gameplay_Clans_Office_View_ClanInfoDialogWindow__get_WindowId
+		               (int param1,int param2,undefined4 param3)
+		
+		{
+		  if (DAT_ram_00a57ef4 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Windows_BaseDialogWindow_ClanInfoDialogWindow_ClanInfoDialogWindowArgs__OnShow__
+		              );
+		    Mono_Security_ASN1__get_Item(&Method_UI_ToolTip_BaseToolTip_ClanData__set_Data__);
+		    DAT_ram_00a57ef4 = '\x01';
+		  }
+		  UI_ToolTip_BaseToolTip_object___get_Data
+		            (*(undefined4 *)(param1 + 0x50),*(undefined4 *)(param2 + 0x2c),
+		             Method_UI_ToolTip_BaseToolTip_ClanData__set_Data__);
+		  UI_Windows_BaseDialogWindow_object___OnDestroy
+		            (param1,param2,
+		             Method_UI_Windows_BaseDialogWindow_ClanInfoDialogWindow_ClanInfoDialogWindowArgs__OnShow__
+		            );
+		  return;
+		}
+		*/
+
 }

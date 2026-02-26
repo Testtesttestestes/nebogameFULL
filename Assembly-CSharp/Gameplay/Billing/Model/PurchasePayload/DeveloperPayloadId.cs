@@ -13,6 +13,44 @@ namespace Gameplay.Billing.Model.PurchasePayload
 		[Address(RVA = "0x9965", Offset = "0x9965", VA = "0x9965")]
 		public DeveloperPayloadId()
 		{
+		/* --- GHIDRA: .ctor ---
+		int Gameplay_Billing_Model_PurchasePayload_DeveloperPayloadId___ctor
+		              (undefined4 param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  
+		  if (DAT_ram_00a60928 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_5);
+		    DAT_ram_00a60928 = '\x01';
+		  }
+		  iVar1 = UI_Preloader_PreloaderBackgroundLoader_PreloaderBackgroundDto___ctor(param1,0);
+		  if (iVar1 == 0) {
+		    iVar1 = StringLiteral_5;
+		  }
+		  return iVar1;
+		}
+		*/
+
+		/* --- GHIDRA: .ctor ---
+		int Gameplay_Billing_Model_PurchasePayload_DeveloperPayloadId___ctor
+		              (undefined4 param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  
+		  if (DAT_ram_00a60928 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_5);
+		    DAT_ram_00a60928 = '\x01';
+		  }
+		  iVar1 = UI_Preloader_PreloaderBackgroundLoader_PreloaderBackgroundDto___ctor(param1,0);
+		  if (iVar1 == 0) {
+		    iVar1 = StringLiteral_5;
+		  }
+		  return iVar1;
+		}
+		*/
+
 		}
 
 		// Token: 0x06004B09 RID: 19209 RVA: 0x00002050 File Offset: 0x00000250

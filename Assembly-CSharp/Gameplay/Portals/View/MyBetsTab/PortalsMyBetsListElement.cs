@@ -38,6 +38,29 @@ namespace Gameplay.Portals.View.MyBetsTab
 		[Address(RVA = "0x74C8", Offset = "0x74C8", VA = "0x74C8")]
 		private void Start()
 		{
+		/* --- GHIDRA: Start ---
+		void Gameplay_Portals_View_MyBetsTab_PortalsMyBetsListElement__Start(int param1,undefined4 param2)
+		
+		{
+		  undefined4 param1_00;
+		  undefined4 param1_01;
+		  
+		  if (DAT_ram_00a5810e == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Gameplay_Portals_View_MyBetsTab_PortalsMyBetsListElement_OnClick__);
+		    Mono_Security_ASN1__get_Item(&UnityEngine_Events_UnityAction_TypeInfo);
+		    DAT_ram_00a5810e = '\x01';
+		  }
+		  param1_01 = *(undefined4 *)(*(int *)(param1 + 0x10) + 0xb4);
+		  param1_00 = unnamed_function_1417(UnityEngine_Events_UnityAction_TypeInfo);
+		  Utils_ObjectUtils__IsNotNull
+		            (param1_00,param1,
+		             Method_Gameplay_Portals_View_MyBetsTab_PortalsMyBetsListElement_OnClick__,0);
+		  UnityEngine_Events_UnityAction___ctor(param1_01,param1_00,0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06002376 RID: 9078 RVA: 0x00002050 File Offset: 0x00000250
@@ -45,6 +68,28 @@ namespace Gameplay.Portals.View.MyBetsTab
 		[Address(RVA = "0x74C9", Offset = "0x74C9", VA = "0x74C9")]
 		private void OnDestroy()
 		{
+		/* --- GHIDRA: OnDestroy ---
+		undefined4
+		Gameplay_Portals_View_MyBetsTab_PortalsMyBetsListElement__OnDestroy
+		          (int param1,int param2,undefined4 param3)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  uVar1 = 0;
+		  if (param2 == 0) {
+		    return *(undefined4 *)(param1 + 0x28);
+		  }
+		  if (param2 != 1) {
+		    if (param2 == 2) {
+		      uVar1 = *(undefined4 *)(param1 + 0x30);
+		    }
+		    return uVar1;
+		  }
+		  return *(undefined4 *)(param1 + 0x2c);
+		}
+		*/
+
 		}
 
 		// Token: 0x06002377 RID: 9079 RVA: 0x00002050 File Offset: 0x00000250
@@ -52,6 +97,20 @@ namespace Gameplay.Portals.View.MyBetsTab
 		[Address(RVA = "0x1C95", Offset = "0x1C95", VA = "0x1C95")]
 		public void Init(BetHistoryRow myBet, Action<ulong> argsClickAction)
 		{
+		/* --- GHIDRA: Init ---
+		int * Gameplay_Portals_View_MyBetsTab_PortalsMyBetsListElement__Init(int *param1)
+		
+		{
+		  if (*param1 == 0) {
+		    return param1;
+		  }
+		  System_Data_DataSet__ValidateLocaleConstraint(*param1);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
 		}
 
 		// Token: 0x06002378 RID: 9080 RVA: 0x00002052 File Offset: 0x00000252
@@ -59,6 +118,35 @@ namespace Gameplay.Portals.View.MyBetsTab
 		[Address(RVA = "0x74CA", Offset = "0x74CA", VA = "0x74CA")]
 		private Sprite GetChoiceSprite(Bet.Types.State state)
 		{
+		/* --- GHIDRA: GetChoiceSprite ---
+		undefined4
+		Gameplay_Portals_View_MyBetsTab_PortalsMyBetsListElement__GetChoiceSprite
+		          (undefined4 param1,uint param2,undefined4 param3)
+		
+		{
+		  undefined **ppuVar1;
+		  undefined4 uVar2;
+		  
+		  if (DAT_ram_00a58110 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_GameLocalization_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_12154);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_12157);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_12158);
+		    DAT_ram_00a58110 = '\x01';
+		  }
+		  ppuVar1 = &PTR_StringLiteral_12157_ram_005a3600 + param2;
+		  if (2 < param2) {
+		    ppuVar1 = (undefined **)(DAT_ram_00a66978 + 0x5c);
+		  }
+		  uVar2 = *(undefined4 *)*ppuVar1;
+		  if (*(int *)(Core_GameLocalization_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Core_GameLocalization_TypeInfo);
+		  }
+		  uVar2 = func_ii_7508(uVar2,1,0,1,0,0,0,0);
+		  return uVar2;
+		}
+		*/
+
 			return null;
 		}
 
@@ -67,6 +155,23 @@ namespace Gameplay.Portals.View.MyBetsTab
 		[Address(RVA = "0x74CB", Offset = "0x74CB", VA = "0x74CB")]
 		private string GetChoiceText(Bet.Types.State state)
 		{
+		/* --- GHIDRA: GetChoiceText ---
+		void Gameplay_Portals_View_MyBetsTab_PortalsMyBetsListElement__GetChoiceText
+		               (int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  
+		  iVar1 = *(int *)(param1 + 0x40);
+		  if (iVar1 != 0) {
+		    (**(code **)((ulonglong)*(uint *)(iVar1 + 0xc) * 4))
+		              (*(undefined4 *)(iVar1 + 0x20),*(undefined8 *)(param1 + 0x38),
+		               *(undefined4 *)(iVar1 + 0x14));
+		  }
+		  return;
+		}
+		*/
+
 			return null;
 		}
 
@@ -143,4 +248,31 @@ namespace Gameplay.Portals.View.MyBetsTab
 		[FieldOffset(Offset = "0x38")]
 		private ulong _betId;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: set_ClickAction ---
+		void Gameplay_Portals_View_MyBetsTab_PortalsMyBetsListElement__set_ClickAction
+		               (int param1,undefined4 param2)
+		
+		{
+		  undefined4 param1_00;
+		  undefined4 param1_01;
+		  
+		  if (DAT_ram_00a5810d == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Gameplay_Portals_View_MyBetsTab_PortalsMyBetsListElement_OnClick__);
+		    Mono_Security_ASN1__get_Item(&UnityEngine_Events_UnityAction_TypeInfo);
+		    DAT_ram_00a5810d = '\x01';
+		  }
+		  param1_01 = *(undefined4 *)(*(int *)(param1 + 0x10) + 0xb4);
+		  param1_00 = unnamed_function_1417(UnityEngine_Events_UnityAction_TypeInfo);
+		  Utils_ObjectUtils__IsNotNull
+		            (param1_00,param1,
+		             Method_Gameplay_Portals_View_MyBetsTab_PortalsMyBetsListElement_OnClick__,0);
+		  Gameplay_Boss_View_CaptainTab_BossInfoView__add_AttackButtonClickEvent(param1_01,param1_00,0);
+		  return;
+		}
+		*/
+
 }

@@ -60,4 +60,19 @@ namespace Gameplay.World.Model
 			}
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: set_BackTime ---
+		void Gameplay_World_Model_ClanCurseData__set_BackTime
+		               (int param1,undefined4 param2,undefined8 param3,undefined4 param4,undefined4 param5)
+		
+		{
+		  *(undefined4 *)(param1 + 0x18) = param4;
+		  *(undefined8 *)(param1 + 0x10) = param3;
+		  *(undefined4 *)(param1 + 8) = param2;
+		  return;
+		}
+		*/
+
 }

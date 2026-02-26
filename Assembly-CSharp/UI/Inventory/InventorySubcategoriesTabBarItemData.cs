@@ -38,6 +38,19 @@ namespace UI.Inventory
 		[Address(RVA = "0x6125", Offset = "0x6125", VA = "0x6125")]
 		public InventorySubcategoriesTabBarItemData([NotNull] ArtifactCategoryData artifactCategoryData)
 		{
+		/* --- GHIDRA: .ctor ---
+		undefined4
+		UI_Inventory_InventorySubcategoriesTabBarItemData___ctor(undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a639d2 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_12589);
+		    DAT_ram_00a639d2 = '\x01';
+		  }
+		  return StringLiteral_12589;
+		}
+		*/
+
 		}
 	}
 }

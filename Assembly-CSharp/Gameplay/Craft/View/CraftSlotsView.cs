@@ -23,6 +23,18 @@ namespace Gameplay.Craft.View
 		[Address(RVA = "0x8486", Offset = "0x8486", VA = "0x8486")]
 		public CraftSlotsView()
 		{
+		/* --- GHIDRA: .ctor ---
+		undefined4 Gameplay_Craft_View_CraftSlotsView___ctor(undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a57cf9 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_12606);
+		    DAT_ram_00a57cf9 = '\x01';
+		  }
+		  return StringLiteral_12606;
+		}
+		*/
+
 		}
 
 		// Token: 0x04001C96 RID: 7318

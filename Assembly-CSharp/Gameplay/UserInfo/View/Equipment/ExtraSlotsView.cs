@@ -46,6 +46,21 @@ namespace Gameplay.UserInfo.View.Equipment
 		[Address(RVA = "0x6A07", Offset = "0x6A07", VA = "0x6A07")]
 		public ExtraSlotsView()
 		{
+		/* --- GHIDRA: .ctor ---
+		undefined4 Gameplay_UserInfo_View_Equipment_ExtraSlotsView___ctor(int param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a59900 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Gameplay_UserInfo_View_Equipment_BaseEquipmentSlotConfig_EquipmentSlotIds__get_EquipmentSlotId__
+		              );
+		    DAT_ram_00a59900 = '\x01';
+		  }
+		  return *(undefined4 *)(param1 + 8);
+		}
+		*/
+
 		}
 
 		// Token: 0x04000D0B RID: 3339

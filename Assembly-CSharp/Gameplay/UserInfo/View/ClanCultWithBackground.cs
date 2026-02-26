@@ -53,6 +53,25 @@ namespace Gameplay.UserInfo.View
 		[Address(RVA = "0x6959", Offset = "0x6959", VA = "0x6959", Slot = "4")]
 		protected virtual void HandleCultDicChanged()
 		{
+		/* --- GHIDRA: HandleCultDicChanged ---
+		void Gameplay_UserInfo_View_ClanCultWithBackground__HandleCultDicChanged
+		               (int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  if (*(int *)(param1 + 0x1c) != 0) {
+		    uVar1 = Core_Extensions_Dict_ClanBuildingViewDicExt__GetIsleViewAssetId
+		                      (*(int *)(param1 + 0x1c),0);
+		    Core_Extensions_Dict_PortalDicExt__GetCurrencyIcon60x66(*(undefined4 *)(param1 + 0x10),uVar1,0);
+		    uVar1 = Core_Extensions_Dict_ClanCultDicExt__GetGolemBubbleAssetId
+		                      (*(undefined4 *)(param1 + 0x1c),0);
+		    Core_Extensions_Dict_PortalDicExt__GetCurrencyIcon60x66(*(undefined4 *)(param1 + 0x14),uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600179F RID: 6047 RVA: 0x00002050 File Offset: 0x00000250
@@ -105,4 +124,55 @@ namespace Gameplay.UserInfo.View
 		[FieldOffset(Offset = "0x1C")]
 		private ClanCultDic _clanCultDic;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_CultDic ---
+		void Gameplay_UserInfo_View_ClanCultWithBackground__get_CultDic
+		               (int *param1,int param2,undefined4 param3)
+		
+		{
+		  if (param2 != param1[6]) {
+		    param1[7] = 0;
+		    param1[6] = param2;
+		    (**(code **)((ulonglong)*(uint *)(*param1 + 0xe0) * 4))(param1,*(undefined4 *)(*param1 + 0xe4));
+		  }
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: get_ClanCultDic ---
+		void Gameplay_UserInfo_View_ClanCultWithBackground__get_ClanCultDic
+		               (int *param1,int param2,undefined4 param3)
+		
+		{
+		  if (param2 != param1[7]) {
+		    param1[6] = 0;
+		    param1[7] = param2;
+		    (**(code **)((ulonglong)*(uint *)(*param1 + 0xe8) * 4))(param1,*(undefined4 *)(*param1 + 0xec));
+		  }
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_ClanCultDic ---
+		void Gameplay_UserInfo_View_ClanCultWithBackground__set_ClanCultDic(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  if (*(int *)(param1 + 0x18) != 0) {
+		    uVar1 = Gameplay_Boss_View_CaptainTab_BossSkillInfoView__set_DominateCultDescription
+		                      (*(int *)(param1 + 0x18),0);
+		    Core_Extensions_Dict_PortalDicExt__GetCurrencyIcon60x66(*(undefined4 *)(param1 + 0x10),uVar1,0);
+		    uVar1 = Core_Extensions_Dict_CrystalEnergyOptionsDicExt__GetEventPromoDescription
+		                      (*(undefined4 *)(param1 + 0x18),0);
+		    Core_Extensions_Dict_PortalDicExt__GetCurrencyIcon60x66(*(undefined4 *)(param1 + 0x14),uVar1,0);
+		  }
+		  return;
+		}
+		*/
+
 }

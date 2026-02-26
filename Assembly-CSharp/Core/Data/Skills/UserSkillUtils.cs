@@ -26,4 +26,26 @@ namespace Core.Data.Skills
 		[FieldOffset(Offset = "0x0")]
 		private static List<UserSkillsIndexes> _excludeUserSkillsIndexes;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_ExcludeUserSkillsIndexes ---
+		uint Core_Data_Skills_UserSkillUtils__get_ExcludeUserSkillsIndexes
+		               (int param1,undefined4 param2,int param3)
+		
+		{
+		  int iVar1;
+		  
+		  if (*(int *)(param1 + 0xc) != 0) {
+		    iVar1 = System_Array__IndexOf_int_
+		                      (*(undefined4 *)(param1 + 8),param2,0,*(int *)(param1 + 0xc),
+		                       *(undefined4 *)
+		                        (*(int *)(*(int *)(*(int *)(*(int *)(*(int *)(param3 + 0x10) + 0x60) + 0x68)
+		                                          + 0x10) + 0x60) + 0xac));
+		    return (uint)(iVar1 != -1);
+		  }
+		  return 0;
+		}
+		*/
+
 }

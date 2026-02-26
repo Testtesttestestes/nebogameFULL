@@ -40,4 +40,24 @@ namespace Gameplay.Chat.View
 		[FieldOffset(Offset = "0x14")]
 		private VisitorItemRenderer _itemRenderer;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_ItemRenderer ---
+		void Gameplay_Chat_View_ChatVisitorViewsHolder__get_ItemRenderer(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a57adb == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_UnityEngine_Component_GetComponent_VisitorItemRenderer___);
+		    DAT_ram_00a57adb = '\x01';
+		  }
+		  uVar1 = func_ii_5677(*(undefined4 *)(param1 + 8),
+		                       Method_UnityEngine_Component_GetComponent_VisitorItemRenderer___);
+		  *(undefined4 *)(param1 + 0x14) = uVar1;
+		  return;
+		}
+		*/
+
 }

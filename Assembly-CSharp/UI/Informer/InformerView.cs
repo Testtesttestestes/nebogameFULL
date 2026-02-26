@@ -40,6 +40,45 @@ namespace UI.Informer
 		[Address(RVA = "0x5F65", Offset = "0x5F65", VA = "0x5F65")]
 		public InformerView()
 		{
+		/* --- GHIDRA: .ctor ---
+		void UI_Informer_InformerView___ctor(int param1,int param2,undefined4 param3)
+		
+		{
+		  int iVar1;
+		  undefined4 uVar2;
+		  
+		  if (DAT_ram_00a63914 == '\0') {
+		    Mono_Security_ASN1__get_Item(&UnityEngine_Object_TypeInfo);
+		    DAT_ram_00a63914 = '\x01';
+		  }
+		  uVar2 = *(undefined4 *)(param1 + 0x14);
+		  if (*(int *)(UnityEngine_Object_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(UnityEngine_Object_TypeInfo);
+		  }
+		  iVar1 = func_ii_3812(uVar2,0,0);
+		  if ((param2 == 1) && (iVar1 != 0)) {
+		    iVar1 = *(int *)(param1 + 0x10);
+		    *(undefined4 *)(iVar1 + 0x18) = 4;
+		    if (*(int *)(iVar1 + 0x14) == 0) {
+		      uVar2 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_uint__object___MoveNext
+		                        (iVar1,0);
+		      Com_TheFallenGames_OSA_CustomAdapters_TableView_Tuple_Basic_BasicTupleValueViewsHolder__UpdateAsText
+		                (uVar2,1,0);
+		      UI_Informer_Network_LowNetworkResponseAbilityInformerView__SetStatus(param1,1,param1);
+		      return;
+		    }
+		  }
+		  else if (param2 == 2) {
+		    uVar2 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_uint__object___MoveNext
+		                      (*(undefined4 *)(param1 + 0x10),0);
+		    Com_TheFallenGames_OSA_CustomAdapters_TableView_Tuple_Basic_BasicTupleValueViewsHolder__UpdateAsText
+		              (uVar2,0,0);
+		  }
+		  UI_Informer_Network_LowNetworkResponseAbilityInformerView__SetStatus(param1,param2,param1);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x040005F0 RID: 1520

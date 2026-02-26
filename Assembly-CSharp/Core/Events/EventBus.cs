@@ -813,6 +813,249 @@ namespace Core.Events
 		[Address(RVA = "0xACA4", Offset = "0xACA4", VA = "0xACA4")]
 		public EventBus()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Core_Events_EventBus___ctor(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a5a34b == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_Events_Scopes_AdScope_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Core_Events_Scopes_AnalyticsEventMediatorScope_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Core_Events_Scopes_AppScope_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Core_Events_Scopes_AprsScope_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Core_Events_Scopes_AuchanScope_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Core_Events_Scopes_AuthScope_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Core_Events_Scopes_BankScope_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Core_Events_Scopes_BillingScope_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Core_Events_Scopes_BlitzTournamentScope_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Core_Events_Scopes_BossScope_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Core_Events_Scopes_ChatScope_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Core_Events_Scopes_ClansScope_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Core_Events_Scopes_CollectionsScope_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Core_Events_Scopes_CombatScope_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Core_Events_Scopes_CraftScope_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Core_Events_Scopes_DailyQuestScope_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Core_Events_Scopes_DiscountsScope_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Core_Events_Scopes_GdEventsScope_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Core_Events_Scopes_GiftsScope_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Core_Events_Scopes_GoalsScope_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Core_Events_Scopes_GuideScope_TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_HashSet_AbstractEventBusScope__Add__);
+		    Mono_Security_ASN1__get_Item(&Core_Events_Scopes_InventoryScope_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Core_Events_Scopes_IsleScope_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Core_Events_Scopes_ManufactureAssistScope_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Core_Events_Scopes_MedalsScope_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Core_Events_Scopes_NotificationScope_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Core_Events_Scopes_PlatformSpecificScope_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Core_Events_Scopes_PortalsScope_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Core_Events_Scopes_RateGameScope_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Core_Events_Scopes_SchoolScope_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Core_Events_Scopes_SettingsScope_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Core_Events_Scopes_ShopScope_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Core_Events_Scopes_SmallGamesScope_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Core_Events_Scopes_ThemeDuelScope_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Core_Events_Scopes_TournamentsScope_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Core_Events_Scopes_Tutorial2Scope_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Core_Events_Scopes_UiScope_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Core_Events_Scopes_UserScope_TypeInfo);
+		    DAT_ram_00a5a34b = '\x01';
+		  }
+		  uVar1 = unnamed_function_1417(Core_Events_Scopes_PlatformSpecificScope_TypeInfo);
+		  *(undefined4 *)(param1 + 0x18) = uVar1;
+		  System_Collections_Generic_HashSet_object___Clear
+		            (*(undefined4 *)(param1 + 0xa0),uVar1,
+		             Method_System_Collections_Generic_HashSet_AbstractEventBusScope__Add__);
+		  uVar1 = unnamed_function_1417(Core_Events_Scopes_AppScope_TypeInfo);
+		  *(undefined4 *)(param1 + 0x1c) = uVar1;
+		  System_Collections_Generic_HashSet_object___Clear
+		            (*(undefined4 *)(param1 + 0xa0),uVar1,
+		             Method_System_Collections_Generic_HashSet_AbstractEventBusScope__Add__);
+		  uVar1 = unnamed_function_1417(Core_Events_Scopes_AuthScope_TypeInfo);
+		  *(undefined4 *)(param1 + 8) = uVar1;
+		  System_Collections_Generic_HashSet_object___Clear
+		            (*(undefined4 *)(param1 + 0xa0),uVar1,
+		             Method_System_Collections_Generic_HashSet_AbstractEventBusScope__Add__);
+		  uVar1 = unnamed_function_1417(Core_Events_Scopes_UserScope_TypeInfo);
+		  *(undefined4 *)(param1 + 0xc) = uVar1;
+		  System_Collections_Generic_HashSet_object___Clear
+		            (*(undefined4 *)(param1 + 0xa0),uVar1,
+		             Method_System_Collections_Generic_HashSet_AbstractEventBusScope__Add__);
+		  uVar1 = unnamed_function_1417(Core_Events_Scopes_Tutorial2Scope_TypeInfo);
+		  *(undefined4 *)(param1 + 0x10) = uVar1;
+		  System_Collections_Generic_HashSet_object___Clear
+		            (*(undefined4 *)(param1 + 0xa0),uVar1,
+		             Method_System_Collections_Generic_HashSet_AbstractEventBusScope__Add__);
+		  uVar1 = unnamed_function_1417(Core_Events_Scopes_AnalyticsEventMediatorScope_TypeInfo);
+		  *(undefined4 *)(param1 + 0x14) = uVar1;
+		  System_Collections_Generic_HashSet_object___Clear
+		            (*(undefined4 *)(param1 + 0xa0),uVar1,
+		             Method_System_Collections_Generic_HashSet_AbstractEventBusScope__Add__);
+		  uVar1 = unnamed_function_1417(Core_Events_Scopes_BillingScope_TypeInfo);
+		  *(undefined4 *)(param1 + 0x20) = uVar1;
+		  System_Collections_Generic_HashSet_object___Clear
+		            (*(undefined4 *)(param1 + 0xa0),uVar1,
+		             Method_System_Collections_Generic_HashSet_AbstractEventBusScope__Add__);
+		  uVar1 = unnamed_function_1417(Core_Events_Scopes_SettingsScope_TypeInfo);
+		  *(undefined4 *)(param1 + 0x24) = uVar1;
+		  System_Collections_Generic_HashSet_object___Clear
+		            (*(undefined4 *)(param1 + 0xa0),uVar1,
+		             Method_System_Collections_Generic_HashSet_AbstractEventBusScope__Add__);
+		  uVar1 = unnamed_function_1417(Core_Events_Scopes_GuideScope_TypeInfo);
+		  *(undefined4 *)(param1 + 0x28) = uVar1;
+		  System_Collections_Generic_HashSet_object___Clear
+		            (*(undefined4 *)(param1 + 0xa0),uVar1,
+		             Method_System_Collections_Generic_HashSet_AbstractEventBusScope__Add__);
+		  uVar1 = unnamed_function_1417(Core_Events_Scopes_CombatScope_TypeInfo);
+		  *(undefined4 *)(param1 + 0x2c) = uVar1;
+		  System_Collections_Generic_HashSet_object___Clear
+		            (*(undefined4 *)(param1 + 0xa0),uVar1,
+		             Method_System_Collections_Generic_HashSet_AbstractEventBusScope__Add__);
+		  uVar1 = unnamed_function_1417(Core_Events_Scopes_TournamentsScope_TypeInfo);
+		  *(undefined4 *)(param1 + 0x30) = uVar1;
+		  System_Collections_Generic_HashSet_object___Clear
+		            (*(undefined4 *)(param1 + 0xa0),uVar1,
+		             Method_System_Collections_Generic_HashSet_AbstractEventBusScope__Add__);
+		  uVar1 = unnamed_function_1417(Core_Events_Scopes_BlitzTournamentScope_TypeInfo);
+		  *(undefined4 *)(param1 + 0x34) = uVar1;
+		  System_Collections_Generic_HashSet_object___Clear
+		            (*(undefined4 *)(param1 + 0xa0),uVar1,
+		             Method_System_Collections_Generic_HashSet_AbstractEventBusScope__Add__);
+		  uVar1 = unnamed_function_1417(Core_Events_Scopes_BossScope_TypeInfo);
+		  *(undefined4 *)(param1 + 0x38) = uVar1;
+		  System_Collections_Generic_HashSet_object___Clear
+		            (*(undefined4 *)(param1 + 0xa0),uVar1,
+		             Method_System_Collections_Generic_HashSet_AbstractEventBusScope__Add__);
+		  uVar1 = unnamed_function_1417(Core_Events_Scopes_IsleScope_TypeInfo);
+		  *(undefined4 *)(param1 + 0x3c) = uVar1;
+		  System_Collections_Generic_HashSet_object___Clear
+		            (*(undefined4 *)(param1 + 0xa0),uVar1,
+		             Method_System_Collections_Generic_HashSet_AbstractEventBusScope__Add__);
+		  uVar1 = unnamed_function_1417(Core_Events_Scopes_InventoryScope_TypeInfo);
+		  *(undefined4 *)(param1 + 0x40) = uVar1;
+		  System_Collections_Generic_HashSet_object___Clear
+		            (*(undefined4 *)(param1 + 0xa0),uVar1,
+		             Method_System_Collections_Generic_HashSet_AbstractEventBusScope__Add__);
+		  uVar1 = unnamed_function_1417(Core_Events_Scopes_UiScope_TypeInfo);
+		  *(undefined4 *)(param1 + 0x44) = uVar1;
+		  System_Collections_Generic_HashSet_object___Clear
+		            (*(undefined4 *)(param1 + 0xa0),uVar1,
+		             Method_System_Collections_Generic_HashSet_AbstractEventBusScope__Add__);
+		  uVar1 = unnamed_function_1417(Core_Events_Scopes_BankScope_TypeInfo);
+		  *(undefined4 *)(param1 + 0x48) = uVar1;
+		  System_Collections_Generic_HashSet_object___Clear
+		            (*(undefined4 *)(param1 + 0xa0),uVar1,
+		             Method_System_Collections_Generic_HashSet_AbstractEventBusScope__Add__);
+		  uVar1 = unnamed_function_1417(Core_Events_Scopes_DiscountsScope_TypeInfo);
+		  *(undefined4 *)(param1 + 0x4c) = uVar1;
+		  System_Collections_Generic_HashSet_object___Clear
+		            (*(undefined4 *)(param1 + 0xa0),uVar1,
+		             Method_System_Collections_Generic_HashSet_AbstractEventBusScope__Add__);
+		  uVar1 = unnamed_function_1417(Core_Events_Scopes_MedalsScope_TypeInfo);
+		  *(undefined4 *)(param1 + 0x50) = uVar1;
+		  System_Collections_Generic_HashSet_object___Clear
+		            (*(undefined4 *)(param1 + 0xa0),uVar1,
+		             Method_System_Collections_Generic_HashSet_AbstractEventBusScope__Add__);
+		  uVar1 = unnamed_function_1417(Core_Events_Scopes_AprsScope_TypeInfo);
+		  *(undefined4 *)(param1 + 0x54) = uVar1;
+		  System_Collections_Generic_HashSet_object___Clear
+		            (*(undefined4 *)(param1 + 0xa0),uVar1,
+		             Method_System_Collections_Generic_HashSet_AbstractEventBusScope__Add__);
+		  uVar1 = unnamed_function_1417(Core_Events_Scopes_CollectionsScope_TypeInfo);
+		  *(undefined4 *)(param1 + 0x58) = uVar1;
+		  System_Collections_Generic_HashSet_object___Clear
+		            (*(undefined4 *)(param1 + 0xa0),uVar1,
+		             Method_System_Collections_Generic_HashSet_AbstractEventBusScope__Add__);
+		  uVar1 = unnamed_function_1417(Core_Events_Scopes_DailyQuestScope_TypeInfo);
+		  *(undefined4 *)(param1 + 0x5c) = uVar1;
+		  System_Collections_Generic_HashSet_object___Clear
+		            (*(undefined4 *)(param1 + 0xa0),uVar1,
+		             Method_System_Collections_Generic_HashSet_AbstractEventBusScope__Add__);
+		  uVar1 = unnamed_function_1417(Core_Events_Scopes_SmallGamesScope_TypeInfo);
+		  *(undefined4 *)(param1 + 100) = uVar1;
+		  System_Collections_Generic_HashSet_object___Clear
+		            (*(undefined4 *)(param1 + 0xa0),uVar1,
+		             Method_System_Collections_Generic_HashSet_AbstractEventBusScope__Add__);
+		  uVar1 = unnamed_function_1417(Core_Events_Scopes_ShopScope_TypeInfo);
+		  *(undefined4 *)(param1 + 0x68) = uVar1;
+		  System_Collections_Generic_HashSet_object___Clear
+		            (*(undefined4 *)(param1 + 0xa0),uVar1,
+		             Method_System_Collections_Generic_HashSet_AbstractEventBusScope__Add__);
+		  uVar1 = unnamed_function_1417(Core_Events_Scopes_SchoolScope_TypeInfo);
+		  *(undefined4 *)(param1 + 0x6c) = uVar1;
+		  System_Collections_Generic_HashSet_object___Clear
+		            (*(undefined4 *)(param1 + 0xa0),uVar1,
+		             Method_System_Collections_Generic_HashSet_AbstractEventBusScope__Add__);
+		  uVar1 = unnamed_function_1417(Core_Events_Scopes_ChatScope_TypeInfo);
+		  *(undefined4 *)(param1 + 0x70) = uVar1;
+		  System_Collections_Generic_HashSet_object___Clear
+		            (*(undefined4 *)(param1 + 0xa0),uVar1,
+		             Method_System_Collections_Generic_HashSet_AbstractEventBusScope__Add__);
+		  uVar1 = unnamed_function_1417(Core_Events_Scopes_AuchanScope_TypeInfo);
+		  *(undefined4 *)(param1 + 0x74) = uVar1;
+		  System_Collections_Generic_HashSet_object___Clear
+		            (*(undefined4 *)(param1 + 0xa0),uVar1,
+		             Method_System_Collections_Generic_HashSet_AbstractEventBusScope__Add__);
+		  uVar1 = unnamed_function_1417(Core_Events_Scopes_CraftScope_TypeInfo);
+		  *(undefined4 *)(param1 + 0x78) = uVar1;
+		  System_Collections_Generic_HashSet_object___Clear
+		            (*(undefined4 *)(param1 + 0xa0),uVar1,
+		             Method_System_Collections_Generic_HashSet_AbstractEventBusScope__Add__);
+		  uVar1 = unnamed_function_1417(Core_Events_Scopes_ManufactureAssistScope_TypeInfo);
+		  *(undefined4 *)(param1 + 0x7c) = uVar1;
+		  System_Collections_Generic_HashSet_object___Clear
+		            (*(undefined4 *)(param1 + 0xa0),uVar1,
+		             Method_System_Collections_Generic_HashSet_AbstractEventBusScope__Add__);
+		  uVar1 = unnamed_function_1417(Core_Events_Scopes_GiftsScope_TypeInfo);
+		  *(undefined4 *)(param1 + 0x80) = uVar1;
+		  System_Collections_Generic_HashSet_object___Clear
+		            (*(undefined4 *)(param1 + 0xa0),uVar1,
+		             Method_System_Collections_Generic_HashSet_AbstractEventBusScope__Add__);
+		  uVar1 = unnamed_function_1417(Core_Events_Scopes_ClansScope_TypeInfo);
+		  *(undefined4 *)(param1 + 0x84) = uVar1;
+		  System_Collections_Generic_HashSet_object___Clear
+		            (*(undefined4 *)(param1 + 0xa0),uVar1,
+		             Method_System_Collections_Generic_HashSet_AbstractEventBusScope__Add__);
+		  uVar1 = unnamed_function_1417(Core_Events_Scopes_RateGameScope_TypeInfo);
+		  *(undefined4 *)(param1 + 0x88) = uVar1;
+		  System_Collections_Generic_HashSet_object___Clear
+		            (*(undefined4 *)(param1 + 0xa0),uVar1,
+		             Method_System_Collections_Generic_HashSet_AbstractEventBusScope__Add__);
+		  uVar1 = unnamed_function_1417(Core_Events_Scopes_NotificationScope_TypeInfo);
+		  *(undefined4 *)(param1 + 0x8c) = uVar1;
+		  System_Collections_Generic_HashSet_object___Clear
+		            (*(undefined4 *)(param1 + 0xa0),uVar1,
+		             Method_System_Collections_Generic_HashSet_AbstractEventBusScope__Add__);
+		  uVar1 = unnamed_function_1417(Core_Events_Scopes_AdScope_TypeInfo);
+		  *(undefined4 *)(param1 + 0x90) = uVar1;
+		  System_Collections_Generic_HashSet_object___Clear
+		            (*(undefined4 *)(param1 + 0xa0),uVar1,
+		             Method_System_Collections_Generic_HashSet_AbstractEventBusScope__Add__);
+		  uVar1 = unnamed_function_1417(Core_Events_Scopes_GdEventsScope_TypeInfo);
+		  *(undefined4 *)(param1 + 0x94) = uVar1;
+		  System_Collections_Generic_HashSet_object___Clear
+		            (*(undefined4 *)(param1 + 0xa0),uVar1,
+		             Method_System_Collections_Generic_HashSet_AbstractEventBusScope__Add__);
+		  uVar1 = unnamed_function_1417(Core_Events_Scopes_GoalsScope_TypeInfo);
+		  *(undefined4 *)(param1 + 0x60) = uVar1;
+		  System_Collections_Generic_HashSet_object___Clear
+		            (*(undefined4 *)(param1 + 0xa0),uVar1,
+		             Method_System_Collections_Generic_HashSet_AbstractEventBusScope__Add__);
+		  uVar1 = unnamed_function_1417(Core_Events_Scopes_ThemeDuelScope_TypeInfo);
+		  *(undefined4 *)(param1 + 0x98) = uVar1;
+		  System_Collections_Generic_HashSet_object___Clear
+		            (*(undefined4 *)(param1 + 0xa0),uVar1,
+		             Method_System_Collections_Generic_HashSet_AbstractEventBusScope__Add__);
+		  uVar1 = unnamed_function_1417(Core_Events_Scopes_PortalsScope_TypeInfo);
+		  *(undefined4 *)(param1 + 0x9c) = uVar1;
+		  System_Collections_Generic_HashSet_object___Clear
+		            (*(undefined4 *)(param1 + 0xa0),uVar1,
+		             Method_System_Collections_Generic_HashSet_AbstractEventBusScope__Add__);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06006078 RID: 24696 RVA: 0x00002050 File Offset: 0x00000250
@@ -820,6 +1063,111 @@ namespace Core.Events
 		[Address(RVA = "0xACA5", Offset = "0xACA5", VA = "0xACA5")]
 		private void InitAllScopes()
 		{
+		/* --- GHIDRA: InitAllScopes ---
+		void Core_Events_EventBus__InitAllScopes(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  int iVar2;
+		  undefined4 param1_00;
+		  int *piVar3;
+		  int local_18;
+		  undefined8 *local_14;
+		  undefined8 local_10;
+		  undefined8 local_8;
+		  
+		  if (DAT_ram_00a5a34c == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_System_Collections_Generic_HashSet_Enumerator_AbstractEventBusScope__Dispose__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_System_Collections_Generic_HashSet_Enumerator_AbstractEventBusScope__MoveNext__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_System_Collections_Generic_HashSet_Enumerator_AbstractEventBusScope__get_Current__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_HashSet_AbstractEventBusScope__Clear__);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_HashSet_AbstractEventBusScope__GetEnumerator__);
+		    DAT_ram_00a5a34c = '\x01';
+		  }
+		  local_8 = 0;
+		  local_10 = 0;
+		  Sirenix_Utilities_TypeExtensions__AreGenericConstraintsSatisfiedBy
+		            (&local_10,*(undefined4 *)(param1 + 0xa0),
+		             Method_System_Collections_Generic_HashSet_AbstractEventBusScope__GetEnumerator__);
+		  local_18 = 0;
+		  local_14 = &local_10;
+		  do {
+		    DAT_ram_009d3e38 = 0;
+		    iVar2 = import::env::invoke_iii
+		                      (s_struct_Uniforms___color__array<v_ram_00000aff + 0x4d,&local_10,
+		                       Method_System_Collections_Generic_HashSet_Enumerator_AbstractEventBusScope__MoveNext__
+		                      );
+		    iVar1 = DAT_ram_009d3e38;
+		    DAT_ram_009d3e38 = 0;
+		    if (iVar1 == 1) {
+		      param1_00 = import::env::__cxa_find_matching_catch_3(&DAT_ram_0072c9c8);
+		      goto code_r0x81208d8d;
+		    }
+		    if (iVar2 == 0) goto code_r0x81208de3;
+		    DAT_ram_009d3e38 = 0;
+		    import::env::invoke_vii
+		              (*(undefined4 *)(*local_8._4_4_ + 0xe8),local_8._4_4_,
+		               *(undefined4 *)(*local_8._4_4_ + 0xec));
+		    iVar1 = DAT_ram_009d3e38;
+		    DAT_ram_009d3e38 = 0;
+		  } while (iVar1 != 1);
+		  param1_00 = import::env::__cxa_find_matching_catch_3(&DAT_ram_0072c9c8);
+		code_r0x81208d8d:
+		  iVar1 = global_1;
+		  iVar2 = import::env::llvm_eh_typeid_for(&DAT_ram_0072c9c8);
+		  if (iVar1 == iVar2) {
+		    piVar3 = (int *)import::env::__cxa_begin_catch(param1_00);
+		    iVar2 = *piVar3;
+		    DAT_ram_009d3e38 = 0;
+		    local_18 = iVar2;
+		    import::env::invoke_v(0x123);
+		    iVar1 = DAT_ram_009d3e38;
+		    DAT_ram_009d3e38 = 0;
+		    if (iVar1 != 1) {
+		      if (iVar2 != 0) {
+		        System_Data_DataSet__ValidateLocaleConstraint(iVar2);
+		        do {
+		          halt_trap();
+		        } while( true );
+		      }
+		code_r0x81208de3:
+		      DAT_ram_009d3e38 = 0;
+		      System_Collections_Generic_HashSet___Il2CppFullySharedGenericType___AreEqualityComparersEqual
+		                (*(undefined4 *)(param1 + 0xa0),
+		                 Method_System_Collections_Generic_HashSet_AbstractEventBusScope__Clear__);
+		      return;
+		    }
+		    param1_00 = import::env::__cxa_find_matching_catch_2();
+		  }
+		  DAT_ram_009d3e38 = 0;
+		  import::env::invoke_ii(s_struct_Uniforms___color__array<v_ram_00001f04 + 0x2ac,&local_18);
+		  iVar1 = DAT_ram_009d3e38;
+		  DAT_ram_009d3e38 = 0;
+		  if (iVar1 == 1) {
+		    import::env::__cxa_find_matching_catch_3(0);
+		    unnamed_function_937();
+		    do {
+		      halt_trap();
+		    } while( true );
+		  }
+		  import::env::__resumeException(param1_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
 		}
 
 		// Token: 0x06006079 RID: 24697 RVA: 0x00002050 File Offset: 0x00000250
@@ -834,4 +1182,29 @@ namespace Core.Events
 		[FieldOffset(Offset = "0xA0")]
 		private HashSet<AbstractEventBusScope> _allScopes;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: set_PortalsScope ---
+		void Core_Events_EventBus__set_PortalsScope(int param1,undefined4 param2)
+		
+		{
+		  undefined4 param1_00;
+		  
+		  if (DAT_ram_00a5a34a == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_HashSet_AbstractEventBusScope___ctor__);
+		    Mono_Security_ASN1__get_Item
+		              (&System_Collections_Generic_HashSet_AbstractEventBusScope__TypeInfo);
+		    DAT_ram_00a5a34a = '\x01';
+		  }
+		  param1_00 = unnamed_function_1417
+		                        (System_Collections_Generic_HashSet_AbstractEventBusScope__TypeInfo);
+		  func_ii_7115(param1_00,Method_System_Collections_Generic_HashSet_AbstractEventBusScope___ctor__);
+		  *(undefined4 *)(param1 + 0xa0) = param1_00;
+		  Core_Events_EventBus___ctor(param1,param1);
+		  return;
+		}
+		*/
+
 }

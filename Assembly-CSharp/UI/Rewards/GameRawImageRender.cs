@@ -55,4 +55,50 @@ namespace UI.Rewards
 		[FieldOffset(Offset = "0x2C")]
 		private string _imageAssetId;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_ImageAssetId ---
+		void UI_Rewards_GameRawImageRender__get_ImageAssetId(int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  int iVar1;
+		  
+		  iVar1 = System_Collections_CollectionBase___ctor(*(undefined4 *)(param1 + 0x2c),param2,0);
+		  if (iVar1 == 0) {
+		    *(undefined4 *)(param1 + 0x2c) = param2;
+		    Core_Extensions_Dict_PortalDicExt__GetCurrencyIcon60x66(*(undefined4 *)(param1 + 0x28),param2,0)
+		    ;
+		  }
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_ImageAssetId ---
+		int * UI_Rewards_GameRawImageRender__set_ImageAssetId
+		                (undefined4 param1,int *param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  int iVar1;
+		  int *piVar2;
+		  
+		  if (DAT_ram_00a59a05 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_UI_Rewards_RewardsContainer_Add_GameRawImageRender___);
+		    DAT_ram_00a59a05 = '\x01';
+		  }
+		  iVar1 = System_Runtime_CompilerServices_AsyncTaskMethodBuilder_SerializableProjectConfiguration___AwaitUnsafeOnCompleted_TaskAwaiter_object___StreamingAssetsConfigurationLoader__GetConfigAsync_d__2_
+		                    (*(undefined4 *)
+		                      (*param2 + (uint)*(ushort *)
+		                                        (
+		                                        Method_UI_Rewards_RewardsContainer_Add_GameRawImageRender___
+		                                        + 0x2c) * 8 + 0xc4),
+		                     Method_UI_Rewards_RewardsContainer_Add_GameRawImageRender___);
+		  piVar2 = (int *)(**(code **)((ulonglong)*(uint *)(iVar1 + 4) * 4))(param2,param1,iVar1);
+		  (**(code **)((ulonglong)*(uint *)(*piVar2 + 0xf8) * 4))
+		            (piVar2,param3,*(undefined4 *)(*piVar2 + 0xfc));
+		  return piVar2;
+		}
+		*/
+
 }

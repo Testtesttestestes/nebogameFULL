@@ -120,6 +120,22 @@ namespace Gameplay.Tournaments.View
 		[Address(RVA = "0x6DC4", Offset = "0x6DC4", VA = "0x6DC4")]
 		public void SetParticipantsCount(uint count)
 		{
+		/* --- GHIDRA: SetParticipantsCount ---
+		void Gameplay_Tournaments_View_TournamentInfoBox__SetParticipantsCount
+		               (undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a584fa == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UI_MonoBehaviourWithStates_TournamentInfoBox_State___ctor__);
+		    DAT_ram_00a584fa = '\x01';
+		  }
+		  ScreenAdaptation_Common_AppSize__Update
+		            (param1,Method_UI_MonoBehaviourWithStates_TournamentInfoBox_State___ctor__);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06001C46 RID: 7238 RVA: 0x00002050 File Offset: 0x00000250
@@ -127,6 +143,60 @@ namespace Gameplay.Tournaments.View
 		[Address(RVA = "0x6DC5", Offset = "0x6DC5", VA = "0x6DC5")]
 		public TournamentInfoBox()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_Tournaments_View_TournamentInfoBox___ctor(int param1,undefined4 param2)
+		
+		{
+		  uint uVar1;
+		  undefined4 uVar2;
+		  float param2_00;
+		  undefined4 uVar3;
+		  int iVar4;
+		  
+		  if (DAT_ram_00a584fb == '\0') {
+		    Mono_Security_ASN1__get_Item(&Utils_BackTime_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Utils_TimeUtils_TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Gameplay_BlitzTournament_View_TournamentListElementBase_TournamentData__get_TournamentData__
+		              );
+		    DAT_ram_00a584fb = '\x01';
+		  }
+		  uVar3 = *(undefined4 *)(param1 + 0x18);
+		  uVar2 = Core_Extensions_Dict_ThemeRatingKindDicExt__GetDescription
+		                    (*(undefined4 *)(*(int *)(param1 + 0x2c) + 8),0);
+		  UnityEngine_Component__GetComponentInChildren_object_(uVar3,uVar2,0);
+		  uVar3 = *(undefined4 *)(param1 + 0x1c);
+		  uVar2 = Core_Extensions_Dict_TournamentDicExt__GetDescription
+		                    (*(undefined4 *)(*(int *)(param1 + 0x2c) + 8),0);
+		  Core_Extensions_Dict_PortalDicExt__GetCurrencyIcon60x66(uVar3,uVar2,0);
+		  uVar3 = *(undefined4 *)(param1 + 0x30);
+		  uVar2 = Core_Data_Tournaments_TournamentData__Create(*(undefined4 *)(param1 + 0x2c),0);
+		  UnityEngine_Component__GetComponentInChildren_object_(uVar3,uVar2,0);
+		  iVar4 = *(int *)(*(int *)(*(int *)(*(int *)(param1 + 0x2c) + 0xc) + 0x14) + 0xc);
+		  uVar2 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_uint__object___MoveNext
+		                    (*(undefined4 *)(param1 + 0x34),0);
+		  if (iVar4 - 3U < 2) {
+		    Com_TheFallenGames_OSA_CustomAdapters_TableView_Tuple_Basic_BasicTupleValueViewsHolder__UpdateAsText
+		              (uVar2,0,0);
+		    return;
+		  }
+		  Com_TheFallenGames_OSA_CustomAdapters_TableView_Tuple_Basic_BasicTupleValueViewsHolder__UpdateAsText
+		            (uVar2,1,0);
+		  uVar3 = *(undefined4 *)(param1 + 0x34);
+		  uVar2 = unnamed_function_1417(Utils_BackTime_TypeInfo);
+		  Core_Extensions_Dict_DictExt__BinarySearch_object__uint_(uVar2,0.0,0);
+		  uVar1 = *(uint *)(*(int *)(*(int *)(*(int *)(param1 + 0x2c) + 0xc) + 0x14) + 0x10);
+		  if (*(int *)(Utils_TimeUtils_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Utils_TimeUtils_TypeInfo);
+		  }
+		  param2_00 = func_ii_7331((ulonglong)uVar1,0);
+		  Core_Extensions_Dict_DictExt__BinarySearch_object__uint_(uVar2,param2_00,0);
+		  UI_Elements_RightPanel_TitleWithLevel__set_Level(uVar3,uVar2,0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x04000F47 RID: 3911
@@ -214,4 +284,48 @@ namespace Gameplay.Tournaments.View
 			CANCELED
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_MultilineInfo ---
+		void Gameplay_Tournaments_View_TournamentInfoBox__get_MultilineInfo
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  undefined4 uVar1;
+		  undefined4 param1_00;
+		  undefined4 param3_00;
+		  undefined4 param1_01;
+		  undefined4 local_4;
+		  
+		  local_4 = param2;
+		  if (DAT_ram_00a584f9 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_Dictionary_string__string__Add__);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_Dictionary_string__string___ctor__);
+		    Mono_Security_ASN1__get_Item(&System_Collections_Generic_Dictionary_string__string__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Core_GameLocalization_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_26036);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_15159);
+		    DAT_ram_00a584f9 = '\x01';
+		  }
+		  param1_01 = *(undefined4 *)(param1 + 0x34);
+		  if (*(int *)(Core_GameLocalization_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Core_GameLocalization_TypeInfo);
+		  }
+		  uVar1 = Core_Extensions_Dict_CultDicExt__GetTitle(StringLiteral_15159,1,0,1,0,0,0,0);
+		  param1_00 = unnamed_function_1417(System_Collections_Generic_Dictionary_string__string__TypeInfo);
+		  System_Collections_Generic_Dictionary_object__StyleComplexSelector_PseudoStateData___set_Item
+		            (param1_00,Method_System_Collections_Generic_Dictionary_string__string___ctor__);
+		  param3_00 = Protocol_Combat_ProtoPlayerActionEvt___ctor(&local_4,0);
+		  System_Reflection_FieldInfo__get_IsStatic
+		            (param1_00,StringLiteral_26036,param3_00,
+		             Method_System_Collections_Generic_Dictionary_string__string__Add__);
+		  uVar1 = Core_GameLocalization__GetTranslation(uVar1,param1_00,0);
+		  UnityEngine_Component__GetComponentInChildren_object_(param1_01,uVar1,0);
+		  return;
+		}
+		*/
+
 }

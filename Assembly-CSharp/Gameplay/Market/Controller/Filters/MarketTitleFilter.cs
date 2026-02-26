@@ -36,6 +36,30 @@ namespace Gameplay.Market.Controller.Filters
 		[Address(RVA = "0x77FB", Offset = "0x77FB", VA = "0x77FB", Slot = "6")]
 		public bool Filter(MarketLotData marketLotData)
 		{
+		/* --- GHIDRA: Filter ---
+		void Gameplay_Market_Controller_Filters_MarketTitleFilter__Filter(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  int *param1_00;
+		  
+		  param1_00 = *(int **)(*(int *)(param1 + 0xc) + 0xc);
+		  if (param1_00 == (int *)0x0) {
+		    *(undefined4 *)(param1 + 8) = 0;
+		    return;
+		  }
+		  if (DAT_ram_00a66978 != *param1_00) {
+		    System_Activator__CreateInstance(param1_00,DAT_ram_00a66978);
+		    do {
+		      halt_trap();
+		    } while( true );
+		  }
+		  uVar1 = func_ii_7775(param1_00,0);
+		  *(undefined4 *)(param1 + 8) = uVar1;
+		  return;
+		}
+		*/
+
 			return default(bool);
 		}
 
@@ -58,4 +82,24 @@ namespace Gameplay.Market.Controller.Filters
 		[FieldOffset(Offset = "0x8")]
 		private string _value;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: set_FilterInfo ---
+		undefined4
+		Gameplay_Market_Controller_Filters_MarketTitleFilter__set_FilterInfo
+		          (int param1,int param2,undefined4 param3)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  if (*(char *)(*(int *)(param1 + 0xc) + 0x10) != '\0') {
+		    uVar1 = Core_Data_ArtifactData__SetArtifactInfo(*(undefined4 *)(param2 + 8),0);
+		    uVar1 = func_ii_7903(uVar1,*(undefined4 *)(param1 + 8),0);
+		    return uVar1;
+		  }
+		  return 1;
+		}
+		*/
+
 }

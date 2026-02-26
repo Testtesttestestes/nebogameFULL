@@ -28,6 +28,31 @@ namespace Gameplay.Accounts.View
 		[Address(RVA = "0xA3C1", Offset = "0xA3C1", VA = "0xA3C1", Slot = "22")]
 		protected override void OnShow(AccountsListWindow.AccountsListWindowsArgs args)
 		{
+		/* --- GHIDRA: OnShow ---
+		void Gameplay_Accounts_View_AccountsListWindow__OnShow(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  
+		  if (DAT_ram_00a58896 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Windows_ClosableBaseWindow_AccountsListWindow_AccountsListWindowsArgs__OnClose__
+		              );
+		    DAT_ram_00a58896 = '\x01';
+		  }
+		  UI_Windows_ClosableBaseWindow_object___OnClickBack
+		            (param1,
+		             Method_UI_Windows_ClosableBaseWindow_AccountsListWindow_AccountsListWindowsArgs__OnClose__
+		            );
+		  iVar1 = **(int **)(param1 + 0x40);
+		  (**(code **)((ulonglong)*(uint *)(iVar1 + 0x130) * 4))
+		            (*(int **)(param1 + 0x40),*(undefined4 *)(iVar1 + 0x134));
+		  *(undefined4 *)(param1 + 0x40) = 0;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06005624 RID: 22052 RVA: 0x00002050 File Offset: 0x00000250
@@ -35,6 +60,25 @@ namespace Gameplay.Accounts.View
 		[Address(RVA = "0xA3C2", Offset = "0xA3C2", VA = "0xA3C2", Slot = "19")]
 		protected override void OnClose()
 		{
+		/* --- GHIDRA: OnClose ---
+		void Gameplay_Accounts_View_AccountsListWindow__OnClose(undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a58897 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Windows_ClosableBaseWindow_AccountsListWindow_AccountsListWindowsArgs___ctor__
+		              );
+		    DAT_ram_00a58897 = '\x01';
+		  }
+		  UI_MonoBehaviourWithStates_ClientStateChangedDelegate___Il2CppFullySharedGenericStructType___Invoke
+		            (param1,
+		             Method_UI_Windows_ClosableBaseWindow_AccountsListWindow_AccountsListWindowsArgs___ctor__
+		            );
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06005625 RID: 22053 RVA: 0x00002050 File Offset: 0x00000250
@@ -76,4 +120,55 @@ namespace Gameplay.Accounts.View
 			public AccountsController Controller;
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_WindowId ---
+		void Gameplay_Accounts_View_AccountsListWindow__get_WindowId
+		               (int param1,int param2,undefined4 param3)
+		
+		{
+		  undefined4 param3_00;
+		  undefined4 param4;
+		  undefined4 param1_00;
+		  undefined4 param2_00;
+		  undefined4 param5;
+		  int iVar1;
+		  
+		  if (DAT_ram_00a58895 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Gameplay_Accounts_Control_AccountsListViewMediator_TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Windows_ClosableBaseWindow_AccountsListWindow_AccountsListWindowsArgs__OnShow__
+		              );
+		    DAT_ram_00a58895 = '\x01';
+		  }
+		  func_ii_7769(param1,param2,
+		               Method_UI_Windows_ClosableBaseWindow_AccountsListWindow_AccountsListWindowsArgs__OnShow__
+		              );
+		  param2_00 = *(undefined4 *)(param1 + 0x3c);
+		  iVar1 = **(int **)(param2 + 0x18);
+		  param3_00 = (**(code **)((ulonglong)*(uint *)(iVar1 + 0x100) * 4))
+		                        (*(int **)(param2 + 0x18),*(undefined4 *)(iVar1 + 0x104));
+		  iVar1 = **(int **)(param2 + 0x18);
+		  param4 = (**(code **)((ulonglong)*(uint *)(iVar1 + 0x110) * 4))
+		                     (*(int **)(param2 + 0x18),*(undefined4 *)(iVar1 + 0x114));
+		  param5 = *(undefined4 *)(param2 + 0x18);
+		  param1_00 = unnamed_function_1417(Gameplay_Accounts_Control_AccountsListViewMediator_TypeInfo);
+		  if (DAT_ram_00a588e2 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_MVC_AbstractCozyViewMediator_AccountsModel__AccountsEvents__AccountsController__AccountsListView___ctor__
+		              );
+		    DAT_ram_00a588e2 = '\x01';
+		  }
+		  MVC_AbstractCozyViewMediator_object__object__object__object____ctor
+		            (param1_00,param2_00,param3_00,param4,param5,
+		             Method_MVC_AbstractCozyViewMediator_AccountsModel__AccountsEvents__AccountsController__AccountsListView___ctor__
+		            );
+		  *(undefined4 *)(param1 + 0x40) = param1_00;
+		  return;
+		}
+		*/
+
 }

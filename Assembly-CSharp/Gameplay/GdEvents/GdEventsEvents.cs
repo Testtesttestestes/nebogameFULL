@@ -15,6 +15,15 @@ namespace Gameplay.GdEvents
 		[Address(RVA = "0x7C28", Offset = "0x7C28", VA = "0x7C28")]
 		public GdEventsEvents()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_GdEvents_GdEventsEvents___ctor(int param1,undefined4 param2)
+		
+		{
+		  UI_Elements_RightPanel_TitleWithLevel__set_Level(*(undefined4 *)(param1 + 0x18),0,0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x040017D3 RID: 6099

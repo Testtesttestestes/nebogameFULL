@@ -13,6 +13,40 @@ namespace Gameplay.Combat.Model
 		[Address(RVA = "0x8A53", Offset = "0x8A53", VA = "0x8A53")]
 		public GameOverData(bool isWin, ulong opponentId, CombatPlayer loosePlayer, CombatTypes combatType, PlayerProfitData playerProfit)
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_Clans_Combat_Model_GameOverData___ctor
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4,undefined4 param5,
+		               undefined4 param6,undefined4 param7)
+		
+		{
+		  undefined8 param3_00;
+		  
+		  param3_00 = Core_Data_UserData__get_UserId(param4,0);
+		  Gameplay_Combat_Model_GameFieldGamesData___ctor(param1,param2,param3_00,param5,2,param6,0);
+		  *(undefined4 *)(param1 + 0x2c) = param4;
+		  *(undefined4 *)(param1 + 0x28) = param3;
+		  *(undefined4 *)(param1 + 0x24) = 0;
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_Clans_Combat_Model_GameOverData___ctor
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4,undefined4 param5,
+		               undefined4 param6,undefined4 param7)
+		
+		{
+		  undefined8 param3_00;
+		  
+		  param3_00 = Core_Data_UserData__get_UserId(param4,0);
+		  Gameplay_Combat_Model_GameFieldGamesData___ctor(param1,param2,param3_00,param5,2,param6,0);
+		  *(undefined4 *)(param1 + 0x2c) = param4;
+		  *(undefined4 *)(param1 + 0x28) = param3;
+		  *(undefined4 *)(param1 + 0x24) = 0;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06003ADF RID: 15071 RVA: 0x00002050 File Offset: 0x00000250

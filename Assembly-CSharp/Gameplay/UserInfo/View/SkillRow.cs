@@ -45,6 +45,31 @@ namespace Gameplay.UserInfo.View
 		[Address(RVA = "0x69B1", Offset = "0x69B1", VA = "0x69B1")]
 		public void Init(UserData user, UserSkillDic userSkillDic, SkillData skillData)
 		{
+		/* --- GHIDRA: Init ---
+		void Gameplay_UserInfo_View_SkillRow__Init(int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  undefined4 uVar1;
+		  int *piVar2;
+		  int iVar3;
+		  
+		  *(undefined4 *)(param1 + 0x38) = param2;
+		  uVar1 = func_ii_7990(param2,0);
+		  if (DAT_ram_00a598e9 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_2003);
+		    DAT_ram_00a598e9 = '\x01';
+		  }
+		  piVar2 = *(int **)(param1 + 0x1c);
+		  uVar1 = Mono_Security_X509_X509Crl_X509CrlEntry___ctor(uVar1,StringLiteral_2003,0);
+		  iVar3 = *piVar2;
+		  (**(code **)((ulonglong)*(uint *)(iVar3 + 0x2d0) * 4))
+		            (piVar2,uVar1,*(undefined4 *)(iVar3 + 0x2d4));
+		  uVar1 = Core_Extensions_Dict_UserSkillDicExt__GetTitle(param2,0);
+		  Core_Extensions_Dict_PortalDicExt__GetCurrencyIcon60x66(*(undefined4 *)(param1 + 0x24),uVar1,0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x060017F7 RID: 6135 RVA: 0x00002050 File Offset: 0x00000250
@@ -52,6 +77,35 @@ namespace Gameplay.UserInfo.View
 		[Address(RVA = "0x69B2", Offset = "0x69B2", VA = "0x69B2")]
 		public void SetUserSkillDic(UserSkillDic value)
 		{
+		/* --- GHIDRA: SetUserSkillDic ---
+		int Gameplay_UserInfo_View_SkillRow__SetUserSkillDic(int param1,undefined4 param2)
+		
+		{
+		  int param1_00;
+		  int iVar1;
+		  
+		  if (DAT_ram_00a598e7 == '\0') {
+		    Mono_Security_ASN1__get_Item(&UI_ToolTip_Implementations_VO_SkillToolTipInUserInfoVO_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Method_UI_ToolTip_ToolTipData_SkillToolTipInUserInfoVO___ctor__);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UI_ToolTip_ToolTipData_SkillToolTipInUserInfoVO__set_Data__);
+		    Mono_Security_ASN1__get_Item(&UI_ToolTip_ToolTipData_SkillToolTipInUserInfoVO__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_12540);
+		    DAT_ram_00a598e7 = '\x01';
+		  }
+		  param1_00 = unnamed_function_1417(UI_ToolTip_ToolTipData_SkillToolTipInUserInfoVO__TypeInfo);
+		  System_Buffers_TlsOverPerCoreLockedStacksArrayPool___Il2CppFullySharedGenericType___get_Id
+		            (param1_00,StringLiteral_12540,
+		             Method_UI_ToolTip_ToolTipData_SkillToolTipInUserInfoVO___ctor__);
+		  iVar1 = unnamed_function_1417(UI_ToolTip_Implementations_VO_SkillToolTipInUserInfoVO_TypeInfo);
+		  *(undefined4 *)(iVar1 + 8) = *(undefined4 *)(param1 + 0x38);
+		  *(undefined4 *)(iVar1 + 0xc) = *(undefined4 *)(param1 + 0x40);
+		  *(undefined4 *)(iVar1 + 0x10) = *(undefined4 *)(param1 + 0x3c);
+		  *(int *)(param1_00 + 0x1c) = iVar1;
+		  return param1_00;
+		}
+		*/
+
 		}
 
 		// Token: 0x060017F8 RID: 6136 RVA: 0x00002052 File Offset: 0x00000252
@@ -59,6 +113,16 @@ namespace Gameplay.UserInfo.View
 		[Address(RVA = "0x69B3", Offset = "0x69B3", VA = "0x69B3", Slot = "6")]
 		public BaseToolTipData GetData()
 		{
+		/* --- GHIDRA: GetData ---
+		void Gameplay_UserInfo_View_SkillRow__GetData(int param1,undefined4 param2)
+		
+		{
+		  *(undefined4 *)(param1 + 0x40) = 0;
+		  *(undefined4 *)(param1 + 0x38) = 0;
+		  return;
+		}
+		*/
+
 			return null;
 		}
 
@@ -86,4 +150,35 @@ namespace Gameplay.UserInfo.View
 		[FieldOffset(Offset = "0x3C")]
 		private SkillData _skillData;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: set_User ---
+		void Gameplay_UserInfo_View_SkillRow__set_User
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4,undefined4 param5)
+		
+		{
+		  undefined4 uVar1;
+		  int *piVar2;
+		  int iVar3;
+		  
+		  *(undefined4 *)(param1 + 0x40) = param2;
+		  *(undefined4 *)(param1 + 0x3c) = param4;
+		  *(undefined4 *)(param1 + 0x38) = param3;
+		  uVar1 = func_ii_7990(param3,0);
+		  if (DAT_ram_00a598e9 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_2003);
+		    DAT_ram_00a598e9 = '\x01';
+		  }
+		  piVar2 = *(int **)(param1 + 0x1c);
+		  uVar1 = Mono_Security_X509_X509Crl_X509CrlEntry___ctor(uVar1,StringLiteral_2003,0);
+		  iVar3 = *piVar2;
+		  (**(code **)((ulonglong)*(uint *)(iVar3 + 0x2d0) * 4))
+		            (piVar2,uVar1,*(undefined4 *)(iVar3 + 0x2d4));
+		  uVar1 = Core_Extensions_Dict_UserSkillDicExt__GetTitle(param3,0);
+		  Core_Extensions_Dict_PortalDicExt__GetCurrencyIcon60x66(*(undefined4 *)(param1 + 0x24),uVar1,0);
+		  return;
+		}
+		*/
+
 }

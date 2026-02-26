@@ -46,4 +46,46 @@ namespace Gameplay.GameEvents.View.Lists
 		[FieldOffset(Offset = "0x14")]
 		private GameEventItemRenderer _itemRenderer;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_GameEventData ---
+		void Gameplay_GameEvents_View_Lists_GameEventsListItemViewsHolder__get_GameEventData
+		               (int param1,int param2,undefined4 param3)
+		
+		{
+		  int param1_00;
+		  int param2_00;
+		  
+		  param1_00 = *(int *)(param1 + 0x14);
+		  param2_00 = *(int *)(param1_00 + 0x28);
+		  if (param2 != param2_00) {
+		    *(int *)(param1_00 + 0x28) = param2;
+		    Gameplay_GameEvents_View_Lists_GameEventItemRenderer__set_Data
+		              (param1_00,param2_00,param2,param2);
+		  }
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_GameEventData ---
+		void Gameplay_GameEvents_View_Lists_GameEventsListItemViewsHolder__set_GameEventData
+		               (int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a574b0 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UnityEngine_Component_GetComponent_GameEventItemRenderer___);
+		    DAT_ram_00a574b0 = '\x01';
+		  }
+		  uVar1 = func_ii_5677(*(undefined4 *)(param1 + 8),
+		                       Method_UnityEngine_Component_GetComponent_GameEventItemRenderer___);
+		  *(undefined4 *)(param1 + 0x14) = uVar1;
+		  return;
+		}
+		*/
+
 }

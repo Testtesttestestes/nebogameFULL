@@ -133,6 +133,26 @@ namespace Gameplay.Tournaments.View
 		[Address(RVA = "0x6DF8", Offset = "0x6DF8", VA = "0x6DF8", Slot = "19")]
 		protected override void OnClose()
 		{
+		/* --- GHIDRA: OnClose ---
+		void Gameplay_Tournaments_View_TournamentsWindow__OnClose
+		               (undefined4 param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  if (DAT_ram_00a58509 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Windows_ClosableBaseWindow_TournamentsWindow_TournamentsWindowArgs__OnShow__
+		              );
+		    DAT_ram_00a58509 = '\x01';
+		  }
+		  func_ii_7769(param1,param2,
+		               Method_UI_Windows_ClosableBaseWindow_TournamentsWindow_TournamentsWindowArgs__OnShow__
+		              );
+		  Gameplay_Tournaments_View_TournamentsWindow__CheckForClose(param1,param1);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06001C7A RID: 7290 RVA: 0x00002050 File Offset: 0x00000250
@@ -140,6 +160,108 @@ namespace Gameplay.Tournaments.View
 		[Address(RVA = "0x6DF9", Offset = "0x6DF9", VA = "0x6DF9", Slot = "22")]
 		protected override void OnShow(TournamentsWindow.TournamentsWindowArgs args)
 		{
+		/* --- GHIDRA: OnShow ---
+		int * Gameplay_Tournaments_View_TournamentsWindow__OnShow
+		                (int param1,int *param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  uint uVar1;
+		  uint *puVar2;
+		  undefined4 uVar3;
+		  int *piVar4;
+		  int *piVar5;
+		  undefined4 param1_00;
+		  int iVar6;
+		  int iVar7;
+		  int *piVar8;
+		  
+		  uVar1 = 0;
+		  if (DAT_ram_00a5850a == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Collections_Generic_ICollection_TournamentData__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&System_Collections_Generic_IList_TournamentData__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Method_UnityEngine_Object_Instantiate_TournamentListElement___);
+		    Mono_Security_ASN1__get_Item(&UnityEngine_Object_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Gameplay_Tournaments_View_TournamentListElement___TypeInfo);
+		    DAT_ram_00a5850a = '\x01';
+		  }
+		  iVar6 = *param2;
+		  if (*(ushort *)(iVar6 + 0xb6) != 0) {
+		    do {
+		      if (System_Collections_Generic_ICollection_TournamentData__TypeInfo ==
+		          *(int *)(*(int *)(iVar6 + 0x58) + uVar1 * 8)) {
+		        puVar2 = (uint *)(iVar6 + *(int *)(*(int *)(iVar6 + 0x58) + uVar1 * 8 + 4) * 8 + 0xc0);
+		        goto code_r0x80efd995;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar6 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(param2,
+		                                System_Collections_Generic_ICollection_TournamentData__TypeInfo,0);
+		code_r0x80efd995:
+		  uVar3 = (**(code **)((ulonglong)*puVar2 * 4))(param2,puVar2[1]);
+		  piVar4 = (int *)Mono_Security_ASN1Convert__ToOid
+		                            (Gameplay_Tournaments_View_TournamentListElement___TypeInfo,uVar3);
+		  iVar6 = 0;
+		  do {
+		    iVar7 = *param2;
+		    if (*(ushort *)(iVar7 + 0xb6) != 0) {
+		      uVar1 = 0;
+		      do {
+		        piVar5 = (int *)(*(int *)(iVar7 + 0x58) + uVar1 * 8);
+		        if (System_Collections_Generic_ICollection_TournamentData__TypeInfo == *piVar5) {
+		          puVar2 = (uint *)(iVar7 + piVar5[1] * 8 + 0xc0);
+		          goto code_r0x80efda22;
+		        }
+		        uVar1 = uVar1 + 1;
+		      } while (*(ushort *)(iVar7 + 0xb6) != uVar1);
+		    }
+		    puVar2 = (uint *)func_ii_1080(param2,
+		                                  System_Collections_Generic_ICollection_TournamentData__TypeInfo,0)
+		    ;
+		code_r0x80efda22:
+		    iVar7 = (**(code **)((ulonglong)*puVar2 * 4))(param2,puVar2[1]);
+		    if (iVar7 <= iVar6) {
+		      return piVar4;
+		    }
+		    uVar3 = *(undefined4 *)(param1 + 0x40);
+		    param1_00 = *(undefined4 *)(param1 + 0x3c);
+		    if (*(int *)(UnityEngine_Object_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(UnityEngine_Object_TypeInfo);
+		    }
+		    piVar5 = (int *)func_ii_6805(param1_00,uVar3,
+		                                 Method_UnityEngine_Object_Instantiate_TournamentListElement___);
+		    iVar7 = *param2;
+		    if (*(ushort *)(iVar7 + 0xb6) != 0) {
+		      uVar1 = 0;
+		      do {
+		        piVar8 = (int *)(*(int *)(iVar7 + 0x58) + uVar1 * 8);
+		        if (System_Collections_Generic_IList_TournamentData__TypeInfo == *piVar8) {
+		          puVar2 = (uint *)(iVar7 + piVar8[1] * 8 + 0xc0);
+		          goto code_r0x80efdad4;
+		        }
+		        uVar1 = uVar1 + 1;
+		      } while (*(ushort *)(iVar7 + 0xb6) != uVar1);
+		    }
+		    puVar2 = (uint *)func_ii_1080(param2,System_Collections_Generic_IList_TournamentData__TypeInfo,0
+		                                 );
+		code_r0x80efdad4:
+		    uVar3 = (**(code **)((ulonglong)*puVar2 * 4))(param2,iVar6,puVar2[1]);
+		    (**(code **)((ulonglong)*(uint *)(*piVar5 + 0x100) * 4))
+		              (piVar5,iVar6 + 1,uVar3,param3,*(undefined4 *)(*piVar5 + 0x104));
+		    iVar7 = func_ii_1082(piVar5,*(undefined4 *)(*piVar4 + 0x20));
+		    if (iVar7 == 0) {
+		      uVar3 = func_ii_1083();
+		      func_ii_1050(uVar3,0);
+		      do {
+		        halt_trap();
+		      } while( true );
+		    }
+		    piVar4[iVar6 + 4] = (int)piVar5;
+		    iVar6 = iVar6 + 1;
+		  } while( true );
+		}
+		*/
+
 		}
 
 		// Token: 0x06001C7B RID: 7291 RVA: 0x00002052 File Offset: 0x00000252
@@ -155,6 +277,46 @@ namespace Gameplay.Tournaments.View
 		[Address(RVA = "0x6DFB", Offset = "0x6DFB", VA = "0x6DFB", Slot = "17")]
 		public override bool CheckForClose()
 		{
+		/* --- GHIDRA: CheckForClose ---
+		void Gameplay_Tournaments_View_TournamentsWindow__CheckForClose(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  undefined4 param2_00;
+		  undefined4 param3;
+		  int *param1_00;
+		  int *param4;
+		  
+		  if (DAT_ram_00a5850b == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Windows_BaseWindow_TournamentsWindow_TournamentsWindowArgs__get_WindowArgs__
+		              );
+		    Mono_Security_ASN1__get_Item(&Gameplay_Tournaments_Controller_TournamentsViewMediator_TypeInfo);
+		    DAT_ram_00a5850b = '\x01';
+		  }
+		  if (*(char *)(param1 + 100) == '\0') {
+		    iVar1 = func_ii_8093(param1,
+		                         Method_UI_Windows_BaseWindow_TournamentsWindow_TournamentsWindowArgs__get_WindowArgs__
+		                        );
+		    param4 = *(int **)(iVar1 + 0x18);
+		    param2_00 = (**(code **)((ulonglong)*(uint *)(*param4 + 0x100) * 4))
+		                          (param4,*(undefined4 *)(*param4 + 0x104));
+		    param3 = (**(code **)((ulonglong)*(uint *)(*param4 + 0x110) * 4))
+		                       (param4,*(undefined4 *)(*param4 + 0x114));
+		    param1_00 = (int *)unnamed_function_1417
+		                                 (Gameplay_Tournaments_Controller_TournamentsViewMediator_TypeInfo);
+		    Gameplay_Tournaments_Controller_TournamentsViewMediator__set_TournamentProgressWindow
+		              (param1_00,param2_00,param3,param4,0);
+		    (**(code **)((ulonglong)*(uint *)(*param1_00 + 0x160) * 4))
+		              (param1_00,param1,*(undefined4 *)(*param1_00 + 0x164));
+		    *(undefined1 *)(param1 + 100) = 1;
+		    *(int **)(param1 + 0x60) = param1_00;
+		  }
+		  return;
+		}
+		*/
+
 			return default(bool);
 		}
 
@@ -163,6 +325,22 @@ namespace Gameplay.Tournaments.View
 		[Address(RVA = "0x6DFC", Offset = "0x6DFC", VA = "0x6DFC")]
 		private void SetupMVC()
 		{
+		/* --- GHIDRA: SetupMVC ---
+		void Gameplay_Tournaments_View_TournamentsWindow__SetupMVC(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  
+		  if (*(char *)(param1 + 100) != '\0') {
+		    iVar1 = **(int **)(param1 + 0x60);
+		    (**(code **)((ulonglong)*(uint *)(iVar1 + 0x130) * 4))
+		              (*(int **)(param1 + 0x60),*(undefined4 *)(iVar1 + 0x134));
+		    *(undefined4 *)(param1 + 0x60) = 0;
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06001C7E RID: 7294 RVA: 0x00002050 File Offset: 0x00000250
@@ -170,6 +348,25 @@ namespace Gameplay.Tournaments.View
 		[Address(RVA = "0x6DFD", Offset = "0x6DFD", VA = "0x6DFD")]
 		private void DestroyMVC()
 		{
+		/* --- GHIDRA: DestroyMVC ---
+		void Gameplay_Tournaments_View_TournamentsWindow__DestroyMVC(int param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a5850c == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Windows_ClosableBaseWindow_TournamentsWindow_TournamentsWindowArgs___ctor__
+		              );
+		    DAT_ram_00a5850c = '\x01';
+		  }
+		  *(undefined1 *)(param1 + 0x5c) = 1;
+		  UI_MonoBehaviourWithStates_ClientStateChangedDelegate___Il2CppFullySharedGenericStructType___Invoke
+		            (param1,
+		             Method_UI_Windows_ClosableBaseWindow_TournamentsWindow_TournamentsWindowArgs___ctor__);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06001C7F RID: 7295 RVA: 0x00002050 File Offset: 0x00000250
@@ -258,4 +455,34 @@ namespace Gameplay.Tournaments.View
 			public TournamentsController Controller;
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_QuitButton ---
+		void Gameplay_Tournaments_View_TournamentsWindow__get_QuitButton(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  
+		  if (DAT_ram_00a58508 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Windows_ClosableBaseWindow_TournamentsWindow_TournamentsWindowArgs__OnClose__
+		              );
+		    DAT_ram_00a58508 = '\x01';
+		  }
+		  UI_Windows_ClosableBaseWindow_object___OnClickBack
+		            (param1,
+		             Method_UI_Windows_ClosableBaseWindow_TournamentsWindow_TournamentsWindowArgs__OnClose__
+		            );
+		  if (*(char *)(param1 + 100) != '\0') {
+		    iVar1 = **(int **)(param1 + 0x60);
+		    (**(code **)((ulonglong)*(uint *)(iVar1 + 0x130) * 4))
+		              (*(int **)(param1 + 0x60),*(undefined4 *)(iVar1 + 0x134));
+		    *(undefined4 *)(param1 + 0x60) = 0;
+		  }
+		  return;
+		}
+		*/
+
 }

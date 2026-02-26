@@ -46,4 +46,33 @@ namespace Gameplay.Aprs.Controller.Filters
 		{
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: set_FilterInfo ---
+		undefined4
+		Gameplay_Aprs_Controller_Filters_AprOtherFilter__set_FilterInfo
+		          (int param1,int param2,undefined4 param3)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a59477 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Core_Dict_DictWrappers_Base_AbstractDictWrapper_MedalDic__uint__get_Data__);
+		    Mono_Security_ASN1__get_Item(&Gameplay_Medals_Model_MedalUtils_TypeInfo);
+		    DAT_ram_00a59477 = '\x01';
+		  }
+		  if (*(char *)(*(int *)(param1 + 8) + 0x10) == '\0') {
+		    return 1;
+		  }
+		  uVar1 = *(undefined4 *)(*(int *)(param2 + 0x14) + 0x10);
+		  if (*(int *)(Gameplay_Medals_Model_MedalUtils_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Gameplay_Medals_Model_MedalUtils_TypeInfo);
+		  }
+		  uVar1 = Gameplay_Medals_Model_MedalTabBarItemData___ctor(uVar1,0);
+		  return uVar1;
+		}
+		*/
+
 }

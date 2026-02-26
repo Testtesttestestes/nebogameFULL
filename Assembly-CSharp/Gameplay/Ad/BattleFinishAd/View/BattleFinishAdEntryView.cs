@@ -17,6 +17,34 @@ namespace Gameplay.Ad.BattleFinishAd.View
 		[Address(RVA = "0xA345", Offset = "0xA345", VA = "0xA345")]
 		public void Init(GameOverData gameOverData)
 		{
+		/* --- GHIDRA: Init ---
+		int Gameplay_Ad_BattleFinishAd_View_BattleFinishAdEntryView__Init
+		              (undefined4 param1,undefined4 param2,undefined4 param3,undefined4 param4,
+		              undefined4 param5)
+		
+		{
+		  int iVar1;
+		  
+		  if (DAT_ram_00a58852 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Gameplay_Ad_BattleFinishAd_View_BattleFinishAdEntryView__HandleAdAvailability_d__3_TypeInfo
+		              );
+		    DAT_ram_00a58852 = '\x01';
+		  }
+		  iVar1 = unnamed_function_1417
+		                    (
+		                    Gameplay_Ad_BattleFinishAd_View_BattleFinishAdEntryView__HandleAdAvailability_d__3_TypeInfo
+		                    );
+		  *(undefined4 *)(iVar1 + 0x18) = param1;
+		  *(undefined4 *)(iVar1 + 8) = 0;
+		  *(undefined4 *)(iVar1 + 0x1c) = param4;
+		  *(undefined4 *)(iVar1 + 0x14) = param3;
+		  *(undefined4 *)(iVar1 + 0x10) = param2;
+		  return iVar1;
+		}
+		*/
+
 		}
 
 		// Token: 0x060055A6 RID: 21926 RVA: 0x00002052 File Offset: 0x00000252

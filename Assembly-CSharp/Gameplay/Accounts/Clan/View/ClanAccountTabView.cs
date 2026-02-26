@@ -43,6 +43,16 @@ namespace Gameplay.Accounts.Clan.View
 		[Address(RVA = "0xA478", Offset = "0xA478", VA = "0xA478")]
 		public void UpdateAccount()
 		{
+		/* --- GHIDRA: UpdateAccount ---
+		void Gameplay_Accounts_Clan_View_ClanAccountTabView__UpdateAccount
+		               (undefined4 param1,undefined4 param2)
+		
+		{
+		  Gameplay_SmallGames_View_DailyRewards_RewardsTab__StartGlowing(param1,0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x060056FD RID: 22269 RVA: 0x00002050 File Offset: 0x00000250
@@ -74,4 +84,31 @@ namespace Gameplay.Accounts.Clan.View
 		[FieldOffset(Offset = "0x64")]
 		private IAccountDataDecorator _account;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_Account ---
+		void Gameplay_Accounts_Clan_View_ClanAccountTabView__get_Account
+		               (int param1,int param2,undefined4 param3)
+		
+		{
+		  if (param2 != *(int *)(param1 + 100)) {
+		    *(int *)(param1 + 100) = param2;
+		    Gameplay_Accounts_Clan_Control_ClanAccountViewMediator__UpdateStatusText(param1,param1);
+		  }
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_Account ---
+		void Gameplay_Accounts_Clan_View_ClanAccountTabView__set_Account
+		               (undefined4 param1,undefined4 param2)
+		
+		{
+		  Gameplay_Accounts_Clan_Control_ClanAccountViewMediator__UpdateStatusText(param1,param1);
+		  return;
+		}
+		*/
+
 }

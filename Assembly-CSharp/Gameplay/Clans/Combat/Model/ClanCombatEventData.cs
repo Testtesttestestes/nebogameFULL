@@ -14,6 +14,18 @@ namespace Gameplay.Clans.Combat.Model
 		[Address(RVA = "0x9007", Offset = "0x9007", VA = "0x9007")]
 		public ClanCombatEventData(CombatEventDic eventDic)
 		{
+		/* --- GHIDRA: .ctor ---
+		undefined4 Gameplay_Clans_Combat_Model_ClanCombatEventData___ctor(int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  uVar1 = Core_Extensions_Dict_CombatEventDicExt__GetAnimationAssetId(*(undefined4 *)(param1 + 8),0)
+		  ;
+		  return uVar1;
+		}
+		*/
+
 		}
 
 		// Token: 0x17000CE2 RID: 3298

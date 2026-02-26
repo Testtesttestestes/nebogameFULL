@@ -14,6 +14,42 @@ namespace Gameplay.RegisterV2.View.CultSelector
 		[Address(RVA = "0x72B9", Offset = "0x72B9", VA = "0x72B9")]
 		public CultSelectorListArgs()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_RegisterV2_View_CultSelector_CultSelectorListArgs___ctor
+		               (undefined4 param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  if (DAT_ram_00a58382 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UI_Elements_GenericList_SelectedGenericListArgs_CultListElementArgs___ctor__)
+		    ;
+		    DAT_ram_00a58382 = '\x01';
+		  }
+		  UI_Elements_GenericList_SelectedGenericListArgs_object____ctor
+		            (param1,param2,
+		             Method_UI_Elements_GenericList_SelectedGenericListArgs_CultListElementArgs___ctor__);
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_RegisterV2_View_CultSelector_CultSelectorListArgs___ctor
+		               (undefined4 param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  if (DAT_ram_00a58382 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UI_Elements_GenericList_SelectedGenericListArgs_CultListElementArgs___ctor__)
+		    ;
+		    DAT_ram_00a58382 = '\x01';
+		  }
+		  UI_Elements_GenericList_SelectedGenericListArgs_object____ctor
+		            (param1,param2,
+		             Method_UI_Elements_GenericList_SelectedGenericListArgs_CultListElementArgs___ctor__);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06002158 RID: 8536 RVA: 0x00002050 File Offset: 0x00000250

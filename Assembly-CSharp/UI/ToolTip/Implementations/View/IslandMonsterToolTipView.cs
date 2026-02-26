@@ -15,6 +15,21 @@ namespace UI.ToolTip.Implementations.View
 		[Address(RVA = "0x5D13", Offset = "0x5D13", VA = "0x5D13", Slot = "5")]
 		protected override void HandleDataChanged()
 		{
+		/* --- GHIDRA: HandleDataChanged ---
+		void UI_ToolTip_Implementations_View_IslandMonsterToolTipView__HandleDataChanged
+		               (undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a5b8e9 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_UI_ToolTip_BaseToolTip_AbstractMonsterToolTipVO___ctor__);
+		    DAT_ram_00a5b8e9 = '\x01';
+		  }
+		  ScreenAdaptation_Common_AppSize__Update
+		            (param1,Method_UI_ToolTip_BaseToolTip_AbstractMonsterToolTipVO___ctor__);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x060009AC RID: 2476 RVA: 0x00002050 File Offset: 0x00000250
@@ -22,6 +37,35 @@ namespace UI.ToolTip.Implementations.View
 		[Address(RVA = "0x5D14", Offset = "0x5D14", VA = "0x5D14")]
 		public IslandMonsterToolTipView()
 		{
+		/* --- GHIDRA: .ctor ---
+		void UI_ToolTip_Implementations_View_IslandMonsterToolTipView___ctor(int param1,undefined4 param2)
+		
+		{
+		  int *piVar1;
+		  undefined4 param1_00;
+		  undefined4 uVar2;
+		  
+		  if (DAT_ram_00a5b8ea == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UI_ToolTip_BaseToolTip_AprMarkerToolTipVO__HandleDataChanged__);
+		    Mono_Security_ASN1__get_Item(&Method_UI_ToolTip_BaseToolTip_AprMarkerToolTipVO__get_Data__);
+		    Mono_Security_ASN1__get_Item(&Core_Extensions_Dict_RewardInfoExt_TypeInfo);
+		    DAT_ram_00a5b8ea = '\x01';
+		  }
+		  UnityEngine_Component__GetComponentInChildren_object_
+		            (*(undefined4 *)(param1 + 0x18),*(undefined4 *)(*(int *)(param1 + 0x14) + 0xc),0);
+		  param1_00 = *(undefined4 *)(param1 + 0x1c);
+		  uVar2 = *(undefined4 *)(*(int *)(*(int *)(param1 + 0x14) + 8) + 0x28);
+		  if (*(int *)(Core_Extensions_Dict_RewardInfoExt_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Core_Extensions_Dict_RewardInfoExt_TypeInfo);
+		  }
+		  uVar2 = Core_Extensions_Dict_RewardInfoExt__GetGroupIndex(uVar2,0);
+		  piVar1 = (int *)func_ii_7307(param1_00,uVar2,0);
+		  (**(code **)((ulonglong)*(uint *)(*piVar1 + 0xf0) * 4))(piVar1,*(undefined4 *)(*piVar1 + 0xf4));
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x040003B5 RID: 949

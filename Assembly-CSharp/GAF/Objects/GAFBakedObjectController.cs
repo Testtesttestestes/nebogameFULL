@@ -53,6 +53,32 @@ namespace GAF.Objects
 		[Address(RVA = "0xC252", Offset = "0xC252", VA = "0xC252")]
 		public GAFBakedObjectController()
 		{
+		/* --- GHIDRA: .ctor ---
+		void GAF_Objects_GAFBakedObjectController___ctor(undefined4 param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a54ea3 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_GAFInternal_Objects_GAFBakedObjectsManagerInternal_GAFBakedObject__reload__);
+		    DAT_ram_00a54ea3 = '\x01';
+		  }
+		  uVar1 = GAFInternal_Core_GAFBehaviour__get_cachedTransform(param1,0);
+		  UnityEngine_MaterialPropertyBlock_BindingsMarshaller__ConvertToNative(uVar1,0,0);
+		  uVar1 = GAFInternal_Core_GAFBehaviour__get_cachedTransform(param1,0);
+		  UnityEngine_Renderer__get_reflectionProbeUsage(uVar1,0,0);
+		  uVar1 = GAFInternal_Core_GAFBehaviour__get_cachedTransform(param1,0);
+		  UnityEngine_Renderer__get_shadowCastingMode(uVar1,0,0);
+		  uVar1 = GAFInternal_Core_GAFBehaviour__get_cachedTransform(param1,0);
+		  UnityEngine_Renderer__get_receiveShadows(uVar1,0,0);
+		  GAFInternal_Objects_GAFBakedObjectsManagerInternal_object___initialize
+		            (param1,
+		             Method_GAFInternal_Objects_GAFBakedObjectsManagerInternal_GAFBakedObject__reload__);
+		  return;
+		}
+		*/
+
 		}
 	}
 }

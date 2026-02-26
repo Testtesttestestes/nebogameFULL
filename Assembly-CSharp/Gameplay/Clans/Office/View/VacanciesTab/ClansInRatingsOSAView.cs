@@ -13,6 +13,26 @@ namespace Gameplay.Clans.Office.View.VacanciesTab
 		[Address(RVA = "0x8BBB", Offset = "0x8BBB", VA = "0x8BBB", Slot = "119")]
 		protected override ClansInRatingsViewsHolder CreateViewsHolder()
 		{
+		/* --- GHIDRA: CreateViewsHolder ---
+		void Gameplay_Clans_Office_View_VacanciesTab_ClansInRatingsOSAView__CreateViewsHolder
+		               (undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a57f12 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_OSADynamicBase_ClansInRatingsViewsHolder__ClanInRatingListElement_ClanInRatingListElementArgs___ctor__
+		              );
+		    DAT_ram_00a57f12 = '\x01';
+		  }
+		  System_Nullable_TimeZoneInfo_TransitionTime___get_Value
+		            (param1,
+		             Method_UI_OSADynamicBase_ClansInRatingsViewsHolder__ClanInRatingListElement_ClanInRatingListElementArgs___ctor__
+		            );
+		  return;
+		}
+		*/
+
 			return null;
 		}
 
@@ -21,6 +41,48 @@ namespace Gameplay.Clans.Office.View.VacanciesTab
 		[Address(RVA = "0x8BBC", Offset = "0x8BBC", VA = "0x8BBC")]
 		public ClansInRatingsOSAView()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_Clans_Office_View_VacanciesTab_ClansInRatingsOSAView___ctor
+		               (int param1,int *param2,undefined4 param3)
+		
+		{
+		  if (DAT_ram_00a57f13 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Gameplay_Clans_Office_View_ClanInRatingListElement_ClanInRatingListElementArgs_TypeInfo
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Elements_GenericList_SelectableListElement_ClanInRatingListElement_ClanInRatingListElementArgs__set_Data__
+		              );
+		    DAT_ram_00a57f13 = '\x01';
+		  }
+		  if (param2 != (int *)0x0) {
+		    if (((uint)*(byte *)(*param2 + 0xb8) <
+		         (uint)*(byte *)(
+		                        Gameplay_Clans_Office_View_ClanInRatingListElement_ClanInRatingListElementArgs_TypeInfo
+		                        + 0xb8)) ||
+		       (*(int *)(*(int *)(*param2 + 100) +
+		                 (uint)*(byte *)(
+		                                Gameplay_Clans_Office_View_ClanInRatingListElement_ClanInRatingListElementArgs_TypeInfo
+		                                + 0xb8) * 4 + -4) !=
+		        Gameplay_Clans_Office_View_ClanInRatingListElement_ClanInRatingListElementArgs_TypeInfo)) {
+		      System_Activator__CreateInstance
+		                (param2,
+		                 Gameplay_Clans_Office_View_ClanInRatingListElement_ClanInRatingListElementArgs_TypeInfo
+		                );
+		      do {
+		        halt_trap();
+		      } while( true );
+		    }
+		  }
+		  func_ii_7635(*(undefined4 *)(param1 + 0x14),param2,
+		               Method_UI_Elements_GenericList_SelectableListElement_ClanInRatingListElement_ClanInRatingListElementArgs__set_Data__
+		              );
+		  return;
+		}
+		*/
+
 		}
 	}
 }

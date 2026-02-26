@@ -38,4 +38,25 @@ namespace UI.Windows.Buildings.MageSchoolWindow
 		{
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: set_LoggedUser ---
+		void UI_Windows_Buildings_MageSchoolWindow_SchoolWindowArgs__set_LoggedUser
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4,undefined4 param5)
+		
+		{
+		  if (DAT_ram_00a58a8c == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UI_Windows_Buildings_BaseIsleBuildingWindowArgs_UserIsle___ctor__);
+		    DAT_ram_00a58a8c = '\x01';
+		  }
+		  Core_GameResources_BaseGameResourcesFabric_object__object___get_TotalResourceCount
+		            (param1,param2,param3,
+		             Method_UI_Windows_Buildings_BaseIsleBuildingWindowArgs_UserIsle___ctor__);
+		  *(undefined4 *)(param1 + 0x20) = param4;
+		  return;
+		}
+		*/
+
 }

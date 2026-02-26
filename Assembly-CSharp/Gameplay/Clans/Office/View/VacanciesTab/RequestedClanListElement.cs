@@ -19,6 +19,26 @@ namespace Gameplay.Clans.Office.View.VacanciesTab
 		[Address(RVA = "0x8BC0", Offset = "0x8BC0", VA = "0x8BC0", Slot = "9")]
 		protected override void Select(bool isSelected)
 		{
+		/* --- GHIDRA: Select ---
+		void Gameplay_Clans_Office_View_VacanciesTab_RequestedClanListElement__Select
+		               (undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a57f0d == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Gameplay_Clans_Office_View_ClanListElement_ClanInRatingListElement_ClanInRatingListElementArgs___ctor__
+		              );
+		    DAT_ram_00a57f0d = '\x01';
+		  }
+		  Gameplay_Clans_Office_View_ClanListElementArgs___Il2CppFullySharedGenericType____Il2CppFullySharedGenericType____ctor
+		            (param1,
+		             Method_Gameplay_Clans_Office_View_ClanListElement_ClanInRatingListElement_ClanInRatingListElementArgs___ctor__
+		            );
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06003D01 RID: 15617 RVA: 0x00002050 File Offset: 0x00000250

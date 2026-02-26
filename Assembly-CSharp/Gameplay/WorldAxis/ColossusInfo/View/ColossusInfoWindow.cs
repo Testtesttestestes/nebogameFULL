@@ -233,6 +233,39 @@ namespace Gameplay.WorldAxis.ColossusInfo.View
 		[Address(RVA = "0x6467", Offset = "0x6467", VA = "0x6467", Slot = "22")]
 		protected override void OnShow(ColossusInfoWindow.ColossusInfoWindowArgs args)
 		{
+		/* --- GHIDRA: OnShow ---
+		void Gameplay_WorldAxis_ColossusInfo_View_ColossusInfoWindow__OnShow(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  
+		  if (DAT_ram_00a58bca == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Windows_ClosableBaseWindow_ColossusInfoWindow_ColossusInfoWindowArgs__OnClose__
+		              );
+		    DAT_ram_00a58bca = '\x01';
+		  }
+		  UI_Windows_ClosableBaseWindow_object___OnClickBack
+		            (param1,
+		             Method_UI_Windows_ClosableBaseWindow_ColossusInfoWindow_ColossusInfoWindowArgs__OnClose__
+		            );
+		  MVC_AbstractController__Run(*(undefined4 *)(param1 + 0x84),0);
+		  iVar1 = **(int **)(param1 + 0x88);
+		  (**(code **)((ulonglong)*(uint *)(iVar1 + 0x130) * 4))
+		            (*(int **)(param1 + 0x88),*(undefined4 *)(iVar1 + 0x134));
+		  iVar1 = **(int **)(param1 + 0x84);
+		  (**(code **)((ulonglong)*(uint *)(iVar1 + 0xe8) * 4))
+		            (*(int **)(param1 + 0x84),*(undefined4 *)(iVar1 + 0xec));
+		  iVar1 = **(int **)(param1 + 0x7c);
+		  (**(code **)((ulonglong)*(uint *)(iVar1 + 0xe8) * 4))
+		            (*(int **)(param1 + 0x7c),*(undefined4 *)(iVar1 + 0xec));
+		  *(undefined8 *)(param1 + 0x84) = 0;
+		  *(undefined4 *)(param1 + 0x7c) = 0;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600126E RID: 4718 RVA: 0x00002050 File Offset: 0x00000250
@@ -240,6 +273,120 @@ namespace Gameplay.WorldAxis.ColossusInfo.View
 		[Address(RVA = "0x6468", Offset = "0x6468", VA = "0x6468", Slot = "19")]
 		protected override void OnClose()
 		{
+		/* --- GHIDRA: OnClose ---
+		void Gameplay_WorldAxis_ColossusInfo_View_ColossusInfoWindow__OnClose(int param1,undefined4 param2)
+		
+		{
+		  uint uVar1;
+		  uint *puVar2;
+		  undefined4 uVar3;
+		  undefined4 uVar4;
+		  undefined4 uVar5;
+		  int *piVar6;
+		  int iVar7;
+		  undefined4 param3;
+		  int iVar8;
+		  
+		  if (DAT_ram_00a58bcb == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Windows_BaseWindow_ColossusInfoWindow_ColossusInfoWindowArgs__get_WindowArgs__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Gameplay_WorldAxis_ColossusInfo_Controller_ColossusInfo_ColossusInfoController_TypeInfo
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&Gameplay_WorldAxis_ColossusInfo_Events_ColossusInfoEvents_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Gameplay_WorldAxis_ColossusInfo_Model_ColossusInfoModel_TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Gameplay_WorldAxis_ColossusInfo_Controller_ColossusInfo_ColossusInfoViewMediator_TypeInfo
+		              );
+		    Mono_Security_ASN1__get_Item(&Core_Gameplay_IGame_TypeInfo);
+		    DAT_ram_00a58bcb = '\x01';
+		  }
+		  if (DAT_ram_00a6456f == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_Gameplay_Game_TypeInfo);
+		    DAT_ram_00a6456f = '\x01';
+		  }
+		  uVar1 = 0;
+		  piVar6 = (int *)**(undefined4 **)(Core_Gameplay_Game_TypeInfo + 0x5c);
+		  iVar7 = *piVar6;
+		  if (*(ushort *)(iVar7 + 0xb6) != 0) {
+		    do {
+		      if (Core_Gameplay_IGame_TypeInfo == *(int *)(*(int *)(iVar7 + 0x58) + uVar1 * 8)) {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar7 + 0x58) + uVar1 * 8 + 4) * 8 + iVar7 + 0x140);
+		        goto code_r0x80f8469b;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar7 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(piVar6,Core_Gameplay_IGame_TypeInfo,0x10);
+		code_r0x80f8469b:
+		  uVar3 = (**(code **)((ulonglong)*puVar2 * 4))(piVar6,puVar2[1]);
+		  uVar3 = func_ii_7112(uVar3,0);
+		  iVar7 = func_ii_8093(param1,
+		                       Method_UI_Windows_BaseWindow_ColossusInfoWindow_ColossusInfoWindowArgs__get_WindowArgs__
+		                      );
+		  param3 = *(undefined4 *)(iVar7 + 0x1c);
+		  iVar7 = func_ii_8093(param1,
+		                       Method_UI_Windows_BaseWindow_ColossusInfoWindow_ColossusInfoWindowArgs__get_WindowArgs__
+		                      );
+		  iVar8 = **(int **)(iVar7 + 0x20);
+		  uVar4 = (**(code **)((ulonglong)*(uint *)(iVar8 + 0x100) * 4))
+		                    (*(int **)(iVar7 + 0x20),*(undefined4 *)(iVar8 + 0x104));
+		  uVar5 = unnamed_function_1417(Gameplay_WorldAxis_ColossusInfo_Model_ColossusInfoModel_TypeInfo);
+		  Gameplay_WorldAxis_ColossusInfo_Model_ColossusInfoModel__get_IsMyColossus
+		            (uVar5,uVar3,param3,uVar4,uVar3);
+		  *(undefined4 *)(param1 + 0x7c) = uVar5;
+		  iVar7 = func_ii_8093(param1,
+		                       Method_UI_Windows_BaseWindow_ColossusInfoWindow_ColossusInfoWindowArgs__get_WindowArgs__
+		                      );
+		  iVar8 = **(int **)(iVar7 + 0x20);
+		  uVar3 = (**(code **)((ulonglong)*(uint *)(iVar8 + 0x110) * 4))
+		                    (*(int **)(iVar7 + 0x20),*(undefined4 *)(iVar8 + 0x114));
+		  iVar7 = unnamed_function_1417(Gameplay_WorldAxis_ColossusInfo_Events_ColossusInfoEvents_TypeInfo);
+		  *(undefined4 *)(iVar7 + 0x14) = uVar3;
+		  *(int *)(param1 + 0x80) = iVar7;
+		  uVar4 = *(undefined4 *)(param1 + 0x7c);
+		  uVar3 = unnamed_function_1417
+		                    (
+		                    Gameplay_WorldAxis_ColossusInfo_Controller_ColossusInfo_ColossusInfoController_TypeInfo
+		                    );
+		  Gameplay_WorldAxis_ColossusInfo_Controller_ColossusTreasuryController___c__DisplayClass4_0___BuyTreasuryOption_b__0
+		            (uVar3,uVar4,iVar7,iVar7);
+		  *(undefined4 *)(param1 + 0x84) = uVar3;
+		  uVar4 = *(undefined4 *)(param1 + 0x7c);
+		  uVar5 = *(undefined4 *)(param1 + 0x80);
+		  piVar6 = (int *)unnamed_function_1417
+		                            (
+		                            Gameplay_WorldAxis_ColossusInfo_Controller_ColossusInfo_ColossusInfoViewMediator_TypeInfo
+		                            );
+		  if (DAT_ram_00a58c00 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_MVC_AbstractViewMediator_ColossusInfoModel__ColossusInfoEvents__ColossusInfoController__ColossusInfoWindow___ctor__
+		              );
+		    DAT_ram_00a58c00 = '\x01';
+		  }
+		  Gameplay_Combat_TeamCombat_View_AbstractTeamCombatView_object___get_HideInstantElements
+		            (piVar6,uVar4,uVar5,uVar3,
+		             Method_MVC_AbstractViewMediator_ColossusInfoModel__ColossusInfoEvents__ColossusInfoController__ColossusInfoWindow___ctor__
+		            );
+		  (**(code **)((ulonglong)*(uint *)(*piVar6 + 0x160) * 4))
+		            (piVar6,param1,*(undefined4 *)(*piVar6 + 0x164));
+		  *(int **)(param1 + 0x88) = piVar6;
+		  MVC_AbstractController__Dispose(*(undefined4 *)(param1 + 0x84),0);
+		  iVar7 = func_ii_8093(param1,
+		                       Method_UI_Windows_BaseWindow_ColossusInfoWindow_ColossusInfoWindowArgs__get_WindowArgs__
+		                      );
+		  Gameplay_WorldAxis_Controller_WorldAxisController__GetAvailableDollsResultHandler
+		            (*(undefined4 *)(iVar7 + 0x20),0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600126F RID: 4719 RVA: 0x00002050 File Offset: 0x00000250
@@ -247,6 +394,28 @@ namespace Gameplay.WorldAxis.ColossusInfo.View
 		[Address(RVA = "0x6469", Offset = "0x6469", VA = "0x6469")]
 		private void SetupMVC()
 		{
+		/* --- GHIDRA: SetupMVC ---
+		void Gameplay_WorldAxis_ColossusInfo_View_ColossusInfoWindow__SetupMVC(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  
+		  MVC_AbstractController__Run(*(undefined4 *)(param1 + 0x84),0);
+		  iVar1 = **(int **)(param1 + 0x88);
+		  (**(code **)((ulonglong)*(uint *)(iVar1 + 0x130) * 4))
+		            (*(int **)(param1 + 0x88),*(undefined4 *)(iVar1 + 0x134));
+		  iVar1 = **(int **)(param1 + 0x84);
+		  (**(code **)((ulonglong)*(uint *)(iVar1 + 0xe8) * 4))
+		            (*(int **)(param1 + 0x84),*(undefined4 *)(iVar1 + 0xec));
+		  iVar1 = **(int **)(param1 + 0x7c);
+		  (**(code **)((ulonglong)*(uint *)(iVar1 + 0xe8) * 4))
+		            (*(int **)(param1 + 0x7c),*(undefined4 *)(iVar1 + 0xec));
+		  *(undefined8 *)(param1 + 0x84) = 0;
+		  *(undefined4 *)(param1 + 0x7c) = 0;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06001270 RID: 4720 RVA: 0x00002050 File Offset: 0x00000250
@@ -254,6 +423,26 @@ namespace Gameplay.WorldAxis.ColossusInfo.View
 		[Address(RVA = "0x646A", Offset = "0x646A", VA = "0x646A")]
 		private void DestroyMVC()
 		{
+		/* --- GHIDRA: DestroyMVC ---
+		void Gameplay_WorldAxis_ColossusInfo_View_ColossusInfoWindow__DestroyMVC
+		               (undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a58bcc == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Windows_ClosableBaseWindow_ColossusInfoWindow_ColossusInfoWindowArgs___ctor__
+		              );
+		    DAT_ram_00a58bcc = '\x01';
+		  }
+		  UI_MonoBehaviourWithStates_ClientStateChangedDelegate___Il2CppFullySharedGenericStructType___Invoke
+		            (param1,
+		             Method_UI_Windows_ClosableBaseWindow_ColossusInfoWindow_ColossusInfoWindowArgs___ctor__
+		            );
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06001271 RID: 4721 RVA: 0x00002050 File Offset: 0x00000250
@@ -425,4 +614,34 @@ namespace Gameplay.WorldAxis.ColossusInfo.View
 			public WorldAxisController WorldAxisController;
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_ClassButton ---
+		void Gameplay_WorldAxis_ColossusInfo_View_ColossusInfoWindow__get_ClassButton
+		               (int param1,int param2,undefined4 param3)
+		
+		{
+		  undefined4 param2_00;
+		  undefined4 param1_00;
+		  
+		  if (DAT_ram_00a58bc9 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_UI_Windows_ClosableBaseWindow_ColossusInfoWindow_ColossusInfoWindowArgs__OnShow__
+		              );
+		    DAT_ram_00a58bc9 = '\x01';
+		  }
+		  func_ii_7769(param1,param2,
+		               Method_UI_Windows_ClosableBaseWindow_ColossusInfoWindow_ColossusInfoWindowArgs__OnShow__
+		              );
+		  Gameplay_WorldAxis_ColossusInfo_View_ColossusInfoWindow__OnClose(param1,param1);
+		  param1_00 = *(undefined4 *)(param1 + 0x40);
+		  param2_00 = Core_Extensions_Dict_ColossusDicExt__GetIcon256
+		                        (*(undefined4 *)(*(int *)(param2 + 0x1c) + 0x10),0);
+		  Core_Extensions_Dict_AprDicExt__Get1024AssetId(param1_00,param2_00,0);
+		  return;
+		}
+		*/
+
 }

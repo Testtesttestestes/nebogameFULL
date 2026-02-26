@@ -12,6 +12,19 @@ namespace I2.Loc
 		[Address(RVA = "0xC08F", Offset = "0xC08F", VA = "0xC08F", Slot = "4")]
 		public override bool CanLocalize(Localize cmp)
 		{
+		/* --- GHIDRA: CanLocalize ---
+		void I2_Loc_LocalizeTargetDesc_Child__CanLocalize(undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a6053c == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_I2_Loc_LocalizeTargetDesc_LocalizeTarget_UnityStandard_Child___ctor__);
+		    DAT_ram_00a6053c = '\x01';
+		  }
+		  return;
+		}
+		*/
+
 			return default(bool);
 		}
 
@@ -20,6 +33,15 @@ namespace I2.Loc
 		[Address(RVA = "0xC090", Offset = "0xC090", VA = "0xC090")]
 		public LocalizeTargetDesc_Child()
 		{
+		/* --- GHIDRA: .ctor ---
+		void I2_Loc_LocalizeTargetDesc_Child___ctor(undefined4 param1)
+		
+		{
+		  I2_Loc_LocalizeTarget_UnityStandard_Child___cctor(0);
+		  return;
+		}
+		*/
+
 		}
 	}
 }

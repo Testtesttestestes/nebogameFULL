@@ -57,6 +57,31 @@ namespace Gameplay.Assistants
 		[Address(RVA = "0x9CE9", Offset = "0x9CE9", VA = "0x9CE9", Slot = "5")]
 		public virtual void Dispose()
 		{
+		/* --- GHIDRA: Dispose ---
+		void Gameplay_Assistants_BaseAssistant__Dispose(int *param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  undefined4 uVar1;
+		  undefined4 uVar2;
+		  
+		  if ((char)param1[3] == '\0') {
+		    (**(code **)((ulonglong)*(uint *)(*param1 + 0xf0) * 4))
+		              (param1,param2,*(undefined4 *)(*param1 + 0xf4));
+		    *(undefined1 *)(param1 + 3) = 1;
+		    return;
+		  }
+		  uVar1 = unnamed_function_2232(&System_Exception_TypeInfo);
+		  uVar1 = unnamed_function_1417(uVar1);
+		  uVar2 = unnamed_function_2232(&StringLiteral_3027);
+		  System_String__Concat(uVar1,uVar2,0);
+		  uVar2 = unnamed_function_2232(&Method_Gameplay_Assistants_BaseAssistant_Run__);
+		  func_ii_1050(uVar1,uVar2);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
 		}
 
 		// Token: 0x06004EBE RID: 20158 RVA: 0x00002050 File Offset: 0x00000250
@@ -71,6 +96,20 @@ namespace Gameplay.Assistants
 		[Address(RVA = "0x228E", Offset = "0x228E", VA = "0x228E")]
 		public void Stop()
 		{
+		/* --- GHIDRA: Stop ---
+		int * Gameplay_Assistants_BaseAssistant__Stop(int *param1)
+		
+		{
+		  if (*param1 == 0) {
+		    return param1;
+		  }
+		  System_Data_DataSet__ValidateLocaleConstraint(*param1);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
 		}
 
 		// Token: 0x06004EC0 RID: 20160

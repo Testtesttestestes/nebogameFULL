@@ -42,6 +42,47 @@ namespace UI.Preloader
 		[Address(RVA = "0x5F3F", Offset = "0x5F3F", VA = "0x5F3F")]
 		private void Awake()
 		{
+		/* --- GHIDRA: Awake ---
+		void UI_Preloader_PreloaderView__Awake(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  undefined4 uVar2;
+		  int *piVar3;
+		  
+		  if (DAT_ram_00a63904 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_GameLocalization_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_12173);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_8652);
+		    DAT_ram_00a63904 = '\x01';
+		  }
+		  uVar2 = *(undefined4 *)(param1 + 0x10);
+		  if (DAT_ram_00a63906 == '\0') {
+		    Mono_Security_ASN1__get_Item(&UI_Preloader_PreloaderView__ChangeTitleRoutine_d__22_TypeInfo);
+		    DAT_ram_00a63906 = '\x01';
+		  }
+		  iVar1 = unnamed_function_1417(UI_Preloader_PreloaderView__ChangeTitleRoutine_d__22_TypeInfo);
+		  *(int *)(iVar1 + 0x14) = param1;
+		  *(undefined4 *)(iVar1 + 8) = 0;
+		  *(undefined4 *)(iVar1 + 0x10) = uVar2;
+		  UnityEngine_MonoBehaviour__StartCoroutine(param1,iVar1,0);
+		  piVar3 = *(int **)(param1 + 0x18);
+		  if (*(int *)(Core_GameLocalization_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Core_GameLocalization_TypeInfo);
+		  }
+		  uVar2 = func_ii_7508(StringLiteral_8652,1,0,1,0,0,0,0);
+		  iVar1 = *piVar3;
+		  (**(code **)((ulonglong)*(uint *)(iVar1 + 0x2d0) * 4))
+		            (piVar3,uVar2,*(undefined4 *)(iVar1 + 0x2d4));
+		  piVar3 = *(int **)(param1 + 0x1c);
+		  uVar2 = func_ii_7508(StringLiteral_12173,1,0,1,0,0,0,0);
+		  iVar1 = *piVar3;
+		  (**(code **)((ulonglong)*(uint *)(iVar1 + 0x2d0) * 4))
+		            (piVar3,uVar2,*(undefined4 *)(iVar1 + 0x2d4));
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06000C31 RID: 3121 RVA: 0x00002050 File Offset: 0x00000250
@@ -49,6 +90,15 @@ namespace UI.Preloader
 		[Address(RVA = "0x5F40", Offset = "0x5F40", VA = "0x5F40")]
 		private void OnEnable()
 		{
+		/* --- GHIDRA: OnEnable ---
+		void UI_Preloader_PreloaderView__OnEnable(undefined4 param1,undefined4 param2)
+		
+		{
+		  UnityEngine_MonoBehaviour__StopCoroutine(param1,0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06000C32 RID: 3122 RVA: 0x00002050 File Offset: 0x00000250
@@ -56,6 +106,80 @@ namespace UI.Preloader
 		[Address(RVA = "0x5F41", Offset = "0x5F41", VA = "0x5F41")]
 		private void OnDisable()
 		{
+		/* --- GHIDRA: OnDisable ---
+		void UI_Preloader_PreloaderView__OnDisable(int param1,float param2,undefined4 param3)
+		
+		{
+		  double dVar1;
+		  undefined4 uVar2;
+		  undefined4 uVar3;
+		  double dVar4;
+		  double param1_00;
+		  int iVar5;
+		  ulonglong uVar6;
+		  int local_c;
+		  float8 local_8;
+		  
+		  if (DAT_ram_00a63905 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_708);
+		    DAT_ram_00a63905 = '\x01';
+		  }
+		  if (DAT_ram_00a6445d == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Math_TypeInfo);
+		    DAT_ram_00a6445d = '\x01';
+		  }
+		  if (*(int *)(System_Math_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(System_Math_TypeInfo);
+		  }
+		  param1_00 = (double)(param2 * 100.0);
+		  dVar1 = param1_00;
+		  dVar4 = unnamed_function_4206(param1_00,&local_8);
+		  if (0.0 <= param2 * 100.0) {
+		    if (dVar4 == 0.5) {
+		      if (ABS((double)local_8) < 9.223372036854776e+18) {
+		        uVar6 = (ulonglong)(double)local_8;
+		      }
+		      else {
+		        uVar6 = 0;
+		      }
+		      if ((uVar6 & 1) != 0) {
+		        local_8 = (float8)((double)local_8 + 1.0);
+		      }
+		    }
+		    else {
+		      local_8 = (float8)FLOOR(param1_00 + 0.5);
+		    }
+		  }
+		  else if (dVar4 == -0.5) {
+		    if (ABS((double)local_8) < 9.223372036854776e+18) {
+		      uVar6 = (ulonglong)(double)local_8;
+		    }
+		    else {
+		      uVar6 = 0;
+		    }
+		    if ((uVar6 & 1) != 0) {
+		      local_8 = (float8)((double)local_8 + -1.0);
+		    }
+		  }
+		  else {
+		    local_8 = (float8)CEIL(param1_00 + -0.5);
+		  }
+		  if (ABS((double)local_8) < 2147483648.0) {
+		    local_c = (int)(double)local_8;
+		  }
+		  else {
+		    local_c = -0x80000000;
+		  }
+		  uVar2 = (undefined4)((ulonglong)dVar1 >> 0x20);
+		  uVar3 = func_ii_4443(&local_c,0);
+		  uVar3 = Mono_Security_X509_X509Crl_X509CrlEntry___ctor(uVar3,StringLiteral_708,0);
+		  iVar5 = **(int **)(param1 + 0x20);
+		  (**(code **)((ulonglong)*(uint *)(iVar5 + 0x118) * 4))
+		            (CONCAT44(uVar2,*(int **)(param1 + 0x20)),uVar3,*(undefined4 *)(iVar5 + 0x11c));
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06000C33 RID: 3123 RVA: 0x00002050 File Offset: 0x00000250
@@ -63,6 +187,25 @@ namespace UI.Preloader
 		[Address(RVA = "0x5F42", Offset = "0x5F42", VA = "0x5F42")]
 		private void DisplayTextProgress(float progress)
 		{
+		/* --- GHIDRA: DisplayTextProgress ---
+		int UI_Preloader_PreloaderView__DisplayTextProgress
+		              (undefined4 param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  int iVar1;
+		  
+		  if (DAT_ram_00a63906 == '\0') {
+		    Mono_Security_ASN1__get_Item(&UI_Preloader_PreloaderView__ChangeTitleRoutine_d__22_TypeInfo);
+		    DAT_ram_00a63906 = '\x01';
+		  }
+		  iVar1 = unnamed_function_1417(UI_Preloader_PreloaderView__ChangeTitleRoutine_d__22_TypeInfo);
+		  *(undefined4 *)(iVar1 + 0x14) = param1;
+		  *(undefined4 *)(iVar1 + 8) = 0;
+		  *(undefined4 *)(iVar1 + 0x10) = param2;
+		  return iVar1;
+		}
+		*/
+
 		}
 
 		// Token: 0x06000C34 RID: 3124 RVA: 0x00002052 File Offset: 0x00000252
@@ -70,6 +213,47 @@ namespace UI.Preloader
 		[Address(RVA = "0x5F43", Offset = "0x5F43", VA = "0x5F43")]
 		private IEnumerator ChangeTitleRoutine(TextMeshProUGUI title)
 		{
+		/* --- GHIDRA: ChangeTitleRoutine ---
+		void UI_Preloader_PreloaderView__ChangeTitleRoutine(int param1,float param2,undefined4 param3)
+		
+		{
+		  undefined4 uVar1;
+		  undefined4 param2_00;
+		  float param1_00;
+		  float param3_00;
+		  float param2_01;
+		  int iVar2;
+		  
+		  if (DAT_ram_00a63907 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_UI_Preloader_PreloaderView_DisplayTextProgress__);
+		    Mono_Security_ASN1__get_Item(&DG_Tweening_TweenCallback_float__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Method_DG_Tweening_TweenSettingsExtensions_SetLink_Tweener___);
+		    DAT_ram_00a63907 = '\x01';
+		  }
+		  param1_00 = *(float *)(param1 + 0x38);
+		  *(float *)(param1 + 0x38) = param2;
+		  iVar2 = **(int **)(param1 + 0x20);
+		  (**(code **)((ulonglong)*(uint *)(iVar2 + 0x108) * 4))
+		            (*(int **)(param1 + 0x20),param2,*(undefined4 *)(iVar2 + 0x10c));
+		  if (*(int *)(param1 + 0x3c) != 0) {
+		    func_ii_7891(*(int *)(param1 + 0x3c),0,0);
+		  }
+		  param3_00 = *(float *)(param1 + 0x2c);
+		  param2_01 = *(float *)(param1 + 0x38);
+		  uVar1 = unnamed_function_1417(DG_Tweening_TweenCallback_float__TypeInfo);
+		  DG_Tweening_TweenCallback_int___Invoke
+		            (uVar1,param1,Method_UI_Preloader_PreloaderView_DisplayTextProgress__,0);
+		  uVar1 = DG_Tweening_DOTween___c__DisplayClass67_0___To_b__1(param1_00,param2_01,param3_00,uVar1,0)
+		  ;
+		  param2_00 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_uint__object___MoveNext
+		                        (param1,0);
+		  uVar1 = DG_Tweening_TweenSettingsExtensions__SetDelay_object_
+		                    (uVar1,param2_00,Method_DG_Tweening_TweenSettingsExtensions_SetLink_Tweener___);
+		  *(undefined4 *)(param1 + 0x3c) = uVar1;
+		  return;
+		}
+		*/
+
 			return null;
 		}
 
@@ -78,6 +262,44 @@ namespace UI.Preloader
 		[Address(RVA = "0x5F44", Offset = "0x5F44", VA = "0x5F44")]
 		private void SetProgress(float value)
 		{
+		/* --- GHIDRA: SetProgress ---
+		void UI_Preloader_PreloaderView__SetProgress(int param1,int *param2,undefined4 param3)
+		
+		{
+		  undefined4 uVar1;
+		  int *piVar2;
+		  int iVar3;
+		  
+		  *(int **)(param1 + 0x40) = param2;
+		  piVar2 = *(int **)(param1 + 0x14);
+		  uVar1 = (**(code **)((ulonglong)*(uint *)(*param2 + 0xd8) * 4))
+		                    (param2,*(undefined4 *)(*param2 + 0xdc));
+		  iVar3 = *piVar2;
+		  (**(code **)((ulonglong)*(uint *)(iVar3 + 0x2d0) * 4))
+		            (piVar2,uVar1,*(undefined4 *)(iVar3 + 0x2d4));
+		  return;
+		}
+		*/
+
+		/* --- GHIDRA: SetProgress ---
+		void UI_Preloader_PreloaderView__SetProgress(int param1,int *param2,undefined4 param3)
+		
+		{
+		  undefined4 uVar1;
+		  int *piVar2;
+		  int iVar3;
+		  
+		  *(int **)(param1 + 0x40) = param2;
+		  piVar2 = *(int **)(param1 + 0x14);
+		  uVar1 = (**(code **)((ulonglong)*(uint *)(*param2 + 0xd8) * 4))
+		                    (param2,*(undefined4 *)(*param2 + 0xdc));
+		  iVar3 = *piVar2;
+		  (**(code **)((ulonglong)*(uint *)(iVar3 + 0x2d0) * 4))
+		            (piVar2,uVar1,*(undefined4 *)(iVar3 + 0x2d4));
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06000C36 RID: 3126 RVA: 0x00002050 File Offset: 0x00000250
@@ -92,6 +314,15 @@ namespace UI.Preloader
 		[Address(RVA = "0x5F46", Offset = "0x5F46", VA = "0x5F46")]
 		public void SetInfo(PreloaderView.PreloaderInfo info)
 		{
+		/* --- GHIDRA: SetInfo ---
+		void UI_Preloader_PreloaderView__SetInfo(int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  func_ii_8025(*(undefined4 *)(param1 + 0x30),param2,0);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06000C38 RID: 3128 RVA: 0x00002050 File Offset: 0x00000250
@@ -99,6 +330,24 @@ namespace UI.Preloader
 		[Address(RVA = "0x5F47", Offset = "0x5F47", VA = "0x5F47")]
 		public void SetOverrideBackground(Sprite sprite)
 		{
+		/* --- GHIDRA: SetOverrideBackground ---
+		void UI_Preloader_PreloaderView__SetOverrideBackground
+		               (int param1,undefined8 *param2,undefined4 param3)
+		
+		{
+		  int iVar1;
+		  undefined8 local_10;
+		  undefined8 local_8;
+		  
+		  iVar1 = **(int **)(param1 + 0x34);
+		  local_8 = param2[1];
+		  local_10 = *param2;
+		  (**(code **)((ulonglong)*(uint *)(iVar1 + 0x178) * 4))
+		            (*(int **)(param1 + 0x34),&local_10,*(undefined4 *)(iVar1 + 0x17c));
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06000C39 RID: 3129 RVA: 0x00002050 File Offset: 0x00000250
@@ -273,4 +522,32 @@ namespace UI.Preloader
 			private readonly List<string> _rows;
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: set_Info ---
+		void UI_Preloader_PreloaderView__set_Info(int param1,undefined4 param2)
+		
+		{
+		  float param2_00;
+		  undefined4 param1_00;
+		  int iVar1;
+		  
+		  if (DAT_ram_00a63903 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_5);
+		    DAT_ram_00a63903 = '\x01';
+		  }
+		  iVar1 = **(int **)(param1 + 0x10);
+		  (**(code **)((ulonglong)*(uint *)(iVar1 + 0x2d0) * 4))
+		            (*(int **)(param1 + 0x10),StringLiteral_5,*(undefined4 *)(iVar1 + 0x2d4));
+		  param2_00 = UnityEngine_Camera__set_orthographicSize(0.0,1.0,0);
+		  UI_Preloader_PreloaderView__ChangeTitleRoutine(param1,param2_00,param1);
+		  param1_00 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_uint__object___MoveNext
+		                        (param1,0);
+		  Com_TheFallenGames_OSA_CustomAdapters_TableView_Tuple_Basic_BasicTupleValueViewsHolder__UpdateAsText
+		            (param1_00,0,0);
+		  return;
+		}
+		*/
+
 }

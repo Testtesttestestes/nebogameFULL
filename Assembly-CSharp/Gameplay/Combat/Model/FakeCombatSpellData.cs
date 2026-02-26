@@ -27,4 +27,26 @@ namespace Gameplay.Combat.Model
 			}
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_Enabled ---
+		float Gameplay_Combat_Model_FakeCombatSpellData__get_Enabled
+		                (int param1,int param2,undefined4 param3)
+		
+		{
+		  uint uVar1;
+		  
+		  if (DAT_ram_00a57e53 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_Google_Protobuf_Collections_RepeatedField_uint__get_Item__)
+		    ;
+		    DAT_ram_00a57e53 = '\x01';
+		  }
+		  uVar1 = Google_Protobuf_Collections_RepeatedField_Int32Enum___get_IsReadOnly
+		                    (*(undefined4 *)(*(int *)(param1 + 0xc) + 0x14),param2 + -1,
+		                     Method_Google_Protobuf_Collections_RepeatedField_uint__get_Item__);
+		  return (float)uVar1 / 1000.0;
+		}
+		*/
+
 }

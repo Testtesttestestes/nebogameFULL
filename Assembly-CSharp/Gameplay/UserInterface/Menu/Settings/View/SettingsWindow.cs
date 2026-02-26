@@ -31,6 +31,40 @@ namespace Gameplay.UserInterface.Menu.Settings.View
 		[Address(RVA = "0x68E3", Offset = "0x68E3", VA = "0x68E3", Slot = "18")]
 		protected override void OnShow(BaseWindowArgs args)
 		{
+		/* --- GHIDRA: OnShow ---
+		void Gameplay_UserInterface_Menu_Settings_View_SettingsWindow__OnShow(int param1,undefined4 param2)
+		
+		{
+		  int *piVar1;
+		  int iVar2;
+		  
+		  if (DAT_ram_00a59887 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_MVC_AbstractViewMediator_SettingsModel__SettingsEvents__SettingsController__SettingsView__get_Model__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UI_Windows_ClosableBaseWindow_SettingsWindow_SettingsWindowArgs__OnClose__);
+		    DAT_ram_00a59887 = '\x01';
+		  }
+		  UI_Windows_ClosableBaseWindow_object___OnClickBack
+		            (param1,
+		             Method_UI_Windows_ClosableBaseWindow_SettingsWindow_SettingsWindowArgs__OnClose__);
+		  piVar1 = *(int **)(*(int *)(param1 + 0x40) + 8);
+		  iVar2 = *piVar1;
+		  (**(code **)((ulonglong)*(uint *)(iVar2 + 0xe8) * 4))(piVar1,*(undefined4 *)(iVar2 + 0xec));
+		  iVar2 = **(int **)(param1 + 0x40);
+		  piVar1 = (int *)(**(code **)((ulonglong)*(uint *)(iVar2 + 0x148) * 4))
+		                            (*(int **)(param1 + 0x40),*(undefined4 *)(iVar2 + 0x14c));
+		  (**(code **)((ulonglong)*(uint *)(*piVar1 + 0xe8) * 4))(piVar1,*(undefined4 *)(*piVar1 + 0xec));
+		  iVar2 = **(int **)(param1 + 0x40);
+		  (**(code **)((ulonglong)*(uint *)(iVar2 + 0x130) * 4))
+		            (*(int **)(param1 + 0x40),*(undefined4 *)(iVar2 + 0x134));
+		  *(undefined4 *)(param1 + 0x40) = 0;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06001725 RID: 5925 RVA: 0x00002050 File Offset: 0x00000250
@@ -38,6 +72,23 @@ namespace Gameplay.UserInterface.Menu.Settings.View
 		[Address(RVA = "0x68E4", Offset = "0x68E4", VA = "0x68E4", Slot = "19")]
 		protected override void OnClose()
 		{
+		/* --- GHIDRA: OnClose ---
+		void Gameplay_UserInterface_Menu_Settings_View_SettingsWindow__OnClose
+		               (undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a59888 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UI_Windows_ClosableBaseWindow_SettingsWindow_SettingsWindowArgs___ctor__);
+		    DAT_ram_00a59888 = '\x01';
+		  }
+		  UI_MonoBehaviourWithStates_ClientStateChangedDelegate___Il2CppFullySharedGenericStructType___Invoke
+		            (param1,Method_UI_Windows_ClosableBaseWindow_SettingsWindow_SettingsWindowArgs___ctor__)
+		  ;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06001726 RID: 5926 RVA: 0x00002050 File Offset: 0x00000250
@@ -102,4 +153,91 @@ namespace Gameplay.UserInterface.Menu.Settings.View
 			}
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_WindowId ---
+		void Gameplay_UserInterface_Menu_Settings_View_SettingsWindow__get_WindowId
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  uint uVar1;
+		  undefined4 param3_00;
+		  int iVar2;
+		  uint *puVar3;
+		  int *piVar4;
+		  undefined4 uVar5;
+		  int iVar6;
+		  
+		  if (DAT_ram_00a59886 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UI_Windows_BaseWindow_SettingsWindow_SettingsWindowArgs__OnShow__);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UI_Windows_BaseWindow_SettingsWindow_SettingsWindowArgs__get_WindowArgs__);
+		    Mono_Security_ASN1__get_Item
+		              (&Gameplay_UserInterface_Menu_Settings_Control_SettingsController_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Gameplay_UserInterface_Menu_Settings_SettingsEvents_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Gameplay_UserInterface_Menu_Settings_Model_SettingsModel_TypeInfo)
+		    ;
+		    Mono_Security_ASN1__get_Item
+		              (&Gameplay_UserInterface_Menu_Settings_Control_SettingsViewMediator_TypeInfo);
+		    DAT_ram_00a59886 = '\x01';
+		  }
+		  UI_Windows_BaseWindow_object____ctor
+		            (param1,param2,Method_UI_Windows_BaseWindow_SettingsWindow_SettingsWindowArgs__OnShow__)
+		  ;
+		  param3_00 = unnamed_function_1417(Gameplay_UserInterface_Menu_Settings_SettingsEvents_TypeInfo);
+		  iVar2 = func_ii_8093(param1,
+		                       Method_UI_Windows_BaseWindow_SettingsWindow_SettingsWindowArgs__get_WindowArgs__
+		                      );
+		  piVar4 = *(int **)(iVar2 + 0x1c);
+		  iVar2 = func_ii_8093(param1,
+		                       Method_UI_Windows_BaseWindow_SettingsWindow_SettingsWindowArgs__get_WindowArgs__
+		                      );
+		  uVar5 = *(undefined4 *)(iVar2 + 0x18);
+		  iVar2 = unnamed_function_1417(Gameplay_UserInterface_Menu_Settings_Model_SettingsModel_TypeInfo);
+		  if (DAT_ram_00a59889 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_Gameplay_IGame_TypeInfo);
+		    DAT_ram_00a59889 = '\x01';
+		  }
+		  uVar1 = 0;
+		  Unity_Services_Core_Environments_Internal_Environments__get_Current(iVar2,uVar5,0);
+		  *(int **)(iVar2 + 0xc) = piVar4;
+		  iVar6 = *piVar4;
+		  if (*(ushort *)(iVar6 + 0xb6) != 0) {
+		    do {
+		      if (Core_Gameplay_IGame_TypeInfo == *(int *)(*(int *)(iVar6 + 0x58) + uVar1 * 8)) {
+		        puVar3 = (uint *)(*(int *)(*(int *)(iVar6 + 0x58) + uVar1 * 8 + 4) * 8 + iVar6 + 0x148);
+		        goto code_r0x8107ea31;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar6 + 0xb6) != uVar1);
+		  }
+		  puVar3 = (uint *)func_ii_1080(piVar4,Core_Gameplay_IGame_TypeInfo,0x11);
+		code_r0x8107ea31:
+		  uVar5 = (**(code **)((ulonglong)*puVar3 * 4))(piVar4,puVar3[1]);
+		  *(undefined4 *)(iVar2 + 0x10) = uVar5;
+		  uVar5 = unnamed_function_1417
+		                    (Gameplay_UserInterface_Menu_Settings_Control_SettingsController_TypeInfo);
+		  if (DAT_ram_00a5988a == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_MVC_AbstractController_SettingsModel__SettingsEvents___ctor__);
+		    DAT_ram_00a5988a = '\x01';
+		  }
+		  Gameplay_Combat_AbstractCombat_object__object__object__object__object___set_User
+		            (uVar5,iVar2,param3_00,
+		             Method_MVC_AbstractController_SettingsModel__SettingsEvents___ctor__);
+		  piVar4 = (int *)unnamed_function_1417
+		                            (
+		                            Gameplay_UserInterface_Menu_Settings_Control_SettingsViewMediator_TypeInfo
+		                            );
+		  Gameplay_UserInterface_Menu_Settings_Control_SettingsViewMediator__Dispose
+		            (piVar4,iVar2,param3_00,uVar5,piVar4);
+		  *(int **)(param1 + 0x40) = piVar4;
+		  (**(code **)((ulonglong)*(uint *)(*piVar4 + 0x160) * 4))
+		            (piVar4,*(undefined4 *)(param1 + 0x3c),*(undefined4 *)(*piVar4 + 0x164));
+		  return;
+		}
+		*/
+
 }

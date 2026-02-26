@@ -15,6 +15,22 @@ namespace Gameplay.Clans.Buildings.Golem.View
 		[Address(RVA = "0x911D", Offset = "0x911D", VA = "0x911D", Slot = "6")]
 		public override int GetSlotId()
 		{
+		/* --- GHIDRA: GetSlotId ---
+		void Gameplay_Clans_Buildings_Golem_View_GolemEquipmentSlotConfig__GetSlotId
+		               (undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a57834 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Gameplay_UserInfo_View_Equipment_BaseEquipmentSlotConfig_GolemEquipmentSlotIds___ctor__
+		              );
+		    DAT_ram_00a57834 = '\x01';
+		  }
+		  return;
+		}
+		*/
+
 			return 0;
 		}
 
@@ -23,6 +39,26 @@ namespace Gameplay.Clans.Buildings.Golem.View
 		[Address(RVA = "0x911E", Offset = "0x911E", VA = "0x911E")]
 		public GolemEquipmentSlotConfig()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_Clans_Buildings_Golem_View_GolemEquipmentSlotConfig___ctor
+		               (undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a57835 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Gameplay_UserInfo_View_Equipment_BaseEquipmentView_GolemEquipmentSlotConfig___ctor__
+		              );
+		    DAT_ram_00a57835 = '\x01';
+		  }
+		  ScreenAdaptation_Common_AppSize__Update
+		            (param1,
+		             Method_Gameplay_UserInfo_View_Equipment_BaseEquipmentView_GolemEquipmentSlotConfig___ctor__
+		            );
+		  return;
+		}
+		*/
+
 		}
 	}
 }

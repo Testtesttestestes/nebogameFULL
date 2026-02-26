@@ -14,6 +14,27 @@ namespace Core.Gameplay.Managers.Notifications.Events
 		[Address(RVA = "0xB68F", Offset = "0xB68F", VA = "0xB68F")]
 		public GameNotificationsEvents()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Core_Gameplay_Managers_Notifications_Events_GameNotificationsEvents___ctor
+		               (undefined4 param1,undefined4 param2,undefined4 param3,undefined4 param4,
+		               undefined4 param5)
+		
+		{
+		  if (DAT_ram_00a5a685 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_MVC_AbstractViewMediator_GameNotificationsModel__GameNotificationsEvents__GameNotificationsController__NotificationSettingsView___ctor__
+		              );
+		    DAT_ram_00a5a685 = '\x01';
+		  }
+		  Gameplay_Combat_TeamCombat_View_AbstractTeamCombatView_object___get_HideInstantElements
+		            (param1,param2,param3,param4,
+		             Method_MVC_AbstractViewMediator_GameNotificationsModel__GameNotificationsEvents__GameNotificationsController__NotificationSettingsView___ctor__
+		            );
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x040038CC RID: 14540

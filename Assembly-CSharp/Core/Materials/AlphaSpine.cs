@@ -13,6 +13,27 @@ namespace Core.Materials
 		[Address(RVA = "0xA8BF", Offset = "0xA8BF", VA = "0xA8BF")]
 		public AlphaSpine(MeshRenderer meshRenderer)
 		{
+		/* --- GHIDRA: .ctor ---
+		undefined4 Core_Materials_AlphaSpine___ctor(int param1,undefined4 param2)
+		
+		{
+		  int param1_00;
+		  
+		  if (DAT_ram_00a60635 == '\0') {
+		    Mono_Security_ASN1__get_Item(&UnityEngine_MaterialPropertyBlock_TypeInfo);
+		    DAT_ram_00a60635 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x10);
+		  if (param1_00 == 0) {
+		    param1_00 = unnamed_function_1417(UnityEngine_MaterialPropertyBlock_TypeInfo);
+		    UnityEngine_MaterialPropertyBlock__SetVectorArray(param1_00,0);
+		    *(int *)(param1 + 0x10) = param1_00;
+		  }
+		  UnityEngine_Renderer__SetPropertyBlock(*(undefined4 *)(param1 + 0xc),param1_00,0);
+		  return *(undefined4 *)(param1 + 0x10);
+		}
+		*/
+
 		}
 
 		// Token: 0x170012AA RID: 4778
@@ -50,4 +71,55 @@ namespace Core.Materials
 		[FieldOffset(Offset = "0x10")]
 		private MaterialPropertyBlock _materialPropertyBlock;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_MaterialPropertyBlock ---
+		void Core_Materials_AlphaSpine__get_MaterialPropertyBlock
+		               (int param1,float param2,int *param3,undefined4 param4)
+		
+		{
+		  int param1_00;
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a60636 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_Animations_GameSpineAnimationBindings_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Utils_Shaders_UI_Grayscale_ShaderProperties_TypeInfo);
+		    DAT_ram_00a60636 = '\x01';
+		  }
+		  if (param2 != *(float *)(param1 + 8)) {
+		    if (*param3 != 2) {
+		      uVar1 = UnityEngine_Renderer__set_material(*(undefined4 *)(param1 + 0xc),0);
+		      UnityEngine_Shader__Find
+		                (uVar1,*(undefined4 *)
+		                        (*(int *)(Core_Animations_GameSpineAnimationBindings_TypeInfo + 0x5c) + 0x14
+		                        ),0);
+		      *param3 = 2;
+		    }
+		    if (DAT_ram_00a60635 == '\0') {
+		      Mono_Security_ASN1__get_Item(&UnityEngine_MaterialPropertyBlock_TypeInfo);
+		      DAT_ram_00a60635 = '\x01';
+		    }
+		    param1_00 = *(int *)(param1 + 0x10);
+		    if (param1_00 == 0) {
+		      param1_00 = unnamed_function_1417(UnityEngine_MaterialPropertyBlock_TypeInfo);
+		      UnityEngine_MaterialPropertyBlock__SetVectorArray(param1_00,0);
+		      *(int *)(param1 + 0x10) = param1_00;
+		    }
+		    UnityEngine_Renderer__SetPropertyBlock(*(undefined4 *)(param1 + 0xc),param1_00,0);
+		    uVar1 = *(undefined4 *)(param1 + 0x10);
+		    if (*(int *)(Utils_Shaders_UI_Grayscale_ShaderProperties_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(Utils_Shaders_UI_Grayscale_ShaderProperties_TypeInfo);
+		    }
+		    UnityEngine_MaterialPropertyBlock__Dispose
+		              (uVar1,*(undefined4 *)
+		                      (*(int *)(Utils_Shaders_UI_Grayscale_ShaderProperties_TypeInfo + 0x5c) + 0xc),
+		               param2,0);
+		    UnityEngine_Renderer__HasPropertyBlock(*(undefined4 *)(param1 + 0xc),uVar1,0);
+		    *(float *)(param1 + 8) = param2;
+		  }
+		  return;
+		}
+		*/
+
 }

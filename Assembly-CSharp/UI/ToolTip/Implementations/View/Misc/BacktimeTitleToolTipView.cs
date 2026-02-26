@@ -15,6 +15,23 @@ namespace UI.ToolTip.Implementations.View.Misc
 		[Address(RVA = "0x5D37", Offset = "0x5D37", VA = "0x5D37", Slot = "5")]
 		protected override void HandleDataChanged()
 		{
+		/* --- GHIDRA: HandleDataChanged ---
+		void UI_ToolTip_Implementations_View_Misc_BacktimeTitleToolTipView__HandleDataChanged
+		               (undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a5997a == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UI_ToolTip_BaseToolTip_BacktimeTitleToolTipView_BacktimeTitleArgs___ctor__);
+		    DAT_ram_00a5997a = '\x01';
+		  }
+		  ScreenAdaptation_Common_AppSize__Update
+		            (param1,
+		             Method_UI_ToolTip_BaseToolTip_BacktimeTitleToolTipView_BacktimeTitleArgs___ctor__);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x060009D1 RID: 2513 RVA: 0x00002050 File Offset: 0x00000250

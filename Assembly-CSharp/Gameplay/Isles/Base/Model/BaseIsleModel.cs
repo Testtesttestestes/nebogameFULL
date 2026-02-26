@@ -155,6 +155,17 @@ namespace Gameplay.Isles.Base.Model
 		[Address(RVA = "0x9F1A", Offset = "0x9F1A", VA = "0x9F1A")]
 		public BaseIsleModel(UserData user, ulong id, IDictProvider dictionaries, IGame game)
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_Isles_Base_Model_BaseIsleModel___ctor(int param1,undefined4 param2)
+		
+		{
+		  Core_ExternalIncomingScriptCall_CallbackItem___Il2CppFullySharedGenericType____ctor(param1,0);
+		  *(undefined1 *)(param1 + 0x18) = 1;
+		  *(undefined8 *)(param1 + 0x1c) = 0;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0600512B RID: 20779 RVA: 0x00002050 File Offset: 0x00000250
@@ -190,6 +201,34 @@ namespace Gameplay.Isles.Base.Model
 		[Address(RVA = "0x9F1E", Offset = "0x9F1E", VA = "0x9F1E")]
 		public uint GetBuildingLevel(uint typeId)
 		{
+		/* --- GHIDRA: GetBuildingLevel ---
+		uint Gameplay_Isles_Base_Model_BaseIsleModel__GetBuildingLevel
+		               (int param1,undefined4 param2,undefined4 *param3,undefined4 param4)
+		
+		{
+		  int iVar1;
+		  uint uVar2;
+		  
+		  if (DAT_ram_00a58cec == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_Dictionary_uint__BaseBuildingData__TryGetValue__);
+		    DAT_ram_00a58cec = '\x01';
+		  }
+		  iVar1 = UnityEngine_TextCore_LowLevel_LigatureSubstitutionRecord__get_componentGlyphIDs
+		                    (*(undefined4 *)(param1 + 0x24),param2,param3,
+		                     Method_System_Collections_Generic_Dictionary_uint__BaseBuildingData__TryGetValue__
+		                    );
+		  if (iVar1 == 0) {
+		    uVar2 = 0;
+		  }
+		  else {
+		    iVar1 = Newtonsoft_Json_Converters_XDeclarationWrapper__get_Encoding(*param3,0);
+		    uVar2 = (uint)(iVar1 != 0);
+		  }
+		  return uVar2;
+		}
+		*/
+
 			return 0U;
 		}
 
@@ -201,4 +240,84 @@ namespace Gameplay.Isles.Base.Model
 			return default(bool);
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: set_DictProvider ---
+		undefined4 Gameplay_Isles_Base_Model_BaseIsleModel__set_DictProvider(int param1,undefined4 param2)
+		
+		{
+		  uint uVar1;
+		  uint *puVar2;
+		  undefined4 uVar3;
+		  int *param1_00;
+		  int iVar4;
+		  
+		  if (DAT_ram_00a58cea == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_Dict_IDictProvider_TypeInfo);
+		    DAT_ram_00a58cea = '\x01';
+		  }
+		  param1_00 = *(int **)(param1 + 0x1c);
+		  iVar4 = *param1_00;
+		  if (*(ushort *)(iVar4 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (Core_Dict_IDictProvider_TypeInfo == *(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8)) {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8 + 4) * 8 + iVar4 + 0xd0);
+		        goto code_r0x80f9701a;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar4 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(param1_00,Core_Dict_IDictProvider_TypeInfo,2);
+		code_r0x80f9701a:
+		  uVar3 = (**(code **)((ulonglong)*puVar2 * 4))(param1_00,puVar2[1]);
+		  return uVar3;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_Game ---
+		void Gameplay_Isles_Base_Model_BaseIsleModel__set_Game
+		               (int param1,undefined4 param2,undefined8 param3,undefined4 param4,undefined4 param5,
+		               undefined4 param6)
+		
+		{
+		  Unity_Services_Core_Environments_Internal_Environments__get_Current(param1,param2,0);
+		  *(undefined4 *)(param1 + 0x1c) = param4;
+		  *(undefined8 *)(param1 + 0x10) = param3;
+		  *(undefined4 *)(param1 + 0x28) = param5;
+		  return;
+		}
+		*/
+
+
+		/* --- GHIDRA: set_IsCurrentIsle ---
+		undefined4
+		Gameplay_Isles_Base_Model_BaseIsleModel__set_IsCurrentIsle
+		          (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  int iVar1;
+		  undefined4 uVar2;
+		  undefined4 local_4;
+		  
+		  uVar2 = 0;
+		  if (DAT_ram_00a58ceb == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_System_Collections_Generic_Dictionary_uint__BaseBuildingData__TryGetValue__);
+		    DAT_ram_00a58ceb = '\x01';
+		  }
+		  local_4 = 0;
+		  if ((*(int *)(param1 + 0x24) != 0) &&
+		     (iVar1 = UnityEngine_TextCore_LowLevel_LigatureSubstitutionRecord__get_componentGlyphIDs
+		                        (*(int *)(param1 + 0x24),param2,&local_4,
+		                         Method_System_Collections_Generic_Dictionary_uint__BaseBuildingData__TryGetValue__
+		                        ), iVar1 != 0)) {
+		    uVar2 = Newtonsoft_Json_Converters_XDeclarationWrapper__get_Encoding(local_4,0);
+		  }
+		  return uVar2;
+		}
+		*/
+
 }

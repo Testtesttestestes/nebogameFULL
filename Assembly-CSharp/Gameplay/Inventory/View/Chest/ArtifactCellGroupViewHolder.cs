@@ -30,6 +30,26 @@ namespace Gameplay.Inventory.View.Chest
 		[Address(RVA = "0x79A8", Offset = "0x79A8", VA = "0x79A8")]
 		public void ClearHeader()
 		{
+		/* --- GHIDRA: ClearHeader ---
+		void Gameplay_Inventory_View_Chest_ArtifactCellGroupViewHolder__ClearHeader
+		               (undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a5a105 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Com_TheFallenGames_OSA_CustomAdapters_GridView_CellGroupViewsHolder_ArtifactCellViewHolder___ctor__
+		              );
+		    DAT_ram_00a5a105 = '\x01';
+		  }
+		  System_Linq_Expressions_Interpreter_CastInstruction_CastInstructionT___Il2CppFullySharedGenericType___Run
+		            (param1,
+		             Method_Com_TheFallenGames_OSA_CustomAdapters_GridView_CellGroupViewsHolder_ArtifactCellViewHolder___ctor__
+		            );
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06002889 RID: 10377 RVA: 0x00002050 File Offset: 0x00000250
@@ -37,6 +57,20 @@ namespace Gameplay.Inventory.View.Chest
 		[Address(RVA = "0x79A9", Offset = "0x79A9", VA = "0x79A9")]
 		public ArtifactCellGroupViewHolder()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_Inventory_View_Chest_ArtifactCellGroupViewHolder___ctor
+		               (int param1,undefined8 *param2,undefined4 param3)
+		
+		{
+		  int iVar1;
+		  
+		  iVar1 = *(int *)(param1 + 0x14);
+		  *(undefined8 *)(iVar1 + 0xc0) = *param2;
+		  *(undefined4 *)(iVar1 + 200) = *(undefined4 *)(param2 + 1);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x0400165C RID: 5724

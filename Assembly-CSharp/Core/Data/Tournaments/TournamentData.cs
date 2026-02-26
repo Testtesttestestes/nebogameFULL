@@ -134,6 +134,37 @@ namespace Core.Data.Tournaments
 		[Address(RVA = "0xB09E", Offset = "0xB09E", VA = "0xB09E")]
 		public static TournamentData Create(TournamentInfo tournament, Dictionaries dict)
 		{
+		/* --- GHIDRA: Create ---
+		undefined4 Core_Data_Tournaments_TournamentData__Create(int param1,undefined4 param2)
+		
+		{
+		  uint uVar1;
+		  undefined **ppuVar2;
+		  undefined4 uVar3;
+		  
+		  if (DAT_ram_00a60808 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_GameLocalization_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_15134);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_15146);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_15140);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_15142);
+		    Mono_Security_ASN1__get_Item(&StringLiteral_15170);
+		    DAT_ram_00a60808 = '\x01';
+		  }
+		  uVar1 = *(int *)(*(int *)(*(int *)(param1 + 0xc) + 0x14) + 0xc) - 1;
+		  ppuVar2 = &PTR_StringLiteral_15142_ram_005a3b58 + uVar1;
+		  if (5 < uVar1) {
+		    ppuVar2 = (undefined **)(DAT_ram_00a66978 + 0x5c);
+		  }
+		  uVar3 = *(undefined4 *)*ppuVar2;
+		  if (*(int *)(Core_GameLocalization_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Core_GameLocalization_TypeInfo);
+		  }
+		  uVar3 = Core_Extensions_Dict_CultDicExt__GetTitle(uVar3,1,0,1,0,0,0,0);
+		  return uVar3;
+		}
+		*/
+
 			return null;
 		}
 
@@ -150,6 +181,102 @@ namespace Core.Data.Tournaments
 		[Address(RVA = "0xB0A0", Offset = "0xB0A0", VA = "0xB0A0")]
 		public TournamentData()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Core_Data_Tournaments_TournamentData___ctor(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  
+		  iVar1 = *(int *)(param1 + 0x14);
+		  *(undefined8 *)(iVar1 + 8) = 0;
+		  *(undefined8 *)(iVar1 + 0x10) = 0;
+		  *(undefined8 *)(param1 + 0x10) = 0;
+		  *(undefined8 *)(param1 + 8) = 0;
+		  return;
+		}
+		*/
+
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_TypeId ---
+		int Core_Data_Tournaments_TournamentData__get_TypeId(int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  uint uVar1;
+		  undefined4 uVar2;
+		  int iVar3;
+		  uint *puVar4;
+		  int iVar5;
+		  int *piVar6;
+		  
+		  uVar2 = 0;
+		  if (DAT_ram_00a60807 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_Gameplay_IGame_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Core_Cache_User_IUserInfoWrapper_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Method_System_Collections_Generic_List_Resources__get_Item__);
+		    Mono_Security_ASN1__get_Item(&Core_Extensions_Dict_RewardInfoExt_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Core_Data_Tournaments_TournamentData_TypeInfo);
+		    DAT_ram_00a60807 = '\x01';
+		  }
+		  iVar3 = Core_Extensions_Dict_DictExt__GetBlitzTournamentsDic
+		                    (param2,*(undefined4 *)(param1 + 0xc),0);
+		  if (*(int *)(param1 + 0x2c) != 0) {
+		    if (DAT_ram_00a6456f == '\0') {
+		      Mono_Security_ASN1__get_Item(&Core_Gameplay_Game_TypeInfo);
+		      DAT_ram_00a6456f = '\x01';
+		    }
+		    piVar6 = (int *)**(undefined4 **)(Core_Gameplay_Game_TypeInfo + 0x5c);
+		    iVar5 = *piVar6;
+		    if (*(ushort *)(iVar5 + 0xb6) != 0) {
+		      uVar1 = 0;
+		      do {
+		        if (Core_Gameplay_IGame_TypeInfo == *(int *)(*(int *)(iVar5 + 0x58) + uVar1 * 8)) {
+		          puVar4 = (uint *)(*(int *)(*(int *)(iVar5 + 0x58) + uVar1 * 8 + 4) * 8 + iVar5 + 0x158);
+		          goto code_r0x81cea390;
+		        }
+		        uVar1 = uVar1 + 1;
+		      } while (*(ushort *)(iVar5 + 0xb6) != uVar1);
+		    }
+		    puVar4 = (uint *)func_ii_1080(piVar6,Core_Gameplay_IGame_TypeInfo,0x13);
+		code_r0x81cea390:
+		    iVar5 = (**(code **)((ulonglong)*puVar4 * 4))(piVar6,puVar4[1]);
+		    uVar1 = 0;
+		    uVar2 = *(undefined4 *)(*(int *)(*(int *)(param1 + 0x2c) + 0xc) + 0xc);
+		    piVar6 = *(int **)(iVar5 + 0x14);
+		    iVar5 = *piVar6;
+		    if (*(ushort *)(iVar5 + 0xb6) != 0) {
+		      do {
+		        if (Core_Cache_User_IUserInfoWrapper_TypeInfo ==
+		            *(int *)(*(int *)(iVar5 + 0x58) + uVar1 * 8)) {
+		          puVar4 = (uint *)(iVar5 + *(int *)(*(int *)(iVar5 + 0x58) + uVar1 * 8 + 4) * 8 + 0xc0);
+		          goto code_r0x81cea422;
+		        }
+		        uVar1 = uVar1 + 1;
+		      } while (*(ushort *)(iVar5 + 0xb6) != uVar1);
+		    }
+		    puVar4 = (uint *)func_ii_1080(piVar6,Core_Cache_User_IUserInfoWrapper_TypeInfo,0);
+		code_r0x81cea422:
+		    uVar2 = (**(code **)((ulonglong)*puVar4 * 4))(piVar6,uVar2,puVar4[1]);
+		  }
+		  iVar5 = unnamed_function_1417(Core_Data_Tournaments_TournamentData_TypeInfo);
+		  *(undefined4 *)(iVar5 + 0x10) = uVar2;
+		  *(int *)(iVar5 + 0xc) = param1;
+		  *(int *)(iVar5 + 8) = iVar3;
+		  uVar2 = *(undefined4 *)(iVar3 + 0x30);
+		  if (*(int *)(Core_Extensions_Dict_RewardInfoExt_TypeInfo + 0x74) == 0) {
+		    func_ii_306000(Core_Extensions_Dict_RewardInfoExt_TypeInfo);
+		  }
+		  uVar2 = Core_Extensions_Dict_RewardInfoExt__GetGroupIndex(uVar2,0);
+		  *(undefined4 *)(iVar5 + 0x14) = uVar2;
+		  uVar2 = Core_Extensions_Dict_ResourceSetExt__GetResourcesIds(*(undefined4 *)(iVar3 + 0x20),0);
+		  uVar2 = System_Linq_Enumerable__ToList_object_
+		                    (uVar2,0,Method_System_Collections_Generic_List_Resources__get_Item__);
+		  *(undefined4 *)(iVar5 + 0x18) = uVar2;
+		  return iVar5;
+		}
+		*/
+
 }

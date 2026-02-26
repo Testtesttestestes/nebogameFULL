@@ -215,6 +215,25 @@ namespace Mycom.Tracker.Unity.Internal.Implementations.Fake
 		[Address(RVA = "0xBEF0", Offset = "0xBEF0", VA = "0xBEF0")]
 		public TrackerParams()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Mycom_Tracker_Unity_Internal_Implementations_Fake_TrackerParams___ctor
+		               (int param1,undefined4 param2,undefined4 param3,double param4,undefined4 param5,
+		               undefined4 param6,undefined4 param7,undefined4 param8,undefined4 param9,
+		               undefined4 param10)
+		
+		{
+		  *(undefined4 *)(param1 + 0x28) = param9;
+		  *(undefined4 *)(param1 + 0x24) = param8;
+		  *(undefined4 *)(param1 + 0x20) = param7;
+		  *(undefined4 *)(param1 + 0x1c) = param6;
+		  *(undefined4 *)(param1 + 0x18) = param5;
+		  *(double *)(param1 + 0x10) = param4;
+		  *(undefined4 *)(param1 + 0xc) = param3;
+		  *(undefined4 *)(param1 + 8) = param2;
+		  return;
+		}
+		*/
+
 		}
 	}
 }

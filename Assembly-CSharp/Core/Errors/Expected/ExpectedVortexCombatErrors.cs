@@ -21,6 +21,15 @@ namespace Core.Errors.Expected
 		[Address(RVA = "0xAEAC", Offset = "0xAEAC", VA = "0xAEAC")]
 		public ExpectedVortexCombatErrors()
 		{
+		/* --- GHIDRA: .ctor ---
+		uint Core_Errors_Expected_ExpectedVortexCombatErrors___ctor
+		               (undefined4 param1,int param2,undefined4 param3)
+		
+		{
+		  return (uint)(param2 == -3);
+		}
+		*/
+
 		}
 	}
 }

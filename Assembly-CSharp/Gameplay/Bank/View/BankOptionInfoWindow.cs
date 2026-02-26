@@ -95,6 +95,27 @@ namespace Gameplay.Bank.View
 		[Address(RVA = "0x9A8F", Offset = "0x9A8F", VA = "0x9A8F", Slot = "22")]
 		protected override void OnShow(BankOptionInfoWindowArgs args)
 		{
+		/* --- GHIDRA: OnShow ---
+		void Gameplay_Bank_View_BankOptionInfoWindow__OnShow(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  
+		  if (DAT_ram_00a5976b == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UI_Windows_ClosableBaseWindow_BankOptionInfoWindowArgs__OnClose__);
+		    DAT_ram_00a5976b = '\x01';
+		  }
+		  UI_Windows_ClosableBaseWindow_object___OnClickBack
+		            (param1,Method_UI_Windows_ClosableBaseWindow_BankOptionInfoWindowArgs__OnClose__);
+		  iVar1 = **(int **)(param1 + 0x50);
+		  (**(code **)((ulonglong)*(uint *)(iVar1 + 0x130) * 4))
+		            (*(int **)(param1 + 0x50),*(undefined4 *)(iVar1 + 0x134));
+		  *(undefined4 *)(param1 + 0x50) = 0;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06004C4D RID: 19533 RVA: 0x00002050 File Offset: 0x00000250
@@ -102,6 +123,21 @@ namespace Gameplay.Bank.View
 		[Address(RVA = "0x9A90", Offset = "0x9A90", VA = "0x9A90", Slot = "19")]
 		protected override void OnClose()
 		{
+		/* --- GHIDRA: OnClose ---
+		void Gameplay_Bank_View_BankOptionInfoWindow__OnClose(undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a5976c == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UI_Windows_ClosableBaseWindow_BankOptionInfoWindowArgs___ctor__);
+		    DAT_ram_00a5976c = '\x01';
+		  }
+		  UI_MonoBehaviourWithStates_ClientStateChangedDelegate___Il2CppFullySharedGenericStructType___Invoke
+		            (param1,Method_UI_Windows_ClosableBaseWindow_BankOptionInfoWindowArgs___ctor__);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06004C4E RID: 19534 RVA: 0x00002050 File Offset: 0x00000250
@@ -150,4 +186,109 @@ namespace Gameplay.Bank.View
 		[FieldOffset(Offset = "0x50")]
 		private BankOptionInfoWindowMediator _mediator;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_ArtikulContainerView ---
+		void Gameplay_Bank_View_BankOptionInfoWindow__get_ArtikulContainerView
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  uint uVar1;
+		  uint *puVar2;
+		  int *piVar3;
+		  int iVar4;
+		  undefined4 param2_00;
+		  undefined4 param3_00;
+		  undefined4 param4;
+		  
+		  if (DAT_ram_00a5976a == '\0') {
+		    Mono_Security_ASN1__get_Item(&Gameplay_Bank_Controller_BankOptionInfoWindowMediator_TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UI_Windows_ClosableBaseWindow_BankOptionInfoWindowArgs__OnShow__);
+		    Mono_Security_ASN1__get_Item(&Core_Gameplay_IGame_TypeInfo);
+		    DAT_ram_00a5976a = '\x01';
+		  }
+		  func_ii_7769(param1,param2,Method_UI_Windows_ClosableBaseWindow_BankOptionInfoWindowArgs__OnShow__
+		              );
+		  if (DAT_ram_00a6456f == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_Gameplay_Game_TypeInfo);
+		    DAT_ram_00a6456f = '\x01';
+		  }
+		  uVar1 = 0;
+		  piVar3 = (int *)**(undefined4 **)(Core_Gameplay_Game_TypeInfo + 0x5c);
+		  iVar4 = *piVar3;
+		  if (*(ushort *)(iVar4 + 0xb6) != 0) {
+		    do {
+		      if (Core_Gameplay_IGame_TypeInfo == *(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8)) {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8 + 4) * 8 + iVar4 + 400);
+		        goto code_r0x810642a6;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar4 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(piVar3,Core_Gameplay_IGame_TypeInfo,0x1a);
+		code_r0x810642a6:
+		  iVar4 = (**(code **)((ulonglong)*puVar2 * 4))(piVar3,puVar2[1]);
+		  param2_00 = *(undefined4 *)(iVar4 + 0x2c);
+		  if (DAT_ram_00a6456f == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_Gameplay_Game_TypeInfo);
+		    DAT_ram_00a6456f = '\x01';
+		  }
+		  piVar3 = (int *)**(undefined4 **)(Core_Gameplay_Game_TypeInfo + 0x5c);
+		  iVar4 = *piVar3;
+		  if (*(ushort *)(iVar4 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (Core_Gameplay_IGame_TypeInfo == *(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8)) {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8 + 4) * 8 + iVar4 + 400);
+		        goto code_r0x81064355;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar4 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(piVar3,Core_Gameplay_IGame_TypeInfo,0x1a);
+		code_r0x81064355:
+		  iVar4 = (**(code **)((ulonglong)*puVar2 * 4))(piVar3,puVar2[1]);
+		  param3_00 = *(undefined4 *)(iVar4 + 0x28);
+		  if (DAT_ram_00a6456f == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_Gameplay_Game_TypeInfo);
+		    DAT_ram_00a6456f = '\x01';
+		  }
+		  piVar3 = (int *)**(undefined4 **)(Core_Gameplay_Game_TypeInfo + 0x5c);
+		  iVar4 = *piVar3;
+		  if (*(ushort *)(iVar4 + 0xb6) != 0) {
+		    uVar1 = 0;
+		    do {
+		      if (Core_Gameplay_IGame_TypeInfo == *(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8)) {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar4 + 0x58) + uVar1 * 8 + 4) * 8 + iVar4 + 400);
+		        goto code_r0x81064404;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar4 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(piVar3,Core_Gameplay_IGame_TypeInfo,0x1a);
+		code_r0x81064404:
+		  iVar4 = (**(code **)((ulonglong)*puVar2 * 4))(piVar3,puVar2[1]);
+		  param4 = *(undefined4 *)(iVar4 + 0x24);
+		  piVar3 = (int *)unnamed_function_1417
+		                            (Gameplay_Bank_Controller_BankOptionInfoWindowMediator_TypeInfo);
+		  if (DAT_ram_00a597f3 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_MVC_AbstractViewMediator_BankModel__BankEvents__BankController__BankOptionInfoWindow___ctor__
+		              );
+		    DAT_ram_00a597f3 = '\x01';
+		  }
+		  Gameplay_Combat_TeamCombat_View_AbstractTeamCombatView_object___get_HideInstantElements
+		            (piVar3,param2_00,param3_00,param4,
+		             Method_MVC_AbstractViewMediator_BankModel__BankEvents__BankController__BankOptionInfoWindow___ctor__
+		            );
+		  *(int **)(param1 + 0x50) = piVar3;
+		  (**(code **)((ulonglong)*(uint *)(*piVar3 + 0x160) * 4))
+		            (piVar3,param1,*(undefined4 *)(*piVar3 + 0x164));
+		  return;
+		}
+		*/
+
 }

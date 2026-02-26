@@ -13,6 +13,27 @@ namespace Core.Data.Effect
 		[Address(RVA = "0xB103", Offset = "0xB103", VA = "0xB103")]
 		public CombatEffectDescription(string sourceText, EffectData[] effects, Skills userSkills)
 		{
+		/* --- GHIDRA: .ctor ---
+		int Core_Data_Effect_CombatEffectDescription___ctor
+		              (undefined4 param1,undefined8 param2,undefined8 param3,undefined4 param4)
+		
+		{
+		  int iVar1;
+		  undefined8 local_8;
+		  
+		  local_8 = param2;
+		  if (DAT_ram_00a6083f == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_5);
+		    DAT_ram_00a6083f = '\x01';
+		  }
+		  iVar1 = UnityEngine_GameObject__SetActive(&local_8,0);
+		  if (iVar1 == 0) {
+		    iVar1 = StringLiteral_5;
+		  }
+		  return iVar1;
+		}
+		*/
+
 		}
 
 		// Token: 0x06006538 RID: 25912 RVA: 0x00002052 File Offset: 0x00000252

@@ -51,4 +51,22 @@ namespace Gameplay.Rating.View
 			HIDE_ALL
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_MyUser ---
+		void Gameplay_Rating_View_MyPortalRatingView__get_MyUser(undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a5802f == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UI_MonoBehaviourWithStates_MyPortalRatingView_State___ctor__);
+		    DAT_ram_00a5802f = '\x01';
+		  }
+		  ScreenAdaptation_Common_AppSize__Update
+		            (param1,Method_UI_MonoBehaviourWithStates_MyPortalRatingView_State___ctor__);
+		  return;
+		}
+		*/
+
 }

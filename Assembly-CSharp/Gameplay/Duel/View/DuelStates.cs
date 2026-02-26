@@ -13,6 +13,18 @@ namespace Gameplay.Duel.View
 		[Address(RVA = "0x828F", Offset = "0x828F", VA = "0x828F")]
 		public DuelStates()
 		{
+		/* --- GHIDRA: .ctor ---
+		undefined4 Gameplay_Duel_View_DuelStates___ctor(undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a57bcc == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_12613);
+		    DAT_ram_00a57bcc = '\x01';
+		  }
+		  return StringLiteral_12613;
+		}
+		*/
+
 		}
 
 		// Token: 0x02000859 RID: 2137

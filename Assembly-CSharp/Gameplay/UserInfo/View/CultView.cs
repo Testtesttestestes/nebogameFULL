@@ -61,4 +61,23 @@ namespace Gameplay.UserInfo.View
 		[FieldOffset(Offset = "0x14")]
 		private CultDic _cultDic;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: set_CultDic ---
+		void Gameplay_UserInfo_View_CultView__set_CultDic(int param1,undefined4 param2)
+		
+		{
+		  undefined4 param2_00;
+		  
+		  if (*(int *)(param1 + 0x14) != 0) {
+		    param2_00 = Gameplay_Boss_View_CaptainTab_BossSkillInfoView__set_DominateCultDescription
+		                          (*(int *)(param1 + 0x14),0);
+		    Core_Extensions_Dict_PortalDicExt__GetCurrencyIcon60x66
+		              (*(undefined4 *)(param1 + 0x10),param2_00,0);
+		  }
+		  return;
+		}
+		*/
+
 }

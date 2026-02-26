@@ -14,6 +14,27 @@ namespace Gameplay.Isles.User.Events
 		[Address(RVA = "0xA05C", Offset = "0xA05C", VA = "0xA05C")]
 		public UserIsleEvents()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_Isles_User_Events_UserIsleEvents___ctor
+		               (undefined4 param1,undefined4 param2,undefined4 param3,undefined4 param4,
+		               undefined4 param5)
+		
+		{
+		  if (DAT_ram_00a58d87 == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_MVC_AbstractViewMediator_UserIsleModel__UserIsleEvents__UserIsleController__BackClanIsleView___ctor__
+		              );
+		    DAT_ram_00a58d87 = '\x01';
+		  }
+		  Gameplay_Combat_TeamCombat_View_AbstractTeamCombatView_object___get_HideInstantElements
+		            (param1,param2,param3,param4,
+		             Method_MVC_AbstractViewMediator_UserIsleModel__UserIsleEvents__UserIsleController__BackClanIsleView___ctor__
+		            );
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x04002CEA RID: 11498

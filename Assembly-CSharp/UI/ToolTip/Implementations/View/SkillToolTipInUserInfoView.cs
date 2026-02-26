@@ -16,6 +16,21 @@ namespace UI.ToolTip.Implementations.View
 		[Address(RVA = "0x5D1A", Offset = "0x5D1A", VA = "0x5D1A", Slot = "5")]
 		protected override void HandleDataChanged()
 		{
+		/* --- GHIDRA: HandleDataChanged ---
+		void UI_ToolTip_Implementations_View_SkillToolTipInUserInfoView__HandleDataChanged
+		               (undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a5b8f0 == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_UI_ToolTip_BaseToolTip_SkillToolTipInUserInfoVO___ctor__);
+		    DAT_ram_00a5b8f0 = '\x01';
+		  }
+		  ScreenAdaptation_Common_AppSize__Update
+		            (param1,Method_UI_ToolTip_BaseToolTip_SkillToolTipInUserInfoVO___ctor__);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x060009B3 RID: 2483 RVA: 0x00002050 File Offset: 0x00000250
@@ -23,6 +38,25 @@ namespace UI.ToolTip.Implementations.View
 		[Address(RVA = "0x5D1B", Offset = "0x5D1B", VA = "0x5D1B")]
 		public SkillToolTipInUserInfoView()
 		{
+		/* --- GHIDRA: .ctor ---
+		void UI_ToolTip_Implementations_View_SkillToolTipInUserInfoView___ctor(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  
+		  if (DAT_ram_00a5996c == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_UI_ToolTip_BaseToolTip_string__HandleDataChanged__);
+		    Mono_Security_ASN1__get_Item(&Method_UI_ToolTip_BaseToolTip_string__get_Data__);
+		    DAT_ram_00a5996c = '\x01';
+		  }
+		  iVar1 = **(int **)(param1 + 0x18);
+		  (**(code **)((ulonglong)*(uint *)(iVar1 + 0x2d0) * 4))
+		            (*(int **)(param1 + 0x18),*(undefined4 *)(param1 + 0x14),*(undefined4 *)(iVar1 + 0x2d4))
+		  ;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x040003C2 RID: 962

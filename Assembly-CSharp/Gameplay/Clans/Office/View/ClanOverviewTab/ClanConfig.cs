@@ -78,6 +78,23 @@ namespace Gameplay.Clans.Office.View.ClanOverviewTab
 		[Address(RVA = "0x8C95", Offset = "0x8C95", VA = "0x8C95")]
 		public ClanConfig()
 		{
+		/* --- GHIDRA: .ctor ---
+		void Gameplay_Clans_Office_View_ClanOverviewTab_ClanConfig___ctor
+		               (int param1,int param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  Gameplay_Clans_Office_View_ClanOfficeWindow_ClanOfficeWindowArgs___ctor
+		            (*(undefined4 *)(param1 + 0x14),param3,0);
+		  Gameplay_Clans_Office_View_ClanTitle__get_Text
+		            (*(undefined4 *)(param1 + 0x10),
+		             *(undefined4 *)(*(int *)(*(int *)(param2 + 0xc) + 0x1c) + 0x18),0);
+		  Gameplay_Clans_Office_View_ClanRatingsGroup__Init
+		            (*(undefined4 *)(param1 + 0x14),param3,*(undefined4 *)(*(int *)(param2 + 8) + 0x10),0);
+		  Gameplay_Clans_Office_View_ClanOverviewTab_ClanInfoBox__Init(param1,param2,param1);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x040022A1 RID: 8865
@@ -116,4 +133,68 @@ namespace Gameplay.Clans.Office.View.ClanOverviewTab
 		[SerializeField]
 		private FractionClanTypeListElement _fractionClan;
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: get_DescriptionInput ---
+		void Gameplay_Clans_Office_View_ClanOverviewTab_ClanConfig__get_DescriptionInput
+		               (int param1,int param2,int param3,undefined4 param4)
+		
+		{
+		  uint uVar1;
+		  uint *puVar2;
+		  undefined4 uVar3;
+		  longlong lVar4;
+		  longlong lVar5;
+		  int *param1_00;
+		  int iVar6;
+		  undefined4 param1_01;
+		  
+		  if (DAT_ram_00a57f6e == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_Gameplay_IGame_TypeInfo);
+		    DAT_ram_00a57f6e = '\x01';
+		  }
+		  UnityEngine_Component__GetComponentInChildren_object_
+		            (*(undefined4 *)(param1 + 0x10),
+		             *(undefined4 *)(*(int *)(*(int *)(param2 + 0xc) + 0x1c) + 0x18),0);
+		  UnityEngine_Component__GetComponentInChildren_object_
+		            (*(undefined4 *)(param1 + 0x14),*(undefined4 *)(*(int *)(param2 + 8) + 0x14),0);
+		  if (DAT_ram_00a6456f == '\0') {
+		    Mono_Security_ASN1__get_Item(&Core_Gameplay_Game_TypeInfo);
+		    DAT_ram_00a6456f = '\x01';
+		  }
+		  uVar1 = 0;
+		  param1_00 = (int *)**(undefined4 **)(Core_Gameplay_Game_TypeInfo + 0x5c);
+		  iVar6 = *param1_00;
+		  if (*(ushort *)(iVar6 + 0xb6) != 0) {
+		    do {
+		      if (Core_Gameplay_IGame_TypeInfo == *(int *)(*(int *)(iVar6 + 0x58) + uVar1 * 8)) {
+		        puVar2 = (uint *)(*(int *)(*(int *)(iVar6 + 0x58) + uVar1 * 8 + 4) * 8 + iVar6 + 0x230);
+		        goto code_r0x80e84e22;
+		      }
+		      uVar1 = uVar1 + 1;
+		    } while (*(ushort *)(iVar6 + 0xb6) != uVar1);
+		  }
+		  puVar2 = (uint *)func_ii_1080(param1_00,Core_Gameplay_IGame_TypeInfo,0x2e);
+		code_r0x80e84e22:
+		  uVar3 = (**(code **)((ulonglong)*puVar2 * 4))(param1_00,puVar2[1]);
+		  iVar6 = Core_Gameplay_Managers_ClansManager__GetCultsByClan
+		                    (uVar3,*(undefined4 *)(param3 + 0x4c),0);
+		  param1_01 = *(undefined4 *)(param1 + 0x24);
+		  uVar3 = Core_Gameplay_Managers_ClansManager__GetClanCultAssetId
+		                    (uVar3,*(undefined4 *)(iVar6 + 0xc),0);
+		  Gameplay_Clans_Office_View_ClanCreationTab_ClanTypeListElement___ctor(param1_01,iVar6,uVar3,iVar6)
+		  ;
+		  uVar1 = Gameplay_World_Model_ClanData__GetJoinPrice
+		                    (*(undefined4 *)(*(int *)(*(int *)(param2 + 0xc) + 0x1c) + 0x20),0);
+		  uVar3 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_uint__object___MoveNext
+		                    (*(undefined4 *)(param1 + 0x24),0);
+		  lVar4 = Core_Data_UserData___ctor(param3,0);
+		  lVar5 = Gameplay_World_Model_ClanData__set_ClanCultDic(*(undefined4 *)(param2 + 0xc),0);
+		  Com_TheFallenGames_OSA_CustomAdapters_TableView_Tuple_Basic_BasicTupleValueViewsHolder__UpdateAsText
+		            (uVar3,(uVar1 ^ 1) & (uint)(lVar4 == lVar5),0);
+		  return;
+		}
+		*/
+
 }

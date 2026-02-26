@@ -185,6 +185,31 @@ namespace Gameplay.Clans.Office.View.SquadTab
 		[Address(RVA = "0x8C11", Offset = "0x8C11", VA = "0x8C11")]
 		private void Awake()
 		{
+		/* --- GHIDRA: Awake ---
+		void Gameplay_Clans_Office_View_SquadTab_SquadView__Awake(int param1,undefined4 param2)
+		
+		{
+		  undefined4 param1_00;
+		  undefined4 param1_01;
+		  
+		  if (DAT_ram_00a57f3c == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Gameplay_Clans_Office_View_SquadTab_SquadView_ToggleObjects__);
+		    Mono_Security_ASN1__get_Item(&UnityEngine_Events_UnityAction_bool__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Method_UnityEngine_Events_UnityEvent_bool__RemoveListener__);
+		    DAT_ram_00a57f3c = '\x01';
+		  }
+		  param1_01 = *(undefined4 *)(*(int *)(param1 + 0x38) + 0xc0);
+		  param1_00 = unnamed_function_1417(UnityEngine_Events_UnityAction_bool__TypeInfo);
+		  UnityEngine_UI_Toggle__set_group
+		            (param1_00,param1,Method_Gameplay_Clans_Office_View_SquadTab_SquadView_ToggleObjects__,0
+		            );
+		  UnityEngine_Events_UnityEvent_InputAction_CallbackContext___Invoke
+		            (param1_01,param1_00,Method_UnityEngine_Events_UnityEvent_bool__RemoveListener__);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06003D52 RID: 15698 RVA: 0x00002050 File Offset: 0x00000250
@@ -192,6 +217,34 @@ namespace Gameplay.Clans.Office.View.SquadTab
 		[Address(RVA = "0x8C12", Offset = "0x8C12", VA = "0x8C12")]
 		private void OnDestroy()
 		{
+		/* --- GHIDRA: OnDestroy ---
+		void Gameplay_Clans_Office_View_SquadTab_SquadView__OnDestroy
+		               (int param1,int param2,undefined4 param3)
+		
+		{
+		  undefined4 param2_00;
+		  
+		  if (DAT_ram_00a57f3d == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UI_MonoBehaviourWithStates_SquadView_State__get_CurrentState__);
+		    Mono_Security_ASN1__get_Item
+		              (&Method_UI_MonoBehaviourWithStates_SquadView_State__set_CurrentState__);
+		    DAT_ram_00a57f3d = '\x01';
+		  }
+		  if (param2 == 0) {
+		    param2_00 = *(undefined4 *)(param1 + 0x48);
+		  }
+		  else {
+		    *(undefined4 *)(param1 + 0x48) = *(undefined4 *)(param1 + 0x18);
+		    param2_00 = 0;
+		  }
+		  Gameplay_Boss_View_CaptainTab_BossTeamView__set_TeamInfoData
+		            (param1,param2_00,Method_UI_MonoBehaviourWithStates_SquadView_State__set_CurrentState__)
+		  ;
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06003D53 RID: 15699 RVA: 0x00002050 File Offset: 0x00000250
@@ -199,6 +252,305 @@ namespace Gameplay.Clans.Office.View.SquadTab
 		[Address(RVA = "0x8C13", Offset = "0x8C13", VA = "0x8C13")]
 		private void ToggleObjects(bool enable)
 		{
+		/* --- GHIDRA: ToggleObjects ---
+		void Gameplay_Clans_Office_View_SquadTab_SquadView__ToggleObjects
+		               (int param1,int *param2,int *param3,undefined4 param4,undefined4 param5,
+		               undefined4 param6)
+		
+		{
+		  bool bVar1;
+		  uint uVar2;
+		  int iVar3;
+		  int iVar4;
+		  uint *puVar5;
+		  undefined4 uVar6;
+		  int iVar7;
+		  undefined4 uVar8;
+		  int iVar9;
+		  int iVar10;
+		  int iVar11;
+		  int *piVar12;
+		  
+		  iVar10 = 0;
+		  if (DAT_ram_00a57f3e == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_MemberSlotView__SquadListElement__TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&System_Collections_Generic_ICollection_ColossusPartiesInfoDic__TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&System_Collections_Generic_ICollection_SquadModel_PartyData__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&System_Collections_Generic_IList_ColossusPartiesInfoDic__TypeInfo)
+		    ;
+		    Mono_Security_ASN1__get_Item(&System_Collections_Generic_IList_SquadModel_PartyData__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Method_UnityEngine_Object_Instantiate_SquadListElement___);
+		    Mono_Security_ASN1__get_Item(&UnityEngine_Object_TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Gameplay_Clans_Office_View_SquadTab_SquadListElement___TypeInfo);
+		    Mono_Security_ASN1__get_Item
+		              (&
+		               Method_Gameplay_Clans_Office_View_SquadTab_SquadView_CrossButtonClickedEventHandler__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Gameplay_Clans_Office_View_SquadTab_SquadView_JoinButtonClickedEventHandler__
+		              );
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Gameplay_Clans_Office_View_SquadTab_SquadView_RentButtonClickedEventHandler__
+		              );
+		    Mono_Security_ASN1__get_Item(&UnityEngine_Events_UnityAction_TypeInfo);
+		    DAT_ram_00a57f3e = '\x01';
+		  }
+		  iVar9 = *(int *)(param1 + 0x44);
+		  if (0 < *(int *)(iVar9 + 0xc)) {
+		    do {
+		      iVar11 = *(int *)(iVar9 + iVar10 * 4 + 0x10);
+		      uVar6 = unnamed_function_1417(System_Action_MemberSlotView__SquadListElement__TypeInfo);
+		      System_Runtime_CompilerServices_AsyncVoidMethodBuilder__AwaitUnsafeOnCompleted_UniTask_Awaiter_bool___BossCaptainViewMediator__SetupView_d__8_
+		                (uVar6,param1,
+		                 Method_Gameplay_Clans_Office_View_SquadTab_SquadView_JoinButtonClickedEventHandler__
+		                 ,0);
+		      if (DAT_ram_00a57f2f == '\0') {
+		        Mono_Security_ASN1__get_Item(&System_Action_MemberSlotView__SquadListElement__TypeInfo);
+		        DAT_ram_00a57f2f = '\x01';
+		      }
+		      iVar3 = *(int *)(iVar11 + 0x34);
+		      do {
+		        iVar7 = 0;
+		        iVar4 = func_ii_7048(iVar3,uVar6,0);
+		        uVar8 = System_Action_MemberSlotView__SquadListElement__TypeInfo;
+		        if ((iVar4 != 0) &&
+		           (iVar7 = func_ii_1082(iVar4,System_Action_MemberSlotView__SquadListElement__TypeInfo),
+		           iVar7 == 0)) {
+		          System_Activator__CreateInstance(iVar4,uVar8);
+		          do {
+		            halt_trap();
+		          } while( true );
+		        }
+		        iVar7 = func_ii_4329(iVar11 + 0x34,iVar7,iVar3);
+		        bVar1 = iVar7 != iVar3;
+		        iVar3 = iVar7;
+		      } while (bVar1);
+		      uVar6 = unnamed_function_1417(System_Action_MemberSlotView__SquadListElement__TypeInfo);
+		      System_Runtime_CompilerServices_AsyncVoidMethodBuilder__AwaitUnsafeOnCompleted_UniTask_Awaiter_bool___BossCaptainViewMediator__SetupView_d__8_
+		                (uVar6,param1,
+		                 Method_Gameplay_Clans_Office_View_SquadTab_SquadView_CrossButtonClickedEventHandler__
+		                 ,0);
+		      if (DAT_ram_00a57f31 == '\0') {
+		        Mono_Security_ASN1__get_Item(&System_Action_MemberSlotView__SquadListElement__TypeInfo);
+		        DAT_ram_00a57f31 = '\x01';
+		      }
+		      iVar3 = *(int *)(iVar11 + 0x38);
+		      do {
+		        iVar7 = 0;
+		        iVar4 = func_ii_7048(iVar3,uVar6,0);
+		        uVar8 = System_Action_MemberSlotView__SquadListElement__TypeInfo;
+		        if ((iVar4 != 0) &&
+		           (iVar7 = func_ii_1082(iVar4,System_Action_MemberSlotView__SquadListElement__TypeInfo),
+		           iVar7 == 0)) {
+		          System_Activator__CreateInstance(iVar4,uVar8);
+		          do {
+		            halt_trap();
+		          } while( true );
+		        }
+		        iVar7 = func_ii_4329(iVar11 + 0x38,iVar7,iVar3);
+		        bVar1 = iVar7 != iVar3;
+		        iVar3 = iVar7;
+		      } while (bVar1);
+		      uVar8 = *(undefined4 *)(*(int *)(iVar11 + 0x2c) + 0xb4);
+		      uVar6 = unnamed_function_1417(UnityEngine_Events_UnityAction_TypeInfo);
+		      Utils_ObjectUtils__IsNotNull
+		                (uVar6,param1,
+		                 Method_Gameplay_Clans_Office_View_SquadTab_SquadView_RentButtonClickedEventHandler__
+		                 ,0);
+		      UnityEngine_Events_UnityAction___ctor(uVar8,uVar6,0);
+		      uVar6 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_uint__object___MoveNext
+		                        (iVar11,0);
+		      if (*(int *)(UnityEngine_Object_TypeInfo + 0x74) == 0) {
+		        func_ii_306000(UnityEngine_Object_TypeInfo);
+		      }
+		      UnityEngine_Application__get_isPlaying(uVar6,0);
+		      iVar10 = iVar10 + 1;
+		    } while (iVar10 < *(int *)(iVar9 + 0xc));
+		  }
+		  uVar2 = 0;
+		  iVar10 = *param2;
+		  if (*(ushort *)(iVar10 + 0xb6) != 0) {
+		    do {
+		      if (System_Collections_Generic_ICollection_ColossusPartiesInfoDic__TypeInfo ==
+		          *(int *)(*(int *)(iVar10 + 0x58) + uVar2 * 8)) {
+		        puVar5 = (uint *)(iVar10 + *(int *)(*(int *)(iVar10 + 0x58) + uVar2 * 8 + 4) * 8 + 0xc0);
+		        goto code_r0x80e82524;
+		      }
+		      uVar2 = uVar2 + 1;
+		    } while (*(ushort *)(iVar10 + 0xb6) != uVar2);
+		  }
+		  puVar5 = (uint *)func_ii_1080(param2,
+		                                System_Collections_Generic_ICollection_ColossusPartiesInfoDic__TypeInfo
+		                                ,0);
+		code_r0x80e82524:
+		  uVar6 = (**(code **)((ulonglong)*puVar5 * 4))(param2,puVar5[1]);
+		  uVar6 = Mono_Security_ASN1Convert__ToOid
+		                    (Gameplay_Clans_Office_View_SquadTab_SquadListElement___TypeInfo,uVar6);
+		  *(undefined4 *)(param1 + 0x44) = uVar6;
+		  iVar10 = 0;
+		  do {
+		    iVar9 = *param2;
+		    if (*(ushort *)(iVar9 + 0xb6) != 0) {
+		      uVar2 = 0;
+		      do {
+		        piVar12 = (int *)(*(int *)(iVar9 + 0x58) + uVar2 * 8);
+		        if (System_Collections_Generic_ICollection_ColossusPartiesInfoDic__TypeInfo == *piVar12) {
+		          puVar5 = (uint *)(iVar9 + piVar12[1] * 8 + 0xc0);
+		          goto code_r0x80e825b6;
+		        }
+		        uVar2 = uVar2 + 1;
+		      } while (*(ushort *)(iVar9 + 0xb6) != uVar2);
+		    }
+		    puVar5 = (uint *)func_ii_1080(param2,
+		                                  System_Collections_Generic_ICollection_ColossusPartiesInfoDic__TypeInfo
+		                                  ,0);
+		code_r0x80e825b6:
+		    iVar9 = (**(code **)((ulonglong)*puVar5 * 4))(param2,puVar5[1]);
+		    if (iVar9 <= iVar10) {
+		      iVar10 = 0;
+		      do {
+		        iVar9 = *param3;
+		        if (*(ushort *)(iVar9 + 0xb6) != 0) {
+		          uVar2 = 0;
+		          do {
+		            piVar12 = (int *)(*(int *)(iVar9 + 0x58) + uVar2 * 8);
+		            if (System_Collections_Generic_ICollection_SquadModel_PartyData__TypeInfo == *piVar12) {
+		              puVar5 = (uint *)(iVar9 + piVar12[1] * 8 + 0xc0);
+		              goto code_r0x80e8286b;
+		            }
+		            uVar2 = uVar2 + 1;
+		          } while (*(ushort *)(iVar9 + 0xb6) != uVar2);
+		        }
+		        puVar5 = (uint *)func_ii_1080(param3,
+		                                      System_Collections_Generic_ICollection_SquadModel_PartyData__TypeInfo
+		                                      ,0);
+		code_r0x80e8286b:
+		        iVar9 = (**(code **)((ulonglong)*puVar5 * 4))(param3,puVar5[1]);
+		        if (iVar9 <= iVar10) {
+		          return;
+		        }
+		        uVar6 = *(undefined4 *)(*(int *)(param1 + 0x44) + iVar10 * 4 + 0x10);
+		        iVar9 = *param3;
+		        if (*(ushort *)(iVar9 + 0xb6) != 0) {
+		          uVar2 = 0;
+		          do {
+		            piVar12 = (int *)(*(int *)(iVar9 + 0x58) + uVar2 * 8);
+		            if (System_Collections_Generic_IList_SquadModel_PartyData__TypeInfo == *piVar12) {
+		              puVar5 = (uint *)(iVar9 + piVar12[1] * 8 + 0xc0);
+		              goto code_r0x80e828f8;
+		            }
+		            uVar2 = uVar2 + 1;
+		          } while (*(ushort *)(iVar9 + 0xb6) != uVar2);
+		        }
+		        puVar5 = (uint *)func_ii_1080(param3,
+		                                      System_Collections_Generic_IList_SquadModel_PartyData__TypeInfo
+		                                      ,0);
+		code_r0x80e828f8:
+		        uVar8 = (**(code **)((ulonglong)*puVar5 * 4))(param3,iVar10,puVar5[1]);
+		        Gameplay_Clans_Office_View_SquadTab_SquadListElement__Init(uVar6,uVar8,puVar5);
+		        iVar10 = iVar10 + 1;
+		      } while( true );
+		    }
+		    uVar6 = *(undefined4 *)(param1 + 0x1c);
+		    uVar8 = *(undefined4 *)(param1 + 0x20);
+		    if (*(int *)(UnityEngine_Object_TypeInfo + 0x74) == 0) {
+		      func_ii_306000(UnityEngine_Object_TypeInfo);
+		    }
+		    iVar9 = func_ii_6805(uVar8,uVar6,Method_UnityEngine_Object_Instantiate_SquadListElement___);
+		    iVar11 = *param2;
+		    if (*(ushort *)(iVar11 + 0xb6) != 0) {
+		      uVar2 = 0;
+		      do {
+		        piVar12 = (int *)(*(int *)(iVar11 + 0x58) + uVar2 * 8);
+		        if (System_Collections_Generic_IList_ColossusPartiesInfoDic__TypeInfo == *piVar12) {
+		          puVar5 = (uint *)(iVar11 + piVar12[1] * 8 + 0xc0);
+		          goto code_r0x80e8266e;
+		        }
+		        uVar2 = uVar2 + 1;
+		      } while (*(ushort *)(iVar11 + 0xb6) != uVar2);
+		    }
+		    puVar5 = (uint *)func_ii_1080(param2,
+		                                  System_Collections_Generic_IList_ColossusPartiesInfoDic__TypeInfo,
+		                                  0);
+		code_r0x80e8266e:
+		    uVar6 = (**(code **)((ulonglong)*puVar5 * 4))(param2,iVar10,puVar5[1]);
+		    Gameplay_Clans_Office_View_SquadTab_SquadListElement__set_Dic(iVar9,uVar6,param4,param5,puVar5);
+		    uVar6 = unnamed_function_1417(System_Action_MemberSlotView__SquadListElement__TypeInfo);
+		    System_Runtime_CompilerServices_AsyncVoidMethodBuilder__AwaitUnsafeOnCompleted_UniTask_Awaiter_bool___BossCaptainViewMediator__SetupView_d__8_
+		              (uVar6,param1,
+		               Method_Gameplay_Clans_Office_View_SquadTab_SquadView_JoinButtonClickedEventHandler__,
+		               0);
+		    if (DAT_ram_00a57f2e == '\0') {
+		      Mono_Security_ASN1__get_Item(&System_Action_MemberSlotView__SquadListElement__TypeInfo);
+		      DAT_ram_00a57f2e = '\x01';
+		    }
+		    iVar11 = *(int *)(iVar9 + 0x34);
+		    do {
+		      iVar3 = 0;
+		      iVar7 = UnityEngine_UI_Image__set_sprite(iVar11,uVar6,0);
+		      uVar8 = System_Action_MemberSlotView__SquadListElement__TypeInfo;
+		      if ((iVar7 != 0) &&
+		         (iVar3 = func_ii_1082(iVar7,System_Action_MemberSlotView__SquadListElement__TypeInfo),
+		         iVar3 == 0)) {
+		        System_Activator__CreateInstance(iVar7,uVar8);
+		        do {
+		          halt_trap();
+		        } while( true );
+		      }
+		      iVar3 = func_ii_4329(iVar9 + 0x34,iVar3,iVar11);
+		      bVar1 = iVar3 != iVar11;
+		      iVar11 = iVar3;
+		    } while (bVar1);
+		    uVar6 = unnamed_function_1417(System_Action_MemberSlotView__SquadListElement__TypeInfo);
+		    System_Runtime_CompilerServices_AsyncVoidMethodBuilder__AwaitUnsafeOnCompleted_UniTask_Awaiter_bool___BossCaptainViewMediator__SetupView_d__8_
+		              (uVar6,param1,
+		               Method_Gameplay_Clans_Office_View_SquadTab_SquadView_CrossButtonClickedEventHandler__
+		               ,0);
+		    if (DAT_ram_00a57f30 == '\0') {
+		      Mono_Security_ASN1__get_Item(&System_Action_MemberSlotView__SquadListElement__TypeInfo);
+		      DAT_ram_00a57f30 = '\x01';
+		    }
+		    iVar11 = *(int *)(iVar9 + 0x38);
+		    do {
+		      iVar3 = 0;
+		      iVar7 = UnityEngine_UI_Image__set_sprite(iVar11,uVar6,0);
+		      uVar8 = System_Action_MemberSlotView__SquadListElement__TypeInfo;
+		      if ((iVar7 != 0) &&
+		         (iVar3 = func_ii_1082(iVar7,System_Action_MemberSlotView__SquadListElement__TypeInfo),
+		         iVar3 == 0)) {
+		        System_Activator__CreateInstance(iVar7,uVar8);
+		        do {
+		          halt_trap();
+		        } while( true );
+		      }
+		      iVar3 = func_ii_4329(iVar9 + 0x38,iVar3,iVar11);
+		      bVar1 = iVar3 != iVar11;
+		      iVar11 = iVar3;
+		    } while (bVar1);
+		    uVar8 = *(undefined4 *)(*(int *)(iVar9 + 0x2c) + 0xb4);
+		    uVar6 = unnamed_function_1417(UnityEngine_Events_UnityAction_TypeInfo);
+		    Utils_ObjectUtils__IsNotNull
+		              (uVar6,param1,
+		               Method_Gameplay_Clans_Office_View_SquadTab_SquadView_RentButtonClickedEventHandler__,
+		               0);
+		    Gameplay_Boss_View_CaptainTab_BossInfoView__add_AttackButtonClickEvent(uVar8,uVar6,0);
+		    piVar12 = *(int **)(param1 + 0x44);
+		    iVar11 = func_ii_1082(iVar9,*(undefined4 *)(*piVar12 + 0x20));
+		    if (iVar11 == 0) {
+		      uVar6 = func_ii_1083();
+		      func_ii_1050(uVar6,0);
+		      do {
+		        halt_trap();
+		      } while( true );
+		    }
+		    piVar12[iVar10 + 4] = iVar9;
+		    iVar10 = iVar10 + 1;
+		  } while( true );
+		}
+		*/
+
 		}
 
 		// Token: 0x06003D54 RID: 15700 RVA: 0x00002050 File Offset: 0x00000250
@@ -206,6 +558,21 @@ namespace Gameplay.Clans.Office.View.SquadTab
 		[Address(RVA = "0x8C14", Offset = "0x8C14", VA = "0x8C14")]
 		public void Init(IList<ColossusPartiesInfoDic> partyDics, IList<SquadModel.PartyData> parties, IList<ColossusSlotsInfoDic> slotDics, IBalanceSource treasury)
 		{
+		/* --- GHIDRA: Init ---
+		void Gameplay_Clans_Office_View_SquadTab_SquadView__Init(int param1,undefined4 param2)
+		
+		{
+		  int iVar1;
+		  
+		  iVar1 = *(int *)(param1 + 0x54);
+		  if (iVar1 != 0) {
+		    (**(code **)((ulonglong)*(uint *)(iVar1 + 0xc) * 4))
+		              (*(undefined4 *)(iVar1 + 0x20),*(undefined4 *)(iVar1 + 0x14));
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06003D55 RID: 15701 RVA: 0x00002050 File Offset: 0x00000250
@@ -213,6 +580,22 @@ namespace Gameplay.Clans.Office.View.SquadTab
 		[Address(RVA = "0x8C15", Offset = "0x8C15", VA = "0x8C15")]
 		private void RentButtonClickedEventHandler()
 		{
+		/* --- GHIDRA: RentButtonClickedEventHandler ---
+		void Gameplay_Clans_Office_View_SquadTab_SquadView__RentButtonClickedEventHandler
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  int iVar1;
+		  
+		  iVar1 = *(int *)(param1 + 0x4c);
+		  if (iVar1 != 0) {
+		    (**(code **)((ulonglong)*(uint *)(iVar1 + 0xc) * 4))
+		              (*(undefined4 *)(iVar1 + 0x20),param2,param3,*(undefined4 *)(iVar1 + 0x14));
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06003D56 RID: 15702 RVA: 0x00002050 File Offset: 0x00000250
@@ -220,6 +603,22 @@ namespace Gameplay.Clans.Office.View.SquadTab
 		[Address(RVA = "0x8C16", Offset = "0x8C16", VA = "0x8C16")]
 		private void JoinButtonClickedEventHandler(MemberSlotView slot, SquadListElement squad)
 		{
+		/* --- GHIDRA: JoinButtonClickedEventHandler ---
+		void Gameplay_Clans_Office_View_SquadTab_SquadView__JoinButtonClickedEventHandler
+		               (int param1,undefined4 param2,undefined4 param3,undefined4 param4)
+		
+		{
+		  int iVar1;
+		  
+		  iVar1 = *(int *)(param1 + 0x50);
+		  if (iVar1 != 0) {
+		    (**(code **)((ulonglong)*(uint *)(iVar1 + 0xc) * 4))
+		              (*(undefined4 *)(iVar1 + 0x20),param2,param3,*(undefined4 *)(iVar1 + 0x14));
+		  }
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06003D57 RID: 15703 RVA: 0x00002050 File Offset: 0x00000250
@@ -227,6 +626,27 @@ namespace Gameplay.Clans.Office.View.SquadTab
 		[Address(RVA = "0x8C17", Offset = "0x8C17", VA = "0x8C17")]
 		private void CrossButtonClickedEventHandler(MemberSlotView slot, SquadListElement squad)
 		{
+		/* --- GHIDRA: CrossButtonClickedEventHandler ---
+		void Gameplay_Clans_Office_View_SquadTab_SquadView__CrossButtonClickedEventHandler
+		               (int param1,undefined4 param2)
+		
+		{
+		  undefined4 uVar1;
+		  
+		  if (DAT_ram_00a57f3f == '\0') {
+		    Mono_Security_ASN1__get_Item(&Method_UI_MonoBehaviourWithStates_SquadView_State___ctor__);
+		    Mono_Security_ASN1__get_Item(&Gameplay_Clans_Office_View_SquadTab_SquadListElement___TypeInfo);
+		    DAT_ram_00a57f3f = '\x01';
+		  }
+		  uVar1 = Mono_Security_ASN1Convert__ToOid
+		                    (Gameplay_Clans_Office_View_SquadTab_SquadListElement___TypeInfo,0);
+		  *(undefined4 *)(param1 + 0x44) = uVar1;
+		  ScreenAdaptation_Common_AppSize__Update
+		            (param1,Method_UI_MonoBehaviourWithStates_SquadView_State___ctor__);
+		  return;
+		}
+		*/
+
 		}
 
 		// Token: 0x06003D58 RID: 15704 RVA: 0x00002050 File Offset: 0x00000250
@@ -321,4 +741,210 @@ namespace Gameplay.Clans.Office.View.SquadTab
 			EMPTY
 		}
 	}
+
+	// ================= UNMATCHED GHIDRA CODE =================
+
+		/* --- GHIDRA: add_JoinButtonClickedEvent ---
+		void Gameplay_Clans_Office_View_SquadTab_SquadView__add_JoinButtonClickedEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a57f36 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_MemberSlotView__SquadListElement__TypeInfo);
+		    DAT_ram_00a57f36 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x4c);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = func_ii_7048(param1_00,param2,0);
+		    param2_00 = System_Action_MemberSlotView__SquadListElement__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_MemberSlotView__SquadListElement__TypeInfo),
+		       iVar2 == 0)) break;
+		    iVar2 = func_ii_4329(param1 + 0x4c,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: remove_JoinButtonClickedEvent ---
+		void Gameplay_Clans_Office_View_SquadTab_SquadView__remove_JoinButtonClickedEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a57f37 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_MemberSlotView__SquadListElement__TypeInfo);
+		    DAT_ram_00a57f37 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x50);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = UnityEngine_UI_Image__set_sprite(param1_00,param2,0);
+		    param2_00 = System_Action_MemberSlotView__SquadListElement__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_MemberSlotView__SquadListElement__TypeInfo),
+		       iVar2 == 0)) break;
+		    iVar2 = func_ii_4329(param1 + 0x50,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: add_CrossButtonClickedEvent ---
+		void Gameplay_Clans_Office_View_SquadTab_SquadView__add_CrossButtonClickedEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  undefined4 param2_00;
+		  int param1_00;
+		  int iVar2;
+		  int param1_01;
+		  
+		  if (DAT_ram_00a57f38 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_MemberSlotView__SquadListElement__TypeInfo);
+		    DAT_ram_00a57f38 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x50);
+		  while( true ) {
+		    iVar2 = 0;
+		    param1_01 = func_ii_7048(param1_00,param2,0);
+		    param2_00 = System_Action_MemberSlotView__SquadListElement__TypeInfo;
+		    if ((param1_01 != 0) &&
+		       (iVar2 = func_ii_1082(param1_01,System_Action_MemberSlotView__SquadListElement__TypeInfo),
+		       iVar2 == 0)) break;
+		    iVar2 = func_ii_4329(param1 + 0x50,iVar2,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,param2_00);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: remove_CrossButtonClickedEvent ---
+		void Gameplay_Clans_Office_View_SquadTab_SquadView__remove_CrossButtonClickedEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  int param1_00;
+		  int *param1_01;
+		  int iVar2;
+		  
+		  if (DAT_ram_00a57f39 == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_TypeInfo);
+		    DAT_ram_00a57f39 = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x54);
+		  while ((param1_01 = (int *)UnityEngine_UI_Image__set_sprite(param1_00,param2,0),
+		         param1_01 == (int *)0x0 || (System_Action_TypeInfo == *param1_01))) {
+		    iVar2 = func_ii_4329(param1 + 0x54,param1_01,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,System_Action_TypeInfo);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: add_RentButtonClickedEvent ---
+		void Gameplay_Clans_Office_View_SquadTab_SquadView__add_RentButtonClickedEvent
+		               (int param1,undefined4 param2,undefined4 param3)
+		
+		{
+		  bool bVar1;
+		  int param1_00;
+		  int *param1_01;
+		  int iVar2;
+		  
+		  if (DAT_ram_00a57f3a == '\0') {
+		    Mono_Security_ASN1__get_Item(&System_Action_TypeInfo);
+		    DAT_ram_00a57f3a = '\x01';
+		  }
+		  param1_00 = *(int *)(param1 + 0x54);
+		  while ((param1_01 = (int *)func_ii_7048(param1_00,param2,0), param1_01 == (int *)0x0 ||
+		         (System_Action_TypeInfo == *param1_01))) {
+		    iVar2 = func_ii_4329(param1 + 0x54,param1_01,param1_00);
+		    bVar1 = iVar2 == param1_00;
+		    param1_00 = iVar2;
+		    if (bVar1) {
+		      return;
+		    }
+		  }
+		  System_Activator__CreateInstance(param1_01,System_Action_TypeInfo);
+		  do {
+		    halt_trap();
+		  } while( true );
+		}
+		*/
+
+
+		/* --- GHIDRA: get_RulesToggle ---
+		void Gameplay_Clans_Office_View_SquadTab_SquadView__get_RulesToggle(int param1,undefined4 param2)
+		
+		{
+		  undefined4 param1_00;
+		  undefined4 param1_01;
+		  
+		  if (DAT_ram_00a57f3b == '\0') {
+		    Mono_Security_ASN1__get_Item
+		              (&Method_Gameplay_Clans_Office_View_SquadTab_SquadView_ToggleObjects__);
+		    Mono_Security_ASN1__get_Item(&UnityEngine_Events_UnityAction_bool__TypeInfo);
+		    Mono_Security_ASN1__get_Item(&Method_UnityEngine_Events_UnityEvent_bool__AddListener__);
+		    DAT_ram_00a57f3b = '\x01';
+		  }
+		  param1_01 = *(undefined4 *)(*(int *)(param1 + 0x38) + 0xc0);
+		  param1_00 = unnamed_function_1417(UnityEngine_Events_UnityAction_bool__TypeInfo);
+		  UnityEngine_UI_Toggle__set_group
+		            (param1_00,param1,Method_Gameplay_Clans_Office_View_SquadTab_SquadView_ToggleObjects__,0
+		            );
+		  UnityEngine_Events_UnityEvent_InputAction_CallbackContext____ctor
+		            (param1_01,param1_00,Method_UnityEngine_Events_UnityEvent_bool__AddListener__);
+		  return;
+		}
+		*/
+
 }

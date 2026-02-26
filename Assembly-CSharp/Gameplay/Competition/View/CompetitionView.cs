@@ -84,6 +84,18 @@ namespace Gameplay.Competition.View
 		[Address(RVA = "0x857D", Offset = "0x857D", VA = "0x857D")]
 		public CompetitionView()
 		{
+		/* --- GHIDRA: .ctor ---
+		undefined4 Gameplay_Competition_View_CompetitionView___ctor(undefined4 param1,undefined4 param2)
+		
+		{
+		  if (DAT_ram_00a63a81 == '\0') {
+		    Mono_Security_ASN1__get_Item(&StringLiteral_12602);
+		    DAT_ram_00a63a81 = '\x01';
+		  }
+		  return StringLiteral_12602;
+		}
+		*/
+
 		}
 
 		// Token: 0x04001D2A RID: 7466
